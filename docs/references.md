@@ -4,8 +4,10 @@ What to read before each phase, why, and what decision it bears on. Findings rec
 reading the source or the specification — not the description of it. Where only an abstract was read, it says
 so.
 
-Cloned sources live outside this repository, under `references/` in the project directory, so third-party
-code is never vendored here by accident.
+Where a technique is published, this document carries the technique and the clone is disposable. Where it is
+not — TexSoup has no paper — the source is the only statement of it, and the findings below come from reading
+it. Any cloned source lives outside this repository, under `references/` in the project directory, so
+third-party code is never vendored here by accident.
 
 ---
 
@@ -49,13 +51,23 @@ design legible to anyone who knows TypeScript.
 <https://github.com/rust-analyzer/rowan> · cloned · MIT **and** Apache-2.0 · ~3 600 lines
 Design overview: <https://rust-analyzer.github.io/book/contributing/syntax.html> · read
 
-The green/red split, which is what NextTeX's document model needs:
+**The technique, stated so the crate is not needed to implement it.** A syntax tree is split in two layers
+that hold different things:
 
-- **Green nodes** — purely functional n-ary tree with structural sharing. Holds a kind tag, text length, and
-  `Arc` children. Leaves hold full token text, which is how losslessness is achieved by construction rather
-  than by convention.
-- **Red nodes** (`SyntaxNode`) — add parent pointers, identity semantics, absolute text offsets, and cheap
-  cloning by refcount.
+- **Green tree — the data.** A purely functional n-ary tree. Each node holds a kind tag, its total text
+  length, and `Arc` pointers to children; each leaf holds the token's full text. It has **no parent
+  pointers** and no absolute positions, which is exactly what lets identical subtrees be shared by pointer:
+  a node knows what it contains, not where it is. Losslessness follows by construction rather than by
+  discipline — whitespace and comments are tokens like any other, so the tree cannot fail to reproduce its
+  input.
+- **Red tree — the cursor.** A thin wrapper created on demand while walking down from the root. It carries a
+  pointer to a green node, a pointer to its parent cursor, and its absolute offset — computed by summing the
+  lengths of preceding siblings. It is cheap to clone by refcount and gives identity semantics, so two
+  occurrences of the same shared green subtree are distinguishable.
+
+The split exists because those two needs conflict: sharing requires position-independence, and navigation
+requires position. Editing is roughly O(depth) because only the spine from the changed node to the root is
+rebuilt; everything else is shared. That is what makes incremental reparsing viable.
 
 Two stated invariants, both of which NextTeX wants verbatim:
 

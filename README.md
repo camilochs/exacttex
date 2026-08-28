@@ -99,6 +99,8 @@ Prior art it does **not** claim to have invented: typed document languages that 
   boundaries, and where constructs are not recognized.
 - [`docs/references.md`](docs/references.md) — what to read before each phase, and what each source
   already settled or blocked.
+- [`docs/testing.md`](docs/testing.md) — the six test layers, and why the property tests cannot wait
+  for the last phase.
 
 ---
 
