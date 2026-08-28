@@ -72,10 +72,22 @@ sequence. A `.tex` in Latin-1, or carrying stray bytes from an old package, cann
 without either transcoding — which breaks transport byte-equality — or constructing green tokens by a route
 the crate does not offer.
 
-**Bearing — repository issue #8.** Three options, none yet chosen: adopt rowan and require UTF-8 input
-(narrows the transport promise); fork or wrap it with a byte-oriented token type; or keep the simpler
-span-into-immutable-buffer node and give up free incrementality. The decision belongs in the issue, with the
-non-UTF-8 fixture as the test that settles it.
+**How much that constraint costs, measured.** Across 111 `.tex` files from six published papers, **111 are
+valid UTF-8 and none are not**. The constraint is real in principle and so far unobserved in practice.
+Caveat: that is one author's recent corpus. Older documents, files from coauthors, and some publisher
+templates are where Latin-1 appears, and the Phase 4 corpus — which includes third-party files — is where
+this gets tested properly.
+
+**Bearing — repository issue #8.** Four options. Adopt rowan and require UTF-8 input; fork it with a
+byte-oriented token; reimplement green/red byte-oriented, which is a published design and not a licensing
+question; or keep a span-into-immutable-buffer node and revisit at Phase 3.
+
+The weight is not licensing — rowan is dual MIT/Apache and can simply be a dependency. It is where rowan's
+cost sits: **1 484 of its 2 332 lines are the cursor layer**, which buys incremental reparsing and cheap
+navigation. Phase 3 wants that; no Phase 2 issue asks for it.
+
+Whichever is chosen, one condition binds: the node interface must allow the representation to be swapped.
+Otherwise Phase 3 stops being "add the LSP" and becomes a core refactor — the deferred-cost trap of issue #7.
 
 ### Source maps — ECMA-426
 
