@@ -112,6 +112,11 @@ Every one of these was proposed during design and looked reasonable at the time.
   risk is labelled a prediction and carries the cheap check that would settle it.
 - **Shipping generated code unread.** Over-production is the tell: defensive branches for impossible states,
   helpers used once, doc comments restating the signature. Delete them.
+- **Reviewing the diff instead of the artifact.** A specification produced elsewhere was checked only where
+  it had changed — the corrections matched their evidence, so it was declared done. Five features it admits
+  were unspecified: where `@cite` keys come from, the scope of an identifier, how to escape an entry token,
+  where `@id` attaches on an equation, and what `@id` emits. Reviewing a change is not reviewing a document.
+  Before accepting one, walk every feature it claims to admit and check it is specified.
 - **Destructive shell commands against a path you did not inspect.** Move to a dated quarantine directory
   instead, and check the target first — macOS filesystems are case-insensitive.
 
