@@ -93,6 +93,8 @@ Prior art it does **not** claim to have invented: typed document languages that 
 - [`AGENTS.md`](AGENTS.md) — orientation, invariants, anti-patterns, workflow. Read before non-trivial
   changes.
 - [`CONTRIBUTING.md`](CONTRIBUTING.md) — setup, tests, and the traps specific to working here.
+- [`ROADMAP.md`](ROADMAP.md) — the correctness properties, the compiler architecture, the parser
+  hazards, and the phases with their exit criteria.
 
 ---
 
