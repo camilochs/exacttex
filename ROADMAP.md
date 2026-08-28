@@ -257,13 +257,14 @@ orphaned source or sidecar identifiers.
 
 Two experiments, no compiler code:
 
-- rewrite a section of a published paper in the specified syntax and assess whether the additional structure
-  produces visibly clearer, name-bearing source;
+- rewrite a section of a published paper in the specified syntax and count how much of it ends up carrying a
+  declared name — this measures coverage, the number the diagnostics have to speak with, not the quality of
+  the notation, which is a design decision and not on trial;
 - write down predictions for every static error class, then run minimal defective examples through
   `tectonic`, `chktex`, `chklref`, and `texlab`.
 
-**Exit criterion.** Stop or redesign if the rewritten source shows no observable structural improvement, or
-if four or more proposed error classes are already hard errors in the evaluated tools.
+**Exit criterion.** Stop or redesign if a real paper yields too few declared names for a diagnostic to refer
+to, or if four or more proposed error classes are already hard errors in the evaluated tools.
 
 ### Phase 1 — Freeze the language contract
 
