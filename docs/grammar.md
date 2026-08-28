@@ -288,5 +288,8 @@ recursive descent, and GCC's parser performance improved when it moved off a gen
 - **Entity kinds beyond figure and table.** `@id` covers everything at the light level. Whether equations,
   algorithms or theorems get typed blocks is deferred until a checked field is demanded for them.
 - **Argument-position detection.** §8 excludes command arguments, which requires knowing which commands take
-  arguments. The workable rule — treat a `{ … }` group following any control sequence as argument position —
-  needs validation against the corpus before it is frozen.
+  arguments. This does **not** need corpus guesswork: LaTeX has a declarative notation for it. `xparse`
+  argument specifications state a command's shape directly (`o m m m` = one optional then three mandatory
+  arguments), and unified-latex ships a database of those signatures for 18 CTAN packages — `latex2e`,
+  `tikz`, `hyperref`, `listings`, `xcolor`, `tabularx`, `cleveref`, `mathtools` among them. Read the
+  signatures; measure only what no specification records.
