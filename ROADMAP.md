@@ -264,8 +264,10 @@ diagnostics:
   it, and record what the language does not let you name. The output is that gap list, not a percentage.
   Every diagnostic in this project names something the author declared; what cannot be declared is what will
   never get a good error message. This does not judge the notation, which is a settled design decision;
-- write down predictions for every static error class, then run minimal defective examples through
-  `tectonic`, `chktex`, `chklref`, and `texlab`.
+- run a minimal defective example for every error class through `tectonic`, `chktex`, `chklref` and
+  `texlab`, and record what each one reports. This is not about whether the checks are worth having — it is
+  about where the messages have to be better than what LaTeX already prints, and which classes have no
+  existing message at all.
 
 **Done when** both write-ups exist: the list of things the language cannot yet name, and the table of what
 existing tools already report. Both feed Phase 1 — the first says what the grammar has to cover, the second
