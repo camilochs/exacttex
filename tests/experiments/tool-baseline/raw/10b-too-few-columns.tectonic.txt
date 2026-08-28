@@ -1,0 +1,24 @@
+note: "version 2" Tectonic command-line interface activated
+note: Running TeX ...
+(main.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(size10.clo)) (l3backend-xetex.def)
+No file main.aux.
+(ts1cmr.fd) [1] (main.aux) )
+Output written on main.xdv (1 page, 332 bytes).
+Transcript written on main.log.
+note: Rerunning TeX because "main.aux" changed ...
+(main.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(size10.clo)) (l3backend-xetex.def) (main.aux) (ts1cmr.fd) [1] (main.aux) )
+Output written on main.xdv (1 page, 332 bytes).
+Transcript written on main.log.
+note: Running xdvipdfmx ...
+[1]2241 bytes written
+note: Writing `main.pdf` (2.1884765625 KiB)
+note: Skipped writing 1 intermediate files (use --keep-intermediates to keep them)
+TECTONIC_EXIT=0

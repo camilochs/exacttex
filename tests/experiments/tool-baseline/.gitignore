@@ -1,0 +1,6 @@
+fixtures/*/main.pdf
+fixtures/*/main.aux
+fixtures/*/main.log
+fixtures/*/main.bbl
+fixtures/*/main.blg
+fixtures/*/*.fls

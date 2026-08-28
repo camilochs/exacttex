@@ -1,0 +1,49 @@
+note: "version 2" Tectonic command-line interface activated
+note: Running TeX ...
+(main.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(size10.clo)) (graphicx.sty (keyval.sty) (graphics.sty (trig.sty) (graphics.cfg
+) (xetex.def))) (l3backend-xetex.def) (main.aux) (ts1cmr.fd)
+
+LaTeX Warning: Citation `nope' on page 1 undefined on input line 4.
+
+No file main.bbl.
+[1] (main.aux)
+
+LaTeX Warning: There were undefined references.
+
+ )
+Output written on main.xdv (1 page, 568 bytes).
+Transcript written on main.log.
+note: Running BibTeX on main.aux ...
+Warning--I didn't find a database entry for "nope"
+(There was 1 warning)
+note: warnings were issued by BibTeX; use --print and/or --keep-logs for details.
+note: Rerunning TeX because bibtex was run ...
+(main.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(size10.clo)) (graphicx.sty (keyval.sty) (graphics.sty (trig.sty) (graphics.cfg
+) (xetex.def))) (l3backend-xetex.def) (main.aux) (ts1cmr.fd)
+
+LaTeX Warning: Citation `nope' on page 1 undefined on input line 4.
+
+(main.bbl
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+) [1] (main.aux)
+
+LaTeX Warning: There were undefined references.
+
+ )
+Output written on main.xdv (1 page, 748 bytes).
+Transcript written on main.log.
+note: Running xdvipdfmx ...
+[1]6126 bytes written
+note: Writing `main.pdf` (5.982421875 KiB)
+note: Skipped writing 2 intermediate files (use --keep-intermediates to keep them)
+TECTONIC_EXIT=0

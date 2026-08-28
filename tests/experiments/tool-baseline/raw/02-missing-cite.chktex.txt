@@ -1,0 +1,4 @@
+Warning 2 in main.tex line 4: Non-breaking space (`~') should have been used.
+Prior work \cite{nope}.  
+          ^
+CHKTEX_EXIT=2

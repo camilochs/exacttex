@@ -1,0 +1,40 @@
+note: "version 2" Tectonic command-line interface activated
+note: Running TeX ...
+(main.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(size10.clo)) (graphicx.sty (keyval.sty) (graphics.sty (trig.sty) (graphics.cfg
+) (xetex.def))) (l3backend-xetex.def) (main.aux) (ts1cmr.fd)
+
+LaTeX Warning: Reference `fig:nope' on page 1 undefined on input line 4.
+
+[1] (main.aux)
+
+LaTeX Warning: There were undefined references.
+
+ )
+Output written on main.xdv (1 page, 552 bytes).
+Transcript written on main.log.
+note: Rerunning TeX because "main.aux" changed ...
+(main.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(size10.clo)) (graphicx.sty (keyval.sty) (graphics.sty (trig.sty) (graphics.cfg
+) (xetex.def))) (l3backend-xetex.def) (main.aux) (ts1cmr.fd)
+
+LaTeX Warning: Reference `fig:nope' on page 1 undefined on input line 4.
+
+[1] (main.aux)
+
+LaTeX Warning: There were undefined references.
+
+ )
+Output written on main.xdv (1 page, 552 bytes).
+Transcript written on main.log.
+note: Running xdvipdfmx ...
+[1]4338 bytes written
+note: Writing `main.pdf` (4.236328125 KiB)
+note: Skipped writing 1 intermediate files (use --keep-intermediates to keep them)
+TECTONIC_EXIT=0
