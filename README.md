@@ -95,6 +95,8 @@ Prior art it does **not** claim to have invented: typed document languages that 
 - [`CONTRIBUTING.md`](CONTRIBUTING.md) — setup, tests, and the traps specific to working here.
 - [`ROADMAP.md`](ROADMAP.md) — the correctness properties, the compiler architecture, the parser
   hazards, and the phases with their exit criteria.
+- [`docs/grammar.md`](docs/grammar.md) — the language specification: entry tokens, constructs,
+  boundaries, and where constructs are not recognized.
 
 ---
 
