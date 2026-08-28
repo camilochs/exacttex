@@ -97,6 +97,8 @@ Prior art it does **not** claim to have invented: typed document languages that 
   hazards, and the phases with their exit criteria.
 - [`docs/grammar.md`](docs/grammar.md) — the language specification: entry tokens, constructs,
   boundaries, and where constructs are not recognized.
+- [`docs/references.md`](docs/references.md) — what to read before each phase, and what each source
+  already settled or blocked.
 
 ---
 
