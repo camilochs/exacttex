@@ -1,0 +1,11 @@
+\section{The GEAKG Framework}
+\label{sec:methods}
+
+
+This section introduces GEAKG from intuition to formalism. At its core is a \textit{MetaGraph}: a typed map of algorithmic behavior where nodes are abstract operator roles and edges encode which role transitions are semantically valid. Rather than storing one fixed solution, the MetaGraph stores reusable \textit{procedural structure}---how candidate solutions should be constructed, refined, and evaluated.
+
+We propose \textbf{Executable Algorithm Knowledge Graphs}---a class of knowledge graphs with executable, composable content. When both the topology and the operators are synthesized by an LLM, the result is a \textit{Generative} Executable Algorithm Knowledge Graph (GEAKG).
+
+On top of this structure, the GEAKG engine combines MetaGraph construction, ACO-based learning, and a Symbolic Executor. The engine itself requires no domain-specific code; only the \texttt{RoleSchema} that parameterizes roles and transitions is domain-dependent (Section~\ref{sec:role_schema}). The framework then runs in two phases. In the \textit{offline phase}, an LLM generates L0 topology and L1 operators, while ACO learns L2 pheromones and symbolic rules. In the \textit{online phase}, the Symbolic Executor applies this learned knowledge with zero LLM calls. Algorithm~\ref{alg:geakg_construction} gives the full offline procedure, Figure~\ref{fig:geakg_pipeline} shows the end-to-end pipeline, Section~\ref{sec:domain_instantiation} instantiates the framework in two case studies, and Section~\ref{sec:transfer_integration} details transfer.
+
+
