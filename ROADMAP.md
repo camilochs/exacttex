@@ -130,7 +130,9 @@ Neither front door owns resolution, checking, emission, diagnostics, or editor b
    - Produce hard errors only from explicit NextTeX constructs.
    - Treat ordinary LaTeX as `UnknownOpen` (`?O`), consistent with every entity class.
    - Keep raw-LaTeX observations advisory behind `--strict-tex`.
-   - Calculate checked-versus-opaque coverage.
+   - Calculate checked-versus-opaque coverage. Where an author annotates fully, the useful signal is a
+     coverage **drop** — something entered the document that the compiler does not understand — rather than
+     an absolute threshold.
 
 4. **Emit**
    - Erase annotations and lower native constructs to LaTeX.
@@ -257,16 +259,16 @@ orphaned source or sidecar identifiers.
 
 Two experiments, no compiler code:
 
-- rewrite a section of a published paper in the specified syntax and count how many of its figures, tables,
-  sections, equations and citations you end up declaring to the compiler, and how much stays as plain LaTeX
-  it does not understand. Every diagnostic in this project needs a declared name to refer to; without one the
-  compiler can only report a line number, which is what TeX already does. This does not judge the notation,
-  which is a settled design decision;
+- rewrite a section of a published paper in the specified syntax, declaring **every** referenceable thing in
+  it, and record what the language does not let you name. The output is that gap list, not a percentage.
+  Every diagnostic in this project names something the author declared; what cannot be declared is what will
+  never get a good error message. This does not judge the notation, which is a settled design decision;
 - write down predictions for every static error class, then run minimal defective examples through
   `tectonic`, `chktex`, `chklref`, and `texlab`.
 
-**Exit criterion.** Stop or redesign if a real paper yields too few declared names for a diagnostic to refer
-to, or if four or more proposed error classes are already hard errors in the evaluated tools.
+**Exit criterion.** Stop or redesign if the ordinary things an author refers to cannot be declared without
+dropping to the raw escape, or if four or more proposed error classes are already hard errors in the
+evaluated tools. A gap list covering unusual cases is a normal result and becomes Phase 1 grammar work.
 
 ### Phase 1 — Freeze the language contract
 
