@@ -45,8 +45,8 @@ Three assertions per fixture:
 The third kind is the one that is easy to omit and expensive to lose. `@` inside `\email{}`, inside a
 comment, inside `\makeatletter`, inside a listing — each is a fixture asserting that NextTeX left it alone.
 
-**Exit criterion for the grammar itself:** no construct has two valid parses. That is only demonstrated when
-every production has a fixture pinning the byte at which it ends.
+A construct having two valid parses is a bug, and it stays invisible until every production has a fixture
+pinning the byte at which it ends.
 
 ---
 

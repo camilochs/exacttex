@@ -1,7 +1,8 @@
 # NextTeX grammar
 
-**Status: draft.** This is the specification the hand-written parser is tested against. It is not generated
-from, and no parser generator produces it — see [Why no parser generator](#why-no-parser-generator).
+**Status: corrected v0.1 specification.** This is the specification against which the hand-written parser is
+tested. It is not generated from, and no parser generator produces it; see
+[Why no parser generator](#10--why-no-parser-generator).
 
 Binding context: [`PHILOSOPHY.md`](../PHILOSOPHY.md) §4 (design rules) and §5 (correctness properties);
 [`AGENTS.md`](../AGENTS.md) §4 (invariants).
@@ -10,283 +11,856 @@ Binding context: [`PHILOSOPHY.md`](../PHILOSOPHY.md) §4 (design rules) and §5 
 
 ## 1 · Notation
 
-```
+```text
 name        a production
 "literal"   an exact byte sequence
 [a-z]       a byte class
 x?          optional
 x*          zero or more
 x+          one or more
-x | y       alternatives
 (x y)       grouping
+x{0,n}      between zero and n repetitions
+x | y       alternatives
 ⟨…⟩         prose description of a byte set
 ```
 
-Byte-oriented, not character-oriented. Input is a byte sequence and is never assumed to be valid UTF-8;
-identifiers and keywords are ASCII, everything else passes through untouched.
+The grammar is byte-oriented, not character-oriented. Input is a byte sequence and is never assumed to be
+valid UTF-8. Identifiers and keywords are ASCII. Other bytes pass through unchanged.
+
+Unless a production states otherwise:
+
+```text
+hws         = (" " | "\t")*
+line-end    = "\n" | "\r\n" | end-of-file
+ws          = " " | "\t" | "\n" | "\r"
+```
+
+A parser reads bytes from left to right. Balanced regions require a nesting counter but no lookahead beyond
+the current byte. The resource limit for a nesting counter is implementation-configured; exceeding it is a
+resource-limit error, not an error in ordinary LaTeX.
 
 ---
 
 ## 2 · The document is LaTeX
 
-There is no top-level NextTeX grammar. A `.ntex` file **is** a LaTeX byte stream, and NextTeX constructs are
-recognized inside it at specific positions.
+There is no top-level NextTeX replacement grammar. A `.ntex` file is a LaTeX byte stream in which NextTeX
+constructs are recognized at the positions defined by this specification.
 
-```
+```text
 document    = ( ntex-construct | latex-bytes )*
-latex-bytes = ⟨any bytes not beginning a recognized ntex-construct in prose position⟩
+latex-bytes = ⟨bytes not beginning a recognized NextTeX construct at the current position⟩
 ```
 
-`latex-bytes` are never interpreted, normalized or validated. They are transported. This is the transport
-property in `PHILOSOPHY.md` §5.
+`latex-bytes` are not normalized or validated. Their spans index the immutable source buffer, and emission
+copies those slices byte for byte.
+
+For input containing no NextTeX constructs:
+
+```text
+emit(parse(input)) == input
+```
+
+Unknown LaTeX is transported rather than rejected. A hard error can originate only in an explicit NextTeX
+construct, an invalid annotation encoding, an I/O failure, a resource limit, or a broken internal invariant.
 
 ---
 
 ## 3 · Entry tokens
 
-Only two byte sequences can begin a NextTeX construct:
+Only these byte sequences can begin a NextTeX construct:
 
+```text
+ntex-construct = at-construct | block-construct | raw
+
+at-entry        = "@" at-keyword "("
+block-entry     = "\" block-keyword "("
+raw-entry       = "latex" ws* "{"
+
+at-keyword      = "id" | "ref" | "cite" | "import"
+                | "add" | "del" | "sub" | "note"
+
+block-keyword   = "figure" | "table"
 ```
-ntex-construct = at-construct | block-construct
 
-at-construct    = "@" keyword "(" …
-block-construct = "\" block-keyword "(" …
-```
+A prefix is not enough. In particular:
 
-Both are chosen so that no valid existing `.tex` can contain them by accident:
+- `@{` is ordinary LaTeX. It occurs 322 times in the measured corpus, all in tabular column specifications.
+- `@` followed by a letter but not by a complete keyword and `(` is ordinary LaTeX.
+- `@ref ` and `@ref{` are ordinary LaTeX because neither contains the entry token `@ref(`.
+- `\figure` and `\table` without `(` are ordinary LaTeX control sequences.
+- `latex` not followed by optional whitespace and `{` is ordinary text.
 
-- `@` followed by a NextTeX keyword and `(`. Measured against a corpus of six published papers (8 029 lines):
-  23 occurrences of `@` followed by a letter, **none in prose position** — all inside `\email{}` / `\ead{}` /
-  `\texttt{}` arguments, between `\makeatletter` and `\makeatother`, or inside a code listing.
-- `\figure(` and `\table(`. In plain LaTeX these are undefined control sequences followed by `(`, so no
-  valid document contains them. If the document itself defines `\figure` or `\table`, the checker reports a
-  conflict — the collision is detected, never silent.
+In 111 measured `.tex` files, `@{` was the most common `@` shape: 322 occurrences, compared with 143
+occurrences of `@` followed by a letter. It does not collide with this grammar because an at-entry includes
+the keyword and opening `(`.
 
-**Rule (binding).** A construct is recognized only in **prose position**: outside math, outside verbatim-like
-environments, outside command arguments, outside `\makeatletter … \makeatother`, and outside any region the
-parser has marked opaque. See §8.
+None of the 111 files defines `\figure` or `\table`. This observation supports the block tokens for this
+corpus but is not a claim about LaTeX generally. A source-level definition of either command before its first
+NextTeX use is a name conflict attributed to the explicit NextTeX block. Detection outside modeled LaTeX is
+advisory; an undetectable definition does not justify rewriting opaque bytes.
+
+`latex {` is the weakest of the three entry tokens: it is a bare word rather than a sigil or a control
+sequence, so a sentence could in principle open one. Measured across the same 111 files: **zero occurrences**
+of `latex` followed by whitespace and `{` outside a command, and zero uses of `\latex` as a command. Safe on
+this evidence, and the token most likely to need revisiting if a wider corpus contradicts it.
+
+A complete entry token is recognized only in a recognition region. Section 8 defines regions in which the
+same bytes remain ordinary text.
+
+### Entry-token fixtures
+
+Fixtures must pin these decisions:
+
+1. `@{}` in a tabular column specification remains byte-identical.
+2. `name@example.org`, `\@name`, `@ref ` and `@ref{a}` contain no construct.
+3. `@ref(a)` in prose begins a reference.
+4. `\figure(a) { ... }` begins a block, while `\figure { ... }` does not.
+5. Every entry token inside each exclusion region in §8 remains ordinary bytes.
 
 ---
 
 ## 4 · Inline constructs
 
+```text
+at-construct = id-decl | reference | citation | import
+
+id-decl      = "@id"     "(" ident ")"
+reference    = "@ref"    "(" ident ")"
+citation     = "@cite"   "(" bibkey citation-field* ")"
+import       = "@import" "(" string ")"
+
+citation-field = "," ws* field
+
+ident        = [A-Za-z] [A-Za-z0-9_:.-]*
+bibkey       = [A-Za-z0-9] [A-Za-z0-9_:.+/-]*
 ```
-at-construct = id-decl | reference | citation | import | revision
 
-id-decl   = "@id"    "(" ident ")"
-reference = "@ref"   "(" ident ")"
-citation  = "@cite"  "(" bibkey ( "," ws* field )* ")"
-import    = "@import" "(" string ")"
+`@ref` emits the referenced label value only. The entity-kind word remains author text:
 
-ident   = [A-Za-z] [A-Za-z0-9_:.-]*
-bibkey  = [A-Za-z0-9] [A-Za-z0-9_:.+/-]*
+```latex
+Definition~@ref(def:geakg)
+Table~@ref(tab:roles)
+Section~@ref(sec:results)
 ```
 
-`@id` attaches to the LaTeX construct that **precedes** it on the same line, or to the environment whose
-`\begin` precedes it. It declares an entity without NextTeX knowing what kind of construct it is — this is
-what makes theorems, algorithms and anything else referenceable with no new syntax.
+NextTeX does not generate `Definition`, `Table`, `Section`, `Appendix`, or a nonbreaking space. Generating
+them would inject bytes absent from the source and would violate the binding erasure rule. v0.1 makes no
+exception to that rule.
+
+`@cite` accepts named fields so that a rendering distinction is not carried by a single character:
+
+```latex
+@cite(knuth1984)
+@cite(knuth1984, style=textual)
+```
+
+### `@id` attachment
+
+`@id` attaches backwards to the nearest completed, attachable LaTeX construct. An attachable construct is:
+
+- a sectioning command or other known command whose complete argument shape is provided by §8;
+- a `\caption` command;
+- a `\begin{...}` header, including its known optional and mandatory arguments;
+- an environment just closed by `\end{...}`;
+- a displayed equation just closed by `$$` or `\]`; or
+- another construct explicitly listed as attachable by a package signature.
+
+Between that construct and `@id`, the parser may skip only ASCII space, tab, carriage return and line feed.
+The skipped region is bounded by both of these limits:
+
+- no more than two line endings; and
+- no more than 256 bytes.
+
+The first limit reached ends the search. Comments, commands and non-whitespace bytes are not skipped. If no
+attachable construct occurs within the bounded region, `@id` is an explicit but unattached annotation and
+produces a hard error blamed on that annotation.
+
+The two-line, 256-byte bound is a locality decision. The corpus establishes that same-line attachment is
+insufficient: 442 of 479 measured labels follow their captions on the next line, while 9 share the caption
+line. The evidence does not establish a larger useful distance. A corpus observation of correctly attached
+labels separated by blank lines or by more than 256 whitespace bytes would settle whether either bound
+should increase.
+
+Examples:
 
 ```latex
 \section{Introduction} @id(sec:intro)
 
-\begin{theorem} @id(thm:bound)
+\caption{A caption
+  containing nested {groups}}
+@id(fig:example)
+
+\begin{theorem}[Bound]
+  @id(thm:bound)
   ...
 \end{theorem}
 ```
 
-`@cite` accepts fields, so that a rendering distinction is never carried by a single character:
+In the theorem example, `@id` attaches to the completed `\begin{theorem}[Bound]` header.
+
+For an environment whose signature marks its body as display math — `equation`, `equation*`, `align`,
+`align*`, `gather`, `gather*`, `multline` and their configured equivalents — the math exclusion region does
+not begin at the end of the `\begin` token. It begins after:
+
+1. the complete `\begin{name}` header and every argument selected by the environment signature;
+2. at most two line endings and at most 256 intervening ASCII whitespace bytes; and
+3. zero or more complete `@id` annotations attached to that header, including the bounded whitespace after
+   each annotation.
+
+A non-whitespace byte other than `@id(` closes this header slot and begins the math exclusion region at that
+byte. Once the math exclusion has begun, entry tokens remain ordinary math bytes until the matching
+`\end{name}`. A malformed `@id(` that starts within the header slot is a hard error and does not cause the
+parser to search farther into the equation.
 
 ```latex
-@cite(knuth1984)                      parenthetical
-@cite(knuth1984, style=textual)       the citation is the sentence subject
+\begin{equation}
+  @id(eq:energy)
+  E = mc^2
+\end{equation}
 ```
 
-**Boundary.** Every inline construct ends at its matching `)`. Nesting of parentheses inside `ident`,
-`bibkey` or a field value is not permitted; a `)` always closes. An unterminated construct is a hard error
-reported at the opening token, and no bytes are consumed past end of line.
+`$$...$$` and `\[...\]` have no header slot. They are declared after the closing delimiter, which is itself
+a completed attachable construct:
+
+```latex
+\[
+  E = mc^2
+\]
+@id(eq:energy)
+```
+
+An `@id` between the opening and closing delimiter is inside the math exclusion region and remains ordinary
+bytes.
+
+### Identifier scope and emission
+
+An identifier is scoped to **one document root** — not one source file, and not the whole project. A root is
+its root file plus the transitive closure of files reached by successful `@import` constructs, and its symbol
+table is the merge of theirs.
+
+Two declarations of one identifier in one root are a hard error blamed on the later explicit declaration.
+Importing the same physical file twice does not redeclare its entities: a canonical path merges once per
+root. Two different files declaring the same identifier do conflict when both belong to the same root.
+
+Separate roots under one `nextex.toml` have separate symbol tables and may reuse an identifier, provided
+neither imports the other's declaring file. This matches LaTeX's document-wide label namespace without
+imposing a project-wide one on separately emitted documents.
+
+`@id(sec:intro)` emits `\label{sec:intro}` at the annotation's source position, and nothing else — no
+wrapper, no support command.
+
+Before emission each root builds a **label inventory**. `\label` is a built-in known command with signature
+`m`, so its mandatory argument is selectable under §8 even though its bytes are otherwise opaque. A label
+enters the inventory only when it is tokenized as `\label` under default category codes, occurs outside every
+§8 exclusion region, has one balanced braced argument, and that argument is an `ident` after trimming ASCII
+whitespace.
+
+The inventory is `Complete` or `Unavailable`. It becomes `Unavailable` when quarantine begins, a category-code
+change prevents reliable tokenization, or a candidate argument cannot be bounded. None of those is an error
+for an unannotated document.
+
+When `Complete`, an `@id(x)` colliding with another `@id(x)` or with a source `\label{x}` is a hard error
+blamed on the `@id`; nothing is emitted. The source `\label{x}` is never itself an error.
+
+When `Unavailable`, an `@id` whose emitted label could not be checked is a hard error blamed on that
+annotation, reported as *label inventory unavailable*, and no `\label` is emitted. This distinguishes lack of
+evidence from absence, and stops a passing build from silently acquiring a duplicate label.
+
+### Boundaries
+
+`@id`, `@ref` and `@cite` end at the first `)` after their entry token. Their identifier, bibliography key and
+field productions do not admit parentheses.
+
+`@import` ends at the `)` immediately following its closing string quote. A `)` inside the string is data.
+
+A malformed inline construct does not scan without bound:
+
+- before a valid closing boundary is found, line end terminates the search for `@id`, `@ref` and `@cite`;
+- `@import` may contain a line ending inside its quoted string only if the string syntax admits it; v0.1 does
+  not, so line end terminates the search;
+- the construct span ends immediately before that line ending;
+- the explicit construct produces a hard error at its entry token;
+- the line ending and following bytes are parsed normally.
+
+### Inline fixtures
+
+Fixtures must include:
+
+1. `\caption{X}@id(x)` and a label on the immediately following line.
+2. Attachment across two line endings and rejection across three.
+3. Attachment after exactly 256 skipped bytes and rejection after 257.
+4. A comment or non-whitespace byte between the target and `@id`, which prevents attachment.
+5. `@ref(x)` followed immediately by punctuation.
+6. A `)` inside an import string, which does not end the import.
+7. An unterminated inline construct followed by a valid construct on the next line; the second remains
+   recognizable.
+8. Empty and non-ASCII identifiers, which are hard errors inside the explicit construct.
+
+### Bibliography discovery and citation checking
+
+Bibliography resources are discovered per document root, from configuration and from recognized LaTeX
+declarations. Both contribute; neither overrides the other.
+
+```toml
+bibliographies = ["refs.bib", "sources/extra.bib"]
+```
+
+Paths are relative to the directory holding `nextex.toml`; an absolute path is invalid configuration.
+
+The built-in signature set includes:
+
+```text
+\bibliography   m
+\addbibresource o m
+```
+
+**These are known commands, so their arguments are selectable under §8** even though the bytes remain opaque
+for transport. That is what makes citation checking possible at all.
+
+- `\bibliography{a,b}` splits its argument on ASCII commas, trims ASCII whitespace, appends `.bib` where
+  absent, and resolves each result relative to the file containing the command.
+- `\addbibresource[...]{a.bib}` ignores the optional argument for discovery and resolves the mandatory one
+  the same way.
+- An argument containing a control sequence, inner brace nesting, a non-ASCII byte or an empty item is not
+  expanded or guessed.
+
+A command contributes only from a recognition region. A spelling inside a macro body, comment, verbatim
+region, command argument, math region or quarantine contributes nothing.
+
+```text
+BibliographyState = Complete(KeySet) | Unavailable(Reason)
+```
+
+`Complete` requires every declared resource to be readable and every key boundary to parse. Keys come from
+entries beginning `@`, an ASCII entry type, optional whitespace, `{` or `(`, then a `bibkey` terminated by
+whitespace or a comma. `@comment`, `@preamble` and `@string` contribute none.
+
+The state is `Unavailable` when no resource is declared, a path is dynamic or malformed, a resource is absent
+or unreadable, a resource exceeds a configured limit, an entry boundary cannot be parsed, or quarantine could
+hide a declaration. **Any failure makes the whole root `Unavailable` rather than yielding a partial key
+set** — a partial set would produce false missing-key errors.
+
+`@cite(k)` is a hard error only when the state is `Complete` and `k` is absent. Under `Unavailable` it
+receives an advisory saying checking was unavailable, and the exit code does not change.
+
 
 ---
 
 ## 5 · Block constructs
 
-```
-block-construct = block-keyword "(" ident ")" ws* "{" field-list "}"
-block-keyword   = "\figure" | "\table"
+```text
+block-construct = block-keyword "(" ident ")" ws* block-body
+block-body      = "{" field-list "}"
 
-field-list = ( ws* field ws* )*
-field      = key ws* "=" ws* value
-key        = [a-z] [a-z0-9_]*
+field-list      = ( ws* field ws* )*
+field           = key ws* "=" ws* value
+key             = [a-z] [a-z0-9_]*
 
-value = string | length | percentage | integer | braced | bare
+value           = string | length | percentage | integer | braced | bare
 ```
 
-```latex
-\figure(fig:runtime) {
-  src     = "figures/runtime.pdf"
-  width   = 80%
-  caption = Runtime architecture for \emph{multi-agent} systems
-}
-```
+Known fields determine the permitted value kind. A parser does not choose the kind by trying alternatives
+until one succeeds.
 
 ### Value kinds
 
-| Kind | Form | Ends at | Used for |
-|---|---|---|---|
-| `string` | `"…"` with `\"` escape | closing quote | paths — a path may contain spaces |
-| `length` | number + unit (`pt`, `mm`, `cm`, `in`, `em`, `ex`) | end of token | explicit dimensions |
-| `percentage` | number + `%` | end of token | relative widths |
-| `integer` | digits | end of token | counts, e.g. `columns` |
-| `bare` | any bytes | end of line | prose that contains LaTeX — captions |
-| `braced` | `{ … }` balanced | matching `}` | multi-line prose or table bodies |
+| Kind | Form | Ends at |
+|---|---|---|
+| `string` | `"` followed by bytes using `\"` and `\\` escapes | unescaped closing `"` |
+| `length` | decimal number plus `pt`, `mm`, `cm`, `in`, `em` or `ex` | first byte outside that token |
+| `percentage` | decimal number plus `%` | byte after `%` |
+| `integer` | one or more ASCII digits | first non-digit byte |
+| `bare` | bytes other than a line ending | immediately before the line ending |
+| `braced` | balanced `{ ... }` | matching `}` |
 
-**Why `bare` runs to end of line and is not a quoted string.** A real caption contains LaTeX: `$\alpha$`,
-`\emph{}`, sometimes a citation. A quoted string cannot hold it without an escaping scheme nobody wants to
-write. A caption longer than one line uses the `braced` form.
+`bare` exists for short scalar fields that explicitly declare it. It is not the value kind for `caption`,
+`body` or trailing table content.
 
-**Boundary.** A block ends at the `}` matching its opening `{`, counted with LaTeX's own escaping rules:
-`\{` and `\}` do not count, and `%` starts a comment to end of line. A block whose braces do not balance
-before end of file is a hard error.
+### Figure fields
+
+```text
+figure-fields:
+  src       = string
+  width     = length | percentage
+  caption   = braced
+```
+
+### Table fields
+
+```text
+table-fields:
+  caption   = braced
+  body      = braced
+  trailing  = braced
+```
+
+`trailing` contains content placed inside the emitted `table` environment after the table body and before
+the environment terminator. It resolves the measured case in which `\vspace{2pt}` and a `\scriptsize`
+footnote follow `tabular` but remain inside `table`:
+
+```latex
+\table(tab:roles) {
+  caption = {RoleSchema instantiation for both case studies}
+  body = {
+    \begin{tabular}{@{}lcc@{}}
+      ...
+    \end{tabular}
+  }
+  trailing = {
+    \vspace{2pt}
+    {\scriptsize $^*$Edge counts depend on the generated topology.}
+  }
+}
+```
+
+A general positional-content form is not admitted in v0.1. The observed need is content trailing the main
+table body, and a named field gives that content a deterministic emitted position. A future observation of
+necessary content before, between or around several body regions would settle whether `trailing` is too
+narrow.
+
+`note` is not used as the field name because the measured bytes include spacing commands as well as prose,
+and the grammar does not yet model the relation between `$^*$` and the trailing text.
+
+### Captions
+
+`caption` requires `braced`. In 479 measured captions:
+
+- the median length was 230 characters;
+- the longest was 1,160 characters;
+- 111, or 23%, contained a newline; and
+- 207 contained nested braces.
+
+These measurements contradict the draft rule that made captions bare, to-end-of-line values.
+
+### Column count
+
+`columns` is not a v0.1 table field. The count is derived from the first top-level `tabular`, `tabularx`, or
+other configured tabular environment in `body`.
+
+The parser reads that environment's column-specification argument using its §8 signature. It then counts
+columns from the specification, including repeated specifications and excluding `@{...}` insertions.
+Structural checks must account for constructs such as `\multicolumn`; they must not compare a declared
+number with another annotation.
+
+If the environment or column specification cannot be bounded, the count is unavailable and the corresponding
+check is advisory. It is not a hard error. A hard error may still arise from a malformed explicit `body`
+field.
+
+This decision removes duplicated information. The hand annotation restated
+`\begin{tabular}{@{}lcccccc@{}}` as `columns = 7`, allowing the two annotations to disagree.
+
+### Package requirements
+
+A `needs` field is not admitted in v0.1. Emitting `\usepackage` would inject bytes, while retaining a field
+that has no defined effect would make the construct misleading. Package synthesis remains open only if a
+future correctness rule permits injection or an erasure-preserving interpretation is specified. An
+end-to-end example that requires a package absent from the source and still satisfies typesetting
+equivalence would settle the issue.
+
+> **Open against a director decision.** The director chose that packages be declared by the block. This
+> specification removes the field instead, because emitting `\usepackage` contradicts the binding
+> no-injection rule and a field with no effect misleads. The conflict is real and unresolved; see repository
+> issue #5. This section records the specification's position, not a settled decision.
+
+### Balanced-region scanning
+
+For `braced`, block and raw boundaries, scanning uses a counter initialized to one at the opening `{`.
+
+Under the default TeX category codes:
+
+- an unescaped `{` increments the counter;
+- an unescaped `}` decrements it;
+- a `}` reducing the counter to zero is the boundary;
+- an unescaped `%` begins a comment through the line ending, so braces in that comment do not affect the
+  counter;
+- `\{`, `\}` and `\%` are control symbols and do not open, close or start a comment.
+
+For a run of consecutive backslashes immediately before `{`, `}` or `%`, the final byte is escaped only when
+the run length is odd. This is decidable while scanning left to right by retaining the run length modulo two.
+
+The corpus contains 120 `\%` sequences inside captions and no real comments inside those captions. Treating
+every `%` as a comment would therefore truncate real caption content.
+
+A top-level category-code change makes these default rules unreliable and invokes quarantine under §8.
+
+### Block boundaries
+
+A block ends at the `}` that reduces its block-body nesting counter to zero. It may span the rest of the
+file; no arbitrary byte lookahead limit applies because each byte is consumed once. The nesting resource
+limit still applies.
+
+An unmatched block opening consumes through end of file and produces a hard error blamed on the explicit
+block.
+
+A field ends at the boundary specified by its declared value kind. The next non-whitespace byte must either
+start another field or be the block-closing `}`.
+
+### Block fixtures
+
+Fixtures must include:
+
+1. A multi-line caption containing nested braces.
+2. A caption containing `\%`, `{10\%}`, a real comment, `\{` and `\}`.
+3. Odd and even runs of backslashes before `%`, `{` and `}`.
+4. A `trailing` field containing both a spacing command and a braced font-size group.
+5. `@{}` inside a tabular column specification.
+6. A derived column count with `@{...}`, `*{n}{...}` and `\multicolumn`.
+7. An unknown tabular environment, for which column checking becomes advisory.
+8. `caption = unbraced text`, `columns = 7` and `needs = booktabs`, each rejected as a malformed explicit
+   block.
+9. An unmatched block opening whose boundary is end of file.
 
 ---
 
 ## 6 · Revision constructs
 
-```
+```text
 revision = add | del | sub | note
 
-add  = "@add" "(" ident ")" ws* braced
-del  = "@del" "(" ident ")" ws* braced
-sub  = "@sub" "(" ident ")" ws* "{" content "->" content "}"
-note = "@note" "(" ident "," ws* "on" ws* "=" ws* ident ")" ws* braced
+add      = "@add"  "(" ident ")" ws* revision-content
+del      = "@del"  "(" ident ")" ws* revision-content
+sub      = "@sub"  "(" ident ")" ws* substitution-content
+note     = "@note" "(" ident "," ws* "on" ws* "=" ws* ident ")" ws*
+           revision-content
+
+revision-content     = braced
+substitution-content = "{" substitution-left "->" substitution-right "}"
 ```
 
-Metadata — author, timestamp, status, thread — lives outside the document, in a sidecar keyed by the
-identifier. See [`revisions.md`](revisions.md).
+Revision constructs are inline constructs. They may appear between words, punctuation or other prose:
 
-**Constraints (v0.1).** Content must be brace-balanced. Revisions must not overlap; an overlap is a hard
-error, not a merge. A `@sub` is one change, not a delete plus an insert, so accepting it is atomic.
+```latex
+The result is @add(change:qualified) {statistically significant} under both tests.
+```
+
+They may also span lines. The measured revision convention appeared 179 times: 175 uses were phrases inside
+sentences, 4 were multi-line, and the longest contained 2,040 characters. The draft's block-oriented
+implication was therefore incorrect.
+
+### Nested constructs
+
+Recognition is enabled inside revision content, subject to §8. Thus references, citations, revision
+constructs and other eligible constructs may be nested:
+
+```latex
+@add(change:source) {As reported by @cite(knuth1984), see @ref(tab:result).}
+```
+
+This decision follows the 33 measured revisions containing `\ref`, `\cite` or `\label`. Treating revision
+content as opaque would prevent those dependencies from being represented.
+
+Nested revisions must be properly contained. Crossing intervals are impossible in the brace grammar and
+are invalid if introduced by sidecar spans. There is no fixed nesting-depth lookahead; a counter and stack
+are updated left to right, subject to the configured nesting resource limit.
+
+Metadata such as author, timestamp, status and thread remains in the sidecar keyed by revision identifier.
+
+### Substitution separator
+
+For `@sub`, the separator is the first `->` at brace depth one that is outside all §8 exclusion regions and
+outside a nested NextTeX construct. A second such separator before the outer closing brace is a hard error.
+An arrow inside a nested brace group, command argument, comment, math region, raw escape or nested construct
+is content.
+
+This rule is decidable left to right using the current brace depth and region stack.
+
+### Revision boundaries
+
+`@add`, `@del` and `@note` end at the `}` matching their content's opening `{`.
+
+`@sub` ends at the matching outer `}` after exactly one top-level separator.
+
+A missing content opening brace ends the malformed construct at the first non-whitespace byte after its
+header. An unmatched content brace ends at end of file. Both are hard errors blamed on the explicit
+revision.
+
+### Revision fixtures
+
+Fixtures must include:
+
+1. A revision between two words and one followed immediately by punctuation.
+2. A multi-line revision longer than 2,040 bytes.
+3. Nested `@ref`, `@cite`, `@add` and `@del`.
+4. A nested construct inside a command argument in the revision; §8 keeps it ordinary text.
+5. A substitution with arrows at nested brace depth and exactly one at depth one.
+6. Zero and two depth-one substitution arrows, both hard errors.
+7. An unmatched revision brace ending at end of file.
+8. Two properly nested revisions and sidecar spans that cross, the latter producing a hard error.
 
 ---
 
 ## 7 · The raw escape
 
-```
-raw = "latex" ws* "{" ⟨balanced bytes⟩ "}"
+```text
+raw = "latex" ws* braced
 ```
 
 ```latex
 latex {
-  \begin{tikzpicture} \draw (0,0) -- (2,1); \end{tikzpicture}
+  \begin{tikzpicture}
+    \draw (0,0) -- (2,1);
+  \end{tikzpicture}
 }
 ```
 
-Contents are transported. No NextTeX construct is recognized inside. Everything inside counts as unchecked
-against the coverage figure reported by `nextex check`.
+The raw escape is **also the escape for a literal entry token in prose**:
+
+```latex
+The token is latex {@ref(example)}.
+```
+
+It emits only the bytes inside its outer braces — the `latex`, the whitespace and the outer brace pair are
+erased — so the emitted text is `The token is @ref(example).`
+
+This adds no new interpretation: `latex` followed by optional whitespace and `{` was already the raw
+construct of §3, so no existing valid `.tex` changes meaning. Nested braces stay part of the body; only the
+outer pair is erased.
+
+Raw content is transported. No NextTeX entry token is recognized inside it. All raw content is unchecked
+for the coverage figure reported by `nextex check`.
+
+The raw escape ends at the `}` matching its opening `{`, using the balanced-region rules in §5. An unmatched
+opening brace ends at end of file and produces a hard error blamed on the explicit raw escape.
+
+### Raw fixtures
+
+Fixtures must include:
+
+1. Every entry token inside a raw escape, with none recognized.
+2. Nested braces, escaped braces, `\%` and a real comment.
+3. An unmatched raw opening brace ending at end of file.
+4. `latex` not followed by optional whitespace and `{`, which remains ordinary LaTeX text.
 
 ---
 
 ## 8 · Where constructs are not recognized
 
-This section is the difference between a language and a text substitution. In each region below, the byte
-sequence `@ref(` is ordinary text.
+This section separates a language from text substitution. In each region below, `@ref(` and every other
+entry token are ordinary bytes.
 
 | Region | Begins at | Ends at |
 |---|---|---|
-| Comment | unescaped `%` | end of line |
-| Inline math | `$` | matching `$` |
-| Display math | `$$` or `\[` | `$$` or `\]` |
-| Verbatim command | `\verb` + delimiter byte | next occurrence of that byte |
-| Verbatim environment | `\begin{verbatim}` | line-exact `\end{verbatim}` |
-| Listing | `\begin{lstlisting}` and names from `nextex.toml` | its line-exact terminator |
+| Comment | unescaped `%` under current default category codes | line ending or end of file |
+| Inline math | unescaped `$` not followed by `$` | next corresponding unescaped `$` |
+| Display math | `$$` or `\[`; for a display-math environment, the first byte after the header slot in §4 | corresponding `$$`, `\]` or matching `\end{name}` |
+| Verbatim command | a known verbatim command and its delimiter byte | next occurrence of that delimiter |
+| Verbatim environment | a configured verbatim `\begin{name}` | its line-exact `\end{name}` |
+| Listing | `\begin{lstlisting}` or a configured listing name | its line-exact terminator |
 | Internal-macro region | `\makeatletter` | `\makeatother` |
-| Raw escape | `latex {` | matching `}` |
-| Quarantine | see below | end of file |
-| Command argument | `{` of a known argument-taking command | matching `}` |
+| Raw escape | complete `latex` entry through its opening `{` | matching `}` |
+| Command argument | an argument start selected by a known signature | that argument's specified boundary |
+| Quarantine | a hazard listed below | end of file |
+
+The default verbatim environment set is `verbatim`, `verbatimtab`, `Verbatim`, `listing` and `lstlisting`,
+extended by `nextex.toml`.
+
+An unterminated excluded region whose boundary cannot safely be recovered enters quarantine rather than
+resuming recognition at a guessed byte.
+
+### Command argument regions
+
+Command shapes are not inferred from the corpus. They come from declarative specifications:
+
+1. an `xparse` argument specification present in the source or project configuration;
+2. the unified-latex CTAN package signature database under
+   `packages/unified-latex-ctan/package/*/provides.ts`; and
+3. built-in signatures transcribed from the LaTeX specifications.
+
+For example, the signature `o m m m` selects one optional argument followed by three mandatory arguments.
+An `m` argument begins at its mandatory argument token and, when braced, ends at its matching `}`. An `o`
+argument begins at `[` and ends at its balanced matching `]`. Other `xparse` argument kinds use their
+specified delimiter and boundary.
+
+Only arguments selected by the signature are excluded. Whitespace permitted by that signature is consumed
+while advancing to the next argument. This requires no unbounded lookahead: each signature is finite and
+each delimited argument is scanned once. A configured maximum of 64 arguments per signature bounds
+malicious specifications; exceeding it is a resource-limit error.
+
+For a command absent from all signature sources:
+
+- its control-sequence token is transported as opaque;
+- no following group is asserted to be its argument;
+- balanced groups immediately following it remain ordinary LaTeX regions and do not produce hard errors;
+- entry-token-shaped text within those groups may be reported only as an advisory ambiguity and is not
+  recognized as a NextTeX construct.
+
+The last rule prevents accidental interpretation inside an unknown macro body without inventing that
+command's shape. Recognition resumes after the balanced adjacent group. If such a group cannot be bounded,
+parsing enters quarantine.
+
+Whether all immediately adjacent groups of an unknown command should be excluded remains open. v0.1
+excludes a consecutive run of at most 16 balanced `{...}` or `[...]` groups, separated only by whitespace.
+After 16 groups, parsing enters quarantine rather than guessing that a seventeenth group is prose. A real
+command absent from the databases with more than 16 arguments, or a documented collision after a shorter
+run, would settle a change to this bound.
+
+### Environment headers and bodies
+
+A known environment's `\begin{name}` arguments are selected from its signature and excluded as command
+arguments. Its body is not excluded merely because it belongs to an environment. Separate rows in the table
+above, such as verbatim and listing, may exclude it.
+
+This distinction permits prose and nested NextTeX constructs in ordinary environment bodies while keeping
+an optional title such as
+
+```latex
+\begin{definition}[Generative Executable Algorithm Knowledge Graph]
+```
+
+opaque unless the environment signature declares that optional argument.
+
+For an environment marked as display math by its signature, the body exclusion begins only after the equation
+header slot specified in §4. This is the sole exception to immediate body exclusion: it admits `@id` in that
+bounded slot and no other construct in the remaining math body.
 
 ### Quarantine
 
-When the parser cannot bound a region safely it stops recognizing NextTeX constructs rather than guessing.
-
-```
+```text
 ParseConfidence = Structured | OpaqueBalanced | OpaqueToEof
 ```
 
-`OpaqueToEof` is entered by an unterminated `\verb`, an unmatched `\makeatletter`, a `\catcode` assignment at
-top level, and any construct whose end cannot be located. **It is monotonic**: once entered, no later
-construct in that file is recognized. The full hazard table is in [`../ROADMAP.md`](../ROADMAP.md).
+`OpaqueToEof` begins at:
+
+- an unterminated verbatim command or verbatim environment;
+- an unmatched `\makeatletter`;
+- a top-level `\catcode` assignment whose effect cannot be bounded;
+- an unterminated unknown-command group;
+- an exclusion-region opener whose end cannot be located; or
+- a configured resource bound that requires preservation rather than rejection.
+
+Quarantine is monotonic within the file: after `OpaqueToEof` begins, no later NextTeX construct is
+recognized. The remaining bytes are transported.
+
+### Exclusion fixtures
+
+Each row in the exclusion table requires a fixture containing every entry-token family and an exact expected
+end byte. Additional fixtures must include:
+
+1. `\%` outside a comment and `%` beginning a comment.
+2. An entry token immediately after the closing math delimiter.
+3. An entry token equal to or containing a verbatim delimiter.
+4. Mixed-case and configured verbatim environment names.
+5. A known `o m m m` command with entry tokens in every argument and one immediately after the last.
+6. An unknown command followed by 1, 16 and 17 adjacent groups.
+7. A known environment optional title containing `@ref(` and a body containing a valid `@ref`.
+8. An unmatched opener for every quarantine-producing region, followed by an apparent construct that remains
+   opaque.
 
 ---
 
-## 9 · Examples
+## 9 · Entity coverage and v0.1 limits
 
-### Valid
+### Admitted entities
 
-```latex
-\section{Model} @id(sec:model)                          declaration on a section
-\begin{theorem} @id(thm:x) ... \end{theorem}            declaration on any environment
-As shown in @ref(fig:runtime), ...                      reference in prose
-@cite(knuth1984, style=textual) proved that ...         citation with a rendering field
-@import("sections/model.ntex")                          path relative to THIS file
-\figure(fig:r) { src = "r.pdf"  width = 80% }           block on one line
-```
+v0.1 admits:
 
-### Invalid, and what is reported
+- figures and tables through typed blocks;
+- sections, equations, definitions, theorems, algorithms, appendices represented by sectioning commands, and
+  other known LaTeX constructs through `@id`;
+- a subfigure panel by attaching `@id` to its `subfigure` environment header;
+- an algorithm as an environment entity by attaching `@id` to its environment header.
 
-```latex
-@ref(fig:runtime                    unterminated construct — hard error at "@ref"
-@ref()                              empty identifier — hard error
-\figure(fig:r) { src = r.pdf }      unquoted path — hard error, paths are strings
-\figure(fig:r) { width = 80 }       bare number where a length or percentage is required
-@id(sec:x) ... @id(sec:x)           duplicate identifier — hard error, both spans reported
-@sub(c1) { a -> b -> c }            more than one arrow — hard error
-```
+Algorithms are explicitly included at the light-annotation level because the measured corpus contains 49
+algorithm environments, more than its theorem environments. A typed algorithm block is not added because
+no measured typed check requires one.
 
-### Not a construct — ordinary text, no diagnostic
+Subfigure panels are included at the light level because 34 `subfigure` environments occur in the corpus.
+No typed panel fields are specified because the available observations establish naming demand but not a
+stable field set.
 
-```latex
-\email{camilo.chacon@icn2.cat}      @ inside a command argument
-\makeatletter \let\@oddhead\@empty  @ inside the internal-macro region
-% pending: @ref(fig:x) needs a name  @ inside a comment
-\begin{lstlisting}
-  engine: "llama.cpp@a1b2c3"        @ inside a listing
-\end{lstlisting}
-```
+An appendix remains a section entity. The source must retain the manual kind word in prose. v0.1 does not
+add a separate appendix block because `@id` already provides naming and no appendix-specific checked field
+has been demonstrated.
+
+### Not admitted as separate entities
+
+v0.1 does not provide separate identities for:
+
+- a table row;
+- a table cell;
+- a footnote marker inside a cell;
+- the relation between a marker and trailing table content;
+- an environment's optional title; or
+- a numbered line inside an algorithm.
+
+Rows and cells are governed by TeX alignment, macro expansion, `\multicolumn`, and package-specific commands.
+The hand annotation demonstrates the need to relate a cell marker to trailing content but does not establish
+a syntax or reliable byte boundary for either entity.
+
+Algorithm lines are common — 237 `\STATE` lines in 49 environments — but the available evidence does not
+state which algorithm packages and command signatures produced them, whether line numbers correspond
+one-to-one with commands, or how continuation lines behave. Frequency establishes priority, not a grammar.
+
+These decisions would be settled by:
+
+- annotated examples from the relevant table and algorithm packages;
+- the package signatures for row, cell and line commands;
+- cases involving `\multicolumn`, nested tabular content, continued algorithm lines and suppressed line
+  numbers; and
+- a required check or reference operation that cannot be expressed by attaching `@id` to an existing
+  bounded construct.
+
+The optional environment title remains data inside a known argument region. An observation requiring a
+reference specifically to that title, rather than to its environment, would justify a new construct.
 
 ---
 
 ## 10 · Why no parser generator
 
-The parser is hand-written recursive descent, with a hand-written lexer. Three reasons, in order of weight:
+The parser is hand-written recursive descent with a hand-written lexer.
 
-**The hard part is not context-free.** `\verb`'s delimiter is whatever byte follows it. Verbatim
-environments consume raw lines. `\catcode` changes what a byte means. `\makeatletter` changes what counts as
-a letter inside a control-sequence name. None of that is expressible as a grammar; in a generator it becomes
-semantic predicates and lexer modes — the same logic written by hand, inside someone else's framework.
+**The difficult boundary rules are not context-free.** `\verb` uses the next byte as its delimiter.
+Verbatim environments consume raw lines. Category-code assignments change byte roles. `\makeatletter`
+changes control-sequence tokenization. In a parser generator these rules would still require lexer modes and
+procedural predicates.
 
-**Generators discard what must be preserved.** They build their own tree over decoded strings and normally
-drop whitespace and comments. The transport invariant requires every byte and a span indexing an immutable
-buffer.
+**Transport requires original bytes.** The syntax tree stores spans into an immutable byte buffer.
+Whitespace, comments and opaque regions cannot be decoded, normalized or reconstructed.
 
-**Error recovery is a designed behaviour here, not a fallback.** Quarantine — degrade to opaque and keep
-going, never reject — is specific to this compiler. A generator supplies its own recovery.
+**Recovery is specified behavior.** Quarantine downgrades a region to opaque and preserves it. It is not a
+generator's default error-recovery policy.
 
-ANTLR specifically has no official Rust target; the community effort is not a dependency this project takes
-on. For the native syntax alone a PEG generator would work, but that yields two parsers in two styles while
-the difficult one stays hand-written.
-
-This is also what production compilers do: rust-analyzer, Clang and TypeScript all use hand-written
-recursive descent, and GCC's parser performance improved when it moved off a generated parser.
+ANTLR has no official Rust target. A PEG could express the native syntax but would leave the LaTeX boundary
+scanner hand-written, producing two parsing systems without removing the difficult part.
 
 ---
 
-## 11 · Open questions
+## 11 · Decisions, corrections and remaining observations
 
-- **`needs` and the no-injection rule.** The block form accepts `needs = <package>`, and package synthesis
-  writes `\usepackage` into the preamble. That is generated output, which `PHILOSOPHY.md` §5 forbids.
-  Unresolved; tracked as repository issue #5. The grammar above admits the field without settling what it
-  emits.
-- **Entity kinds beyond figure and table.** `@id` covers everything at the light level. Whether equations,
-  algorithms or theorems get typed blocks is deferred until a checked field is demanded for them.
-- **Argument-position detection.** §8 excludes command arguments, which requires knowing which commands take
-  arguments. The workable rule — treat a `{ … }` group following any control sequence as argument position —
-  needs validation against the corpus before it is frozen.
+### Changes from the draft
+
+| Draft rule | Corrected rule | Evidence or binding reason |
+|---|---|---|
+| `@id` required same-line adjacency | Skips bounded whitespace across up to two line endings and 256 bytes | 442 of 479 labels followed their caption on the next line; only 9 shared its line |
+| Caption defaulted to a bare end-of-line value | `caption` requires balanced braces | 23% of captions contained a newline; 207 contained nested braces |
+| `%` handling did not expressly exempt `\%` | Odd-backslash `\%` is not a comment opener | 120 escaped percent signs and zero real comments occurred inside measured captions |
+| Revision nesting was unspecified | Revisions work mid-sentence and recognize nested constructs | 175 of 179 uses were inline; 33 contained a reference, citation or label |
+| Entry-token discussion omitted `@{` | `@{` is explicitly ordinary LaTeX | 322 occurrences, all in tabular column specifications |
+| Block-token safety lacked the larger measurement | The corpus boundary is stated | No file among 111 defined `\figure` or `\table` |
+| Raw-escape token safety was unstated | `latex {` measured and recorded as the weakest token | Zero occurrences of `latex` + whitespace + `{` in prose across 111 files |
+| Tables had nowhere for internal trailing content | Tables have a balanced `trailing` field emitted inside the environment | The hand annotation displaced a spacing command and table note outside their table |
+| Reference kind words were unresolved | Kind words remain manual | Generating them would violate erasure and no-injection |
+| `columns` was declared | Column count is read from the tabular column specification | The hand annotation duplicated information already present in `@{}lcccccc@{}` |
+| Argument-position detection was left for corpus validation | Command arguments are selected from `xparse` and unified-latex signatures | LaTeX already provides declarative command-shape specifications |
+| Entity coverage was implicit | v0.1 admissions and exclusions are explicit | The hand annotation and counts for algorithms, lines and subfigures exposed the missing cases |
+| `needs` was admitted while its effect remained unresolved | `needs` is not v0.1 syntax | Package injection contradicts the binding correctness properties — **and contradicts a director decision; see §5** |
+
+### Open decisions
+
+The following decisions remain open because the available evidence does not select one option:
+
+1. **`@id` whitespace bound.** v0.1 uses two line endings and 256 bytes. Correct labels beyond either bound
+   would justify increasing it; a collision caused within the current bound would justify reducing it.
+2. **Unknown-command adjacent groups.** v0.1 excludes at most 16. Package examples with more arguments, or
+   prose collisions after fewer groups, would settle a different bound.
+3. **Table marker relations.** Options include typed row, cell and note-reference constructs. Annotated
+   examples covering alignment and `\multicolumn` would determine their boundaries.
+4. **Algorithm lines.** Options include attaching `@id` to a package command or adding a typed line
+   construct. Package-specific examples relating source commands to rendered line numbers would select one.
+5. **Optional environment titles.** Options are to keep them opaque or expose a typed field. A required
+   title-specific check or reference would justify the latter.
+6. **Typed algorithm and panel blocks.** Light annotations admit both. A demonstrated typed check with a
+   stable field set would justify new blocks.
+7. **Package requirements.** Options are source-authored `\usepackage`, a non-emitting advisory declaration,
+   or a documented exception to no-injection. Only a rule consistent with the binding typesetting property
+   can admit `needs`. **This one is not merely open: it stands against an explicit director decision.**
