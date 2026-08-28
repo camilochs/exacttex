@@ -1,0 +1,4 @@
+# Proper nouns that appear in prose. Without this, `doc_markdown` reads them as
+# code items and demands backticks, which would put the project's own name in
+# code font in every doc comment.
+doc-valid-idents = ["NextTeX", "LaTeX", "WebAssembly", "BibTeX", "BibLaTeX", "TeX", ".."]

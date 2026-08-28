@@ -1,0 +1,18 @@
+[package]
+name = "nextex-cli"
+description = "Command-line front end for the NextTeX compiler."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "nextex"
+path = "src/main.rs"
+
+[dependencies]
+nextex-core = { path = "../nextex-core" }
+
+[lints]
+workspace = true

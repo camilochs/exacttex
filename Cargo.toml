@@ -1,0 +1,18 @@
+[workspace]
+resolver = "3"
+members = ["crates/nextex-core", "crates/nextex-cli"]
+
+[workspace.package]
+version = "0.0.0"
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/camilochs/nexttex"
+rust-version = "1.85"
+
+[workspace.lints.rust]
+missing_docs = "warn"
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = { level = "deny", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
