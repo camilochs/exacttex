@@ -1,0 +1,5 @@
+\table(t) {
+  caption = {A caption that runs across
+    two lines and contains {nested {groups}} inside it}
+  body = { \begin{tabular}{ll} a & b \\ \end{tabular} }
+}

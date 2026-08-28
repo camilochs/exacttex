@@ -1,0 +1,2 @@
+transport: identical
+constructs: id(thm:x) on the header; ref(good) in the body; the title is opaque

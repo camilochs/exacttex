@@ -1,0 +1,1 @@
+\definecolor[named]{@ref(a)}{@ref(b)}{@ref(c)} then @ref(after).

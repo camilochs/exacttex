@@ -1,0 +1,1 @@
+@add(c1) {As reported by @cite(knuth1984), see @ref(tab:x) and @del(c2) {the old claim}.}

@@ -1,0 +1,4 @@
+\table(t) {
+  caption = {Column spec carries @{} twice}
+  body = { \begin{tabular}{@{}lcc@{}} a & b & c \\ \end{tabular} }
+}

@@ -1,0 +1,1 @@
+We compile with latex, not with latex{}\relax — the first is prose.

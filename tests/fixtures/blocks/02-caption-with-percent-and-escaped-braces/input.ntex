@@ -1,0 +1,4 @@
+\figure(f) {
+  src = "x.pdf"
+  caption = {Accuracy rose 12\% and {10\%} of runs used \{braces\} literally}
+}

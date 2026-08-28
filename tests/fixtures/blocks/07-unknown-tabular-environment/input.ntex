@@ -1,0 +1,4 @@
+\table(t) {
+  caption = {An environment with no known signature}
+  body = { \begin{exotictabular}{??} a | b \end{exotictabular} }
+}

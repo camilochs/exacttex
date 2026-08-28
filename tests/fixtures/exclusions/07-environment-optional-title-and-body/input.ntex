@@ -1,0 +1,3 @@
+\begin{theorem}[A title containing @ref(inside)] @id(thm:x)
+  The body may contain @ref(good).
+\end{theorem}

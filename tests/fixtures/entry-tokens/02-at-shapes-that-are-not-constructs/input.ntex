@@ -1,0 +1,3 @@
+Write to name@example.org about it.
+\makeatletter \@name \makeatother
+An @ref alone, and @ref{a} with a brace, are ordinary text.

@@ -1,0 +1,3 @@
+\figure(f) {
+  src = "x.pdf"
+  caption = {Never closed

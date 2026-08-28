@@ -1,0 +1,8 @@
+\table(t) {
+  caption = {Seven columns, written with a repeat}
+  body = {
+    \begin{tabular}{@{}l*{6}{c}@{}}
+      \multicolumn{4}{c}{Spanned} & a & b & c \\
+    \end{tabular}
+  }
+}
