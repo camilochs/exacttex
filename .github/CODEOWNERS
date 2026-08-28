@@ -1,0 +1,10 @@
+# Default reviewer for every PR.
+#
+# This repository has a single maintainer, who reviews every pull request.
+# "Require review from Code Owners" in branch protection is what makes that
+# approval structurally required to merge. Keep it enabled.
+#
+# The second pair of eyes is missing by construction, so it is manufactured
+# instead: see AGENTS.md §8, "The single reviewer".
+
+*    @camilochs
