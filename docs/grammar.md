@@ -161,7 +161,8 @@ exception to that rule.
 - a sectioning command or other known command whose complete argument shape is provided by §8;
 - a `\caption` command;
 - a `\begin{...}` header, including its known optional and mandatory arguments;
-- an environment just closed by `\end{...}`; or
+- an environment just closed by `\end{...}`;
+- a displayed equation just closed by `$$` or `\]`; or
 - another construct explicitly listed as attachable by a package signature.
 
 Between that construct and `@id`, the parser may skip only ASCII space, tab, carriage return and line feed.
@@ -197,6 +198,74 @@ Examples:
 
 In the theorem example, `@id` attaches to the completed `\begin{theorem}[Bound]` header.
 
+For an environment whose signature marks its body as display math — `equation`, `equation*`, `align`,
+`align*`, `gather`, `gather*`, `multline` and their configured equivalents — the math exclusion region does
+not begin at the end of the `\begin` token. It begins after:
+
+1. the complete `\begin{name}` header and every argument selected by the environment signature;
+2. at most two line endings and at most 256 intervening ASCII whitespace bytes; and
+3. zero or more complete `@id` annotations attached to that header, including the bounded whitespace after
+   each annotation.
+
+A non-whitespace byte other than `@id(` closes this header slot and begins the math exclusion region at that
+byte. Once the math exclusion has begun, entry tokens remain ordinary math bytes until the matching
+`\end{name}`. A malformed `@id(` that starts within the header slot is a hard error and does not cause the
+parser to search farther into the equation.
+
+```latex
+\begin{equation}
+  @id(eq:energy)
+  E = mc^2
+\end{equation}
+```
+
+`$$...$$` and `\[...\]` have no header slot. They are declared after the closing delimiter, which is itself
+a completed attachable construct:
+
+```latex
+\[
+  E = mc^2
+\]
+@id(eq:energy)
+```
+
+An `@id` between the opening and closing delimiter is inside the math exclusion region and remains ordinary
+bytes.
+
+### Identifier scope and emission
+
+An identifier is scoped to **one document root** — not one source file, and not the whole project. A root is
+its root file plus the transitive closure of files reached by successful `@import` constructs, and its symbol
+table is the merge of theirs.
+
+Two declarations of one identifier in one root are a hard error blamed on the later explicit declaration.
+Importing the same physical file twice does not redeclare its entities: a canonical path merges once per
+root. Two different files declaring the same identifier do conflict when both belong to the same root.
+
+Separate roots under one `nextex.toml` have separate symbol tables and may reuse an identifier, provided
+neither imports the other's declaring file. This matches LaTeX's document-wide label namespace without
+imposing a project-wide one on separately emitted documents.
+
+`@id(sec:intro)` emits `\label{sec:intro}` at the annotation's source position, and nothing else — no
+wrapper, no support command.
+
+Before emission each root builds a **label inventory**. `\label` is a built-in known command with signature
+`m`, so its mandatory argument is selectable under §8 even though its bytes are otherwise opaque. A label
+enters the inventory only when it is tokenized as `\label` under default category codes, occurs outside every
+§8 exclusion region, has one balanced braced argument, and that argument is an `ident` after trimming ASCII
+whitespace.
+
+The inventory is `Complete` or `Unavailable`. It becomes `Unavailable` when quarantine begins, a category-code
+change prevents reliable tokenization, or a candidate argument cannot be bounded. None of those is an error
+for an unannotated document.
+
+When `Complete`, an `@id(x)` colliding with another `@id(x)` or with a source `\label{x}` is a hard error
+blamed on the `@id`; nothing is emitted. The source `\label{x}` is never itself an error.
+
+When `Unavailable`, an `@id` whose emitted label could not be checked is a hard error blamed on that
+annotation, reported as *label inventory unavailable*, and no `\label` is emitted. This distinguishes lack of
+evidence from absence, and stops a passing build from silently acquiring a duplicate label.
+
 ### Boundaries
 
 `@id`, `@ref` and `@cite` end at the first `)` after their entry token. Their identifier, bibliography key and
@@ -226,6 +295,54 @@ Fixtures must include:
 7. An unterminated inline construct followed by a valid construct on the next line; the second remains
    recognizable.
 8. Empty and non-ASCII identifiers, which are hard errors inside the explicit construct.
+
+### Bibliography discovery and citation checking
+
+Bibliography resources are discovered per document root, from configuration and from recognized LaTeX
+declarations. Both contribute; neither overrides the other.
+
+```toml
+bibliographies = ["refs.bib", "sources/extra.bib"]
+```
+
+Paths are relative to the directory holding `nextex.toml`; an absolute path is invalid configuration.
+
+The built-in signature set includes:
+
+```text
+\bibliography   m
+\addbibresource o m
+```
+
+**These are known commands, so their arguments are selectable under §8** even though the bytes remain opaque
+for transport. That is what makes citation checking possible at all.
+
+- `\bibliography{a,b}` splits its argument on ASCII commas, trims ASCII whitespace, appends `.bib` where
+  absent, and resolves each result relative to the file containing the command.
+- `\addbibresource[...]{a.bib}` ignores the optional argument for discovery and resolves the mandatory one
+  the same way.
+- An argument containing a control sequence, inner brace nesting, a non-ASCII byte or an empty item is not
+  expanded or guessed.
+
+A command contributes only from a recognition region. A spelling inside a macro body, comment, verbatim
+region, command argument, math region or quarantine contributes nothing.
+
+```text
+BibliographyState = Complete(KeySet) | Unavailable(Reason)
+```
+
+`Complete` requires every declared resource to be readable and every key boundary to parse. Keys come from
+entries beginning `@`, an ASCII entry type, optional whitespace, `{` or `(`, then a `bibkey` terminated by
+whitespace or a comma. `@comment`, `@preamble` and `@string` contribute none.
+
+The state is `Unavailable` when no resource is declared, a path is dynamic or malformed, a resource is absent
+or unreadable, a resource exceeds a configured limit, an entry boundary cannot be parsed, or quarantine could
+hide a declaration. **Any failure makes the whole root `Unavailable` rather than yielding a partial key
+set** — a partial set would produce false missing-key errors.
+
+`@cite(k)` is a hard error only when the state is `Complete` and `k` is absent. Under `Unavailable` it
+receives an advisory saying checking was unavailable, and the exit code does not change.
+
 
 ---
 
@@ -486,6 +603,19 @@ latex {
 }
 ```
 
+The raw escape is **also the escape for a literal entry token in prose**:
+
+```latex
+The token is latex {@ref(example)}.
+```
+
+It emits only the bytes inside its outer braces — the `latex`, the whitespace and the outer brace pair are
+erased — so the emitted text is `The token is @ref(example).`
+
+This adds no new interpretation: `latex` followed by optional whitespace and `{` was already the raw
+construct of §3, so no existing valid `.tex` changes meaning. Nested braces stay part of the body; only the
+outer pair is erased.
+
 Raw content is transported. No NextTeX entry token is recognized inside it. All raw content is unchecked
 for the coverage figure reported by `nextex check`.
 
@@ -512,7 +642,7 @@ entry token are ordinary bytes.
 |---|---|---|
 | Comment | unescaped `%` under current default category codes | line ending or end of file |
 | Inline math | unescaped `$` not followed by `$` | next corresponding unescaped `$` |
-| Display math | `$$` or `\[` | corresponding `$$` or `\]` |
+| Display math | `$$` or `\[`; for a display-math environment, the first byte after the header slot in §4 | corresponding `$$`, `\]` or matching `\end{name}` |
 | Verbatim command | a known verbatim command and its delimiter byte | next occurrence of that delimiter |
 | Verbatim environment | a configured verbatim `\begin{name}` | its line-exact `\end{name}` |
 | Listing | `\begin{lstlisting}` or a configured listing name | its line-exact terminator |
@@ -578,6 +708,10 @@ an optional title such as
 ```
 
 opaque unless the environment signature declares that optional argument.
+
+For an environment marked as display math by its signature, the body exclusion begins only after the equation
+header slot specified in §4. This is the sole exception to immediate body exclusion: it admits `@id` in that
+bounded slot and no other construct in the remaining math body.
 
 ### Quarantine
 
