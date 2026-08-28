@@ -1,10 +1,14 @@
 # Default reviewer for every PR.
 #
 # This repository has a single maintainer, who reviews every pull request.
-# "Require review from Code Owners" in branch protection is what makes that
-# approval structurally required to merge. Keep it enabled.
-#
 # The second pair of eyes is missing by construction, so it is manufactured
 # instead: see AGENTS.md §8, "The single reviewer".
+#
+# NOT YET ENFORCED. "Require review from Code Owners" needs branch protection,
+# which GitHub does not offer for private repositories on the free plan
+# (checked 2026-08-28: HTTP 403, "Upgrade to GitHub Pro or make this
+# repository public"). Until the plan changes or the repo goes public,
+# "never push to main" is a convention this file records, not a rule the
+# platform enforces. Enable protection the moment either changes.
 
 *    @camilochs
