@@ -144,7 +144,8 @@ Two implementations of the same thing, compared:
 ## What this strategy does not cover
 
 - **Whether the syntax is the right syntax.** That is a design decision, not a measurement. What Phase 0
-  measures is coverage: how much of a real document ends up carrying a declared name.
+  counts is different: how many of a real paper's figures, tables, sections and citations the author ends up
+  declaring, since a diagnostic can only name what was declared.
 - **Whether a translated diagnostic is understandable.** "Your table runs past the margin" being clearer than
   `Overfull \hbox` is a judgement about people. It can be reviewed; it cannot be asserted.
 - **TeX's own correctness.** The engine is pinned and treated as given. If it changes, the rendered

@@ -257,9 +257,11 @@ orphaned source or sidecar identifiers.
 
 Two experiments, no compiler code:
 
-- rewrite a section of a published paper in the specified syntax and count how much of it ends up carrying a
-  declared name — this measures coverage, the number the diagnostics have to speak with, not the quality of
-  the notation, which is a design decision and not on trial;
+- rewrite a section of a published paper in the specified syntax and count how many of its figures, tables,
+  sections, equations and citations you end up declaring to the compiler, and how much stays as plain LaTeX
+  it does not understand. Every diagnostic in this project needs a declared name to refer to; without one the
+  compiler can only report a line number, which is what TeX already does. This does not judge the notation,
+  which is a settled design decision;
 - write down predictions for every static error class, then run minimal defective examples through
   `tectonic`, `chktex`, `chklref`, and `texlab`.
 
