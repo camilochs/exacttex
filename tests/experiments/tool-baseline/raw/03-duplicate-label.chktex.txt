@@ -1,0 +1,4 @@
+Warning 2 in main.tex line 6: Non-breaking space (`~') should have been used.
+See \ref{dup}.  
+   ^
+CHKTEX_EXIT=2
