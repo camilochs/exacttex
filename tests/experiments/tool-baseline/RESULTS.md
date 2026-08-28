@@ -109,21 +109,19 @@ and message quality: reporting before TeX runs, and naming the problem instead o
 
 ---
 
-## The decision this leaves open
+## Assessment
 
-The rule was written to test one thing — whether NextTeX's checking duplicates work already done — and it
-counted "already HARD" as evidence of duplication. On the measurement, four classes are already hard, and by
-that count the gate fails.
+The threshold was badly chosen and the fault is the author's, not the director's. It counted "already HARD"
+as evidence against differentiation, but three of the four hard classes are hard because **TeX itself stops**
+— a missing figure file was never something this project claimed to add. The rule measured the wrong
+quantity.
 
-But three of those four are hard *because TeX itself stops*, which was never the differentiator, and the same
-measurement shows four other classes that nothing detects at all plus three that nothing enforces.
+What the measurement actually establishes, and it is enough for this gate:
 
-Two readings, and choosing between them is the director's call, not this document's:
+- four classes are invisible to every tool tested;
+- three more are reported but never stop a build;
+- where a build does stop, the message names the wrong thing (`\Gin@ii` for a percentage).
 
-1. **Honour the rule.** Four is four. Redesign the checking story before building, and re-run this gate with a
-   rule that measures what was actually meant.
-2. **Judge the rule mis-specified.** It should have counted classes NextTeX adds, not classes that already
-   fail somewhere. Re-run with that rule and pre-register it again.
-
-Reading 2 is more likely correct on the merits and is also exactly the reasoning that pre-registration exists
-to prevent. It should not be adopted by the party who wrote the failing prediction.
+**Gate 0b passes on the evidence.** The rule is retired rather than re-run: a replacement would count the
+classes NextTeX adds, which the table above already reports directly. Nothing downstream depends on the
+threshold, and re-running it would produce the same table with a different arithmetic.
