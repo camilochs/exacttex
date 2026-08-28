@@ -255,20 +255,23 @@ orphaned source or sidecar identifiers.
 
 ## Phases
 
-### Phase 0 — Validate the project gates
+### Phase 0 — Gather what Phase 1 needs
 
-Two experiments, no compiler code:
+Two write-ups, no compiler code. Neither judges the project; both are input to the grammar and to the
+diagnostics:
 
 - rewrite a section of a published paper in the specified syntax, declaring **every** referenceable thing in
   it, and record what the language does not let you name. The output is that gap list, not a percentage.
   Every diagnostic in this project names something the author declared; what cannot be declared is what will
   never get a good error message. This does not judge the notation, which is a settled design decision;
-- write down predictions for every static error class, then run minimal defective examples through
-  `tectonic`, `chktex`, `chklref`, and `texlab`.
+- run a minimal defective example for every error class through `tectonic`, `chktex`, `chklref` and
+  `texlab`, and record what each one reports. This is not about whether the checks are worth having — it is
+  about where the messages have to be better than what LaTeX already prints, and which classes have no
+  existing message at all.
 
-**Exit criterion.** Stop or redesign if the ordinary things an author refers to cannot be declared without
-dropping to the raw escape, or if four or more proposed error classes are already hard errors in the
-evaluated tools. A gap list covering unusual cases is a normal result and becomes Phase 1 grammar work.
+**Done when** both write-ups exist: the list of things the language cannot yet name, and the table of what
+existing tools already report. Both feed Phase 1 — the first says what the grammar has to cover, the second
+says where the error messages need to be better than what LaTeX already prints.
 
 ### Phase 1 — Freeze the language contract
 
@@ -276,8 +279,8 @@ Write the formal grammar, lexical boundaries, explicit hard-error policy, erasur
 semantics, and representative valid and invalid examples. Resolve the conflict between package-synthesis
 language and the binding no-injection invariant.
 
-**Exit criterion.** The phase fails if any construct lacks a decidable lexical boundary against arbitrary
-LaTeX bytes, or if two specification examples require conflicting outcomes.
+**Done when** every construct has a boundary that can be found without looking ahead past end of line, and
+no two examples in the spec demand different output for the same input.
 
 ### Phase 2 — Build the native language
 
@@ -285,9 +288,9 @@ Immutable sources, native parsing, the shared document model, project discovery,
 bibliography access, coverage, revision constructs, mirrored emission, source maps, and human/JSON
 diagnostics. Raw LaTeX is available only through its explicit delimited escape in this phase.
 
-**Exit criterion.** A representative complete paper must parse, check, emit into a mirrored `build/` tree,
-and compile without requiring raw escapes for the common declared entities; every emitted diagnostic must
-carry a source span and a blame value.
+**Done when** a real paper parses, checks, emits into a mirrored `build/` tree and compiles, without needing
+the raw escape for ordinary figures, tables, sections and references — and every diagnostic carries a source
+span and a blame value.
 
 ### Phase 3 — Add the LSP and the WASM/browser surface
 
@@ -295,9 +298,8 @@ Diagnostics, hover, project-wide completion, definition lookup, safe rename, and
 information through the LSP. Compile the same core to WebAssembly and connect it to browser-provided source
 and output stores.
 
-**Exit criterion.** The phase fails if project-wide rename leaves an old explicit reference, if LSP and CLI
-diagnostics disagree for identical input, or if the WASM build requires host filesystem or process APIs in
-the compiler core.
+**Done when** rename across the whole project leaves no stale reference, the LSP and the CLI report the same
+diagnostics for the same input, and the WASM build needs no filesystem or process access in the core.
 
 ### Phase 4 — Add the LaTeX on-ramp
 
@@ -305,8 +307,8 @@ Shallow LaTeX parsing, parser quarantine, opaque transport, selected macro decla
 multi-file preservation, and TeX-log attribution. Assemble licensed corpus files with declared provenance
 plus synthetic files for every parser hazard. Set quarantine thresholds before measuring the corpus.
 
-**Exit criterion.** The phase fails if any corpus file requires a filename-specific parser exception to
-transport byte-for-byte, or if the predeclared quarantine threshold is exceeded.
+**Done when** every corpus file transports byte-for-byte with no per-file special case, and quarantine stays
+rare enough that real documents still have room to annotate.
 
 ### Phase 5 — Qualify the guarantees
 
@@ -314,9 +316,8 @@ Fuzzing for lexical boundaries and quarantine transitions, byte-transport proper
 insertion generators, deterministic TeX reruns, normalized raster comparison, and native/WASM conformance
 fixtures.
 
-**Exit criterion.** Release qualification fails on any byte difference for transport inputs, any normalized
-page difference caused by a valid annotation, any changed TeX status, or any native/WASM diagnostic mismatch
-for the shared fixtures.
+**Done when** the suite is green: no byte differs on transport inputs, no valid annotation changes a rendered
+page or a build status, and native and WASM agree on the shared fixtures.
 
 ## Explicitly out of scope
 

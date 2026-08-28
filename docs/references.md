@@ -133,6 +133,30 @@ stops being free. Decide deliberately rather than by omission.
 
 ---
 
+## Phase 1 and 4 — Specification, where one exists
+
+There is no grammar of LaTeX to read, and there cannot be one in the usual sense: TeX is a macro expansion
+engine, not a language with a context-free syntax, and the character categories that stand in for a lexer are
+mutable at runtime. `tex.web` defines a machine, not a grammar. LaTeX on top of it is a macro package, and
+packages redefine its commands.
+
+Three specifications do exist and replace guesswork:
+
+- **The category code table.** Sixteen categories, documented, and the actual lexical specification for TeX's
+  default state. TexSoup's `category.py` is a hardcoded snapshot of it. Encode it; do not infer it.
+- **`xparse` argument specifications.** LaTeX's own declarative notation for what arguments a command takes —
+  `m` mandatory, `o` optional, and so on. The closest thing to a grammar LaTeX offers, and it is official.
+- **unified-latex's macro signature database**
+  (`packages/unified-latex-ctan/package/*/provides.ts`) — those signatures for 18 CTAN packages, including
+  `latex2e`, `tikz`, `hyperref`, `listings`, `xcolor`, `tabularx`, `cleveref` and `mathtools`. This answers
+  which commands take arguments, which is what "argument position" means in `grammar.md` §8.
+
+**A specification says what is legal; the corpus says what is common.** Both are needed and they answer
+different questions. That 442 of 479 labels sit on the line after their caption is not in any specification —
+it is how people write. Which commands take arguments is in one, and measuring it instead was wasted work.
+
+---
+
 ## Phase 4 — The LaTeX on-ramp
 
 ### TexSoup — a shallow LaTeX parser that works
