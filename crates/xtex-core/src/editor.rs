@@ -248,8 +248,24 @@ pub fn definition(
     table: &SymbolTable,
     offset: usize,
 ) -> Option<Span> {
+    definition_site(sources, document, table, offset).map(|(_, span)| span)
+}
+
+/// As [`definition`], with the source the declaration lives in.
+///
+/// The span alone answered a single-file editor. A project-wide table can
+/// resolve a name declared in another file, and a location without its file
+/// sends the editor to the wrong buffer.
+#[must_use]
+pub fn definition_site(
+    sources: &Sources,
+    document: &Document,
+    table: &SymbolTable,
+    offset: usize,
+) -> Option<(crate::source::SourceId, Span)> {
     let located = construct_at(sources, document, offset)?;
-    Some(table.declaration(&located.name)?.construct)
+    let declaration = table.declaration(&located.name)?;
+    Some((declaration.payload.source, declaration.construct))
 }
 
 /// The text between a construct's parentheses.
@@ -282,6 +298,80 @@ fn payload_text_for(
     std::str::from_utf8(&bytes[open..close])
         .ok()
         .map(|text| text.trim().to_owned())
+}
+
+/// Renders a hover as JSON, one renderer for both hosts.
+pub fn hover_to_json(found: &Hover, out: &mut String) {
+    out.push_str("{\"text\":");
+    push_json_string(&found.text, out);
+    out.push('}');
+}
+
+/// Renders completions as JSON, one renderer for both hosts.
+pub fn completions_to_json(items: &[Completion], out: &mut String) {
+    out.push('[');
+    for (index, item) in items.iter().enumerate() {
+        if index > 0 {
+            out.push(',');
+        }
+        out.push_str("{\"label\":");
+        push_json_string(&item.label, out);
+        out.push_str(",\"class\":\"");
+        out.push_str(item.class.name());
+        out.push_str("\",\"detail\":");
+        match &item.detail {
+            Some(detail) => push_json_string(detail, out),
+            None => out.push_str("null"),
+        }
+        out.push('}');
+    }
+    out.push(']');
+}
+
+/// Renders a definition site as JSON, one renderer for both hosts.
+pub fn definition_to_json(sources: &Sources, source: SourceId, span: Span, out: &mut String) {
+    use std::fmt::Write as _;
+    let (name, line, column) = sources.get(source).map_or_else(
+        || (String::new(), 0, 0),
+        |s| {
+            let bytes = s.bytes();
+            let upto = &bytes[..span.start().min(bytes.len())];
+            // The dependency the lint suggests is a dependency; this
+            // repository holds none.
+            #[allow(clippy::naive_bytecount)]
+            let line = upto.iter().filter(|b| **b == b'\n').count() + 1;
+            let column =
+                span.start() - upto.iter().rposition(|b| *b == b'\n').map_or(0, |i| i + 1) + 1;
+            (s.name().to_owned(), line, column)
+        },
+    );
+    out.push_str("{\"file\":");
+    push_json_string(&name, out);
+    let _ = write!(
+        out,
+        ",\"offset\":{},\"length\":{},\"line\":{line},\"column\":{column}}}",
+        span.start(),
+        span.len(),
+    );
+}
+
+fn push_json_string(text: &str, out: &mut String) {
+    use std::fmt::Write as _;
+    out.push('"');
+    for ch in text.chars() {
+        match ch {
+            '"' => out.push_str("\\\""),
+            '\\' => out.push_str("\\\\"),
+            '\n' => out.push_str("\\n"),
+            '\r' => out.push_str("\\r"),
+            '\t' => out.push_str("\\t"),
+            c if (c as u32) < 0x20 => {
+                let _ = write!(out, "\\u{:04x}", c as u32);
+            }
+            c => out.push(c),
+        }
+    }
+    out.push('"');
 }
 
 #[cfg(test)]

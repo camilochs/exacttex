@@ -370,6 +370,38 @@ pub fn load_imports(
     Ok((sources, documents, names))
 }
 
+/// A project loaded for positional queries: hover, completion, definition.
+pub struct Analysed {
+    /// Every reachable source.
+    pub sources: Sources,
+    /// Every parsed document, root first.
+    pub documents: Vec<crate::document::Document>,
+    /// Resolved name beside each id, in traversal order, root first.
+    pub names: Vec<(SourceId, String)>,
+    /// One table merged across the whole project, because a name declared in
+    /// an imported file answers a query made in the root.
+    pub table: SymbolTable,
+}
+
+/// Loads a root and its imports and merges one symbol table over them.
+///
+/// # Errors
+///
+/// Returns [`IoError`] when the root or any import cannot be loaded.
+pub fn analyse(loader: &impl SourceLoader, root: &str) -> Result<Analysed, IoError> {
+    let (sources, documents, names) = load_imports(loader, root)?;
+    let mut table = SymbolTable::new();
+    for document in &documents {
+        table.merge(&sources, document);
+    }
+    Ok(Analysed {
+        sources,
+        documents,
+        names,
+        table,
+    })
+}
+
 #[cfg(test)]
 mod bibliography_advisory_tests {
     use super::*;

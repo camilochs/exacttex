@@ -81,7 +81,7 @@ fn handle(message: &rpc::Message, open: &mut Open) -> Vec<String> {
 fn reply_with(
     message: &rpc::Message,
     open: &Open,
-    answer: impl Fn(&str, Position) -> Option<String>,
+    answer: impl Fn(&str, &str, Position) -> Option<String>,
 ) -> Vec<String> {
     let Some(id) = message.id else {
         return Vec::new();
@@ -92,7 +92,7 @@ fn reply_with(
     let Some(text) = open.get(&uri) else {
         return vec![rpc::reply(id, "null")];
     };
-    let body = answer(text, position).unwrap_or_else(|| "null".to_owned());
+    let body = answer(&uri, text, position).unwrap_or_else(|| "null".to_owned());
     vec![rpc::reply(id, &body)]
 }
 
@@ -162,8 +162,8 @@ fn diagnose(uri: &str, text: &str) -> String {
     rpc::notify("textDocument/publishDiagnostics", &params)
 }
 
-fn on_hover(text: &str, position: Position) -> Option<String> {
-    let (sources, document, table) = analyse(text);
+fn on_hover(uri: &str, text: &str, position: Position) -> Option<String> {
+    let (sources, document, table) = analyse(uri, text);
     let offset = offset_at(text.as_bytes(), position)?;
     let found = hover(&sources, &document, &table, offset)?;
     let mut body = String::from(r#"{"contents":{"kind":"plaintext","value":"#);
@@ -172,8 +172,8 @@ fn on_hover(text: &str, position: Position) -> Option<String> {
     Some(body)
 }
 
-fn on_completion(text: &str, position: Position) -> Option<String> {
-    let (sources, document, table) = analyse(text);
+fn on_completion(uri: &str, text: &str, position: Position) -> Option<String> {
+    let (sources, document, table) = analyse(uri, text);
     let offset = offset_at(text.as_bytes(), position)?;
     let items = completions(&sources, &document, &table, offset);
     let mut body = String::from("[");
@@ -194,8 +194,8 @@ fn on_completion(text: &str, position: Position) -> Option<String> {
     Some(body)
 }
 
-fn on_definition(text: &str, position: Position) -> Option<String> {
-    let (sources, document, table) = analyse(text);
+fn on_definition(uri: &str, text: &str, position: Position) -> Option<String> {
+    let (sources, document, table) = analyse(uri, text);
     let offset = offset_at(text.as_bytes(), position)?;
     let span = definition(&sources, &document, &table, offset)?;
     let (line, column) = line_column(text.as_bytes(), span.start());
@@ -207,13 +207,87 @@ fn on_definition(text: &str, position: Position) -> Option<String> {
 
 /// Parses the document and builds its table, which is what every positional
 /// handler needs and none of them should assemble itself.
-fn analyse(text: &str) -> (Sources, Document, SymbolTable) {
+///
+/// The buffer is the root and the project is loaded around it: imports are
+/// read from disk beside the URI's file, and the table is merged across
+/// everything reached, because a name declared in an imported file answers a
+/// query made in the root — the same project-wide path the WebAssembly build
+/// uses, so the two hosts cannot diverge. A URI that is not a file, or an
+/// import that cannot be read, falls back to the buffer alone: a worse answer
+/// beats no answer while the author is mid-keystroke.
+fn analyse(uri: &str, text: &str) -> (Sources, Document, SymbolTable) {
+    if let Some(path) = uri.strip_prefix("file://") {
+        let path = std::path::Path::new(path);
+        if let (Some(dir), Some(name)) = (path.parent(), path.file_name()) {
+            let overlay = Overlay {
+                dir: dir.to_path_buf(),
+                root: name.to_string_lossy().into_owned(),
+                text: text.to_owned(),
+            };
+            if let Ok(analysed) = xtex_core::project::analyse(&overlay, &overlay.root) {
+                let mut documents = analysed.documents;
+                if !documents.is_empty() {
+                    return (analysed.sources, documents.remove(0), analysed.table);
+                }
+            }
+        }
+    }
     let mut sources = Sources::new();
     let id = sources.add("document.xtex", text.as_bytes().to_vec());
     let document = parse(&sources, id);
     let mut table = SymbolTable::new();
     table.merge(&sources, &document);
     (sources, document, table)
+}
+
+/// The open buffer over the filesystem around it.
+///
+/// The root answers from the editor's buffer — what the author sees, not what
+/// is on disk — and every other name reads from disk relative to the root's
+/// directory.
+struct Overlay {
+    dir: std::path::PathBuf,
+    root: String,
+    text: String,
+}
+
+impl xtex_core::io::SourceLoader for Overlay {
+    fn load(
+        &self,
+        name: &str,
+        relative_to: Option<xtex_core::source::SourceId>,
+        sources: &mut Sources,
+    ) -> Result<xtex_core::source::SourceId, xtex_core::io::IoError> {
+        let base = relative_to.and_then(|id| sources.get(id).map(|s| s.name().to_owned()));
+        let resolved = match base.as_deref().and_then(|b| {
+            std::path::Path::new(b)
+                .parent()
+                .map(|d| d.join(name).to_string_lossy().into_owned())
+        }) {
+            Some(joined) => joined,
+            None => name.to_owned(),
+        };
+        if resolved == self.root {
+            return Ok(sources.add(resolved, self.text.as_bytes().to_vec()));
+        }
+        let bytes = std::fs::read(self.dir.join(&resolved)).map_err(|_| {
+            xtex_core::io::IoError::NotFound {
+                name: resolved.clone(),
+            }
+        })?;
+        Ok(sources.add(resolved, bytes))
+    }
+
+    fn read_aux(&self, beside: &str, name: &str) -> Option<Vec<u8>> {
+        let base = std::path::Path::new(beside).parent()?;
+        std::fs::read(self.dir.join(base).join(name)).ok()
+    }
+
+    fn file_exists(&self, relative_to: &str, name: &str) -> bool {
+        std::path::Path::new(relative_to)
+            .parent()
+            .is_some_and(|base| self.dir.join(base).join(name).is_file())
+    }
 }
 
 /// The URI and position a positional request names.
@@ -246,8 +320,8 @@ fn line_column(bytes: &[u8], offset: usize) -> (usize, usize) {
 ///
 /// Answering `null` is how an editor is told not to open its rename box at
 /// all, which is better than opening one whose result would be refused.
-fn on_prepare_rename(text: &str, position: Position) -> Option<String> {
-    let (sources, document, _) = analyse(text);
+fn on_prepare_rename(uri: &str, text: &str, position: Position) -> Option<String> {
+    let (sources, document, _) = analyse(uri, text);
     let offset = offset_at(text.as_bytes(), position)?;
     let located = construct_at(&sources, &document, offset)?;
     if located.kind == EntryToken::Cite {
@@ -280,7 +354,7 @@ fn on_rename(message: &rpc::Message, open: &Open) -> Vec<String> {
         return vec![rpc::reply(id, "null")];
     };
 
-    let (sources, document, _) = analyse(text);
+    let (sources, document, _) = analyse(&uri, text);
     let Some(offset) = offset_at(text.as_bytes(), position) else {
         return vec![rpc::reply(id, "null")];
     };

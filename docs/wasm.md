@@ -59,6 +59,16 @@ file_count × ( u32 name_len   name (UTF-8)   u32 data_len   data )
 | `xtex_blame(ptr, len)` | two length-prefixed texts, then a bundle | the engine's records, translated |
 | `xtex_rename_plan(ptr, len)` | `from`, `to`, then a bundle | the plan, edits and untouched alike |
 | `xtex_rename_apply(ptr, len)` | `from`, `to`, `target`, then a bundle | the target file's rewritten bytes |
+| `xtex_hover(ptr, len)` | `target`, `u32 offset`, then a bundle | hover text |
+| `xtex_completions(ptr, len)` | `target`, `u32 offset`, then a bundle | completion items |
+| `xtex_definition(ptr, len)` | `target`, `u32 offset`, then a bundle | the declaration, file included |
+
+The three query exports share one input shape: the target file's name, a byte offset into it, then the
+bundle. The table is merged across the whole project, so a name declared in an imported file answers a
+query made in the root — and a definition can land in another file, which is why the answer carries the
+file. The language server answers from the same core functions over the same project-wide load (the open
+buffer overlays the file on disk; imports read from beside it), so the browser and a desktop editor cannot
+disagree about one project.
 
 A rename's plan is computed over the whole project and applied one file per call, the way `xtex rename`
 writes one file at a time. The plan's `untouched` list is the honest half: every occurrence left alone
