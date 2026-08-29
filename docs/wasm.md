@@ -1,5 +1,13 @@
 # The WebAssembly build
 
+## ABI version 1
+
+The version names the calling convention and the input framings below, not the compiler's behaviour. It
+changes when a consumer pinned to the previous one would stop working: an export removed or renamed, a
+framing reordered, the bundle format changed. New exports do not change it. The release manifest carries
+this number beside the commit and the module's SHA-256, so a consumer can tell what it is holding without
+trusting a file name.
+
 The same compiler, as a `.wasm` file the browser runs. No compile server, and no
 `wasm-bindgen`.
 

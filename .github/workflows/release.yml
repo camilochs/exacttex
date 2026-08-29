@@ -1,0 +1,31 @@
+name: release
+
+# A tag `wasm-v*` publishes the WebAssembly artefact a separate repository
+# depends on. The tag is the version the consumer pins; the manifest inside
+# the artefact carries the ABI version, the commit and the module's SHA-256,
+# so what is being held is checkable without trusting the file name.
+on:
+  push:
+    tags: ["wasm-v*"]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  wasm-artefact:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+      - run: bash scripts/release-wasm.sh target/xtex-wasm-release
+      - run: |
+          cd target/xtex-wasm-release
+          tar czf "../xtex-wasm-${GITHUB_REF_NAME}.tar.gz" .
+      - run: gh release create "$GITHUB_REF_NAME" "target/xtex-wasm-${GITHUB_REF_NAME}.tar.gz" --title "$GITHUB_REF_NAME" --notes "See manifest.json inside the artefact for the ABI version, commit and SHA-256."
+        env:
+          GH_TOKEN: ${{ github.token }}
