@@ -219,6 +219,80 @@ pub unsafe extern "C" fn xtex_source_map(pointer: *const u8, len: usize) -> *mut
     }
 }
 
+/// Reads one length-prefixed UTF-8 text from a buffer.
+fn take_text(bytes: &[u8], at: &mut usize) -> Option<String> {
+    let end = at.checked_add(4)?;
+    let field = bytes.get(*at..end)?;
+    let text_len = u32::from_le_bytes([field[0], field[1], field[2], field[3]]) as usize;
+    *at = end;
+    let text_end = at.checked_add(text_len)?;
+    let text = String::from_utf8(bytes.get(*at..text_end)?.to_vec()).ok()?;
+    *at = text_end;
+    Some(text)
+}
+
+/// Translates a TeX log against the bundle's root, with blame resolved.
+///
+/// The input is two length-prefixed texts followed by a bundle:
+///
+/// ```text
+/// u32 stderr_len   stderr (UTF-8; the engine's console output, may be empty)
+/// u32 log_len      log (UTF-8; the .log file's content, may be empty)
+/// bundle           as for every other operation
+/// ```
+///
+/// The answer is JSON: the engine's own words unchanged, the emitted line,
+/// the author's position where a map segment supports one, the entity where
+/// a declaration supplies the evidence, and `"unresolved"` blame otherwise —
+/// never a guess. A browser is exactly where a confident wrong attribution
+/// does the most damage, because the user cannot check it against a terminal.
+///
+/// # Safety
+///
+/// `pointer` must point at `len` readable bytes.
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn xtex_blame(pointer: *const u8, len: usize) -> *mut u8 {
+    let bytes = unsafe { input(pointer, len) };
+    let mut at = 0usize;
+    let Some(stderr) = take_text(&bytes, &mut at) else {
+        return result(&[]);
+    };
+    let Some(log) = take_text(&bytes, &mut at) else {
+        return result(&[]);
+    };
+    let Some(bundle) = decode_bundle(&bytes[at..]) else {
+        return result(&[]);
+    };
+
+    let mut sources = xtex_core::source::Sources::new();
+    let Ok(id) = xtex_core::io::SourceLoader::load(&bundle.store, &bundle.root, None, &mut sources)
+    else {
+        return result(&[]);
+    };
+    let document = parse(&sources, id);
+    let mut table = xtex_core::symbols::SymbolTable::new();
+    table.merge(&sources, &document);
+    let Ok(emission) = emit_with_map(&sources, &document) else {
+        return result(&[]);
+    };
+
+    // The emitted name the engine reports against: the root with `.tex`, as
+    // the CLI writes it under `build/`.
+    let emitted_name = bundle
+        .root
+        .rsplit('/')
+        .next()
+        .unwrap_or(&bundle.root)
+        .replace(".xtex", ".tex");
+    let stderr = (!stderr.is_empty()).then_some(stderr);
+    let log = (!log.is_empty()).then_some(log);
+    let records = xtex_core::blame::merge_records(stderr.as_deref(), log.as_deref(), &emitted_name);
+    let translated = xtex_core::blame::translate(&records, &emission, &sources, &document, &table);
+    let mut json = String::new();
+    xtex_core::blame::to_json(&translated, &mut json);
+    result(json.as_bytes())
+}
+
 /// Copies `len` bytes out of the caller's buffer.
 unsafe fn input(pointer: *const u8, len: usize) -> Vec<u8> {
     if pointer.is_null() || len == 0 {

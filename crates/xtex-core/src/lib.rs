@@ -43,6 +43,7 @@
 //! ```
 
 pub mod bibliography;
+pub mod blame;
 pub mod blocks;
 pub mod check;
 pub mod diagnostics;

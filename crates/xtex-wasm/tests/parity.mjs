@@ -63,3 +63,20 @@ const project = bundle(projectDir, rootName);
 writeFileSync(`${outDir}/wasm.tex`, call("xtex_emit", project));
 writeFileSync(`${outDir}/wasm.json`, call("xtex_check_json", project));
 writeFileSync(`${outDir}/wasm.map`, call("xtex_source_map", project));
+
+// Optional: a TeX log to translate. Two length-prefixed texts, then the bundle.
+const [, , , , , , stderrPath, logPath] = process.argv;
+if (stderrPath && logPath) {
+  const enc = new TextEncoder();
+  const stderrBytes = readFileSync(stderrPath);
+  const logBytes = readFileSync(logPath);
+  const framed = new Uint8Array(8 + stderrBytes.length + logBytes.length + project.length);
+  const view = new DataView(framed.buffer);
+  let at = 0;
+  view.setUint32(at, stderrBytes.length, true); at += 4;
+  framed.set(stderrBytes, at); at += stderrBytes.length;
+  view.setUint32(at, logBytes.length, true); at += 4;
+  framed.set(logBytes, at); at += logBytes.length;
+  framed.set(project, at);
+  writeFileSync(`${outDir}/wasm.blame.json`, call("xtex_blame", framed));
+}
