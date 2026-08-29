@@ -561,3 +561,90 @@ fn a_bundle_that_lies_about_its_lengths_returns_no_result_and_does_not_crash() {
         .expect("node runs");
     assert!(ran.success(), "a malformed bundle crashed the module");
 }
+
+#[test]
+fn every_export_the_module_declares_is_exercised_by_the_suite() {
+    // Coverage by construction: a new export that no parity case touches
+    // fails here, so the suite cannot quietly fall behind the surface. The
+    // export list is read from the source rather than maintained by hand,
+    // because a hand-kept list is the thing that drifts.
+    let repo = repo();
+    let source = std::fs::read_to_string(repo.join("crates/xtex-wasm/src/lib.rs"))
+        .expect("the module's source");
+    let mut exports: Vec<&str> = source
+        .lines()
+        .filter_map(|line| {
+            let line = line.trim();
+            let rest = line
+                .strip_prefix("pub unsafe extern \"C\" fn ")
+                .or_else(|| line.strip_prefix("pub extern \"C\" fn "))?;
+            rest.split('(').next()
+        })
+        .collect();
+    exports.sort_unstable();
+    assert!(!exports.is_empty(), "no exports found; the parser broke");
+
+    let drivers = [
+        std::fs::read_to_string(repo.join("crates/xtex-wasm/tests/parity.mjs")).unwrap(),
+        std::fs::read_to_string(repo.join("crates/xtex-wasm/tests/malformed.mjs")).unwrap(),
+    ];
+    let uncovered: Vec<&&str> = exports
+        .iter()
+        .filter(|name| !drivers.iter().any(|driver| driver.contains(**name)))
+        .collect();
+    assert!(
+        uncovered.is_empty(),
+        "exports with no parity case: {uncovered:?}"
+    );
+}
+
+#[test]
+fn failure_paths_fail_identically_in_both_builds() {
+    // The builds must agree about failure, not only success: an unreadable
+    // bibliography's advisory and a quarantined file's silence are answers
+    // too, and a divergence there is found by an author, not by us.
+    let repo = repo();
+    let Some(module) = built_module(&repo) else {
+        return;
+    };
+
+    let broken = repo.join("target/wasm-parity/broken-src");
+    std::fs::create_dir_all(&broken).expect("a scratch project");
+    // An unreadable bibliography: cited, declared, and absent from the
+    // bundle. A quarantined import: a \verb that never closes.
+    std::fs::write(
+        broken.join("main.xtex"),
+        "Ver @cite(clave) y @ref(sec:x).\n@import(\"dark.xtex\")\n\\bibliography{ausente}\n",
+    )
+    .expect("writes");
+    std::fs::write(broken.join("dark.xtex"), "\\verb+sin cierre\n\\label{sec:x}\n")
+        .expect("writes");
+
+    let out = repo.join("target/wasm-parity/broken");
+    run_module(&repo, &module, &broken, "main.xtex", &out);
+    let wasm_json = std::fs::read_to_string(out.join("wasm.json")).expect("the module checked");
+
+    let store = memory_of(&broken);
+    let (sources, diagnostics, coverage, _) = xtex_core::project::check_project(
+        &store,
+        "main.xtex",
+        xtex_core::symbols::PrefixMap::default(),
+    )
+    .expect("checks");
+    let mut native_json = String::new();
+    xtex_core::check::to_json(&sources, &diagnostics, coverage, &mut native_json);
+    assert_eq!(native_json, wasm_json, "the builds disagree about failure");
+
+    // And the failure is the RIGHT failure: the advisory names the missing
+    // bibliography, and the quarantined import silences XT1003 rather than
+    // blaming the author for a label we could not read.
+    assert!(
+        wasm_json.contains("XT2001") && wasm_json.contains("ausente"),
+        "the advisory must name the file: {wasm_json}"
+    );
+    assert!(
+        !wasm_json.contains("XT1003"),
+        "a quarantined file must silence the inventory: {wasm_json}"
+    );
+}
+

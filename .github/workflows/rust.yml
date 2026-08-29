@@ -17,6 +17,15 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: rustfmt, clippy
+          targets: wasm32-unknown-unknown
+      # The parity suite skips, loudly, when node or the wasm target are
+      # absent — which meant CI had been green while never running it. Node
+      # ships on the runner; the target is installed above; and the guard
+      # after the tests turns any skip line into a failure, so the suite
+      # cannot fall silent again without CI saying so.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
       - uses: Swatinem/rust-cache@v2
 
       - name: format
@@ -28,4 +37,7 @@ jobs:
         run: cargo clippy --workspace --all-targets -- -D warnings
 
       - name: test
-        run: cargo test --workspace
+        run: cargo test --workspace -- --nocapture 2>&1 | tee test-output.log
+
+      - name: the parity suite ran rather than skipped
+        run: '! grep -q "^skipped:" test-output.log'
