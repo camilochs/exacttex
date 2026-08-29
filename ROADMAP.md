@@ -305,6 +305,10 @@ span and a blame value.
 
 ### Phase 3 — Add the LSP and the WASM/browser surface
 
+The language server and the WebAssembly build are done. What remains is the browser surface that supplies a
+multi-file project to the module — and the choice of a TeX compiled to WebAssembly, which nobody has
+verified. See [`docs/wasm.md`](docs/wasm.md) and [`docs/lsp.md`](docs/lsp.md).
+
 Diagnostics, hover, project-wide completion, definition lookup, safe rename, and macro declaration
 information through the LSP. Compile the same core to WebAssembly and connect it to browser-provided source
 and output stores.

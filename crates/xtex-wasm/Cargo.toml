@@ -1,0 +1,26 @@
+[package]
+name = "xtex-wasm"
+description = "The ExactTeX compiler as a WebAssembly module, over caller-provided buffers."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+xtex-core = { path = "../xtex-core" }
+
+# This crate does not inherit the workspace lints, and the reason is one line:
+# `unsafe_code = "forbid"` cannot be relaxed from inside a crate, and a raw
+# WebAssembly ABI over caller-provided pointers cannot be written without
+# `unsafe`. The other four crates keep the forbid; this one denies everything
+# else and permits exactly what the boundary needs.
+[lints.rust]
+missing_docs = "warn"
+
+[lints.clippy]
+all = { level = "deny", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
