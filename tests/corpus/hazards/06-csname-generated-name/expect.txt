@@ -1,3 +1,7 @@
+quarantine: no
+recognised: ref
 confidence: OpaqueBalanced over the whole \csname group
-constructs: ref(after) only
-falsifier: the generated name enters the symbol table as a declaration
+constructs: ref(after) only — the marker inside the group is not one
+falsifier: the generated name enters the symbol table as a declaration, or a
+  marker inside the group becomes a construct. The fixture carries one on
+  purpose: without it, the test passed on a group that had nothing to expose.
