@@ -305,9 +305,10 @@ span and a blame value.
 
 ### Phase 3 — Add the LSP and the WASM/browser surface
 
-The language server and the WebAssembly build are done. What remains is the browser surface that supplies a
-multi-file project to the module — and the choice of a TeX compiled to WebAssembly, which nobody has
-verified. See [`docs/wasm.md`](docs/wasm.md) and [`docs/lsp.md`](docs/lsp.md).
+The language server and the WebAssembly build are done. What remains — the browser surface that supplies a
+multi-file project to the module, and the choice of a TeX compiled to WebAssembly, which nobody has verified
+— is Phase 6, because it turned out to be a phase rather than a loose end. See
+[`docs/wasm.md`](docs/wasm.md) and [`docs/lsp.md`](docs/lsp.md).
 
 Diagnostics, hover, project-wide completion, definition lookup, safe rename, and macro declaration
 information through the LSP. Compile the same core to WebAssembly and connect it to browser-provided source
@@ -337,6 +338,35 @@ fixtures.
 
 **Done when** the suite is green: no byte differs on transport inputs, no valid annotation changes a rendered
 page or a build status, and native and WASM agree on the shared fixtures.
+
+### Phase 6 — Make the WebAssembly module something a product can be built on
+
+Phase 3 produced a WebAssembly *build*. This produces a WebAssembly *API*, and the difference was found by
+running the compiler over a real Springer monograph: the module's three entry points each take **one file**,
+under a fixed name, while everything that makes the compiler worth using is multi-file — `@import`, the label
+inventory that spans `\include`, bibliographies, and rename, which is valuable precisely because it reaches
+the whole project.
+
+The host supplies the project on every call, whole. That was decided against the alternative of calling back
+into the host per file, on two grounds: the monograph is 388 KB across 20 files and checks in 71 ms
+*including twenty process starts*, so there is nothing to save by reading lazily; and WebAssembly imports are
+synchronous, so the shape that appears to serve a file arriving over a network is the one that serves it
+worst.
+
+Everything the features need already exists in `xtex-core` and is exercised by the language server. This
+phase is translation, not new behaviour — with one exception worth naming: the browser currently cannot reach
+`texlog` or `map_emitted_diagnostic`, so a product built on the module today would show `! Undefined control
+sequence` and nothing this project exists to add.
+
+The phase ends with the module published as a versioned artefact, which is what lets the browser product live
+in its own repository. That separation is not about size. The browser TeX engine under consideration is
+AGPL-3.0 while this project is MIT, and a licence boundary cannot be undone once it is in a repository's
+history; and this workspace holds four packages in `Cargo.lock` and no external dependencies, a promise a
+`package.json` in the same tree would quietly weaken.
+
+**Done when** a project of several files produces through WebAssembly exactly what the CLI produces for the
+same project on disk — including its failures — and a separate repository can build against the published
+artefact using nothing but [`docs/wasm.md`](docs/wasm.md).
 
 ## Explicitly out of scope
 
