@@ -12,11 +12,8 @@
 //! # What it does not do
 //!
 //! Command arguments and display-math environment bodies are exclusion regions
-//! in §8, and both need the signature database that arrives with the LaTeX
-//! front end. Until then, an entry token inside a command argument is
-//! recognised when it should not be. That is a known gap rather than an
-//! oversight: it is listed in the module tests as a fixture that does not pass
-//! yet.
+//! in §8. Their boundaries come from the signature tables below and in
+//! [`crate::signatures`].
 
 use crate::signatures::{Argument, is_known, signature_of};
 use crate::source::Span;
@@ -37,8 +34,8 @@ enum Region {
     DisplayMath { dollars: bool },
     /// From a verbatim command plus a delimiter byte to its next occurrence.
     Verb { delimiter: u8 },
-    /// From `\begin{name}` to a line-exact `\end{name}`.
-    VerbatimEnvironment { name: Vec<u8> },
+    /// An environment body whose bytes are copied through its matching end.
+    Environment { name: Vec<u8> },
     /// From `\makeatletter` to `\makeatother`.
     InternalMacros,
     /// From `\csname` to `\endcsname`.
@@ -82,6 +79,31 @@ pub const DEFAULT_VERBATIM_ENVIRONMENTS: &[&str] = &[
     "listing",
     "lstlisting",
     "minted",
+];
+
+/// Environments whose bodies are display math.
+///
+/// Transcribed from amsmath 2.17z (`amsmath.dtx`, 2025-07-09): its top-level
+/// display definitions are equation, gather, align, alignat, xalignat,
+/// xxalignat, flalign, and multline, with starred definitions where listed
+/// here. `aligned`, `gathered`, `split`, and `cases` are inner structures, so
+/// an occurrence of one cannot close the outer display region.
+const DISPLAY_MATH_ENVIRONMENTS: &[(&str, &[Argument])] = &[
+    ("align", &[]),
+    ("align*", &[]),
+    ("alignat", &[Argument::Mandatory]),
+    ("alignat*", &[Argument::Mandatory]),
+    ("equation", &[]),
+    ("equation*", &[]),
+    ("flalign", &[]),
+    ("flalign*", &[]),
+    ("gather", &[]),
+    ("gather*", &[]),
+    ("multline", &[]),
+    ("multline*", &[]),
+    ("xalignat", &[Argument::Mandatory]),
+    ("xalignat*", &[Argument::Mandatory]),
+    ("xxalignat", &[Argument::Mandatory]),
 ];
 
 /// A stretch of the source, classified.
@@ -317,6 +339,7 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
     let mut text_start = 0usize;
     let mut excluded_start = 0usize;
     let mut at = 0usize;
+    let mut display_opening: Option<(usize, Vec<u8>)> = None;
 
     /// Closes the run of ordinary bytes that ends here.
     macro_rules! flush {
@@ -344,6 +367,19 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
     while at < bytes.len() {
         match &region {
             Region::Prose => {
+                if let Some((start, name)) = display_opening.as_ref() {
+                    if at == *start {
+                        enter!(at);
+                        region = Region::Environment { name: name.clone() };
+                        display_opening = None;
+                        continue;
+                    }
+                }
+                if display_opening.is_none()
+                    && let Some(opening) = display_math_environment_opening(bytes, at)
+                {
+                    display_opening = Some(opening);
+                }
                 if let Some((token, end)) = entry_token_at(bytes, at) {
                     if matches!(
                         token,
@@ -515,8 +551,8 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                 }
             }
 
-            Region::VerbatimEnvironment { name } => {
-                if let Some(end) = verbatim_end(bytes, at, name) {
+            Region::Environment { name } => {
+                if let Some(end) = environment_end(bytes, at, name) {
                     at = end;
                     pieces.push(Piece::Excluded(span(excluded_start, at)));
                     text_start = at;
@@ -1262,7 +1298,7 @@ fn region_opening_at(bytes: &[u8], at: usize) -> Option<(Region, usize)> {
                 {
                     let consumed = at + b"\\begin{".len() + close + 1;
                     return Some((
-                        Region::VerbatimEnvironment {
+                        Region::Environment {
                             name: name.to_vec(),
                         },
                         consumed,
@@ -1348,7 +1384,7 @@ fn control_word_at(bytes: &[u8], at: usize) -> Option<(&[u8], usize)> {
 }
 
 /// Offset just past `\end{name}` if it begins at `at`.
-fn verbatim_end(bytes: &[u8], at: usize, name: &[u8]) -> Option<usize> {
+fn environment_end(bytes: &[u8], at: usize, name: &[u8]) -> Option<usize> {
     let mut needle = Vec::with_capacity(name.len() + 7);
     needle.extend_from_slice(b"\\end{");
     needle.extend_from_slice(name);
@@ -1356,6 +1392,62 @@ fn verbatim_end(bytes: &[u8], at: usize, name: &[u8]) -> Option<usize> {
     bytes[at..]
         .starts_with(&needle)
         .then_some(at + needle.len())
+}
+
+/// A display body start and the environment name that closes it.
+fn display_math_environment_opening(bytes: &[u8], at: usize) -> Option<(usize, Vec<u8>)> {
+    let rest = bytes.get(at..)?.strip_prefix(b"\\begin{")?;
+    let close = rest.iter().position(|byte| *byte == b'}')?;
+    let name = &rest[..close];
+    let (_, signature) = DISPLAY_MATH_ENVIRONMENTS
+        .iter()
+        .find(|(known, _)| known.as_bytes() == name)?;
+    let mut cursor = at + b"\\begin{".len() + close + 1;
+
+    for argument in *signature {
+        cursor = skip_ascii_whitespace(bytes, cursor);
+        cursor = match argument {
+            Argument::Mandatory if bytes.get(cursor) == Some(&b'{') => balanced_end(bytes, cursor)?,
+            Argument::Mandatory => (cursor + 1).min(bytes.len()),
+            _ => unreachable!("display environment signatures contain only mandatory arguments"),
+        };
+    }
+
+    loop {
+        cursor = display_header_whitespace_end(bytes, cursor);
+        if cursor == bytes.len() {
+            break;
+        }
+        let Some((EntryToken::Id, after_open)) = entry_token_at(bytes, cursor) else {
+            break;
+        };
+        cursor = close_paren(bytes, after_open).map_or(after_open, |close| close + 1);
+    }
+    Some((cursor, name.to_vec()))
+}
+
+/// The bounded whitespace portion of one display header slot step.
+fn display_header_whitespace_end(bytes: &[u8], mut at: usize) -> usize {
+    let start = at;
+    let mut line_endings = 0usize;
+    while at - start < 256 {
+        match bytes.get(at) {
+            Some(b' ' | b'\t') => at += 1,
+            Some(b'\n') if line_endings < 2 => {
+                line_endings += 1;
+                at += 1;
+            }
+            Some(b'\r') if bytes.get(at + 1) == Some(&b'\n') && line_endings < 2 => {
+                if at + 2 - start > 256 {
+                    break;
+                }
+                line_endings += 1;
+                at += 2;
+            }
+            _ => break,
+        }
+    }
+    at
 }
 
 #[cfg(test)]
@@ -1397,6 +1489,7 @@ mod tests {
         b"before %comment\n@id(x) $math$ after",
         b"\\verb+@ref(a)+ then @ref(b)",
         b"\\begin{verbatim}\n@id(v)\n\\end{verbatim} @id(real)",
+        b"\\begin{equation}\n@id(eq:x)\nX \\in [A,B)",
         b"\\makeatletter \\a@b \\makeatother @id(after)",
         b"$$@ref(display)$$ and \\[@ref(bracket)\\] done",
         b"latex { \\raw{@ref(inside)} } @ref(outside)",
@@ -1496,6 +1589,50 @@ mod tests {
         assert_eq!(constructs(b"$@ref(a)$ @ref(b)"), [EntryToken::Ref]);
         assert_eq!(constructs(b"$$@ref(a)$$ @ref(b)"), [EntryToken::Ref]);
         assert_eq!(constructs(b"\\[@ref(a)\\] @ref(b)"), [EntryToken::Ref]);
+    }
+
+    #[test]
+    fn display_math_environments_hide_commands_and_constructs() {
+        for (name, signature) in DISPLAY_MATH_ENVIRONMENTS {
+            let argument = if signature.is_empty() { "" } else { "{2}" };
+            let input = format!(
+                "\\begin{{{name}}}{argument} X \\in [A,B) @id(hidden) @ref(hidden) \\bigg \\end{{{name}}} @ref(after)"
+            );
+            assert_eq!(
+                constructs(input.as_bytes()),
+                [EntryToken::Ref],
+                "{name} did not hide its body"
+            );
+            assert!(
+                !scan(input.as_bytes())
+                    .iter()
+                    .any(|piece| matches!(piece, Piece::Quarantined(_))),
+                "{name} quarantined a bounded display"
+            );
+        }
+    }
+
+    #[test]
+    fn a_display_header_id_is_recognised_before_the_body() {
+        let input = b"\\begin{equation}\n @id(eq:x)\n E = @ref(hidden) \\end{equation} @ref(after)";
+        assert_eq!(constructs(input), [EntryToken::Id, EntryToken::Ref],);
+    }
+
+    #[test]
+    fn an_inner_math_environment_does_not_close_the_outer_region() {
+        let input = b"\\begin{equation} X=\\begin{cases}a\\end{cases} @ref(hidden) \\
+                      \\end{equation} @ref(after)";
+        assert_eq!(constructs(input), [EntryToken::Ref]);
+    }
+
+    #[test]
+    fn an_unterminated_display_environment_quarantines_to_eof() {
+        let input = b"\\begin{equation}\n X = @ref(hidden)";
+        let pieces = scan(input);
+        assert_eq!(constructs(input), []);
+        assert!(
+            matches!(pieces.last(), Some(Piece::Quarantined(span)) if span.end() == input.len())
+        );
     }
 
     #[test]
