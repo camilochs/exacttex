@@ -27,8 +27,10 @@ use json::{Value, write_text};
 use xtex_core::bibliography::{Bibliography, Unavailable};
 use xtex_core::check::check;
 use xtex_core::document::Document;
-use xtex_core::editor::{Position, completions, definition, hover, offset_at};
+use xtex_core::editor::{Position, completions, construct_at, definition, hover, offset_at};
 use xtex_core::parse;
+use xtex_core::rename::plan;
+use xtex_core::scanner::EntryToken;
 use xtex_core::source::Sources;
 use xtex_core::symbols::SymbolTable;
 
@@ -69,6 +71,8 @@ fn handle(message: &rpc::Message, open: &mut Open) -> Vec<String> {
         "textDocument/hover" => reply_with(message, open, on_hover),
         "textDocument/completion" => reply_with(message, open, on_completion),
         "textDocument/definition" => reply_with(message, open, on_definition),
+        "textDocument/prepareRename" => reply_with(message, open, on_prepare_rename),
+        "textDocument/rename" => on_rename(message, open),
         _ => Vec::new(),
     }
 }
@@ -95,7 +99,7 @@ fn reply_with(
 fn initialize(id: i64) -> String {
     rpc::reply(
         id,
-        r#"{"capabilities":{"textDocumentSync":1,"hoverProvider":true,"definitionProvider":true,"completionProvider":{"triggerCharacters":["(",":"]}},"serverInfo":{"name":"xtex-lsp"}}"#,
+        r#"{"capabilities":{"textDocumentSync":1,"hoverProvider":true,"definitionProvider":true,"completionProvider":{"triggerCharacters":["(",":"]},"renameProvider":{"prepareProvider":true}},"serverInfo":{"name":"xtex-lsp"}}"#,
     )
 }
 
@@ -234,4 +238,78 @@ fn line_column(bytes: &[u8], offset: usize) -> (usize, usize) {
         .rposition(|byte| *byte == b'\n')
         .map_or(0, |at| at + 1);
     (line, offset.saturating_sub(start))
+}
+
+/// The range an editor should offer to edit, or `null` where renaming is not
+/// possible.
+///
+/// Answering `null` is how an editor is told not to open its rename box at
+/// all, which is better than opening one whose result would be refused.
+fn on_prepare_rename(text: &str, position: Position) -> Option<String> {
+    let (sources, document, _) = analyse(text);
+    let offset = offset_at(text.as_bytes(), position)?;
+    let located = construct_at(&sources, &document, offset)?;
+    if located.kind == EntryToken::Cite {
+        // Its key lives in a `.bib` this server does not own.
+        return None;
+    }
+    let (line, column) = line_column(text.as_bytes(), located.span.start());
+    let (end_line, end_column) = line_column(text.as_bytes(), located.span.end());
+    Some(format!(
+        r#"{{"start":{{"line":{line},"character":{column}}},"end":{{"line":{end_line},"character":{end_column}}}}}"#
+    ))
+}
+
+/// A workspace edit renaming every structurally resolved occurrence.
+///
+/// Occurrences in opaque text are deliberately absent from the edit. The
+/// server has no channel to explain that in a rename reply, so `xtex rename`
+/// is where an author is told; `docs/lsp.md` says so.
+fn on_rename(message: &rpc::Message, open: &Open) -> Vec<String> {
+    let Some(id) = message.id else {
+        return Vec::new();
+    };
+    let Some((uri, position)) = locate(&message.params) else {
+        return vec![rpc::reply(id, "null")];
+    };
+    let (Some(text), Some(new_name)) = (
+        open.get(&uri),
+        message.params.get("newName").and_then(Value::text),
+    ) else {
+        return vec![rpc::reply(id, "null")];
+    };
+
+    let (sources, document, _) = analyse(text);
+    let Some(offset) = offset_at(text.as_bytes(), position) else {
+        return vec![rpc::reply(id, "null")];
+    };
+    let Some(located) = construct_at(&sources, &document, offset) else {
+        return vec![rpc::reply(id, "null")];
+    };
+    let plan = plan(
+        &sources,
+        std::slice::from_ref(&document),
+        &located.name,
+        new_name,
+    );
+
+    let mut edits = String::new();
+    for edit in &plan.edits {
+        let (line, column) = line_column(text.as_bytes(), edit.span.start());
+        let (end_line, end_column) = line_column(text.as_bytes(), edit.span.end());
+        if !edits.is_empty() {
+            edits.push(',');
+        }
+        let _ = write!(
+            edits,
+            r#"{{"range":{{"start":{{"line":{line},"character":{column}}},"end":{{"line":{end_line},"character":{end_column}}}}},"newText":"#
+        );
+        write_text(new_name, &mut edits);
+        edits.push('}');
+    }
+
+    let mut body = String::from(r#"{"changes":{"#);
+    write_text(&uri, &mut body);
+    let _ = write!(body, ":[{edits}]}}}}");
+    vec![rpc::reply(id, &body)]
 }

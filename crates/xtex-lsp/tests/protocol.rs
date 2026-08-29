@@ -184,3 +184,35 @@ fn an_unhandled_method_is_not_answered_and_does_not_stop_the_server() {
     assert_eq!(frames.len(), 1, "only initialize is answered: {frames:?}");
     assert!(frames[0].contains(r#""id":1"#), "{}", frames[0]);
 }
+
+#[test]
+fn rename_edits_the_constructs_and_leaves_opaque_text_alone() {
+    let body = r#"{"jsonrpc":"2.0","id":6,"method":"textDocument/rename","params":{"textDocument":{"uri":"file:///p.xtex"},"position":{"line":2,"character":9},"newName":"fig:arch"}}"#
+        .to_owned();
+    let frames = talk(&[open("file:///p.xtex"), body, EXIT.to_owned()]);
+    let reply = frames.last().expect("a reply");
+    assert!(reply.contains("fig:arch"), "{reply}");
+    // Two edits: the declaration on line two and the reference on line three.
+    assert_eq!(reply.matches(r#""newText""#).count(), 2, "{reply}");
+}
+
+#[test]
+fn prepare_rename_refuses_a_citation() {
+    // Its key lives in a `.bib` this server does not own, and answering null
+    // is how an editor is told not to open its rename box at all.
+    let document = r#"{"jsonrpc":"2.0","method":"textDocument/didOpen","params":{"textDocument":{"uri":"file:///c.xtex","text":"@cite(knuth1984)"}}}"#;
+    let ask = r#"{"jsonrpc":"2.0","id":7,"method":"textDocument/prepareRename","params":{"textDocument":{"uri":"file:///c.xtex"},"position":{"line":0,"character":8}}}"#;
+    let frames = talk(&[document.to_owned(), ask.to_owned(), EXIT.to_owned()]);
+    assert!(
+        frames.last().expect("a reply").contains(r#""result":null"#),
+        "{frames:?}"
+    );
+}
+
+#[test]
+fn prepare_rename_offers_the_construct_under_the_cursor() {
+    let ask = r#"{"jsonrpc":"2.0","id":8,"method":"textDocument/prepareRename","params":{"textDocument":{"uri":"file:///p.xtex"},"position":{"line":2,"character":9}}}"#;
+    let frames = talk(&[open("file:///p.xtex"), ask.to_owned(), EXIT.to_owned()]);
+    let reply = frames.last().expect("a reply");
+    assert!(reply.contains(r#""line":2"#), "{reply}");
+}

@@ -49,6 +49,7 @@ pub mod diagnostics;
 pub mod document;
 pub mod editor;
 pub mod io;
+pub mod rename;
 pub mod review;
 pub mod scanner;
 pub mod signatures;
