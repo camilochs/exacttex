@@ -85,6 +85,29 @@ function framed(texts, bundleBytes) {
 writeFileSync(`${outDir}/wasm.rename.json`, call("xtex_rename_plan", framed(["sec:model", "sec:modelo"], project)));
 writeFileSync(`${outDir}/wasm.renamed.root`, call("xtex_rename_apply", framed(["sec:model", "sec:modelo", rootName], project)));
 
+// Positional queries: target file, u32 byte offset, then the bundle.
+function positional(target, offset, bundleBytes) {
+  const enc = new TextEncoder();
+  const t = enc.encode(target);
+  const out = new Uint8Array(4 + t.length + 4 + bundleBytes.length);
+  const view = new DataView(out.buffer);
+  let at = 0;
+  view.setUint32(at, t.length, true); at += 4;
+  out.set(t, at); at += t.length;
+  view.setUint32(at, offset, true); at += 4;
+  out.set(bundleBytes, at);
+  return out;
+}
+const rootText = readFileSync(join(projectDir, rootName), "utf8");
+const refAt = rootText.indexOf("@ref(sec:model)") + 6;
+const citeAt = rootText.indexOf("@cite(knuth1984)") + 7;
+writeFileSync(`${outDir}/wasm.hover.json`, call("xtex_hover", positional(rootName, refAt, project)));
+writeFileSync(`${outDir}/wasm.completions.json`, call("xtex_completions", positional(rootName, refAt, project)));
+writeFileSync(`${outDir}/wasm.definition.json`, call("xtex_definition", positional(rootName, refAt, project)));
+writeFileSync(`${outDir}/wasm.hover.opaque.json`, call("xtex_hover", positional(rootName, rootText.indexOf("verb|sec:model") + 6, project)));
+writeFileSync(`${outDir}/wasm.hover.pastend.json`, call("xtex_hover", positional(rootName, 10_000_000, project)));
+writeFileSync(`${outDir}/wasm.hover.cite.json`, call("xtex_hover", positional(rootName, citeAt, project)));
+
 // Optional: a TeX log to translate. Two length-prefixed texts, then the bundle.
 const [, , , , , , stderrPath, logPath] = process.argv;
 if (stderrPath && logPath) {

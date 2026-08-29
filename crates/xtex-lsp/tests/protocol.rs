@@ -216,3 +216,38 @@ fn prepare_rename_offers_the_construct_under_the_cursor() {
     let reply = frames.last().expect("a reply");
     assert!(reply.contains(r#""line":2"#), "{reply}");
 }
+
+#[test]
+fn hover_resolves_a_name_declared_in_an_imported_file_on_disk() {
+    // The buffer is the root and the project loads around it — the same
+    // project-wide path the WebAssembly build uses, so the two hosts cannot
+    // diverge. The imported file exists only on disk, so a file-local server
+    // would answer "not declared in this document root".
+    let dir = std::env::temp_dir().join(format!("xtex-lsp-cross-{}", std::process::id()));
+    std::fs::create_dir_all(dir.join("sections")).expect("a project dir");
+    std::fs::write(
+        dir.join("sections/model.xtex"),
+        "\\section{M}@id(sec:model)\n",
+    )
+    .expect("the import");
+    let root = dir.join("main.xtex");
+    std::fs::write(&root, "").expect("the root exists for the uri");
+
+    let text = "@import(\"sections/model.xtex\")\nVer @ref(sec:model).\n";
+    let uri = format!("file://{}", root.display());
+    let mut escaped = String::new();
+    xtex_lsp_escape(text, &mut escaped);
+    let open = format!(
+        r#"{{"jsonrpc":"2.0","method":"textDocument/didOpen","params":{{"textDocument":{{"uri":"{uri}","text":{escaped}}}}}}}"#
+    );
+    let hover = format!(
+        r#"{{"jsonrpc":"2.0","id":9,"method":"textDocument/hover","params":{{"textDocument":{{"uri":"{uri}"}},"position":{{"line":1,"character":9}}}}}}"#
+    );
+    let frames = talk(&[open, hover, EXIT.to_owned()]);
+    let reply = frames.last().expect("a reply");
+    assert!(
+        reply.contains("declared as: section"),
+        "the declaration lives only on disk; a file-local analysis cannot see it: {reply}"
+    );
+    std::fs::remove_dir_all(&dir).ok();
+}

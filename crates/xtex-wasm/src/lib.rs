@@ -297,6 +297,105 @@ pub unsafe extern "C" fn xtex_rename_apply(pointer: *const u8, len: usize) -> *m
     result(&xtex_core::rename::apply(&original, *id, &plan))
 }
 
+/// Answers a positional query over the bundle's project.
+///
+/// The three query exports share one input: `u32 target_len · target ·
+/// u32 offset · bundle`, where `offset` is a byte offset into the named
+/// file. The table is merged across the whole project, so a name declared in
+/// an imported file answers a query made in the root — completions are
+/// project-wide, and a definition can land in another file, which is why the
+/// answer carries the file. A position past the end of the file, or a target
+/// the project does not reach, returns the empty result; a position inside
+/// an opaque region returns the empty result rather than a guess.
+fn positional_query(
+    bytes: &[u8],
+    answer: impl Fn(
+        &xtex_core::project::Analysed,
+        &xtex_core::document::Document,
+        usize,
+    ) -> Option<String>,
+) -> Vec<u8> {
+    let mut at = 0usize;
+    let Some(target) = take_text(bytes, &mut at) else {
+        return Vec::new();
+    };
+    let Some(end) = at.checked_add(4) else {
+        return Vec::new();
+    };
+    let Some(field) = bytes.get(at..end) else {
+        return Vec::new();
+    };
+    let offset = u32::from_le_bytes([field[0], field[1], field[2], field[3]]) as usize;
+    let Some(bundle) = decode_bundle(&bytes[end..]) else {
+        return Vec::new();
+    };
+    let Ok(analysed) = xtex_core::project::analyse(&bundle.store, &bundle.root) else {
+        return Vec::new();
+    };
+    let Some(position) = analysed.names.iter().position(|(_, name)| *name == target) else {
+        return Vec::new();
+    };
+    let document = &analysed.documents[position];
+    answer(&analysed, document, offset).map_or_else(Vec::new, String::into_bytes)
+}
+
+/// Hover text for a position. See [`positional_query`] for the input.
+///
+/// # Safety
+///
+/// `pointer` must point at `len` readable bytes.
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn xtex_hover(pointer: *const u8, len: usize) -> *mut u8 {
+    let bytes = unsafe { input(pointer, len) };
+    result(&positional_query(&bytes, |analysed, document, offset| {
+        let found = xtex_core::editor::hover(&analysed.sources, document, &analysed.table, offset)?;
+        let mut json = String::new();
+        xtex_core::editor::hover_to_json(&found, &mut json);
+        Some(json)
+    }))
+}
+
+/// Completions at a position. See [`positional_query`] for the input.
+///
+/// # Safety
+///
+/// `pointer` must point at `len` readable bytes.
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn xtex_completions(pointer: *const u8, len: usize) -> *mut u8 {
+    let bytes = unsafe { input(pointer, len) };
+    result(&positional_query(&bytes, |analysed, document, offset| {
+        let items =
+            xtex_core::editor::completions(&analysed.sources, document, &analysed.table, offset);
+        if items.is_empty() {
+            return None;
+        }
+        let mut json = String::new();
+        xtex_core::editor::completions_to_json(&items, &mut json);
+        Some(json)
+    }))
+}
+
+/// The declaration a position refers to. See [`positional_query`].
+///
+/// # Safety
+///
+/// `pointer` must point at `len` readable bytes.
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn xtex_definition(pointer: *const u8, len: usize) -> *mut u8 {
+    let bytes = unsafe { input(pointer, len) };
+    result(&positional_query(&bytes, |analysed, document, offset| {
+        let (source, span) = xtex_core::editor::definition_site(
+            &analysed.sources,
+            document,
+            &analysed.table,
+            offset,
+        )?;
+        let mut json = String::new();
+        xtex_core::editor::definition_to_json(&analysed.sources, source, span, &mut json);
+        Some(json)
+    }))
+}
+
 /// Reads one length-prefixed UTF-8 text from a buffer.
 fn take_text(bytes: &[u8], at: &mut usize) -> Option<String> {
     let end = at.checked_add(4)?;

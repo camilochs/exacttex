@@ -229,6 +229,84 @@ fn a_multi_file_bundle_equals_the_cli_run_on_the_same_project_on_disk() {
 }
 
 #[test]
+fn editor_queries_answer_project_wide_and_identically_in_both_builds() {
+    let repo = repo();
+    let Some(module) = built_module(&repo) else {
+        return;
+    };
+    let project = repo.join("tests/fixtures/wasm/project");
+    let out = repo.join("target/wasm-parity/project");
+    run_module(&repo, &module, &project, "main.xtex", &out);
+
+    let store = memory_of(&project);
+    let analysed = xtex_core::project::analyse(&store, "main.xtex").expect("loads");
+    let document = &analysed.documents[0];
+    let root_text = std::fs::read_to_string(project.join("main.xtex")).expect("the root");
+    let ref_at = root_text.find("@ref(sec:model)").expect("the ref") + 6;
+
+    // Hover, over a name declared in the IMPORTED file — the project-wide
+    // half is the claim, so the assertion demands the declaration was seen.
+    let found = xtex_core::editor::hover(&analysed.sources, document, &analysed.table, ref_at)
+        .expect("hover");
+    let mut native = String::new();
+    xtex_core::editor::hover_to_json(&found, &mut native);
+    let wasm = std::fs::read_to_string(out.join("wasm.hover.json")).expect("the module hovered");
+    assert_eq!(native, wasm);
+    assert!(
+        wasm.contains("declared as: section"),
+        "the cross-file declaration must be visible, or the table is file-local: {wasm}"
+    );
+
+    // Completions, which must include identifiers from every file.
+    let items =
+        xtex_core::editor::completions(&analysed.sources, document, &analysed.table, ref_at);
+    let mut native = String::new();
+    xtex_core::editor::completions_to_json(&items, &mut native);
+    let wasm =
+        std::fs::read_to_string(out.join("wasm.completions.json")).expect("the module completed");
+    assert_eq!(native, wasm);
+    // `sec:model` is declared in the imported file, so its presence is the
+    // project-wide claim. `fig:plot` must be ABSENT: the position is inside
+    // `@ref(sec:…)`, whose prefix demands a section (`decisions/0003`), and
+    // offering a figure there would be the compiler ignoring its own rule.
+    assert!(
+        wasm.contains("sec:model") && wasm.contains("sec:intro"),
+        "completions must span the project: {wasm}"
+    );
+    assert!(
+        !wasm.contains("fig:plot"),
+        "the sec: prefix demands a section; a figure offered here breaks decisions/0003: {wasm}"
+    );
+
+    // Definition, landing in the imported file — the answer carries the file.
+    let (source, span) =
+        xtex_core::editor::definition_site(&analysed.sources, document, &analysed.table, ref_at)
+            .expect("definition");
+    let mut native = String::new();
+    xtex_core::editor::definition_to_json(&analysed.sources, source, span, &mut native);
+    let wasm =
+        std::fs::read_to_string(out.join("wasm.definition.json")).expect("the module defined");
+    assert_eq!(native, wasm);
+    assert!(
+        wasm.contains("\"file\":\"sections/model.xtex\""),
+        "a definition in another file must say which: {wasm}"
+    );
+
+    // A position inside opaque text answers nothing rather than a guess, and
+    // a position past the end answers nothing rather than trusting it.
+    let opaque = std::fs::read(out.join("wasm.hover.opaque.json")).expect("ran");
+    assert!(opaque.is_empty(), "opaque text must answer nothing");
+    let past = std::fs::read(out.join("wasm.hover.pastend.json")).expect("ran");
+    assert!(past.is_empty(), "past the end must answer nothing");
+
+    // And a construct that is not a reference still answers — the control
+    // that keeps the two empties above from passing because everything is
+    // empty.
+    let cite = std::fs::read_to_string(out.join("wasm.hover.cite.json")).expect("ran");
+    assert!(cite.contains("citation key"), "{cite}");
+}
+
+#[test]
 fn a_rename_plans_and_applies_identically_and_reports_what_it_left_alone() {
     let repo = repo();
     let Some(module) = built_module(&repo) else {
