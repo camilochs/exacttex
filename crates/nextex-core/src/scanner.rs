@@ -18,6 +18,7 @@
 //! oversight: it is listed in the module tests as a fixture that does not pass
 //! yet.
 
+use crate::signatures::{Argument, is_known, signature_of};
 use crate::source::Span;
 
 /// Where the scanner is in the byte stream.
@@ -42,7 +43,20 @@ enum Region {
     InternalMacros,
     /// From a `latex {` entry to the matching `}`.
     Raw { depth: u32 },
+    /// Nothing further is recognised in this file.
+    ///
+    /// Entered when a boundary could not be located. Preserving is always
+    /// available; guessing is not.
+    Quarantine,
 }
+
+/// How many adjacent groups an unknown command may claim before the parser
+/// stops rather than guess that the next one is prose.
+///
+/// `docs/grammar.md` §8 fixes this at sixteen and says what would change it: a
+/// real command absent from the databases with more arguments, or a documented
+/// collision after a shorter run.
+const MAX_UNKNOWN_COMMAND_GROUPS: usize = 16;
 
 /// Environments whose bodies are copied rather than read.
 ///
@@ -189,11 +203,26 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                     text_start = at;
                     continue;
                 }
-                if let Some(next) = region_opening_at(bytes, at) {
-                    let (new_region, resume) = next;
+                if let Some((new_region, resume)) = region_opening_at(bytes, at) {
                     region = new_region;
                     at = resume;
                     continue;
+                }
+                // A command's arguments are an exclusion region. The shape comes
+                // from a signature, never from guessing which groups belong to
+                // it — see signatures.rs.
+                if bytes[at] == b'\\' {
+                    match command_extent(bytes, at) {
+                        Extent::Through(end) => {
+                            at = end;
+                            continue;
+                        }
+                        Extent::Unbounded => {
+                            region = Region::Quarantine;
+                            continue;
+                        }
+                        Extent::NotACommand => {}
+                    }
                 }
                 at += 1;
             }
@@ -253,6 +282,10 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                 } else {
                     at += 1;
                 }
+            }
+
+            Region::Quarantine => {
+                at = bytes.len();
             }
 
             Region::Raw { depth } => {
@@ -439,6 +472,132 @@ fn close_paren(bytes: &[u8], from: usize) -> Option<usize> {
         }
     }
     None
+}
+
+/// How far a command and its arguments reach.
+enum Extent {
+    /// The command and its arguments end just before this offset.
+    Through(usize),
+    /// A boundary could not be located; nothing further is recognised.
+    Unbounded,
+    /// The backslash does not begin a control word.
+    NotACommand,
+}
+
+/// The offset just past a command at `at` and every argument it claims.
+///
+/// For a command with a known signature, the arguments are exactly the ones the
+/// signature selects. For one with no signature, §8 allows a run of adjacent
+/// balanced groups to be treated as its arguments, bounded at sixteen — beyond
+/// that the parser stops rather than assume the seventeenth group is prose.
+fn command_extent(bytes: &[u8], at: usize) -> Extent {
+    let name_start = at + 1;
+    let mut name_end = name_start;
+    while matches!(bytes.get(name_end), Some(b) if b.is_ascii_alphabetic()) {
+        name_end += 1;
+    }
+    if name_end == name_start {
+        return Extent::NotACommand;
+    }
+    let name = &bytes[name_start..name_end];
+    let mut cursor = name_end;
+
+    if let Some(signature) = signature_of(name) {
+        for argument in signature {
+            cursor = skip_ascii_whitespace(bytes, cursor);
+            match argument {
+                Argument::Star => {
+                    if bytes.get(cursor) == Some(&b'*') {
+                        cursor += 1;
+                    }
+                }
+                Argument::Optional => {
+                    if bytes.get(cursor) == Some(&b'[') {
+                        match delimited_end(bytes, cursor, b'[', b']') {
+                            Some(end) => cursor = end,
+                            None => return Extent::Unbounded,
+                        }
+                    }
+                }
+                Argument::Mandatory => {
+                    if bytes.get(cursor) == Some(&b'{') {
+                        match balanced_end(bytes, cursor) {
+                            Some(end) => cursor = end,
+                            None => return Extent::Unbounded,
+                        }
+                    } else {
+                        // A mandatory argument may be a single token.
+                        cursor = (cursor + 1).min(bytes.len());
+                    }
+                }
+                Argument::Delimited(open, close) => {
+                    if bytes.get(cursor) == Some(&open) {
+                        match delimited_end(bytes, cursor, open, close) {
+                            Some(end) => cursor = end,
+                            None => return Extent::Unbounded,
+                        }
+                    }
+                }
+            }
+        }
+        return Extent::Through(cursor);
+    }
+
+    if is_known(name) {
+        return Extent::Through(cursor);
+    }
+
+    // No signature. Claim adjacent groups, bounded.
+    let mut groups = 0usize;
+    loop {
+        let next = skip_ascii_whitespace(bytes, cursor);
+        let (open, close) = match bytes.get(next) {
+            Some(b'{') => (b'{', b'}'),
+            Some(b'[') => (b'[', b']'),
+            _ => break,
+        };
+        if groups == MAX_UNKNOWN_COMMAND_GROUPS {
+            return Extent::Unbounded;
+        }
+        let end = if open == b'{' {
+            balanced_end(bytes, next)
+        } else {
+            delimited_end(bytes, next, open, close)
+        };
+        match end {
+            Some(e) => cursor = e,
+            None => return Extent::Unbounded,
+        }
+        groups += 1;
+    }
+    Extent::Through(cursor)
+}
+
+/// Offset just past the `close` matching the `open` at `from`.
+fn delimited_end(bytes: &[u8], from: usize, open: u8, close: u8) -> Option<usize> {
+    let mut depth = 1u32;
+    let mut at = from + 1;
+    while at < bytes.len() {
+        if !is_escaped(bytes, at) {
+            if bytes[at] == open {
+                depth += 1;
+            } else if bytes[at] == close {
+                depth -= 1;
+                if depth == 0 {
+                    return Some(at + 1);
+                }
+            }
+        }
+        at += 1;
+    }
+    None
+}
+
+fn skip_ascii_whitespace(bytes: &[u8], mut at: usize) -> usize {
+    while matches!(bytes.get(at), Some(b' ' | b'\t')) {
+        at += 1;
+    }
+    at
 }
 
 /// A region beginning at `at`, and where scanning resumes.
@@ -641,6 +800,76 @@ mod tests {
             .collect();
         assert_eq!(malformed.len(), 1);
         assert_eq!(constructs(b"@ref(broken\n@ref(good)"), [EntryToken::Ref]);
+    }
+
+    #[test]
+    fn a_known_signature_excludes_exactly_its_arguments() {
+        // \section is `s o m`: an optional star, an optional bracketed
+        // argument, then one mandatory braced one.
+        assert_eq!(
+            constructs(b"\\section[@ref(short)]{@ref(long)} @ref(after)"),
+            [EntryToken::Ref]
+        );
+        assert_eq!(
+            constructs(b"\\section*{@ref(a)} @ref(after)"),
+            [EntryToken::Ref]
+        );
+        // \caption is `o m`; the token after its argument is prose again.
+        assert_eq!(
+            constructs(b"\\caption{@ref(inside)} @id(after)"),
+            [EntryToken::Id]
+        );
+    }
+
+    #[test]
+    fn a_command_takes_only_the_arguments_its_signature_declares() {
+        // \emph is `m`. The second group is prose, not a second argument, so a
+        // construct inside it is recognised.
+        assert_eq!(
+            constructs(b"\\emph{@ref(arg)}{@ref(prose)}"),
+            [EntryToken::Ref]
+        );
+    }
+
+    #[test]
+    fn an_unknown_command_claims_adjacent_groups_up_to_the_bound() {
+        let one = b"\\unknowncmd{@ref(a)} @ref(one)".to_vec();
+        assert_eq!(constructs(&one), [EntryToken::Ref]);
+
+        let sixteen: Vec<u8> = format!(
+            "\\unknowncmd{} @ref(sixteen)",
+            "{x}".repeat(MAX_UNKNOWN_COMMAND_GROUPS)
+        )
+        .into_bytes();
+        assert_eq!(constructs(&sixteen), [EntryToken::Ref]);
+    }
+
+    #[test]
+    fn one_group_past_the_bound_stops_recognition_rather_than_guessing() {
+        let past: Vec<u8> = format!(
+            "\\unknowncmd{} @ref(never)",
+            "{x}".repeat(MAX_UNKNOWN_COMMAND_GROUPS + 1)
+        )
+        .into_bytes();
+        assert_eq!(constructs(&past), []);
+        assert_eq!(reassemble(&past), past, "quarantine still transports");
+    }
+
+    #[test]
+    fn an_unbounded_argument_quarantines_rather_than_scanning_on() {
+        let input = b"\\section{never closed @ref(a)";
+        assert_eq!(constructs(input), []);
+        assert_eq!(reassemble(input), input);
+    }
+
+    #[test]
+    fn label_has_an_optional_argument_which_is_easy_to_assume_it_lacks() {
+        // The transcribed signature is `o m`, not `m`. A parser that assumed
+        // `m` would read `[x]` as prose and recognise a construct inside it.
+        assert_eq!(
+            constructs(b"\\label[@ref(opt)]{@ref(name)} @ref(after)"),
+            [EntryToken::Ref]
+        );
     }
 
     #[test]
