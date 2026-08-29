@@ -1,8 +1,16 @@
-# Can the identifier prefix carry the type demand?
+# Which label prefixes does a real project actually use?
 
-Decides how `@ref` says what class it expects. If `fig:` reliably means "figure", the demand is already
-written in every document and costs nothing. If it does not, the reference has to say so explicitly and the
-frozen syntax has to change.
+**This experiment does not decide whether the prefix convention exists.** That question is answered by
+documentation, not by sampling: the [LaTeX2e reference manual](https://latexref.xyz/_005clabel.html) and the
+[Wikibooks LaTeX book](https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing) both document it,
+and between them they name `ch`, `sec`, `subsec`, `fig`, `tab`, `eq`, `lst`, `itm`, `alg` and `app`. That is
+where the default map in `docs/decisions/0003` comes from.
+
+What this measures is narrower and is the thing documentation cannot tell you: **which spellings a real
+project adds beyond the documented set.** One corpus is enough for that, because the claim is an existence
+proof — if a real project writes `ssec:`, then a fixed map would fail it, and the map has to be replaceable.
+
+It is not enough for any claim about how common the convention is, and none is made here.
 
 ## Run
 
@@ -48,13 +56,18 @@ spelling per class would report a type error on 54 correct labels in this corpus
 
 See [`docs/decisions/0003`](../../../docs/decisions/0003-the-prefix-is-the-demand.md).
 
-## What would reverse it
+## Limits, and they are the point
 
-Agreement under about 90% between prefix and environment. Then the map produces false errors and the
-explicit form (`@ref:figure(x)`) becomes the better trade.
+**One author's corpus.** These numbers are that author's habit. They are not a measurement of LaTeX
+practice and must never be quoted as one — an earlier version of `decisions/0003` did exactly that and was
+corrected.
 
-## Limits
+Within the corpus, the strongest evidence comes from figures and tables. Equations are 3 labels; that row
+proves nothing on its own.
 
-One author's corpus, and the strongest evidence in it comes from figures and tables. Equations are 3 labels;
-that row proves nothing on its own. A second author's corpus with a different convention is the obvious next
-measurement, and none was taken.
+## The measurement that has not been taken
+
+Point this script at a broad sample of published LaTeX sources — arXiv distributes them — across areas and
+authors. That would say how often an unmapped prefix is the rare case, which is the only thing that could
+reverse the decision. Nobody has run it, and until someone does, "the convention is widespread" is not a
+claim this repository makes.

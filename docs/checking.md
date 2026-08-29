@@ -68,16 +68,19 @@ The reference supplies the other, and **it does so through the prefix before the
 [prefixes]
 figure    = ["fig"]
 table     = ["tab"]
-section   = ["sec", "subsec", "subsubsec", "ssec", "chap", "cap"]
-appendix  = ["app", "appendix"]
-algorithm = ["alg", "algo"]
+section   = ["sec", "subsec", "ch"]
+appendix  = ["app"]
+algorithm = ["alg"]
 equation  = ["eq"]
 ```
 
-The convention was read from documents rather than imposed on them: 1,344 of 1,374 measured labels carry a
-prefix, and inside a typed environment it agrees with the environment 96–100% of the time. The several
-spellings per class are in the map for the same reason — one author writes `sec:`, `subsec:` and `ssec:` for
-one class, and a single-spelling map would fail 54 correct labels in that corpus.
+Those are the prefixes the published convention names — the LaTeX2e reference manual and the Wikibooks
+LaTeX book, which agree. LaTeX has no specification for label names; this is the documented common practice,
+transcribed rather than invented or inferred from a sample.
+
+The map is replaceable because real documents add spellings the documentation does not name. One measured
+corpus uses six of them (`appendix`, `ssec`, `subsubsec`, `cap`, `algo`, `def`) across 55 labels, and a
+fixed map would have called every one a type error.
 
 Two ways the demand is absent, and both are silence rather than error:
 

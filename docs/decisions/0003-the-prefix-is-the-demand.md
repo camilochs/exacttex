@@ -36,50 +36,56 @@ on, and because the syntax was already frozen — it adds no new form.
 | `@ref:figure(x)` states it explicitly | rejected: more to write, and it changes frozen syntax |
 | No demand; the class only powers hover and rename | rejected: leaves the check that motivated the type system unbuilt |
 
-## What made it free
+## Where the default map comes from
 
-Every `\label` in the author's corpus, 1,374 of them:
+**From the published convention, not from a corpus.** LaTeX has no specification for label names, but the
+convention is documented, and two sources agree. Both transcribed on 2026-08-29:
 
-| Prefix | Count | Class |
-|---|---|---|
-| `sec` | 463 | Section |
-| `fig` | 413 | Figure |
-| `tab` | 277 | Table |
-| `app` | 101 | Appendix |
-| *(no prefix)* | 30 | — |
-| `alg` | 25 | Algorithm |
-| `subsec` | 24 | Section |
-| `appendix` | 12 | Appendix |
-| `ssec` | 11 | Section |
-| `cap`, `eq` | 4 each | Section, Equation |
-| `def` | 3 | `?O` — no admitted class |
-| `chap`, `lst` | 2 each | Section, `?O` |
-| `subsubsec`, `algo` | 1 each | Section, Algorithm |
+| Source | Prefixes it names |
+|---|---|
+| [LaTeX2e unofficial reference manual](https://latexref.xyz/_005clabel.html) | `ch`, `sec`, `fig`, `tab`, `eq` |
+| [Wikibooks, *LaTeX/Labels and Cross-referencing*](https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing) | those five, plus `subsec`, `lst`, `itm`, `alg`, `app` |
 
-**Only 30 of 1,374 carry no prefix at all**, and within a typed environment the prefix matches the
-environment essentially always: `fig:` on 413 of 417 labelled figures, `tab:` on 272 of 276 tables, `alg:` on
-25 of 26 algorithms.
+The reference manual: *"A common convention is to use key names consisting of a prefix and a suffix
+separated by a colon or period."* Wikibooks: *"It is common practice among LaTeX users to add a few letters
+to the label to describe what you are referencing"*, and *"You are not obligated to use these prefixes."*
 
-The convention is already there. This decision reads it rather than imposing it.
-
-## The default map, and why it is configurable
+So the default map is:
 
 ```toml
 [prefixes]
 figure    = ["fig"]
 table     = ["tab"]
-section   = ["sec", "subsec", "subsubsec", "ssec", "chap", "cap"]
-appendix  = ["app", "appendix"]
-algorithm = ["alg", "algo"]
+section   = ["sec", "subsec", "ch"]
+appendix  = ["app"]
+algorithm = ["alg"]
 equation  = ["eq"]
 ```
 
-The corpus is why `section` has six spellings and `appendix` two. One author writes `subsec:`, `ssec:` and
-`sec:` for the same class in one project. A map with a single spelling per class would report a type error on
-54 correct labels in this corpus alone, which is the failure mode this whole document exists to avoid.
+`lst` and `itm` are documented but have no admitted entity class, so they stay unmapped and demand nothing.
 
-`nextex.toml` replaces the map entirely, never merges into it. An author whose convention is `figura:` writes
-their own and nothing above applies.
+## What the corpus is used for, and what it is not
+
+One author's corpus cannot show that a convention is universal. It can show that something occurs, and that
+is the only claim made from it here.
+
+Measured across 1,374 labels in that corpus: the documented prefixes are used, and **so are six spellings
+the documentation does not name** — `appendix`, `ssec`, `subsubsec`, `cap`, `algo`, `def`. Together they
+account for 55 labels.
+
+That is an existence proof and it settles one thing only: **the map has to be replaceable.** A fixed map
+built from the published convention would report a type error on those 55 correct labels, in the first real
+project it met.
+
+It settles nothing about how common the convention is. `tests/experiments/label-prefixes/` says the same in
+its limits section.
+
+### An earlier version of this record over-claimed
+
+It said the decision "costs nothing in the corpus it has to work on" and that the convention is "already
+there", citing agreement rates from that one corpus as though they measured LaTeX practice. They measured
+one author's habit. The decision stands, but it stands on the documented convention above and on the
+fallback in the next section, not on that sample.
 
 ## Where it does not fire
 
@@ -109,6 +115,11 @@ and silent. The author uses `\Cref` 110 times across 4 projects, so this is a de
 
 ## What would reverse it
 
-A corpus where the prefix convention is weak — say under 90% agreement between prefix and environment. Then
-the map produces false errors and the explicit form becomes the better trade. Re-run
-`tests/experiments/label-prefixes/` on that corpus before arguing it.
+Evidence that the published convention is not followed widely enough for an unmapped prefix to be the rare
+case — say under 90% agreement between prefix and environment across many authors. Then most references
+would demand nothing, the check would rarely fire, and the explicit form would be worth its verbosity after
+all.
+
+That evidence does not exist yet in either direction. `tests/experiments/label-prefixes/` runs on any
+corpus; pointing it at a broad sample of published sources is the measurement that would settle it, and it
+has not been taken.
