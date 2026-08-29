@@ -44,6 +44,7 @@
 
 pub mod bibliography;
 pub mod blocks;
+pub mod check;
 pub mod document;
 pub mod io;
 pub mod scanner;
