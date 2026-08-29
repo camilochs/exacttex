@@ -184,6 +184,20 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
         };
     }
 
+    /// Leaves prose for an excluded region beginning at `$start`.
+    ///
+    /// Both halves are required and neither is optional: the prose has to end,
+    /// and the region has to know where it began. A site that sets one without
+    /// the other makes the next piece start where an older one did, and the
+    /// same bytes are emitted twice. That has happened twice, which is why
+    /// leaving prose goes through here instead of being written out by hand.
+    macro_rules! enter {
+        ($start:expr) => {
+            flush!($start);
+            excluded_start = $start;
+        };
+    }
+
     while at < bytes.len() {
         match &region {
             Region::Prose => {
@@ -241,12 +255,7 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                     continue;
                 }
                 if let Some((new_region, resume)) = region_opening_at(bytes, at) {
-                    // The prose before the region ends here, and the region
-                    // starts at its opener. Leaving either unset makes the next
-                    // piece start where an older one did, and the same bytes
-                    // are then emitted twice.
-                    flush!(at);
-                    excluded_start = at;
+                    enter!(at);
                     region = new_region;
                     at = resume;
                     continue;
@@ -261,6 +270,8 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                             continue;
                         }
                         Extent::Unbounded => {
+                            // Quarantine is an excluded region like any other.
+                            enter!(at);
                             region = Region::Quarantine;
                             continue;
                         }
@@ -760,6 +771,67 @@ mod tests {
             out.extend_from_slice(&bytes[span.start()..span.end()]);
         }
         out
+    }
+
+    /// Where a piece sits, whatever kind it is.
+    fn extent(piece: Piece) -> Span {
+        match piece {
+            Piece::Text(s)
+            | Piece::Excluded(s)
+            | Piece::Construct { span: s, .. }
+            | Piece::Malformed { span: s, .. } => s,
+        }
+    }
+
+    /// Inputs chosen so that truncating them enters every region the scanner
+    /// has, and leaves each one unterminated in turn.
+    const AWKWARD: &[&[u8]] = &[
+        b"\\section{Caf\xE9}\r\n%% comment\t\n\\ref{a} @ref(b) trailing",
+        b"before %comment\n@id(x) $math$ after",
+        b"\\verb+@ref(a)+ then @ref(b)",
+        b"\\begin{verbatim}\n@id(v)\n\\end{verbatim} @id(real)",
+        b"\\makeatletter \\a@b \\makeatother @id(after)",
+        b"$$@ref(display)$$ and \\[@ref(bracket)\\] done",
+        b"latex { \\raw{@ref(inside)} } @ref(outside)",
+        b"\\figure(f) { caption = {C} } @ref(f)",
+        b"text \\unknowncommand{a}{b} more @cite(k)",
+    ];
+
+    #[test]
+    fn the_pieces_cover_every_byte_exactly_once() {
+        // The reassembly test above compares the concatenation, which hides
+        // *where* coverage broke. This asserts the property directly: pieces
+        // run in order, start where the last one ended, and reach the end.
+        //
+        // It exists because the same defect appeared twice — a region entered
+        // without recording where it began, so a later piece restarted inside
+        // an earlier one. Both times the bytes were emitted twice and both
+        // times it took a fixture to notice.
+        for input in AWKWARD {
+            for cut in 0..=input.len() {
+                let slice = &input[..cut];
+                let mut next = 0usize;
+                for piece in scan(slice) {
+                    let span = extent(piece);
+                    assert_eq!(
+                        span.start(),
+                        next,
+                        "piece {piece:?} does not start where the last one ended, \
+                         in {slice:?} cut at {cut}"
+                    );
+                    assert!(
+                        span.end() >= span.start(),
+                        "piece {piece:?} ends before it starts"
+                    );
+                    next = span.end();
+                }
+                assert_eq!(
+                    next,
+                    slice.len(),
+                    "the pieces stop before the end of {slice:?} cut at {cut}"
+                );
+            }
+        }
     }
 
     fn constructs(bytes: &[u8]) -> Vec<EntryToken> {
