@@ -340,6 +340,14 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
     let mut excluded_start = 0usize;
     let mut at = 0usize;
     let mut display_opening: Option<(usize, Vec<u8>)> = None;
+    // Text-bearing arguments being scanned as prose. Each entry is the byte
+    // where the argument's interior ends and the byte where the whole call
+    // ends; the tail between them is the closing delimiter, emitted as an
+    // `Arguments` piece when prose reaches it. A region that overruns the
+    // interior (an unbalanced `$` inside a caption) simply passes the
+    // boundary: the entry is dropped and whatever tail remains is still
+    // classified, so every byte stays covered exactly once.
+    let mut text_arguments: Vec<(usize, usize)> = Vec::new();
 
     /// Closes the run of ordinary bytes that ends here.
     macro_rules! flush {
@@ -367,6 +375,19 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
     while at < bytes.len() {
         match &region {
             Region::Prose => {
+                if let Some(&(interior_end, call_end)) = text_arguments.last() {
+                    if at >= interior_end {
+                        flush!(at.min(interior_end));
+                        text_arguments.pop();
+                        let tail = at.max(interior_end);
+                        if tail < call_end {
+                            pieces.push(Piece::Arguments(span(tail, call_end)));
+                            at = call_end;
+                        }
+                        text_start = at;
+                        continue;
+                    }
+                }
                 if let Some((start, name)) = display_opening.as_ref() {
                     if at == *start {
                         enter!(at);
@@ -474,6 +495,22 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                 if bytes[at] == b'\\' {
                     match command_extent(bytes, at) {
                         Extent::Through(end) => {
+                            // A caption is prose. The head of the call — the
+                            // command, its data arguments, the opening
+                            // delimiter — stays an exclusion region, and the
+                            // interior is scanned exactly as the prose
+                            // outside it, every inner region included.
+                            // Issue #83; grammar §8's composition rule.
+                            if let Some((interior_start, interior_end)) =
+                                text_argument_interior(bytes, at)
+                            {
+                                enter!(at);
+                                pieces.push(Piece::Arguments(span(at, interior_start)));
+                                text_arguments.push((interior_end, end));
+                                text_start = interior_start;
+                                at = interior_start;
+                                continue;
+                            }
                             // §8 makes a command's arguments an exclusion
                             // region, and `Piece::Excluded` is what tells a
                             // consumer searching the source not to look here.
@@ -1119,6 +1156,106 @@ enum Extent {
 /// a mandatory argument was expected means the signature does not describe this
 /// call. See `docs/grammar.md` §8.
 const ARGUMENT_OPENERS: &[u8] = b"[<(*";
+
+/// Known commands whose final mandatory argument is prose.
+///
+/// A caption is a sentence; treating it as data made `@ref(fig:x)` inside
+/// one emit literally into the PDF with exit 0 — Phase 0a's gap 3, decided
+/// as issue #83. Each entry is transcribed against its signature in the
+/// table above; a command absent from the signature table cannot be listed
+/// (`title` and `author` are not, and stay excluded — the conservative
+/// default the issue fixes for the unclassified).
+///
+/// `item` is not here because its prose lives in its *optional* argument;
+/// see [`TEXT_OPTIONAL_COMMANDS`].
+const TEXT_MANDATORY_COMMANDS: &[&[u8]] = &[
+    b"caption",
+    b"chapter",
+    b"emph",
+    b"footnote",
+    b"footnotetext",
+    b"mbox",
+    b"paragraph",
+    b"part",
+    b"section",
+    b"subparagraph",
+    b"subsection",
+    b"subsubsection",
+    b"textbf",
+    b"textit",
+    b"underline",
+];
+// `\texttt` is deliberately absent, against the issue's first list: it is
+// the code font, and `\texttt{@ref(x)}` is how prose *shows* the literal
+// token — fixture revisions/04 exists to hold exactly that. Converting it
+// would corrupt any document that documents ExactTeX.
+
+/// Known commands whose optional argument is prose.
+const TEXT_OPTIONAL_COMMANDS: &[&[u8]] = &[b"item"];
+
+/// The interior of a text-bearing argument, when this call has one.
+///
+/// Walks the same signature the command was consumed under and returns the
+/// byte range inside the prose argument's delimiters. `None` when the
+/// command bears no prose, when the argument is absent, or when it is not
+/// in delimited form — each of those keeps today's whole-argument
+/// exclusion, which is the safe direction.
+fn text_argument_interior(bytes: &[u8], at: usize) -> Option<(usize, usize)> {
+    let name_start = at + 1;
+    let mut name_end = name_start;
+    while matches!(bytes.get(name_end), Some(b) if b.is_ascii_alphabetic()) {
+        name_end += 1;
+    }
+    let name = &bytes[name_start..name_end];
+    let mandatory = TEXT_MANDATORY_COMMANDS.contains(&name);
+    let optional = TEXT_OPTIONAL_COMMANDS.contains(&name);
+    if !mandatory && !optional {
+        return None;
+    }
+    let signature = signature_of(name)?;
+    let mut cursor = name_end;
+    let mut last_mandatory = None;
+    let mut first_optional = None;
+    for argument in signature {
+        cursor = skip_ascii_whitespace(bytes, cursor);
+        match argument {
+            Argument::Star => {
+                if bytes.get(cursor) == Some(&b'*') {
+                    cursor += 1;
+                }
+            }
+            Argument::Optional => {
+                if bytes.get(cursor) == Some(&b'[') {
+                    let end = delimited_end(bytes, cursor, b'[', b']')?;
+                    if first_optional.is_none() {
+                        first_optional = Some((cursor + 1, end - 1));
+                    }
+                    cursor = end;
+                }
+            }
+            Argument::Mandatory => {
+                if bytes.get(cursor) == Some(&b'{') {
+                    let end = balanced_end(bytes, cursor)?;
+                    last_mandatory = Some((cursor + 1, end - 1));
+                    cursor = end;
+                } else {
+                    return None;
+                }
+            }
+            Argument::Delimited(open, close) => {
+                if bytes.get(cursor) == Some(&open) {
+                    cursor = delimited_end(bytes, cursor, open, close)?;
+                }
+            }
+        }
+    }
+    let interior = if mandatory {
+        last_mandatory
+    } else {
+        first_optional
+    }?;
+    (interior.0 < interior.1).then_some(interior)
+}
 
 fn command_extent(bytes: &[u8], at: usize) -> Extent {
     let name_start = at + 1;
@@ -1920,30 +2057,61 @@ mod tests {
 
     #[test]
     fn a_known_signature_excludes_exactly_its_arguments() {
-        // \section is `s o m`: an optional star, an optional bracketed
-        // argument, then one mandatory braced one.
+        // \section is `s o m`. Since issue #83 its *mandatory* argument is
+        // prose — a heading is a sentence — while the optional short title
+        // stays data, the conservative default for the unclassified.
         assert_eq!(
             constructs(b"\\section[@ref(short)]{@ref(long)} @ref(after)"),
-            [EntryToken::Ref]
+            [EntryToken::Ref, EntryToken::Ref]
         );
         assert_eq!(
             constructs(b"\\section*{@ref(a)} @ref(after)"),
-            [EntryToken::Ref]
+            [EntryToken::Ref, EntryToken::Ref]
         );
-        // \caption is `o m`; the token after its argument is prose again.
+        // A data-bearing command's arguments are still fully excluded.
         assert_eq!(
-            constructs(b"\\caption{@ref(inside)} @id(after)"),
+            constructs(b"\\includegraphics[width=@ref(x)]{@ref(path)} @id(after)"),
             [EntryToken::Id]
         );
     }
 
     #[test]
+    fn a_text_bearing_argument_is_prose_and_its_regions_compose() {
+        // Phase 0a's gap 3, decided as issue #83: a caption is prose, so a
+        // construct inside one is a construct — while every inner exclusion
+        // still excludes. Each hidden case here carries exactly the bytes a
+        // wrong implementation would convert.
+        assert_eq!(
+            constructs(b"\\caption{see @ref(fig:x)} @id(after)"),
+            [EntryToken::Ref, EntryToken::Id]
+        );
+        assert_eq!(
+            constructs(b"\\caption{a \\verb|@ref(v)| $@ref(m)$ % @ref(c)\nb @ref(real)}"),
+            [EntryToken::Ref]
+        );
+        // Nested text-bearing commands scan through.
+        assert_eq!(
+            constructs(b"\\caption{\\textbf{@ref(deep)}}"),
+            [EntryToken::Ref]
+        );
+        // A definition body is not prose, wherever a caption sits inside it.
+        assert_eq!(constructs(b"\\newcommand{\\x}{\\caption{@ref(w)}}"), []);
+        // `\item`'s prose is its optional argument.
+        assert_eq!(
+            constructs(b"\\item[see @ref(fig:x)] body"),
+            [EntryToken::Ref]
+        );
+    }
+
+    #[test]
     fn a_command_takes_only_the_arguments_its_signature_declares() {
-        // \emph is `m`. The second group is prose, not a second argument, so a
-        // construct inside it is recognised.
+        // \emph is `m`. The second group is prose, not a second argument —
+        // and since #83 the argument itself is prose too, so both refs are
+        // recognised and the boundary is proven by their count staying two,
+        // not three, when a third group follows nothing.
         assert_eq!(
             constructs(b"\\emph{@ref(arg)}{@ref(prose)}"),
-            [EntryToken::Ref]
+            [EntryToken::Ref, EntryToken::Ref]
         );
     }
 
