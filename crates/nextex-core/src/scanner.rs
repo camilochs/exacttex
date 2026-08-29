@@ -113,6 +113,14 @@ pub enum Piece {
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 #[non_exhaustive]
 pub enum EntryToken {
+    /// `@add(`
+    Add,
+    /// `@del(`
+    Del,
+    /// `@sub(`
+    Sub,
+    /// `@note(`
+    Note,
     /// `@id(`
     Id,
     /// `@ref(`
@@ -133,6 +141,10 @@ impl EntryToken {
     /// The literal that opens this construct, without its `(` or `{`.
     const fn keyword(self) -> &'static [u8] {
         match self {
+            Self::Add => b"@add",
+            Self::Del => b"@del",
+            Self::Sub => b"@sub",
+            Self::Note => b"@note",
             Self::Id => b"@id",
             Self::Ref => b"@ref",
             Self::Cite => b"@cite",
@@ -147,6 +159,10 @@ impl EntryToken {
     #[must_use]
     pub const fn name(self) -> &'static str {
         match self {
+            Self::Add => "@add",
+            Self::Del => "@del",
+            Self::Sub => "@sub",
+            Self::Note => "@note",
             Self::Id => "@id",
             Self::Ref => "@ref",
             Self::Cite => "@cite",
@@ -161,6 +177,10 @@ impl EntryToken {
 /// Every `@`-keyword, longest first so that `@import` is tried before `@id`.
 const AT_TOKENS: &[EntryToken] = &[
     EntryToken::Import,
+    EntryToken::Note,
+    EntryToken::Add,
+    EntryToken::Del,
+    EntryToken::Sub,
     EntryToken::Cite,
     EntryToken::Ref,
     EntryToken::Id,
@@ -219,6 +239,17 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
         match &region {
             Region::Prose => {
                 if let Some((token, end)) = entry_token_at(bytes, at) {
+                    if matches!(
+                        token,
+                        EntryToken::Add | EntryToken::Del | EntryToken::Sub | EntryToken::Note
+                    ) {
+                        flush!(at);
+                        let (piece, resume) = revision_piece(bytes, token, at, end);
+                        pieces.push(piece);
+                        at = resume;
+                        text_start = at;
+                        continue;
+                    }
                     if let Some(kind) = block_kind(token) {
                         flush!(at);
                         let piece = match crate::blocks::parse_block(bytes, kind, at, end) {
@@ -500,6 +531,182 @@ const fn block_kind(token: EntryToken) -> Option<crate::blocks::BlockKind> {
         EntryToken::Table => Some(crate::blocks::BlockKind::Table),
         _ => None,
     }
+}
+
+fn revision_piece(
+    bytes: &[u8],
+    token: EntryToken,
+    start: usize,
+    after_open: usize,
+) -> (Piece, usize) {
+    let Some(header_end) = revision_header_end(bytes, token, after_open) else {
+        return (
+            Piece::Malformed {
+                kind: token,
+                span: span(start, after_open),
+            },
+            after_open,
+        );
+    };
+    let mut open = header_end;
+    while bytes.get(open).is_some_and(u8::is_ascii_whitespace) {
+        open += 1;
+    }
+    if bytes.get(open) != Some(&b'{') {
+        let resume = (open + usize::from(open < bytes.len())).max(after_open);
+        return (
+            Piece::Malformed {
+                kind: token,
+                span: span(start, resume),
+            },
+            resume,
+        );
+    }
+    let Some(end) = balanced_end(bytes, open) else {
+        return (
+            Piece::Malformed {
+                kind: token,
+                span: span(start, bytes.len()),
+            },
+            bytes.len(),
+        );
+    };
+    let nested = nested_pieces(bytes, open + 1, end - 1);
+    let valid = token != EntryToken::Sub || substitution_arrows(bytes, open + 1, end - 1) == 1;
+    let piece = if valid {
+        Piece::Construct {
+            kind: token,
+            span: span(start, end),
+            children: nested,
+        }
+    } else {
+        Piece::Malformed {
+            kind: token,
+            span: span(start, end),
+        }
+    };
+    (piece, end)
+}
+
+fn revision_header_end(bytes: &[u8], token: EntryToken, mut at: usize) -> Option<usize> {
+    at = ident_end(bytes, at)?;
+    if token == EntryToken::Note {
+        if bytes.get(at) != Some(&b',') {
+            return None;
+        }
+        at += 1;
+        while bytes.get(at).is_some_and(u8::is_ascii_whitespace) {
+            at += 1;
+        }
+        if !bytes.get(at..)?.starts_with(b"on") {
+            return None;
+        }
+        at += 2;
+        while bytes.get(at).is_some_and(u8::is_ascii_whitespace) {
+            at += 1;
+        }
+        if bytes.get(at) != Some(&b'=') {
+            return None;
+        }
+        at += 1;
+        while bytes.get(at).is_some_and(u8::is_ascii_whitespace) {
+            at += 1;
+        }
+        at = ident_end(bytes, at)?;
+    }
+    (bytes.get(at) == Some(&b')')).then_some(at + 1)
+}
+
+fn ident_end(bytes: &[u8], start: usize) -> Option<usize> {
+    if !bytes.get(start).is_some_and(u8::is_ascii_alphabetic) {
+        return None;
+    }
+    let mut at = start + 1;
+    while bytes.get(at).is_some_and(|byte| {
+        byte.is_ascii_alphanumeric() || matches!(byte, b'_' | b':' | b'.' | b'-')
+    }) {
+        at += 1;
+    }
+    Some(at)
+}
+
+fn nested_pieces(bytes: &[u8], start: usize, end: usize) -> Vec<Piece> {
+    scan(&bytes[start..end])
+        .into_iter()
+        .filter_map(|piece| match piece {
+            Piece::Construct { .. } => Some(piece.shifted(start)),
+            Piece::Malformed { kind, span: inner } => Some(Piece::Malformed {
+                kind,
+                span: span(start + inner.start(), start + inner.end()),
+            }),
+            Piece::Text(_) | Piece::Excluded(_) => None,
+        })
+        .collect()
+}
+
+fn substitution_arrows(bytes: &[u8], start: usize, end: usize) -> usize {
+    let mut depth = 1u32;
+    let mut count = 0usize;
+    for piece in scan(&bytes[start..end]) {
+        let Piece::Text(text) = piece else { continue };
+        let mut at = start + text.start();
+        let text_end = start + text.end();
+        while at + 1 < text_end {
+            if bytes[at] == b'\\' {
+                if let Extent::Through(next) = command_extent(bytes, at) {
+                    if next <= text_end {
+                        at = next;
+                        continue;
+                    }
+                }
+            }
+            if !is_escaped(bytes, at) {
+                match bytes[at] {
+                    b'{' => depth += 1,
+                    b'}' => depth = depth.saturating_sub(1),
+                    b'-' if depth == 1 && bytes[at + 1] == b'>' => {
+                        count += 1;
+                        at += 2;
+                        continue;
+                    }
+                    _ => {}
+                }
+            }
+            at += 1;
+        }
+    }
+    count
+}
+
+/// The depth-one separator in a valid substitution.
+#[must_use]
+pub fn substitution_separator(bytes: &[u8], start: usize, end: usize) -> Option<usize> {
+    let mut depth = 1u32;
+    for piece in scan(&bytes[start..end]) {
+        let Piece::Text(text) = piece else { continue };
+        let mut at = start + text.start();
+        let text_end = start + text.end();
+        while at + 1 < text_end {
+            if bytes[at] == b'\\' {
+                if let Extent::Through(next) = command_extent(bytes, at) {
+                    if next <= text_end {
+                        at = next;
+                        continue;
+                    }
+                }
+            }
+            if !is_escaped(bytes, at) {
+                match bytes[at] {
+                    b'{' => depth += 1,
+                    b'}' => depth = depth.saturating_sub(1),
+                    b'-' if depth == 1 && bytes[at + 1] == b'>' => return Some(at),
+                    _ => {}
+                }
+            }
+            at += 1;
+        }
+    }
+    None
 }
 
 /// Offset just past the `}` that closes the group opening at `open`.

@@ -48,6 +48,7 @@ pub mod check;
 pub mod diagnostics;
 pub mod document;
 pub mod io;
+pub mod review;
 pub mod scanner;
 pub mod signatures;
 pub mod source;
@@ -103,7 +104,18 @@ pub fn parse(sources: &Sources, id: SourceId) -> Document {
         return document;
     };
 
+    let mut covered_until = 0usize;
     for piece in scanner::scan(source.bytes()) {
+        let piece_span = match piece {
+            Piece::Text(span)
+            | Piece::Excluded(span)
+            | Piece::Construct { span, .. }
+            | Piece::Malformed { span, .. } => span,
+        };
+        if piece_span.start() < covered_until {
+            continue;
+        }
+        covered_until = piece_span.end();
         let node = match piece {
             // Prose the parser modelled nothing in, and a region §8 excludes,
             // are both transported. They differ for a consumer searching the
@@ -174,6 +186,49 @@ fn node_from_piece(piece: Piece, source: SourceId) -> Node {
 /// Returns [`EmitError`] if a node spans a range its source does not contain,
 /// which means the document and the arena disagree.
 pub fn emit(sources: &Sources, document: &Document, out: &mut Vec<u8>) -> Result<(), EmitError> {
+    emit_view(sources, document, RevisionView::Final, out)
+}
+
+/// A document view of the revisions carried in its source.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum RevisionView {
+    /// The document before every proposed change.
+    Original,
+    /// The document with every proposed change applied.
+    Final,
+    /// A review copy in which additions and deletions are visible.
+    Marked,
+}
+
+/// Writes one revision view as LaTeX.
+///
+/// # Errors
+///
+/// Returns [`EmitError`] if a node refers outside its immutable source.
+pub fn emit_view(
+    sources: &Sources,
+    document: &Document,
+    view: RevisionView,
+    out: &mut Vec<u8>,
+) -> Result<(), EmitError> {
+    if view == RevisionView::Marked {
+        let mut body = Vec::new();
+        emit_nodes(sources, document, view, &mut body)?;
+        let insertion = documentclass_end(&body).unwrap_or(0);
+        out.extend_from_slice(&body[..insertion]);
+        out.extend_from_slice(b"\\usepackage{xcolor}\n\\usepackage[normalem]{ulem}\n");
+        out.extend_from_slice(&body[insertion..]);
+        return Ok(());
+    }
+    emit_nodes(sources, document, view, out)
+}
+
+fn emit_nodes(
+    sources: &Sources,
+    document: &Document,
+    view: RevisionView,
+    out: &mut Vec<u8>,
+) -> Result<(), EmitError> {
     for node in document.iter() {
         let span = node.span();
         let bytes = sources
@@ -185,14 +240,49 @@ pub fn emit(sources: &Sources, document: &Document, out: &mut Vec<u8>) -> Result
                 end: span.end(),
             })?;
         match node {
-            Node::Construct { kind, .. } => emit_construct(*kind, bytes, out),
+            Node::Construct { kind, .. } => emit_construct(*kind, bytes, view, out),
             Node::Opaque { .. } | Node::Malformed { .. } => out.extend_from_slice(bytes),
         }
     }
     Ok(())
 }
 
-fn emit_construct(kind: EntryToken, bytes: &[u8], out: &mut Vec<u8>) {
+fn documentclass_end(bytes: &[u8]) -> Option<usize> {
+    let start = bytes
+        .windows(b"\\documentclass".len())
+        .position(|window| window == b"\\documentclass")?;
+    let mut at = start + b"\\documentclass".len();
+    while bytes.get(at).is_some_and(u8::is_ascii_whitespace) {
+        at += 1;
+    }
+    if bytes.get(at) == Some(&b'[') {
+        let mut depth = 1u32;
+        at += 1;
+        while at < bytes.len() && depth > 0 {
+            match bytes[at] {
+                b'[' => depth += 1,
+                b']' => depth -= 1,
+                _ => {}
+            }
+            at += 1;
+        }
+        while bytes.get(at).is_some_and(u8::is_ascii_whitespace) {
+            at += 1;
+        }
+    }
+    let end = scanner::balanced_end(bytes, at)?;
+    Some(
+        if bytes.get(end) == Some(&b'\r') && bytes.get(end + 1) == Some(&b'\n') {
+            end + 2
+        } else if bytes.get(end) == Some(&b'\n') {
+            end + 1
+        } else {
+            end
+        },
+    )
+}
+
+fn emit_construct(kind: EntryToken, bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
     match kind {
         EntryToken::Id => emit_inline(bytes, b"\\label{", out),
         EntryToken::Ref => emit_inline(bytes, b"\\ref{", out),
@@ -204,23 +294,95 @@ fn emit_construct(kind: EntryToken, bytes: &[u8], out: &mut Vec<u8>) {
             emit_citation_keys(&bytes[open + 1..bytes.len() - 1], out);
             out.push(b'}');
         }
-        EntryToken::Import => emit_import(bytes, out),
+        EntryToken::Import => emit_import(bytes, view, out),
+        EntryToken::Add | EntryToken::Del | EntryToken::Sub | EntryToken::Note => {
+            emit_revision(kind, bytes, view, out);
+        }
         EntryToken::Raw => {
             let open = bytes.iter().position(|byte| *byte == b'{').unwrap_or(0);
             out.extend_from_slice(&bytes[open + 1..bytes.len() - 1]);
         }
-        EntryToken::Figure | EntryToken::Table => emit_block(kind, bytes, out),
+        EntryToken::Figure | EntryToken::Table => emit_block(kind, bytes, view, out),
     }
 }
 
-fn emit_content(bytes: &[u8], out: &mut Vec<u8>) {
+fn emit_revision(kind: EntryToken, bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
+    let Some(open) = bytes.iter().position(|byte| *byte == b'{') else {
+        return;
+    };
+    let end = bytes.len().saturating_sub(1);
+    let (left, right) = if kind == EntryToken::Sub {
+        let separator = scanner::substitution_separator(bytes, open + 1, end).unwrap_or(end);
+        (
+            trim_end(&bytes[open + 1..separator]),
+            trim_start(&bytes[(separator + 2).min(end)..end]),
+        )
+    } else {
+        (&bytes[open + 1..end], &[][..])
+    };
+    match (kind, view) {
+        (EntryToken::Add, RevisionView::Final)
+        | (EntryToken::Del | EntryToken::Sub, RevisionView::Original) => {
+            emit_fragment(left, view, out);
+        }
+        (EntryToken::Sub, RevisionView::Final) => emit_fragment(right, view, out),
+        (EntryToken::Add, RevisionView::Marked) => {
+            out.extend_from_slice(b"\\textcolor{blue}{");
+            emit_fragment(left, view, out);
+            out.push(b'}');
+        }
+        (EntryToken::Del, RevisionView::Marked) => {
+            out.extend_from_slice(b"\\textcolor{red}{\\sout{");
+            emit_fragment(left, view, out);
+            out.extend_from_slice(b"}}");
+        }
+        (EntryToken::Sub, RevisionView::Marked) => {
+            out.extend_from_slice(b"\\textcolor{red}{\\sout{");
+            emit_fragment(left, view, out);
+            out.extend_from_slice(b"}}\\textcolor{blue}{");
+            emit_fragment(right, view, out);
+            out.push(b'}');
+        }
+        _ => {}
+    }
+}
+
+fn trim_start(mut bytes: &[u8]) -> &[u8] {
+    while bytes.first().is_some_and(u8::is_ascii_whitespace) {
+        bytes = &bytes[1..];
+    }
+    bytes
+}
+
+fn trim_end(mut bytes: &[u8]) -> &[u8] {
+    while bytes.last().is_some_and(u8::is_ascii_whitespace) {
+        bytes = &bytes[..bytes.len() - 1];
+    }
+    bytes
+}
+
+fn emit_fragment(bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
+    emit_content(bytes, view, out);
+}
+
+fn emit_content(bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
+    let mut covered_until = 0usize;
     for piece in scanner::scan(bytes) {
+        let piece_span = match piece {
+            Piece::Text(span)
+            | Piece::Excluded(span)
+            | Piece::Construct { span, .. }
+            | Piece::Malformed { span, .. } => span,
+        };
+        if piece_span.start() < covered_until {
+            continue;
+        }
+        covered_until = piece_span.end();
+        let fragment = &bytes[piece_span.start()..piece_span.end()];
         match piece {
-            Piece::Construct { kind, span, .. } => {
-                emit_construct(kind, &bytes[span.start()..span.end()], out);
-            }
-            Piece::Text(span) | Piece::Excluded(span) | Piece::Malformed { span, .. } => {
-                out.extend_from_slice(&bytes[span.start()..span.end()]);
+            Piece::Construct { kind, .. } => emit_construct(kind, fragment, view, out),
+            Piece::Text(_) | Piece::Excluded(_) | Piece::Malformed { .. } => {
+                out.extend_from_slice(fragment);
             }
         }
     }
@@ -252,7 +414,7 @@ fn emit_citation_keys(keys: &[u8], out: &mut Vec<u8>) {
     }
 }
 
-fn emit_import(bytes: &[u8], out: &mut Vec<u8>) {
+fn emit_import(bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
     let first_quote = bytes.iter().position(|byte| *byte == b'"').unwrap_or(0);
     let last_quote = bytes
         .iter()
@@ -262,10 +424,14 @@ fn emit_import(bytes: &[u8], out: &mut Vec<u8>) {
     let path = &bytes[first_quote + 1..last_quote];
     let stem = path.strip_suffix(b".ntex").unwrap_or(path);
     out.extend_from_slice(stem);
-    out.extend_from_slice(b".tex}");
+    if view == RevisionView::Marked {
+        out.extend_from_slice(b".marked.tex}");
+    } else {
+        out.extend_from_slice(b".tex}");
+    }
 }
 
-fn emit_block(token: EntryToken, bytes: &[u8], out: &mut Vec<u8>) {
+fn emit_block(token: EntryToken, bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
     let (kind, entry_len, environment) = match token {
         EntryToken::Figure => (BlockKind::Figure, b"\\figure(".len(), b"figure".as_slice()),
         EntryToken::Table => (BlockKind::Table, b"\\table(".len(), b"table".as_slice()),
@@ -323,15 +489,15 @@ fn emit_block(token: EntryToken, bytes: &[u8], out: &mut Vec<u8>) {
     }
     if let Some(caption) = field(b"caption") {
         out.extend_from_slice(b"  \\caption{");
-        emit_braced_content(bytes, caption.value, out);
+        emit_braced_content(bytes, caption.value, view, out);
         out.extend_from_slice(b"}\n");
     }
     if let Some(body) = field(b"body") {
-        emit_braced_content(bytes, body.value, out);
+        emit_braced_content(bytes, body.value, view, out);
         out.push(b'\n');
     }
     if let Some(trailing) = field(b"trailing") {
-        emit_braced_content(bytes, trailing.value, out);
+        emit_braced_content(bytes, trailing.value, view, out);
         out.push(b'\n');
     }
     out.extend_from_slice(b"  \\label{");
@@ -341,9 +507,9 @@ fn emit_block(token: EntryToken, bytes: &[u8], out: &mut Vec<u8>) {
     out.push(b'}');
 }
 
-fn emit_braced_content(bytes: &[u8], value: Value, out: &mut Vec<u8>) {
+fn emit_braced_content(bytes: &[u8], value: Value, view: RevisionView, out: &mut Vec<u8>) {
     let span = value.span();
-    emit_content(&bytes[span.start() + 1..span.end() - 1], out);
+    emit_content(&bytes[span.start() + 1..span.end() - 1], view, out);
 }
 
 fn emit_percentage(bytes: &[u8], span: source::Span, out: &mut Vec<u8>) {

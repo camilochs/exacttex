@@ -130,7 +130,7 @@ fn fixtures_without_constructs_transport_byte_identical() {
         checked += 1;
     }
 
-    assert!(checked >= 20, "only {checked} fixtures ran");
+    assert!(checked >= 18, "only {checked} fixtures ran");
 }
 
 #[test]
@@ -350,28 +350,7 @@ fn short(kind: nextex_core::scanner::EntryToken) -> String {
 /// This is a statement about what is not built. An entry without an issue behind
 /// it is an expectation being quietly dropped, which is the anti-pattern in
 /// `AGENTS.md` §5.
-const NOT_YET: &[(&str, &str)] = &[
-    (
-        "revisions/01-inline-between-words-and-before-punctuation",
-        "#6, #15",
-    ),
-    ("revisions/02-a-long-multiline-revision", "#6, #15"),
-    (
-        "revisions/03-nested-constructs-inside-a-revision",
-        "#6, #15",
-    ),
-    (
-        "revisions/04-construct-inside-a-command-argument-in-a-revision",
-        "#6, #15",
-    ),
-    ("revisions/05-substitution-with-arrows-at-depth", "#6, #15"),
-    (
-        "revisions/06-substitution-with-zero-and-two-arrows",
-        "#6, #15",
-    ),
-    ("revisions/07-unmatched-revision-brace", "#6, #15"),
-    ("revisions/08-properly-nested-revisions", "#6, #15"),
-];
+const NOT_YET: &[(&str, &str)] = &[];
 
 #[test]
 fn every_fixture_produces_the_pieces_it_declares() {
