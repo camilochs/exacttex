@@ -33,6 +33,11 @@ pub enum Unavailable {
     /// A `\label` after that point cannot be seen, so the ones before it are a
     /// subset rather than a set.
     Quarantined,
+    /// A listing header's `label` option could not be read literally.
+    ///
+    /// A computed value, or an option list that never closes. What could not
+    /// be read might declare a label, so nothing may be called absent.
+    UnreadableLabelOption,
     /// A literal LaTeX project edge did not resolve or could not be read.
     UnreadableEdge,
 }
@@ -89,6 +94,16 @@ pub fn inventory(sources: &Sources, document: &Document, id: SourceId) -> Invent
     // separated those out.
     for span in crate::scanner::readable_content(bytes) {
         collect(&bytes[span.start()..span.end()], span.start(), &mut labels);
+    }
+    // A listing may declare its label as a package option in its header,
+    // with no `\label` anywhere. Grammar §4; decided in issue #82.
+    match crate::scanner::listing_header_labels(bytes) {
+        Ok(found) => {
+            for (name, span) in found {
+                labels.entry(name).or_insert(span);
+            }
+        }
+        Err(_) => return Inventory::Unavailable(Unavailable::UnreadableLabelOption),
     }
     Inventory::Complete(labels)
 }
@@ -150,6 +165,59 @@ mod tests {
         let id = sources.add("a.xtex", text.as_bytes().to_vec());
         let document = parse(&sources, id);
         inventory(&sources, &document, id)
+    }
+
+    #[test]
+    fn a_listing_header_label_is_a_declaration() {
+        // The Phase 0a paper's exact shape: options across three lines with a
+        // `%` comment inside, and the braced label form. No `\label` exists
+        // anywhere in this input.
+        let text = "\\begin{lstlisting}[language=Python, style=pythonstyle, % <-- estilo\n    caption=Python function.,\n    label={lst:runs_decomposition}]\nbody\n\\end{lstlisting}";
+        assert!(built(text).contains("lst:runs_decomposition"));
+
+        // The unbraced form occurs in the wild too.
+        assert!(
+            built("\\begin{lstlisting}[label=lst:plain]\nx\n\\end{lstlisting}")
+                .contains("lst:plain")
+        );
+    }
+
+    #[test]
+    fn a_computed_label_option_makes_the_inventory_unavailable() {
+        // What cannot be read might declare a label, so nothing may be called
+        // absent. The same all-or-nothing rule as the bibliography.
+        let found = built("\\begin{lstlisting}[label=\\jobname]\nx\n\\end{lstlisting}");
+        assert_eq!(
+            found,
+            Inventory::Unavailable(Unavailable::UnreadableLabelOption)
+        );
+    }
+
+    #[test]
+    fn a_label_in_a_listing_body_or_inside_another_value_declares_nothing() {
+        // The body is raw bytes; `label=` there is code being displayed. And
+        // `label` as a substring of another option's value is prose about the
+        // syntax, not a use of it. Both fixtures contain exactly the bytes a
+        // wrong implementation would read.
+        let body = built("\\begin{lstlisting}\nlabel={lst:in-body}\n\\end{lstlisting}");
+        assert!(!body.contains("lst:in-body"));
+
+        let value = built(
+            "\\begin{lstlisting}[caption={the label={lst:in-value} syntax}]\nx\n\\end{lstlisting}",
+        );
+        assert!(!value.contains("lst:in-value"));
+    }
+
+    #[test]
+    fn a_lstlisting_inside_a_comment_or_verbatim_body_is_not_a_header() {
+        // Only regions the scanner itself opened are read. Both inputs carry
+        // a well-formed header a scan of raw bytes would find.
+        let comment = built("% \\begin{lstlisting}[label={lst:commented}]\ntext\n");
+        assert!(!comment.contains("lst:commented"));
+
+        let nested =
+            built("\\begin{verbatim}\n\\begin{lstlisting}[label={lst:shown}]\n\\end{verbatim}\n");
+        assert!(!nested.contains("lst:shown"));
     }
 
     #[test]

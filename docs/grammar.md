@@ -311,6 +311,12 @@ enters the inventory only when it is tokenized as `\label` under default categor
 §8 exclusion region, has one balanced braced argument, and that argument is an `ident` after trimming ASCII
 whitespace.
 
+The inventory also reads `label` from the header options of a `lstlisting` environment, because `listings`
+runs `\label` internally for it — `\begin{lstlisting}[…, label={lst:x}]` declares `lst:x` with no `\label`
+anywhere. Only literal values; a computed one, or an option list that never closes, makes the inventory
+`Unavailable`. Only `lstlisting`: `fancyvrb`'s `label` option titles a frame and declares nothing, and
+`verbatim` takes no options, so reading a `[` from its body would misread a correct document.
+
 The inventory also follows literal `\include{…}` and `\input{…}` paths in readable content, transitively.
 An omitted extension resolves first to `.tex`, then to `.xtex`. These commands remain transported bytes: they
 do not become imports, add files to emission, or change page breaks. A command in a comment, verbatim region
