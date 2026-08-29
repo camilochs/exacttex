@@ -305,15 +305,22 @@ imposing a project-wide one on separately emitted documents.
 `@id(sec:intro)` emits `\label{sec:intro}` at the annotation's source position, and nothing else — no
 wrapper, no support command.
 
-Before emission each root builds a **label inventory**. `\label` is a built-in known command with signature
+Before checking each root builds a **label inventory**. `\label` is a built-in known command with signature
 `m`, so its mandatory argument is selectable under §8 even though its bytes are otherwise opaque. A label
 enters the inventory only when it is tokenized as `\label` under default category codes, occurs outside every
 §8 exclusion region, has one balanced braced argument, and that argument is an `ident` after trimming ASCII
 whitespace.
 
+The inventory also follows literal `\include{…}` and `\input{…}` paths in readable content, transitively.
+An omitted extension resolves first to `.tex`, then to `.xtex`. These commands remain transported bytes: they
+do not become imports, add files to emission, or change page breaks. A command in a comment, verbatim region
+or macro definition is not an edge.
+
 The inventory is `Complete` or `Unavailable`. It becomes `Unavailable` when quarantine begins, a category-code
-change prevents reliable tokenization, or a candidate argument cannot be bounded. None of those is an error
-for an unannotated document.
+change prevents reliable tokenization, a candidate argument cannot be bounded, an inventory edge is computed,
+or any literal edge cannot be resolved and read completely. None of those is an error for an unannotated
+document, and no identifier may be reported absent from an unavailable inventory. A configured resource
+limit remains fatal rather than being treated as evidence about the document.
 
 When `Complete`, an `@id(x)` colliding with another `@id(x)` or with a source `\label{x}` is a hard error
 blamed on the `@id`; nothing is emitted. The source `\label{x}` is never itself an error.
