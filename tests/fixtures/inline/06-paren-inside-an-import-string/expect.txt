@@ -1,2 +1,3 @@
 transport: identical
+scanner: import
 constructs: import(sections/a(1).ntex)

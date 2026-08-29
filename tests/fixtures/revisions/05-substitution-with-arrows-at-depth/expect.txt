@@ -1,2 +1,3 @@
 transport: identical
+scanner: sub
 constructs: sub(c1) — one separator at depth one

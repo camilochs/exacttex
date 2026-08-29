@@ -1,2 +1,3 @@
 transport: identical
+scanner: figure
 constructs: figure(a)

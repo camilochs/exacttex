@@ -97,6 +97,8 @@ Prior art it does **not** claim to have invented: typed document languages that 
   hazards, and the phases with their exit criteria.
 - [`docs/grammar.md`](docs/grammar.md) — the language specification: entry tokens, constructs,
   boundaries, and where constructs are not recognized.
+- [`docs/checking.md`](docs/checking.md) — what the compiler is willing to call an error, and what it
+  refuses to: entity classes, the closed list of hard errors, coverage, blame, and the diagnostic fields.
 - [`docs/references.md`](docs/references.md) — what to read before each phase, and what each source
   already settled or blocked.
 - [`docs/testing.md`](docs/testing.md) — the six test layers, and why the property tests cannot wait

@@ -1,2 +1,3 @@
 transport: identical
-constructs: none
+scanner: none
+constructs: none — grammar §7 is "latex" ws* braced, and nothing braced follows

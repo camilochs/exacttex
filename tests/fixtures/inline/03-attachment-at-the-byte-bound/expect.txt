@@ -1,2 +1,3 @@
 transport: identical
+scanner: id
 constructs: id(atbound) attached at exactly 256 skipped bytes

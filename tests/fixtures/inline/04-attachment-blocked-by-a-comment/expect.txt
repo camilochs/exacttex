@@ -1,2 +1,3 @@
 transport: identical
+scanner: id
 constructs: id(blocked) unattached — a comment is not skipped
