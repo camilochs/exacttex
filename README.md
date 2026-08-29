@@ -65,7 +65,53 @@ Ordinary LaTeX keeps working: \emph{emphasis}, $E = mc^2$, \citep{blum2020}.
 
 Two levels of annotation. `@id(x)` hangs off any LaTeX construct and buys checked references and safe rename
 — theorems and algorithms work without NextTeX knowing what they are. A typed block such as `\figure(x)`
-buys visual checks and writes the packages it needs into the preamble for you.
+also gives the compiler the fields to check: the image resolves, the caption is there, the column count
+matches the `tabular`.
+
+---
+
+## The type system is gradual, and that is the whole design
+
+A document is mostly LaTeX the compiler does not model, and that is not a defect to be fixed later. It is
+the state the language is built for.
+
+Every entity is either a class the compiler knows or `?O`, the **unknown open** type:
+
+| Class | Where it comes from |
+|---|---|
+| `Figure`, `Table` | a typed block — `\figure(fig:x)`, `\table(tab:x)` |
+| `Section`, `Appendix`, `Algorithm`, `Equation` | `@id` attached to the LaTeX construct that is one |
+| `Citation` | `@cite`, checked against the bibliography rather than against identifiers |
+| `?O` | everything else |
+
+*Open* is the load-bearing word. `?` in a gradual type system means "unknown among a fixed set of types".
+LaTeX has no fixed set — any package may define new constructors at any time — so the unknown here is
+unbounded. The term is from Malewski, Greenberg and Tanter, *Gradually Structured Data* (OOPSLA 2021).
+
+Comparison is **consistency**, not equality, and two lines are the entire checking policy:
+
+```
+Known(A) ~ Known(B)   if and only if A == B     <- this can fail
+?O       ~ T          for every T               <- this never fails
+```
+
+`?O` is consistent with everything, so nothing involving unmodelled LaTeX can be inconsistent, so nothing
+involving unmodelled LaTeX can fail. **`?O` does not mean invalid. It means the compiler has no grounds.**
+
+Two consequences worth stating plainly.
+
+**Renaming a `.tex` to `.ntex` and changing nothing checks clean.** Not by care taken case by case — by
+construction, because every entity in it is `?O`. That is the gradual guarantee (Siek, Vitousek, Cimini and
+Boyland, SNAPL 2015) instantiated for documents, and it is what makes the on-ramp real rather than a
+promise.
+
+**You choose how much to annotate, and the compiler tells you how much you chose.** `nextex check` reports
+coverage: the fraction of the document it checked. This is the analogue of `any` and `noImplicitAny`. What
+matters is not the number but a fall in it — a file that was 60% checked and is now 30% gained something the
+parser cannot model.
+
+The check that types buy, and that no LaTeX tool performs: `@ref` to a `\table(fig:main)` while your prose
+says "Figure". LaTeX compiles it and prints the wrong word. See [`docs/checking.md`](docs/checking.md).
 
 ---
 
@@ -76,14 +122,6 @@ less. You write more so the tooling knows more.
 
 It does not replace TeX, does not typeset, and does not ask you to leave the LaTeX ecosystem. Your journal
 still receives a `.tex` file.
-
-It does not compete with [Typst](https://typst.app), which asks an author to leave their corpus behind.
-NextTeX asks you to keep it.
-
-Prior art it does **not** claim to have invented: typed document languages that emit LaTeX
-([MyST](https://mystmd.org)), semantic annotation over LaTeX with editor support
-([sTeX](https://ctan.org/pkg/stex)), and language servers for LaTeX
-([texlab](https://github.com/latex-lsp/texlab), [digestif](https://github.com/astoff/digestif)).
 
 ---
 

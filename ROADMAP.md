@@ -276,8 +276,11 @@ says where the error messages need to be better than what LaTeX already prints.
 ### Phase 1 — Freeze the language contract
 
 Write the formal grammar, lexical boundaries, explicit hard-error policy, erasure rules, review-mode
-semantics, and representative valid and invalid examples. Resolve the conflict between package-synthesis
-language and the binding no-injection invariant.
+semantics, and representative valid and invalid examples.
+
+The package-synthesis conflict is settled: `needs` is not a field, packages are written by the author in the
+preamble, and a typed block lowers to the LaTeX its fields describe and nothing else. See
+[`docs/decisions/0001`](docs/decisions/0001-typed-emission-and-no-injection.md).
 
 **Done when** every construct has a boundary that can be found without looking ahead past end of line, and
 no two examples in the spec demand different output for the same input.
