@@ -1,3 +1,4 @@
 transport: identical
 scanner: add add
 constructs: add(c1) add(c2)
+views: original.tex and final.tex, derived from revisions.md §2

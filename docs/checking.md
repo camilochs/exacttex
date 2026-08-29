@@ -72,10 +72,15 @@ error.
 | `NT1007` | A length with an unsupported unit, or a percentage outside 0–100 | `Length` |
 | `NT1008` | A block field that is required and absent, or present and malformed | `Figure`, `Table` |
 | `NT1009` | An `@import` path that does not resolve | any |
+| `NT1010` | Two sidecar records share one revision identifier | any |
+| `NT1011` | A sidecar record's `kind` disagrees with its construct | any |
+| `NT1012` | A sidecar record whose revision construct no longer exists | any |
 
 Two properties hold across the whole table and are tested as properties, not as examples:
 
-1. **Every row requires an explicit construct.** There is no row that ordinary LaTeX can reach.
+1. **Every row requires an explicit construct, or NextTeX's own sidecar.** There is no row that ordinary
+   LaTeX can reach. `NT1010`–`NT1012` are about a `.ntexrev` file, which NextTeX writes and owns; a renamed
+   `.tex` has none, so they cannot fire on one. See [`revisions.md`](revisions.md) §5.
 2. **Every row requires both sides known.** `NT1004` cannot fire when either side is `?O`, and `NT1005`
    cannot fire when the bibliography is `Unavailable`. Uncertainty on either side means silence.
 
