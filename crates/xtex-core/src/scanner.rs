@@ -589,7 +589,7 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                     // first `\fi` of an inner one from closing the outer.
                     let rest = &bytes[at + 3..];
                     let name_len = rest.iter().take_while(|b| b.is_ascii_alphabetic()).count();
-                    if &rest[..name_len] != b"thenelse" {
+                    if !if_name_is_not_a_conditional(&rest[..name_len]) {
                         depth += 1;
                     }
                     at += 3 + name_len;
@@ -1275,11 +1275,8 @@ fn region_opening_at(bytes: &[u8], at: usize) -> Option<(Region, usize)> {
                 return Some((Region::ControlName, at + b"\\csname".len()));
             }
             if let Some(rest) = bytes[at..].strip_prefix(b"\\if") {
-                // `\ifthenelse` takes braced arguments and has no `\fi`, so
-                // scanning for one would swallow the rest of the file. It is a
-                // command; the signature path handles it.
                 let name_len = rest.iter().take_while(|b| b.is_ascii_alphabetic()).count();
-                if &rest[..name_len] != b"thenelse" {
+                if !if_name_is_not_a_conditional(&rest[..name_len]) {
                     return Some((
                         Region::Conditional { depth: 1 },
                         at + b"\\if".len() + name_len,
@@ -1448,6 +1445,26 @@ fn display_header_whitespace_end(bytes: &[u8], mut at: usize) -> usize {
         }
     }
     at
+}
+
+/// Control words beginning with `if` that are not conditionals.
+///
+/// The name is everything after `\if`, and the comparison is against the
+/// complete name: `\iffalse` is a real kernel conditional whose name also
+/// begins with `f`, so a prefix match is exactly the wrong implementation.
+/// One rule, called from both the opening site and the nested-count site, so
+/// the two cannot drift apart.
+///
+/// - `thenelse` — `\ifthenelse` takes braced arguments and has no `\fi`; the
+///   signature path handles it as a command.
+/// - `f` — `\iff` is the kernel's ⟺ symbol, transcribed from `fontmath.ltx`
+///   (TeX Live 2026-03-01): `\DeclareRobustCommand \iff{\;\Longleftrightarrow\;}`.
+///   No `\fi` exists. Found quarantining real papers by the external corpus
+///   (issue #79); package-defined braced conditionals such as `etoolbox`'s
+///   `\ifblank` are deliberately not listed — extending this by configuration
+///   is a policy decision recorded in the issue, not made here.
+fn if_name_is_not_a_conditional(name: &[u8]) -> bool {
+    matches!(name, b"thenelse" | b"f")
 }
 
 #[cfg(test)]
@@ -1632,6 +1649,52 @@ mod tests {
         assert_eq!(constructs(input), []);
         assert!(
             matches!(pieces.last(), Some(Piece::Quarantined(span)) if span.end() == input.len())
+        );
+    }
+
+    #[test]
+    fn iff_in_prose_is_the_kernel_symbol_and_opens_nothing() {
+        // `\iff` is ⟺, not a conditional; there is no `\fi` and never will
+        // be. Before the fix this quarantined the rest of the file, which is
+        // how the external corpus found it in real papers.
+        let input = b"A \\iff B en prosa. @ref(after)";
+        assert_eq!(constructs(input), [EntryToken::Ref]);
+        assert!(
+            !scan(input)
+                .iter()
+                .any(|piece| matches!(piece, Piece::Quarantined(_)))
+        );
+    }
+
+    #[test]
+    fn iffalse_is_a_real_conditional_and_the_exception_must_not_reach_it() {
+        // `\iffalse` begins with the same four bytes as `\iff`. A prefix
+        // comparison excepts both; only the complete-name comparison excepts
+        // one. The closed form scans as a conditional region; the unclosed
+        // form quarantines.
+        let closed = b"\\iffalse hidden @ref(hidden) \\fi @ref(after)";
+        assert_eq!(constructs(closed), [EntryToken::Ref]);
+
+        let unclosed = b"\\iffalse nunca cierra @ref(hidden)";
+        assert_eq!(constructs(unclosed), []);
+        assert!(
+            scan(unclosed)
+                .iter()
+                .any(|piece| matches!(piece, Piece::Quarantined(_)))
+        );
+    }
+
+    #[test]
+    fn iff_nested_inside_a_real_conditional_does_not_deepen_it() {
+        // The nested-count site shares the rule. If `\iff` counted as a
+        // nested conditional, this `\fi` would close depth two of three and
+        // the region would swallow the file.
+        let input = b"\\ifnum x \\iff y \\fi @ref(after)";
+        assert_eq!(constructs(input), [EntryToken::Ref]);
+        assert!(
+            !scan(input)
+                .iter()
+                .any(|piece| matches!(piece, Piece::Quarantined(_)))
         );
     }
 
