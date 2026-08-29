@@ -148,14 +148,20 @@ fn a_single_file_bundle_equals_the_native_library_byte_for_byte() {
         "emitted bytes differ; the Latin-1 byte or the 0xFF did not survive"
     );
 
-    let (sources, diagnostics, coverage, _) = xtex_core::project::check_project(
+    let (sources, diagnostics, coverage, bibliography) = xtex_core::project::check_project(
         &store,
         "awkward.xtex",
         xtex_core::symbols::PrefixMap::default(),
     )
     .expect("checks");
     let mut native_json = String::new();
-    xtex_core::check::to_json(&sources, &diagnostics, coverage, &mut native_json);
+    xtex_core::check::to_json(
+        &sources,
+        &diagnostics,
+        coverage,
+        &bibliography,
+        &mut native_json,
+    );
     let wasm_json = std::fs::read_to_string(out.join("wasm.json")).expect("the module checked");
     assert_eq!(
         native_json, wasm_json,
@@ -255,6 +261,18 @@ fn editor_queries_answer_project_wide_and_identically_in_both_builds() {
     assert!(
         wasm.contains("declared as: section"),
         "the cross-file declaration must be visible, or the table is file-local: {wasm}"
+    );
+
+    // The inventory: every declaration with class, site and use count, and
+    // the module's answer byte-identical to the native library's.
+    let mut native_inventory = String::new();
+    xtex_core::editor::inventory_to_json(&analysed.sources, &analysed.table, &mut native_inventory);
+    let wasm_inventory =
+        std::fs::read_to_string(out.join("wasm.inventory.json")).expect("the module inventoried");
+    assert_eq!(native_inventory, wasm_inventory);
+    assert!(
+        wasm_inventory.contains("\"references\":"),
+        "counts must be present: {wasm_inventory}"
     );
 
     // Completions, which must include identifiers from every file.
@@ -631,14 +649,20 @@ fn failure_paths_fail_identically_in_both_builds() {
     let wasm_json = std::fs::read_to_string(out.join("wasm.json")).expect("the module checked");
 
     let store = memory_of(&broken);
-    let (sources, diagnostics, coverage, _) = xtex_core::project::check_project(
+    let (sources, diagnostics, coverage, bibliography) = xtex_core::project::check_project(
         &store,
         "main.xtex",
         xtex_core::symbols::PrefixMap::default(),
     )
     .expect("checks");
     let mut native_json = String::new();
-    xtex_core::check::to_json(&sources, &diagnostics, coverage, &mut native_json);
+    xtex_core::check::to_json(
+        &sources,
+        &diagnostics,
+        coverage,
+        &bibliography,
+        &mut native_json,
+    );
     assert_eq!(native_json, wasm_json, "the builds disagree about failure");
 
     // And the failure is the RIGHT failure: the advisory names the missing

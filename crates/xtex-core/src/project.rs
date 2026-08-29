@@ -435,7 +435,7 @@ mod bibliography_advisory_tests {
         assert_eq!(advisory.blame, Blame::Unresolved);
         assert_eq!(advisory.name, None, "the advisory is not about a key");
         let mut json = String::new();
-        to_json(&sources, &[advisory], 1.0, &mut json);
+        to_json(&sources, &[advisory], 1.0, &bibliography, &mut json);
         assert!(json.contains("\"severity\":\"advisory\""), "{json}");
         assert!(
             json.contains("citation checking unavailable: `refs.bib` could not be read"),
