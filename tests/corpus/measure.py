@@ -13,11 +13,14 @@ thresholds, and it records them from before any corpus was measured.
 """
 
 import argparse
+import collections
 import hashlib
 import json
 import os
+import shutil
 import subprocess
 import sys
+import tempfile
 
 
 def tex_files(root):
@@ -44,18 +47,95 @@ def fingerprint(path):
         return hashlib.sha256(handle.read()).hexdigest()
 
 
-def quarantine_position(binary, path):
-    """Fraction of the file available before `OpaqueToEof`, or 1.0 if never."""
+def confidence(binary, path):
+    """Where recognition stopped, what was there, and how much is annotated."""
     result = subprocess.run(
         [binary, "confidence", path], capture_output=True, text=True, check=False
     )
     if result.returncode != 0:
-        return None
+        return None, None, 0.0
+    position, cause, coverage = None, None, 0.0
     for line in result.stdout.splitlines():
         if line.startswith("quarantine:"):
             value = line.split(":", 1)[1].strip()
-            return 1.0 if value == "none" else float(value)
-    return None
+            position = 1.0 if value == "none" else float(value)
+        elif line.startswith("cause:"):
+            cause = line.split(":", 1)[1].strip()
+        elif line.startswith("coverage:"):
+            coverage = float(line.split(":", 1)[1].strip())
+    return position, cause, coverage
+
+
+def checks_clean(binary, path):
+    """Whether unmodified LaTeX checks clean, which is the central promise.
+
+    Run where the file actually lives, because a document's imports, includes
+    and bibliography resolve relative to it. Checking a copy in a scratch
+    directory would measure a document that has been taken apart.
+    """
+    result = subprocess.run(
+        [binary, "check", os.path.basename(path)],
+        cwd=os.path.dirname(path) or ".",
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    return result.returncode == 0, result.stdout.strip().splitlines()[:1]
+
+
+def transports(binary, path):
+    """Whether emitting returns the input's bytes — property A.
+
+    The file is copied alone into a scratch directory under a `.xtex` name,
+    because emission is what the compiler writes for *this* file's bytes.
+    """
+    with tempfile.TemporaryDirectory() as directory:
+        name = os.path.splitext(os.path.basename(path))[0] + ".xtex"
+        copied = os.path.join(directory, name)
+        shutil.copyfile(path, copied)
+        result = subprocess.run(
+            [binary, name], cwd=directory, capture_output=True, text=True, check=False
+        )
+        emitted = os.path.join(
+            directory, "build", os.path.splitext(name)[0] + ".tex"
+        )
+        if result.returncode != 0 or not os.path.exists(emitted):
+            return False
+        with open(path, "rb") as left, open(emitted, "rb") as right:
+            return left.read() == right.read()
+
+
+def instrument(binary):
+    """What took the measurement.
+
+    A result file that does not say which code produced it can be picked up
+    later and read as current. This has already gone wrong here three times in
+    one day, each time by measuring with a binary built from a different branch
+    than the one being reasoned about, so the binary's own fingerprint and the
+    commit it was built from travel with every number.
+    """
+    with open(binary, "rb") as handle:
+        digest = hashlib.sha256(handle.read()).hexdigest()
+    commit = subprocess.run(
+        ["git", "rev-parse", "HEAD"],
+        cwd=os.path.dirname(os.path.abspath(binary)),
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    dirty = subprocess.run(
+        ["git", "status", "--porcelain"],
+        cwd=os.path.dirname(os.path.abspath(binary)),
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    return {
+        "binary": os.path.abspath(binary),
+        "sha256": digest,
+        "commit": commit.stdout.strip() or None,
+        "working_tree_clean": dirty.returncode == 0 and not dirty.stdout.strip(),
+    }
 
 
 def measure(root, binary):
@@ -64,17 +144,28 @@ def measure(root, binary):
         size = os.path.getsize(path)
         if size == 0:
             continue
-        position = quarantine_position(binary, path)
+        position, cause, coverage = confidence(binary, path)
         if position is None:
             continue
-        rows.append(
-            {
-                "path": os.path.relpath(path, root),
-                "sha256": fingerprint(path),
-                "bytes": size,
-                "available": position,
-            }
-        )
+        row = {
+            "path": os.path.relpath(path, root),
+            "sha256": fingerprint(path),
+            "bytes": size,
+            "available": position,
+            "cause": cause,
+            # Both promises are about LaTeX the author did not rewrite. An
+            # annotated file is a different object: emitting it is *supposed*
+            # to change bytes, and a hard error in it is the compiler working.
+            # The compiler's own coverage figure decides which this is, rather
+            # than a regular expression guessing at it here.
+            "annotated": coverage > 0.0,
+        }
+        if not row["annotated"]:
+            clean, first_line = checks_clean(binary, path)
+            row["checks_clean"] = clean
+            row["diagnostic"] = None if clean else (first_line[0] if first_line else "")
+            row["transports"] = transports(binary, path)
+        rows.append(row)
     return rows
 
 
@@ -86,19 +177,47 @@ def report(rows):
     median = available[len(available) // 2]
     early = sum(1 for value in available if value < 0.5) / len(available)
 
-    print(f"{len(rows)} files")
-    print(f"  median available before quarantine   {median:.3f}   (threshold >= 0.900)")
-    print(f"  quarantined before half their bytes  {early:.1%}     (threshold <= 10%)")
-    print(f"  never quarantined                    {sum(1 for v in available if v >= 1.0)}")
+    plain = [row for row in rows if not row["annotated"]]
+    dirty = [row for row in plain if not row["checks_clean"]]
+    lost = [row for row in plain if not row["transports"]]
 
-    failed = median < 0.90 or early > 0.10
+    print(f"{len(rows)} files, {len(rows) - len(plain)} of them already annotated")
+    print("\n  the two promises, over the " + f"{len(plain)} unannotated files")
+    print(f"    check clean, unmodified              {len(plain) - len(dirty)}/{len(plain)}")
+    print(f"    emit the input's bytes exactly       {len(plain) - len(lost)}/{len(plain)}")
+    print("\n  how much is reachable")
+    print(f"    median available before quarantine   {median:.3f}   (threshold >= 0.900)")
+    print(f"    quarantined before half their bytes  {early:.1%}     (threshold <= 10%)")
+    print(f"    never quarantined                    {sum(1 for v in available if v >= 1.0)}")
+
+    causes = collections.Counter(
+        row.get("cause") for row in rows if row["available"] < 1.0 and row.get("cause")
+    )
+    if causes:
+        print("\n  what stopped recognition, by count")
+        for cause, count in causes.most_common(12):
+            print(f"    {count:5}  {cause}")
+
+    # A file that fails a promise is a defect, whatever the quarantine figure
+    # says. Quarantine is a coverage signal; these two are the contract.
+    failed = median < 0.90 or early > 0.10 or dirty or lost
     print("\nthresholds: " + ("MISSED" if failed else "met"))
-    if failed:
-        print("  Which files, and why, before changing the numbers. The thresholds")
+
+    if dirty:
+        print(f"\n  {len(dirty)} files did not check clean. Unmodified LaTeX must.")
+        for row in dirty[:10]:
+            print(f"    {row['path']}")
+            print(f"      {row.get('diagnostic', '')}")
+    if lost:
+        print(f"\n  {len(lost)} files did not emit their own bytes. Transport must.")
+        for row in lost[:10]:
+            print(f"    {row['path']}")
+    if median < 0.90 or early > 0.10:
+        print("\n  Which files, and why, before changing the numbers. The thresholds")
         print("  were fixed before any corpus was measured; moving them now would")
         print("  make them a description of the result rather than a test of it.")
         for row in sorted(rows, key=lambda r: r["available"])[:10]:
-            print(f"    {row['available']:.3f}  {row['path']}")
+            print(f"    {row['available']:.3f}  {row.get('cause', '')}  {row['path']}")
     return 1 if failed else 0
 
 
@@ -138,10 +257,29 @@ def main():
     if args.verify:
         return verify(args.target)
 
-    rows = measure(args.target, args.binary)
+    # Resolved before use: two of the three measurements run with the working
+    # directory set to the document's own, so that its imports and bibliography
+    # resolve the way they do for its author. A relative binary path would stop
+    # existing there.
+    binary = os.path.abspath(args.binary)
+    if not os.path.exists(binary):
+        print(f"no binary at {binary}")
+        return 2
+    taken_by = instrument(binary)
+    print(f"measured by {taken_by['commit'] or 'unknown commit'}", end="")
+    print("" if taken_by["working_tree_clean"] else " (working tree dirty)")
+    rows = measure(args.target, binary)
     if args.out:
         with open(args.out, "w") as handle:
-            json.dump({"root": os.path.abspath(args.target), "files": rows}, handle, indent=2)
+            json.dump(
+                {
+                    "root": os.path.abspath(args.target),
+                    "measured_by": instrument(binary),
+                    "files": rows,
+                },
+                handle,
+                indent=2,
+            )
         print(f"manifest written to {args.out}\n")
     return report(rows)
 

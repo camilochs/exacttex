@@ -11,21 +11,53 @@ Real LaTeX, used to decide how the shallow parser behaves. Two halves with diffe
 
 ## Real documents are referenced, not vendored
 
-`manifest.toml` records, per file: where it came from, under what licence, and a SHA-256 of the exact bytes
-measured. It does not contain the file.
+Two files hold what a measurement needs, and neither holds a document.
 
-The reason is ordinary caution. A journal submission's copyright frequently sits with the publisher, and
-this repository is MIT. Recording a fingerprint claims nothing about the bytes except that they are the ones
-the number was computed from — which is the only claim a measurement needs.
+`provenance.json`, written by `fetch.py`, records where each document came from: its identifier, its field,
+its year, the licence arXiv or the repository states, its URL, and a SHA-256 per file.
+
+`manifest.json`, written by `measure.py`, records what was measured and **what measured it** — the binary's
+own SHA-256 and the commit it was built from.
+
+The reason nothing is vendored is ordinary caution. A journal submission's copyright frequently sits with
+the publisher, and this repository is MIT. Recording a fingerprint claims nothing about the bytes except
+that they are the ones the number was computed from — which is the only claim a measurement needs.
 
 It is also better evidence. Anyone can point the tooling at their own corpus and get a comparable number,
 and the fingerprint makes a stale result detectable rather than silently reused. That is the measurement
 rule in [`AGENTS.md`](../../AGENTS.md) §7 applied to our own inputs.
 
+The instrument is fingerprinted for a reason that is not theoretical. Measuring with a binary built from a
+different branch than the one being reasoned about went wrong three times in a single day here, and each
+time the numbers looked entirely reasonable.
+
 ```sh
-python3 tests/corpus/measure.py ~/Workspace          # measure a corpus
-python3 tests/corpus/measure.py --verify manifest.toml   # check the fingerprints still match
+python3 tests/corpus/fetch.py --out /tmp/corpus              # build a corpus
+python3 tests/corpus/measure.py /tmp/corpus \
+    --binary target/release/xtex --out manifest.json         # measure it
+python3 tests/corpus/measure.py --verify manifest.json       # are the bytes still the ones measured?
 ```
+
+---
+
+## What is measured, and over which files
+
+Three numbers, and the first two are the project's promises rather than diagnostics about it.
+
+| | |
+|---|---|
+| **checks clean** | `xtex check` exits 0 on the file, unmodified. Run in the file's own directory, so its includes and bibliography resolve the way they do for its author. |
+| **transports** | Emitting returns the input's bytes exactly. Property A. |
+| **available** | The fraction of the file reachable before `OpaqueToEof`, plus what was at the byte where recognition stopped. |
+
+**The first two apply only to unannotated files.** An annotated one is a different object: emitting it is
+*supposed* to change bytes, and a hard error inside an explicit construct is the compiler working rather
+than failing. Which is which is decided by the compiler's own coverage figure, not by a pattern matched
+here — a file with no constructs reports coverage `0`.
+
+Getting this wrong is not hypothetical either. Measured over a tree that included this repository's own
+hazard fixtures, the run reported 40 files failing to check and 59 failing to transport. Every one of them
+was a fixture written to do exactly that.
 
 ---
 
