@@ -21,6 +21,11 @@ impl SourceId {
     pub const fn index(self) -> usize {
         self.0 as usize
     }
+
+    #[cfg(test)]
+    pub(crate) const fn from_index_for_test(index: u32) -> Self {
+        Self(index)
+    }
 }
 
 impl fmt::Display for SourceId {

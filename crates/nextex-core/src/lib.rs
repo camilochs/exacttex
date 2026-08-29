@@ -45,11 +45,13 @@
 pub mod bibliography;
 pub mod blocks;
 pub mod check;
+pub mod diagnostics;
 pub mod document;
 pub mod io;
 pub mod scanner;
 pub mod signatures;
 pub mod source;
+pub mod sourcemap;
 pub mod symbols;
 
 use std::error::Error;
