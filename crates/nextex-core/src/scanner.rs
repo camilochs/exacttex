@@ -161,6 +161,18 @@ const AT_TOKENS: &[EntryToken] = &[
     EntryToken::Id,
 ];
 
+/// The citation commands a construct may name, longest first.
+///
+/// A citation construct is a LaTeX citation command written with `@`, so this
+/// is a list of real command names rather than a vocabulary of our own. The
+/// kernel provides `cite`; `natbib` provides `citep` and `citet`; `biblatex`
+/// provides `textcite` and `parencite`. `docs/grammar.md` §4.
+///
+/// All five map to one [`EntryToken::Cite`]. Which command was written is in
+/// the construct's own bytes, and the emitter reads it there — a variant per
+/// command would put the same information in two places.
+pub const DEFAULT_CITE_COMMANDS: &[&str] = &["parencite", "textcite", "citep", "citet", "cite"];
+
 /// Splits a source into text and constructs.
 ///
 /// The result covers every byte exactly once and in order, so concatenating the
@@ -522,6 +534,12 @@ fn entry_token_at(bytes: &[u8], at: usize) -> Option<(EntryToken, usize)> {
             let end = at + keyword.len();
             if bytes[at..].starts_with(keyword) && bytes.get(end) == Some(&b'(') {
                 return Some((*token, end + 1));
+            }
+        }
+        for command in DEFAULT_CITE_COMMANDS {
+            let end = at + 1 + command.len();
+            if bytes[at + 1..].starts_with(command.as_bytes()) && bytes.get(end) == Some(&b'(') {
+                return Some((EntryToken::Cite, end + 1));
             }
         }
         return None;

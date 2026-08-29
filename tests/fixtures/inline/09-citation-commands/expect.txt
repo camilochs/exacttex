@@ -1,0 +1,5 @@
+transport: identical
+scanner: cite cite cite cite cite
+constructs: five citations — one per command. All five map to one entry-token
+  kind; which command was written stays in the construct's own bytes, where the
+  emitter reads it.

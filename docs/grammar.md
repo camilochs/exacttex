@@ -76,8 +76,11 @@ at-entry        = "@" at-keyword "("
 block-entry     = "\" block-keyword "("
 raw-entry       = "latex" ws* "{"
 
-at-keyword      = "id" | "ref" | "cite" | "import"
+at-keyword      = "id" | "ref" | "import"
+                | cite-command
                 | "add" | "del" | "sub" | "note"
+
+cite-command    = "cite" | "citep" | "citet" | "textcite" | "parencite"
 
 block-keyword   = "figure" | "table"
 ```
@@ -126,10 +129,10 @@ at-construct = id-decl | reference | citation | import
 
 id-decl      = "@id"     "(" ident ")"
 reference    = "@ref"    "(" ident ")"
-citation     = "@cite"   "(" bibkey citation-field* ")"
+citation     = "@" cite-command "(" bibkey ( "," ws* bibkey )* ")"
 import       = "@import" "(" string ")"
 
-citation-field = "," ws* field
+cite-command = "cite" | "citep" | "citet" | "textcite" | "parencite"
 
 ident        = [A-Za-z] [A-Za-z0-9_:.-]*
 bibkey       = [A-Za-z0-9] [A-Za-z0-9_:.+/-]*
@@ -151,12 +154,61 @@ NextTeX does not generate `Definition`, `Table`, `Section`, `Appendix`, or a non
 them would inject bytes absent from the source and would violate the binding erasure rule. v0.1 makes no
 exception to that rule.
 
-`@cite` accepts named fields so that a rendering distinction is not carried by a single character:
+### Citations
 
-```latex
-@cite(knuth1984)
-@cite(knuth1984, style=textual)
+**A citation construct is a LaTeX citation command written with `@`.** That is the whole rule, and it is
+the same one `@ref` follows: NextTeX emits the command you named and knows nothing about the package that
+defines it.
+
 ```
+@cite(knuth1984)        emits  \cite{knuth1984}
+@citep(knuth1984)       emits  \citep{knuth1984}
+@citet(knuth1984)       emits  \citet{knuth1984}
+@textcite(knuth1984)    emits  \textcite{knuth1984}
+@parencite(knuth1984)   emits  \parencite{knuth1984}
+```
+
+A citation may name several keys, because 13% of measured citations do and one names seven:
+
+```
+@citep(knuth1984, lamport1994)   emits  \citep{knuth1984,lamport1994}
+```
+
+**Each key is checked separately.** One absent key is one diagnostic naming that key, not a diagnostic about
+the construct.
+
+Nothing else is emitted — no brackets, no `~`, no package. Checking the keys against the bibliography under
+[`checking.md`](checking.md) §7 is the only thing the construct buys over writing the command directly.
+
+The default set covers the LaTeX kernel (`\cite`), `natbib` (`\citep`, `\citet`) and `biblatex`
+(`\textcite`, `\parencite`). A project using another command adds it in `nextex.toml`:
+
+```toml
+cite_commands = ["cite", "citep", "citet", "citealp"]
+```
+
+The list replaces the default rather than extending it, like every other map here.
+
+#### Why a construct per command, and not one construct with a style field
+
+A figure is one environment whose variants are fields, so `\figure` takes `src`, `width` and `caption`. A
+citation is not one command with options: `\citep` and `\citet` are different commands producing different
+output. Modelling them as one construct means inventing a vocabulary for the difference — `style=textual` —
+and then mapping that vocabulary back onto a command, which cannot be done without knowing which package the
+document loads. That is not knowable: `\usepackage` is absent in 17–50% of real projects that use a package,
+because a class loads it (`tests/experiments/package-loading/`).
+
+Naming the command directly removes the question. It also removes the vocabulary: an author who writes
+`\citep` already knows what `@citep` is.
+
+The earlier draft admitted `@cite(key, style=textual)` and never said what it emitted. Settled by the
+director on 2026-08-29.
+
+#### Migrating an existing project
+
+Mechanical, and partial by design. Change `\citep{` to `@citep(` wherever you want the key checked. Every
+citation you do not touch keeps working exactly as it does now, transported byte for byte and unchecked —
+which is the same trade every other construct offers.
 
 ### `@id` attachment
 
