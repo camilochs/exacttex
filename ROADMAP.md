@@ -89,6 +89,24 @@ symbol tables merge at project scope, while emission preserves file boundaries.
 
 The implementation is in Rust. Native and WebAssembly builds use the same core crates.
 
+```
+                xtex-core   the compiler (~10,000 lines)
+               /    |    \
+        xtex-cli  xtex-lsp  xtex-wasm
+        terminal   editor    browser
+```
+
+Every door links `xtex-core` statically and carries its own copy; none links another door. Anything two
+doors would share moves down into the core — `project`, `blame`, the JSON renderers all made that move —
+so "the doors answer alike" holds by construction, and the parity suite checks it rather than provides it.
+The one consequence worth remembering: when the core changes, the three doors recompile together in this
+repository, but the *published* `.wasm` stays at its tagged commit until the next release — which is why
+the release manifest names the commit.
+
+The measurement instruments (`tests/corpus/*.py`, the render harness) deliberately do not link the core:
+they drive the binary through its public interface, measuring what a user touches rather than what the
+library promises.
+
 All source access, project discovery, output storage, bibliography access, and TeX invocation sit behind I/O
 traits. The compiler core must not contain assumptions about host paths, process spawning, current
 directories, or direct filesystem access.
