@@ -1,0 +1,3 @@
+transport: identical
+scanner: none
+constructs: none — the missing delimiter quarantines the remainder rather than exposing the reference
