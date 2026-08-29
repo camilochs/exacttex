@@ -1,0 +1,13 @@
+BEFORE
+\figure(fig:scalar) {
+  src = "@ref(not-a-reference).pdf"
+  caption = {Scalar path, nested @cite(figure-source)}
+}
+BETWEEN
+\table(tab:x) {
+  caption = {Results for @cite(knuth1984); \textbf{@cite(hidden-command)}; \verb|@cite(hidden-verb)|; $@cite(hidden-math)$; % @cite(hidden-comment)
+continued}
+  body = {row for @ref(fig:a)}
+  trailing = {tail @ref(tab:x)}
+}
+AFTER @ref(sec:after)

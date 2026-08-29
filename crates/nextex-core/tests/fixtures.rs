@@ -108,10 +108,7 @@ fn fixtures_without_constructs_transport_byte_identical() {
         let name = label(&input);
         let raw = fs::read(&input).unwrap_or_else(|e| panic!("{name}: cannot read ({e})"));
 
-        if scan(&raw)
-            .iter()
-            .any(|piece| matches!(piece, Piece::Construct { .. }))
-        {
+        if has_construct(&raw) {
             continue;
         }
 
@@ -145,10 +142,7 @@ fn every_construct_free_truncation_transports_byte_identical() {
 
         for cut in 0..=raw.len() {
             let slice = &raw[..cut];
-            if scan(slice)
-                .iter()
-                .any(|piece| matches!(piece, Piece::Construct { .. }))
-            {
+            if has_construct(slice) {
                 continue;
             }
             let mut store = Memory::new().with_input(name.clone(), slice.to_vec());
@@ -276,14 +270,23 @@ fn declared_pieces(expect: &str, name: &str) -> Vec<String> {
 
 /// The pieces the scanner produced, named as `expect.txt` names them.
 fn found_pieces(bytes: &[u8]) -> Vec<String> {
-    scan(bytes)
-        .into_iter()
-        .filter_map(|piece| match piece {
-            Piece::Construct { kind, .. } => Some(short(kind)),
-            Piece::Malformed { kind, .. } => Some(format!("!{}", short(kind))),
-            Piece::Text(_) | Piece::Excluded(_) => None,
-        })
-        .collect()
+    let mut found = Vec::new();
+    for piece in scan(bytes) {
+        piece.walk(&mut |piece| match piece {
+            Piece::Construct { kind, .. } => found.push(short(*kind)),
+            Piece::Malformed { kind, .. } => found.push(format!("!{}", short(*kind))),
+            Piece::Text(_) | Piece::Excluded(_) => {}
+        });
+    }
+    found
+}
+
+fn has_construct(bytes: &[u8]) -> bool {
+    scan(bytes).iter().any(|piece| {
+        let mut found = false;
+        piece.walk(&mut |piece| found |= matches!(piece, Piece::Construct { .. }));
+        found
+    })
 }
 
 fn short(kind: nextex_core::scanner::EntryToken) -> String {

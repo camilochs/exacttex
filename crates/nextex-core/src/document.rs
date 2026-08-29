@@ -86,6 +86,8 @@ pub enum Node {
         span: Span,
         /// Which construct it is.
         kind: EntryToken,
+        /// Constructs nested in document-content fields.
+        children: Vec<Node>,
     },
     /// An entry token whose construct could not be closed.
     ///
@@ -176,6 +178,21 @@ impl Document {
     /// Iterates over every node in emission order.
     pub fn iter(&self) -> impl Iterator<Item = &Node> {
         self.nodes.iter()
+    }
+
+    /// Visits every node, including constructs nested in block fields.
+    pub fn walk(&self, mut visit: impl FnMut(&Node)) {
+        fn walk_node(node: &Node, visit: &mut impl FnMut(&Node)) {
+            visit(node);
+            if let Node::Construct { children, .. } = node {
+                for child in children {
+                    walk_node(child, visit);
+                }
+            }
+        }
+        for node in &self.nodes {
+            walk_node(node, &mut visit);
+        }
     }
 
     /// Number of nodes.

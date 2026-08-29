@@ -97,13 +97,13 @@ impl SymbolTable {
     /// imported file: the scope is the root, so the two share one namespace and
     /// a clash between them is a real clash.
     pub fn merge(&mut self, sources: &Sources, document: &Document) {
-        for node in document.iter() {
+        document.walk(|node| {
             let (kind, construct) = match node {
                 Node::Construct { kind, span, .. } => (*kind, *span),
-                _ => continue,
+                _ => return,
             };
             let Some(payload) = payload_of(sources, node.source(), construct, kind) else {
-                continue;
+                return;
             };
             match kind {
                 EntryToken::Cite => {
@@ -112,7 +112,7 @@ impl SymbolTable {
                     let keys = keys_of(sources, payload);
                     if keys.is_empty() {
                         self.errors.push(SymbolError::Malformed { construct });
-                        continue;
+                        return;
                     }
                     for key in keys {
                         self.references.push((
@@ -127,11 +127,11 @@ impl SymbolTable {
                 }
                 EntryToken::Id | EntryToken::Figure | EntryToken::Table => {
                     let Some(text) = text_of(sources, payload) else {
-                        continue;
+                        return;
                     };
                     if !is_identifier(text.as_bytes()) {
                         self.errors.push(SymbolError::Malformed { construct });
-                        continue;
+                        return;
                     }
                     if let Some(first) = self.declarations.get(&text) {
                         self.errors.push(SymbolError::Duplicate {
@@ -139,18 +139,18 @@ impl SymbolTable {
                             first: first.construct,
                             second: construct,
                         });
-                        continue;
+                        return;
                     }
                     self.declarations
                         .insert(text, Declaration { payload, construct });
                 }
                 EntryToken::Ref => {
                     let Some(text) = text_of(sources, payload) else {
-                        continue;
+                        return;
                     };
                     if text.is_empty() {
                         self.errors.push(SymbolError::Malformed { construct });
-                        continue;
+                        return;
                     }
                     self.references.push((
                         text,
@@ -163,7 +163,7 @@ impl SymbolTable {
                 }
                 _ => {}
             }
-        }
+        });
     }
 
     /// Declaration of `name`, if one exists.
