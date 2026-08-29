@@ -25,6 +25,11 @@
 //! can — is not truncated by a C-string convention.
 
 use xtex_core::check::to_json;
+use xtex_core::review::{Resolution, prune_sidecar, resolve, resolve_sidecar};
+
+/// One resolution event: the revision, what happened to it, and the bytes it
+/// removed, which the sidecar records.
+type Resolved = (Vec<u8>, Vec<(String, Resolution, Vec<u8>)>);
 use xtex_core::io::Memory;
 use xtex_core::project::check_project;
 use xtex_core::sourcemap::emit_with_map;
@@ -394,6 +399,176 @@ pub unsafe extern "C" fn xtex_definition(pointer: *const u8, len: usize) -> *mut
         xtex_core::editor::definition_to_json(&analysed.sources, source, span, &mut json);
         Some(json)
     }))
+}
+
+/// Emits the bundle's root under one revision view.
+///
+/// Input: `u32 view_len · view · bundle`, where `view` is `original`,
+/// `final` or `marked`. The three views are the emitter's own
+/// (`docs/revisions.md` §2); `marked` remains the one sanctioned exception
+/// to no-injection (`decisions/0002`), and neither of the other two gains
+/// injected markup by passing through this layer — the parity test compares
+/// all three against the CLI's bytes.
+///
+/// # Safety
+///
+/// `pointer` must point at `len` readable bytes.
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn xtex_view(pointer: *const u8, len: usize) -> *mut u8 {
+    let bytes = unsafe { input(pointer, len) };
+    let mut at = 0usize;
+    let Some(view) = take_text(&bytes, &mut at) else {
+        return result(&[]);
+    };
+    let view = match view.as_str() {
+        "original" => xtex_core::RevisionView::Original,
+        "final" => xtex_core::RevisionView::Final,
+        "marked" => xtex_core::RevisionView::Marked,
+        _ => return result(&[]),
+    };
+    let Some(bundle) = decode_bundle(&bytes[at..]) else {
+        return result(&[]);
+    };
+    let mut sources = xtex_core::source::Sources::new();
+    let Ok(id) = xtex_core::io::SourceLoader::load(&bundle.store, &bundle.root, None, &mut sources)
+    else {
+        return result(&[]);
+    };
+    let document = parse(&sources, id);
+    let mut out = Vec::new();
+    match xtex_core::emit_view(&sources, &document, view, &mut out) {
+        Ok(()) => result(&out),
+        Err(_) => result(&[]),
+    }
+}
+
+/// Accepts, rejects or prunes revisions in the bundle's root.
+///
+/// Input: `u32 action_len · action · u32 id_len · id · u32 by_len · by ·
+/// u32 at_len · at · u32 sidecar_len · sidecar · bundle`. `action` is
+/// `accept`, `reject`, `accept-all` or `prune`; `id` is empty except for
+/// `accept` and `reject`. `by` and `at` are the reviewer and the timestamp,
+/// supplied by the host because this module deliberately cannot ask a clock.
+/// `sidecar` is the `.xtexrev` content, empty when none exists.
+///
+/// The answer is two length-prefixed fields: the rewritten root, then the
+/// updated sidecar (empty when none was supplied). A sidecar updated here is
+/// read by the CLI without complaint, and the reverse — the parity test
+/// crosses them both ways.
+///
+/// # Safety
+///
+/// `pointer` must point at `len` readable bytes.
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn xtex_revise(pointer: *const u8, len: usize) -> *mut u8 {
+    let bytes = unsafe { input(pointer, len) };
+    let mut at = 0usize;
+    let (Some(action), Some(id), Some(by), Some(stamp)) = (
+        take_text(&bytes, &mut at),
+        take_text(&bytes, &mut at),
+        take_text(&bytes, &mut at),
+        take_text(&bytes, &mut at),
+    ) else {
+        return result(&[]);
+    };
+    let Some(sidecar) = take_bytes(&bytes, &mut at) else {
+        return result(&[]);
+    };
+    let Some(bundle) = decode_bundle(&bytes[at..]) else {
+        return result(&[]);
+    };
+    let Some(source) = bundle_file(&bundle, &bundle.root) else {
+        return result(&[]);
+    };
+
+    let outcome: Result<Resolved, ()> = match action.as_str() {
+        "accept" | "reject" => {
+            let resolution = if action == "accept" {
+                Resolution::Accept
+            } else {
+                Resolution::Reject
+            };
+            resolve(&source, &id, resolution)
+                .map(|(rewritten, removed)| (rewritten, vec![(id.clone(), resolution, removed)]))
+                .map_err(|_| ())
+        }
+        "accept-all" => {
+            let mut current = source.clone();
+            let mut events = Vec::new();
+            loop {
+                let Some(next) = xtex_core::review::revision_ids(&current).into_iter().next()
+                else {
+                    break Ok((current, events));
+                };
+                match resolve(&current, &next, Resolution::Accept) {
+                    Ok((rewritten, removed)) => {
+                        current = rewritten;
+                        events.push((next, Resolution::Accept, removed));
+                    }
+                    Err(_) => break Err(()),
+                }
+            }
+        }
+        "prune" => {
+            if sidecar.is_empty() {
+                return result(&[]);
+            }
+            return match prune_sidecar(&sidecar, &source, &by, &stamp) {
+                Ok(pruned) => result(&pair(&source, &pruned)),
+                Err(_) => result(&[]),
+            };
+        }
+        _ => return result(&[]),
+    };
+    let Ok((rewritten, events)) = outcome else {
+        return result(&[]);
+    };
+    let updated_sidecar = if sidecar.is_empty() {
+        Vec::new()
+    } else {
+        let mut records = sidecar;
+        for (event_id, resolution, removed) in &events {
+            match resolve_sidecar(&records, event_id, *resolution, &by, &stamp, removed) {
+                Ok(next) => records = next,
+                Err(_) => return result(&[]),
+            }
+        }
+        records
+    };
+    result(&pair(&rewritten, &updated_sidecar))
+}
+
+/// Reads one length-prefixed byte field from a buffer.
+fn take_bytes(bytes: &[u8], at: &mut usize) -> Option<Vec<u8>> {
+    let end = at.checked_add(4)?;
+    let field = bytes.get(*at..end)?;
+    let field_len = u32::from_le_bytes([field[0], field[1], field[2], field[3]]) as usize;
+    *at = end;
+    let field_end = at.checked_add(field_len)?;
+    let out = bytes.get(*at..field_end)?.to_vec();
+    *at = field_end;
+    Some(out)
+}
+
+/// The bundle file stored under `name`, if any.
+fn bundle_file(bundle: &Bundle, name: &str) -> Option<Vec<u8>> {
+    let mut sources = xtex_core::source::Sources::new();
+    let id = xtex_core::io::SourceLoader::load(&bundle.store, name, None, &mut sources).ok()?;
+    sources.get(id).map(|source| source.bytes().to_vec())
+}
+
+/// Two length-prefixed fields in one result.
+fn pair(first: &[u8], second: &[u8]) -> Vec<u8> {
+    let mut out = Vec::with_capacity(8 + first.len() + second.len());
+    out.extend_from_slice(&u32::try_from(first.len()).unwrap_or(u32::MAX).to_le_bytes());
+    out.extend_from_slice(first);
+    out.extend_from_slice(
+        &u32::try_from(second.len())
+            .unwrap_or(u32::MAX)
+            .to_le_bytes(),
+    );
+    out.extend_from_slice(second);
+    out
 }
 
 /// Reads one length-prefixed UTF-8 text from a buffer.

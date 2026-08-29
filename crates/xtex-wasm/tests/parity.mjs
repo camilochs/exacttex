@@ -108,6 +108,21 @@ writeFileSync(`${outDir}/wasm.hover.opaque.json`, call("xtex_hover", positional(
 writeFileSync(`${outDir}/wasm.hover.pastend.json`, call("xtex_hover", positional(rootName, 10_000_000, project)));
 writeFileSync(`${outDir}/wasm.hover.cite.json`, call("xtex_hover", positional(rootName, citeAt, project)));
 
+// Revision views and one accept, over the revisions fixture when present.
+const revDir = join(projectDir, "../revisions");
+try {
+  const revBundle = bundle(revDir, "paper.xtex");
+  for (const view of ["original", "final", "marked"]) {
+    writeFileSync(`${outDir}/wasm.view.${view}.tex`, call("xtex_view", framed([view], revBundle)));
+  }
+  const sidecar = readFileSync(join(revDir, "paper.xtexrev"));
+  const accepted = call(
+    "xtex_revise",
+    framed(["accept", "c1", "browser-reviewer", "2026-08-30T10:00:00Z", sidecar], revBundle),
+  );
+  writeFileSync(`${outDir}/wasm.revise.pair`, accepted);
+} catch {}
+
 // Optional: a TeX log to translate. Two length-prefixed texts, then the bundle.
 const [, , , , , , stderrPath, logPath] = process.argv;
 if (stderrPath && logPath) {

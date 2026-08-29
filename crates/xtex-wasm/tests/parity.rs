@@ -451,6 +451,102 @@ fn a_tex_log_translates_identically_in_both_builds_and_never_guesses_blame() {
 }
 
 #[test]
+fn revision_views_and_resolutions_cross_between_the_module_and_the_cli() {
+    let repo = repo();
+    let Some(module) = built_module(&repo) else {
+        return;
+    };
+    let revisions = repo.join("tests/fixtures/wasm/revisions");
+    let out = repo.join("target/wasm-parity/project");
+    run_module(
+        &repo,
+        &module,
+        &repo.join("tests/fixtures/wasm/project"),
+        "main.xtex",
+        &out,
+    );
+
+    // The three views, against the native emitter byte for byte — and the
+    // no-injection boundary: only the marked view may differ from a plain
+    // emission by injected markup (decisions/0002).
+    let store = memory_of(&revisions);
+    let mut sources = xtex_core::source::Sources::new();
+    let id =
+        xtex_core::io::SourceLoader::load(&store, "paper.xtex", None, &mut sources).expect("loads");
+    let document = xtex_core::parse(&sources, id);
+    for (view, name) in [
+        (xtex_core::RevisionView::Original, "original"),
+        (xtex_core::RevisionView::Final, "final"),
+        (xtex_core::RevisionView::Marked, "marked"),
+    ] {
+        let mut native = Vec::new();
+        xtex_core::emit_view(&sources, &document, view, &mut native).expect("emits");
+        let wasm = std::fs::read(out.join(format!("wasm.view.{name}.tex"))).expect("the view");
+        assert_eq!(native, wasm, "view {name} differs");
+    }
+    let original = std::fs::read(out.join("wasm.view.original.tex")).unwrap();
+    let final_view = std::fs::read(out.join("wasm.view.final.tex")).unwrap();
+    let marked = std::fs::read(out.join("wasm.view.marked.tex")).unwrap();
+    assert!(
+        !original.windows(4).any(|w| w == b"@add") && !final_view.windows(4).any(|w| w == b"@add"),
+        "views are built documents"
+    );
+    assert!(
+        String::from_utf8_lossy(&original).contains("an obsolete clause")
+            && !String::from_utf8_lossy(&final_view).contains("an obsolete clause"),
+        "the two unmarked views must actually differ over a deletion"
+    );
+    assert!(
+        marked != final_view,
+        "the marked view is the one sanctioned injection and must differ"
+    );
+
+    // The module's accept, read back by the same parser the CLI uses.
+    let pair_bytes = std::fs::read(out.join("wasm.revise.pair")).expect("the module revised");
+    let (rewritten, updated_sidecar) = split_pair(&pair_bytes);
+    assert!(
+        String::from_utf8_lossy(&rewritten).contains("is statistically significant under"),
+        "the accepted addition keeps its text"
+    );
+    assert!(
+        !String::from_utf8_lossy(&rewritten).contains("@add(c1)"),
+        "the resolved construct is gone"
+    );
+    let sidecar = xtex_core::review::parse_sidecar(&updated_sidecar)
+        .expect("the CLI-side parser reads the module's sidecar");
+    xtex_core::review::validate(&rewritten, &sidecar)
+        .expect("the module's sidecar validates against the rewritten document");
+    let text = String::from_utf8_lossy(&updated_sidecar);
+    assert!(
+        text.contains("browser-reviewer") && text.contains("resolution = \"accepted\""),
+        "the resolution event carries the host-supplied reviewer: {text}"
+    );
+
+    // And the reverse: a sidecar the CLI's own resolver wrote is accepted by
+    // the module for the next resolution.
+    let cli_sidecar = xtex_core::review::resolve_sidecar(
+        &std::fs::read(revisions.join("paper.xtexrev")).unwrap(),
+        "c1",
+        xtex_core::review::Resolution::Accept,
+        "cli-reviewer",
+        "2026-08-30T11:00:00Z",
+        b"",
+    )
+    .expect("the CLI-side resolver");
+    xtex_core::review::parse_sidecar(&cli_sidecar).expect("readable both ways");
+}
+
+fn split_pair(bytes: &[u8]) -> (Vec<u8>, Vec<u8>) {
+    let first_len = u32::from_le_bytes([bytes[0], bytes[1], bytes[2], bytes[3]]) as usize;
+    let first = bytes[4..4 + first_len].to_vec();
+    let at = 4 + first_len;
+    let second_len =
+        u32::from_le_bytes([bytes[at], bytes[at + 1], bytes[at + 2], bytes[at + 3]]) as usize;
+    let second = bytes[at + 4..at + 4 + second_len].to_vec();
+    (first, second)
+}
+
+#[test]
 fn a_bundle_that_lies_about_its_lengths_returns_no_result_and_does_not_crash() {
     let repo = repo();
     let Some(module) = built_module(&repo) else {
