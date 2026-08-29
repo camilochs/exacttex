@@ -64,19 +64,31 @@ writeFileSync(`${outDir}/wasm.tex`, call("xtex_emit", project));
 writeFileSync(`${outDir}/wasm.json`, call("xtex_check_json", project));
 writeFileSync(`${outDir}/wasm.map`, call("xtex_source_map", project));
 
+// Helper: length-prefixed texts followed by the bundle.
+function framed(texts, bundleBytes) {
+  const enc = new TextEncoder();
+  const encoded = texts.map((t) => (t instanceof Uint8Array ? t : enc.encode(t)));
+  let size = bundleBytes.length;
+  for (const t of encoded) size += 4 + t.length;
+  const out = new Uint8Array(size);
+  const view = new DataView(out.buffer);
+  let at = 0;
+  for (const t of encoded) {
+    view.setUint32(at, t.length, true); at += 4;
+    out.set(t, at); at += t.length;
+  }
+  out.set(bundleBytes, at);
+  return out;
+}
+
+// Rename: plan JSON and the root's rewritten bytes.
+writeFileSync(`${outDir}/wasm.rename.json`, call("xtex_rename_plan", framed(["sec:model", "sec:modelo"], project)));
+writeFileSync(`${outDir}/wasm.renamed.root`, call("xtex_rename_apply", framed(["sec:model", "sec:modelo", rootName], project)));
+
 // Optional: a TeX log to translate. Two length-prefixed texts, then the bundle.
 const [, , , , , , stderrPath, logPath] = process.argv;
 if (stderrPath && logPath) {
-  const enc = new TextEncoder();
   const stderrBytes = readFileSync(stderrPath);
   const logBytes = readFileSync(logPath);
-  const framed = new Uint8Array(8 + stderrBytes.length + logBytes.length + project.length);
-  const view = new DataView(framed.buffer);
-  let at = 0;
-  view.setUint32(at, stderrBytes.length, true); at += 4;
-  framed.set(stderrBytes, at); at += stderrBytes.length;
-  view.setUint32(at, logBytes.length, true); at += 4;
-  framed.set(logBytes, at); at += logBytes.length;
-  framed.set(project, at);
-  writeFileSync(`${outDir}/wasm.blame.json`, call("xtex_blame", framed));
+  writeFileSync(`${outDir}/wasm.blame.json`, call("xtex_blame", framed([stderrBytes, logBytes], project)));
 }

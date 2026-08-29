@@ -312,6 +312,64 @@ fn root_inventory(
     }
 }
 
+/// Loads a root and its transitive `@import`s, keeping each parsed document.
+///
+/// This is the traversal `xtex rename` has always used — imports only, not
+/// the author's `\include` edges, because a rename rewrites `.xtex`
+/// constructs and transported LaTeX is never rewritten. Returns each
+/// source's resolved name beside its id, because a caller that writes files
+/// must write to the name that actually resolved, not the one requested.
+///
+/// # Errors
+///
+/// Returns [`IoError`] when the root or any import cannot be loaded.
+#[allow(clippy::type_complexity)]
+pub fn load_imports(
+    loader: &impl SourceLoader,
+    root: &str,
+) -> Result<
+    (
+        Sources,
+        Vec<crate::document::Document>,
+        Vec<(SourceId, String)>,
+    ),
+    IoError,
+> {
+    let mut sources = Sources::new();
+    let mut documents = Vec::new();
+    let mut names = Vec::new();
+    let mut pending = vec![(root.to_owned(), None)];
+    let mut seen = BTreeSet::new();
+    while let Some((name, parent)) = pending.pop() {
+        if !seen.insert(name.clone()) {
+            continue;
+        }
+        let id = loader.load(&name, parent, &mut sources)?;
+        let document = parse(&sources, id);
+        let mut imports = Vec::new();
+        document.walk(|node| {
+            if let Node::Construct {
+                kind: EntryToken::Import,
+                span,
+                ..
+            } = node
+                && let Some(path) = literal_import(&sources, id, *span)
+            {
+                imports.push(path);
+            }
+        });
+        for path in imports {
+            pending.push((path, Some(id)));
+        }
+        let resolved = sources
+            .get(id)
+            .map_or_else(|| name.clone(), |source| source.name().to_owned());
+        names.push((id, resolved));
+        documents.push(document);
+    }
+    Ok((sources, documents, names))
+}
+
 #[cfg(test)]
 mod bibliography_advisory_tests {
     use super::*;
