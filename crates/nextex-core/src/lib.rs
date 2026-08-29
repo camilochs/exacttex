@@ -42,6 +42,7 @@
 //! assert_eq!(out, b"\\section{Hi}\r\n");
 //! ```
 
+pub mod blocks;
 pub mod document;
 pub mod io;
 pub mod scanner;
