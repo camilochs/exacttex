@@ -612,9 +612,12 @@ fn failure_paths_fail_identically_in_both_builds() {
     std::fs::create_dir_all(&broken).expect("a scratch project");
     // An unreadable bibliography: cited, declared, and absent from the
     // bundle. A quarantined import: a \verb that never closes.
+    // The duplicate @id makes XT1001 fire, whose diagnostic carries a
+    // `related` entry — the shape whose JSON rendering shipped malformed
+    // (`{,"span"`) until the first real document met it.
     std::fs::write(
         broken.join("main.xtex"),
-        "Ver @cite(clave) y @ref(sec:x).\n@import(\"dark.xtex\")\n\\bibliography{ausente}\n",
+        "@id(dup:x) y @id(dup:x).\nVer @cite(clave) y @ref(sec:x).\n@import(\"dark.xtex\")\n\\bibliography{ausente}\n",
     )
     .expect("writes");
     std::fs::write(
@@ -648,5 +651,9 @@ fn failure_paths_fail_identically_in_both_builds() {
     assert!(
         !wasm_json.contains("XT1003"),
         "a quarantined file must silence the inventory: {wasm_json}"
+    );
+    assert!(
+        wasm_json.contains("XT1001") && wasm_json.contains("first declared here"),
+        "the duplicate must carry its related entry: {wasm_json}"
     );
 }
