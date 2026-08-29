@@ -477,7 +477,15 @@ fn emit_block(token: EntryToken, bytes: &[u8], view: RevisionView, out: &mut Vec
 
     out.extend_from_slice(b"\\begin{");
     out.extend_from_slice(environment);
-    out.extend_from_slice(b"}\n");
+    out.push(b'}');
+    // Verbatim inside the brackets: no reordering, no deduplication. The
+    // compiler does not improve author intent. `decisions/0006`.
+    if let Some(placement) = field(b"placement") {
+        out.push(b'[');
+        copy_value(bytes, placement.value, false, out);
+        out.push(b']');
+    }
+    out.push(b'\n');
     if kind == BlockKind::Table || field(b"src").is_some() {
         out.extend_from_slice(b"  \\centering\n");
     }

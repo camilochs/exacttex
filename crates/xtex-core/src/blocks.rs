@@ -45,6 +45,10 @@ impl BlockKind {
             (Self::Figure | Self::Table, b"caption") | (Self::Table, b"body" | b"trailing") => {
                 Some(ValueKind::Braced)
             }
+            // Decided by the director, 2026-08-30 (issue #81), after Phase 0a
+            // measured that 96% of the corpus's floats carry explicit
+            // placement and the block could not say it.
+            (Self::Figure | Self::Table, b"placement") => Some(ValueKind::Placement),
             _ => None,
         }
     }
@@ -56,6 +60,7 @@ enum ValueKind {
     Str,
     LengthOrPercentage,
     Braced,
+    Placement,
 }
 
 /// A field's value, as it appears in the source.
@@ -70,6 +75,8 @@ pub enum Value {
     Percentage(Span),
     /// Balanced braces. The span covers them.
     Braced(Span),
+    /// A float placement specifier: bytes from `htbp!H`, unquoted.
+    Placement(Span),
 }
 
 impl Value {
@@ -77,7 +84,11 @@ impl Value {
     #[must_use]
     pub const fn span(self) -> Span {
         match self {
-            Self::Str(s) | Self::Length(s) | Self::Percentage(s) | Self::Braced(s) => s,
+            Self::Str(s)
+            | Self::Length(s)
+            | Self::Percentage(s)
+            | Self::Braced(s)
+            | Self::Placement(s) => s,
         }
     }
 }
@@ -135,6 +146,13 @@ pub enum BlockError {
     },
     /// A field has no `=`.
     MissingEquals(Span),
+    /// A placement letter LaTeX's float mechanism does not accept.
+    BadPlacementByte {
+        /// The offending byte's span, one byte long.
+        at: Span,
+        /// The byte itself, for the message.
+        byte: u8,
+    },
 }
 
 /// Whether a rejected field was removed from the specification, or never in it.
@@ -221,7 +239,8 @@ pub fn parse_block(
         if bytes.get(at) != Some(&b'=') {
             return Err(BlockError::MissingEquals(key));
         }
-        at = skip_whitespace(bytes, at + 1);
+        let after_equals = at + 1;
+        at = skip_whitespace(bytes, after_equals);
 
         let Some(expected) = kind.value_kind(&bytes[key.start()..key.end()]) else {
             return Err(BlockError::UnknownField {
@@ -230,12 +249,35 @@ pub fn parse_block(
             });
         };
 
+        // A bare value ends at its line, so a bare field whose line holds
+        // nothing is empty — not a licence to take the next line's key as the
+        // value. Writing the field and saying nothing is malformed; silence
+        // stays the author's explicit choice of omitting the field.
+        if expected == ValueKind::Placement
+            && bytes[after_equals..at.min(body_end)].contains(&b'\n')
+        {
+            return Err(BlockError::WrongValueKind {
+                key,
+                expected: describe(expected),
+            });
+        }
         let (value, next) = read_value(bytes, at, body_end, expected).ok_or({
             BlockError::WrongValueKind {
                 key,
                 expected: describe(expected),
             }
         })?;
+        if let Value::Placement(placement) = value {
+            for (offset, byte) in bytes[placement.start()..placement.end()].iter().enumerate() {
+                if !is_placement_byte(*byte) {
+                    let at = placement.start() + offset;
+                    return Err(BlockError::BadPlacementByte {
+                        at: span(at, at + 1),
+                        byte: *byte,
+                    });
+                }
+            }
+        }
         fields.push(Field { key, value });
         at = skip_whitespace(bytes, next);
     }
@@ -263,6 +305,9 @@ const fn describe(kind: ValueKind) -> &'static str {
             "a length such as 4cm or 0.8\\columnwidth, or a percentage such as 80%"
         }
         ValueKind::Braced => "a braced group, because it may span lines and contain LaTeX",
+        ValueKind::Placement => {
+            "one or more of the letters h, t, b, p, H and `!`, written without quotes"
+        }
     }
 }
 
@@ -328,7 +373,30 @@ fn read_value(
             let end = balanced_end(bytes, at)?;
             Some((Value::Braced(span(at, end)), end))
         }
+        ValueKind::Placement => {
+            let mut i = at;
+            while i < limit && !bytes[i].is_ascii_whitespace() && bytes[i] != b'}' {
+                i += 1;
+            }
+            // `placement =` followed by nothing is malformed, not "no
+            // brackets": silence must stay the author's explicit choice of
+            // omitting the field.
+            if i == at {
+                return None;
+            }
+            Some((Value::Placement(span(at, i)), i))
+        }
     }
+}
+
+/// The bytes LaTeX's float mechanism accepts in a placement specifier.
+///
+/// `h t b p !` are LaTeX's own; `H` is the `float` package's. Whether that
+/// package is loaded is a package fact and stays unvalidated, like every
+/// other package fact. The value is emitted verbatim — no reordering, no
+/// deduplication — because the compiler does not improve author intent.
+const fn is_placement_byte(byte: u8) -> bool {
+    matches!(byte, b'h' | b't' | b'b' | b'p' | b'!' | b'H')
 }
 
 fn is_identifier(bytes: &[u8]) -> bool {
@@ -382,6 +450,49 @@ mod tests {
             "\\figure(fig:r) {\n  src = \"r.pdf\"\n  width = 80%\n  caption = {A caption}\n}";
         assert_eq!(keys(input), ["src", "width", "caption"]);
         assert_eq!(parse(input).unwrap().kind, BlockKind::Figure);
+    }
+
+    #[test]
+    fn placement_reads_the_corpus_forms_and_stops_at_the_line() {
+        // The corpus's frequent forms, per issue #81. The value is bare and
+        // ends at its line.
+        for form in ["t", "h", "ht", "!htbp", "!ht", "b", "H"] {
+            let input = format!("\\figure(f) {{\n  placement = {form}\n  caption = {{x}}\n}}");
+            let block = parse_block(input.as_bytes(), BlockKind::Figure, 0, b"\\figure(".len())
+                .expect(form);
+            let field = &block.fields[0];
+            let Value::Placement(span) = field.value else {
+                panic!("{form} did not parse as a placement")
+            };
+            assert_eq!(&input.as_bytes()[span.start()..span.end()], form.as_bytes());
+            assert_eq!(block.fields.len(), 2, "{form} swallowed the caption");
+        }
+    }
+
+    #[test]
+    fn a_placement_byte_latex_would_reject_names_itself() {
+        let input = "\\table(t) {\n  placement = htq\n  caption = {x}\n}";
+        let error = parse_block(input.as_bytes(), BlockKind::Table, 0, b"\\table(".len())
+            .expect_err("q is not a placement letter");
+        let BlockError::BadPlacementByte { at, byte } = error else {
+            panic!("wrong error: {error:?}")
+        };
+        assert_eq!(byte, b'q');
+        assert_eq!(&input.as_bytes()[at.start()..at.end()], b"q");
+    }
+
+    #[test]
+    fn an_empty_placement_is_malformed_not_a_licence_to_read_the_next_line() {
+        // `placement =` followed by a line ending must not take the next
+        // line's key as its value. Writing the field and saying nothing is
+        // malformed; omitting the field is how silence is asked for.
+        let input = "\\figure(f) {\n  placement =\n  caption = {x}\n}";
+        let error = parse_block(input.as_bytes(), BlockKind::Figure, 0, b"\\figure(".len())
+            .expect_err("an empty placement is malformed");
+        assert!(
+            matches!(error, BlockError::WrongValueKind { .. }),
+            "wrong error: {error:?}"
+        );
     }
 
     #[test]
