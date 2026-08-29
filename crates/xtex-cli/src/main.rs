@@ -1413,6 +1413,7 @@ mod bibliography_advisory_tests {
             },
             Unavailable::UnparsableEntry {
                 name: "refs.bib".to_owned(),
+                detail: "a value opened at line 3 is never closed".to_owned(),
             },
         ] {
             let message = bibliography_advisory(&table, &Bibliography::Unavailable(reason.clone()))
