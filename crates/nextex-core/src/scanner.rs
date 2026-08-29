@@ -584,6 +584,14 @@ enum Extent {
 /// signature selects. For one with no signature, §8 allows a run of adjacent
 /// balanced groups to be treated as its arguments, bounded at sixteen — beyond
 /// that the parser stops rather than assume the seventeenth group is prose.
+/// Bytes that never begin a single-token mandatory argument.
+///
+/// A mandatory argument may be one token — `\\newcommand\\foo{}` is real LaTeX.
+/// But these bytes open some *other* xparse argument form, so meeting one where
+/// a mandatory argument was expected means the signature does not describe this
+/// call. See `docs/grammar.md` §8.
+const ARGUMENT_OPENERS: &[u8] = b"[<(*";
+
 fn command_extent(bytes: &[u8], at: usize) -> Extent {
     let name_start = at + 1;
     let mut name_end = name_start;
@@ -597,6 +605,14 @@ fn command_extent(bytes: &[u8], at: usize) -> Extent {
     let mut cursor = name_end;
 
     if let Some(signature) = signature_of(name) {
+        // A signature is a claim about this call, and the call can refute it.
+        // 15 of the built-in commands carry a different signature under another
+        // package — `\\definecolor` is `m m m` under `color` and `o m m m` under
+        // `xcolor`, and beamer adds a `<overlay>` argument to twelve more. When
+        // the bytes do not fit, trusting the signature anyway resumes parsing
+        // *inside* an argument and exposes its contents to recognition. Falling
+        // through to the unknown-command rule excludes them instead.
+        let mut fits = true;
         for argument in signature {
             cursor = skip_ascii_whitespace(bytes, cursor);
             match argument {
@@ -619,6 +635,12 @@ fn command_extent(bytes: &[u8], at: usize) -> Extent {
                             Some(end) => cursor = end,
                             None => return Extent::Unbounded,
                         }
+                    } else if bytes
+                        .get(cursor)
+                        .is_some_and(|b| ARGUMENT_OPENERS.contains(b))
+                    {
+                        fits = false;
+                        break;
                     } else {
                         // A mandatory argument may be a single token.
                         cursor = (cursor + 1).min(bytes.len());
@@ -634,14 +656,15 @@ fn command_extent(bytes: &[u8], at: usize) -> Extent {
                 }
             }
         }
+        if fits {
+            return Extent::Through(cursor);
+        }
+        cursor = name_end;
+    } else if is_known(name) {
         return Extent::Through(cursor);
     }
 
-    if is_known(name) {
-        return Extent::Through(cursor);
-    }
-
-    // No signature. Claim adjacent groups, bounded.
+    // No signature, or one this call refuted. Claim adjacent groups, bounded.
     let mut groups = 0usize;
     loop {
         let next = skip_ascii_whitespace(bytes, cursor);

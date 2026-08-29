@@ -1,2 +1,3 @@
 transport: identical
+scanner: !ref ref
 constructs: ref malformed — hard error; ref(good) recognised

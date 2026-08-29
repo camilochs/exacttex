@@ -107,6 +107,20 @@ corpus entry pins three things, and a change to any of them is a reviewable diff
 diagnostics — ordinary papers with unresolved `\ref`, undefined citations, exotic packages — are what keep
 the "renamed `.tex` checks clean" promise honest. A checker that gets stricter over time fails here first.
 
+Its first form is `ordinary_latex_yields_no_constructs` in `crates/nextex-core/tests/fixtures.rs`. It found
+[#39](https://github.com/camilochs/nexttex/issues/39) on the day it was written: `\lstinline|@id(x)|` was
+being read as syntax, in a sentence whose whole point was to write the token without using it.
+
+**Every fixture's `scanner:` line is checked.** Each `expect.txt` carries a strict line — `none`, or a list
+where `ref` is a construct and `!ref` a malformed one — and `every_fixture_produces_the_pieces_it_declares`
+compares it against what the scanner produced. Before that test existed, all 42 fixtures declared their
+constructs in prose and nothing read it: the grammar was documented and unfalsified at the same time.
+
+The `scanner:` lines were transcribed from each fixture's own prose, never from what the scanner did. Where
+the two disagreed, the grammar decided: it found one real scanner defect (a signature trusted through a
+mismatch) and one wrong fixture input (`latex{}`, which §7 does make a raw escape). A `scanner:` line
+written to match the code would have documented both as correct.
+
 ---
 
 ## 5 · Hazard fixtures — the falsifying observation is the test

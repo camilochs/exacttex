@@ -1,0 +1,3 @@
+transport: identical
+scanner: latex latex
+constructs: raw raw — §7 says ws*, so zero spaces and two spaces both qualify

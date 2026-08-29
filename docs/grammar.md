@@ -668,10 +668,45 @@ entry token are ordinary bytes.
 The default verbatim environment set is `verbatim`, `verbatimtab`, `Verbatim`, `listing` and `lstlisting`,
 extended by `nextex.toml`.
 
+The verbatim **command** set is `\verb` and `\verb*` from the LaTeX kernel, `\lstinline` from `listings`, and
+`\mint` and `\mintinline` from `minted`. The last three are transcribed from unified-latex, which marks them
+`argumentParser` rather than giving them a signature — the database itself records that their arguments
+cannot be described by one, which is the same reason they are listed here. `fancyvrb`'s `\Verb` is not in the
+set because no source for it was read; adding it requires reading one.
+
+Each takes its delimiter as the first byte after any arguments that precede it, and ends at that byte's next
+occurrence. `\lstinline` and `\mintinline` may also take a braced form, which is an ordinary balanced group.
+
 An unterminated excluded region whose boundary cannot safely be recovered enters quarantine rather than
 resuming recognition at a guessed byte.
 
 ### Command argument regions
+
+#### A signature is a claim the call can refute
+
+A command name does not determine a signature. Of the 130 built-in signatures, **15 carry a different one
+under another package**: `\definecolor` is `m m m` under `color` and `o m m m` under `xcolor`; `beamer` adds a
+`<overlay>` argument to twelve commands including `\section`, `\item` and `\label`; `cleveref` redefines
+`\ref` from `s m` to `m`. Measured against unified-latex, package by package.
+
+So the rule is not "look up the signature and follow it". It is:
+
+1. Look up the signature and try to follow it.
+2. If a mandatory argument is required where the bytes hold `[`, `<`, `(` or `*`, the signature does not
+   describe this call. **Discard it** and fall through to the unknown-command rule below.
+
+The fall-through is what makes package ambiguity safe without reading the preamble. Every one of the 15
+variants differs by adding an argument at the front, so the mismatch is detected at the first argument and
+the conservative path — exclude the adjacent groups — is taken instead.
+
+Trusting the signature anyway is the failure this prevents, and it is not hypothetical: with `m m m` applied
+to `\definecolor[named]{...}{...}{...}`, the `m` consumed the single byte `[`, recognition resumed **inside**
+`named`, and all three arguments were opened to construct recognition.
+
+Reading `\usepackage` from the preamble to pick the right variant would be an improvement in precision. It is
+not required for safety, and it is not in v0.1.
+
+#### Where signatures come from
 
 Command shapes are not inferred from the corpus. They come from declarative specifications:
 

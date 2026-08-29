@@ -1,1 +1,4 @@
-We compile with latex, not with latex{}\relax — the first is prose.
+We compile with latex, not with latexmk — the first is prose.
+The word latex\relax and latex(parenthesised) and latex[bracketed] stay prose.
+A line ending after latex
+is prose too, because nothing braced follows on it.
