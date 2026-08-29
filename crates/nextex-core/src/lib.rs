@@ -42,6 +42,7 @@
 //! assert_eq!(out, b"\\section{Hi}\r\n");
 //! ```
 
+pub mod bibliography;
 pub mod blocks;
 pub mod document;
 pub mod io;
@@ -100,7 +101,10 @@ pub fn parse(sources: &Sources, id: SourceId) -> Document {
 
     for piece in scanner::scan(source.bytes()) {
         let node = match piece {
-            Piece::Text(span) => Node::Opaque {
+            // Prose the parser modelled nothing in, and a region §8 excludes,
+            // are both transported. They differ for a consumer searching the
+            // source, not for the emitter.
+            Piece::Text(span) | Piece::Excluded(span) => Node::Opaque {
                 source: id,
                 span,
                 // Balanced rather than to-end-of-file: the region has a known
@@ -361,14 +365,26 @@ mod tests {
     }
 
     #[test]
-    fn nothing_is_modelled_yet_so_coverage_is_zero() {
+    fn latex_carrying_no_construct_is_wholly_opaque() {
         let mut sources = Sources::new();
         let id = sources.add("main.tex", AWKWARD);
         let document = parse(&sources, id);
 
-        assert_eq!(document.len(), 1);
+        // The fixture holds a comment, so the scanner splits it into prose and
+        // an excluded region. Both are transported, so both are opaque nodes.
+        assert!(!document.is_empty());
         assert!(document.iter().all(Node::is_opaque));
         assert!((document.coverage() - 0.0).abs() < f64::EPSILON);
         assert!(!document.reached_end_of_recognition());
+    }
+
+    #[test]
+    fn a_construct_raises_coverage_above_zero() {
+        let mut sources = Sources::new();
+        let id = sources.add("main.ntex", b"See @ref(a).".as_slice());
+        let document = parse(&sources, id);
+
+        assert!(document.coverage() > 0.0);
+        assert!(document.iter().any(|n| !n.is_opaque()));
     }
 }

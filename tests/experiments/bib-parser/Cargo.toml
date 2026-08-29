@@ -1,0 +1,12 @@
+# Not a workspace member: it exists to pull in the dependency the compiler does
+# not have, and adding it to the workspace would give nextex-core a dependency
+# through the lock file.
+[package]
+name = "bib-parser-comparison"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+biblatex = "0.10"
+nextex-core = { path = "../../../crates/nextex-core" }

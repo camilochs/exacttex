@@ -1,6 +1,9 @@
 [workspace]
 resolver = "3"
 members = ["crates/nextex-core", "crates/nextex-cli"]
+# Experiments carry dependencies the compiler must not inherit through the lock
+# file. They are built on their own.
+exclude = ["tests/experiments"]
 
 [workspace.package]
 version = "0.0.0"

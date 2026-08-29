@@ -1,4 +1,8 @@
-//! Reads a .ntex file and prints what its symbol table holds.
+//! Reads a .ntex file and prints what its symbol table and bibliography hold.
+use std::collections::BTreeMap;
+use std::path::Path;
+
+use nextex_core::bibliography::{Bibliography, assemble_from, declared_in, missing_citations};
 use nextex_core::{parse, source::Sources, symbols::SymbolTable};
 
 fn main() {
@@ -10,21 +14,46 @@ fn main() {
     let mut table = SymbolTable::new();
     table.merge(&sources, &document);
 
-    println!("  cobertura            {:.0}%", document.coverage() * 100.0);
+    // Declared resources are relative to the document, so they are read from
+    // beside it. A resource that is not there stays unread on purpose.
+    let base = Path::new(&path).parent().unwrap_or_else(|| Path::new("."));
+    let declared = declared_in(&sources, id);
+    let files: BTreeMap<String, Vec<u8>> = declared
+        .resources
+        .iter()
+        .filter_map(|r| {
+            std::fs::read(base.join(&r.name))
+                .ok()
+                .map(|b| (r.name.clone(), b))
+        })
+        .collect();
+    let bibliography = assemble_from(&declared, &files);
+
+    println!("  coverage             {:.0}%", document.coverage() * 100.0);
     println!(
-        "  declarados           {:?}",
+        "  declared             {:?}",
         table.declared().collect::<Vec<_>>()
     );
     println!(
-        "  citas                {:?}",
+        "  citations            {:?}",
         table.citations().map(|(n, _)| n).collect::<Vec<_>>()
     );
     println!(
-        "  referencias rotas    {:?}",
+        "  broken references    {:?}",
         table
             .unresolved_references()
             .map(|(n, _)| n)
             .collect::<Vec<_>>()
     );
-    println!("  errores              {}", table.errors().count());
+    match &bibliography {
+        Bibliography::Complete(keys) => println!("  bibliography         {} keys", keys.len()),
+        Bibliography::Unavailable(why) => println!("  bibliography         unavailable: {why:?}"),
+    }
+    println!(
+        "  missing citations    {:?}",
+        missing_citations(&table, &bibliography)
+            .map(|(n, _)| n)
+            .collect::<Vec<_>>()
+    );
+    println!("  errors               {}", table.errors().count());
 }
