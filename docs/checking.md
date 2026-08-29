@@ -113,6 +113,7 @@ error.
 | `XT1011` | A sidecar record's `kind` disagrees with its construct | any |
 | `XT1012` | A sidecar record whose revision construct no longer exists | any |
 | `XT1013` | A sidecar that cannot be read, or that names a different document | any |
+| `XT1014` | An explicit inline construct (`@id`, `@ref`, `@cite`, `@import`) whose closing `)` is not found before line end | any |
 
 Two properties hold across the whole table and are tested as properties, not as examples:
 
