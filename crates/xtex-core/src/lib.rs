@@ -235,7 +235,15 @@ pub fn emit_view(
     if view == RevisionView::Marked {
         let mut body = Vec::new();
         emit_nodes(sources, document, view, &mut body)?;
-        let insertion = documentclass_end(&body).unwrap_or(0);
+        // Only a document with a preamble receives the marked packages. A
+        // fragment — an imported file emitted with itself as the root, the
+        // documented host pattern — must not: injecting at byte 0 lands
+        // \usepackage inside the parent's body, where LaTeX refuses it.
+        // The root document's own injection covers its children.
+        let Some(insertion) = documentclass_end(&body) else {
+            out.extend_from_slice(&body);
+            return Ok(());
+        };
         out.extend_from_slice(&body[..insertion]);
         out.extend_from_slice(b"\\usepackage{xcolor}\n\\usepackage[normalem]{ulem}\n");
         out.extend_from_slice(&body[insertion..]);
@@ -663,6 +671,40 @@ pub fn transport(
 
 #[cfg(test)]
 mod tests {
+
+    #[test]
+    fn a_fragment_marked_view_gains_no_preamble() {
+        let mut sources = source::Sources::new();
+        let id = sources.add(
+            "part.xtex",
+            b"gain is @sub(c) {dramatic -> consistent} here".to_vec(),
+        );
+        let document = parse(&sources, id);
+        let mut out = Vec::new();
+        emit_view(&sources, &document, RevisionView::Marked, &mut out).unwrap();
+        let text = String::from_utf8(out).unwrap();
+        assert!(
+            !text.contains("usepackage"),
+            "a fragment must not receive the marked preamble: {text}"
+        );
+        assert!(text.contains("dramatic"), "{text}");
+    }
+
+    #[test]
+    fn a_document_marked_view_gains_the_preamble_after_documentclass() {
+        let mut sources = source::Sources::new();
+        let id = sources.add(
+            "paper.xtex",
+            b"\\documentclass{article}\ngain is @sub(c) {a -> b} here".to_vec(),
+        );
+        let document = parse(&sources, id);
+        let mut out = Vec::new();
+        emit_view(&sources, &document, RevisionView::Marked, &mut out).unwrap();
+        let text = String::from_utf8(out).unwrap();
+        let class = text.find("documentclass").unwrap();
+        let package = text.find("usepackage{xcolor}").unwrap();
+        assert!(package > class, "{text}");
+    }
     use super::*;
     use io::Memory;
     use source::Span;
