@@ -53,8 +53,33 @@ crates.io is MIT or MIT/Apache-2.0. Three other things are.
 all. It is not a candidate: it needs an `.aux` and a `.bst`, and using it would mean running the program,
 which the compiler does not do.
 
+## What the corpus decided
+
+The validator that came out of this is a detector, not a parser: it locates the four shapes BibTeX rejects
+and nothing else. Finding keys and validating syntax stay separate jobs, because the key reader must never
+fail — a failure silences citation checking for a whole document — while a validator only produces an
+advisory and so can afford to be strict.
+
+Two files in the corpus were added after the first attempt, because they refuted it.
+
+**`@comment` is the one entry type BibTeX does not read.** It skips to the next `@` and resumes there. A
+validator that checks the body instead rejects `ok-08`, which BibTeX accepts, and that is the expensive
+direction of error: a false rejection costs a document its citation checking.
+
+**A commented-out entry is still a database entry.** In `ok-09` a `@book` sits inside a `@comment{...}`
+wrapper. Because BibTeX's skip stops at the next `@`, it reads that entry and resolves it when cited —
+verified by citing `commented_out` and watching BibTeX not complain. A validator that skipped to the
+comment's closing brace would lose the key, and a lost key turns a correct `@cite` into `XT1005` against an
+author who did nothing wrong.
+
+`bad-08` and `bad-09` are the other side of the same question: BibTeX *does* check brace balance inside
+`@preamble` and `@string`, and rejects both. The three types are not interchangeable.
+
 ## Boundary
 
-One run. The seven malformed shapes were chosen by hand, and a different set could reorder the table. The 37
-real files are one author's corpus. What the numbers support is a decision about this codebase, not a claim
+One run. The malformed shapes were chosen by hand, and a different set could reorder the table. The 37 real
+files are one author's corpus. Eighteen further probes — CRLF endings, parenthesis-delimited entries, an `@`
+inside a value, a URL with `%` and `=`, non-ASCII names, `#` concatenation — agree with BibTeX, and one of
+them does not: BibTeX counts a backslash-escaped `\{` as an opening brace and rejects the file, where the
+validator accepts it. That is a shape it does not detect, not a file it wrongly rejects. What the numbers support is a decision about this codebase, not a claim
 about BibTeX parsers in general.

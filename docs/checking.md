@@ -232,7 +232,9 @@ diagnostic that survives is about the file, not about the citation.
 - **`ComputedPath`** — a declaration whose path is built by a macro rather than written literally. It cannot
   be resolved without running TeX, which the compiler does not do.
 - **`Unreadable`** — a declared resource was not found.
-- **`UnparsableEntry`** — an entry in a resource that was read has no locatable boundary.
+- **`UnparsableEntry`** — a resource was read and does not parse. Four shapes are detected, and they are the
+  four that BibTeX itself rejects: a field value whose `{` never closes, an entry whose delimiter never
+  closes, two fields with no comma between them, and a quoted value whose `"` never closes.
 
 When the document contains at least one `@cite`, an `Unavailable` bibliography is reported as advisory
 `XT2001` without being asked for. The construct requested a check; printing `coverage` and exiting `0`
@@ -288,8 +290,21 @@ crate would silence citation checking for that document entirely — trading a d
 a file that works.
 
 The key reader locates entry keys and nothing else. It does not read fields, resolve `@string` macros, or
-validate an entry, because none of that is needed to answer the only question asked: does this key exist.
+interpret a value, because none of that is needed to answer the only question asked: does this key exist.
 `@string`, `@comment` and `@preamble` declare no citation key and are skipped.
+
+Validating the file is a separate job from reading its keys, and separating them is what makes it cheap. The
+reader must be lenient and must never fail, because a failure silences citation checking for the whole
+document. The validator is strict, and because a failure only reaches the author as an advisory it can
+afford to be. Detecting a broken file does not require understanding a correct one, so no BibTeX parser is
+involved and no dependency was added.
+
+`@comment` is the one entry type BibTeX does not read: it skips to the next `@` and resumes there. So an
+unbalanced brace inside a comment is not an error, and an entry a writer commented out by wrapping it is
+still a database entry that resolves when cited. `@preamble` and `@string` are read, and BibTeX does reject
+an unbalanced brace in either. Reproduce all of it with
+[`tests/experiments/bib-validator`](../tests/experiments/bib-validator/), whose ground truth is BibTeX 0.99e
+rather than a reading of the grammar.
 
 Reproduce it with [`tests/experiments/bib-parser`](../tests/experiments/bib-parser/). The evidence above is
 a single run over one author's corpus, and it is what the decision rests on. A corpus where the crate parses
