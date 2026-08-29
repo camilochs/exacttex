@@ -47,6 +47,7 @@ pub mod blocks;
 pub mod check;
 pub mod diagnostics;
 pub mod document;
+pub mod editor;
 pub mod io;
 pub mod review;
 pub mod scanner;
