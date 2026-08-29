@@ -1,0 +1,3 @@
+confidence: OpaqueBalanced over the whole \csname group
+constructs: ref(after) only
+falsifier: the generated name enters the symbol table as a declaration

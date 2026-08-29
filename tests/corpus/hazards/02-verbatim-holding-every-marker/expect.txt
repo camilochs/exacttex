@@ -1,0 +1,3 @@
+confidence: the environment is opaque, recognition resumes after it
+constructs: ref(after) only
+falsifier: a marker inside becomes a construct, or any contained byte changes

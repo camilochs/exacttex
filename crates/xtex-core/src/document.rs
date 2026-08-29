@@ -233,6 +233,22 @@ impl Document {
         }
     }
 
+    /// Byte offset where recognition stopped for good, if it did.
+    ///
+    /// The number `tests/corpus/measure.py` reports. A file that never
+    /// quarantines has none, and one that quarantines at its first byte has
+    /// zero — which is the difference between a document an author can annotate
+    /// and one they cannot.
+    #[must_use]
+    pub fn quarantine_position(&self) -> Option<usize> {
+        self.nodes.iter().find_map(|node| match node {
+            Node::Opaque {
+                span, confidence, ..
+            } if !confidence.recognition_continues() => Some(span.start()),
+            _ => None,
+        })
+    }
+
     /// Whether the parser gave up before the end of the source.
     #[must_use]
     pub fn reached_end_of_recognition(&self) -> bool {

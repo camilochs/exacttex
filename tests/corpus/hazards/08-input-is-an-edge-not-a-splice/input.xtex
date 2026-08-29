@@ -1,0 +1,2 @@
+\input{sections/part}
+Then @ref(after).

@@ -1,0 +1,2 @@
+\csname sec@\romannumeral 3 \endcsname
+Then @ref(after).

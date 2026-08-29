@@ -1,0 +1,3 @@
+confidence: an opaque project edge
+constructs: ref(after) only
+falsifier: normal output contains the imported bytes inlined

@@ -1,0 +1,3 @@
+confidence: OpaqueToEof from the \catcode
+constructs: ref(seen) only
+falsifier: parsing resumes past a boundary expansion can move

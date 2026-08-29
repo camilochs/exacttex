@@ -1,0 +1,3 @@
+confidence: the body is opaque; the name \mycmd and arity 2 are recorded
+constructs: ref(after) only
+falsifier: the body is expanded, normalised, or counted as checked content

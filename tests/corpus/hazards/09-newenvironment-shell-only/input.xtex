@@ -1,0 +1,2 @@
+\newenvironment{mine}[1]{begin @ref(inbegin) #1}{end @ref(inend)}
+Then @ref(after).

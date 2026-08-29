@@ -322,6 +322,10 @@ Shallow LaTeX parsing, parser quarantine, opaque transport, selected macro decla
 multi-file preservation, and TeX-log attribution. Assemble licensed corpus files with declared provenance
 plus synthetic files for every parser hazard. Set quarantine thresholds before measuring the corpus.
 
+Done: `tests/corpus/` holds the thresholds, the tooling and ten hazard fixtures. Real documents are
+referenced by fingerprint rather than vendored, because their licences are not ours to grant. The baseline
+was taken and is recorded with the reason it does not yet mean what it appears to.
+
 **Done when** every corpus file transports byte-for-byte with no per-file special case, and quarantine stays
 rare enough that real documents still have room to annotate.
 

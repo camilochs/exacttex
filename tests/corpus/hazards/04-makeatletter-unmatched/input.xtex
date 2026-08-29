@@ -1,0 +1,3 @@
+\makeatletter
+\@internal@name is one control sequence, not split at the @.
+@ref(hidden) after an opener that never closes.

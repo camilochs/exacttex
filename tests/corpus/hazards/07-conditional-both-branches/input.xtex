@@ -1,0 +1,6 @@
+\ifdefined\pdfoutput
+  @ref(taken)
+\else
+  @ref(nottaken)
+\fi
+Then @ref(after).

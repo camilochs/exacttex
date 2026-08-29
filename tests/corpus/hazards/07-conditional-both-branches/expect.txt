@@ -1,0 +1,3 @@
+confidence: every branch opaque; the condition is not evaluated
+constructs: ref(after) only
+falsifier: one branch is dropped, or a construct in either branch is a hard error
