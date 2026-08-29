@@ -138,7 +138,7 @@ pub fn check_with_labels(
                 name: None,
                 source: *source,
                 span: *construct,
-                message: "identifier is empty or contains unsupported bytes".to_owned(),
+                message: "identifier is empty or contains unsupported bytes — one starts with a letter and continues with letters, digits, `_`, `:`, `.` or `-`".to_owned(),
                 related: Vec::new(),
                 severity: Severity::Error,
                 blame: Blame::XtexConstruct,
@@ -146,14 +146,32 @@ pub fn check_with_labels(
         }
     }
     for (name, reference) in table.unresolved_against(labels) {
+        // The reference is where the failure SHOWS; a near-miss declaration
+        // is usually where the fix BELONGS. Say both.
+        let suggestion = nearest(name, table.declared());
+        let related = suggestion
+            .and_then(|candidate| table.declaration(candidate).map(|d| (candidate, d)))
+            .map(|(candidate, declaration)| {
+                vec![Related {
+                    source: declaration.payload.source,
+                    span: declaration.payload.span,
+                    message: format!("`{candidate}` is declared here"),
+                }]
+            })
+            .unwrap_or_default();
         diagnostics.push(Diagnostic {
             code: "XT1003",
             entity: table.demand_of(name),
             name: Some(name.to_owned()),
             source: reference.payload.source,
             span: reference.payload.span,
-            message: format!("identifier `{name}` is not declared"),
-            related: Vec::new(),
+            message: match suggestion {
+                Some(candidate) => {
+                    format!("identifier `{name}` is not declared — did you mean `{candidate}`?")
+                }
+                None => format!("identifier `{name}` is not declared"),
+            },
+            related,
             severity: Severity::Error,
             blame: Blame::XtexConstruct,
         });
@@ -180,13 +198,22 @@ pub fn check_with_labels(
         });
     }
     for (key, reference) in missing_citations(table, bibliography) {
+        let suggestion = match bibliography {
+            Bibliography::Complete(keys) => nearest(key, keys.iter().map(String::as_str)),
+            Bibliography::Unavailable(_) => None,
+        };
         diagnostics.push(Diagnostic {
             code: "XT1005",
             entity: EntityClass::Citation,
             name: Some(key.to_owned()),
             source: reference.payload.source,
             span: reference.payload.span,
-            message: format!("citation key `{key}` is not in the bibliography"),
+            message: match suggestion {
+                Some(candidate) => format!(
+                    "citation key `{key}` is not in the bibliography — did you mean `{candidate}`?"
+                ),
+                None => format!("citation key `{key}` is not in the bibliography"),
+            },
             related: Vec::new(),
             severity: Severity::Error,
             blame: Blame::XtexConstruct,
@@ -262,6 +289,43 @@ pub fn check_documents(
         });
     }
     diagnostics
+}
+
+/// Closest candidate within an edit budget: 1 for short names, 2 otherwise.
+/// `None` when nothing is close — a wrong suggestion is worse than silence.
+fn nearest<'a>(name: &str, candidates: impl Iterator<Item = &'a str>) -> Option<&'a str> {
+    let budget = if name.chars().count() <= 4 { 1 } else { 2 };
+    let mut best: Option<(&'a str, usize)> = None;
+    for candidate in candidates {
+        let distance = levenshtein(name, candidate);
+        // Also strictly less than either length: replacing a whole short
+        // name is not a suggestion, it is noise.
+        let floor = name.chars().count().min(candidate.chars().count());
+        if distance > 0
+            && distance <= budget
+            && distance < floor
+            && best.is_none_or(|(_, b)| distance < b)
+        {
+            best = Some((candidate, distance));
+        }
+    }
+    best.map(|(candidate, _)| candidate)
+}
+
+fn levenshtein(a: &str, b: &str) -> usize {
+    let a: Vec<char> = a.chars().collect();
+    let b: Vec<char> = b.chars().collect();
+    let mut row: Vec<usize> = (0..=b.len()).collect();
+    for (i, ca) in a.iter().enumerate() {
+        let mut previous = row[0];
+        row[0] = i + 1;
+        for (j, cb) in b.iter().enumerate() {
+            let cost = if ca == cb { previous } else { previous + 1 };
+            previous = row[j + 1];
+            row[j + 1] = cost.min(row[j] + 1).min(previous + 1);
+        }
+    }
+    row[b.len()]
 }
 
 fn inline_entry(kind: EntryToken) -> Option<&'static str> {
@@ -341,7 +405,7 @@ fn block_error(source: SourceId, kind: BlockKind, error: BlockError, bytes: &[u8
     let (span, message, length_error, identifier_error) = match error {
         BlockError::BadIdentifier(span) => (
             span,
-            "identifier is empty or contains unsupported bytes".to_owned(),
+            "identifier is empty or contains unsupported bytes — one starts with a letter and continues with letters, digits, `_`, `:`, `.` or `-`".to_owned(),
             false,
             true,
         ),
@@ -570,6 +634,39 @@ mod tests {
         // At the entry token on the FIRST line — where the fix belongs —
         // not at the reference that fails as a consequence.
         assert_eq!(found[0].span.start(), 5);
+    }
+
+    #[test]
+    fn a_typo_reference_names_the_declaration_it_probably_meant() {
+        let found = diagnostics(
+            "@id(sec:hello) and @ref(sec:helo)",
+            &Bibliography::Complete(BTreeSet::default()),
+        );
+        assert_eq!(found.len(), 1, "{found:?}");
+        assert_eq!(found[0].code, "XT1003");
+        assert!(found[0].message.contains("did you mean `sec:hello`?"));
+        assert_eq!(found[0].related.len(), 1);
+        assert!(found[0].related[0].message.contains("declared here"));
+    }
+
+    #[test]
+    fn a_reference_far_from_every_declaration_suggests_nothing() {
+        let found = diagnostics(
+            "@id(sec:hello) and @ref(fig:results)",
+            &Bibliography::Complete(BTreeSet::default()),
+        );
+        assert_eq!(found.len(), 1, "{found:?}");
+        assert!(!found[0].message.contains("did you mean"));
+        assert!(found[0].related.is_empty());
+    }
+
+    #[test]
+    fn a_typo_citation_names_the_key_it_probably_meant() {
+        let keys: BTreeSet<String> = ["knuth1984".to_owned()].into();
+        let found = diagnostics("@cite(knuth1985)", &Bibliography::Complete(keys));
+        assert_eq!(found.len(), 1, "{found:?}");
+        assert_eq!(found[0].code, "XT1005");
+        assert!(found[0].message.contains("did you mean `knuth1984`?"));
     }
 
     #[test]
