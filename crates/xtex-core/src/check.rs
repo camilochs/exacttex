@@ -145,37 +145,7 @@ pub fn check_with_labels(
             }),
         }
     }
-    for (name, reference) in table.unresolved_against(labels) {
-        // The reference is where the failure SHOWS; a near-miss declaration
-        // is usually where the fix BELONGS. Say both.
-        let suggestion = nearest(name, table.declared());
-        let related = suggestion
-            .and_then(|candidate| table.declaration(candidate).map(|d| (candidate, d)))
-            .map(|(candidate, declaration)| {
-                vec![Related {
-                    source: declaration.payload.source,
-                    span: declaration.payload.span,
-                    message: format!("`{candidate}` is declared here"),
-                }]
-            })
-            .unwrap_or_default();
-        diagnostics.push(Diagnostic {
-            code: "XT1003",
-            entity: table.demand_of(name),
-            name: Some(name.to_owned()),
-            source: reference.payload.source,
-            span: reference.payload.span,
-            message: match suggestion {
-                Some(candidate) => {
-                    format!("identifier `{name}` is not declared — did you mean `{candidate}`?")
-                }
-                None => format!("identifier `{name}` is not declared"),
-            },
-            related,
-            severity: Severity::Error,
-            blame: Blame::XtexConstruct,
-        });
-    }
+    unresolved_reference_diagnostics(table, labels, &mut diagnostics);
     for (name, reference, demand, declaration) in table.inconsistent_references() {
         diagnostics.push(Diagnostic {
             code: "XT1004",
@@ -197,28 +167,7 @@ pub fn check_with_labels(
             blame: Blame::XtexConstruct,
         });
     }
-    for (key, reference) in missing_citations(table, bibliography) {
-        let suggestion = match bibliography {
-            Bibliography::Complete(keys) => nearest(key, keys.iter().map(String::as_str)),
-            Bibliography::Unavailable(_) => None,
-        };
-        diagnostics.push(Diagnostic {
-            code: "XT1005",
-            entity: EntityClass::Citation,
-            name: Some(key.to_owned()),
-            source: reference.payload.source,
-            span: reference.payload.span,
-            message: match suggestion {
-                Some(candidate) => format!(
-                    "citation key `{key}` is not in the bibliography — did you mean `{candidate}`?"
-                ),
-                None => format!("citation key `{key}` is not in the bibliography"),
-            },
-            related: Vec::new(),
-            severity: Severity::Error,
-            blame: Blame::XtexConstruct,
-        });
-    }
+    missing_citation_diagnostics(table, bibliography, &mut diagnostics);
     diagnostics
 }
 
@@ -289,6 +238,76 @@ pub fn check_documents(
         });
     }
     diagnostics
+}
+
+/// XT1003 with its fix site: the reference is where the failure shows; a
+/// near-miss declaration is usually where the fix belongs. Say both.
+fn unresolved_reference_diagnostics(
+    table: &SymbolTable,
+    labels: &crate::labels::Inventory,
+    diagnostics: &mut Vec<Diagnostic>,
+) {
+    for (name, reference) in table.unresolved_against(labels) {
+        // The reference is where the failure SHOWS; a near-miss declaration
+        // is usually where the fix BELONGS. Say both.
+        let suggestion = nearest(name, table.declared());
+        let related = suggestion
+            .and_then(|candidate| table.declaration(candidate).map(|d| (candidate, d)))
+            .map(|(candidate, declaration)| {
+                vec![Related {
+                    source: declaration.payload.source,
+                    span: declaration.payload.span,
+                    message: format!("`{candidate}` is declared here"),
+                }]
+            })
+            .unwrap_or_default();
+        diagnostics.push(Diagnostic {
+            code: "XT1003",
+            entity: table.demand_of(name),
+            name: Some(name.to_owned()),
+            source: reference.payload.source,
+            span: reference.payload.span,
+            message: match suggestion {
+                Some(candidate) => {
+                    format!("identifier `{name}` is not declared — did you mean `{candidate}`?")
+                }
+                None => format!("identifier `{name}` is not declared"),
+            },
+            related,
+            severity: Severity::Error,
+            blame: Blame::XtexConstruct,
+        });
+    }
+}
+
+/// XT1005, suggesting the nearest key a complete bibliography holds.
+fn missing_citation_diagnostics(
+    table: &SymbolTable,
+    bibliography: &Bibliography,
+    diagnostics: &mut Vec<Diagnostic>,
+) {
+    for (key, reference) in missing_citations(table, bibliography) {
+        let suggestion = match bibliography {
+            Bibliography::Complete(keys) => nearest(key, keys.iter().map(String::as_str)),
+            Bibliography::Unavailable(_) => None,
+        };
+        diagnostics.push(Diagnostic {
+            code: "XT1005",
+            entity: EntityClass::Citation,
+            name: Some(key.to_owned()),
+            source: reference.payload.source,
+            span: reference.payload.span,
+            message: match suggestion {
+                Some(candidate) => format!(
+                    "citation key `{key}` is not in the bibliography — did you mean `{candidate}`?"
+                ),
+                None => format!("citation key `{key}` is not in the bibliography"),
+            },
+            related: Vec::new(),
+            severity: Severity::Error,
+            blame: Blame::XtexConstruct,
+        });
+    }
 }
 
 /// Closest candidate within an edit budget: 1 for short names, 2 otherwise.
