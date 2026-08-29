@@ -38,7 +38,10 @@ impl BlockKind {
     const fn value_kind(self, key: &[u8]) -> Option<ValueKind> {
         match (self, key) {
             (Self::Figure, b"src") => Some(ValueKind::Str),
-            (Self::Figure, b"width") => Some(ValueKind::LengthOrPercentage),
+            // A percentage takes the reference its field fixes at emission —
+            // width against \linewidth, height against \textheight. Here they
+            // only have to be the same kind of value. See docs/decisions/0004.
+            (Self::Figure, b"width" | b"height") => Some(ValueKind::LengthOrPercentage),
             (Self::Figure | Self::Table, b"caption") | (Self::Table, b"body" | b"trailing") => {
                 Some(ValueKind::Braced)
             }

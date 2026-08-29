@@ -438,6 +438,7 @@ until one succeeds.
 figure-fields:
   src       = string
   width     = length | percentage
+  height    = length | percentage
   caption   = braced
 ```
 
@@ -504,6 +505,24 @@ field.
 
 This decision removes duplicated information. The hand annotation restated
 `\begin{tabular}{@{}lcccccc@{}}` as `columns = 7`, allowing the two annotations to disagree.
+
+### Lengths
+
+A `length` is emitted as written. A `percentage` becomes a fraction of a fixed reference, and the reference
+is part of the field's meaning rather than something the author selects:
+
+| Field | `80%` becomes |
+|---|---|
+| `width` | `0.80\linewidth` |
+| `height` | `0.80\textheight` |
+
+`\linewidth` is the only width correct both inside a single-column float and inside a spanning one; measured
+by compiling, `\textwidth` overflows the first and `\columnwidth` under-fills the second. For height no
+adaptive reference exists — TeX exposes no "space available in this float" — so `\textheight` is used, and
+the asymmetry is what TeX offers rather than a choice.
+
+An author who needs a different reference writes an absolute length or writes the `\includegraphics` in
+LaTeX. See [`decisions/0004`](decisions/0004-lengths-and-inclusion.md).
 
 ### Package requirements
 
@@ -987,15 +1006,14 @@ The following decisions remain open because the available evidence does not sele
    title-specific check or reference would justify the latter.
 6. **Typed algorithm and panel blocks.** Light annotations admit both. A demonstrated typed check with a
    stable field set would justify new blocks.
-7. **What a percentage width lowers to.** `width = 80%` has to become a TeX length, and the choice of
-   reference width changes the PDF. The corpus uses `\textwidth` 124 times, `\columnwidth` 65 and
-   `\linewidth` 49, so it is not settled by practice either. The emitter currently writes
-   `0.80\linewidth` because something had to be written; that is a placeholder, not a decision. A field
-   naming the reference, or a project-wide default in `nextex.toml`, are the obvious shapes.
-8. **Whether `@import` lowers to `\input` or `\include`.** They differ: `\include` starts a new page and
-   cannot nest, `\input` does neither. The emitter currently writes `\input` because it preserves file
-   boundaries without imposing page breaks, and that reasoning is worth keeping, but the choice is not
-   recorded anywhere as accepted.
+7. ~~**What a percentage lowers to.**~~ Settled 2026-08-29: `width` against `\linewidth`, `height` against
+   `\textheight`, no keyword. See §5 and `decisions/0004`.
+8. ~~**Whether `@import` lowers to `\input` or `\include`.**~~ Settled 2026-08-29: `\input`, and
+   `\include` was never available — it cannot be nested and `@import` nests. See `decisions/0004`.
+11. **Whether `keepaspectratio` is emitted when a block gives both `width` and `height`.** Of 243 measured
+    `\includegraphics` calls, 17 give both and 15 of those also give `keepaspectratio`, so the intent is
+    almost always a bounding box rather than a stretch. Following it would be a second exception to
+    no-injection and needs its own decision record.
 9. ~~**What `@cite` emits.**~~ Settled 2026-08-29 by the director: a citation construct is a LaTeX
    citation command written with `@`, and it emits that command. No style vocabulary, no package
    inference, no fields. See §4.

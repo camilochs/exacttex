@@ -237,19 +237,36 @@ fn emit_block(token: EntryToken, bytes: &[u8], out: &mut Vec<u8>) {
     out.extend_from_slice(b"\\begin{");
     out.extend_from_slice(environment);
     out.extend_from_slice(b"}\n");
-    if kind == BlockKind::Table || field(b"src").is_some() || field(b"width").is_some() {
+    if kind == BlockKind::Table || field(b"src").is_some() {
         out.extend_from_slice(b"  \\centering\n");
     }
     if let Some(src) = field(b"src") {
         out.extend_from_slice(b"  \\includegraphics");
-        if let Some(width) = field(b"width") {
-            out.extend_from_slice(b"[width=");
-            if matches!(width.value, Value::Percentage(_)) {
-                emit_percentage(bytes, width.value.span(), out);
-                out.extend_from_slice(b"\\linewidth");
-            } else {
-                copy_value(bytes, width.value, false, out);
+        // A percentage becomes a fraction of a reference fixed by the field,
+        // never one the author selects. `\\linewidth` is the only width correct
+        // both inside a single-column float and inside a spanning one; for
+        // height TeX offers no adaptive reference at all. `decisions/0004`.
+        let mut options: Vec<u8> = Vec::new();
+        for (name, reference) in [
+            (&b"width"[..], &b"\\linewidth"[..]),
+            (&b"height"[..], &b"\\textheight"[..]),
+        ] {
+            let Some(field) = field(name) else { continue };
+            if !options.is_empty() {
+                options.push(b',');
             }
+            options.extend_from_slice(name);
+            options.push(b'=');
+            if matches!(field.value, Value::Percentage(_)) {
+                emit_percentage(bytes, field.value.span(), &mut options);
+                options.extend_from_slice(reference);
+            } else {
+                copy_value(bytes, field.value, false, &mut options);
+            }
+        }
+        if !options.is_empty() {
+            out.push(b'[');
+            out.extend_from_slice(&options);
             out.push(b']');
         }
         out.push(b'{');
