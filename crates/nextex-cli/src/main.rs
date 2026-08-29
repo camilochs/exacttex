@@ -9,6 +9,8 @@ use std::fs;
 use std::path::{Path, PathBuf};
 use std::process::ExitCode;
 
+use nextex_core::bibliography::{Bibliography, Unavailable, assemble, declared_in};
+use nextex_core::check::{Diagnostic, check};
 use nextex_core::document::Node;
 use nextex_core::io::{IoError, OutputSink, SourceLoader};
 use nextex_core::scanner::EntryToken;
@@ -97,14 +99,18 @@ impl OutputSink for BuildDirectory {
 }
 
 fn main() -> ExitCode {
-    let mut args = std::env::args().skip(1);
-    let Some(input) = args.next() else {
-        eprintln!("usage: nextex <file.ntex>");
+    let args: Vec<String> = std::env::args().skip(1).collect();
+    let Some(first) = args.first() else {
+        eprintln!("usage: nextex <file.ntex> | nextex check [--json] [--strict-tex] <file.ntex>");
         eprintln!();
         eprintln!("Emits the file and its imports as LaTeX under build/.");
         return ExitCode::from(2);
     };
 
+    if first == "check" {
+        return check_command(&args[1..]);
+    }
+    let input = first;
     let loader = FileSystem {
         root: PathBuf::from("."),
     };
@@ -112,7 +118,7 @@ fn main() -> ExitCode {
         root: PathBuf::from("build"),
     };
 
-    match build(&input, &loader, &mut sink) {
+    match build(input, &loader, &mut sink) {
         Ok(()) => {
             let mut output = PathBuf::from(&input);
             output.set_extension("tex");
@@ -124,6 +130,168 @@ fn main() -> ExitCode {
             ExitCode::FAILURE
         }
     }
+}
+
+fn check_command(args: &[String]) -> ExitCode {
+    let json = args.iter().any(|arg| arg == "--json");
+    let strict = args.iter().any(|arg| arg == "--strict-tex");
+    let inputs: Vec<&str> = args
+        .iter()
+        .filter(|arg| !arg.starts_with("--"))
+        .map(String::as_str)
+        .collect();
+    if inputs.len() != 1 {
+        eprintln!("usage: nextex check [--json] [--strict-tex] <file.ntex>");
+        return ExitCode::from(2);
+    }
+
+    match run_check(inputs[0]) {
+        Ok((sources, diagnostics, coverage, bibliography)) => {
+            if json {
+                print_json(&sources, &diagnostics, coverage);
+            } else {
+                for diagnostic in &diagnostics {
+                    print_human(&sources, diagnostic);
+                }
+                if strict {
+                    if let Bibliography::Unavailable(reason) = bibliography {
+                        print_bibliography_advisory(&reason);
+                    }
+                }
+                println!("coverage: {:.1}%", coverage * 100.0);
+            }
+            if diagnostics.is_empty() {
+                ExitCode::SUCCESS
+            } else {
+                ExitCode::from(1)
+            }
+        }
+        Err(error) => {
+            eprintln!("fatal: {error}");
+            ExitCode::from(2)
+        }
+    }
+}
+
+fn run_check(root: &str) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography), IoError> {
+    let loader = FileSystem {
+        root: PathBuf::from("."),
+    };
+    let mut sources = Sources::new();
+    let root_id = loader.load(root, None, &mut sources)?;
+    let document = parse(&sources, root_id);
+    let mut table = nextex_core::symbols::SymbolTable::new();
+    table.merge(&sources, &document);
+
+    let declared = declared_in(&sources, root_id);
+    let base = Path::new(root).parent().unwrap_or_else(|| Path::new("."));
+    let bibliography = assemble(&declared, |name| fs::read(base.join(name)).ok());
+    let diagnostics = check(&table, &bibliography);
+    let coverage = document.coverage();
+    Ok((sources, diagnostics, coverage, bibliography))
+}
+
+fn location(
+    sources: &Sources,
+    source: SourceId,
+    span: nextex_core::source::Span,
+) -> (&str, usize, usize) {
+    let Some(source) = sources.get(source) else {
+        return ("<unresolved>", 1, 1);
+    };
+    let before = &source.bytes()[..span.start().min(source.bytes().len())];
+    #[allow(clippy::naive_bytecount)]
+    let line = before.iter().filter(|byte| **byte == b'\n').count() + 1;
+    let column = before
+        .iter()
+        .rposition(|byte| *byte == b'\n')
+        .map_or(before.len() + 1, |at| before.len() - at);
+    (source.name(), line, column)
+}
+
+fn print_human(sources: &Sources, diagnostic: &Diagnostic) {
+    let (file, line, column) = location(sources, diagnostic.source, diagnostic.span);
+    println!("error[{}]: {}", diagnostic.code, diagnostic.message);
+    println!("  --> {file}:{line}:{column}");
+    println!("  entity: {}", diagnostic.entity.name());
+    if let Some(name) = &diagnostic.name {
+        println!("  name: {name}");
+    }
+    println!(
+        "  span: offset {}, length {}",
+        diagnostic.span.start(),
+        diagnostic.span.len()
+    );
+    for related in &diagnostic.related {
+        let (file, line, column) = location(sources, related.source, related.span);
+        println!("  --> {file}:{line}:{column}: {}", related.message);
+    }
+    println!("  blame: nextex-construct");
+}
+
+fn print_json(sources: &Sources, diagnostics: &[Diagnostic], coverage: f64) {
+    print!("{{\"coverage\":{coverage},\"diagnostics\":[");
+    for (index, diagnostic) in diagnostics.iter().enumerate() {
+        if index > 0 {
+            print!(",");
+        }
+        let (file, line, column) = location(sources, diagnostic.source, diagnostic.span);
+        print!(
+            "{{\"code\":\"{}\",\"severity\":\"error\",\"blame\":\"nextex-construct\",\"entity\":\"{}\",\"name\":",
+            diagnostic.code,
+            diagnostic.entity.name()
+        );
+        match &diagnostic.name {
+            Some(name) => print_json_string(name),
+            None => print!("null"),
+        }
+        print!(",\"span\":{{\"file\":");
+        print_json_string(file);
+        print!(
+            ",\"offset\":{},\"length\":{},\"line\":{line},\"column\":{column}}},\"message\":",
+            diagnostic.span.start(),
+            diagnostic.span.len()
+        );
+        print_json_string(&diagnostic.message);
+        print!(",\"related\":[");
+        for (related_index, related) in diagnostic.related.iter().enumerate() {
+            if related_index > 0 {
+                print!(",");
+            }
+            let (file, line, column) = location(sources, related.source, related.span);
+            print!("{{\"span\":{{\"file\":");
+            print_json_string(file);
+            print!(
+                ",\"offset\":{},\"length\":{},\"line\":{line},\"column\":{column}}},\"message\":",
+                related.span.start(),
+                related.span.len()
+            );
+            print_json_string(&related.message);
+            print!("}}");
+        }
+        print!("]}}");
+    }
+    println!("]}}");
+}
+
+fn print_json_string(value: &str) {
+    print!("\"");
+    for character in value.chars() {
+        match character {
+            '\"' => print!("\\\""),
+            '\\' => print!("\\\\"),
+            '\n' => print!("\\n"),
+            '\r' => print!("\\r"),
+            '\t' => print!("\\t"),
+            character if character.is_control() => print!("\\u{:04x}", character as u32),
+            character => print!("{character}"),
+        }
+    }
+    print!("\"");
+}
+
+fn print_bibliography_advisory(reason: &Unavailable) {
+    println!("advisory: citation checking unavailable ({reason:?})");
 }
 
 fn build(root: &str, loader: &FileSystem, sink: &mut BuildDirectory) -> Result<(), BuildError> {
