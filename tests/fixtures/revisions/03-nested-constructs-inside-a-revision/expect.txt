@@ -1,3 +1,4 @@
 transport: identical
 scanner: add cite ref del
 constructs: add(c1) containing cite(knuth1984) ref(tab:x) del(c2)
+views: original.tex and final.tex, derived from revisions.md §2

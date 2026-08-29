@@ -137,6 +137,9 @@ still receives a `.tex` file.
   boundaries, and where constructs are not recognized.
 - [`docs/checking.md`](docs/checking.md) — what the compiler is willing to call an error, and what it
   refuses to: entity classes, the closed list of hard errors, coverage, blame, and the diagnostic fields.
+- [`docs/revisions.md`](docs/revisions.md) — the change model: the four constructs, the three views,
+  what accepting rewrites, and what the sidecar holds.
+- [`docs/decisions/`](docs/decisions/) — accepted decisions, one file each, with the evidence behind them.
 - [`docs/references.md`](docs/references.md) — what to read before each phase, and what each source
   already settled or blocked.
 - [`docs/testing.md`](docs/testing.md) — the six test layers, and why the property tests cannot wait

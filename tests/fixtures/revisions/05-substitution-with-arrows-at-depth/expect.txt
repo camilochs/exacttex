@@ -1,3 +1,4 @@
 transport: identical
 scanner: sub
 constructs: sub(c1) — one separator at depth one
+views: original.tex and final.tex, derived from revisions.md §2

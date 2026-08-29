@@ -286,3 +286,47 @@ fn ordinary_latex_yields_no_constructs() {
         );
     }
 }
+
+#[test]
+fn a_declared_view_is_a_built_document_and_the_two_differ() {
+    // The views cannot be derived until revisions are parsed (#15), so they are
+    // written by hand — which is the point: an expectation authored after the
+    // code would only record what the code does.
+    //
+    // Two properties are checkable now. A view is a *built* `.tex`, so no
+    // NextTeX markup may survive in it. And the two views must differ, or the
+    // fixture is not testing a revision at all.
+    //
+    // The derivation itself — that `--final` really is the input with every
+    // revision applied — arrives with #15. Writing a weaker proxy for it here
+    // would be worse than saying plainly that it is not checked yet.
+    let mut checked = 0usize;
+
+    for input in all_fixtures() {
+        let name = label(&input);
+        let expect = fs::read_to_string(input.with_file_name("expect.txt"))
+            .unwrap_or_else(|e| panic!("{name}: cannot read expect.txt ({e})"));
+        if !expect.lines().any(|l| l.starts_with("views:")) {
+            continue;
+        }
+
+        let mut views = Vec::new();
+        for view in ["original.tex", "final.tex"] {
+            let bytes = fs::read(input.with_file_name(view))
+                .unwrap_or_else(|e| panic!("{name}: declares views but has no {view} ({e})"));
+            assert!(
+                found_pieces(&bytes).is_empty(),
+                "{name}: {view} still carries NextTeX markup; a view is a built document"
+            );
+            views.push(bytes);
+        }
+
+        assert_ne!(
+            views[0], views[1],
+            "{name}: the two views are identical, so the fixture tests no revision"
+        );
+        checked += 1;
+    }
+
+    assert!(checked >= 5, "only {checked} fixtures declare views");
+}

@@ -244,14 +244,18 @@ by revision identifier.
 The initial model forbids overlapping changes and requires balanced content. A substitution is atomic when
 accepted.
 
-Emission modes:
+Emission modes, one document each:
 
-- `--original` — reject all pending changes;
-- `--marked` — render marked revisions;
-- `--final` — emit the accepted-result view.
+- `--original` — the document before any revision;
+- `--final` — the document with every revision applied;
+- `--marked` — every change visible, for reading rather than submitting.
 
-Accepting or rejecting a change edits the source and removes its sidecar entry. `nextex check` reports
-orphaned source or sidecar identifiers.
+There is no status that makes `--final` render two ways, which is why accepting is a source rewrite rather
+than a stored state. Accepting keeps the proposed text and removes the construct; rejecting keeps the
+original text and appends what it removed to the sidecar's history, so a rejected paragraph is still
+recoverable. `nextex check` reports a sidecar record whose construct is gone as a hard error, and a
+construct whose record is gone as an advisory — the file is authoritative for content, the sidecar only for
+attribution. See [`docs/revisions.md`](docs/revisions.md).
 
 ## Phases
 
@@ -277,6 +281,10 @@ says where the error messages need to be better than what LaTeX already prints.
 
 Write the formal grammar, lexical boundaries, explicit hard-error policy, erasure rules, review-mode
 semantics, and representative valid and invalid examples.
+
+Revisions are settled: the content of a change lives in the `.ntex`, the author and conversation live in a
+`.ntexrev` beside it, accepting rewrites the source, and there is exactly one `--final` per document. See
+[`docs/revisions.md`](docs/revisions.md).
 
 The package-synthesis conflict is settled: `needs` is not a field, packages are written by the author in the
 preamble, and a typed block lowers to the LaTeX its fields describe and nothing else. See

@@ -568,11 +568,15 @@ constructs and other eligible constructs may be nested:
 This decision follows the 33 measured revisions containing `\ref`, `\cite` or `\label`. Treating revision
 content as opaque would prevent those dependencies from being represented.
 
-Nested revisions must be properly contained. Crossing intervals are impossible in the brace grammar and
-are invalid if introduced by sidecar spans. There is no fixed nesting-depth lookahead; a counter and stack
-are updated left to right, subject to the configured nesting resource limit.
+Nested revisions must be properly contained. Crossing intervals are impossible in the brace grammar, and
+**the sidecar cannot reintroduce them**: it is keyed by identifier and carries no spans, settled by the
+director on 2026-08-29. So non-overlap is not a rule the parser enforces, it is a property the
+representation has. There is no fixed nesting-depth lookahead; a counter and stack are updated left to
+right, subject to the configured nesting resource limit.
 
-Metadata such as author, timestamp, status and thread remains in the sidecar keyed by revision identifier.
+The content of a revision is in the file; the author, the timestamp and the conversation are in the sidecar,
+keyed by revision identifier. Acceptance is not a stored state — it rewrites the source. See
+[`revisions.md`](revisions.md).
 
 ### Substitution separator
 
@@ -604,7 +608,8 @@ Fixtures must include:
 5. A substitution with arrows at nested brace depth and exactly one at depth one.
 6. Zero and two depth-one substitution arrows, both hard errors.
 7. An unmatched revision brace ending at end of file.
-8. Two properly nested revisions and sidecar spans that cross, the latter producing a hard error.
+8. Two properly nested revisions. The crossing case is not a fixture: the sidecar carries no spans, so
+   there is nothing that could express it.
 
 ---
 
@@ -915,5 +920,9 @@ The following decisions remain open because the available evidence does not sele
    title-specific check or reference would justify the latter.
 6. **Typed algorithm and panel blocks.** Light annotations admit both. A demonstrated typed check with a
    stable field set would justify new blocks.
-7. ~~**Package requirements.**~~ Settled 2026-08-29: `needs` is not a field, packages are source-authored.
+7. **What `@cite` emits.** `@ref` and `@id` have their emitted form written down; `@cite` does not. The
+   plain `@cite(k)` is uncontroversial, but the `style` field has no stated lowering, and a field that
+   selects between `\\cite` and `\\citet` selects between two packages' commands. Found while writing the
+   revision fixtures' expected views, where the question could not be avoided. Settle it in #13.
+8. ~~**Package requirements.**~~ Settled 2026-08-29: `needs` is not a field, packages are source-authored.
    See `decisions/0001-typed-emission-and-no-injection.md`.
