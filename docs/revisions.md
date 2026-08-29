@@ -161,6 +161,9 @@ Three rules make the mapping deterministic, which is what the issue's exit crite
 2. Two `[[revision]]` blocks with the same `id` is `NT1010`. So one identifier names at most one record.
 3. `kind` in the record must match the construct's keyword, `NT1011`. A record that says `add` against a
    `@del` is a corrupted pairing rather than a rename.
+4. The sidecar's `document` must name the file it sits beside, `NT1013`. One naming a different file is
+   paired with the wrong source, and every record in it would be judged against constructs it was never
+   about. The same code covers a sidecar that cannot be read at all.
 
 ### Orphans, in the two directions that are not the same
 

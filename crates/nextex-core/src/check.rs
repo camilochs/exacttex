@@ -1,7 +1,10 @@
 //! Hard diagnostics substantiated by explicit NextTeX constructs.
 
 use crate::bibliography::{Bibliography, missing_citations};
-use crate::source::{SourceId, Span};
+use crate::blocks::{BlockError, BlockKind, Value, parse_block};
+use crate::document::{Document, Node};
+use crate::scanner::EntryToken;
+use crate::source::{SourceId, Sources, Span};
 use crate::symbols::{EntityClass, SymbolError, SymbolTable};
 
 /// A location used to explain a diagnostic.
@@ -78,7 +81,7 @@ pub fn check(table: &SymbolTable, bibliography: &Bibliography) -> Vec<Diagnostic
     for (name, reference) in table.unresolved_references() {
         diagnostics.push(Diagnostic {
             code: "NT1003",
-            entity: super::symbols::demand_of(name),
+            entity: table.demand_of(name),
             name: Some(name.to_owned()),
             source: reference.payload.source,
             span: reference.payload.span,
@@ -117,6 +120,167 @@ pub fn check(table: &SymbolTable, bibliography: &Bibliography) -> Vec<Diagnostic
         });
     }
     diagnostics
+}
+
+/// Checks typed blocks in every source belonging to one document root.
+///
+/// `resolves` receives literal paths and the source that wrote them. A false
+/// result is evidence for NT1006; computed paths never reach this callback.
+pub fn check_documents(
+    sources: &Sources,
+    documents: &[Document],
+    mut resolves: impl FnMut(SourceId, &str) -> bool,
+) -> Vec<Diagnostic> {
+    let mut diagnostics = Vec::new();
+    for document in documents {
+        document.walk(|node| {
+            let (source, span, kind, malformed) = match node {
+                Node::Construct {
+                    source, span, kind, ..
+                } => (*source, *span, *kind, false),
+                Node::Malformed { source, span, kind } => (*source, *span, *kind, true),
+                Node::Opaque { .. } => return,
+            };
+            let Some(block_kind) = block_kind(kind) else {
+                return;
+            };
+            let Some(bytes) = sources.get(source).map(crate::source::Source::bytes) else {
+                return;
+            };
+            let start = span.start();
+            let entry = start
+                + match block_kind {
+                    BlockKind::Figure => b"\\figure(".len(),
+                    BlockKind::Table => b"\\table(".len(),
+                };
+            match parse_block(bytes, block_kind, start, entry) {
+                Ok(block) if !malformed => check_block(
+                    sources,
+                    source,
+                    bytes,
+                    &block,
+                    &mut resolves,
+                    &mut diagnostics,
+                ),
+                Err(error) => diagnostics.push(block_error(source, block_kind, error, bytes)),
+                Ok(_) => {}
+            }
+        });
+    }
+    diagnostics
+}
+
+fn block_kind(kind: EntryToken) -> Option<BlockKind> {
+    match kind {
+        EntryToken::Figure => Some(BlockKind::Figure),
+        EntryToken::Table => Some(BlockKind::Table),
+        _ => None,
+    }
+}
+
+fn check_block(
+    _sources: &Sources,
+    source: SourceId,
+    bytes: &[u8],
+    block: &crate::blocks::Block,
+    resolves: &mut impl FnMut(SourceId, &str) -> bool,
+    diagnostics: &mut Vec<Diagnostic>,
+) {
+    for field in &block.fields {
+        let key = &bytes[field.key.start()..field.key.end()];
+        if let Value::Percentage(span) = field.value {
+            let number = &bytes[span.start()..span.end() - 1];
+            if std::str::from_utf8(number)
+                .ok()
+                .and_then(|n| n.parse::<f64>().ok())
+                .is_some_and(|n| !(0.0..=100.0).contains(&n))
+            {
+                diagnostics.push(Diagnostic {
+                    code: "NT1007",
+                    entity: EntityClass::Length,
+                    name: None,
+                    source,
+                    span,
+                    message: "percentage must be between 0 and 100".to_owned(),
+                    related: Vec::new(),
+                });
+            }
+        }
+        if block.kind == BlockKind::Figure && key == b"src" {
+            let Value::Str(span) = field.value else {
+                continue;
+            };
+            let raw = &bytes[span.start() + 1..span.end() - 1];
+            let Ok(path) = std::str::from_utf8(raw) else {
+                continue;
+            };
+            if !path.contains('\\') && !resolves(source, path) {
+                diagnostics.push(Diagnostic {
+                    code: "NT1006",
+                    entity: EntityClass::Figure,
+                    name: Some(path.to_owned()),
+                    source,
+                    span,
+                    message: format!("image file `{path}` does not resolve"),
+                    related: Vec::new(),
+                });
+            }
+        }
+    }
+}
+
+fn block_error(source: SourceId, kind: BlockKind, error: BlockError, bytes: &[u8]) -> Diagnostic {
+    let (span, message, length_error, identifier_error) = match error {
+        BlockError::BadIdentifier(span) => (
+            span,
+            "identifier is empty or contains unsupported bytes".to_owned(),
+            false,
+            true,
+        ),
+        BlockError::MissingBody(span) => (span, "block body is required".to_owned(), false, false),
+        BlockError::UnclosedBody(span) => {
+            (span, "block body is not closed".to_owned(), false, false)
+        }
+        BlockError::UnknownField { key, reason } => {
+            (key, reason.explanation().to_owned(), false, false)
+        }
+        BlockError::WrongValueKind { key, expected } => {
+            let name = bytes.get(key.start()..key.end()).unwrap_or_default();
+            (
+                key,
+                format!("field requires {expected}"),
+                name == b"width" || name == b"height",
+                false,
+            )
+        }
+        BlockError::MissingEquals(span) => (
+            span,
+            "field requires `=` and a value".to_owned(),
+            false,
+            false,
+        ),
+    };
+    Diagnostic {
+        code: if identifier_error {
+            "NT1002"
+        } else if length_error {
+            "NT1007"
+        } else {
+            "NT1008"
+        },
+        entity: if length_error {
+            EntityClass::Length
+        } else if kind == BlockKind::Figure {
+            EntityClass::Figure
+        } else {
+            EntityClass::Table
+        },
+        name: None,
+        source,
+        span,
+        message,
+        related: Vec::new(),
+    }
 }
 
 #[cfg(test)]

@@ -1,0 +1,3 @@
+transport: differs by construct erasure
+constructs: three figures with percentages at both inclusive bounds and one outside
+scanner: figure figure figure

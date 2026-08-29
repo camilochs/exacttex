@@ -1,0 +1,3 @@
+transport: identical because the explicit block is malformed and preserved
+constructs: one malformed table field
+scanner: !table

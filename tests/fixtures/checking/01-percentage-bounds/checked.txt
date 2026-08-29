@@ -1,0 +1,1 @@
+NT1007|length|-|103|4|percentage must be between 0 and 100

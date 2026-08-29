@@ -65,10 +65,10 @@ pub struct Advisory {
 ///
 /// # Errors
 ///
-/// Returns `NT1009` for malformed input or unsupported versions.
+/// Returns `NT1013` for malformed input or unsupported versions.
 pub fn parse_sidecar(bytes: &[u8]) -> Result<Sidecar, ReviewError> {
     let text =
-        std::str::from_utf8(bytes).map_err(|_| error("NT1009", "the sidecar is not UTF-8"))?;
+        std::str::from_utf8(bytes).map_err(|_| error("NT1013", "the sidecar is not UTF-8"))?;
     let mut version = None;
     let mut document = None;
     let mut records = Vec::new();
@@ -94,7 +94,7 @@ pub fn parse_sidecar(bytes: &[u8]) -> Result<Sidecar, ReviewError> {
         }
         let (key, value) = line
             .split_once('=')
-            .ok_or_else(|| error("NT1009", format!("line {} has no '='", index + 1)))?;
+            .ok_or_else(|| error("NT1013", format!("line {} has no '='", index + 1)))?;
         let key = key.trim();
         if let Some(fields) = current.as_mut() {
             if fields
@@ -102,7 +102,7 @@ pub fn parse_sidecar(bytes: &[u8]) -> Result<Sidecar, ReviewError> {
                 .is_some()
             {
                 return Err(error(
-                    "NT1009",
+                    "NT1013",
                     format!("revision field '{key}' appears more than once"),
                 ));
             }
@@ -111,7 +111,7 @@ pub fn parse_sidecar(bytes: &[u8]) -> Result<Sidecar, ReviewError> {
                 value
                     .trim()
                     .parse()
-                    .map_err(|_| error("NT1009", "version must be an integer"))?,
+                    .map_err(|_| error("NT1013", "version must be an integer"))?,
             );
         } else if key == "document" {
             document = Some(parse_string(value.trim())?);
@@ -120,16 +120,16 @@ pub fn parse_sidecar(bytes: &[u8]) -> Result<Sidecar, ReviewError> {
     if let Some(fields) = current {
         records.push(record(fields)?);
     }
-    let version = version.ok_or_else(|| error("NT1009", "the sidecar has no version"))?;
+    let version = version.ok_or_else(|| error("NT1013", "the sidecar has no version"))?;
     if version != 1 {
         return Err(error(
-            "NT1009",
+            "NT1013",
             format!("sidecar version {version} is not supported"),
         ));
     }
     Ok(Sidecar {
         version,
-        document: document.ok_or_else(|| error("NT1009", "the sidecar has no document"))?,
+        document: document.ok_or_else(|| error("NT1013", "the sidecar has no document"))?,
         revisions: records,
     })
 }
@@ -299,7 +299,7 @@ pub fn resolve(
 ///
 /// # Errors
 ///
-/// Returns `NT1009` when the sidecar cannot be parsed and `NT1002` when it has
+/// Returns `NT1013` when the sidecar cannot be parsed and `NT1002` when it has
 /// no matching live record.
 pub fn resolve_sidecar(
     bytes: &[u8],
@@ -333,7 +333,7 @@ pub fn resolve_sidecar(
 ///
 /// # Errors
 ///
-/// Returns `NT1009` if the sidecar is malformed.
+/// Returns `NT1013` if the sidecar is malformed.
 pub fn prune_sidecar(
     bytes: &[u8],
     source: &[u8],
@@ -367,12 +367,12 @@ fn move_record(
 ) -> Result<Vec<u8>, ReviewError> {
     let removed = std::str::from_utf8(removed).map_err(|_| {
         error(
-            "NT1009",
+            "NT1013",
             "rejected text is not UTF-8 and cannot be stored losslessly in TOML",
         )
     })?;
     let text =
-        std::str::from_utf8(bytes).map_err(|_| error("NT1009", "the sidecar is not UTF-8"))?;
+        std::str::from_utf8(bytes).map_err(|_| error("NT1013", "the sidecar is not UTF-8"))?;
     let starts = table_starts(text);
     let mut output = String::from(&text[..starts.first().copied().unwrap_or(text.len())]);
     for (index, start) in starts.iter().copied().enumerate() {
@@ -474,7 +474,7 @@ fn record(mut fields: BTreeMap<String, String>) -> Result<RevisionRecord, Review
     let at = take_field(&mut fields, "at")?;
     if !looks_like_rfc3339(&at) {
         return Err(error(
-            "NT1009",
+            "NT1013",
             format!("revision '{id}' has an invalid RFC 3339 timestamp"),
         ));
     }
@@ -482,7 +482,7 @@ fn record(mut fields: BTreeMap<String, String>) -> Result<RevisionRecord, Review
     let on = fields.remove("on");
     if let Some(name) = fields.keys().next() {
         return Err(error(
-            "NT1009",
+            "NT1013",
             format!("revision record has unknown field '{name}'"),
         ));
     }
@@ -499,7 +499,7 @@ fn record(mut fields: BTreeMap<String, String>) -> Result<RevisionRecord, Review
 fn take_field(fields: &mut BTreeMap<String, String>, name: &str) -> Result<String, ReviewError> {
     fields
         .remove(name)
-        .ok_or_else(|| error("NT1009", format!("revision record has no {name}")))
+        .ok_or_else(|| error("NT1013", format!("revision record has no {name}")))
 }
 
 fn looks_like_rfc3339(value: &str) -> bool {
@@ -537,7 +537,7 @@ fn parse_string(value: &str) -> Result<String, ReviewError> {
     let inner = value
         .strip_prefix('"')
         .and_then(|value| value.strip_suffix('"'))
-        .ok_or_else(|| error("NT1009", "sidecar strings must use double quotes"))?;
+        .ok_or_else(|| error("NT1013", "sidecar strings must use double quotes"))?;
     let mut result = String::new();
     let mut chars = inner.chars();
     while let Some(character) = chars.next() {
@@ -553,7 +553,7 @@ fn parse_string(value: &str) -> Result<String, ReviewError> {
             Some('\\') => result.push('\\'),
             _ => {
                 return Err(error(
-                    "NT1009",
+                    "NT1013",
                     "the sidecar contains an unsupported string escape",
                 ));
             }

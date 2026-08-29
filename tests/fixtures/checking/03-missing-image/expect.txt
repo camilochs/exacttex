@@ -1,0 +1,3 @@
+transport: differs by construct erasure
+constructs: a figure whose literal image path is absent
+scanner: figure

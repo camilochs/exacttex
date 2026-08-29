@@ -9,8 +9,8 @@ use std::fs;
 use std::path::{Path, PathBuf};
 use std::process::ExitCode;
 
-use nextex_core::bibliography::{Bibliography, Unavailable, assemble, declared_in};
-use nextex_core::check::{Diagnostic, check};
+use nextex_core::bibliography::{Bibliography, Declared, Unavailable, assemble, declared_in};
+use nextex_core::check::{Diagnostic, check, check_documents};
 use nextex_core::diagnostics::map_emitted_diagnostic;
 use nextex_core::document::Node;
 use nextex_core::io::{IoError, OutputSink, SourceLoader};
@@ -20,6 +20,7 @@ use nextex_core::review::{
 use nextex_core::scanner::EntryToken;
 use nextex_core::source::{SourceId, Sources};
 use nextex_core::sourcemap::emit_with_map;
+use nextex_core::symbols::{EntityClass, PrefixMap, SymbolTable};
 use nextex_core::{RevisionView, emit_view, parse};
 
 /// Largest source the CLI will read, in bytes.
@@ -257,16 +258,162 @@ fn run_check(root: &str) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography)
     };
     let mut sources = Sources::new();
     let root_id = loader.load(root, None, &mut sources)?;
-    let document = parse(&sources, root_id);
-    let mut table = nextex_core::symbols::SymbolTable::new();
-    table.merge(&sources, &document);
+    let prefixes = read_prefixes(Path::new(root));
+    let mut table = SymbolTable::with_prefixes(prefixes);
+    let mut documents = Vec::new();
+    let mut pending = vec![root_id];
+    let mut merged = BTreeSet::new();
+    let mut import_diagnostics = Vec::new();
+    let mut declared = Declared::default();
 
-    let declared = declared_in(&sources, root_id);
+    while let Some(id) = pending.pop() {
+        let name = sources
+            .get(id)
+            .map(|s| s.name().to_owned())
+            .unwrap_or_default();
+        let canonical = fs::canonicalize(&name).unwrap_or_else(|_| PathBuf::from(&name));
+        if !merged.insert(canonical) {
+            continue;
+        }
+        let document = parse(&sources, id);
+        table.merge(&sources, &document);
+        merge_declared(&mut declared, declared_in(&sources, id));
+        let mut imports = Vec::new();
+        document.walk(|node| {
+            if let Node::Construct {
+                kind: EntryToken::Import,
+                span,
+                ..
+            } = node
+                && let Some(path) = literal_import(&sources, id, *span)
+            {
+                imports.push((*span, path));
+            }
+        });
+        for (span, path) in imports {
+            match loader.load(&path, Some(id), &mut sources) {
+                Ok(imported) => pending.push(imported),
+                Err(IoError::NotFound { .. } | IoError::Unresolvable { .. }) => {
+                    import_diagnostics.push(Diagnostic {
+                        code: "NT1009",
+                        entity: EntityClass::UnknownOpen,
+                        name: Some(path.clone()),
+                        source: id,
+                        span,
+                        message: format!("import path `{path}` does not resolve"),
+                        related: Vec::new(),
+                    });
+                }
+                Err(error) => return Err(error),
+            }
+        }
+        documents.push(document);
+    }
+
     let base = Path::new(root).parent().unwrap_or_else(|| Path::new("."));
     let bibliography = assemble(&declared, |name| fs::read(base.join(name)).ok());
-    let diagnostics = check(&table, &bibliography);
-    let coverage = document.coverage();
+    let mut diagnostics = check(&table, &bibliography);
+    diagnostics.extend(check_documents(&sources, &documents, |source, name| {
+        let base = sources
+            .get(source)
+            .and_then(|s| Path::new(s.name()).parent())
+            .unwrap_or_else(|| Path::new("."));
+        base.join(name).is_file()
+    }));
+    diagnostics.extend(import_diagnostics);
+    let total_bytes: f64 = documents
+        .iter()
+        .filter_map(|document| sources.get(document.source()))
+        .map(|source| {
+            f64::from(u32::try_from(source.bytes().len()).expect("source exceeds u32 addressing"))
+        })
+        .sum();
+    let checked_bytes: f64 = documents
+        .iter()
+        .filter_map(|document| {
+            sources.get(document.source()).map(|source| {
+                document.coverage()
+                    * f64::from(
+                        u32::try_from(source.bytes().len()).expect("source exceeds u32 addressing"),
+                    )
+            })
+        })
+        .sum();
+    let coverage = if total_bytes == 0.0 {
+        1.0
+    } else {
+        checked_bytes / total_bytes
+    };
     Ok((sources, diagnostics, coverage, bibliography))
+}
+
+fn literal_import(
+    sources: &Sources,
+    source: SourceId,
+    span: nextex_core::source::Span,
+) -> Option<String> {
+    let bytes = sources.get(source)?.slice(span)?;
+    let first = bytes.iter().position(|byte| *byte == b'"')?;
+    let last = bytes.iter().rposition(|byte| *byte == b'"')?;
+    (last > first)
+        .then(|| String::from_utf8(bytes[first + 1..last].to_vec()).ok())
+        .flatten()
+}
+
+fn merge_declared(target: &mut Declared, found: Declared) {
+    target.resources.extend(found.resources);
+    target.inline_keys.extend(found.inline_keys);
+    target.computed = target.computed.or(found.computed);
+}
+
+fn read_prefixes(input: &Path) -> PrefixMap {
+    let mut dir = input.parent().unwrap_or_else(|| Path::new("."));
+    loop {
+        let config = dir.join("nextex.toml");
+        if let Ok(text) = fs::read_to_string(config) {
+            return parse_prefixes(&text).unwrap_or_default();
+        }
+        let Some(parent) = dir.parent() else {
+            return PrefixMap::default();
+        };
+        if parent == dir {
+            return PrefixMap::default();
+        }
+        dir = parent;
+    }
+}
+
+fn parse_prefixes(text: &str) -> Option<PrefixMap> {
+    let mut in_table = false;
+    let mut found = false;
+    let mut map = PrefixMap::empty();
+    for raw in text.lines() {
+        let line = raw.split('#').next().unwrap_or_default().trim();
+        if line.starts_with('[') {
+            in_table = line == "[prefixes]";
+            found |= in_table;
+            continue;
+        }
+        if !in_table || line.is_empty() {
+            continue;
+        }
+        let (class, values) = line.split_once('=')?;
+        let class = match class.trim() {
+            "figure" => EntityClass::Figure,
+            "table" => EntityClass::Table,
+            "section" => EntityClass::Section,
+            "appendix" => EntityClass::Appendix,
+            "algorithm" => EntityClass::Algorithm,
+            "equation" => EntityClass::Equation,
+            _ => continue,
+        };
+        let values = values.trim().strip_prefix('[')?.strip_suffix(']')?;
+        for value in values.split(',') {
+            let prefix = value.trim().strip_prefix('"')?.strip_suffix('"')?;
+            map.insert(prefix, class);
+        }
+    }
+    found.then_some(map)
 }
 
 fn location(
@@ -456,24 +603,37 @@ fn validate_sidecar(name: &str, bytes: &[u8]) -> Result<(), String> {
     let path = Path::new(name);
     let mut sidecar_path = path.to_path_buf();
     sidecar_path.set_extension("ntexrev");
+    let file_name = path.file_name().unwrap_or_default().to_string_lossy();
     let sidecar = match fs::read(&sidecar_path) {
-        Ok(source) => parse_sidecar(&source).map_err(|error| error.to_string())?,
+        Ok(source) => {
+            let sidecar = parse_sidecar(&source).map_err(|error| error.to_string())?;
+            // A sidecar names the document it belongs to. One that names a
+            // different file is paired with the wrong source, and every record
+            // in it would be judged against constructs it was never about.
+            //
+            // Only a sidecar that exists can be mispaired. The synthesised one
+            // below describes this file by construction, and comparing it
+            // against itself once failed for every imported file: it was built
+            // from the load path, `sections/part.ntex`, and compared against
+            // the file name, `part.ntex`.
+            if sidecar.document != file_name {
+                return Err(format!(
+                    "NT1013: {} names document '{}', not '{file_name}'",
+                    sidecar_path.display(),
+                    sidecar.document
+                ));
+            }
+            sidecar
+        }
         Err(error) if error.kind() == std::io::ErrorKind::NotFound => {
             nextex_core::review::Sidecar {
                 version: 1,
-                document: name.to_owned(),
+                document: file_name.into_owned(),
                 revisions: Vec::new(),
             }
         }
         Err(error) => return Err(format!("{}: {error}", sidecar_path.display())),
     };
-    if sidecar.document != path.file_name().unwrap_or_default().to_string_lossy() {
-        return Err(format!(
-            "NT1009: {} names document '{}'",
-            sidecar_path.display(),
-            sidecar.document
-        ));
-    }
     for advisory in validate(bytes, &sidecar).map_err(|error| error.to_string())? {
         eprintln!("advisory: {}", advisory.message);
     }
@@ -728,4 +888,81 @@ fn blame(mut args: impl Iterator<Item = String>) -> ExitCode {
     }
     println!("  blame: {}", mapped.blame.as_str());
     ExitCode::SUCCESS
+}
+
+#[cfg(test)]
+#[allow(clippy::items_after_test_module)]
+mod tests {
+    use super::*;
+
+    fn case(name: &str, files: &[(&str, &str)]) -> PathBuf {
+        let dir =
+            std::env::temp_dir().join(format!("nextex-issue-11-{}-{name}", std::process::id()));
+        fs::create_dir_all(&dir).expect("create test project");
+        for (name, contents) in files {
+            fs::write(dir.join(name), contents).expect("write test input");
+        }
+        dir
+    }
+
+    #[test]
+    fn absent_prefix_table_keeps_the_default() {
+        assert_eq!(parse_prefixes("cite_commands = [\"cite\"]"), None);
+    }
+
+    #[test]
+    fn configured_prefixes_replace_the_default() {
+        let map = parse_prefixes("[prefixes]\nfigure = [\"image\"]\n").expect("table");
+        let table = SymbolTable::with_prefixes(map);
+        assert_eq!(table.demand_of("image:x"), EntityClass::Figure);
+        assert_eq!(table.demand_of("fig:x"), EntityClass::UnknownOpen);
+    }
+
+    #[test]
+    fn imports_merge_transitively_and_a_repeated_file_merges_once() {
+        let dir = case(
+            "imports",
+            &[
+                (
+                    "main.ntex",
+                    "@import(\"part.ntex\") @import(\"part.ntex\") @ref(sec:there)",
+                ),
+                ("part.ntex", "\\section{There} @id(sec:there)"),
+            ],
+        );
+        let (_, diagnostics, _, _) =
+            run_check(&dir.join("main.ntex").to_string_lossy()).expect("check project");
+        assert!(diagnostics.is_empty(), "{diagnostics:?}");
+    }
+
+    #[test]
+    fn an_absent_literal_import_is_nt1009() {
+        let dir = case(
+            "missing-import",
+            &[("main.ntex", "@import(\"absent.ntex\")")],
+        );
+        let (_, diagnostics, _, _) =
+            run_check(&dir.join("main.ntex").to_string_lossy()).expect("check project");
+        assert_eq!(diagnostics.len(), 1);
+        assert_eq!(diagnostics[0].code, "NT1009");
+    }
+
+    #[test]
+    fn project_prefixes_replace_defaults_in_the_built_pipeline() {
+        let dir = case(
+            "prefixes",
+            &[
+                ("nextex.toml", "[prefixes]\nfigure = [\"image\"]\n"),
+                (
+                    "main.ntex",
+                    "\\table(fig:old) { caption = {Old} } @ref(fig:old) \\table(image:new) { caption = {New} } @ref(image:new)",
+                ),
+            ],
+        );
+        let (_, diagnostics, _, _) =
+            run_check(&dir.join("main.ntex").to_string_lossy()).expect("check project");
+        assert_eq!(diagnostics.len(), 1);
+        assert_eq!(diagnostics[0].code, "NT1004");
+        assert_eq!(diagnostics[0].name.as_deref(), Some("image:new"));
+    }
 }
