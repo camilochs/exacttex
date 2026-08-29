@@ -885,48 +885,13 @@ fn rename_command(args: &[String]) -> ExitCode {
     let loader = FileSystem {
         root: PathBuf::from("."),
     };
-    let mut sources = Sources::new();
-    let mut documents = Vec::new();
-    let mut names = Vec::new();
-    let mut pending = vec![(input.clone(), None)];
-    let mut seen = BTreeSet::new();
-    while let Some((name, parent)) = pending.pop() {
-        if !seen.insert(name.clone()) {
-            continue;
+    let (sources, documents, names) = match xtex_core::project::load_imports(&loader, input) {
+        Ok(project) => project,
+        Err(error) => {
+            eprintln!("error: {error}");
+            return ExitCode::from(2);
         }
-        let id = match loader.load(&name, parent, &mut sources) {
-            Ok(id) => id,
-            Err(error) => {
-                eprintln!("error: {error}");
-                return ExitCode::from(2);
-            }
-        };
-        let document = parse(&sources, id);
-        let mut imports = Vec::new();
-        document.walk(|node| {
-            if let Node::Construct {
-                kind: EntryToken::Import,
-                span,
-                ..
-            } = node
-                && let Some(path) = xtex_core::project::literal_import(&sources, id, *span)
-            {
-                imports.push(path);
-            }
-        });
-        for path in imports {
-            pending.push((path, Some(id)));
-        }
-        // The source's own name, not the one it was asked for. An import is
-        // requested as `part.xtex` and stored as the path that actually
-        // resolved, and writing to the request would put the file wherever the
-        // process happens to be running.
-        let resolved = sources
-            .get(id)
-            .map_or_else(|| name.clone(), |source| source.name().to_owned());
-        names.push((id, resolved));
-        documents.push(document);
-    }
+    };
 
     let plan = xtex_core::rename::plan(&sources, &documents, from, to);
     if plan.is_empty() {

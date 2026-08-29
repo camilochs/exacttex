@@ -15,5 +15,7 @@ la figura~@ref(fig:plot) lo ilustra.
   caption = {Una figura con @ref(sec:intro) dentro del pie.}
 }
 
+El literal \verb|sec:model| queda como transporte.
+
 \bibliography{refs}
 \end{document}

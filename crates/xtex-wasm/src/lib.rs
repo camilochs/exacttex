@@ -219,6 +219,84 @@ pub unsafe extern "C" fn xtex_source_map(pointer: *const u8, len: usize) -> *mut
     }
 }
 
+/// Plans a rename across the bundle's project, honesty included.
+///
+/// Input: `u32 from_len · from · u32 to_len · to · bundle`. The answer is
+/// JSON with two lists: `edits`, each with file, position and replacement;
+/// and `untouched` — every occurrence left alone because it sits in opaque
+/// text. An editor that silently renames 12 of 14 places is worse than one
+/// that renames none, so the untouched places are part of the answer.
+///
+/// # Safety
+///
+/// `pointer` must point at `len` readable bytes.
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn xtex_rename_plan(pointer: *const u8, len: usize) -> *mut u8 {
+    let bytes = unsafe { input(pointer, len) };
+    let mut at = 0usize;
+    let Some(from) = take_text(&bytes, &mut at) else {
+        return result(&[]);
+    };
+    let Some(to) = take_text(&bytes, &mut at) else {
+        return result(&[]);
+    };
+    let Some(bundle) = decode_bundle(&bytes[at..]) else {
+        return result(&[]);
+    };
+    let Ok((sources, documents, _)) = xtex_core::project::load_imports(&bundle.store, &bundle.root)
+    else {
+        return result(&[]);
+    };
+    let plan = xtex_core::rename::plan(&sources, &documents, &from, &to);
+    let mut json = String::new();
+    xtex_core::rename::to_json(&sources, &plan, &mut json);
+    result(json.as_bytes())
+}
+
+/// Applies a rename to one file of the bundle and returns its new bytes.
+///
+/// Input: `u32 from_len · from · u32 to_len · to · u32 target_len · target ·
+/// bundle`. The plan is computed over the whole project — an edit's offsets
+/// are only meaningful against every reachable file — and applied to the one
+/// named file. A host rewrites its files one call at a time, the way
+/// `xtex rename` writes them one at a time. A rename that touches nothing
+/// returns the file unchanged, and a target the project does not reach
+/// returns the empty result.
+///
+/// # Safety
+///
+/// `pointer` must point at `len` readable bytes.
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn xtex_rename_apply(pointer: *const u8, len: usize) -> *mut u8 {
+    let bytes = unsafe { input(pointer, len) };
+    let mut at = 0usize;
+    let Some(from) = take_text(&bytes, &mut at) else {
+        return result(&[]);
+    };
+    let Some(to) = take_text(&bytes, &mut at) else {
+        return result(&[]);
+    };
+    let Some(target) = take_text(&bytes, &mut at) else {
+        return result(&[]);
+    };
+    let Some(bundle) = decode_bundle(&bytes[at..]) else {
+        return result(&[]);
+    };
+    let Ok((sources, documents, names)) =
+        xtex_core::project::load_imports(&bundle.store, &bundle.root)
+    else {
+        return result(&[]);
+    };
+    let Some((id, _)) = names.iter().find(|(_, name)| *name == target) else {
+        return result(&[]);
+    };
+    let plan = xtex_core::rename::plan(&sources, &documents, &from, &to);
+    let Some(original) = sources.get(*id).map(|source| source.bytes().to_vec()) else {
+        return result(&[]);
+    };
+    result(&xtex_core::rename::apply(&original, *id, &plan))
+}
+
 /// Reads one length-prefixed UTF-8 text from a buffer.
 fn take_text(bytes: &[u8], at: &mut usize) -> Option<String> {
     let end = at.checked_add(4)?;

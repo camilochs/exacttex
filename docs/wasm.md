@@ -57,6 +57,13 @@ file_count × ( u32 name_len   name (UTF-8)   u32 data_len   data )
 | `xtex_check_json(ptr, len)` | a bundle | the JSON `xtex check --json` prints, for the whole project |
 | `xtex_source_map(ptr, len)` | a bundle | the root's source map, as JSON |
 | `xtex_blame(ptr, len)` | two length-prefixed texts, then a bundle | the engine's records, translated |
+| `xtex_rename_plan(ptr, len)` | `from`, `to`, then a bundle | the plan, edits and untouched alike |
+| `xtex_rename_apply(ptr, len)` | `from`, `to`, `target`, then a bundle | the target file's rewritten bytes |
+
+A rename's plan is computed over the whole project and applied one file per call, the way `xtex rename`
+writes one file at a time. The plan's `untouched` list is the honest half: every occurrence left alone
+because it sits in opaque text, with a position an editor can show. An editor that silently renames 12 of
+14 places is worse than one that renames none.
 
 `xtex_blame`'s input is `u32 stderr_len · stderr · u32 log_len · log · bundle` — the engine's console
 output and its `.log` file, either of which may be empty. The answer carries, per record: the engine's own

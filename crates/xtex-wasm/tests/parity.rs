@@ -229,6 +229,85 @@ fn a_multi_file_bundle_equals_the_cli_run_on_the_same_project_on_disk() {
 }
 
 #[test]
+fn a_rename_plans_and_applies_identically_and_reports_what_it_left_alone() {
+    let repo = repo();
+    let Some(module) = built_module(&repo) else {
+        return;
+    };
+    let project = repo.join("tests/fixtures/wasm/project");
+    let out = repo.join("target/wasm-parity/project");
+    run_module(&repo, &module, &project, "main.xtex", &out);
+
+    let store = memory_of(&project);
+    let (sources, documents, names) =
+        xtex_core::project::load_imports(&store, "main.xtex").expect("loads");
+    let plan = xtex_core::rename::plan(&sources, &documents, "sec:model", "sec:modelo");
+    let mut native_json = String::new();
+    xtex_core::rename::to_json(&sources, &plan, &mut native_json);
+    let wasm_json =
+        std::fs::read_to_string(out.join("wasm.rename.json")).expect("the module planned");
+    assert_eq!(
+        native_json, wasm_json,
+        "the two builds plan one rename differently"
+    );
+
+    // The fixture only proves what it exercises: an edit in the root, an edit
+    // in the imported file where the @id lives, and the \verb occurrence
+    // reported untouched with a location an editor can show.
+    assert!(
+        plan.edits.len() >= 2,
+        "cross-file edits are the point: {plan:?}"
+    );
+    assert_eq!(
+        plan.untouched.len(),
+        1,
+        "the verb occurrence is reported: {plan:?}"
+    );
+    assert!(
+        wasm_json.contains("\"untouched\":[{\"file\":\"main.xtex\""),
+        "{wasm_json}"
+    );
+
+    // Applying through the module leaves no stale reference: rewrite both
+    // files, re-check the rewritten project, and demand silence.
+    let renamed_root = std::fs::read(out.join("wasm.renamed.root")).expect("the module applied");
+    assert_ne!(
+        renamed_root,
+        std::fs::read(project.join("main.xtex")).unwrap()
+    );
+    let mut rewritten = xtex_core::io::Memory::new();
+    for (name, bytes) in [
+        ("main.xtex", renamed_root.clone()),
+        ("sections/model.xtex", {
+            let (id, _) = names
+                .iter()
+                .find(|(_, name)| name == "sections/model.xtex")
+                .expect("the imported file");
+            xtex_core::rename::apply(sources.get(*id).unwrap().bytes(), *id, &plan)
+        }),
+    ] {
+        rewritten = rewritten.with_input(name, bytes);
+    }
+    for name in ["appendix.tex", "refs.bib", "figures/plot.pdf"] {
+        rewritten = rewritten.with_input(
+            name,
+            std::fs::read(project.join(name)).expect("fixture file"),
+        );
+    }
+    let (sources2, diagnostics, _, _) = xtex_core::project::check_project(
+        &rewritten,
+        "main.xtex",
+        xtex_core::symbols::PrefixMap::default(),
+    )
+    .expect("checks");
+    let _ = sources2;
+    assert!(
+        diagnostics.is_empty(),
+        "a stale reference survived the rename: {diagnostics:?}"
+    );
+}
+
+#[test]
 fn a_tex_log_translates_identically_in_both_builds_and_never_guesses_blame() {
     let repo = repo();
     let Some(module) = built_module(&repo) else {

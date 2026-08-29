@@ -248,6 +248,64 @@ fn name_spans(sources: &Sources, source: SourceId, construct: Span, kind: EntryT
     found
 }
 
+/// Renders a plan as JSON, one renderer for both hosts.
+///
+/// The honest half travels with the rest: `untouched` names every occurrence
+/// left alone because it sits in opaque text. An editor that silently renames
+/// 12 of 14 places is worse than one that renames none, so the places it did
+/// not touch are part of the answer, locatable, not a footnote.
+pub fn to_json(sources: &crate::source::Sources, plan: &Plan, out: &mut String) {
+    use std::fmt::Write as _;
+    fn entry(
+        sources: &crate::source::Sources,
+        source: crate::source::SourceId,
+        span: crate::source::Span,
+        out: &mut String,
+    ) {
+        let (name, line, column) = sources.get(source).map_or_else(
+            || (String::new(), 0, 0),
+            |s| {
+                let bytes = s.bytes();
+                let upto = &bytes[..span.start().min(bytes.len())];
+                // The dependency the lint suggests is a dependency; this
+                // repository holds none, as check.rs already records.
+                #[allow(clippy::naive_bytecount)]
+                let line = upto.iter().filter(|b| **b == b'\n').count() + 1;
+                let column =
+                    span.start() - upto.iter().rposition(|b| *b == b'\n').map_or(0, |i| i + 1) + 1;
+                (s.name().to_owned(), line, column)
+            },
+        );
+        out.push_str("{\"file\":\"");
+        out.push_str(&name.replace('\\', "\\\\").replace('"', "\\\""));
+        let _ = write!(
+            out,
+            "\",\"offset\":{},\"length\":{},\"line\":{line},\"column\":{column}",
+            span.start(),
+            span.len(),
+        );
+    }
+    out.push_str("{\"edits\":[");
+    for (index, edit) in plan.edits.iter().enumerate() {
+        if index > 0 {
+            out.push(',');
+        }
+        entry(sources, edit.source, edit.span, out);
+        out.push_str(",\"replacement\":\"");
+        out.push_str(&edit.replacement.replace('\\', "\\\\").replace('"', "\\\""));
+        out.push_str("\"}");
+    }
+    out.push_str("],\"untouched\":[");
+    for (index, found) in plan.untouched.iter().enumerate() {
+        if index > 0 {
+            out.push(',');
+        }
+        entry(sources, found.source, found.span, out);
+        out.push('}');
+    }
+    out.push_str("]}");
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
