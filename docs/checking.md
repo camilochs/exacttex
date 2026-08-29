@@ -314,8 +314,11 @@ everything and the hand reader disagrees anywhere would reverse it.
 
 ## 8 · References
 
-An `@ref` whose identifier no `@id` declares is `XT1003`. The scope is the document root — its root file
-plus everything reached through `@import` — which matches LaTeX, where a label is document-wide.
+An `@ref` whose identifier neither an `@id` nor a completely inventoried source `\label` declares is
+`XT1003`. The symbol scope is the document root — its root file plus everything reached through `@import`.
+The label inventory additionally follows literal `\include` and `\input` paths in readable content, matching
+the assembly the author already wrote without changing emission. If any such file cannot be resolved, read or
+parsed through the end, the whole inventory is unavailable and `XT1003` is silent.
 
 Two `@id` constructs declaring the same identifier in one root is `XT1001`, blamed on the later one. The
 first declaration is not at fault for existing.

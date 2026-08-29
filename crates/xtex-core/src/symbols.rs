@@ -344,7 +344,8 @@ impl SymbolTable {
         labels: &'a crate::labels::Inventory,
     ) -> impl Iterator<Item = (&'a str, &'a Reference)> {
         self.references.iter().filter_map(move |(name, reference)| {
-            (reference.kind == EntryToken::Ref
+            (matches!(labels, crate::labels::Inventory::Complete(_))
+                && reference.kind == EntryToken::Ref
                 && !self.declarations.contains_key(name)
                 && !labels.contains(name))
             .then_some((name.as_str(), reference))
@@ -589,6 +590,15 @@ mod tests {
         )]);
         let unresolved: Vec<_> = t.unresolved_references().map(|(n, _)| n).collect();
         assert_eq!(unresolved, ["missing"]);
+    }
+
+    #[test]
+    fn an_unavailable_label_inventory_reports_nothing_missing() {
+        let (_, t) = table(&[("a.xtex", "@ref(possibly-in-an-unread-file)")]);
+        let labels =
+            crate::labels::Inventory::Unavailable(crate::labels::Unavailable::UnreadableEdge);
+
+        assert_eq!(t.unresolved_against(&labels).count(), 0);
     }
 
     #[test]
