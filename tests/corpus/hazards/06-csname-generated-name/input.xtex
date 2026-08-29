@@ -1,2 +1,2 @@
-\csname sec@\romannumeral 3 \endcsname
+\csname fig@\romannumeral 3 @ref(inside)\endcsname
 Then @ref(after).

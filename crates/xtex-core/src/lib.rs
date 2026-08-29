@@ -111,6 +111,7 @@ pub fn parse(sources: &Sources, id: SourceId) -> Document {
         let piece_span = match piece {
             Piece::Text(span)
             | Piece::Excluded(span)
+            | Piece::Quarantined(span)
             | Piece::Construct { span, .. }
             | Piece::Malformed { span, .. } => span,
         };
@@ -128,6 +129,14 @@ pub fn parse(sources: &Sources, id: SourceId) -> Document {
                 // Balanced rather than to-end-of-file: the region has a known
                 // end, it is simply not modelled. Nothing has given up.
                 confidence: ParseConfidence::OpaqueBalanced,
+            },
+            // A region whose boundary was never located. Everything after it
+            // is unrecognisable rather than merely unrecognised, and saying so
+            // is what lets `xtex confidence` report where a file goes dark.
+            Piece::Quarantined(span) => Node::Opaque {
+                source: id,
+                span,
+                confidence: ParseConfidence::OpaqueToEof,
             },
             Piece::Construct {
                 kind,
@@ -159,6 +168,11 @@ fn node_from_piece(piece: Piece, source: SourceId) -> Node {
             source,
             span,
             confidence: ParseConfidence::OpaqueBalanced,
+        },
+        Piece::Quarantined(span) => Node::Opaque {
+            source,
+            span,
+            confidence: ParseConfidence::OpaqueToEof,
         },
         Piece::Construct {
             kind,
@@ -373,6 +387,7 @@ fn emit_content(bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
         let piece_span = match piece {
             Piece::Text(span)
             | Piece::Excluded(span)
+            | Piece::Quarantined(span)
             | Piece::Construct { span, .. }
             | Piece::Malformed { span, .. } => span,
         };
@@ -383,7 +398,12 @@ fn emit_content(bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
         let fragment = &bytes[piece_span.start()..piece_span.end()];
         match piece {
             Piece::Construct { kind, .. } => emit_construct(kind, fragment, view, out),
-            Piece::Text(_) | Piece::Excluded(_) | Piece::Malformed { .. } => {
+            // A quarantined region is transported like any other opaque one.
+            // Giving up on recognising it never changes a byte of it.
+            Piece::Text(_)
+            | Piece::Excluded(_)
+            | Piece::Quarantined(_)
+            | Piece::Malformed { .. } => {
                 out.extend_from_slice(fragment);
             }
         }

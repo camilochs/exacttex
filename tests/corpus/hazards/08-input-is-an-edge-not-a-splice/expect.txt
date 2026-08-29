@@ -1,3 +1,7 @@
-confidence: an opaque project edge
+quarantine: no
+recognised: ref
 constructs: ref(after) only
+emission: the emitted bytes contain \input{sections/part} unchanged and do not
+  contain the file's contents. That is the property this hazard is about, and
+  it is checked by the emission assertion rather than by counting constructs.
 falsifier: normal output contains the imported bytes inlined

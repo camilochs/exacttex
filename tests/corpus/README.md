@@ -103,3 +103,54 @@ information; a threshold met in both cases would mean the parser changed nothing
 
 Re-run it against this manifest rather than against a fresh sweep, or the comparison is between two
 different corpora.
+
+---
+
+## With the parser, 2026-08-29
+
+```
+327 files
+  median available before quarantine   1.000   (threshold >= 0.900)
+  quarantined before half their bytes  1.5%     (threshold <= 10%)
+  never quarantined                    321
+thresholds: met
+```
+
+**Every file in that 1.5% is one of our own hazard fixtures**, written to quarantine. Of the author's
+documents, none goes dark early.
+
+That is the number to compare against the baseline, and it is a different number from the first run of this
+same command. Two things changed between them, and only one is a fix.
+
+### The corpus definition was wrong, and it was changed after seeing the result
+
+The first run swept `.tectonic-cache/bundles/`, which holds all of TeX Live — `pgf`, `tikz`, `expl3`. Those
+are macro implementations full of `\catcode` and `\makeatletter`, and quarantining them is correct rather
+than a failure. Counting them measured the distribution instead of the author's writing.
+
+Excluding build caches was the right corpus definition and should have been written before measuring.
+Changing it afterwards is recorded here rather than quietly applied, because "the threshold failed so I
+narrowed the corpus" and "the corpus was wrong" look identical in a diff and are not the same thing. The
+test that distinguishes them: a build cache is not the author's writing whatever the number had said.
+
+The thresholds themselves were not moved.
+
+### The parser had a defect, and the corpus is what found it
+
+With caches excluded the rate was still 15.9%, and the files were real papers going dark at 6% of their
+bytes. One byte was responsible:
+
+```latex
+{\LARGE\bfseries CERTAIN}\\[4pt]
+                          ^^
+```
+
+`\\[4pt]` is a line break with its optional argument. The `\[` inside it was being read as display-math,
+which then scanned for a `\]` that never came, and quarantined the rest of the document. **448 occurrences
+across 71 files**, each one taking its document with it.
+
+The parity rule that fixes it already existed for backslash runs; display-math opening simply was not
+using it.
+
+That is the corpus doing the job it was assembled for. No hand-picked example would have surfaced it,
+because nobody writes `\\[4pt]` to test a parser — they write it to space a title block.

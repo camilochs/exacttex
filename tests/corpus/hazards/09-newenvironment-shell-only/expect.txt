@@ -1,3 +1,5 @@
+quarantine: no
+recognised: ref
 confidence: the declaration shell is located; both bodies opaque
 constructs: ref(after) only
 falsifier: a marker in a definition body is treated as an active construct

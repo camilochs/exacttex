@@ -41,6 +41,16 @@ enum Region {
     VerbatimEnvironment { name: Vec<u8> },
     /// From `\makeatletter` to `\makeatother`.
     InternalMacros,
+    /// From `\csname` to `\endcsname`.
+    ///
+    /// The name between them is built by expansion, so it is not knowable
+    /// here and is never inferred.
+    ControlName,
+    /// From a `\if…` primitive to its matching `\fi`, counting nesting.
+    ///
+    /// Every branch is preserved and the condition is not evaluated, so both
+    /// arms stay opaque rather than one being chosen.
+    Conditional { depth: u32 },
     /// From a `latex {` entry to the matching `}`.
     Raw { depth: u32 },
     /// Nothing further is recognised in this file.
@@ -80,6 +90,13 @@ pub enum Piece {
     /// Prose: bytes in which a construct would have been recognised, and none
     /// was.
     Text(Span),
+    /// A region where recognition stopped for good.
+    ///
+    /// Distinguished from [`Piece::Excluded`] because an excluded region ends
+    /// and recognition resumes after it, while this one does not: its boundary
+    /// could not be located, so every byte after it is unrecognisable rather
+    /// than merely unrecognised. `ROADMAP.md` calls it `OpaqueToEof`.
+    Quarantined(Span),
     /// A region §8 excludes, such as a comment, math, or a verbatim block.
     ///
     /// Distinguished from [`Piece::Text`] because a consumer that searches the
@@ -315,6 +332,17 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                     at = resume;
                     continue;
                 }
+                // A category-code assignment changes what a byte *means* from
+                // here on, and TeX's grouping after expansion can differ from
+                // the braces we can see. There is no boundary to trust, so
+                // recognition stops rather than resuming somewhere plausible.
+                // `ROADMAP.md`'s hazard table, and the plan's declared
+                // uncertainty, both land here.
+                if bytes[at..].starts_with(b"\\catcode") {
+                    enter!(at);
+                    region = Region::Quarantine;
+                    continue;
+                }
                 // A command's arguments are an exclusion region. The shape comes
                 // from a signature, never from guessing which groups belong to
                 // it — see signatures.rs.
@@ -398,6 +426,43 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                 }
             }
 
+            Region::ControlName => {
+                if bytes[at..].starts_with(b"\\endcsname") {
+                    at += b"\\endcsname".len();
+                    pieces.push(Piece::Excluded(span(excluded_start, at)));
+                    text_start = at;
+                    region = Region::Prose;
+                } else {
+                    at += 1;
+                }
+            }
+
+            Region::Conditional { depth } => {
+                let mut depth = *depth;
+                if bytes[at..].starts_with(b"\\fi") {
+                    at += b"\\fi".len();
+                    depth -= 1;
+                    if depth == 0 {
+                        pieces.push(Piece::Excluded(span(excluded_start, at)));
+                        text_start = at;
+                        region = Region::Prose;
+                        continue;
+                    }
+                } else if bytes[at..].starts_with(b"\\if") {
+                    // A nested conditional. Counting them is what keeps the
+                    // first `\fi` of an inner one from closing the outer.
+                    let rest = &bytes[at + 3..];
+                    let name_len = rest.iter().take_while(|b| b.is_ascii_alphabetic()).count();
+                    if &rest[..name_len] != b"thenelse" {
+                        depth += 1;
+                    }
+                    at += 3 + name_len;
+                } else {
+                    at += 1;
+                }
+                region = Region::Conditional { depth };
+            }
+
             Region::InternalMacros => {
                 if bytes[at..].starts_with(b"\\makeatother") {
                     at += b"\\makeatother".len();
@@ -453,10 +518,19 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
             span: span(text_start, bytes.len()),
         }),
         Region::Prose => flush!(bytes.len()),
-        // A region that never closed still covers its bytes.
-        _ => {
+        // A comment ends at end of file the same way it ends at a newline, so
+        // its boundary was found and nothing is in doubt.
+        Region::Comment => {
             if bytes.len() > excluded_start {
                 pieces.push(Piece::Excluded(span(excluded_start, bytes.len())));
+            }
+        }
+        // Every other region needed a terminator and did not get one. Its
+        // boundary was never located, so recognition stopped where it opened
+        // rather than resuming at a byte nobody can justify.
+        _ => {
+            if bytes.len() > excluded_start {
+                pieces.push(Piece::Quarantined(span(excluded_start, bytes.len())));
             }
         }
     }
@@ -487,6 +561,7 @@ impl Piece {
         match self {
             Self::Text(span) => Self::Text(shift(span)),
             Self::Excluded(span) => Self::Excluded(shift(span)),
+            Self::Quarantined(span) => Self::Quarantined(shift(span)),
             Self::Construct {
                 kind,
                 span,
@@ -639,7 +714,7 @@ fn nested_pieces(bytes: &[u8], start: usize, end: usize) -> Vec<Piece> {
                 kind,
                 span: span(start + inner.start(), start + inner.end()),
             }),
-            Piece::Text(_) | Piece::Excluded(_) => None,
+            Piece::Text(_) | Piece::Excluded(_) | Piece::Quarantined(_) => None,
         })
         .collect()
 }
@@ -1043,11 +1118,34 @@ fn region_opening_at(bytes: &[u8], at: usize) -> Option<(Region, usize)> {
             }
         }
         b'\\' => {
-            if bytes[at..].starts_with(b"\\[") {
+            // `\\[4pt]` is a line break with its optional argument, and the
+            // `\[` inside it is not display math. Without this, 448
+            // occurrences across 71 files in the measured corpus each sent the
+            // rest of their document to quarantine — one real paper went dark
+            // at 6% of its bytes.
+            //
+            // The parity rule already exists for exactly this: a backslash
+            // preceded by an odd run of backslashes is escaped.
+            if bytes[at..].starts_with(b"\\[") && !is_escaped(bytes, at) {
                 return Some((Region::DisplayMath { dollars: false }, at + 2));
             }
             if bytes[at..].starts_with(b"\\makeatletter") {
                 return Some((Region::InternalMacros, at + b"\\makeatletter".len()));
+            }
+            if bytes[at..].starts_with(b"\\csname") {
+                return Some((Region::ControlName, at + b"\\csname".len()));
+            }
+            if let Some(rest) = bytes[at..].strip_prefix(b"\\if") {
+                // `\ifthenelse` takes braced arguments and has no `\fi`, so
+                // scanning for one would swallow the rest of the file. It is a
+                // command; the signature path handles it.
+                let name_len = rest.iter().take_while(|b| b.is_ascii_alphabetic()).count();
+                if &rest[..name_len] != b"thenelse" {
+                    return Some((
+                        Region::Conditional { depth: 1 },
+                        at + b"\\if".len() + name_len,
+                    ));
+                }
             }
             if let Some(opening) = verbatim_command_opening(bytes, at) {
                 return Some(opening);
@@ -1167,6 +1265,7 @@ mod tests {
             let span = match piece {
                 Piece::Text(s)
                 | Piece::Excluded(s)
+                | Piece::Quarantined(s)
                 | Piece::Construct { span: s, .. }
                 | Piece::Malformed { span: s, .. } => s,
             };
@@ -1180,6 +1279,7 @@ mod tests {
         match piece {
             Piece::Text(s)
             | Piece::Excluded(s)
+            | Piece::Quarantined(s)
             | Piece::Construct { span: s, .. }
             | Piece::Malformed { span: s, .. } => *s,
         }

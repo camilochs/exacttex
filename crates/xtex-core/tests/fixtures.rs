@@ -195,7 +195,10 @@ fn emission_leaves_every_byte_outside_a_construct_alone() {
         for piece in scan(&raw) {
             let span = match piece {
                 Piece::Construct { .. } => continue,
-                Piece::Text(s) | Piece::Excluded(s) | Piece::Malformed { span: s, .. } => s,
+                Piece::Text(s)
+                | Piece::Excluded(s)
+                | Piece::Quarantined(s)
+                | Piece::Malformed { span: s, .. } => s,
             };
             let carried = &raw[span.start()..span.end()];
             if carried.is_empty() {
@@ -377,7 +380,7 @@ fn found_pieces(bytes: &[u8]) -> Vec<String> {
         piece.walk(&mut |piece| match piece {
             Piece::Construct { kind, .. } => found.push(short(*kind)),
             Piece::Malformed { kind, .. } => found.push(format!("!{}", short(*kind))),
-            Piece::Text(_) | Piece::Excluded(_) => {}
+            Piece::Text(_) | Piece::Excluded(_) | Piece::Quarantined(_) => {}
         });
     }
     found

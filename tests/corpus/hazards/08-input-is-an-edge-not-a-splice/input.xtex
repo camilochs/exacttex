@@ -1,2 +1,3 @@
 \input{sections/part}
+\include{sections/other}
 Then @ref(after).

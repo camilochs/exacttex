@@ -22,7 +22,18 @@ import sys
 
 def tex_files(root):
     for base, dirs, names in os.walk(root):
-        dirs[:] = [d for d in dirs if d not in {".git", "node_modules", "target", "build"}]
+        # A corpus of documents, not of package sources. A build cache holds
+        # the whole of TeX Live — pgf, expl3, tikz — and those are macro
+        # implementations full of `\catcode` and `\makeatletter`, where
+        # quarantining is the correct behaviour rather than a failure. Counting
+        # them measures the distribution instead of the author's writing.
+        dirs[:] = [
+            d
+            for d in dirs
+            if d not in {".git", "node_modules", "target", "build"}
+            and not d.startswith(".tectonic-cache")
+            and d not in {"texmf", "texmf-dist"}
+        ]
         for name in names:
             if name.endswith((".tex", ".xtex")):
                 yield os.path.join(base, name)
