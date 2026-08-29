@@ -37,7 +37,15 @@ jobs:
         run: cargo clippy --workspace --all-targets -- -D warnings
 
       - name: test
-        run: cargo test --workspace -- --nocapture 2>&1 | tee test-output.log
+        # Without pipefail, a pipeline's status is `tee`'s — always zero — so
+        # the gate below could see a skip but never a failure. That is the
+        # exact shape it was installed to prevent, one layer down, and it
+        # shipped a green run with a red test inside. Proven fixed by a
+        # deliberate failure turning CI red before this comment was merged.
+        shell: bash
+        run: |
+          set -o pipefail
+          cargo test --workspace -- --nocapture 2>&1 | tee test-output.log
 
       - name: the parity suite ran rather than skipped
         run: '! grep -q "^skipped:" test-output.log'

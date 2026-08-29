@@ -6,6 +6,9 @@ Cargo.lock.bak
 /tests/corpus/**/build/
 *.aux
 *.log
+# Fixtures are inputs, not build output. `*.log` silently swallowed a
+# committed test's fixture once; CI failed while local runs passed.
+!tests/fixtures/**/*.log
 *.out
 *.toc
 *.bbl

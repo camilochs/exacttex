@@ -18,7 +18,7 @@ cargo build -p xtex-wasm --target wasm32-unknown-unknown --release
 ```
 
 There is no build step after that. No bundler, no generated glue, no `npm install`. The module is a file with
-six exports and a linear memory.
+its exports and a linear memory.
 
 ---
 
