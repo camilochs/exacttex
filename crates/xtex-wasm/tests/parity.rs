@@ -617,8 +617,11 @@ fn failure_paths_fail_identically_in_both_builds() {
         "Ver @cite(clave) y @ref(sec:x).\n@import(\"dark.xtex\")\n\\bibliography{ausente}\n",
     )
     .expect("writes");
-    std::fs::write(broken.join("dark.xtex"), "\\verb+sin cierre\n\\label{sec:x}\n")
-        .expect("writes");
+    std::fs::write(
+        broken.join("dark.xtex"),
+        "\\verb+sin cierre\n\\label{sec:x}\n",
+    )
+    .expect("writes");
 
     let out = repo.join("target/wasm-parity/broken");
     run_module(&repo, &module, &broken, "main.xtex", &out);
@@ -647,4 +650,3 @@ fn failure_paths_fail_identically_in_both_builds() {
         "a quarantined file must silence the inventory: {wasm_json}"
     );
 }
-
