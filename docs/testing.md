@@ -43,7 +43,7 @@ Three assertions per fixture:
 | Not-a-construct | produces **no** diagnostic, and the bytes are unchanged |
 
 The third kind is the one that is easy to omit and expensive to lose. `@` inside `\email{}`, inside a
-comment, inside `\makeatletter`, inside a listing — each is a fixture asserting that NextTeX left it alone.
+comment, inside `\makeatletter`, inside a listing — each is a fixture asserting that ExactTeX left it alone.
 
 A construct having two valid parses is a bug, and it stays invisible until every production has a fixture
 pinning the byte at which it ends.
@@ -57,7 +57,7 @@ The two correctness properties are quantified over all inputs, so they are teste
 ### Transport
 
 ```
-for any byte sequence u containing no NextTeX construct:
+for any byte sequence u containing no ExactTeX construct:
     emit(parse(u)).tex == u
     check(parse(u)) has no hard errors
 ```
@@ -103,12 +103,12 @@ corpus entry pins three things, and a change to any of them is a reviewable diff
 - the diagnostics, with codes and spans;
 - the process exit code.
 
-**The negative corpus matters as much as the positive one.** Files that must produce *zero* NextTeX
+**The negative corpus matters as much as the positive one.** Files that must produce *zero* ExactTeX
 diagnostics — ordinary papers with unresolved `\ref`, undefined citations, exotic packages — are what keep
 the "renamed `.tex` checks clean" promise honest. A checker that gets stricter over time fails here first.
 
-Its first form is `ordinary_latex_yields_no_constructs` in `crates/nextex-core/tests/fixtures.rs`. It found
-[#39](https://github.com/camilochs/nexttex/issues/39) on the day it was written: `\lstinline|@id(x)|` was
+Its first form is `ordinary_latex_yields_no_constructs` in `crates/xtex-core/tests/fixtures.rs`. It found
+[#39](https://github.com/camilochs/exacttex/issues/39) on the day it was written: `\lstinline|@id(x)|` was
 being read as syntax, in a sentence whose whole point was to write the token without using it.
 
 **Every fixture's `scanner:` line is checked.** Each `expect.txt` carries a strict line — `none`, or a list
@@ -130,7 +130,7 @@ would show its handling is wrong. Each of those becomes a test directly:
 
 | Hazard | The test asserts |
 |---|---|
-| `\verb` with an unusual delimiter | bytes inside are not parsed as NextTeX |
+| `\verb` with an unusual delimiter | bytes inside are not parsed as ExactTeX |
 | `\verb` unterminated | the file goes to `OpaqueToEof`; no delimiter is invented |
 | `verbatim`, `lstlisting` | a marker inside is not a construct; no contained byte changes |
 | `\catcode` at top level | parsing does not resume past the boundary |

@@ -1,4 +1,4 @@
-# Contributing to NextTeX
+# Contributing to ExactTeX
 
 Orientation, invariants and anti-patterns are in [`AGENTS.md`](AGENTS.md). Positioning and the language
 allowed for claims are in [`PHILOSOPHY.md`](PHILOSOPHY.md). **This file covers setup, tests and the traps
@@ -77,6 +77,6 @@ not go in a README, a PR body, or a report.
 
 ## Pointers
 
-- [`PHILOSOPHY.md`](PHILOSOPHY.md) — what NextTeX is, what it is not, and what may be claimed. Binding.
+- [`PHILOSOPHY.md`](PHILOSOPHY.md) — what ExactTeX is, what it is not, and what may be claimed. Binding.
 - [`AGENTS.md`](AGENTS.md) — orientation, invariants, anti-patterns, workflow. **Read before non-trivial
   changes.**

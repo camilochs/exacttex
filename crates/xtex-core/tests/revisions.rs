@@ -3,11 +3,11 @@
 use std::fs;
 use std::path::Path;
 
-use nextex_core::review::{
+use xtex_core::review::{
     Resolution, parse_sidecar, prune_sidecar, resolve, resolve_sidecar, validate,
 };
-use nextex_core::source::Sources;
-use nextex_core::{RevisionView, emit_view, parse};
+use xtex_core::source::Sources;
+use xtex_core::{RevisionView, emit_view, parse};
 
 fn fixture(name: &str, file: &str) -> Vec<u8> {
     fs::read(
@@ -29,9 +29,9 @@ fn handwritten_revision_views_are_derived_exactly() {
         "05-substitution-with-arrows-at-depth",
         "08-properly-nested-revisions",
     ] {
-        let input = fixture(name, "input.ntex");
+        let input = fixture(name, "input.xtex");
         let mut sources = Sources::new();
-        let id = sources.add("paper.ntex", input);
+        let id = sources.add("paper.xtex", input);
         let document = parse(&sources, id);
         for (view, expected) in [
             (RevisionView::Original, "original.tex"),
@@ -60,15 +60,15 @@ fn resolving_changes_preserves_the_bytes_around_them() {
 #[test]
 fn sidecar_identity_is_asymmetric() {
     let source = b"@add(change:x) {new}";
-    let sidecar = parse_sidecar(b"version = 1\ndocument = \"paper.ntex\"\n").unwrap();
+    let sidecar = parse_sidecar(b"version = 1\ndocument = \"paper.xtex\"\n").unwrap();
     assert_eq!(validate(source, &sidecar).unwrap().len(), 1);
-    let orphan = parse_sidecar(b"version = 1\ndocument = \"paper.ntex\"\n[[revision]]\nid=\"gone\"\nkind=\"add\"\nauthor=\"r\"\nat=\"2026-08-29T00:00:00Z\"\n").unwrap();
-    assert_eq!(validate(source, &orphan).unwrap_err().code, "NT1012");
+    let orphan = parse_sidecar(b"version = 1\ndocument = \"paper.xtex\"\n[[revision]]\nid=\"gone\"\nkind=\"add\"\nauthor=\"r\"\nat=\"2026-08-29T00:00:00Z\"\n").unwrap();
+    assert_eq!(validate(source, &orphan).unwrap_err().code, "XT1012");
 }
 
 #[test]
 fn rejection_moves_attribution_and_removed_text_to_history() {
-    let sidecar = b"version = 1\ndocument = \"paper.ntex\"\n\n[[revision]]\nid = \"change:x\"\nkind = \"add\"\nauthor = \"r\"\nat = \"2026-08-28T00:00:00Z\"\n";
+    let sidecar = b"version = 1\ndocument = \"paper.xtex\"\n\n[[revision]]\nid = \"change:x\"\nkind = \"add\"\nauthor = \"r\"\nat = \"2026-08-28T00:00:00Z\"\n";
     let history = resolve_sidecar(
         sidecar,
         "change:x",
@@ -88,7 +88,7 @@ fn rejection_moves_attribution_and_removed_text_to_history() {
 fn marked_packages_follow_the_document_class() {
     let mut sources = Sources::new();
     let id = sources.add(
-        "paper.ntex",
+        "paper.xtex",
         b"\\documentclass{article}\n\\begin{document}@add(c) {new}\\end{document}".as_slice(),
     );
     let document = parse(&sources, id);
@@ -101,7 +101,7 @@ fn marked_packages_follow_the_document_class() {
 
 #[test]
 fn pruning_moves_only_orphan_records_to_history() {
-    let sidecar = b"version=1\ndocument=\"paper.ntex\"\n[[revision]]\nid=\"gone\"\nkind=\"add\"\nauthor=\"r\"\nat=\"2026-08-28T00:00:00Z\"\n";
+    let sidecar = b"version=1\ndocument=\"paper.xtex\"\n[[revision]]\nid=\"gone\"\nkind=\"add\"\nauthor=\"r\"\nat=\"2026-08-28T00:00:00Z\"\n";
     let output = prune_sidecar(sidecar, b"plain", "editor", "2026-08-29T00:00:00Z").unwrap();
     let text = String::from_utf8(output).unwrap();
     assert!(!text.contains("[[revision]]"));
@@ -111,7 +111,7 @@ fn pruning_moves_only_orphan_records_to_history() {
 #[test]
 fn marked_imports_target_the_distinct_marked_artifact() {
     let mut sources = Sources::new();
-    let id = sources.add("paper.ntex", b"@import(\"part.ntex\")".as_slice());
+    let id = sources.add("paper.xtex", b"@import(\"part.xtex\")".as_slice());
     let document = parse(&sources, id);
     let mut output = Vec::new();
     emit_view(&sources, &document, RevisionView::Marked, &mut output).unwrap();

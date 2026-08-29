@@ -1,9 +1,9 @@
-//! Reads a .ntex file and prints what its symbol table and bibliography hold.
+//! Reads a .xtex file and prints what its symbol table and bibliography hold.
 use std::collections::BTreeMap;
 use std::path::Path;
 
-use nextex_core::bibliography::{Bibliography, assemble_from, declared_in, missing_citations};
-use nextex_core::{parse, source::Sources, symbols::SymbolTable};
+use xtex_core::bibliography::{Bibliography, assemble_from, declared_in, missing_citations};
+use xtex_core::{parse, source::Sources, symbols::SymbolTable};
 
 fn main() {
     let path = std::env::args().nth(1).expect("usage: symbols <file>");

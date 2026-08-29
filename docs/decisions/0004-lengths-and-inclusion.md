@@ -2,7 +2,7 @@
 
 **Status:** accepted, 2026-08-29. Decided by the director.
 **Constraint he set:** resolve both without adding a keyword.
-**Issue:** [#13](https://github.com/camilochs/nexttex/issues/13)
+**Issue:** [#13](https://github.com/camilochs/exacttex/issues/13)
 
 ---
 

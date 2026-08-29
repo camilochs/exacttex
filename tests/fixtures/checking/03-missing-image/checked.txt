@@ -1,1 +1,1 @@
-NT1006|figure|absent.pdf|29|12|image file `absent.pdf` does not resolve
+XT1006|figure|absent.pdf|29|12|image file `absent.pdf` does not resolve

@@ -1,5 +1,5 @@
 # Not a workspace member: it exists to pull in the dependency the compiler does
-# not have, and adding it to the workspace would give nextex-core a dependency
+# not have, and adding it to the workspace would give xtex-core a dependency
 # through the lock file.
 [package]
 name = "bib-parser-comparison"
@@ -9,4 +9,4 @@ publish = false
 
 [dependencies]
 biblatex = "0.10"
-nextex-core = { path = "../../../crates/nextex-core" }
+xtex-core = { path = "../../../crates/xtex-core" }

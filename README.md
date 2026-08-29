@@ -1,13 +1,15 @@
-# NextTeX
+# ExactTeX
 
 **Know whether your document is sound before you look at the PDF.**
 
-NextTeX is a document language with LaTeX as its backend. Rename a `.tex` file to `.ntex` and it keeps
+ExactTeX is a document language with LaTeX as its backend. Rename a `.tex` file to `.xtex` and it keeps
 working — your LaTeX passes through byte for byte. From there you annotate what you want checked, and what
 you annotate is guaranteed.
 
-> **Status: design frozen, nothing built yet.** There is no working compiler in this repository. The syntax
-> below is specified, not implemented. Nothing here claims to work.
+> **Status: the compiler works; the editor and the browser do not exist yet.** `xtex` parses, checks,
+> emits LaTeX, writes source maps, and applies revisions. There is no language server and no WebAssembly
+> build — those are the next phase. Every claim below is about what is built, and the number beside each is
+> reproducible with the command that produced it.
 
 ---
 
@@ -21,11 +23,11 @@ Two things LaTeX cannot do today.
 Overfull \hbox (12.3pt too wide) in paragraph at lines 45--47
 ```
 
-NextTeX says:
+ExactTeX says:
 
 ```
 your table "results" runs 12.3pt past the right margin
-paper.ntex:212 — column 3 does not fit the width you declared
+paper.xtex:212 — column 3 does not fit the width you declared
 ```
 
 Same fact, using the name you gave the object. This works only because you declared it — which is what the
@@ -33,7 +35,7 @@ syntax is for. It gives the tooling names to speak with.
 
 **Revisions that live in the file.** Word stores tracked changes inside the `.docx`, which is why tools can
 propose edits you accept or reject. LaTeX has no equivalent, so every tool builds its own layer and none of
-them interoperate. NextTeX puts the model in the format.
+them interoperate. ExactTeX puts the model in the format.
 
 ---
 
@@ -57,14 +59,14 @@ The architecture is shown in @ref(fig:runtime).
   caption = Runtime architecture for \emph{multi-agent} systems
 }
 
-@import("sections/model.ntex")
+@import("sections/model.xtex")
 
 Ordinary LaTeX keeps working: \emph{emphasis}, $E = mc^2$, \citep{blum2020}.
 \end{document}
 ```
 
 Two levels of annotation. `@id(x)` hangs off any LaTeX construct and buys checked references and safe rename
-— theorems and algorithms work without NextTeX knowing what they are. A typed block such as `\figure(x)`
+— theorems and algorithms work without ExactTeX knowing what they are. A typed block such as `\figure(x)`
 also gives the compiler the fields to check: the image resolves, the caption is there, the column count
 matches the `tabular`.
 
@@ -100,12 +102,12 @@ involving unmodelled LaTeX can fail. **`?O` does not mean invalid. It means the 
 
 Two consequences worth stating plainly.
 
-**Renaming a `.tex` to `.ntex` and changing nothing checks clean.** Not by care taken case by case — by
+**Renaming a `.tex` to `.xtex` and changing nothing checks clean.** Not by care taken case by case — by
 construction, because every entity in it is `?O`. That is the gradual guarantee (Siek, Vitousek, Cimini and
 Boyland, SNAPL 2015) instantiated for documents, and it is what makes the on-ramp real rather than a
 promise.
 
-**You choose how much to annotate, and the compiler tells you how much you chose.** `nextex check` reports
+**You choose how much to annotate, and the compiler tells you how much you chose.** `xtex check` reports
 coverage: the fraction of the document it checked. This is the analogue of `any` and `noImplicitAny`. What
 matters is not the number but a fall in it — a file that was 60% checked and is now 30% gained something the
 parser cannot model.
@@ -127,7 +129,7 @@ still receives a `.tex` file.
 
 ## Documentation
 
-- [`PHILOSOPHY.md`](PHILOSOPHY.md) — what NextTeX is, what it is not, and what may be claimed. Binding.
+- [`PHILOSOPHY.md`](PHILOSOPHY.md) — what ExactTeX is, what it is not, and what may be claimed. Binding.
 - [`AGENTS.md`](AGENTS.md) — orientation, invariants, anti-patterns, workflow. Read before non-trivial
   changes.
 - [`CONTRIBUTING.md`](CONTRIBUTING.md) — setup, tests, and the traps specific to working here.

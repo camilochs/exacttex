@@ -1,13 +1,13 @@
 # 0003 · The identifier prefix is the reference's demand
 
 **Status:** accepted, 2026-08-29. Decided by the director.
-**Issue:** [#11](https://github.com/camilochs/nexttex/issues/11)
+**Issue:** [#11](https://github.com/camilochs/exacttex/issues/11)
 
 ---
 
 ## The gap this closes
 
-A type system needs two sides. NextTeX had one.
+A type system needs two sides. ExactTeX had one.
 
 `\figure(fig:main)` declares a `Figure` — the class is known the moment the scanner reads the entry token.
 But `@ref(fig:main)` demands nothing, so there is nothing a declaration can contradict, so nothing can be
@@ -25,7 +25,7 @@ The equivalent question here is how `@ref` says what it wants.
 ## The decision
 
 **The prefix before the first `:` is the demand.** `@ref(fig:main)` demands a `Figure`. Pointing it at a
-`\table(fig:main)` is `NT1004`.
+`\table(fig:main)` is `XT1004`.
 
 Three options were on the table. This one was chosen because it costs nothing in the corpus it has to work
 on, and because the syntax was already frozen — it adds no new form.
@@ -96,7 +96,7 @@ is a valid permanent state.
 **No prefix demands nothing.** The 28 unprefixed labels keep working exactly as they do today.
 
 **A target of unknown class cannot fail.** `@ref(fig:x)` pointing at an `@id` attached to a `\newtheorem`
-NextTeX does not model is `Known(Figure) ~ ?O`, which is consistent. Both sides must be known, per
+ExactTeX does not model is `Known(Figure) ~ ?O`, which is consistent. Both sides must be known, per
 [`checking.md`](../checking.md) §3.
 
 This is the same renunciation TypeScript makes with `any`, and in a document most entities are `any`.

@@ -11,9 +11,9 @@ use std::fmt::Write as _;
 pub enum OriginKind {
     /// LaTeX copied from the author's source.
     AuthorLatex,
-    /// Bytes copied from an explicit NextTeX construct.
+    /// Bytes copied from an explicit ExactTeX construct.
     NextTexNative,
-    /// Bytes synthesized while lowering a NextTeX construct.
+    /// Bytes synthesized while lowering a ExactTeX construct.
     NextTexGenerated,
 }
 
@@ -23,8 +23,8 @@ impl OriginKind {
     pub const fn as_str(self) -> &'static str {
         match self {
             Self::AuthorLatex => "author-latex",
-            Self::NextTexNative => "nextex-construct",
-            Self::NextTexGenerated => "nextex-generated",
+            Self::NextTexNative => "xtex-construct",
+            Self::NextTexGenerated => "xtex-generated",
         }
     }
 }
@@ -428,7 +428,7 @@ mod tests {
     #[test]
     fn mapped_and_plain_emission_are_identical() {
         let mut sources = Sources::new();
-        let id = sources.add("paper.ntex", b"a@ref(x)b".as_slice());
+        let id = sources.add("paper.xtex", b"a@ref(x)b".as_slice());
         let document = parse(&sources, id);
         let mapped = emit_with_map(&sources, &document).expect("mapped emission");
         let mut plain = Vec::new();

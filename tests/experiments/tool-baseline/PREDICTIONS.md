@@ -3,7 +3,7 @@
 **Written and committed before any tool was run.** This file exists so that the results cannot be
 retrofitted into expectations. If a later commit edits a prediction in this file, the experiment is void.
 
-Gate: repository issue #2. Question: for each error class NextTeX proposes to catch before TeX runs, do
+Gate: repository issue #2. Question: for each error class ExactTeX proposes to catch before TeX runs, do
 existing LaTeX tools already catch it, and how hard?
 
 Tools, versions recorded at prediction time:
@@ -45,21 +45,21 @@ rather than as a build gate.
 
 **4 — nobody.** LaTeX has no notion of what kind of thing a label names. `\ref` yields a number; whether
 that number belongs to a figure, a table or an equation is not represented anywhere. Nothing can check it,
-because there is nothing to check against. This is the class NextTeX adds rather than duplicates.
+because there is nothing to check against. This is the class ExactTeX adds rather than duplicates.
 
 **5 — TeX itself, hard.** `\includegraphics` on a missing file stops the run. This class does *not*
-differentiate NextTeX; it only moves the report earlier and states it better.
+differentiate ExactTeX; it only moves the report earlier and states it better.
 
 **6 — TeX itself, hard.** `Illegal unit of measure` is a documented pdfTeX error.
 
 **7 — hard, but for the wrong reason.** `width=120%` is not a length error in LaTeX: `%` opens a comment, so
 the rest of the line disappears and the failure surfaces somewhere else entirely, or the document silently
 typesets wrongly. Predicting HARD with the caveat that the diagnostic will not name the real problem. This
-class is largely an artifact of NextTeX's own syntax admitting percentages at all.
+class is largely an artifact of ExactTeX's own syntax admitting percentages at all.
 
 **8, 9 — nobody, and silently.** Setting both `width` and `height` against an image's native ratio distorts
 it; TeX does exactly what it was told and reports nothing. Resolution is never inspected. Both fail at the
-proof stage or not at all. These two are the strongest members of the class NextTeX adds, and they are only
+proof stage or not at all. These two are the strongest members of the class ExactTeX adds, and they are only
 reachable because the block declares the dimension as a typed field.
 
 **10 — asymmetric.** A row with too many `&` produces `Extra alignment tab has been changed to \cr`, which is

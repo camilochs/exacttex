@@ -2,9 +2,9 @@
 
 ## Purpose
 
-NextTeX gives a writer information about the reliability of a document before they inspect the PDF.
+ExactTeX gives a writer information about the reliability of a document before they inspect the PDF.
 
-It is a one-directional superset of LaTeX. Every valid `.tex` file is valid NextTeX input, while a `.ntex`
+It is a one-directional superset of LaTeX. Every valid `.tex` file is valid ExactTeX input, while a `.xtex`
 file may contain constructs that plain TeX cannot process. LaTeX remains the typesetting backend and the
 artifact submitted to journals.
 
@@ -23,7 +23,7 @@ admissible claim is that this combination is not assembled. See [`PHILOSOPHY.md`
 
 ### A. Transport
 
-For any input byte sequence `u` containing no NextTeX constructs:
+For any input byte sequence `u` containing no ExactTeX constructs:
 
 ```text
 emit(parse(u)).tex == u
@@ -33,7 +33,7 @@ check(parse(u)) produces no hard errors
 The first comparison is byte equality, not textual or Unicode equivalence. Line endings, encodings,
 comments, whitespace, and opaque macro bodies must remain unchanged.
 
-A renamed `.tex` checking clean means that NextTeX emits no hard diagnostics of its own. It does not mean
+A renamed `.tex` checking clean means that ExactTeX emits no hard diagnostics of its own. It does not mean
 that the input compiles successfully under TeX.
 
 A transport test fails if
@@ -59,21 +59,21 @@ settings, and compares page structure and pixels under a declared tolerance.
 The property fails if adding a valid annotation changes a normalized rendered pixel, or changes a successful
 TeX invocation into a failed one.
 
-NextTeX uses erasure, not injected assertions, wrapper environments, or support packages. Such injection
+ExactTeX uses erasure, not injected assertions, wrapper environments, or support packages. Such injection
 could collide with packages or catcodes and would violate this property.
 
 ## Project and output structure
 
-A project is located by walking upward to the nearest `nextex.toml`. A project may declare several document
+A project is located by walking upward to the nearest `xtex.toml`. A project may declare several document
 roots.
 
-A normal build emits **one `.tex` file for every `.ntex` file** and mirrors the source layout under
+A normal build emits **one `.tex` file for every `.xtex` file** and mirrors the source layout under
 `build/`:
 
 ```text
-paper/main.ntex                 ->  build/paper/main.tex
-paper/sections/model.ntex       ->  build/paper/sections/model.tex
-paper/appendices/proofs.ntex    ->  build/paper/appendices/proofs.tex
+paper/main.xtex                 ->  build/paper/main.tex
+paper/sections/model.xtex       ->  build/paper/sections/model.tex
+paper/appendices/proofs.xtex    ->  build/paper/appendices/proofs.tex
 ```
 
 The normal emitter does not flatten a project into one file. Flattening would inline `\input` or
@@ -102,7 +102,7 @@ supports TeX Live 2026 with pdfLaTeX, XeLaTeX, and LuaLaTeX.
 
 Both inputs converge on the same `Document` model:
 
-1. **Native front door** — parses explicit NextTeX syntax: `@id`, `@ref`, `@cite`, `@import`, typed blocks,
+1. **Native front door** — parses explicit ExactTeX syntax: `@id`, `@ref`, `@cite`, `@import`, typed blocks,
    revision constructs, and delimited raw-LaTeX escapes.
 2. **LaTeX front door** — shallow parsing: recognizes safe boundaries, records selected declarations, and
    represents everything else as opaque source spans.
@@ -119,7 +119,7 @@ Neither front door owns resolution, checking, emission, diagnostics, or editor b
    - Record `ParseConfidence::{Structured, OpaqueBalanced, OpaqueToEof}`.
 
 2. **Resolve**
-   - Discover the nearest `nextex.toml`.
+   - Discover the nearest `xtex.toml`.
    - Resolve literal imports and file-relative paths.
    - Merge declarations into a project-wide symbol table.
    - Load successfully parsed bibliographies.
@@ -127,7 +127,7 @@ Neither front door owns resolution, checking, emission, diagnostics, or editor b
 
 3. **Check**
    - Apply entity-class consistency and explicit-construct validation.
-   - Produce hard errors only from explicit NextTeX constructs.
+   - Produce hard errors only from explicit ExactTeX constructs.
    - Treat ordinary LaTeX as `UnknownOpen` (`?O`), consistent with every entity class.
    - Keep raw-LaTeX observations advisory behind `--strict-tex`.
    - Calculate checked-versus-opaque coverage. Where an author annotates fully, the useful signal is a
@@ -137,7 +137,7 @@ Neither front door owns resolution, checking, emission, diagnostics, or editor b
 4. **Emit**
    - Erase annotations and lower native constructs to LaTeX.
    - Copy opaque spans directly from immutable source buffers.
-   - Emit the mirrored `build/` tree, one `.tex` per `.ntex`.
+   - Emit the mirrored `build/` tree, one `.tex` per `.xtex`.
    - Optionally produce explicitly non-transporting `--flatten` output.
    - Write source-map segments while output bytes are produced.
 
@@ -168,7 +168,7 @@ LaTeX. Searches for `\label`, `\ref` or `\cite` inside opaque content may produc
 
 ### Source map
 
-Each emitted file has a corresponding map such as `paper.ntexmap` containing:
+Each emitted file has a corresponding map such as `paper.xtexmap` containing:
 
 ```rust
 enum OriginKind {
@@ -193,12 +193,12 @@ origin.
 ## Parser hazards
 
 The shallow LaTeX parser preserves rather than rejects. After entering `OpaqueToEof`, it recognizes no
-further NextTeX constructs.
+further ExactTeX constructs.
 
 | Construct | Parser behavior | Falsifying observation |
 |---|---|---|
-| `\verb`, `\verb*` | First non-space byte is the delimiter; scan literally. A missing delimiter forces `OpaqueToEof`; no delimiter is synthesized. | Bytes inside the literal are parsed as NextTeX, or an unterminated literal is repaired or rejected. |
-| `verbatim`, `lstlisting` | Copy raw lines through the exact environment terminator. Extra verbatim environment names come from `nextex.toml`. | A marker inside the environment becomes a NextTeX node, or any contained byte changes. |
+| `\verb`, `\verb*` | First non-space byte is the delimiter; scan literally. A missing delimiter forces `OpaqueToEof`; no delimiter is synthesized. | Bytes inside the literal are parsed as ExactTeX, or an unterminated literal is repaired or rejected. |
+| `verbatim`, `lstlisting` | Copy raw lines through the exact environment terminator. Extra verbatim environment names come from `xtex.toml`. | A marker inside the environment becomes a ExactTeX node, or any contained byte changes. |
 | `\catcode` | Do not evaluate. `OpaqueBalanced` for the remaining group only if corpus evidence establishes a reliable boundary; `OpaqueToEof` at top level. | Parsing resumes past a boundary the corpus shows can be changed by expansion. |
 | `\makeatletter`, `\makeatother` | Permit `@` in control-sequence names within a matched pair. An unmatched opener makes the remainder opaque. | A control sequence in the pair is split at `@`, or native syntax is recognized after an unmatched opener. |
 | `\newenvironment` and variants | Parse only the declaration shell needed to locate arguments. Bodies stay opaque; no grammar is inferred from them. | A marker in a definition body is treated as an active construct. |
@@ -209,7 +209,7 @@ further NextTeX constructs.
 
 ## Checking and diagnostics
 
-Hard errors are limited to explicit NextTeX constructs:
+Hard errors are limited to explicit ExactTeX constructs:
 
 - duplicate explicit identifiers;
 - unresolved `@ref`;
@@ -238,7 +238,7 @@ The source format contains:
 @note(id, on=entity-id) { text }
 ```
 
-Metadata such as author, status, and discussion thread lives in a sidecar such as `paper.ntex.review`, keyed
+Metadata such as author, status, and discussion thread lives in a sidecar such as `paper.xtex.review`, keyed
 by revision identifier.
 
 The initial model forbids overlapping changes and requires balanced content. A substitution is atomic when
@@ -253,7 +253,7 @@ Emission modes, one document each:
 There is no status that makes `--final` render two ways, which is why accepting is a source rewrite rather
 than a stored state. Accepting keeps the proposed text and removes the construct; rejecting keeps the
 original text and appends what it removed to the sidecar's history, so a rejected paragraph is still
-recoverable. `nextex check` reports a sidecar record whose construct is gone as a hard error, and a
+recoverable. `xtex check` reports a sidecar record whose construct is gone as a hard error, and a
 construct whose record is gone as an advisory — the file is authoritative for content, the sidecar only for
 attribution. See [`docs/revisions.md`](docs/revisions.md).
 
@@ -282,8 +282,8 @@ says where the error messages need to be better than what LaTeX already prints.
 Write the formal grammar, lexical boundaries, explicit hard-error policy, erasure rules, review-mode
 semantics, and representative valid and invalid examples.
 
-Revisions are settled: the content of a change lives in the `.ntex`, the author and conversation live in a
-`.ntexrev` beside it, accepting rewrites the source, and there is exactly one `--final` per document. See
+Revisions are settled: the content of a change lives in the `.xtex`, the author and conversation live in a
+`.xtexrev` beside it, accepting rewrites the source, and there is exactly one `--final` per document. See
 [`docs/revisions.md`](docs/revisions.md).
 
 The package-synthesis conflict is settled: `needs` is not a field, packages are written by the author in the
@@ -336,7 +336,7 @@ page or a build status, and native and WASM agree on the shared fixtures.
 - Full TeX macro expansion.
 - Evaluation of catcodes or conditionals.
 - Replacing LaTeX as the artifact of record.
-- Converting arbitrary LaTeX into a normalized NextTeX representation.
+- Converting arbitrary LaTeX into a normalized ExactTeX representation.
 - Hard errors derived from ordinary unannotated LaTeX.
 - Scanning opaque content and presenting matches as checked facts.
 - Wildcard imports.
@@ -362,6 +362,6 @@ page or a build status, and native and WASM agree on the shared fixtures.
 - The source-map format and the revision sidecar schema are not frozen.
 - The interaction between typed constructs and the no-injection rule requires an explicit specification
   decision.
-- The browser TeX integrations named above have not been tested with NextTeX output.
+- The browser TeX integrations named above have not been tested with ExactTeX output.
 - Literature outside the languages and indexes already searched remains outside the novelty-check boundary.
 - Any new external capability or priority claim requires a fresh check against sources opened for it.

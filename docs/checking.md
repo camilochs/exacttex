@@ -22,7 +22,7 @@ conditional, or a package that redefines it. The compiler has no way to tell, so
 
 Concretely: `@cite(invented2026)` is checked. `\cite{invented2026}` on the line below it is not.
 
-This is what makes renaming a `.tex` to `.ntex` and changing nothing check clean. It follows by
+This is what makes renaming a `.tex` to `.xtex` and changing nothing check clean. It follows by
 construction, not from care taken case by case.
 
 ---
@@ -61,10 +61,10 @@ keyword, and an `@id` takes the class of the construct it attached to — `\sect
 `\begin{algorithm}` gives `Algorithm`, anything unmodelled gives `?O`.
 
 The reference supplies the other, and **it does so through the prefix before the first `:`**.
-`@ref(fig:main)` demands a `Figure`; pointing it at a `\table(fig:main)` is `NT1004`.
+`@ref(fig:main)` demands a `Figure`; pointing it at a `\table(fig:main)` is `XT1004`.
 
 ```toml
-# the default map, replaced entirely by nextex.toml, never merged into
+# the default map, replaced entirely by xtex.toml, never merged into
 [prefixes]
 figure    = ["fig"]
 table     = ["tab"]
@@ -100,26 +100,26 @@ error.
 
 | Code | Condition | Class involved |
 |---|---|---|
-| `NT1001` | Two `@id` constructs declare the same identifier in one document root | any |
-| `NT1002` | An identifier is empty or contains bytes an identifier may not | any |
-| `NT1003` | `@ref(x)` where no `@id` in the root declares `x` | any |
-| `NT1004` | `@ref(x)` demanding class A on a target of known class B, A ≠ B | both known |
-| `NT1005` | `@cite(k)` where `k` is absent from a bibliography read completely | `Citation` |
-| `NT1006` | A `\figure` block whose image file does not resolve | `Figure` |
-| `NT1007` | A length with an unsupported unit, or a percentage outside 0–100 | `Length` |
-| `NT1008` | A block field that is required and absent, or present and malformed | `Figure`, `Table` |
-| `NT1009` | An `@import` path that does not resolve | any |
-| `NT1010` | Two sidecar records share one revision identifier | any |
-| `NT1011` | A sidecar record's `kind` disagrees with its construct | any |
-| `NT1012` | A sidecar record whose revision construct no longer exists | any |
-| `NT1013` | A sidecar that cannot be read, or that names a different document | any |
+| `XT1001` | Two `@id` constructs declare the same identifier in one document root | any |
+| `XT1002` | An identifier is empty or contains bytes an identifier may not | any |
+| `XT1003` | `@ref(x)` where no `@id` in the root declares `x` | any |
+| `XT1004` | `@ref(x)` demanding class A on a target of known class B, A ≠ B | both known |
+| `XT1005` | `@cite(k)` where `k` is absent from a bibliography read completely | `Citation` |
+| `XT1006` | A `\figure` block whose image file does not resolve | `Figure` |
+| `XT1007` | A length with an unsupported unit, or a percentage outside 0–100 | `Length` |
+| `XT1008` | A block field that is required and absent, or present and malformed | `Figure`, `Table` |
+| `XT1009` | An `@import` path that does not resolve | any |
+| `XT1010` | Two sidecar records share one revision identifier | any |
+| `XT1011` | A sidecar record's `kind` disagrees with its construct | any |
+| `XT1012` | A sidecar record whose revision construct no longer exists | any |
+| `XT1013` | A sidecar that cannot be read, or that names a different document | any |
 
 Two properties hold across the whole table and are tested as properties, not as examples:
 
-1. **Every row requires an explicit construct, or NextTeX's own sidecar.** There is no row that ordinary
-   LaTeX can reach. `NT1010`–`NT1013` are about a `.ntexrev` file, which NextTeX writes and owns; a renamed
+1. **Every row requires an explicit construct, or ExactTeX's own sidecar.** There is no row that ordinary
+   LaTeX can reach. `XT1010`–`XT1013` are about a `.xtexrev` file, which ExactTeX writes and owns; a renamed
    `.tex` has none, so they cannot fire on one. See [`revisions.md`](revisions.md) §5.
-2. **Every row requires both sides known.** `NT1004` cannot fire when either side is `?O`, and `NT1005`
+2. **Every row requires both sides known.** `XT1004` cannot fire when either side is `?O`, and `XT1005`
    cannot fire when the bibliography is `Unavailable`. Uncertainty on either side means silence.
 
 ### Exit codes
@@ -158,7 +158,7 @@ in review, and it is the reason the rule is written as a prohibition rather than
 
 ## 5 · Coverage
 
-`nextex check` reports what fraction of the document it checked.
+`xtex check` reports what fraction of the document it checked.
 
 ```
 coverage = 1 − (bytes in opaque nodes ÷ bytes in all nodes)
@@ -173,7 +173,7 @@ construct the parser cannot model, or entered quarantine early. Comparing a proj
 would only measure how much LaTeX that project happens to contain.
 
 The one place an absolute figure means something: a fully annotated file that still reports low coverage is
-reporting a parser gap, and that is what [issue #36](https://github.com/camilochs/nexttex/issues/36) is.
+reporting a parser gap, and that is what [issue #36](https://github.com/camilochs/exacttex/issues/36) is.
 
 This is the analogue of TypeScript's `any` and `noImplicitAny`, and it is the signal for supervising a draft
 an agent wrote.
@@ -182,7 +182,7 @@ an agent wrote.
 
 ## 6 · Erasure
 
-`erase(d)` is `d` with every NextTeX construct replaced by the LaTeX it stands for and every opaque node
+`erase(d)` is `d` with every ExactTeX construct replaced by the LaTeX it stands for and every opaque node
 copied byte for byte.
 
 Erasure emits **no** assertion, wrapper environment, or support package. This is binding
@@ -283,10 +283,10 @@ everything and the hand reader disagrees anywhere would reverse it.
 
 ## 8 · References
 
-An `@ref` whose identifier no `@id` declares is `NT1003`. The scope is the document root — its root file
+An `@ref` whose identifier no `@id` declares is `XT1003`. The scope is the document root — its root file
 plus everything reached through `@import` — which matches LaTeX, where a label is document-wide.
 
-Two `@id` constructs declaring the same identifier in one root is `NT1001`, blamed on the later one. The
+Two `@id` constructs declaring the same identifier in one root is `XT1001`, blamed on the later one. The
 first declaration is not at fault for existing.
 
 `@cite` is excluded from this check even though it is also a reference: its keys come from a bibliography,
@@ -301,23 +301,23 @@ Every diagnostic names which side of the compiler the offending bytes came from.
 | Value | Meaning |
 |---|---|
 | `author-latex` | Bytes the author wrote as LaTeX and the compiler transported. |
-| `nextex-construct` | Bytes the author wrote as NextTeX syntax. |
-| `nextex-generated` | Bytes the emitter produced from a construct. |
+| `xtex-construct` | Bytes the author wrote as ExactTeX syntax. |
+| `xtex-generated` | Bytes the emitter produced from a construct. |
 | `unresolved` | No map segment supports an answer. |
 
 `unresolved` is a real value and it is used. Guessing is worse than admitting the map does not reach: a
 compiler that blames the author for its own generated bytes gets abandoned after the second time.
 
-Blame matters most for errors NextTeX did not produce. When TeX fails, the source map converts its
+Blame matters most for errors ExactTeX did not produce. When TeX fails, the source map converts its
 `file:line` to an offset, finds the segment, and reports the origin — that is [issue
-#14](https://github.com/camilochs/nexttex/issues/14) and it is why the map stores segments rather than
+#14](https://github.com/camilochs/exacttex/issues/14) and it is why the map stores segments rather than
 points.
 
 ---
 
 ## 10 · Diagnostics: two forms, one content
 
-`nextex check` prints for a person. `nextex check --json` prints for a program. **Both carry the same
+`xtex check` prints for a person. `xtex check --json` prints for a program. **Both carry the same
 fields.** Neither form may hold something the other cannot express; a field added to one is added to both in
 the same change.
 
@@ -325,7 +325,7 @@ The fields:
 
 | Field | Meaning |
 |---|---|
-| `code` | `NT1001`…, stable across versions. |
+| `code` | `XT1001`…, stable across versions. |
 | `severity` | `error` or `advisory`. |
 | `blame` | One of the four values in §9. |
 | `entity` | The class from §2, or `unknown-open`. |
@@ -337,34 +337,34 @@ The fields:
 Human form:
 
 ```
-error[NT1001]: identifier `fig:main` is already declared
-  --> paper.ntex:88:14
+error[XT1001]: identifier `fig:main` is already declared
+  --> paper.xtex:88:14
    |
 88 | \figure(fig:main) {
    |         ^^^^^^^^ declared again here
    |
-  --> paper.ntex:41:9
+  --> paper.xtex:41:9
    |
 41 | @id(fig:main)
    |     -------- first declared here
    |
-  blame: nextex-construct
+  blame: xtex-construct
 ```
 
 JSON form, same diagnostic:
 
 ```json
 {
-  "code": "NT1001",
+  "code": "XT1001",
   "severity": "error",
-  "blame": "nextex-construct",
+  "blame": "xtex-construct",
   "entity": "figure",
   "name": "fig:main",
-  "span": { "file": "paper.ntex", "offset": 2317, "length": 8, "line": 88, "column": 14 },
+  "span": { "file": "paper.xtex", "offset": 2317, "length": 8, "line": 88, "column": 14 },
   "message": "identifier `fig:main` is already declared",
   "related": [
     {
-      "span": { "file": "paper.ntex", "offset": 990, "length": 8, "line": 41, "column": 5 },
+      "span": { "file": "paper.xtex", "offset": 990, "length": 8, "line": 41, "column": 5 },
       "message": "first declared here"
     }
   ]
@@ -385,7 +385,7 @@ the table above first.
 - A low coverage figure.
 - A bibliography that could not be read — the advisory is about the file.
 
-The invariant this protects is in [`AGENTS.md`](../AGENTS.md) §4: renaming a `.tex` to `.ntex` and changing
+The invariant this protects is in [`AGENTS.md`](../AGENTS.md) §4: renaming a `.tex` to `.xtex` and changing
 nothing must check clean. It follows by construction from §1 and §3, not from care taken case by case.
 
 The test that holds it is a property over the transport corpus, not a list of examples: for every file in

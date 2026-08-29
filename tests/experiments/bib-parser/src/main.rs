@@ -4,7 +4,7 @@ fn main() {
     for path in std::env::args().skip(1) {
         let Ok(bytes) = std::fs::read(&path) else { continue };
         files += 1;
-        let mine: BTreeSet<String> = nextex_core::bibliography::keys_in_bib(&bytes)
+        let mine: BTreeSet<String> = xtex_core::bibliography::keys_in_bib(&bytes)
             .unwrap_or_default().into_iter().collect();
         let text = String::from_utf8_lossy(&bytes).to_string();
         let theirs: BTreeSet<String> = match biblatex::Bibliography::parse(&text) {

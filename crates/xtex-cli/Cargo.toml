@@ -1,6 +1,6 @@
 [package]
-name = "nextex-cli"
-description = "Command-line front end for the NextTeX compiler."
+name = "xtex-cli"
+description = "Command-line front end for the ExactTeX compiler."
 version.workspace = true
 edition.workspace = true
 license.workspace = true
@@ -8,11 +8,11 @@ repository.workspace = true
 rust-version.workspace = true
 
 [[bin]]
-name = "nextex"
+name = "xtex"
 path = "src/main.rs"
 
 [dependencies]
-nextex-core = { path = "../nextex-core" }
+xtex-core = { path = "../xtex-core" }
 
 [lints]
 workspace = true
