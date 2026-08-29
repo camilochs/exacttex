@@ -1,3 +1,3 @@
 transport: lowered
-scanner: figure cite table cite ref ref ref
-constructs: figure(fig:scalar) contains cite(figure-source), while its scalar src contains no construct; table(tab:x) contains cite(knuth1984), ref(fig:a), and ref(tab:x); ref(sec:after) remains after the block; tokens in a command argument, verbatim, math, and a comment remain ordinary text
+scanner: figure cite table cite cite ref ref ref
+constructs: figure(fig:scalar) contains cite(figure-source), while its scalar src contains no construct; table(tab:x) contains cite(knuth1984), cite(hidden-command) — a construct since #83, because \textbf bears text — ref(fig:a), and ref(tab:x); ref(sec:after) remains after the block; a token inside a text-bearing command's argument is a construct since #83, while verbatim, math, and a comment still hide theirs

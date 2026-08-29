@@ -777,8 +777,18 @@ entry token are ordinary bytes.
 | Listing | `\begin{lstlisting}` or a configured listing name | its line-exact terminator |
 | Internal-macro region | `\makeatletter` | `\makeatother` |
 | Raw escape | complete `latex` entry through its opening `{` | matching `}` |
-| Command argument | an argument start selected by a known signature | that argument's specified boundary |
+| Command argument | an argument start selected by a known signature — except a text-bearing argument, whose interior is prose (see below) | that argument's specified boundary |
 | Quarantine | a hazard listed below | end of file |
+
+**Text-bearing arguments are prose.** A caption is a sentence, so the final mandatory argument of
+`\caption`, `\footnote`, `\footnotetext`, `\emph`, `\textbf`, `\textit`, `\underline`, `\mbox` and the
+sectioning family, and `\item`'s optional argument, is scanned exactly as the prose around the call —
+constructs are constructs, and every inner exclusion region still excludes (a `\verb`, math or a comment
+inside a caption still hides its bytes). Everything else about the call — the command, its data arguments,
+the delimiters — remains an exclusion region. `\texttt` deliberately bears data, not text: it is the code
+font, and `\texttt{@ref(x)}` is how prose shows the literal token. A known command absent from the
+classification bears data, which is the conservative default. Decided in issue #83; found as Phase 0a's
+gap 3, where a construct in a caption was emitted literally into the PDF with exit 0.
 
 The default verbatim environment set is `verbatim`, `verbatimtab`, `Verbatim`, `listing` and `lstlisting`,
 extended by `xtex.toml`.

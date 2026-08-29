@@ -251,6 +251,24 @@ fn name_spans(sources: &Sources, source: SourceId, construct: Span, kind: EntryT
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn a_construct_in_a_caption_is_a_real_occurrence_not_untouched() {
+        // Issue #83: a text-bearing argument is prose, so rename must reach
+        // it. Before, the caption's @ref sat in an Arguments piece and was
+        // reported untouched — an editor renaming 2 of 3 places silently.
+        let mut sources = Sources::new();
+        let text = "\\section{S}@id(sec:s)\nProsa @ref(sec:s).\n\\caption{Pie con @ref(sec:s).}\n";
+        let id = sources.add("r.xtex", text.as_bytes().to_vec());
+        let document = crate::parse(&sources, id);
+        let plan = plan(&sources, &[document], "sec:s", "sec:nuevo");
+        assert_eq!(plan.edits.len(), 3, "the caption occurrence is an edit");
+        assert!(
+            plan.untouched.is_empty(),
+            "nothing opaque holds this identifier: {:?}",
+            plan.untouched
+        );
+    }
     use crate::parse;
 
     fn renamed(text: &str, from: &str, to: &str) -> (String, usize) {
