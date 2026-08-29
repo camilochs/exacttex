@@ -832,6 +832,40 @@ fn blame(mut args: impl Iterator<Item = String>) -> ExitCode {
 }
 
 #[cfg(test)]
+mod cause_tests {
+    use super::cause_at;
+
+    #[test]
+    fn a_control_word_is_named_and_an_environment_is_named_with_it() {
+        // These are what a corpus groups by. `\\begin` alone would put
+        // `lstlisting` and `verbatim` in one bucket, and they are not one
+        // problem.
+        assert_eq!(cause_at(b"\\verb+unterminated", 0), "\\verb");
+        assert_eq!(cause_at(b"\\catcode`\\@=11", 0), "\\catcode");
+        assert_eq!(
+            cause_at(b"\\begin{lstlisting}\ncode", 0),
+            "\\begin{lstlisting}"
+        );
+        assert_eq!(cause_at(b"\\begin{verbatim}\nx", 0), "\\begin{verbatim}");
+    }
+
+    #[test]
+    fn without_a_control_word_the_bytes_are_shown_rather_than_a_cause_invented() {
+        // Naming a cause we cannot see would be worse than showing the bytes,
+        // because a corpus tally of invented causes reads exactly like a tally
+        // of real ones.
+        assert_eq!(cause_at(b"plain text here", 0), "bytes `plain text here`");
+        assert_eq!(cause_at(b"\\  spaced", 0), "bytes `\\  spaced`");
+    }
+
+    #[test]
+    fn an_offset_at_or_past_the_end_does_not_panic() {
+        assert_eq!(cause_at(b"abc", 3), "bytes ``");
+        assert_eq!(cause_at(b"", 99), "bytes ``");
+    }
+}
+
+#[cfg(test)]
 #[allow(clippy::items_after_test_module)]
 mod tests {
     use super::*;
@@ -1147,12 +1181,55 @@ fn confidence_command(args: &[String]) -> ExitCode {
             #[allow(clippy::cast_precision_loss)]
             let fraction = at as f64 / total as f64;
             println!("quarantine: {fraction:.6}");
+            println!("cause: {}", cause_at(source.bytes(), at));
         }
         _ => println!("quarantine: none"),
     }
     println!("bytes: {total}");
     println!("coverage: {:.6}", document.coverage());
     ExitCode::SUCCESS
+}
+
+/// What is at the byte where recognition stopped.
+///
+/// A quarantine figure says how much of a file was reachable. It does not say
+/// what to fix, and over a corpus that is the difference between a number and
+/// a list of work. Reported as the control word where there is one, because
+/// those group — a hundred files stopped by `\catcode` are one problem — and
+/// as a short excerpt otherwise, because inventing a cause is worse than
+/// showing the bytes.
+fn cause_at(bytes: &[u8], at: usize) -> String {
+    let rest = &bytes[at.min(bytes.len())..];
+    if rest.first() == Some(&b'\\') {
+        let name: Vec<u8> = rest[1..]
+            .iter()
+            .take_while(|byte| byte.is_ascii_alphabetic())
+            .copied()
+            .collect();
+        if !name.is_empty() {
+            let name = String::from_utf8_lossy(&name);
+            // `\begin{lstlisting}` and `\begin{verbatim}` are different
+            // problems and collapsing them into `\begin` would hide that.
+            if name == "begin" {
+                if let Some(open) = rest.get(6) {
+                    if *open == b'{' {
+                        let environment: Vec<u8> = rest[7..]
+                            .iter()
+                            .take_while(|byte| **byte != b'}')
+                            .copied()
+                            .collect();
+                        return format!("\\begin{{{}}}", String::from_utf8_lossy(&environment));
+                    }
+                }
+            }
+            return format!("\\{name}");
+        }
+    }
+    let excerpt: String = String::from_utf8_lossy(&rest[..rest.len().min(40)])
+        .chars()
+        .map(|c| if c.is_whitespace() { ' ' } else { c })
+        .collect();
+    format!("bytes `{}`", excerpt.trim())
 }
 
 /// Emits, runs the TeX engine, and reports what it said against the source.
