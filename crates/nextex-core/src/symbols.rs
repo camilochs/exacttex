@@ -35,10 +35,14 @@ pub enum EntityClass {
     Equation,
     /// A sectioning command, including an appendix.
     Section,
+    /// An appendix.
+    Appendix,
     /// An algorithm environment.
     Algorithm,
     /// A citation key.
     Citation,
+    /// A dimension or percentage.
+    Length,
 }
 
 impl EntityClass {
@@ -59,8 +63,10 @@ impl EntityClass {
             Self::Table => "table",
             Self::Equation => "equation",
             Self::Section => "section",
+            Self::Appendix => "appendix",
             Self::Algorithm => "algorithm",
             Self::Citation => "citation",
+            Self::Length => "length",
         }
     }
 }
@@ -134,6 +140,50 @@ pub struct SymbolTable {
     declarations: BTreeMap<String, Declaration>,
     references: Vec<(String, Reference)>,
     errors: Vec<SymbolError>,
+    prefixes: PrefixMap,
+}
+
+/// Project-defined mapping from identifier prefixes to entity classes.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct PrefixMap(BTreeMap<String, EntityClass>);
+
+impl Default for PrefixMap {
+    fn default() -> Self {
+        let mut map = BTreeMap::new();
+        for (class, prefixes) in [
+            (EntityClass::Figure, &["fig"][..]),
+            (EntityClass::Table, &["tab"][..]),
+            (EntityClass::Section, &["sec", "subsec", "ch"][..]),
+            (EntityClass::Appendix, &["app"][..]),
+            (EntityClass::Algorithm, &["alg"][..]),
+            (EntityClass::Equation, &["eq"][..]),
+        ] {
+            for prefix in prefixes {
+                map.insert((*prefix).to_owned(), class);
+            }
+        }
+        Self(map)
+    }
+}
+
+impl PrefixMap {
+    /// Creates an empty map. Supplying a `[prefixes]` table uses this rather
+    /// than the default because project configuration replaces the convention.
+    #[must_use]
+    pub const fn empty() -> Self {
+        Self(BTreeMap::new())
+    }
+
+    /// Associates `prefix` with `class`.
+    pub fn insert(&mut self, prefix: impl Into<String>, class: EntityClass) {
+        self.0.insert(prefix.into(), class);
+    }
+
+    fn demand_of(&self, name: &str) -> EntityClass {
+        name.split_once(':')
+            .and_then(|(prefix, _)| self.0.get(prefix).copied())
+            .unwrap_or(EntityClass::UnknownOpen)
+    }
 }
 
 impl SymbolTable {
@@ -141,6 +191,15 @@ impl SymbolTable {
     #[must_use]
     pub fn new() -> Self {
         Self::default()
+    }
+
+    /// Creates a table using the project's complete prefix map.
+    #[must_use]
+    pub fn with_prefixes(prefixes: PrefixMap) -> Self {
+        Self {
+            prefixes,
+            ..Self::default()
+        }
     }
 
     /// Adds every construct in `document` to the table.
@@ -252,6 +311,12 @@ impl SymbolTable {
         self.declarations.keys().map(String::as_str)
     }
 
+    /// Class demanded by `name` under this table's project prefix map.
+    #[must_use]
+    pub fn demand_of(&self, name: &str) -> EntityClass {
+        self.prefixes.demand_of(name)
+    }
+
     /// Every `@ref` whose identifier no `@id` declares.
     ///
     /// `@cite` is excluded: its keys come from a bibliography, and reporting a
@@ -279,7 +344,7 @@ impl SymbolTable {
             if reference.kind != EntryToken::Ref {
                 return None;
             }
-            let demand = demand_of(name);
+            let demand = self.prefixes.demand_of(name);
             let declaration = self.declarations.get(name)?;
             (!demand.is_consistent_with(declaration.class)).then_some((
                 name.as_str(),
@@ -299,17 +364,7 @@ impl SymbolTable {
 /// Class demanded by the prefix before the first colon.
 #[must_use]
 pub fn demand_of(name: &str) -> EntityClass {
-    let Some((prefix, _)) = name.split_once(':') else {
-        return EntityClass::UnknownOpen;
-    };
-    match prefix {
-        "fig" => EntityClass::Figure,
-        "tab" => EntityClass::Table,
-        "sec" | "subsec" | "ch" | "app" => EntityClass::Section,
-        "alg" => EntityClass::Algorithm,
-        "eq" => EntityClass::Equation,
-        _ => EntityClass::UnknownOpen,
-    }
+    PrefixMap::default().demand_of(name)
 }
 
 fn attached_class(sources: &Sources, source: SourceId, construct: Span) -> EntityClass {

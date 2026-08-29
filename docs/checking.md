@@ -112,11 +112,12 @@ error.
 | `NT1010` | Two sidecar records share one revision identifier | any |
 | `NT1011` | A sidecar record's `kind` disagrees with its construct | any |
 | `NT1012` | A sidecar record whose revision construct no longer exists | any |
+| `NT1013` | A sidecar that cannot be read, or that names a different document | any |
 
 Two properties hold across the whole table and are tested as properties, not as examples:
 
 1. **Every row requires an explicit construct, or NextTeX's own sidecar.** There is no row that ordinary
-   LaTeX can reach. `NT1010`–`NT1012` are about a `.ntexrev` file, which NextTeX writes and owns; a renamed
+   LaTeX can reach. `NT1010`–`NT1013` are about a `.ntexrev` file, which NextTeX writes and owns; a renamed
    `.tex` has none, so they cannot fire on one. See [`revisions.md`](revisions.md) §5.
 2. **Every row requires both sides known.** `NT1004` cannot fire when either side is `?O`, and `NT1005`
    cannot fire when the bibliography is `Unavailable`. Uncertainty on either side means silence.

@@ -1,0 +1,3 @@
+\figure(fig:zero) { width = 0% }
+\figure(fig:hundred) { width = 100% }
+\figure(fig:too-wide) { width = 101% }

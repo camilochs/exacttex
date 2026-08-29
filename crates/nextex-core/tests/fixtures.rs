@@ -21,10 +21,13 @@
 use std::fs;
 use std::path::{Path, PathBuf};
 
+use nextex_core::bibliography::{Bibliography, Unavailable};
+use nextex_core::check::{check, check_documents};
 use nextex_core::io::Memory;
 use nextex_core::scanner::{Piece, scan};
 use nextex_core::source::Sources;
 use nextex_core::sourcemap::emit_with_map;
+use nextex_core::symbols::SymbolTable;
 use nextex_core::transport;
 use nextex_core::{emit, parse};
 
@@ -246,6 +249,53 @@ fn emission_fixtures_match_their_expected_output() {
     }
 
     assert!(checked >= 3, "only {checked} emission fixtures ran");
+}
+
+#[test]
+fn checker_fixtures_match_their_expected_codes() {
+    let mut checked = 0usize;
+    for input in all_fixtures() {
+        let expected = input.with_file_name("checked.txt");
+        if !expected.exists() {
+            continue;
+        }
+        let name = label(&input);
+        let raw = fs::read(&input).unwrap_or_else(|e| panic!("{name}: cannot read ({e})"));
+        let mut sources = Sources::new();
+        let id = sources.add(name.clone(), raw);
+        let document = parse(&sources, id);
+        let mut table = SymbolTable::new();
+        table.merge(&sources, &document);
+        let bibliography = Bibliography::Unavailable(Unavailable::NoneDeclared);
+        let mut diagnostics = check(&table, &bibliography);
+        diagnostics.extend(check_documents(&sources, &[document], |_, path| {
+            input
+                .parent()
+                .expect("fixture directory")
+                .join(path)
+                .is_file()
+        }));
+        let found = diagnostics
+            .iter()
+            .map(|diagnostic| {
+                format!(
+                    "{}|{}|{}|{}|{}|{}",
+                    diagnostic.code,
+                    diagnostic.entity.name(),
+                    diagnostic.name.as_deref().unwrap_or("-"),
+                    diagnostic.span.start(),
+                    diagnostic.span.len(),
+                    diagnostic.message
+                )
+            })
+            .collect::<Vec<_>>()
+            .join("\n");
+        let want = fs::read_to_string(&expected)
+            .unwrap_or_else(|e| panic!("{name}: cannot read checked.txt ({e})"));
+        assert_eq!(found, want.trim(), "{name}: checker output differs");
+        checked += 1;
+    }
+    assert!(checked >= 4, "only {checked} checker fixtures ran");
 }
 
 #[test]
