@@ -1,0 +1,3 @@
+transport: identical
+scanner: none
+constructs: none — the reference-shaped bytes follow the language argument and remain literal

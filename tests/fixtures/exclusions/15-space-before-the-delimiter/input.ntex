@@ -1,0 +1,2 @@
+A: \verb xCODEx and @ref(after_verb).
+B: \lstinline |@id(hidden)| and @ref(after_lstinline).

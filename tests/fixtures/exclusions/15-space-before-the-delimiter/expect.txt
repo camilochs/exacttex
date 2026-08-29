@@ -1,0 +1,5 @@
+transport: identical
+scanner: ref ref
+constructs: ref(after_verb) ref(after_lstinline) — TeX absorbs the spaces after a
+  control word, so the delimiter is x and | respectively. Verified by compiling
+  `\verb xCODEx`, which typesets CODE rather than xCODEx.

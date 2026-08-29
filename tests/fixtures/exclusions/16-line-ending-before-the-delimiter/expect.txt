@@ -1,0 +1,6 @@
+transport: identical
+scanner: ref
+constructs: ref(still_found) — a line ending after the command opens no verbatim
+  region. Verified by compiling: `\verb` then a newline typesets the following
+  |CODE| as ordinary text. Recognition continues rather than quarantining, which
+  would cost the rest of the file over bytes TeX itself ignores.

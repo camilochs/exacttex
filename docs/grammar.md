@@ -688,8 +688,19 @@ The verbatim **command** set is `\verb` and `\verb*` from the LaTeX kernel, `\ls
 cannot be described by one, which is the same reason they are listed here. `fancyvrb`'s `\Verb` is not in the
 set because no source for it was read; adding it requires reading one.
 
-Each takes its delimiter as the first byte after any arguments that precede it, and ends at that byte's next
-occurrence. `\lstinline` and `\mintinline` may also take a braced form, which is an ordinary balanced group.
+Each takes its delimiter after any arguments that precede it, and ends at that byte's next occurrence.
+`\lstinline` and `\mintinline` may also take a braced form, which is an ordinary balanced group.
+
+Two boundary rules, both compiled rather than recalled:
+
+- **Spaces and tabs before the delimiter are skipped.** TeX absorbs the spaces after a control word.
+  `\verb xCODEx` typesets `CODE`, not `xCODEx`, so the delimiter is `x` and not the space.
+- **A line ending before the delimiter opens no region at all.** `\verb` followed by a newline typesets the
+  next line's `|CODE|` as ordinary text. Recognition continues; it does not quarantine. Quarantining would
+  cost the rest of the file over bytes TeX itself ignores, and `\lstinline` named in prose is a sentence
+  people write.
+
+Fixtures `exclusions/15` and `exclusions/16`.
 
 An unterminated excluded region whose boundary cannot safely be recovered enters quarantine rather than
 resuming recognition at a guessed byte.

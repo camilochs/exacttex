@@ -35,7 +35,7 @@ enum Region {
     InlineMath,
     /// From `$$` or `\[` to its match.
     DisplayMath { dollars: bool },
-    /// From `\verb` plus a delimiter byte to that byte's next occurrence.
+    /// From a verbatim command plus a delimiter byte to its next occurrence.
     Verb { delimiter: u8 },
     /// From `\begin{name}` to a line-exact `\end{name}`.
     VerbatimEnvironment { name: Vec<u8> },
@@ -735,15 +735,8 @@ fn region_opening_at(bytes: &[u8], at: usize) -> Option<(Region, usize)> {
             if bytes[at..].starts_with(b"\\makeatletter") {
                 return Some((Region::InternalMacros, at + b"\\makeatletter".len()));
             }
-            if let Some(rest) = bytes[at..].strip_prefix(b"\\verb") {
-                // `\verb*` takes the same shape; the delimiter is whatever byte
-                // follows, and it is never a space.
-                let skip = usize::from(rest.first() == Some(&b'*'));
-                let delimiter = *rest.get(skip)?;
-                if delimiter != b' ' && delimiter != b'\n' {
-                    let consumed = at + b"\\verb".len() + skip + 1;
-                    return Some((Region::Verb { delimiter }, consumed));
-                }
+            if let Some(opening) = verbatim_command_opening(bytes, at) {
+                return Some(opening);
             }
             if let Some(rest) = bytes[at..].strip_prefix(b"\\begin{") {
                 let close = rest.iter().position(|b| *b == b'}')?;
@@ -765,6 +758,78 @@ fn region_opening_at(bytes: &[u8], at: usize) -> Option<(Region, usize)> {
         }
         _ => None,
     }
+}
+
+/// A verbatim command's delimiter region beginning at `at`.
+///
+/// `\lstinline` may have an optional argument before the delimiter. `\mint`
+/// and `\mintinline` have a mandatory language argument, and `\mintinline`
+/// may also use a braced code argument. The braced inline forms return `None`
+/// so the ordinary balanced command-argument path handles them.
+fn verbatim_command_opening(bytes: &[u8], at: usize) -> Option<(Region, usize)> {
+    let (name, mut cursor) = control_word_at(bytes, at)?;
+    match name {
+        b"verb" => {
+            if bytes.get(cursor) == Some(&b'*') {
+                cursor += 1;
+            }
+        }
+        b"lstinline" => {
+            if bytes.get(cursor) == Some(&b'[') {
+                cursor = match delimited_end(bytes, cursor, b'[', b']') {
+                    Some(end) => end,
+                    None => return Some((Region::Quarantine, cursor)),
+                };
+            }
+            if bytes.get(cursor) == Some(&b'{') {
+                return None;
+            }
+        }
+        b"mint" | b"mintinline" => {
+            if bytes.get(cursor) != Some(&b'{') {
+                return None;
+            }
+            cursor = match balanced_end(bytes, cursor) {
+                Some(end) => end,
+                None => return Some((Region::Quarantine, cursor)),
+            };
+            if name == b"mintinline" && bytes.get(cursor) == Some(&b'{') {
+                return None;
+            }
+        }
+        _ => return None,
+    }
+
+    // TeX absorbs the spaces after a control word, so the delimiter is the
+    // next byte that is not one. Compiled to check rather than recalled:
+    // `\verb xCODEx` typesets `CODE`, so the space was skipped and `x` was the
+    // delimiter. A line ending is different — `\verb` followed by one opens no
+    // region at all, and `|CODE|` after it is typeset as ordinary text. Both
+    // observations are fixtures 15 and 16.
+    while matches!(bytes.get(cursor), Some(b' ' | b'\t')) {
+        cursor += 1;
+    }
+    let delimiter = match bytes.get(cursor) {
+        // No delimiter on this line. Not a verbatim command, so ordinary
+        // handling continues — quarantining here would cost recognition for
+        // the rest of the file over bytes TeX itself ignores.
+        Some(b'\n' | b'\r') | None => return None,
+        Some(delimiter) => *delimiter,
+    };
+    Some((Region::Verb { delimiter }, cursor + 1))
+}
+
+/// The alphabetic control word at `at` and the byte just past it.
+fn control_word_at(bytes: &[u8], at: usize) -> Option<(&[u8], usize)> {
+    if bytes.get(at) != Some(&b'\\') {
+        return None;
+    }
+    let start = at + 1;
+    let mut end = start;
+    while bytes.get(end).is_some_and(u8::is_ascii_alphabetic) {
+        end += 1;
+    }
+    (end > start).then_some((&bytes[start..end], end))
 }
 
 /// Offset just past `\end{name}` if it begins at `at`.
