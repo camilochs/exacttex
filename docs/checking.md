@@ -137,18 +137,27 @@ Exit `2` is never reachable from unknown LaTeX. Unknown LaTeX downgrades confide
 
 ## 4 · Advisory
 
-An advisory names something the compiler noticed but cannot substantiate. It is:
+An advisory names something the compiler noticed but cannot substantiate. It is **never** able to change the
+exit code, and it is marked `severity: advisory` in both output forms.
 
-- **off by default** — printed only behind `--strict-tex`;
-- **never** able to change the exit code;
-- marked `severity: advisory` in both output forms.
+Whether it is printed by default depends on who asked for the check.
+
+| | Printed | Because |
+|---|---|---|
+| An explicit construct asked for a check we could not perform | **by default** | staying quiet reports the document as checked when it was not |
+| We merely observed something in plain LaTeX | behind `--strict-tex` | nobody asked, and the observation may be about text TeX never reads |
 
 The class of things that are advisory and not errors:
 
-- an unresolved `\ref` or `\cite` written in plain LaTeX;
-- a `\label` in an opaque region that appears to collide with an `@id`;
-- a bibliography that could not be read (see §7) — the advisory is about the file, never about a key;
-- a region that entered quarantine early, which is a coverage signal rather than a defect.
+| Code | Condition | Printed |
+|---|---|---|
+| `XT2001` | The document contains `@cite`, and the bibliography is `Unavailable` (see §7) — the advisory is about the file, never about a key | by default |
+| — | An unresolved `\ref` or `\cite` written in plain LaTeX | `--strict-tex` |
+| — | A `\label` in an opaque region that appears to collide with an `@id` | `--strict-tex` |
+| — | A region that entered quarantine early, which is a coverage signal rather than a defect | `--strict-tex` |
+
+Codes are assigned in two ranges that do not overlap: `XT1nnn` is a hard error, `XT2nnn` an advisory. A row
+without a code is not implemented yet.
 
 **Never scan inside an opaque region and treat what you find as checkable.** Such a scan matches inside a
 `\newcommand` body, inside verbatim text, and inside an inactive `\if` branch. This was a design error caught
@@ -224,6 +233,13 @@ diagnostic that survives is about the file, not about the citation.
   be resolved without running TeX, which the compiler does not do.
 - **`Unreadable`** — a declared resource was not found.
 - **`UnparsableEntry`** — an entry in a resource that was read has no locatable boundary.
+
+When the document contains at least one `@cite`, an `Unavailable` bibliography is reported as advisory
+`XT2001` without being asked for. The construct requested a check; printing `coverage` and exiting `0`
+without saying the check never ran would answer a question the compiler did not look at. The advisory names
+the file and the reason, never a key, and the exit code stays `0` — `\bibliography{refs}` is plain LaTeX, and
+§3 admits no hard error from it. A document with no `@cite` stays silent whatever state its bibliography is
+in, which is the §11 invariant.
 
 ### Where bibliographies are declared
 

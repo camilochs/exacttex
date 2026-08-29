@@ -75,7 +75,9 @@ exists today.
   reordering arguments — breaks transport silently.
 - **A hard error only ever comes from an explicit ExactTeX construct.** `?O` is consistent with every type, so
   an unannotated `\ref{x}` cannot fail. A renamed `.tex` checks clean by construction. Everything else is
-  `advisory`, behind `--strict-tex`, and never touches the exit code.
+  `advisory` and never touches the exit code. An advisory is printed by default when an explicit construct
+  asked for a check that could not be performed, and behind `--strict-tex` when it is only an observation
+  about plain LaTeX.
 - **Unknown LaTeX is never a fatal error.** The parser downgrades confidence and preserves. Fatal is reserved
   for I/O failure, invalid annotation encoding, resource limits, and broken internal invariants.
 - **A diagnostic names its blame side.** Author LaTeX, ExactTeX construct, or emitted output. With no map

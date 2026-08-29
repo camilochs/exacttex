@@ -36,6 +36,50 @@ pub struct Diagnostic {
     pub message: String,
     /// Locations that explain the primary finding.
     pub related: Vec<Related>,
+    /// Whether the finding can change the process exit code.
+    pub severity: Severity,
+    /// Which side of the source boundary the finding belongs to.
+    pub blame: Blame,
+}
+
+/// How strongly a diagnostic is substantiated.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum Severity {
+    /// A substantiated failure in an explicit ExactTeX construct.
+    Error,
+    /// A condition worth reporting that does not change the exit code.
+    Advisory,
+}
+
+impl Severity {
+    /// The stable spelling used by both renderers.
+    #[must_use]
+    pub const fn as_str(self) -> &'static str {
+        match self {
+            Self::Error => "error",
+            Self::Advisory => "advisory",
+        }
+    }
+}
+
+/// The side of the source boundary responsible for a diagnostic.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum Blame {
+    /// An explicit ExactTeX construct.
+    XtexConstruct,
+    /// The available evidence does not establish a side.
+    Unresolved,
+}
+
+impl Blame {
+    /// The stable spelling used by both renderers.
+    #[must_use]
+    pub const fn as_str(self) -> &'static str {
+        match self {
+            Self::XtexConstruct => "xtex-construct",
+            Self::Unresolved => "unresolved",
+        }
+    }
 }
 
 /// Runs the checks whose evidence is already assembled for one document root.
@@ -84,6 +128,8 @@ pub fn check_with_labels(
                         span: *first,
                         message: "first declared here".to_owned(),
                     }],
+                    severity: Severity::Error,
+                    blame: Blame::XtexConstruct,
                 });
             }
             SymbolError::Malformed { source, construct } => diagnostics.push(Diagnostic {
@@ -94,6 +140,8 @@ pub fn check_with_labels(
                 span: *construct,
                 message: "identifier is empty or contains unsupported bytes".to_owned(),
                 related: Vec::new(),
+                severity: Severity::Error,
+                blame: Blame::XtexConstruct,
             }),
         }
     }
@@ -106,6 +154,8 @@ pub fn check_with_labels(
             span: reference.payload.span,
             message: format!("identifier `{name}` is not declared"),
             related: Vec::new(),
+            severity: Severity::Error,
+            blame: Blame::XtexConstruct,
         });
     }
     for (name, reference, demand, declaration) in table.inconsistent_references() {
@@ -125,6 +175,8 @@ pub fn check_with_labels(
                 span: declaration.payload.span,
                 message: format!("{} declared here", declaration.class.name()),
             }],
+            severity: Severity::Error,
+            blame: Blame::XtexConstruct,
         });
     }
     for (key, reference) in missing_citations(table, bibliography) {
@@ -136,6 +188,8 @@ pub fn check_with_labels(
             span: reference.payload.span,
             message: format!("citation key `{key}` is not in the bibliography"),
             related: Vec::new(),
+            severity: Severity::Error,
+            blame: Blame::XtexConstruct,
         });
     }
     diagnostics
@@ -222,6 +276,8 @@ fn check_block(
                     span,
                     message: "percentage must be between 0 and 100".to_owned(),
                     related: Vec::new(),
+                    severity: Severity::Error,
+                    blame: Blame::XtexConstruct,
                 });
             }
         }
@@ -242,6 +298,8 @@ fn check_block(
                     span,
                     message: format!("image file `{path}` does not resolve"),
                     related: Vec::new(),
+                    severity: Severity::Error,
+                    blame: Blame::XtexConstruct,
                 });
             }
         }
@@ -299,6 +357,8 @@ fn block_error(source: SourceId, kind: BlockKind, error: BlockError, bytes: &[u8
         span,
         message,
         related: Vec::new(),
+        severity: Severity::Error,
+        blame: Blame::XtexConstruct,
     }
 }
 
@@ -509,8 +569,10 @@ pub fn to_json(sources: &Sources, diagnostics: &[Diagnostic], coverage: f64, out
         }
         let _ = write!(
             out,
-            "{{\"code\":\"{}\",\"severity\":\"error\",\"blame\":\"xtex-construct\",\"entity\":\"{}\",\"name\":",
+            "{{\"code\":\"{}\",\"severity\":\"{}\",\"blame\":\"{}\",\"entity\":\"{}\",\"name\":",
             diagnostic.code,
+            diagnostic.severity.as_str(),
+            diagnostic.blame.as_str(),
             diagnostic.entity.name()
         );
         match &diagnostic.name {
