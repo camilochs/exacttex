@@ -1,0 +1,2 @@
+transport: identical
+constructs: none after the opener — recognition stops

@@ -1,0 +1,9 @@
+\begin{Verbatim}
+@ref(a)
+\end{Verbatim}
+\begin{verbatimtab}
+@id(b)
+\end{verbatimtab}
+\begin{listing}
+@cite(c)
+\end{listing}

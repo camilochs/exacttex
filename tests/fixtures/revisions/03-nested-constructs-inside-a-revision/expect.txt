@@ -1,0 +1,2 @@
+transport: identical
+constructs: add(c1) containing cite(knuth1984) ref(tab:x) del(c2)

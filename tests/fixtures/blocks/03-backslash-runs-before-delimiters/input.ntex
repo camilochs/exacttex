@@ -1,0 +1,4 @@
+\figure(f) {
+  src = "x.pdf"
+  caption = {A line break \\ then \\\% and \\\\ and a real comment follows}
+}

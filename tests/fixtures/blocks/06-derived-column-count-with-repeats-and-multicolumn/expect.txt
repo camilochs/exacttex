@@ -1,0 +1,2 @@
+transport: identical
+constructs: table(t); columns derived = 7, accounting for multicolumn

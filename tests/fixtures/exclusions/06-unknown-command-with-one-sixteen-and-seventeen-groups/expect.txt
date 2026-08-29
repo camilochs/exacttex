@@ -1,0 +1,2 @@
+transport: identical
+constructs: see note — 1 and 16 groups excluded, the 17th quarantines

@@ -4,3 +4,6 @@ fixtures/*/main.log
 fixtures/*/main.bbl
 fixtures/*/main.blg
 fixtures/*/*.fls
+main.pdf
+main.aux
+main.log

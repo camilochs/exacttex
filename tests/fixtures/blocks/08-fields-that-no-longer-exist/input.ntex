@@ -1,0 +1,5 @@
+\table(t) {
+  caption = unbraced text
+  columns = 7
+  needs = booktabs
+}

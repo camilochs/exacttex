@@ -1,0 +1,2 @@
+transport: identical
+constructs: sub(c1) — one separator at depth one

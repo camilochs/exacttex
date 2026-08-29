@@ -1,0 +1,2 @@
+transport: identical
+constructs: table(t); column check advisory — environment not modelled

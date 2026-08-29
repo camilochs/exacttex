@@ -1,0 +1,4 @@
+latex {
+  @id(a) @ref(b) @cite(c) @import("d") @add(e) {f} @sub(g) {h -> i}
+  \figure(j) { } \table(k) { }
+}

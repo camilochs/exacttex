@@ -1,0 +1,8 @@
+\caption{Two line endings is the limit}
+
+@id(ok)
+
+\caption{Three is past it}
+
+
+@id(toofar)

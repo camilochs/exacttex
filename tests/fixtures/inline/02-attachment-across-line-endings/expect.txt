@@ -1,0 +1,2 @@
+transport: identical
+constructs: id(ok) attached; id(toofar) unattached — hard error

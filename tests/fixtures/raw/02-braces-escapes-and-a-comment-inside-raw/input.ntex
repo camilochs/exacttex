@@ -1,0 +1,5 @@
+latex {
+  \newcommand{\x}[1]{#1 with {nested} braces, \{escaped\} ones, 10\% and
+  % a real comment containing } which must not close the block
+  a trailing line}
+}
