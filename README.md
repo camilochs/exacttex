@@ -1,15 +1,24 @@
-# ExactTeX
+<p align="center">
+  <img src="docs/assets/exacttex-logo.svg" alt="ExactTeX" width="420">
+</p>
 
-**Know whether your document is sound before you look at the PDF.**
+<p align="center"><strong>Know whether your document is sound before you look at the PDF.</strong></p>
+
+<p align="center">
+  <a href="https://github.com/camilochs/exacttex/actions/workflows/rust.yml"><img src="https://github.com/camilochs/exacttex/actions/workflows/rust.yml/badge.svg" alt="CI"></a>
+  <img src="https://img.shields.io/badge/license-MIT-5a23ee" alt="MIT">
+  <img src="https://img.shields.io/badge/dependencies-0-082768" alt="zero dependencies">
+</p>
 
 ExactTeX is a document language with LaTeX as its backend. Rename a `.tex` file to `.xtex` and it keeps
 working — your LaTeX passes through byte for byte. From there you annotate what you want checked, and what
 you annotate is guaranteed.
 
-> **Status: the compiler and the language server work; the browser does not exist yet.** `xtex` parses,
-> checks, emits LaTeX, writes source maps and applies revisions, and `xtex-lsp` gives an editor diagnostics,
-> hover, completion and go-to-definition. It also builds to WebAssembly, so a browser can run it with no compile server. Every claim below is about what is
-> built, and each number is reproducible with the command that produced it.
+> **Status: the compiler works, and three doors open into it.** `xtex` parses, checks, emits LaTeX, writes
+> source maps and applies revisions; `xtex-lsp` gives an editor diagnostics, hover, completion and
+> go-to-definition; and the WebAssembly build runs the same core in any host with no compile server. A
+> parity suite holds the three doors to one answer. Every claim below is about what is built, and each
+> number is reproducible with the command that produced it.
 
 ---
 
@@ -46,17 +55,17 @@ them interoperate. ExactTeX puts the model in the format.
 \usepackage{amsmath}
 
 \begin{document}
-\section{Introduction} @id(sec:intro)
+\section{Introduction}@id(sec:intro)
 
-We argue the opposite in @ref(sec:model).
-@citet(knuth1984) showed that cost grows with $n$.
+We argue the opposite in Section~@ref(sec:model), and
+@cite(knuth1984) showed that cost grows with $n$.
 
-The architecture is shown in @ref(fig:runtime).
+The architecture is shown in Figure~@ref(fig:runtime).
 
 \figure(fig:runtime) {
   src     = "figures/runtime.pdf"
   width   = 80%
-  caption = Runtime architecture for \emph{multi-agent} systems
+  caption = {Runtime architecture for \emph{multi-agent} systems}
 }
 
 @import("sections/model.xtex")
