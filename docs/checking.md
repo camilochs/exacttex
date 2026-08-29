@@ -54,6 +54,40 @@ The second and third lines are the whole checking policy in two symbols. `?O` is
 everything, so nothing involving unmodelled LaTeX can ever be inconsistent, so nothing involving unmodelled
 LaTeX can ever fail. `?O` does not mean *invalid*. It means *the compiler has no grounds*.
 
+### How a reference states what it wants
+
+A comparison needs two sides. The declaration supplies one: `\figure(fig:main)` is a `Figure` by its
+keyword, and an `@id` takes the class of the construct it attached to — `\section` gives `Section`,
+`\begin{algorithm}` gives `Algorithm`, anything unmodelled gives `?O`.
+
+The reference supplies the other, and **it does so through the prefix before the first `:`**.
+`@ref(fig:main)` demands a `Figure`; pointing it at a `\table(fig:main)` is `NT1004`.
+
+```toml
+# the default map, replaced entirely by nextex.toml, never merged into
+[prefixes]
+figure    = ["fig"]
+table     = ["tab"]
+section   = ["sec", "subsec", "subsubsec", "ssec", "chap", "cap"]
+appendix  = ["app", "appendix"]
+algorithm = ["alg", "algo"]
+equation  = ["eq"]
+```
+
+The convention was read from documents rather than imposed on them: 1,344 of 1,374 measured labels carry a
+prefix, and inside a typed environment it agrees with the environment 96–100% of the time. The several
+spellings per class are in the map for the same reason — one author writes `sec:`, `subsec:` and `ssec:` for
+one class, and a single-spelling map would fail 54 correct labels in that corpus.
+
+Two ways the demand is absent, and both are silence rather than error:
+
+- **An unmapped prefix demands nothing.** `def:geakg` is not in the map, so the reference is `?O`. Adding a
+  prefix is how a class opts into checking; never adding one is a valid permanent state.
+- **No prefix demands nothing.** The 30 unprefixed labels keep working.
+
+Full record, including the two rejected alternatives:
+[`decisions/0003`](decisions/0003-the-prefix-is-the-demand.md).
+
 ---
 
 ## 3 · When the compiler may fail
