@@ -481,6 +481,20 @@ the run length is odd. This is decidable while scanning left to right by retaini
 The corpus contains 120 `\%` sequences inside captions and no real comments inside those captions. Treating
 every `%` as a comment would therefore truncate real caption content.
 
+**A block body is scanned with one exception to that rule**, found while implementing it: `%` immediately
+preceded by an ASCII digit is a percent sign, not a comment opener.
+
+Without the exception, `width = 80%` cannot be parsed at all — the `%` opens a comment that swallows the
+closing brace, and the block never ends. That is the same collision the tool baseline measured in plain
+LaTeX, where `width=120%` fails with `File ended while scanning use of \Gin@ii` and the message names
+nothing about percentages.
+
+The exception needs one byte of context, so it stays a left-to-right rule. It applies **only inside a
+NextTeX block body**. Transported LaTeX keeps TeX's rule, where a comment means what TeX says it means.
+
+The alternative was to require `80\%` inside blocks. It was rejected because the escape would appear in
+NextTeX's own syntax purely to work around a rule NextTeX controls.
+
 A top-level category-code change makes these default rules unreliable and invokes quarantine under §8.
 
 ### Block boundaries

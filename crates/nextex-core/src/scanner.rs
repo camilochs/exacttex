@@ -300,6 +300,80 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
     pieces
 }
 
+/// Offset just past the `}` that closes the group opening at `open`.
+///
+/// Counts with LaTeX's own escaping: `\{`, `\}` and `\%` do not count, decided
+/// by backslash-run parity, and an unescaped `%` opens a comment through the
+/// line ending so braces inside it are invisible.
+///
+/// Returns `None` when the braces never balance, which is a boundary that could
+/// not be located rather than an error in the LaTeX.
+#[must_use]
+pub fn balanced_end(bytes: &[u8], open: usize) -> Option<usize> {
+    balanced_end_with(bytes, open, CommentRule::Latex)
+}
+
+/// How `%` is read while scanning a balanced region.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum CommentRule {
+    /// LaTeX's own rule: an unescaped `%` opens a comment.
+    Latex,
+    /// As above, except that a `%` immediately after an ASCII digit is a
+    /// percent sign.
+    ///
+    /// This exists because the grammar admits `width = 80%` as a value and also
+    /// scans block bodies with LaTeX's comment rule, and those two cannot both
+    /// hold: the `%` swallows the closing brace and the block never ends. It is
+    /// the same collision the tool baseline measured in plain LaTeX, where
+    /// `width=120%` fails with `File ended while scanning use of \Gin@ii`.
+    ///
+    /// One byte of context decides it, so it stays a left-to-right rule. It
+    /// applies only inside a NextTeX block body, never to transported LaTeX,
+    /// where a comment must keep meaning what TeX says it means.
+    PercentAfterDigit,
+}
+
+/// [`balanced_end`] with an explicit rule for `%`.
+///
+/// # Panics
+///
+/// Never; the signature returns `None` for every failure.
+#[must_use]
+pub fn balanced_end_with(bytes: &[u8], open: usize, rule: CommentRule) -> Option<usize> {
+    if bytes.get(open) != Some(&b'{') {
+        return None;
+    }
+    let mut depth = 1u32;
+    let mut at = open + 1;
+    while at < bytes.len() {
+        if !is_escaped(bytes, at) {
+            match bytes[at] {
+                b'%' => {
+                    let is_percent_sign = rule == CommentRule::PercentAfterDigit
+                        && at > 0
+                        && bytes[at - 1].is_ascii_digit();
+                    if !is_percent_sign {
+                        while at < bytes.len() && bytes[at] != b'\n' {
+                            at += 1;
+                        }
+                        continue;
+                    }
+                }
+                b'{' => depth += 1,
+                b'}' => {
+                    depth -= 1;
+                    if depth == 0 {
+                        return Some(at + 1);
+                    }
+                }
+                _ => {}
+            }
+        }
+        at += 1;
+    }
+    None
+}
+
 fn span(start: usize, end: usize) -> Span {
     Span::new(
         u32::try_from(start).unwrap_or(u32::MAX),
