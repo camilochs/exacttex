@@ -139,6 +139,8 @@ still receives a `.tex` file.
   boundaries, and where constructs are not recognized.
 - [`docs/checking.md`](docs/checking.md) — what the compiler is willing to call an error, and what it
   refuses to: entity classes, the closed list of hard errors, coverage, blame, and the diagnostic fields.
+- [`docs/diagnostics.md`](docs/diagnostics.md) — running TeX and reporting what it said against your file,
+  including who is to blame.
 - [`docs/wasm.md`](docs/wasm.md) — the WebAssembly build: the calling convention, and why it carries the
   only `unsafe` in the workspace.
 - [`docs/lsp.md`](docs/lsp.md) — the language server: what it answers, what it deliberately does not,
