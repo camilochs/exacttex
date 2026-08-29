@@ -50,6 +50,7 @@ pub mod document;
 pub mod editor;
 pub mod io;
 pub mod labels;
+pub mod project;
 pub mod rename;
 pub mod review;
 pub mod scanner;

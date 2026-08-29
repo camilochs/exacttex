@@ -91,6 +91,28 @@ pub trait SourceLoader {
         relative_to: Option<SourceId>,
         sources: &mut Sources,
     ) -> Result<SourceId, IoError>;
+
+    /// A stable identity for `name`, used only to detect cycles.
+    ///
+    /// Two names that reach the same content must canonicalise equal, or an
+    /// inclusion cycle written through two spellings of one path never
+    /// terminates. The default is the name itself, which is correct wherever
+    /// names are already canonical — an in-memory store, an editor's buffer
+    /// list.
+    fn canonical(&self, name: &str) -> String {
+        name.to_owned()
+    }
+
+    /// Reads a resource that is not a source: a `.bib` beside the root.
+    ///
+    /// `beside` is the root document's name; `name` resolves relative to it,
+    /// exactly as BibTeX resolves `\bibliography{refs}`.
+    fn read_aux(&self, beside: &str, name: &str) -> Option<Vec<u8>>;
+
+    /// Whether a file exists, without reading it: a figure's `src`.
+    ///
+    /// `relative_to` is the name of the source that mentions it.
+    fn file_exists(&self, relative_to: &str, name: &str) -> bool;
 }
 
 /// Receives the bytes the compiler emits.
@@ -168,6 +190,18 @@ impl SourceLoader for Memory {
                 name: resolved.clone(),
             })?;
         Ok(sources.add(resolved, bytes.clone()))
+    }
+
+    fn read_aux(&self, beside: &str, name: &str) -> Option<Vec<u8>> {
+        self.inputs.get(&Self::resolve(name, Some(beside))).cloned()
+    }
+
+    fn file_exists(&self, relative_to: &str, name: &str) -> bool {
+        // A store answers from what it was given. A host that wants a
+        // figure's existence checked includes the name — empty bytes are
+        // enough, because nothing ever parses an asset.
+        self.inputs
+            .contains_key(&Self::resolve(name, Some(relative_to)))
     }
 }
 

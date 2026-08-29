@@ -24,18 +24,69 @@
 //! how much to read, and so a result containing a zero byte — emitted LaTeX
 //! can — is not truncated by a C-string convention.
 
-use xtex_core::bibliography::{Bibliography, Unavailable};
-use xtex_core::check::{check, to_json};
-use xtex_core::source::Sources;
+use xtex_core::check::to_json;
+use xtex_core::io::Memory;
+use xtex_core::project::check_project;
 use xtex_core::sourcemap::emit_with_map;
-use xtex_core::symbols::SymbolTable;
 use xtex_core::{emit, parse};
 
-/// The name every document is given inside the module.
+/// A project, decoded from the caller's bundle.
 ///
-/// A browser has no paths. Diagnostics still need a file name, and inventing a
-/// stable one is honest where inventing a path would not be.
-const DOCUMENT: &str = "document.xtex";
+/// # The bundle format
+///
+/// Everything little-endian, everything length-prefixed, nothing aligned —
+/// readable from JavaScript with a `DataView` and nothing else:
+///
+/// ```text
+/// u32 root_len   root_name (UTF-8)
+/// u32 file_count
+/// file_count × ( u32 name_len  name (UTF-8)  u32 data_len  data )
+/// ```
+///
+/// Names are logical, `/`-separated, project-relative — the same names the
+/// project's own `@import` and `\include` write. The host includes every file
+/// a check may ask about; an asset that exists but is not source (a figure's
+/// PDF) is listed with empty data, because existence is the only question ever
+/// asked of it. See `docs/decisions/0007`.
+struct Bundle {
+    root: String,
+    store: Memory,
+}
+
+/// Decodes a bundle, or returns `None` for one that lies about its lengths.
+///
+/// A malformed bundle is the caller's bug, not the author's document, so the
+/// answer is no result rather than a diagnostic.
+fn decode_bundle(bytes: &[u8]) -> Option<Bundle> {
+    fn take_u32(bytes: &[u8], at: &mut usize) -> Option<usize> {
+        let end = at.checked_add(4)?;
+        let field = bytes.get(*at..end)?;
+        *at = end;
+        Some(u32::from_le_bytes([field[0], field[1], field[2], field[3]]) as usize)
+    }
+    fn take(bytes: &[u8], at: &mut usize, len: usize) -> Option<Vec<u8>> {
+        let end = at.checked_add(len)?;
+        let field = bytes.get(*at..end)?.to_vec();
+        *at = end;
+        Some(field)
+    }
+
+    let mut at = 0usize;
+    let root_len = take_u32(bytes, &mut at)?;
+    let root = String::from_utf8(take(bytes, &mut at, root_len)?).ok()?;
+    let count = take_u32(bytes, &mut at)?;
+    let mut store = Memory::new();
+    for _ in 0..count {
+        let name_len = take_u32(bytes, &mut at)?;
+        let name = String::from_utf8(take(bytes, &mut at, name_len)?).ok()?;
+        let data_len = take_u32(bytes, &mut at)?;
+        let data = take(bytes, &mut at, data_len)?;
+        store = store.with_input(name, data);
+    }
+    // Trailing bytes mean the caller and the module disagree about the
+    // format, and answering anyway would answer the wrong question.
+    (at == bytes.len()).then_some(Bundle { root, store })
+}
 
 /// Reserves `len` bytes for the caller to write into.
 ///
@@ -84,7 +135,11 @@ pub unsafe extern "C" fn xtex_free_result(result: *mut u8) {
     drop(unsafe { Vec::from_raw_parts(result, len, len) });
 }
 
-/// Emits the document as LaTeX.
+/// Emits the bundle's root document as LaTeX.
+///
+/// The root alone: a host that wants every file's emission calls once per
+/// file, with that file as the root. Imports and includes are transported
+/// bytes in the root's own emission, exactly as the CLI writes them.
 ///
 /// # Safety
 ///
@@ -92,8 +147,14 @@ pub unsafe extern "C" fn xtex_free_result(result: *mut u8) {
 #[unsafe(no_mangle)]
 pub unsafe extern "C" fn xtex_emit(pointer: *const u8, len: usize) -> *mut u8 {
     let bytes = unsafe { input(pointer, len) };
-    let mut sources = Sources::new();
-    let id = sources.add(DOCUMENT, bytes);
+    let Some(bundle) = decode_bundle(&bytes) else {
+        return result(&[]);
+    };
+    let mut sources = xtex_core::source::Sources::new();
+    let Ok(id) = xtex_core::io::SourceLoader::load(&bundle.store, &bundle.root, None, &mut sources)
+    else {
+        return result(&[]);
+    };
     let document = parse(&sources, id);
     let mut out = Vec::new();
     match emit(&sources, &document, &mut out) {
@@ -105,7 +166,12 @@ pub unsafe extern "C" fn xtex_emit(pointer: *const u8, len: usize) -> *mut u8 {
     }
 }
 
-/// Checks the document and returns the JSON `xtex check --json` prints.
+/// Checks the bundle's project and returns the JSON `xtex check --json` prints.
+///
+/// The whole pipeline: transitive `@import`, the author's own `\include` and
+/// `\input` edges, the bibliography, the label inventory. One answer, equal
+/// byte for byte to the CLI's for the same project on disk — the parity test
+/// holds that, rather than this comment.
 ///
 /// # Safety
 ///
@@ -113,24 +179,24 @@ pub unsafe extern "C" fn xtex_emit(pointer: *const u8, len: usize) -> *mut u8 {
 #[unsafe(no_mangle)]
 pub unsafe extern "C" fn xtex_check_json(pointer: *const u8, len: usize) -> *mut u8 {
     let bytes = unsafe { input(pointer, len) };
-    let mut sources = Sources::new();
-    let id = sources.add(DOCUMENT, bytes);
-    let document = parse(&sources, id);
-    let mut table = SymbolTable::new();
-    table.merge(&sources, &document);
-    // No bibliography can be read here: the module is handed a document, not a
-    // project. `Unavailable` is the state that keeps every citation silent.
-    let diagnostics = check(
-        &table,
-        &Bibliography::Unavailable(Unavailable::NoneDeclared),
-    );
-
+    let Some(bundle) = decode_bundle(&bytes) else {
+        return result(&[]);
+    };
+    // No `xtex.toml` reaches a browser yet; the default prefixes apply, as
+    // they do for a project on disk that carries none.
+    let Ok((sources, diagnostics, coverage, _)) = check_project(
+        &bundle.store,
+        &bundle.root,
+        xtex_core::symbols::PrefixMap::default(),
+    ) else {
+        return result(&[]);
+    };
     let mut json = String::new();
-    to_json(&sources, &diagnostics, document.coverage(), &mut json);
+    to_json(&sources, &diagnostics, coverage, &mut json);
     result(json.as_bytes())
 }
 
-/// Emits the document and returns its source map as JSON.
+/// Emits the bundle's root and returns its source map as JSON.
 ///
 /// # Safety
 ///
@@ -138,8 +204,14 @@ pub unsafe extern "C" fn xtex_check_json(pointer: *const u8, len: usize) -> *mut
 #[unsafe(no_mangle)]
 pub unsafe extern "C" fn xtex_source_map(pointer: *const u8, len: usize) -> *mut u8 {
     let bytes = unsafe { input(pointer, len) };
-    let mut sources = Sources::new();
-    let id = sources.add(DOCUMENT, bytes);
+    let Some(bundle) = decode_bundle(&bytes) else {
+        return result(&[]);
+    };
+    let mut sources = xtex_core::source::Sources::new();
+    let Ok(id) = xtex_core::io::SourceLoader::load(&bundle.store, &bundle.root, None, &mut sources)
+    else {
+        return result(&[]);
+    };
     let document = parse(&sources, id);
     match emit_with_map(&sources, &document) {
         Ok(emission) => result(&emission.map.to_json()),
