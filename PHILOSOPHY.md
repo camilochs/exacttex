@@ -135,7 +135,10 @@ Ordinary LaTeX is `?O`, the unknown *open* datatype: any package may define new 
 not merely unknown, it is unbounded. `?O` is consistent with every type. Therefore an unannotated `\ref{x}`
 can never produce a hard error, and a renamed `.tex` checks clean by construction.
 
-Everything else is `advisory`, behind `--strict-tex`, and never affects the exit code.
+Everything else is `advisory` and never affects the exit code. Which advisories are printed depends on who
+asked. An observation about plain LaTeX that nobody asked us to check is printed only behind `--strict-tex`.
+A check an explicit construct *did* ask for, and that we could not perform, is printed by default — staying
+quiet there reports a document as checked when it was not.
 
 Never scan inside opaque regions for `\label`, `\ref` or `\cite` and treat what you find as checkable. Such a
 scan matches inside a `\newcommand` body, inside verbatim text, and inside an inactive `\if` branch.

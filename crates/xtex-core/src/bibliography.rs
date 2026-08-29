@@ -51,6 +51,26 @@ pub enum Unavailable {
     },
 }
 
+impl Unavailable {
+    /// Why the key set is missing, in the words a reader of the diagnostic needs.
+    ///
+    /// The derived `Debug` spelling carries field names and byte offsets, which
+    /// are the compiler's business rather than the author's.
+    #[must_use]
+    pub fn reason(&self) -> String {
+        match self {
+            Self::NoneDeclared => "the document declares no bibliography".to_owned(),
+            Self::ComputedPath { .. } => {
+                "the declared bibliography path is computed rather than literal".to_owned()
+            }
+            Self::Unreadable { name } => format!("`{name}` could not be read"),
+            Self::UnparsableEntry { name } => {
+                format!("an entry boundary in `{name}` could not be located")
+            }
+        }
+    }
+}
+
 /// What the document's bibliography amounts to.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum Bibliography {

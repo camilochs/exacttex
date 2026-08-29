@@ -9,8 +9,8 @@ use std::fs;
 use std::path::{Path, PathBuf};
 use std::process::{Command, ExitCode};
 
-use xtex_core::bibliography::{Bibliography, Declared, Unavailable, assemble, declared_in};
-use xtex_core::check::{Diagnostic, check_documents, check_with_labels, to_json};
+use xtex_core::bibliography::{Bibliography, Declared, assemble, declared_in};
+use xtex_core::check::{Blame, Diagnostic, Severity, check_documents, check_with_labels, to_json};
 use xtex_core::diagnostics::map_emitted_diagnostic;
 use xtex_core::document::Node;
 use xtex_core::editor::entity_at;
@@ -223,7 +223,6 @@ fn sole_document() -> Result<String, String> {
 
 fn check_command(args: &[String]) -> ExitCode {
     let json = args.iter().any(|arg| arg == "--json");
-    let strict = args.iter().any(|arg| arg == "--strict-tex");
     let inputs: Vec<&str> = args
         .iter()
         .filter(|arg| !arg.starts_with("--"))
@@ -235,7 +234,7 @@ fn check_command(args: &[String]) -> ExitCode {
     }
 
     match run_check(inputs[0]) {
-        Ok((sources, diagnostics, coverage, bibliography)) => {
+        Ok((sources, diagnostics, coverage, _bibliography)) => {
             if json {
                 {
                     // One renderer, shared with the WebAssembly build, so the two
@@ -248,14 +247,12 @@ fn check_command(args: &[String]) -> ExitCode {
                 for diagnostic in &diagnostics {
                     print_human(&sources, diagnostic);
                 }
-                if strict {
-                    if let Bibliography::Unavailable(reason) = bibliography {
-                        print_bibliography_advisory(&reason);
-                    }
-                }
                 println!("coverage: {:.1}%", coverage * 100.0);
             }
-            if diagnostics.is_empty() {
+            if diagnostics
+                .iter()
+                .all(|diagnostic| diagnostic.severity == Severity::Advisory)
+            {
                 ExitCode::SUCCESS
             } else {
                 ExitCode::from(1)
@@ -330,6 +327,8 @@ fn run_check(root: &str) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography)
                         span,
                         message: format!("import path `{path}` does not resolve"),
                         related: Vec::new(),
+                        severity: Severity::Error,
+                        blame: Blame::XtexConstruct,
                     });
                 }
                 Err(error) => return Err(error),
@@ -345,6 +344,7 @@ fn run_check(root: &str) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography)
     // missing. Merged across the root, like every other declaration.
     let inventory = root_inventory(labels, labels_available);
     let mut diagnostics = check_with_labels(&table, &bibliography, &inventory);
+    diagnostics.extend(bibliography_advisory(&table, &bibliography));
     diagnostics.extend(check_documents(&sources, &documents, |source, name| {
         let base = sources
             .get(source)
@@ -448,8 +448,22 @@ fn parse_prefixes(text: &str) -> Option<PrefixMap> {
     found.then_some(map)
 }
 
-fn print_bibliography_advisory(reason: &Unavailable) {
-    println!("advisory: citation checking unavailable ({reason:?})");
+fn bibliography_advisory(table: &SymbolTable, bibliography: &Bibliography) -> Option<Diagnostic> {
+    let Bibliography::Unavailable(reason) = bibliography else {
+        return None;
+    };
+    let (_, citation) = table.citations().next()?;
+    Some(Diagnostic {
+        code: "XT2001",
+        entity: EntityClass::Citation,
+        name: None,
+        source: citation.payload.source,
+        span: citation.payload.span,
+        message: format!("citation checking unavailable: {}", reason.reason()),
+        related: Vec::new(),
+        severity: Severity::Advisory,
+        blame: Blame::Unresolved,
+    })
 }
 
 fn build(
@@ -1061,7 +1075,10 @@ fn offset_line_column(bytes: &[u8], offset: usize) -> (usize, usize) {
 /// Prints one diagnostic the way a person reads it.
 fn print_human(sources: &Sources, diagnostic: &Diagnostic) {
     let (file, line, column) = location(sources, diagnostic.source, diagnostic.span);
-    println!("error[{}]: {}", diagnostic.code, diagnostic.message);
+    match diagnostic.severity {
+        Severity::Error => println!("error[{}]: {}", diagnostic.code, diagnostic.message),
+        Severity::Advisory => println!("advisory: {}", diagnostic.message),
+    }
     println!("  --> {file}:{line}:{column}");
     println!("  entity: {}", diagnostic.entity.name());
     if let Some(name) = &diagnostic.name {
@@ -1076,7 +1093,7 @@ fn print_human(sources: &Sources, diagnostic: &Diagnostic) {
         let (file, line, column) = location(sources, related.source, related.span);
         println!("  --> {file}:{line}:{column}: {}", related.message);
     }
-    println!("  blame: xtex-construct");
+    println!("  blame: {}", diagnostic.blame.as_str());
 }
 
 /// File, one-based line and one-based column of a span.
@@ -1343,5 +1360,94 @@ fn root_inventory(
         xtex_core::labels::Inventory::Complete(labels)
     } else {
         xtex_core::labels::Inventory::Unavailable(xtex_core::labels::Unavailable::Quarantined)
+    }
+}
+
+#[cfg(test)]
+mod bibliography_advisory_tests {
+    use super::*;
+    use xtex_core::bibliography::Unavailable;
+
+    fn table(text: &str) -> (Sources, SymbolTable) {
+        let mut sources = Sources::new();
+        let id = sources.add("main.xtex", text.as_bytes().to_vec());
+        let document = parse(&sources, id);
+        let mut table = SymbolTable::new();
+        table.merge(&sources, &document);
+        (sources, table)
+    }
+
+    #[test]
+    fn unreadable_bibliography_with_a_citation_is_an_advisory_in_json() {
+        let (sources, table) = table("See @cite(knuth1984).");
+        let bibliography = Bibliography::Unavailable(Unavailable::Unreadable {
+            name: "refs.bib".to_owned(),
+        });
+        let advisory = bibliography_advisory(&table, &bibliography)
+            .expect("the explicit citation requests bibliography checking");
+
+        assert_eq!(advisory.severity, Severity::Advisory);
+        assert_eq!(advisory.blame, Blame::Unresolved);
+        assert_eq!(advisory.name, None, "the advisory is not about a key");
+        let mut json = String::new();
+        to_json(&sources, &[advisory], 1.0, &mut json);
+        assert!(json.contains("\"severity\":\"advisory\""), "{json}");
+        assert!(
+            json.contains("citation checking unavailable: `refs.bib` could not be read"),
+            "{json}"
+        );
+    }
+
+    #[test]
+    fn no_advisory_message_carries_a_derived_debug_spelling() {
+        // The reader of this line is the author, not the compiler. Field names
+        // and byte offsets belong in neither output form.
+        let (_, table) = table("See @cite(knuth1984).");
+        for reason in [
+            Unavailable::NoneDeclared,
+            Unavailable::ComputedPath {
+                span: xtex_core::source::Span::new(0, 1),
+            },
+            Unavailable::Unreadable {
+                name: "refs.bib".to_owned(),
+            },
+            Unavailable::UnparsableEntry {
+                name: "refs.bib".to_owned(),
+            },
+        ] {
+            let message = bibliography_advisory(&table, &Bibliography::Unavailable(reason.clone()))
+                .expect("the explicit citation requests bibliography checking")
+                .message;
+            for tell in ["{", "}", "Span", "start:", "name:"] {
+                assert!(
+                    !message.contains(tell),
+                    "`{tell}` leaked into `{message}` from `{reason:?}`"
+                );
+            }
+        }
+    }
+
+    #[test]
+    fn unreadable_bibliography_without_a_citation_says_nothing() {
+        // Declarations, references and a plain LaTeX `\cite` — every kind of
+        // construct except the one that asks about a bibliography. Anchoring on
+        // any of them would report an unreadable file at a document that never
+        // asked, which is the invariant in `AGENTS.md` §4.
+        let (_, table) = table(
+            "@id(intro) here, @ref(intro) and @ref(absent).\n\\cite{knuth1984}\n\\bibliography{refs}",
+        );
+        let bibliography = Bibliography::Unavailable(Unavailable::Unreadable {
+            name: "refs.bib".to_owned(),
+        });
+
+        assert!(bibliography_advisory(&table, &bibliography).is_none());
+    }
+
+    #[test]
+    fn complete_bibliography_says_nothing() {
+        let (_, table) = table("See @cite(knuth1984).");
+        let bibliography = Bibliography::Complete(BTreeSet::from(["knuth1984".to_owned()]));
+
+        assert!(bibliography_advisory(&table, &bibliography).is_none());
     }
 }
