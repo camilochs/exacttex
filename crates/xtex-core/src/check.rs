@@ -6,6 +6,7 @@ use crate::document::{Document, Node};
 use crate::scanner::EntryToken;
 use crate::source::{SourceId, Sources, Span};
 use crate::symbols::{EntityClass, SymbolError, SymbolTable};
+use std::collections::BTreeMap;
 
 /// A location used to explain a diagnostic.
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -40,6 +41,24 @@ pub struct Diagnostic {
 /// Runs the checks whose evidence is already assembled for one document root.
 #[must_use]
 pub fn check(table: &SymbolTable, bibliography: &Bibliography) -> Vec<Diagnostic> {
+    check_with_labels(
+        table,
+        bibliography,
+        &crate::labels::Inventory::Complete(BTreeMap::new()),
+    )
+}
+
+/// Checks with the author's own `\\label` commands available to resolve `@ref`.
+///
+/// Without them, referencing a figure the author has not annotated yet is a
+/// hard error on a document LaTeX resolves without complaint, and annotating a
+/// document one figure at a time — the whole on-ramp — does not work.
+#[must_use]
+pub fn check_with_labels(
+    table: &SymbolTable,
+    bibliography: &Bibliography,
+    labels: &crate::labels::Inventory,
+) -> Vec<Diagnostic> {
     let mut diagnostics = Vec::new();
     for error in table.errors() {
         match error {
@@ -78,7 +97,7 @@ pub fn check(table: &SymbolTable, bibliography: &Bibliography) -> Vec<Diagnostic
             }),
         }
     }
-    for (name, reference) in table.unresolved_references() {
+    for (name, reference) in table.unresolved_against(labels) {
         diagnostics.push(Diagnostic {
             code: "XT1003",
             entity: table.demand_of(name),
@@ -280,6 +299,65 @@ fn block_error(source: SourceId, kind: BlockKind, error: BlockError, bytes: &[u8
         span,
         message,
         related: Vec::new(),
+    }
+}
+
+#[cfg(test)]
+mod label_tests {
+    use super::*;
+    use crate::bibliography::{Bibliography, Unavailable};
+    use crate::labels::inventory;
+    use crate::parse;
+    use crate::symbols::SymbolTable;
+
+    fn diagnose(text: &str) -> Vec<String> {
+        let mut sources = Sources::new();
+        let id = sources.add("a.xtex", text.as_bytes().to_vec());
+        let document = parse(&sources, id);
+        let mut table = SymbolTable::new();
+        table.merge(&sources, &document);
+        let labels = inventory(&sources, &document, id);
+        check_with_labels(
+            &table,
+            &Bibliography::Unavailable(Unavailable::NoneDeclared),
+            &labels,
+        )
+        .into_iter()
+        .map(|diagnostic| diagnostic.name.unwrap_or_default())
+        .collect()
+    }
+
+    #[test]
+    fn a_reference_to_the_authors_own_label_resolves() {
+        // Annotating a document one figure at a time is the on-ramp, and it
+        // does not work if referencing an unannotated figure is a hard error
+        // on a document LaTeX resolves without complaint.
+        assert!(diagnose("\\label{fig:old}\nSee @ref(fig:old).").is_empty());
+    }
+
+    #[test]
+    fn a_reference_to_nothing_still_fails() {
+        // The fix widened what resolves. It must not have weakened what fails.
+        assert_eq!(
+            diagnose("\\label{fig:old}\nSee @ref(fig:ghost)."),
+            ["fig:ghost"]
+        );
+    }
+
+    #[test]
+    fn a_label_in_a_macro_body_does_not_resolve_a_reference() {
+        assert_eq!(
+            diagnose("\\newcommand{\\m}[1]{\\label{fig:inside}}\nSee @ref(fig:inside)."),
+            ["fig:inside"]
+        );
+    }
+
+    #[test]
+    fn a_commented_label_does_not_resolve_a_reference() {
+        assert_eq!(
+            diagnose("% \\label{fig:hidden}\nSee @ref(fig:hidden)."),
+            ["fig:hidden"]
+        );
     }
 }
 

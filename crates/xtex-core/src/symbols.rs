@@ -329,6 +329,28 @@ impl SymbolTable {
         })
     }
 
+    /// Every `@ref` that neither an `@id` nor a `\\label` declares.
+    ///
+    /// The inventory is the author's own `\\label` commands. Without it,
+    /// referencing a figure they have not annotated yet is a hard error on a
+    /// document LaTeX resolves without complaint — and annotating a document
+    /// one figure at a time is the whole on-ramp.
+    ///
+    /// A `\\label` says a name exists and nothing about what it names, so it
+    /// resolves the reference and supplies no class. `?O` is consistent with
+    /// everything, so no class comparison fires against it.
+    pub fn unresolved_against<'a>(
+        &'a self,
+        labels: &'a crate::labels::Inventory,
+    ) -> impl Iterator<Item = (&'a str, &'a Reference)> {
+        self.references.iter().filter_map(move |(name, reference)| {
+            (reference.kind == EntryToken::Ref
+                && !self.declarations.contains_key(name)
+                && !labels.contains(name))
+            .then_some((name.as_str(), reference))
+        })
+    }
+
     /// Every `@cite`, for a checker that has a key set to compare against.
     pub fn citations(&self) -> impl Iterator<Item = (&str, &Reference)> {
         self.references.iter().filter_map(|(name, reference)| {

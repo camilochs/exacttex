@@ -4,13 +4,13 @@
 //! and process exit codes. `xtex-core` has none of them, which is what lets
 //! the same core compile to WebAssembly.
 
-use std::collections::BTreeSet;
+use std::collections::{BTreeMap, BTreeSet};
 use std::fs;
 use std::path::{Path, PathBuf};
 use std::process::{Command, ExitCode};
 
 use xtex_core::bibliography::{Bibliography, Declared, Unavailable, assemble, declared_in};
-use xtex_core::check::{Diagnostic, check, check_documents, to_json};
+use xtex_core::check::{Diagnostic, check_documents, check_with_labels, to_json};
 use xtex_core::diagnostics::map_emitted_diagnostic;
 use xtex_core::document::Node;
 use xtex_core::editor::entity_at;
@@ -281,6 +281,11 @@ fn run_check(root: &str) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography)
     let mut merged = BTreeSet::new();
     let mut import_diagnostics = Vec::new();
     let mut declared = Declared::default();
+    // One inventory for the whole root, merged like the symbol table: a
+    // `\label` in an imported file declares its name for the root, exactly as
+    // an `@id` there does.
+    let mut labels: BTreeMap<String, xtex_core::source::Span> = BTreeMap::new();
+    let mut labels_available = true;
 
     while let Some(id) = pending.pop() {
         let name = sources
@@ -293,6 +298,13 @@ fn run_check(root: &str) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography)
         }
         let document = parse(&sources, id);
         table.merge(&sources, &document);
+        match xtex_core::labels::inventory(&sources, &document, id) {
+            xtex_core::labels::Inventory::Complete(found) => labels.extend(found),
+            // One file that went dark makes the root's inventory a subset, and
+            // a subset that looks complete turns every name it missed into a
+            // false "not declared".
+            xtex_core::labels::Inventory::Unavailable(_) => labels_available = false,
+        }
         merge_declared(&mut declared, declared_in(&sources, id));
         let mut imports = Vec::new();
         document.walk(|node| {
@@ -328,7 +340,11 @@ fn run_check(root: &str) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography)
 
     let base = Path::new(root).parent().unwrap_or_else(|| Path::new("."));
     let bibliography = assemble(&declared, |name| fs::read(base.join(name)).ok());
-    let mut diagnostics = check(&table, &bibliography);
+    // The author's own `\label` commands resolve `@ref` too, so annotating a
+    // document one figure at a time does not report the unannotated ones as
+    // missing. Merged across the root, like every other declaration.
+    let inventory = root_inventory(labels, labels_available);
+    let mut diagnostics = check_with_labels(&table, &bibliography, &inventory);
     diagnostics.extend(check_documents(&sources, &documents, |source, name| {
         let base = sources
             .get(source)
@@ -1312,4 +1328,20 @@ fn report_record(
     }
     println!("  blame: {}", mapped.blame.as_str());
     true
+}
+
+/// One inventory for a whole document root.
+///
+/// Complete or unavailable, never partial: a subset that looks complete turns
+/// every name it missed into a false "not declared", which is the failure this
+/// whole inventory exists to prevent.
+fn root_inventory(
+    labels: BTreeMap<String, xtex_core::source::Span>,
+    available: bool,
+) -> xtex_core::labels::Inventory {
+    if available {
+        xtex_core::labels::Inventory::Complete(labels)
+    } else {
+        xtex_core::labels::Inventory::Unavailable(xtex_core::labels::Unavailable::Quarantined)
+    }
 }

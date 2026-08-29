@@ -25,7 +25,6 @@
 
 use std::collections::{BTreeMap, BTreeSet};
 
-use crate::scanner::{Piece, scan};
 use crate::source::{SourceId, Sources, Span};
 use crate::symbols::{Reference, SymbolTable};
 
@@ -122,8 +121,13 @@ pub fn declared_in(sources: &Sources, id: SourceId) -> Declared {
     };
     let bytes = source.bytes();
 
-    for piece in scan(bytes) {
-        let Piece::Text(span) = piece else { continue };
+    // Prose, plus the two commands this reader is entitled to look inside.
+    // `\bibitem` is included because a `thebibliography` environment holds them
+    // and they are declarations there.
+    for span in crate::scanner::readable_for(
+        bytes,
+        &["bibliography", "addbibresource", "bibitem", "begin"],
+    ) {
         let region = &bytes[span.start()..span.end()];
         let base = span.start();
 

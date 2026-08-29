@@ -25,7 +25,7 @@ use std::io::{BufReader, Write};
 
 use json::{Value, write_text};
 use xtex_core::bibliography::{Bibliography, Unavailable};
-use xtex_core::check::check;
+use xtex_core::check::check_with_labels;
 use xtex_core::document::Document;
 use xtex_core::editor::{Position, completions, construct_at, definition, hover, offset_at};
 use xtex_core::parse;
@@ -140,7 +140,8 @@ fn diagnose(uri: &str, text: &str) -> String {
     let bibliography = Bibliography::Unavailable(Unavailable::NoneDeclared);
 
     let mut items = String::new();
-    for diagnostic in check(&table, &bibliography) {
+    let labels = xtex_core::labels::inventory(&sources, &document, id);
+    for diagnostic in check_with_labels(&table, &bibliography, &labels) {
         let (line, column) = line_column(text.as_bytes(), diagnostic.span.start());
         let (end_line, end_column) = line_column(text.as_bytes(), diagnostic.span.end());
         if !items.is_empty() {
