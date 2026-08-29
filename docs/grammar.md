@@ -987,9 +987,8 @@ The following decisions remain open because the available evidence does not sele
    title-specific check or reference would justify the latter.
 6. **Typed algorithm and panel blocks.** Light annotations admit both. A demonstrated typed check with a
    stable field set would justify new blocks.
-7. **What `@cite` emits.** `@ref` and `@id` have their emitted form written down; `@cite` does not. The
-   plain `@cite(k)` is uncontroversial, but the `style` field has no stated lowering, and a field that
-   selects between `\\cite` and `\\citet` selects between two packages' commands. Found while writing the
-   revision fixtures' expected views, where the question could not be avoided. Settle it in #13.
+7. ~~**What `@cite` emits.**~~ Settled 2026-08-29 by the director: a citation construct is a LaTeX
+   citation command written with `@`, and it emits that command. No style vocabulary, no package
+   inference, no fields. See §4.
 8. ~~**Package requirements.**~~ Settled 2026-08-29: `needs` is not a field, packages are source-authored.
    See `decisions/0001-typed-emission-and-no-injection.md`.
