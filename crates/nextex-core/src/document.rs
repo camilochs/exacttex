@@ -14,6 +14,7 @@
 //! without changing how the rest of the compiler walks a document. See
 //! `docs/references.md` for the trade-off that decision turns on.
 
+use crate::scanner::EntryToken;
 use crate::source::{SourceId, Span};
 
 /// How much of a region the parser was able to bound.
@@ -75,6 +76,31 @@ pub enum Node {
         /// How much of the region the parser could bound.
         confidence: ParseConfidence,
     },
+    /// A recognised NextTeX construct.
+    ///
+    /// Its bytes are still emitted from the span for now. Lowering each kind to
+    /// its LaTeX form is the emitter's next job; until then a construct
+    /// transports like anything else, so recognising one cannot change output.
+    Construct {
+        /// Source this construct came from.
+        source: SourceId,
+        /// Byte range covering the whole construct.
+        span: Span,
+        /// Which construct it is.
+        kind: EntryToken,
+    },
+    /// An entry token whose construct could not be closed.
+    ///
+    /// The bytes transport unchanged; what differs is that a diagnostic points
+    /// here.
+    Malformed {
+        /// Source this token came from.
+        source: SourceId,
+        /// Byte range covering the entry token.
+        span: Span,
+        /// Which construct the token opened.
+        kind: EntryToken,
+    },
 }
 
 impl Node {
@@ -82,7 +108,9 @@ impl Node {
     #[must_use]
     pub const fn source(&self) -> SourceId {
         match self {
-            Self::Opaque { source, .. } => *source,
+            Self::Opaque { source, .. }
+            | Self::Construct { source, .. }
+            | Self::Malformed { source, .. } => *source,
         }
     }
 
@@ -90,7 +118,9 @@ impl Node {
     #[must_use]
     pub const fn span(&self) -> Span {
         match self {
-            Self::Opaque { span, .. } => *span,
+            Self::Opaque { span, .. }
+            | Self::Construct { span, .. }
+            | Self::Malformed { span, .. } => *span,
         }
     }
 
@@ -191,9 +221,9 @@ impl Document {
     /// Whether the parser gave up before the end of the source.
     #[must_use]
     pub fn reached_end_of_recognition(&self) -> bool {
-        self.nodes.iter().any(|n| match n {
-            Node::Opaque { confidence, .. } => !confidence.recognition_continues(),
-        })
+        self.nodes.iter().any(
+            |n| matches!(n, Node::Opaque { confidence, .. } if !confidence.recognition_continues()),
+        )
     }
 }
 

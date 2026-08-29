@@ -22,11 +22,12 @@
 //!
 //! # Status
 //!
-//! [`parse`] recognises nothing yet: it produces one opaque node covering the
-//! whole source. That is the correct starting point rather than a placeholder,
-//! because the parser's job is to *narrow* what is opaque, and every construct
-//! it learns to bound shrinks that region without changing the emitter's
-//! contract.
+//! [`parse`] recognises the inline constructs and the raw escape, and honours
+//! the regions in which an entry token is ordinary text — comments, math,
+//! verbatim, and the raw escape itself. Everything else is opaque and
+//! transported. Command arguments are still missing from that list, so a
+//! construct inside one is recognised when it should not be; that gap closes
+//! with the signature database.
 //!
 //! ```
 //! use nextex_core::{emit, parse, source::Sources};
@@ -39,11 +40,11 @@
 //! emit(&sources, &document, &mut out).unwrap();
 //!
 //! assert_eq!(out, b"\\section{Hi}\r\n");
-//! assert_eq!(document.coverage(), 0.0); // nothing is modelled yet
 //! ```
 
 pub mod document;
 pub mod io;
+pub mod scanner;
 pub mod source;
 
 use std::error::Error;
@@ -51,6 +52,7 @@ use std::fmt;
 
 use document::{Document, Node, ParseConfidence};
 use io::{IoError, OutputSink, SourceLoader};
+use scanner::Piece;
 use source::{SourceId, Sources};
 
 /// A node referred to a source range that is not there.
@@ -92,15 +94,28 @@ pub fn parse(sources: &Sources, id: SourceId) -> Document {
     let Some(source) = sources.get(id) else {
         return document;
     };
-    let span = source.full_span();
-    if !span.is_empty() {
-        document.push(Node::Opaque {
-            source: id,
-            span,
-            // Balanced rather than to-end-of-file: the region has a known end,
-            // it is simply not modelled. Nothing has given up.
-            confidence: ParseConfidence::OpaqueBalanced,
-        });
+
+    for piece in scanner::scan(source.bytes()) {
+        let node = match piece {
+            Piece::Text(span) => Node::Opaque {
+                source: id,
+                span,
+                // Balanced rather than to-end-of-file: the region has a known
+                // end, it is simply not modelled. Nothing has given up.
+                confidence: ParseConfidence::OpaqueBalanced,
+            },
+            Piece::Construct { kind, span } => Node::Construct {
+                source: id,
+                span,
+                kind,
+            },
+            Piece::Malformed { kind, span } => Node::Malformed {
+                source: id,
+                span,
+                kind,
+            },
+        };
+        document.push(node);
     }
     document
 }
