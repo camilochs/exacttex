@@ -17,7 +17,7 @@ six exports and a linear memory.
 ## The calling convention
 
 1. `xtex_alloc(len)` returns a pointer to `len` writable bytes.
-2. Copy the document there.
+2. Copy a **project bundle** there.
 3. Call an operation with `(pointer, len)`. It returns a **result pointer**: four little-endian bytes of
    length, then that many bytes.
 4. Read them, then `xtex_free_result(result)` and `xtex_free(pointer, len)`.
@@ -25,14 +25,40 @@ six exports and a linear memory.
 The length prefix is not decoration. Emitted LaTeX can contain a zero byte, and a C-string convention would
 truncate the document at it.
 
-| Export | Returns |
-|---|---|
-| `xtex_alloc(len)` | a pointer to writable bytes |
-| `xtex_free(ptr, len)` | — |
-| `xtex_free_result(ptr)` | — |
-| `xtex_emit(ptr, len)` | the emitted LaTeX |
-| `xtex_check_json(ptr, len)` | the JSON `xtex check --json` prints |
-| `xtex_source_map(ptr, len)` | the source map, as JSON |
+## The project bundle
+
+Everything that makes the compiler worth using is multi-file, and a browser has no filesystem, so the host
+supplies the whole project on every call. Decided in [`decisions/0007`](decisions/0007-project-bundle.md):
+a real 20-file monograph is 388 KB and checks in milliseconds, so there is nothing to save by reading
+lazily, and WebAssembly imports are synchronous, so a per-file callback could not await a network anyway.
+
+The format is length-prefixed, little-endian, unaligned — a `DataView` and a loop:
+
+```text
+u32 root_len    root_name (UTF-8)
+u32 file_count
+file_count × ( u32 name_len   name (UTF-8)   u32 data_len   data )
+```
+
+- Names are logical, `/`-separated, project-relative — the same names the project's own `@import` and
+  `\include` write. A single file is a one-entry bundle, not a special case.
+- The host includes **every file a check may ask about**. An asset that exists but is not source — a
+  figure's PDF — is listed with empty data, because existence is the only question ever asked of it, and
+  omitting it makes `src = "figures/plot.pdf"` a false hard error.
+- A malformed bundle — a length past the end, trailing bytes, a non-UTF-8 name — returns the empty result.
+  It is the caller's bug, not the author's document, and answering anyway would answer the wrong question.
+
+| Export | Takes | Returns |
+|---|---|---|
+| `xtex_alloc(len)` | — | a pointer to writable bytes |
+| `xtex_free(ptr, len)` | — | — |
+| `xtex_free_result(ptr)` | — | — |
+| `xtex_emit(ptr, len)` | a bundle | the root's emitted LaTeX |
+| `xtex_check_json(ptr, len)` | a bundle | the JSON `xtex check --json` prints, for the whole project |
+| `xtex_source_map(ptr, len)` | a bundle | the root's source map, as JSON |
+
+`xtex_emit` emits the root alone; a host that wants every file's emission calls once per file with that
+file as the root.
 
 All the JavaScript it takes:
 

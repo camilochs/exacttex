@@ -2,10 +2,12 @@
 // compare it against the native tool byte for byte.
 //
 // No bundler and no generated glue: the module is a `.wasm` file with six
-// exports and a linear memory, and this is all the JavaScript it takes.
-import { readFileSync, writeFileSync } from "node:fs";
+// exports and a linear memory, and this is all the JavaScript it takes —
+// including the project bundle, which is a DataView and a loop.
+import { readFileSync, writeFileSync, readdirSync, statSync } from "node:fs";
+import { join, relative } from "node:path";
 
-const [, , wasmPath, inputPath, outDir] = process.argv;
+const [, , wasmPath, projectDir, rootName, outDir] = process.argv;
 const { instance } = await WebAssembly.instantiate(readFileSync(wasmPath), {});
 const api = instance.exports;
 
@@ -22,7 +24,42 @@ function call(name, bytes) {
   return out;
 }
 
-const source = readFileSync(inputPath);
-writeFileSync(`${outDir}/wasm.tex`, call("xtex_emit", source));
-writeFileSync(`${outDir}/wasm.json`, call("xtex_check_json", source));
-writeFileSync(`${outDir}/wasm.map`, call("xtex_source_map", source));
+// The bundle: u32 root_len, root, u32 count, then (u32 name_len, name,
+// u32 data_len, data) per file. Everything little-endian, nothing aligned.
+function bundle(dir, root) {
+  const files = [];
+  const walk = (d) => {
+    for (const entry of readdirSync(d)) {
+      const path = join(d, entry);
+      if (statSync(path).isDirectory()) walk(path);
+      else files.push([relative(dir, path).split("\\").join("/"), readFileSync(path)]);
+    }
+  };
+  walk(dir);
+  files.sort((a, b) => (a[0] < b[0] ? -1 : 1));
+
+  const rootBytes = new TextEncoder().encode(root);
+  let size = 4 + rootBytes.length + 4;
+  const encoded = files.map(([name, data]) => {
+    const nameBytes = new TextEncoder().encode(name);
+    size += 4 + nameBytes.length + 4 + data.length;
+    return [nameBytes, data];
+  });
+  const out = new Uint8Array(size);
+  const view = new DataView(out.buffer);
+  let at = 0;
+  const u32 = (n) => { view.setUint32(at, n, true); at += 4; };
+  const put = (bytes) => { out.set(bytes, at); at += bytes.length; };
+  u32(rootBytes.length); put(rootBytes);
+  u32(encoded.length);
+  for (const [name, data] of encoded) {
+    u32(name.length); put(name);
+    u32(data.length); put(data);
+  }
+  return out;
+}
+
+const project = bundle(projectDir, rootName);
+writeFileSync(`${outDir}/wasm.tex`, call("xtex_emit", project));
+writeFileSync(`${outDir}/wasm.json`, call("xtex_check_json", project));
+writeFileSync(`${outDir}/wasm.map`, call("xtex_source_map", project));

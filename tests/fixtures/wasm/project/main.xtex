@@ -1,0 +1,19 @@
+\documentclass{article}
+\begin{document}
+\section{Intro}@id(sec:intro)
+
+Como muestra @cite(knuth1984), y la Sección~@ref(sec:model),
+la figura~@ref(fig:plot) lo ilustra.
+
+@import("sections/model.xtex")
+\include{appendix}
+
+\figure(fig:plot) {
+  placement = ht
+  src = "figures/plot.pdf"
+  width = \linewidth
+  caption = {Una figura con @ref(sec:intro) dentro del pie.}
+}
+
+\bibliography{refs}
+\end{document}
