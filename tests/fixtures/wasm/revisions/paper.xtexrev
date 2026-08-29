@@ -1,0 +1,16 @@
+version = 1
+document = "paper.xtex"
+
+[[revision]]
+id     = "c1"
+kind   = "add"
+author = "reviewer-2"
+at     = "2026-08-28T09:12:00Z"
+message = "Qualify the claim."
+
+[[revision]]
+id     = "c2"
+kind   = "del"
+author = "reviewer-2"
+at     = "2026-08-28T09:15:00Z"
+message = "Obsolete."
