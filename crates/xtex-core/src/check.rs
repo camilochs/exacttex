@@ -336,6 +336,15 @@ fn block_error(source: SourceId, kind: BlockKind, error: BlockError, bytes: &[u8
             false,
             false,
         ),
+        BlockError::BadPlacementByte { at, byte } => (
+            at,
+            format!(
+                "`{}` is not a placement letter; LaTeX accepts h, t, b, p, `!` and the float package's H",
+                char::from(byte)
+            ),
+            false,
+            false,
+        ),
     };
     Diagnostic {
         code: if identifier_error {

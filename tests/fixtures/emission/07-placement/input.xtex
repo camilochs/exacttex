@@ -1,0 +1,16 @@
+BEFORE
+\figure(fig:cd) {
+  placement = !htbp
+  src = "figures/cdplot.pdf"
+  width = \linewidth
+  caption = {A diagram.}
+}
+MIDDLE
+\table(tab:t) {
+  placement = t
+  caption = {Data}
+  body = {\begin{tabular}{ll}
+a & b \\
+\end{tabular}}
+}
+AFTER

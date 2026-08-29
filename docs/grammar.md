@@ -447,7 +447,14 @@ figure-fields:
   width     = length | percentage
   height    = length | percentage
   caption   = braced
+  placement = bare
 ```
+
+`placement` holds a float placement specifier — bytes from `h t b p !`, plus the `float` package's `H` — and
+emits verbatim inside `[ ]` after the environment header: `placement = !htbp` emits `\begin{figure}[!htbp]`.
+No reordering, no deduplication; the compiler does not improve author intent. An absent field emits no
+brackets. A present, empty field is malformed: silence is asked for by omission, never by an empty value.
+Any other byte is a hard error naming the byte. See [`decisions/0006`](decisions/0006-placement.md).
 
 ### Table fields
 
@@ -456,6 +463,7 @@ table-fields:
   caption   = braced
   body      = braced
   trailing  = braced
+  placement = bare
 ```
 
 `trailing` contains content placed inside the emitted `table` environment after the table body and before
