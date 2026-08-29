@@ -77,8 +77,15 @@ pub const DEFAULT_VERBATIM_ENVIRONMENTS: &[&str] = &[
 /// A stretch of the source, classified.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Piece {
-    /// Bytes that carry no construct. Transported unchanged.
+    /// Prose: bytes in which a construct would have been recognised, and none
+    /// was.
     Text(Span),
+    /// A region §8 excludes, such as a comment, math, or a verbatim block.
+    ///
+    /// Distinguished from [`Piece::Text`] because a consumer that searches the
+    /// source for something other than a construct — a bibliography
+    /// declaration, say — must not find it here either.
+    Excluded(Span),
     /// A complete NextTeX entry token and everything it delimits.
     Construct {
         /// Which construct the entry token opened.
@@ -165,6 +172,7 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
     let mut pieces = Vec::new();
     let mut region = Region::Prose;
     let mut text_start = 0usize;
+    let mut excluded_start = 0usize;
     let mut at = 0usize;
 
     /// Closes the run of ordinary bytes that ends here.
@@ -173,6 +181,20 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
             if $end > text_start {
                 pieces.push(Piece::Text(span(text_start, $end)));
             }
+        };
+    }
+
+    /// Leaves prose for an excluded region beginning at `$start`.
+    ///
+    /// Both halves are required and neither is optional: the prose has to end,
+    /// and the region has to know where it began. A site that sets one without
+    /// the other makes the next piece start where an older one did, and the
+    /// same bytes are emitted twice. That has happened twice, which is why
+    /// leaving prose goes through here instead of being written out by hand.
+    macro_rules! enter {
+        ($start:expr) => {
+            flush!($start);
+            excluded_start = $start;
         };
     }
 
@@ -233,6 +255,7 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                     continue;
                 }
                 if let Some((new_region, resume)) = region_opening_at(bytes, at) {
+                    enter!(at);
                     region = new_region;
                     at = resume;
                     continue;
@@ -247,6 +270,8 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                             continue;
                         }
                         Extent::Unbounded => {
+                            // Quarantine is an excluded region like any other.
+                            enter!(at);
                             region = Region::Quarantine;
                             continue;
                         }
@@ -257,17 +282,22 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
             }
 
             Region::Comment => {
-                if bytes[at] == b'\n' {
+                at += 1;
+                if bytes[at - 1] == b'\n' {
+                    pieces.push(Piece::Excluded(span(excluded_start, at)));
+                    text_start = at;
                     region = Region::Prose;
                 }
-                at += 1;
             }
 
             Region::InlineMath => {
-                if bytes[at] == b'$' && !is_escaped(bytes, at) {
+                let closes = bytes[at] == b'$' && !is_escaped(bytes, at);
+                at += 1;
+                if closes {
+                    pieces.push(Piece::Excluded(span(excluded_start, at)));
+                    text_start = at;
                     region = Region::Prose;
                 }
-                at += 1;
             }
 
             Region::DisplayMath { dollars } => {
@@ -276,29 +306,38 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                         && !is_escaped(bytes, at)
                         && bytes.get(at + 1) == Some(&b'$')
                     {
-                        region = Region::Prose;
                         at += 2;
+                        pieces.push(Piece::Excluded(span(excluded_start, at)));
+                        text_start = at;
+                        region = Region::Prose;
                         continue;
                     }
                 } else if bytes[at] == b'\\' && bytes.get(at + 1) == Some(&b']') {
-                    region = Region::Prose;
                     at += 2;
+                    pieces.push(Piece::Excluded(span(excluded_start, at)));
+                    text_start = at;
+                    region = Region::Prose;
                     continue;
                 }
                 at += 1;
             }
 
             Region::Verb { delimiter } => {
-                if bytes[at] == *delimiter {
+                let closes = bytes[at] == *delimiter;
+                at += 1;
+                if closes {
+                    pieces.push(Piece::Excluded(span(excluded_start, at)));
+                    text_start = at;
                     region = Region::Prose;
                 }
-                at += 1;
             }
 
             Region::VerbatimEnvironment { name } => {
                 if let Some(end) = verbatim_end(bytes, at, name) {
-                    region = Region::Prose;
                     at = end;
+                    pieces.push(Piece::Excluded(span(excluded_start, at)));
+                    text_start = at;
+                    region = Region::Prose;
                 } else {
                     at += 1;
                 }
@@ -306,8 +345,10 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
 
             Region::InternalMacros => {
                 if bytes[at..].starts_with(b"\\makeatother") {
-                    region = Region::Prose;
                     at += b"\\makeatother".len();
+                    pieces.push(Piece::Excluded(span(excluded_start, at)));
+                    text_start = at;
+                    region = Region::Prose;
                 } else {
                     at += 1;
                 }
@@ -350,13 +391,18 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
 
     // An unterminated region is still transported; only its classification
     // changes, and the diagnostic belongs to whatever opened it.
-    if let Region::Raw { .. } = region {
-        pieces.push(Piece::Malformed {
+    match region {
+        Region::Raw { .. } => pieces.push(Piece::Malformed {
             kind: EntryToken::Raw,
             span: span(text_start, bytes.len()),
-        });
-    } else {
-        flush!(bytes.len());
+        }),
+        Region::Prose => flush!(bytes.len()),
+        // A region that never closed still covers its bytes.
+        _ => {
+            if bytes.len() > excluded_start {
+                pieces.push(Piece::Excluded(span(excluded_start, bytes.len())));
+            }
+        }
     }
 
     pieces
@@ -718,12 +764,74 @@ mod tests {
         for piece in scan(bytes) {
             let span = match piece {
                 Piece::Text(s)
+                | Piece::Excluded(s)
                 | Piece::Construct { span: s, .. }
                 | Piece::Malformed { span: s, .. } => s,
             };
             out.extend_from_slice(&bytes[span.start()..span.end()]);
         }
         out
+    }
+
+    /// Where a piece sits, whatever kind it is.
+    fn extent(piece: Piece) -> Span {
+        match piece {
+            Piece::Text(s)
+            | Piece::Excluded(s)
+            | Piece::Construct { span: s, .. }
+            | Piece::Malformed { span: s, .. } => s,
+        }
+    }
+
+    /// Inputs chosen so that truncating them enters every region the scanner
+    /// has, and leaves each one unterminated in turn.
+    const AWKWARD: &[&[u8]] = &[
+        b"\\section{Caf\xE9}\r\n%% comment\t\n\\ref{a} @ref(b) trailing",
+        b"before %comment\n@id(x) $math$ after",
+        b"\\verb+@ref(a)+ then @ref(b)",
+        b"\\begin{verbatim}\n@id(v)\n\\end{verbatim} @id(real)",
+        b"\\makeatletter \\a@b \\makeatother @id(after)",
+        b"$$@ref(display)$$ and \\[@ref(bracket)\\] done",
+        b"latex { \\raw{@ref(inside)} } @ref(outside)",
+        b"\\figure(f) { caption = {C} } @ref(f)",
+        b"text \\unknowncommand{a}{b} more @cite(k)",
+    ];
+
+    #[test]
+    fn the_pieces_cover_every_byte_exactly_once() {
+        // The reassembly test above compares the concatenation, which hides
+        // *where* coverage broke. This asserts the property directly: pieces
+        // run in order, start where the last one ended, and reach the end.
+        //
+        // It exists because the same defect appeared twice — a region entered
+        // without recording where it began, so a later piece restarted inside
+        // an earlier one. Both times the bytes were emitted twice and both
+        // times it took a fixture to notice.
+        for input in AWKWARD {
+            for cut in 0..=input.len() {
+                let slice = &input[..cut];
+                let mut next = 0usize;
+                for piece in scan(slice) {
+                    let span = extent(piece);
+                    assert_eq!(
+                        span.start(),
+                        next,
+                        "piece {piece:?} does not start where the last one ended, \
+                         in {slice:?} cut at {cut}"
+                    );
+                    assert!(
+                        span.end() >= span.start(),
+                        "piece {piece:?} ends before it starts"
+                    );
+                    next = span.end();
+                }
+                assert_eq!(
+                    next,
+                    slice.len(),
+                    "the pieces stop before the end of {slice:?} cut at {cut}"
+                );
+            }
+        }
     }
 
     fn constructs(bytes: &[u8]) -> Vec<EntryToken> {

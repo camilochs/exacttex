@@ -18,3 +18,7 @@ Cargo.lock.bak
 
 # Rust
 /target
+
+# Experiments build on their own
+/tests/experiments/**/target/
+/tests/experiments/**/Cargo.lock

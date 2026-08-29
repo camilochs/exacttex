@@ -7,6 +7,7 @@ fn main() {
     for piece in scan(&bytes) {
         let (label, span) = match piece {
             Piece::Text(s) => ("text", s),
+            Piece::Excluded(s) => ("excluded", s),
             Piece::Construct { kind, span } => (kind.name(), span),
             Piece::Malformed { kind, span } => {
                 println!(
