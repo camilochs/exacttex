@@ -1,0 +1,18 @@
+[package]
+name = "xtex-lsp"
+description = "The ExactTeX language server: JSON-RPC framing and dispatch, no protocol library."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "xtex-lsp"
+path = "src/main.rs"
+
+[dependencies]
+xtex-core = { path = "../xtex-core" }
+
+[lints]
+workspace = true

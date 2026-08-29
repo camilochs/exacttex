@@ -1,0 +1,100 @@
+# The language server
+
+`xtex-lsp` speaks LSP over stdin and stdout. It answers seven messages and no others.
+
+---
+
+## What it answers
+
+| Message | What it does |
+|---|---|
+| `initialize` | Declares the capabilities below. |
+| `textDocument/didOpen` | Records the document, publishes its diagnostics. |
+| `textDocument/didChange` | The same, on every keystroke the editor sends. |
+| `textDocument/hover` | What the construct under the cursor is, and whether it resolves. |
+| `textDocument/completion` | Identifiers that may go where the cursor is. |
+| `textDocument/definition` | Where the name under the cursor is declared. |
+| `shutdown` / `exit` | Replies `null`, then leaves. |
+
+**Anything else is not answered, and that is correct behaviour.** The editor's own fallback — its word-based
+completion, its "no definition found" — is better than a wrong answer from a server that does not model the
+question. A message that is not in this table has no code behind it.
+
+Capabilities declared: `textDocumentSync: 1` (full text on every change), `hoverProvider`,
+`definitionProvider`, and `completionProvider` triggered on `(` and `:`.
+
+---
+
+## Diagnostics are the checker's, not the server's
+
+The server calls `check`. It does not have diagnostics of its own, does not filter them, and does not
+reword them. `xtex check` and the editor show the same code, the same message and the same span for the same
+input, and that is true because there is one implementation rather than because two are kept in step.
+
+That is the exit criterion of this phase, and `opening_a_document_publishes_the_same_diagnostics_the_cli_reports`
+is where it is checked.
+
+One difference is deliberate: **the server reads no bibliography.** It is handed a document, not a project
+root, so the bibliography is `Unavailable` — which is exactly the state that keeps every `@cite` silent
+rather than reported as missing. An editor that flagged every citation in a file it could not resolve would
+be worse than one that flagged none.
+
+---
+
+## Hover
+
+```
+@ref(fig:plot)
+requires: figure
+declared as: figure
+```
+
+Every line is a fact the compiler already holds. `requires:` is the class the prefix demands
+([`decisions/0003`](decisions/0003-the-prefix-is-the-demand.md)); `declared as:` is what the target actually
+is. When they disagree you are looking at `XT1004` before the compiler has run.
+
+An unresolved reference says `not declared in this document root` rather than showing an empty popup, which
+is what an author sees for most of the time they are typing a name.
+
+---
+
+## Completion
+
+Inside `@ref(`, the prefix already typed **is** the filter. `@ref(tab:` is offered tables and nothing else,
+because offering a figure there is offering an error.
+
+This is the type system paying for itself in the editor rather than only in the exit code. An identifier
+whose class is `?O` is always offered, because `?O` is consistent with everything and the compiler has no
+grounds to exclude it.
+
+Outside a construct, nothing is offered. Suggesting every identifier in a document while someone writes a
+sentence is worse than suggesting none.
+
+---
+
+## Running it
+
+```sh
+cargo build --release -p xtex-lsp
+```
+
+The binary is `xtex-lsp` and it takes no arguments. Point your editor at it for the `xtex` language and
+`.xtex` files; the setup is whatever your editor calls "a custom language server command", and nothing here
+is editor-specific.
+
+There is no configuration. A project's `xtex.toml` is read by the compiler, not by the server.
+
+---
+
+## Why it is written by hand
+
+`tower-lsp` and `lsp-types` were both available and both permissively licensed. Neither is used, and
+[`decisions/0005`](decisions/0005-the-language-server-is-written-by-hand.md) records why and — more usefully
+— the four rules that keep a hand-written server maintainable.
+
+The one that matters for anyone changing it: **the protocol layer holds no logic.** It frames bytes, reads a
+method name, calls a function, writes bytes back. Every question is answered by `xtex_core::editor`, in
+functions that take bytes and offsets and return data, testable with no server running.
+
+To add a message: add a case to the table in `handle`, add a function beside it, and add a test to
+`crates/xtex-lsp/tests/protocol.rs` that feeds bytes and asserts bytes.

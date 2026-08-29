@@ -12,3 +12,10 @@ dependencies = [
 [[package]]
 name = "xtex-core"
 version = "0.0.0"
+
+[[package]]
+name = "xtex-lsp"
+version = "0.0.0"
+dependencies = [
+ "xtex-core",
+]
