@@ -1,0 +1,3 @@
+Plain @cite(knuth1984), natbib @citep(a) and @citet(b),
+biblatex @textcite(c) and @parencite(d).
+Ordinary \citep{e} and the word citep in prose are untouched.

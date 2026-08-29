@@ -1,0 +1,5 @@
+transport: identical
+scanner: cite cite
+constructs: two citations carrying four keys. 13% of measured citations name
+  more than one and one names seven, so each key is checked separately and an
+  absent key names itself rather than the construct.

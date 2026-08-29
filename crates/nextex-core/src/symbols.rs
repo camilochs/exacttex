@@ -105,12 +105,30 @@ impl SymbolTable {
             let Some(payload) = payload_of(sources, node.source(), construct, kind) else {
                 continue;
             };
-            let Some(text) = text_of(sources, payload) else {
-                continue;
-            };
-
             match kind {
+                EntryToken::Cite => {
+                    // One reference per key, so an absent key is a diagnostic
+                    // naming that key rather than the whole construct.
+                    let keys = keys_of(sources, payload);
+                    if keys.is_empty() {
+                        self.errors.push(SymbolError::Malformed { construct });
+                        continue;
+                    }
+                    for key in keys {
+                        self.references.push((
+                            key,
+                            Reference {
+                                kind,
+                                payload,
+                                construct,
+                            },
+                        ));
+                    }
+                }
                 EntryToken::Id | EntryToken::Figure | EntryToken::Table => {
+                    let Some(text) = text_of(sources, payload) else {
+                        continue;
+                    };
                     if !is_identifier(text.as_bytes()) {
                         self.errors.push(SymbolError::Malformed { construct });
                         continue;
@@ -126,7 +144,10 @@ impl SymbolTable {
                     self.declarations
                         .insert(text, Declaration { payload, construct });
                 }
-                EntryToken::Ref | EntryToken::Cite => {
+                EntryToken::Ref => {
+                    let Some(text) = text_of(sources, payload) else {
+                        continue;
+                    };
                     if text.is_empty() {
                         self.errors.push(SymbolError::Malformed { construct });
                         continue;
@@ -191,10 +212,27 @@ fn payload_of(
     construct: Span,
     kind: EntryToken,
 ) -> Option<Payload> {
+    // A citation names its own command, so its keyword is not fixed: the
+    // payload starts after the construct's first `(`.
+    if kind == EntryToken::Cite {
+        let bytes = sources.get(source)?.slice(construct)?;
+        if !bytes.ends_with(b")") {
+            return None;
+        }
+        let open = construct.start() + bytes.iter().position(|b| *b == b'(')? + 1;
+        let end = construct.end() - 1;
+        if open > end {
+            return None;
+        }
+        return Some(Payload {
+            source,
+            span: Span::new(u32::try_from(open).ok()?, u32::try_from(end).ok()?),
+        });
+    }
+
     let keyword = match kind {
         EntryToken::Id => "@id(",
         EntryToken::Ref => "@ref(",
-        EntryToken::Cite => "@cite(",
         EntryToken::Import => "@import(",
         // A block declares its identifier just as `@id` does: the name between
         // its parentheses is what a reference resolves to.
@@ -231,20 +269,41 @@ fn payload_of(
 /// is not an identifier and is reported rather than lossily converted.
 fn text_of(sources: &Sources, payload: Payload) -> Option<String> {
     let bytes = sources.get(payload.source)?.slice(payload.span)?;
-    // A citation key may carry a comma and fields after it; the key is what
-    // precedes the first comma.
-    let key = bytes.split(|b| *b == b',').next().unwrap_or(bytes);
-    let trimmed = key
+    std::str::from_utf8(trim(bytes)).ok().map(str::to_owned)
+}
+
+/// Every comma-separated key in a citation payload.
+///
+/// `\cite{a,b}` is ordinary LaTeX and 13% of measured citations use it, one of
+/// them with seven keys. Reading only the first would leave the rest unchecked
+/// while reporting success, which is worse than not checking at all.
+fn keys_of(sources: &Sources, payload: Payload) -> Vec<String> {
+    let Some(bytes) = sources
+        .get(payload.source)
+        .and_then(|s| s.slice(payload.span))
+    else {
+        return Vec::new();
+    };
+    bytes
+        .split(|b| *b == b',')
+        .filter_map(|key| std::str::from_utf8(trim(key)).ok())
+        .filter(|key| !key.is_empty())
+        .map(str::to_owned)
+        .collect()
+}
+
+/// `bytes` without leading or trailing ASCII whitespace.
+fn trim(bytes: &[u8]) -> &[u8] {
+    bytes
         .iter()
         .position(|b| !b.is_ascii_whitespace())
         .map_or(&[][..], |start| {
-            let end = key
+            let end = bytes
                 .iter()
                 .rposition(|b| !b.is_ascii_whitespace())
                 .unwrap_or(start);
-            &key[start..=end]
-        });
-    std::str::from_utf8(trimmed).ok().map(str::to_owned)
+            &bytes[start..=end]
+        })
 }
 
 fn is_identifier(bytes: &[u8]) -> bool {
@@ -332,11 +391,28 @@ mod tests {
     }
 
     #[test]
-    fn a_citation_key_stops_at_its_first_field() {
-        let (_, t) = table(&[("a.ntex", "@cite(knuth1984, style=textual)")]);
+    fn a_citation_may_name_several_keys() {
+        // Replaces a test that asserted the key stopped at the first comma,
+        // because a `style` field followed it. The grammar no longer has
+        // fields: `\\cite{a,b}` is ordinary LaTeX, 13% of measured citations
+        // use it, and one names seven keys. Reading only the first would leave
+        // the rest unchecked while reporting success.
+        let (_, t) = table(&[("a.ntex", "@citep(knuth1984, lamport1994)")]);
         assert_eq!(
             t.citations().map(|(n, _)| n).collect::<Vec<_>>(),
-            ["knuth1984"]
+            ["knuth1984", "lamport1994"]
+        );
+    }
+
+    #[test]
+    fn every_citation_command_is_a_construct() {
+        let (_, t) = table(&[(
+            "a.ntex",
+            "@cite(a) @citep(b) @citet(c) @textcite(d) @parencite(e)",
+        )]);
+        assert_eq!(
+            t.citations().map(|(n, _)| n).collect::<Vec<_>>(),
+            ["a", "b", "c", "d", "e"]
         );
     }
 

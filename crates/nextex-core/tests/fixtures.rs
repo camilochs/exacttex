@@ -278,6 +278,7 @@ fn ordinary_latex_yields_no_constructs() {
         br"\newcommand{\ref}[1]{see #1} % a package redefining \ref",
         br"\makeatletter \@ifpackageloaded{amsmath}{}{} \makeatother",
         br"An email @ the start of a line, and a lone @ mid-sentence.",
+        br"We cite with \citep{k} and mention citep and @citep without a paren.",
         br"\definecolor[named]{@id(a)}{rgb}{1,0,0} % xcolor form",
         br"latex, plain prose about the word, with no brace after it.",
     ];

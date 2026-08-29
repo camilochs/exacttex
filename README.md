@@ -47,7 +47,7 @@ them interoperate. NextTeX puts the model in the format.
 \section{Introduction} @id(sec:intro)
 
 We argue the opposite in @ref(sec:model).
-@cite(knuth1984, style=textual) showed that cost grows with $n$.
+@citet(knuth1984) showed that cost grows with $n$.
 
 The architecture is shown in @ref(fig:runtime).
 
