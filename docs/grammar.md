@@ -423,7 +423,7 @@ until one succeeds.
 | Kind | Form | Ends at |
 |---|---|---|
 | `string` | `"` followed by bytes using `\"` and `\\` escapes | unescaped closing `"` |
-| `length` | decimal number plus `pt`, `mm`, `cm`, `in`, `em` or `ex` | first byte outside that token |
+| `length` | a decimal number plus `pt`, `mm`, `cm`, `in`, `em` or `ex`; **or** a TeX length such as `\linewidth`, with an optional coefficient before it | first byte outside that token |
 | `percentage` | decimal number plus `%` | byte after `%` |
 | `integer` | one or more ASCII digits | first non-digit byte |
 | `bare` | bytes other than a line ending | immediately before the line ending |
@@ -521,8 +521,23 @@ by compiling, `\textwidth` overflows the first and `\columnwidth` under-fills th
 adaptive reference exists — TeX exposes no "space available in this float" — so `\textheight` is used, and
 the asymmetry is what TeX offers rather than a choice.
 
-An author who needs a different reference writes an absolute length or writes the `\includegraphics` in
-LaTeX. See [`decisions/0004`](decisions/0004-lengths-and-inclusion.md).
+**An author who needs a different reference names it, and that is why a `length` admits a TeX length:**
+
+```
+width = 80%                shorthand, 0.80\linewidth
+width = 0.8\columnwidth     the reference named
+width = \textwidth          no coefficient
+width = 12cm                absolute
+```
+
+`\columnwidth` cannot be reached any other way. Inside a float that spans both columns, `\linewidth` is the
+full page width, so a column-width image there has no percentage form. Restricting `length` to a number and
+a unit made that unreachable without abandoning the block for plain LaTeX, and the restriction was written
+without anyone asking whether it should hold.
+
+A control word followed by `{` is a command taking an argument, not a length, and is rejected.
+
+See [`decisions/0004`](decisions/0004-lengths-and-inclusion.md).
 
 ### Package requirements
 

@@ -26,8 +26,28 @@ Frequency in a corpus is the wrong metric here and was used at first: the author
 124 times, `\columnwidth` 65 and `\linewidth` 49, and that says nothing about which is correct. A rule the
 compiler applies everywhere has to hold everywhere.
 
-An author who wants a different reference writes an absolute length, or writes the `\includegraphics` in
-LaTeX. The percentage form is for the common case and takes no argument about it.
+### Naming a different reference
+
+The percentage is a shorthand for the common case and its reference is fixed. An author who needs another
+one names it, and a `length` therefore admits a TeX length:
+
+```
+width = 80%                shorthand, 0.80\linewidth
+width = 0.8\columnwidth     the reference named
+width = \textwidth          no coefficient
+width = 12cm                absolute
+```
+
+This was a hole rather than a trade. The first draft defined a `length` as a number plus one of six units,
+which left `\columnwidth` unreachable without abandoning the typed block for plain LaTeX — and inside a
+float spanning both columns, `\linewidth` is the full page width, so a column-width image there has no
+percentage form at all. The restriction was written without anyone asking whether it should hold. The
+director asked.
+
+A control word followed by `{` is a command taking an argument, not a length, and is rejected.
+
+Checked before implementing: a backslash inside a field value does not disturb the block's brace counting.
+The boundary is found at the same offset with and without one.
 
 ## 2 · `height = 40%` becomes `0.40\textheight`
 

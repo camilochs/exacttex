@@ -1,0 +1,14 @@
+BEFORE
+\figure(fig:col) {
+  src = "a.pdf"
+  width = 0.8\columnwidth
+  caption = {A column-width image in a spanning float}
+}
+MIDDLE
+\figure(fig:bare) {
+  src = "b.pdf"
+  width = \textwidth
+  height = 6cm
+  caption = {No coefficient}
+}
+AFTER

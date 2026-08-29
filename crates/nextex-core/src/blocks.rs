@@ -259,7 +259,9 @@ fn removed_field(key: &[u8]) -> RemovedField {
 const fn describe(kind: ValueKind) -> &'static str {
     match kind {
         ValueKind::Str => "a quoted string",
-        ValueKind::LengthOrPercentage => "a length such as 4cm, or a percentage such as 80%",
+        ValueKind::LengthOrPercentage => {
+            "a length such as 4cm or 0.8\\columnwidth, or a percentage such as 80%"
+        }
         ValueKind::Braced => "a braced group, because it may span lines and contain LaTeX",
     }
 }
@@ -291,15 +293,30 @@ fn read_value(
             while i < limit && (bytes[i].is_ascii_digit() || bytes[i] == b'.') {
                 i += 1;
             }
-            if i == at {
-                return None;
+            let has_number = i > at;
+            if has_number {
+                if bytes.get(i) == Some(&b'%') {
+                    return Some((Value::Percentage(span(at, i + 1)), i + 1));
+                }
+                for unit in [b"pt", b"mm", b"cm", b"in", b"em", b"ex"] {
+                    if bytes[i..].starts_with(unit) {
+                        return Some((Value::Length(span(at, i + 2)), i + 2));
+                    }
+                }
             }
-            if bytes.get(i) == Some(&b'%') {
-                return Some((Value::Percentage(span(at, i + 1)), i + 1));
-            }
-            for unit in [b"pt", b"mm", b"cm", b"in", b"em", b"ex"] {
-                if bytes[i..].starts_with(unit) {
-                    return Some((Value::Length(span(at, i + 2)), i + 2));
+            // A TeX length, with or without a coefficient: `0.8\\columnwidth`,
+            // `\\linewidth`. The percentage form covers the common case against
+            // a reference the field fixes; this is how an author names a
+            // different one without a new keyword. See docs/decisions/0004.
+            if bytes.get(i) == Some(&b'\\') {
+                let name_start = i + 1;
+                let mut end = name_start;
+                while end < limit && bytes[end].is_ascii_alphabetic() {
+                    end += 1;
+                }
+                // A control word taking an argument is a command, not a length.
+                if end > name_start && bytes.get(end) != Some(&b'{') {
+                    return Some((Value::Length(span(at, end)), end));
                 }
             }
             None
