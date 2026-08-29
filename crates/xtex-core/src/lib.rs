@@ -1,6 +1,6 @@
-//! The NextTeX compiler core.
+//! The ExactTeX compiler core.
 //!
-//! NextTeX is a one-directional superset of LaTeX: every valid `.tex` file is
+//! ExactTeX is a one-directional superset of LaTeX: every valid `.tex` file is
 //! valid input, and LaTeX remains the artifact of record. This crate holds the
 //! part of the compiler that must run unchanged on a native binary and inside a
 //! browser, so it contains no filesystem paths, no current directory, and no
@@ -8,7 +8,7 @@
 //!
 //! # The invariant this crate exists to keep
 //!
-//! For input containing no NextTeX constructs, emission returns the input bytes
+//! For input containing no ExactTeX constructs, emission returns the input bytes
 //! exactly:
 //!
 //! ```text
@@ -30,7 +30,7 @@
 //! with the signature database.
 //!
 //! ```
-//! use nextex_core::{emit, parse, source::Sources};
+//! use xtex_core::{emit, parse, source::Sources};
 //!
 //! let mut sources = Sources::new();
 //! let id = sources.add("main.tex", b"\\section{Hi}\r\n".as_slice());
@@ -422,7 +422,7 @@ fn emit_import(bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
         .unwrap_or(first_quote);
     out.extend_from_slice(b"\\input{");
     let path = &bytes[first_quote + 1..last_quote];
-    let stem = path.strip_suffix(b".ntex").unwrap_or(path);
+    let stem = path.strip_suffix(b".xtex").unwrap_or(path);
     out.extend_from_slice(stem);
     if view == RevisionView::Marked {
         out.extend_from_slice(b".marked.tex}");
@@ -598,7 +598,7 @@ impl From<EmitError> for BuildError {
 
 /// Loads `name`, parses it, and emits one LaTeX file.
 ///
-/// For input carrying no NextTeX construct the bytes written are the bytes
+/// For input carrying no ExactTeX construct the bytes written are the bytes
 /// read. Project traversal and output-name mapping belong to the host front end.
 ///
 /// # Errors
@@ -784,7 +784,7 @@ mod tests {
     #[test]
     fn a_construct_raises_coverage_above_zero() {
         let mut sources = Sources::new();
-        let id = sources.add("main.ntex", b"See @ref(a).".as_slice());
+        let id = sources.add("main.xtex", b"See @ref(a).".as_slice());
         let document = parse(&sources, id);
 
         assert!(document.coverage() > 0.0);
@@ -796,7 +796,7 @@ mod tests {
         let input =
             b"before \\table(t) { caption = {Caf\xE9 \\% {nested}} body = {a\xFF\\\\b} } after";
         let mut sources = Sources::new();
-        let id = sources.add("main.ntex", input.as_slice());
+        let id = sources.add("main.xtex", input.as_slice());
         let document = parse(&sources, id);
         let mut out = Vec::new();
         emit(&sources, &document, &mut out).unwrap();

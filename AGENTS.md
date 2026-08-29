@@ -1,4 +1,4 @@
-# AGENTS.md — NextTeX
+# AGENTS.md — ExactTeX
 
 Universal instruction file for AI coding tools (Claude Code, Cursor, Copilot, Aider, OpenCode) and for any
 human who wants the five-minute orientation. **Read this before making non-trivial changes.**
@@ -10,9 +10,9 @@ file is binding and this one does not restate it — two copies drift and then n
 
 ## 1 · Project intent
 
-NextTeX gives a writer information about the reliability of their document before they look at the PDF.
+ExactTeX gives a writer information about the reliability of their document before they look at the PDF.
 
-It is a one-directional superset of LaTeX: every valid `.tex` is valid input, and a `.ntex` need not compile
+It is a one-directional superset of LaTeX: every valid `.tex` is valid input, and a `.xtex` need not compile
 under plain TeX. LaTeX stays the backend and the artifact of record.
 
 The two things that justify the project — and the two that must never be traded away — are stated in
@@ -27,13 +27,13 @@ Faithful byte transport is what makes both reachable from documents that already
   the tooling can name. Declared with `@id(x)` on any LaTeX construct, or by a typed block.
 - **Light annotation** — `@id(x)` hung off existing LaTeX. Buys checked references and safe rename.
 - **Full annotation** — `\figure(x) { … }` with typed fields. Buys visual checks and package synthesis.
-- **Opaque region** — source NextTeX does not model. Transported byte for byte, never rejected. Its type is
+- **Opaque region** — source ExactTeX does not model. Transported byte for byte, never rejected. Its type is
   `?O`, the unknown *open* datatype: any package may define new constructors.
 - **Coverage** — the fraction of a document that is checked rather than opaque. The analogue of
-  `noImplicitAny`. Reported by `nextex check`.
+  `noImplicitAny`. Reported by `xtex check`.
 - **Transport** vs **convert** — transport returns the input bytes unchanged; convert produces a different
-  artifact. NextTeX transports. Converters are a one-way trip.
-- **Blame** — which side of a boundary a failure belongs to: author LaTeX, a NextTeX construct, or emitted
+  artifact. ExactTeX transports. Converters are a one-way trip.
+- **Blame** — which side of a boundary a failure belongs to: author LaTeX, a ExactTeX construct, or emitted
   output. A diagnostic without blame is unfinished.
 
 ---
@@ -63,7 +63,7 @@ exists today.
 
 ## 4 · Invariants — never break these
 
-- **Untouched LaTeX comes out byte-identical.** `emit(parse(u)) == u` for input containing no NextTeX
+- **Untouched LaTeX comes out byte-identical.** `emit(parse(u)) == u` for input containing no ExactTeX
   constructs. A transporter that sometimes reformats is not a slower transporter, it is a false one, and the
   file it corrupts is an already-accepted paper.
 - **Annotating never changes the PDF.** Adding a valid annotation must not alter a rendered pixel, and must
@@ -73,19 +73,19 @@ exists today.
 - **Opaque bytes are never normalised.** Spans point into immutable source buffers and emission copies the
   original slice. Any emitter "improvement" over an opaque node — reindenting, collapsing whitespace,
   reordering arguments — breaks transport silently.
-- **A hard error only ever comes from an explicit NextTeX construct.** `?O` is consistent with every type, so
+- **A hard error only ever comes from an explicit ExactTeX construct.** `?O` is consistent with every type, so
   an unannotated `\ref{x}` cannot fail. A renamed `.tex` checks clean by construction. Everything else is
   `advisory`, behind `--strict-tex`, and never touches the exit code.
 - **Unknown LaTeX is never a fatal error.** The parser downgrades confidence and preserves. Fatal is reserved
   for I/O failure, invalid annotation encoding, resource limits, and broken internal invariants.
-- **A diagnostic names its blame side.** Author LaTeX, NextTeX construct, or emitted output. With no map
+- **A diagnostic names its blame side.** Author LaTeX, ExactTeX construct, or emitted output. With no map
   segment to support it, the answer is `unresolved` — never a guess.
 - **An entry token must not be able to appear in ordinary LaTeX prose.** Otherwise renaming a `.tex` silently
   changes its meaning.
 - **Numbers in docs have a command behind them.** If a README or a PR claims a coverage figure, a runtime or
   an error rate, a documented command reproduces it.
 - **Dependencies are permissively licensed.** MIT, Apache-2.0, BSD, ISC. SPDX identifier read from package
-  metadata, not recalled. GPL, AGPL and SSPL are never proposed — NextTeX is MIT, which is why texlab's
+  metadata, not recalled. GPL, AGPL and SSPL are never proposed — ExactTeX is MIT, which is why texlab's
   parser cannot be reused.
 
 ---
@@ -99,13 +99,13 @@ Every one of these was proposed during design and looked reasonable at the time.
 - **Claiming the typed syntax as the contribution.** MyST and sTeX already have it. See `PHILOSOPHY.md` §3
   and §7 for what may be claimed.
 - **Comparing a competitor by overlapping features.** The question is what each tool demands of the user.
-  Typst asks an author to abandon their corpus; NextTeX asks them to keep it. Same features, different
+  Typst asks an author to abandon their corpus; ExactTeX asks them to keep it. Same features, different
   strategies, different people.
 - **Scanning inside an opaque region for `\label` / `\ref` / `\cite` and treating hits as checkable.** Such a
   scan matches inside a `\newcommand` body, inside verbatim text, and inside an inactive `\if` branch.
   Advisory only, never a hard error.
 - **A per-file pointer to the project root.** A project can have several roots — one real paper had five.
-  The root is found by walking up to the nearest `nextex.toml`.
+  The root is found by walking up to the nearest `xtex.toml`.
 - **A structural check that ignores the constructs that legitimately break it.** A column count that does not
   sum `\multicolumn` widths reports false positives on ordinary tables.
 - **Treating a prediction as a finding.** Nothing that is not built is described as working. An anticipated
@@ -126,7 +126,7 @@ Every one of these was proposed during design and looked reasonable at the time.
 
 | If you're working on… | Start at |
 |---|---|
-| What NextTeX may and may not claim | `PHILOSOPHY.md` §3, §7 |
+| What ExactTeX may and may not claim | `PHILOSOPHY.md` §3, §7 |
 | A syntax decision | `PHILOSOPHY.md` §4, then the grammar |
 | Whether a construct may fail hard | `PHILOSOPHY.md` §6, then `check.rs` |
 | Byte transport breaking | `ast.rs` (the Opaque node), then `emit.rs` |
@@ -137,7 +137,7 @@ Every one of these was proposed during design and looked reasonable at the time.
 
 ## 7 · Where this project belongs
 
-NextTeX is an **AF Labs** project. It is not affiliated with any other organisation, and no external
+ExactTeX is an **AF Labs** project. It is not affiliated with any other organisation, and no external
 engineering handbook governs it: the engineering rules in §8 live here and here only.
 
 What AF Labs does bind is **how claims are made and tested**, and those protocols apply inside this repo:

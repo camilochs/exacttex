@@ -24,7 +24,7 @@ Fixes #
 - [ ] Untouched LaTeX still comes out byte-identical (corpus transports clean, no file needed a special case)
 - [ ] No annotation changes the rendered PDF or the build status
 - [ ] Nothing is injected into the emitted output — no assertions, wrappers or support packages
-- [ ] No hard error can originate outside an explicit NextTeX construct
+- [ ] No hard error can originate outside an explicit ExactTeX construct
 - [ ] Every diagnostic this PR adds names its blame side
 
 ## Decorrelated review

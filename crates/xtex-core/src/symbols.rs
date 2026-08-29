@@ -553,7 +553,7 @@ mod tests {
 
     #[test]
     fn a_declaration_is_found_by_its_name() {
-        let (_, t) = table(&[("a.ntex", "\\section{X} @id(sec:intro)")]);
+        let (_, t) = table(&[("a.xtex", "\\section{X} @id(sec:intro)")]);
         assert_eq!(t.declared().collect::<Vec<_>>(), ["sec:intro"]);
         assert!(t.declaration("sec:intro").is_some());
         assert!(t.errors().next().is_none());
@@ -562,7 +562,7 @@ mod tests {
     #[test]
     fn a_reference_to_nothing_is_unresolved() {
         let (_, t) = table(&[(
-            "a.ntex",
+            "a.xtex",
             "See @ref(missing) and @ref(present). @id(present)",
         )]);
         let unresolved: Vec<_> = t.unresolved_references().map(|(n, _)| n).collect();
@@ -572,7 +572,7 @@ mod tests {
     #[test]
     fn the_scope_is_the_root_so_two_files_share_one_namespace() {
         // Both files belong to one root, so the second declaration clashes.
-        let (_, t) = table(&[("a.ntex", "@id(fig:main)"), ("b.ntex", "@id(fig:main)")]);
+        let (_, t) = table(&[("a.xtex", "@id(fig:main)"), ("b.xtex", "@id(fig:main)")]);
         let errors: Vec<_> = t.errors().collect();
         assert_eq!(errors.len(), 1);
         assert!(matches!(errors[0], SymbolError::Duplicate { name, .. } if name == "fig:main"));
@@ -582,15 +582,15 @@ mod tests {
     fn separate_roots_may_reuse_an_identifier() {
         // A project with several roots — the corpus has one with five. Separate
         // tables, so the same name in each is not a clash.
-        let (_, first) = table(&[("paper_jss/main.ntex", "@id(fig:main)")]);
-        let (_, second) = table(&[("paper_tse/main.ntex", "@id(fig:main)")]);
+        let (_, first) = table(&[("paper_jss/main.xtex", "@id(fig:main)")]);
+        let (_, second) = table(&[("paper_tse/main.xtex", "@id(fig:main)")]);
         assert!(first.errors().next().is_none());
         assert!(second.errors().next().is_none());
     }
 
     #[test]
     fn a_duplicate_is_blamed_on_the_later_declaration() {
-        let (_, t) = table(&[("a.ntex", "@id(x) then later @id(x)")]);
+        let (_, t) = table(&[("a.xtex", "@id(x) then later @id(x)")]);
         let Some(SymbolError::Duplicate { first, second, .. }) = t.errors().next() else {
             panic!("expected a duplicate")
         };
@@ -604,7 +604,7 @@ mod tests {
     fn a_citation_is_not_reported_as_an_unresolved_reference() {
         // Its key comes from a bibliography. Reporting it here would call an
         // unread bibliography an absent key.
-        let (_, t) = table(&[("a.ntex", "@cite(knuth1984)")]);
+        let (_, t) = table(&[("a.xtex", "@cite(knuth1984)")]);
         assert_eq!(t.unresolved_references().count(), 0);
         assert_eq!(
             t.citations().map(|(n, _)| n).collect::<Vec<_>>(),
@@ -619,7 +619,7 @@ mod tests {
         // fields: `\\cite{a,b}` is ordinary LaTeX, 13% of measured citations
         // use it, and one names seven keys. Reading only the first would leave
         // the rest unchecked while reporting success.
-        let (_, t) = table(&[("a.ntex", "@citep(knuth1984, lamport1994)")]);
+        let (_, t) = table(&[("a.xtex", "@citep(knuth1984, lamport1994)")]);
         assert_eq!(
             t.citations().map(|(n, _)| n).collect::<Vec<_>>(),
             ["knuth1984", "lamport1994"]
@@ -629,7 +629,7 @@ mod tests {
     #[test]
     fn every_citation_command_is_a_construct() {
         let (_, t) = table(&[(
-            "a.ntex",
+            "a.xtex",
             "@cite(a) @citep(b) @citet(c) @textcite(d) @parencite(e)",
         )]);
         assert_eq!(
@@ -640,7 +640,7 @@ mod tests {
 
     #[test]
     fn a_malformed_identifier_is_reported_rather_than_declared() {
-        let (_, t) = table(&[("a.ntex", "@id(9starts-with-a-digit)")]);
+        let (_, t) = table(&[("a.xtex", "@id(9starts-with-a-digit)")]);
         assert_eq!(t.declared().count(), 0);
         assert!(matches!(
             t.errors().next(),
@@ -651,7 +651,7 @@ mod tests {
     #[test]
     fn a_construct_inside_an_excluded_region_never_reaches_the_table() {
         let (_, t) = table(&[(
-            "a.ntex",
+            "a.xtex",
             "% @id(commented)\n$@id(math)$\n\\begin{verbatim}\n@id(verb)\n\\end{verbatim}\n@id(real)",
         )]);
         assert_eq!(t.declared().collect::<Vec<_>>(), ["real"]);
@@ -659,19 +659,19 @@ mod tests {
 
     #[test]
     fn typed_blocks_retain_their_classes() {
-        let (_, t) = table(&[("a.ntex", "\\figure(fig:x) { caption = {X} }")]);
+        let (_, t) = table(&[("a.xtex", "\\figure(fig:x) { caption = {X} }")]);
         assert_eq!(t.declaration("fig:x").unwrap().class, EntityClass::Figure);
     }
 
     #[test]
     fn an_id_takes_a_known_attachment_class() {
-        let (_, t) = table(&[("a.ntex", "\\section{X}\n@id(sec:x)")]);
+        let (_, t) = table(&[("a.xtex", "\\section{X}\n@id(sec:x)")]);
         assert_eq!(t.declaration("sec:x").unwrap().class, EntityClass::Section);
     }
 
     #[test]
     fn an_id_on_unmodelled_latex_is_unknown_open() {
-        let (_, t) = table(&[("a.ntex", "\\newtheorem{X}\n@id(fig:x)")]);
+        let (_, t) = table(&[("a.xtex", "\\newtheorem{X}\n@id(fig:x)")]);
         assert_eq!(
             t.declaration("fig:x").unwrap().class,
             EntityClass::UnknownOpen
@@ -680,14 +680,14 @@ mod tests {
 
     #[test]
     fn only_two_known_inconsistent_classes_conflict() {
-        let (_, known) = table(&[("a.ntex", "\\table(fig:x) { caption = {X} } @ref(fig:x)")]);
+        let (_, known) = table(&[("a.xtex", "\\table(fig:x) { caption = {X} } @ref(fig:x)")]);
         assert_eq!(known.inconsistent_references().count(), 1);
 
-        let (_, unknown_target) = table(&[("a.ntex", "\\newtheorem{X} @id(fig:x) @ref(fig:x)")]);
+        let (_, unknown_target) = table(&[("a.xtex", "\\newtheorem{X} @id(fig:x) @ref(fig:x)")]);
         assert_eq!(unknown_target.inconsistent_references().count(), 0);
 
         let (_, unknown_demand) =
-            table(&[("a.ntex", "\\table(def:x) { caption = {X} } @ref(def:x)")]);
+            table(&[("a.xtex", "\\table(def:x) { caption = {X} } @ref(def:x)")]);
         assert_eq!(unknown_demand.inconsistent_references().count(), 0);
     }
 }

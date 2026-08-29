@@ -1,4 +1,4 @@
-# NextTeX grammar
+# ExactTeX grammar
 
 **Status: corrected v0.1 specification.** This is the specification against which the hand-written parser is
 tested. It is not generated from, and no parser generator produces it; see
@@ -43,31 +43,31 @@ resource-limit error, not an error in ordinary LaTeX.
 
 ## 2 · The document is LaTeX
 
-There is no top-level NextTeX replacement grammar. A `.ntex` file is a LaTeX byte stream in which NextTeX
+There is no top-level ExactTeX replacement grammar. A `.xtex` file is a LaTeX byte stream in which ExactTeX
 constructs are recognized at the positions defined by this specification.
 
 ```text
 document    = ( ntex-construct | latex-bytes )*
-latex-bytes = ⟨bytes not beginning a recognized NextTeX construct at the current position⟩
+latex-bytes = ⟨bytes not beginning a recognized ExactTeX construct at the current position⟩
 ```
 
 `latex-bytes` are not normalized or validated. Their spans index the immutable source buffer, and emission
 copies those slices byte for byte.
 
-For input containing no NextTeX constructs:
+For input containing no ExactTeX constructs:
 
 ```text
 emit(parse(input)) == input
 ```
 
-Unknown LaTeX is transported rather than rejected. A hard error can originate only in an explicit NextTeX
+Unknown LaTeX is transported rather than rejected. A hard error can originate only in an explicit ExactTeX
 construct, an invalid annotation encoding, an I/O failure, a resource limit, or a broken internal invariant.
 
 ---
 
 ## 3 · Entry tokens
 
-Only these byte sequences can begin a NextTeX construct:
+Only these byte sequences can begin a ExactTeX construct:
 
 ```text
 ntex-construct = at-construct | block-construct | raw
@@ -99,7 +99,7 @@ the keyword and opening `(`.
 
 None of the 111 files defines `\figure` or `\table`. This observation supports the block tokens for this
 corpus but is not a claim about LaTeX generally. A source-level definition of either command before its first
-NextTeX use is a name conflict attributed to the explicit NextTeX block. Detection outside modeled LaTeX is
+ExactTeX use is a name conflict attributed to the explicit ExactTeX block. Detection outside modeled LaTeX is
 advisory; an undetectable definition does not justify rewriting opaque bytes.
 
 `latex {` is the weakest of the three entry tokens: it is a bare word rather than a sigil or a control
@@ -150,14 +150,14 @@ Table~@ref(tab:roles)
 Section~@ref(sec:results)
 ```
 
-NextTeX does not generate `Definition`, `Table`, `Section`, `Appendix`, or a nonbreaking space. Generating
+ExactTeX does not generate `Definition`, `Table`, `Section`, `Appendix`, or a nonbreaking space. Generating
 them would inject bytes absent from the source and would violate the binding erasure rule. v0.1 makes no
 exception to that rule.
 
 ### Citations
 
 **A citation construct is a LaTeX citation command written with `@`.** That is the whole rule, and it is
-the same one `@ref` follows: NextTeX emits the command you named and knows nothing about the package that
+the same one `@ref` follows: ExactTeX emits the command you named and knows nothing about the package that
 defines it.
 
 ```
@@ -181,7 +181,7 @@ Nothing else is emitted — no brackets, no `~`, no package. Checking the keys a
 [`checking.md`](checking.md) §7 is the only thing the construct buys over writing the command directly.
 
 The default set covers the LaTeX kernel (`\cite`), `natbib` (`\citep`, `\citet`) and `biblatex`
-(`\textcite`, `\parencite`). A project using another command adds it in `nextex.toml`:
+(`\textcite`, `\parencite`). A project using another command adds it in `xtex.toml`:
 
 ```toml
 cite_commands = ["cite", "citep", "citet", "citealp"]
@@ -298,7 +298,7 @@ Two declarations of one identifier in one root are a hard error blamed on the la
 Importing the same physical file twice does not redeclare its entities: a canonical path merges once per
 root. Two different files declaring the same identifier do conflict when both belong to the same root.
 
-Separate roots under one `nextex.toml` have separate symbol tables and may reuse an identifier, provided
+Separate roots under one `xtex.toml` have separate symbol tables and may reuse an identifier, provided
 neither imports the other's declaring file. This matches LaTeX's document-wide label namespace without
 imposing a project-wide one on separately emitted documents.
 
@@ -361,7 +361,7 @@ declarations. Both contribute; neither overrides the other.
 bibliographies = ["refs.bib", "sources/extra.bib"]
 ```
 
-Paths are relative to the directory holding `nextex.toml`; an absolute path is invalid configuration.
+Paths are relative to the directory holding `xtex.toml`; an absolute path is invalid configuration.
 
 The built-in signature set includes:
 
@@ -585,10 +585,10 @@ LaTeX, where `width=120%` fails with `File ended while scanning use of \Gin@ii` 
 nothing about percentages.
 
 The exception needs one byte of context, so it stays a left-to-right rule. It applies **only inside a
-NextTeX block body**. Transported LaTeX keeps TeX's rule, where a comment means what TeX says it means.
+ExactTeX block body**. Transported LaTeX keeps TeX's rule, where a comment means what TeX says it means.
 
 The alternative was to require `80\%` inside blocks. It was rejected because the escape would appear in
-NextTeX's own syntax purely to work around a rule NextTeX controls.
+ExactTeX's own syntax purely to work around a rule ExactTeX controls.
 
 A top-level category-code change makes these default rules unreliable and invokes quarantine under §8.
 
@@ -671,7 +671,7 @@ keyed by revision identifier. Acceptance is not a stored state — it rewrites t
 ### Substitution separator
 
 For `@sub`, the separator is the first `->` at brace depth one that is outside all §8 exclusion regions and
-outside a nested NextTeX construct. A second such separator before the outer closing brace is a hard error.
+outside a nested ExactTeX construct. A second such separator before the outer closing brace is a hard error.
 An arrow inside a nested brace group, command argument, comment, math region, raw escape or nested construct
 is content.
 
@@ -730,8 +730,8 @@ This adds no new interpretation: `latex` followed by optional whitespace and `{`
 construct of §3, so no existing valid `.tex` changes meaning. Nested braces stay part of the body; only the
 outer pair is erased.
 
-Raw content is transported. No NextTeX entry token is recognized inside it. All raw content is unchecked
-for the coverage figure reported by `nextex check`.
+Raw content is transported. No ExactTeX entry token is recognized inside it. All raw content is unchecked
+for the coverage figure reported by `xtex check`.
 
 The raw escape ends at the `}` matching its opening `{`, using the balanced-region rules in §5. An unmatched
 opening brace ends at end of file and produces a hard error blamed on the explicit raw escape.
@@ -766,7 +766,7 @@ entry token are ordinary bytes.
 | Quarantine | a hazard listed below | end of file |
 
 The default verbatim environment set is `verbatim`, `verbatimtab`, `Verbatim`, `listing` and `lstlisting`,
-extended by `nextex.toml`.
+extended by `xtex.toml`.
 
 The verbatim **command** set is `\verb` and `\verb*` from the LaTeX kernel, `\lstinline` from `listings`, and
 `\mint` and `\mintinline` from `minted`. The last three are transcribed from unified-latex, which marks them
@@ -842,7 +842,7 @@ For a command absent from all signature sources:
 - no following group is asserted to be its argument;
 - balanced groups immediately following it remain ordinary LaTeX regions and do not produce hard errors;
 - entry-token-shaped text within those groups may be reported only as an advisory ambiguity and is not
-  recognized as a NextTeX construct.
+  recognized as a ExactTeX construct.
 
 The last rule prevents accidental interpretation inside an unknown macro body without inventing that
 command's shape. Recognition resumes after the balanced adjacent group. If such a group cannot be bounded,
@@ -860,7 +860,7 @@ A known environment's `\begin{name}` arguments are selected from its signature a
 arguments. Its body is not excluded merely because it belongs to an environment. Separate rows in the table
 above, such as verbatim and listing, may exclude it.
 
-This distinction permits prose and nested NextTeX constructs in ordinary environment bodies while keeping
+This distinction permits prose and nested ExactTeX constructs in ordinary environment bodies while keeping
 an optional title such as
 
 ```latex
@@ -888,7 +888,7 @@ ParseConfidence = Structured | OpaqueBalanced | OpaqueToEof
 - an exclusion-region opener whose end cannot be located; or
 - a configured resource bound that requires preservation rather than rejection.
 
-Quarantine is monotonic within the file: after `OpaqueToEof` begins, no later NextTeX construct is
+Quarantine is monotonic within the file: after `OpaqueToEof` begins, no later ExactTeX construct is
 recognized. The remaining bytes are transported.
 
 ### Exclusion fixtures

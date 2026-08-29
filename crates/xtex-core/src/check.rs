@@ -1,4 +1,4 @@
-//! Hard diagnostics substantiated by explicit NextTeX constructs.
+//! Hard diagnostics substantiated by explicit ExactTeX constructs.
 
 use crate::bibliography::{Bibliography, missing_citations};
 use crate::blocks::{BlockError, BlockKind, Value, parse_block};
@@ -54,7 +54,7 @@ pub fn check(table: &SymbolTable, bibliography: &Bibliography) -> Vec<Diagnostic
                     continue;
                 };
                 diagnostics.push(Diagnostic {
-                    code: "NT1001",
+                    code: "XT1001",
                     entity: declaration.class,
                     name: Some(name.clone()),
                     source: *second_source,
@@ -68,7 +68,7 @@ pub fn check(table: &SymbolTable, bibliography: &Bibliography) -> Vec<Diagnostic
                 });
             }
             SymbolError::Malformed { source, construct } => diagnostics.push(Diagnostic {
-                code: "NT1002",
+                code: "XT1002",
                 entity: EntityClass::UnknownOpen,
                 name: None,
                 source: *source,
@@ -80,7 +80,7 @@ pub fn check(table: &SymbolTable, bibliography: &Bibliography) -> Vec<Diagnostic
     }
     for (name, reference) in table.unresolved_references() {
         diagnostics.push(Diagnostic {
-            code: "NT1003",
+            code: "XT1003",
             entity: table.demand_of(name),
             name: Some(name.to_owned()),
             source: reference.payload.source,
@@ -91,7 +91,7 @@ pub fn check(table: &SymbolTable, bibliography: &Bibliography) -> Vec<Diagnostic
     }
     for (name, reference, demand, declaration) in table.inconsistent_references() {
         diagnostics.push(Diagnostic {
-            code: "NT1004",
+            code: "XT1004",
             entity: demand,
             name: Some(name.to_owned()),
             source: reference.payload.source,
@@ -110,7 +110,7 @@ pub fn check(table: &SymbolTable, bibliography: &Bibliography) -> Vec<Diagnostic
     }
     for (key, reference) in missing_citations(table, bibliography) {
         diagnostics.push(Diagnostic {
-            code: "NT1005",
+            code: "XT1005",
             entity: EntityClass::Citation,
             name: Some(key.to_owned()),
             source: reference.payload.source,
@@ -125,7 +125,7 @@ pub fn check(table: &SymbolTable, bibliography: &Bibliography) -> Vec<Diagnostic
 /// Checks typed blocks in every source belonging to one document root.
 ///
 /// `resolves` receives literal paths and the source that wrote them. A false
-/// result is evidence for NT1006; computed paths never reach this callback.
+/// result is evidence for XT1006; computed paths never reach this callback.
 pub fn check_documents(
     sources: &Sources,
     documents: &[Document],
@@ -196,7 +196,7 @@ fn check_block(
                 .is_some_and(|n| !(0.0..=100.0).contains(&n))
             {
                 diagnostics.push(Diagnostic {
-                    code: "NT1007",
+                    code: "XT1007",
                     entity: EntityClass::Length,
                     name: None,
                     source,
@@ -216,7 +216,7 @@ fn check_block(
             };
             if !path.contains('\\') && !resolves(source, path) {
                 diagnostics.push(Diagnostic {
-                    code: "NT1006",
+                    code: "XT1006",
                     entity: EntityClass::Figure,
                     name: Some(path.to_owned()),
                     source,
@@ -262,11 +262,11 @@ fn block_error(source: SourceId, kind: BlockKind, error: BlockError, bytes: &[u8
     };
     Diagnostic {
         code: if identifier_error {
-            "NT1002"
+            "XT1002"
         } else if length_error {
-            "NT1007"
+            "XT1007"
         } else {
-            "NT1008"
+            "XT1008"
         },
         entity: if length_error {
             EntityClass::Length
@@ -294,7 +294,7 @@ mod tests {
 
     fn diagnostics(source: &str, bibliography: &Bibliography) -> Vec<Diagnostic> {
         let mut sources = Sources::new();
-        let id = sources.add("main.ntex", source.as_bytes().to_vec());
+        let id = sources.add("main.xtex", source.as_bytes().to_vec());
         let document = parse(&sources, id);
         let mut table = SymbolTable::new();
         table.merge(&sources, &document);
@@ -328,6 +328,6 @@ mod tests {
             &Bibliography::Complete(BTreeSet::default()),
         );
         assert_eq!(found.len(), 1);
-        assert_eq!(found[0].code, "NT1005");
+        assert_eq!(found[0].code, "XT1005");
     }
 }

@@ -59,7 +59,7 @@ Two consequences for `@add` / `@del` / `@sub`:
 
 - The dominant use is a phrase inside a sentence, not a block between paragraphs. The constructs must work
   mid-sentence.
-- 33 of them contain references or citations, so a revision construct must be able to **hold other NextTeX
+- 33 of them contain references or citations, so a revision construct must be able to **hold other ExactTeX
   constructs inside it**. The draft grammar's `braced` content does not say whether nested constructs are
   recognized there.
 

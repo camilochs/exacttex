@@ -87,7 +87,7 @@ to editor-level ERROR, but texlab is not a build gate — **it has no analysis C
 language server over stdin/stdout) and `inverse-search`. Measuring it required driving it over LSP;
 `texlab_probe.py` in this directory is that client.
 
-**Four classes already stop the build**, and on those NextTeX's contribution is not detection. It is timing
+**Four classes already stop the build**, and on those ExactTeX's contribution is not detection. It is timing
 and message quality: reporting before TeX runs, and naming the problem instead of `\Gin@ii`.
 
 ---
@@ -123,5 +123,5 @@ What the measurement actually establishes, and it is enough for this gate:
 - where a build does stop, the message names the wrong thing (`\Gin@ii` for a percentage).
 
 **Gate 0b passes on the evidence.** The rule is retired rather than re-run: a replacement would count the
-classes NextTeX adds, which the table above already reports directly. Nothing downstream depends on the
+classes ExactTeX adds, which the table above already reports directly. Nothing downstream depends on the
 threshold, and re-running it would produce the same table with a different arithmetic.

@@ -1,7 +1,7 @@
-//! Command-line front end for the NextTeX compiler.
+//! Command-line front end for the ExactTeX compiler.
 //!
 //! Every host assumption lives here: filesystem paths, the current directory,
-//! and process exit codes. `nextex-core` has none of them, which is what lets
+//! and process exit codes. `xtex-core` has none of them, which is what lets
 //! the same core compile to WebAssembly.
 
 use std::collections::BTreeSet;
@@ -9,19 +9,19 @@ use std::fs;
 use std::path::{Path, PathBuf};
 use std::process::ExitCode;
 
-use nextex_core::bibliography::{Bibliography, Declared, Unavailable, assemble, declared_in};
-use nextex_core::check::{Diagnostic, check, check_documents};
-use nextex_core::diagnostics::map_emitted_diagnostic;
-use nextex_core::document::Node;
-use nextex_core::io::{IoError, OutputSink, SourceLoader};
-use nextex_core::review::{
+use xtex_core::bibliography::{Bibliography, Declared, Unavailable, assemble, declared_in};
+use xtex_core::check::{Diagnostic, check, check_documents};
+use xtex_core::diagnostics::map_emitted_diagnostic;
+use xtex_core::document::Node;
+use xtex_core::io::{IoError, OutputSink, SourceLoader};
+use xtex_core::review::{
     Resolution, parse_sidecar, prune_sidecar, resolve, resolve_sidecar, validate,
 };
-use nextex_core::scanner::EntryToken;
-use nextex_core::source::{SourceId, Sources};
-use nextex_core::sourcemap::emit_with_map;
-use nextex_core::symbols::{EntityClass, PrefixMap, SymbolTable};
-use nextex_core::{RevisionView, emit_view, parse};
+use xtex_core::scanner::EntryToken;
+use xtex_core::source::{SourceId, Sources};
+use xtex_core::sourcemap::emit_with_map;
+use xtex_core::symbols::{EntityClass, PrefixMap, SymbolTable};
+use xtex_core::{RevisionView, emit_view, parse};
 
 /// Largest source the CLI will read, in bytes.
 ///
@@ -186,11 +186,11 @@ fn main() -> ExitCode {
 }
 
 fn print_usage() {
-    eprintln!("usage: nextex <file.ntex> [--original|--final|--marked]");
-    eprintln!("       nextex build <file.ntex> [--original|--final|--marked]");
-    eprintln!("       nextex check [--json] [--strict-tex] <file.ntex>");
-    eprintln!("       nextex blame <file.ntex> <line>:<column> [message]");
-    eprintln!("       nextex revise <file.ntex> (--accept ID|--reject ID|--accept-all|--prune)");
+    eprintln!("usage: xtex <file.xtex> [--original|--final|--marked]");
+    eprintln!("       xtex build <file.xtex> [--original|--final|--marked]");
+    eprintln!("       xtex check [--json] [--strict-tex] <file.xtex>");
+    eprintln!("       xtex blame <file.xtex> <line>:<column> [message]");
+    eprintln!("       xtex revise <file.xtex> (--accept ID|--reject ID|--accept-all|--prune)");
     eprintln!();
     eprintln!("Emits the file and its imports as LaTeX under build/.");
 }
@@ -204,9 +204,9 @@ fn sole_document() -> Result<String, String> {
             path.extension()
                 .is_some_and(|extension| extension == "ntex")
         });
-    let document = documents.next().ok_or("no .ntex document was found")?;
+    let document = documents.next().ok_or("no .xtex document was found")?;
     if documents.next().is_some() {
-        return Err("more than one .ntex document was found; name the file explicitly".to_owned());
+        return Err("more than one .xtex document was found; name the file explicitly".to_owned());
     }
     Ok(document.to_string_lossy().into_owned())
 }
@@ -220,7 +220,7 @@ fn check_command(args: &[String]) -> ExitCode {
         .map(String::as_str)
         .collect();
     if inputs.len() != 1 {
-        eprintln!("usage: nextex check [--json] [--strict-tex] <file.ntex>");
+        eprintln!("usage: xtex check [--json] [--strict-tex] <file.xtex>");
         return ExitCode::from(2);
     }
 
@@ -295,7 +295,7 @@ fn run_check(root: &str) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography)
                 Ok(imported) => pending.push(imported),
                 Err(IoError::NotFound { .. } | IoError::Unresolvable { .. }) => {
                     import_diagnostics.push(Diagnostic {
-                        code: "NT1009",
+                        code: "XT1009",
                         entity: EntityClass::UnknownOpen,
                         name: Some(path.clone()),
                         source: id,
@@ -350,7 +350,7 @@ fn run_check(root: &str) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography)
 fn literal_import(
     sources: &Sources,
     source: SourceId,
-    span: nextex_core::source::Span,
+    span: xtex_core::source::Span,
 ) -> Option<String> {
     let bytes = sources.get(source)?.slice(span)?;
     let first = bytes.iter().position(|byte| *byte == b'"')?;
@@ -369,7 +369,7 @@ fn merge_declared(target: &mut Declared, found: Declared) {
 fn read_prefixes(input: &Path) -> PrefixMap {
     let mut dir = input.parent().unwrap_or_else(|| Path::new("."));
     loop {
-        let config = dir.join("nextex.toml");
+        let config = dir.join("xtex.toml");
         if let Ok(text) = fs::read_to_string(config) {
             return parse_prefixes(&text).unwrap_or_default();
         }
@@ -419,7 +419,7 @@ fn parse_prefixes(text: &str) -> Option<PrefixMap> {
 fn location(
     sources: &Sources,
     source: SourceId,
-    span: nextex_core::source::Span,
+    span: xtex_core::source::Span,
 ) -> (&str, usize, usize) {
     let Some(source) = sources.get(source) else {
         return ("<unresolved>", 1, 1);
@@ -451,7 +451,7 @@ fn print_human(sources: &Sources, diagnostic: &Diagnostic) {
         let (file, line, column) = location(sources, related.source, related.span);
         println!("  --> {file}:{line}:{column}: {}", related.message);
     }
-    println!("  blame: nextex-construct");
+    println!("  blame: xtex-construct");
 }
 
 fn print_json(sources: &Sources, diagnostics: &[Diagnostic], coverage: f64) {
@@ -462,7 +462,7 @@ fn print_json(sources: &Sources, diagnostics: &[Diagnostic], coverage: f64) {
         }
         let (file, line, column) = location(sources, diagnostic.source, diagnostic.span);
         print!(
-            "{{\"code\":\"{}\",\"severity\":\"error\",\"blame\":\"nextex-construct\",\"entity\":\"{}\",\"name\":",
+            "{{\"code\":\"{}\",\"severity\":\"error\",\"blame\":\"xtex-construct\",\"entity\":\"{}\",\"name\":",
             diagnostic.code,
             diagnostic.entity.name()
         );
@@ -586,7 +586,7 @@ fn build(
             let emission = emit_with_map(&sources, &document).map_err(|error| error.to_string())?;
             sink.write(&output.to_string_lossy(), &emission.bytes)
                 .map_err(|error| error.to_string())?;
-            output.set_extension("ntexmap");
+            output.set_extension("xtexmap");
             sink.write(&output.to_string_lossy(), &emission.map.to_json())
                 .map_err(|error| error.to_string())?;
         } else {
@@ -602,7 +602,7 @@ fn build(
 fn validate_sidecar(name: &str, bytes: &[u8]) -> Result<(), String> {
     let path = Path::new(name);
     let mut sidecar_path = path.to_path_buf();
-    sidecar_path.set_extension("ntexrev");
+    sidecar_path.set_extension("xtexrev");
     let file_name = path.file_name().unwrap_or_default().to_string_lossy();
     let sidecar = match fs::read(&sidecar_path) {
         Ok(source) => {
@@ -614,24 +614,22 @@ fn validate_sidecar(name: &str, bytes: &[u8]) -> Result<(), String> {
             // Only a sidecar that exists can be mispaired. The synthesised one
             // below describes this file by construction, and comparing it
             // against itself once failed for every imported file: it was built
-            // from the load path, `sections/part.ntex`, and compared against
-            // the file name, `part.ntex`.
+            // from the load path, `sections/part.xtex`, and compared against
+            // the file name, `part.xtex`.
             if sidecar.document != file_name {
                 return Err(format!(
-                    "NT1013: {} names document '{}', not '{file_name}'",
+                    "XT1013: {} names document '{}', not '{file_name}'",
                     sidecar_path.display(),
                     sidecar.document
                 ));
             }
             sidecar
         }
-        Err(error) if error.kind() == std::io::ErrorKind::NotFound => {
-            nextex_core::review::Sidecar {
-                version: 1,
-                document: file_name.into_owned(),
-                revisions: Vec::new(),
-            }
-        }
+        Err(error) if error.kind() == std::io::ErrorKind::NotFound => xtex_core::review::Sidecar {
+            version: 1,
+            document: file_name.into_owned(),
+            revisions: Vec::new(),
+        },
         Err(error) => return Err(format!("{}: {error}", sidecar_path.display())),
     };
     for advisory in validate(bytes, &sidecar).map_err(|error| error.to_string())? {
@@ -642,9 +640,7 @@ fn validate_sidecar(name: &str, bytes: &[u8]) -> Result<(), String> {
 
 fn revise(args: &[String]) -> ExitCode {
     let Some(input) = args.first() else {
-        eprintln!(
-            "usage: nextex revise <file.ntex> (--accept ID|--reject ID|--accept-all|--prune)"
-        );
+        eprintln!("usage: xtex revise <file.xtex> (--accept ID|--reject ID|--accept-all|--prune)");
         return ExitCode::from(2);
     };
     let path = Path::new(input);
@@ -656,7 +652,7 @@ fn revise(args: &[String]) -> ExitCode {
         }
     };
     let mut sidecar_path = path.to_path_buf();
-    sidecar_path.set_extension("ntexrev");
+    sidecar_path.set_extension("xtexrev");
     let mut sidecar_bytes = fs::read(&sidecar_path).ok();
     if args.get(1).is_some_and(|option| option == "--prune") {
         return prune(&sidecar_path, sidecar_bytes.as_deref(), &bytes);
@@ -761,9 +757,7 @@ fn resolve_all(bytes: &[u8]) -> Result<(Vec<u8>, Vec<ResolutionEvent>), String> 
     let mut current = bytes.to_vec();
     let mut events = Vec::new();
     loop {
-        let id = nextex_core::review::revision_ids(&current)
-            .into_iter()
-            .next();
+        let id = xtex_core::review::revision_ids(&current).into_iter().next();
         let Some(id) = id else {
             return Ok((current, events));
         };
@@ -822,27 +816,27 @@ fn current_timestamp() -> String {
 }
 
 fn review_author() -> String {
-    std::env::var("NEXTEX_AUTHOR")
+    std::env::var("XTEX_AUTHOR")
         .or_else(|_| std::env::var("USER"))
         .unwrap_or_else(|_| "unknown".to_owned())
 }
 
 fn review_timestamp() -> String {
-    std::env::var("NEXTEX_AT").unwrap_or_else(|_| current_timestamp())
+    std::env::var("XTEX_AT").unwrap_or_else(|_| current_timestamp())
 }
 
 /// Reports where a location in the emitted `.tex` came from.
 ///
 /// TeX names a line in a file the author never wrote. Without this the author
-/// reads an error against bytes they have never seen, and NextTeX carries the
+/// reads an error against bytes they have never seen, and ExactTeX carries the
 /// blame for every LaTeX error in the document.
 ///
 /// The map is rebuilt from the source rather than read back from the
-/// `.ntexmap` beside the output: nothing here parses that file yet, and it
+/// `.xtexmap` beside the output: nothing here parses that file yet, and it
 /// exists for editors and CI rather than for this path.
 fn blame(mut args: impl Iterator<Item = String>) -> ExitCode {
     let (Some(input), Some(location)) = (args.next(), args.next()) else {
-        eprintln!("usage: nextex blame <file.ntex> <line>:<column> [message]");
+        eprintln!("usage: xtex blame <file.xtex> <line>:<column> [message]");
         return ExitCode::from(2);
     };
     let message = args
@@ -896,8 +890,7 @@ mod tests {
     use super::*;
 
     fn case(name: &str, files: &[(&str, &str)]) -> PathBuf {
-        let dir =
-            std::env::temp_dir().join(format!("nextex-issue-11-{}-{name}", std::process::id()));
+        let dir = std::env::temp_dir().join(format!("xtex-issue-11-{}-{name}", std::process::id()));
         fs::create_dir_all(&dir).expect("create test project");
         for (name, contents) in files {
             fs::write(dir.join(name), contents).expect("write test input");
@@ -924,14 +917,14 @@ mod tests {
             "imports",
             &[
                 (
-                    "main.ntex",
-                    "@import(\"part.ntex\") @import(\"part.ntex\") @ref(sec:there)",
+                    "main.xtex",
+                    "@import(\"part.xtex\") @import(\"part.xtex\") @ref(sec:there)",
                 ),
-                ("part.ntex", "\\section{There} @id(sec:there)"),
+                ("part.xtex", "\\section{There} @id(sec:there)"),
             ],
         );
         let (_, diagnostics, _, _) =
-            run_check(&dir.join("main.ntex").to_string_lossy()).expect("check project");
+            run_check(&dir.join("main.xtex").to_string_lossy()).expect("check project");
         assert!(diagnostics.is_empty(), "{diagnostics:?}");
     }
 
@@ -939,12 +932,12 @@ mod tests {
     fn an_absent_literal_import_is_nt1009() {
         let dir = case(
             "missing-import",
-            &[("main.ntex", "@import(\"absent.ntex\")")],
+            &[("main.xtex", "@import(\"absent.xtex\")")],
         );
         let (_, diagnostics, _, _) =
-            run_check(&dir.join("main.ntex").to_string_lossy()).expect("check project");
+            run_check(&dir.join("main.xtex").to_string_lossy()).expect("check project");
         assert_eq!(diagnostics.len(), 1);
-        assert_eq!(diagnostics[0].code, "NT1009");
+        assert_eq!(diagnostics[0].code, "XT1009");
     }
 
     #[test]
@@ -952,17 +945,17 @@ mod tests {
         let dir = case(
             "prefixes",
             &[
-                ("nextex.toml", "[prefixes]\nfigure = [\"image\"]\n"),
+                ("xtex.toml", "[prefixes]\nfigure = [\"image\"]\n"),
                 (
-                    "main.ntex",
+                    "main.xtex",
                     "\\table(fig:old) { caption = {Old} } @ref(fig:old) \\table(image:new) { caption = {New} } @ref(image:new)",
                 ),
             ],
         );
         let (_, diagnostics, _, _) =
-            run_check(&dir.join("main.ntex").to_string_lossy()).expect("check project");
+            run_check(&dir.join("main.xtex").to_string_lossy()).expect("check project");
         assert_eq!(diagnostics.len(), 1);
-        assert_eq!(diagnostics[0].code, "NT1004");
+        assert_eq!(diagnostics[0].code, "XT1004");
         assert_eq!(diagnostics[0].name.as_deref(), Some("image:new"));
     }
 }

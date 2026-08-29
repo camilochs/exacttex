@@ -3,7 +3,7 @@
 **Status:** accepted, 2026-08-29.
 **Depends on:** [`0001`](0001-typed-emission-and-no-injection.md), which requires a second exception to
 no-injection to carry its own record.
-**Issue:** [#6](https://github.com/camilochs/nexttex/issues/6)
+**Issue:** [#6](https://github.com/camilochs/exacttex/issues/6)
 
 ---
 
@@ -12,7 +12,7 @@ no-injection to carry its own record.
 Decision 0001: a typed block lowers to the LaTeX its fields describe and nothing else. No support package,
 no wrapper environment, no helper command, however much the output would benefit.
 
-`nextex build --marked` renders every revision visibly — inserted text coloured, deleted text struck
+`xtex build --marked` renders every revision visibly — inserted text coloured, deleted text struck
 through. There is no way to do that with kernel commands alone. It has to emit `\textcolor` and a
 strikethrough command, and it has to load the packages that define them.
 
@@ -31,7 +31,7 @@ gone; the second is handled by the bounds below.
 ## The bounds
 
 1. **`--marked` output is never the artefact of record.** It is written to a distinct filename. A journal
-   receives what `nextex build` produces, and that build is unchanged by this decision.
+   receives what `xtex build` produces, and that build is unchanged by this decision.
 2. **The normal build is byte-identical whether or not `--marked` was ever run.** Testable directly, and it
    is the test that keeps this decision from leaking.
 3. **The injected set is fixed and listed here**, not open to growth by whoever next needs something:

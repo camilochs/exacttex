@@ -1,5 +1,5 @@
 //! Prints what the scanner makes of a file.
-use nextex_core::scanner::{Piece, scan};
+use xtex_core::scanner::{Piece, scan};
 
 fn main() {
     let path = std::env::args().nth(1).expect("usage: pieces <file>");

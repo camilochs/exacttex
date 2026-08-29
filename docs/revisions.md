@@ -16,11 +16,11 @@ Split, and the split is the design:
 
 | | Lives in | Why |
 |---|---|---|
-| The text of the change | the `.ntex` file | It is content. It belongs in the diff, in the commit, in the branch. |
-| Who, when, and the conversation | `paper.ntexrev`, beside it | It changes many times per review and would bury the text's own diff. |
+| The text of the change | the `.xtex` file | It is content. It belongs in the diff, in the commit, in the branch. |
+| Who, when, and the conversation | `paper.xtexrev`, beside it | It changes many times per review and would bury the text's own diff. |
 
-The consequence that matters: **losing the sidecar loses attribution, never text.** A `.ntex` whose
-`.ntexrev` was deleted still renders every view correctly; it just cannot say who proposed what. The
+The consequence that matters: **losing the sidecar loses attribution, never text.** A `.xtex` whose
+`.xtexrev` was deleted still renders every view correctly; it just cannot say who proposed what. The
 reverse is not true and cannot happen, because the sidecar holds no content.
 
 The second consequence is structural. The sidecar carries **no spans** — it is keyed by identifier alone. So
@@ -53,7 +53,7 @@ checked like any other prose. That follows the 33 measured revisions in the corp
 ## 3 · The three views
 
 ```
-                       paper.ntex
+                       paper.xtex
                             |
         +-------------------+-------------------+
         |                   |                   |
@@ -80,9 +80,9 @@ answer gives the same file two final forms.
 ## 4 · Accepting and rejecting
 
 ```sh
-nextex revise --accept change:qualified
-nextex revise --reject change:qualified
-nextex revise --accept-all
+xtex revise --accept change:qualified
+xtex revise --reject change:qualified
+xtex revise --accept-all
 ```
 
 Accepting **rewrites the source**. The construct disappears and the text it argued for stays:
@@ -121,11 +121,11 @@ the record.
 
 ## 5 · The sidecar
 
-`paper.ntexrev`, TOML, beside the `.ntex` it belongs to.
+`paper.xtexrev`, TOML, beside the `.xtex` it belongs to.
 
 ```toml
 version = 1
-document = "paper.ntex"
+document = "paper.xtex"
 
 [[revision]]
 id     = "change:qualified"
@@ -147,7 +147,7 @@ message = "Agreed. Rewriting with the interval."
 |---|---|---|
 | `id` | yes | The identifier in the construct. Unique within the document root. |
 | `kind` | yes | `add`, `del`, `sub` or `note`. Must match the construct. |
-| `author` | yes | Free text. NextTeX does not know what an account is. |
+| `author` | yes | Free text. ExactTeX does not know what an account is. |
 | `at` | yes | RFC 3339 timestamp. |
 | `message` | no | Why. |
 | `on` | notes only | The `id` this note is about. |
@@ -156,32 +156,32 @@ message = "Agreed. Rewriting with the interval."
 
 Three rules make the mapping deterministic, which is what the issue's exit criterion asks for:
 
-1. Two `@add(c1)` in one document root is `NT1001`, the same duplicate-identifier error as two `@id`. So one
+1. Two `@add(c1)` in one document root is `XT1001`, the same duplicate-identifier error as two `@id`. So one
    identifier names at most one construct.
-2. Two `[[revision]]` blocks with the same `id` is `NT1010`. So one identifier names at most one record.
-3. `kind` in the record must match the construct's keyword, `NT1011`. A record that says `add` against a
+2. Two `[[revision]]` blocks with the same `id` is `XT1010`. So one identifier names at most one record.
+3. `kind` in the record must match the construct's keyword, `XT1011`. A record that says `add` against a
    `@del` is a corrupted pairing rather than a rename.
-4. The sidecar's `document` must name the file it sits beside, `NT1013`. One naming a different file is
+4. The sidecar's `document` must name the file it sits beside, `XT1013`. One naming a different file is
    paired with the wrong source, and every record in it would be judged against constructs it was never
    about. The same code covers a sidecar that cannot be read at all.
 
 ### Orphans, in the two directions that are not the same
 
-**A record with no construct** — someone deleted the `@add` by hand and left the record. This is `NT1012`, a
-hard error, and `nextex revise --prune` fixes it by moving the record to `history`.
+**A record with no construct** — someone deleted the `@add` by hand and left the record. This is `XT1012`, a
+hard error, and `xtex revise --prune` fixes it by moving the record to `history`.
 
 **A construct with no record** — the change is in the document, its attribution is not. This is an
-**advisory**, never an error. The document builds, every view is correct, and the only loss is that NextTeX
+**advisory**, never an error. The document builds, every view is correct, and the only loss is that ExactTeX
 cannot say who proposed it. That is exactly the cost §1 chose to accept, so failing on it would contradict
 the design.
 
 The asymmetry is the point. The file is authoritative for content; the sidecar is authoritative for
 attribution. A missing sidecar is a smaller problem than a missing document, and the errors say so.
 
-Note that `NT1012` is a hard error with no explicit construct behind it, which the invariant in
+Note that `XT1012` is a hard error with no explicit construct behind it, which the invariant in
 [`AGENTS.md`](../AGENTS.md) §4 otherwise forbids. The scope of that invariant is *ordinary LaTeX*: a
-renamed `.tex` must check clean, and it does — a document with no `.ntexrev` has no records to orphan. A
-`.ntexrev` is NextTeX's own artefact, and an inconsistency inside it is ours to report.
+renamed `.tex` must check clean, and it does — a document with no `.xtexrev` has no records to orphan. A
+`.xtexrev` is ExactTeX's own artefact, and an inconsistency inside it is ours to report.
 
 ---
 
@@ -198,7 +198,7 @@ It is permitted here, bounded by three conditions:
 2. **Property B does not cover it.** The property says annotating must not change the rendered page. The
    entire purpose of this view is to change the rendered page, so applying the property to it would be a
    category error rather than a violation.
-3. **The normal build is unaffected.** `nextex build` on the same source emits the same bytes whether or not
+3. **The normal build is unaffected.** `xtex build` on the same source emits the same bytes whether or not
    `--marked` was ever run.
 
 Recorded as [`decisions/0002`](decisions/0002-the-marked-view-may-inject.md), because decision 0001 says a
@@ -208,7 +208,7 @@ second exception to no-injection needs its own record.
 
 ## 7 · What this does not do
 
-- **No merge.** Two people editing the same `.ntex` resolve it in git, like any other file. NextTeX has no
+- **No merge.** Two people editing the same `.xtex` resolve it in git, like any other file. ExactTeX has no
   opinion about branches.
 - **No identity.** `author` is a string. There is no account, no signature, no verification that the person
   named is the person who typed.

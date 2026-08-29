@@ -17,10 +17,10 @@ third-party code is never vendored here by accident.
 
 <https://github.com/microsoft/TypeScript/wiki/TypeScript-Design-Goals> · read in full
 
-The canonical statement of the strategy NextTeX copies. Five of its goals and two non-goals are, near
+The canonical statement of the strategy ExactTeX copies. Five of its goals and two non-goals are, near
 word-for-word, rules this project derived independently:
 
-| TypeScript | NextTeX |
+| TypeScript | ExactTeX |
 |---|---|
 | "Impose no runtime overhead on emitted programs" | erasure, never injection (`PHILOSOPHY.md` §5) |
 | "Emit clean, idiomatic, recognizable JavaScript code" | the emitted `.tex` is meant to be read and submitted |
@@ -69,7 +69,7 @@ The split exists because those two needs conflict: sharing requires position-ind
 requires position. Editing is roughly O(depth) because only the spine from the changed node to the root is
 rebuilt; everything else is shared. That is what makes incremental reparsing viable.
 
-Two stated invariants, both of which NextTeX wants verbatim:
+Two stated invariants, both of which ExactTeX wants verbatim:
 
 > "Parsing is lossless (even if the input is invalid, the tree produced by the parser represents it exactly)."
 > "Parsing is resilient (even if the input is invalid, parser tries to see as much syntax tree fragments in
@@ -105,7 +105,7 @@ Otherwise Phase 3 stops being "add the LSP" and becomes a core refactor — the 
 
 <https://tc39.es/ecma426/> · read
 
-The standard NextTeX's `.ntexmap` is reinventing. Three points that bear on the design:
+The standard ExactTeX's `.xtexmap` is reinventing. Three points that bear on the design:
 
 - **Mappings are points, not ranges.** A segment gives a generated column and optionally a source position;
   the region it covers is implied by the next segment. `ROADMAP.md` currently specifies explicit
@@ -116,7 +116,7 @@ The standard NextTeX's `.ntexmap` is reinventing. Three points that bear on the 
 - **Ordering is normative.** Mappings sort ascending by generated position, matching the ordered,
   non-overlapping requirement already in the plan.
 
-**Bearing — repository issue #14.** Ranges are more direct for blame lookup than points, and NextTeX is not
+**Bearing — repository issue #14.** Ranges are more direct for blame lookup than points, and ExactTeX is not
 obliged to emit a JavaScript source map. But if an editor should ever consume the map, format compatibility
 stops being free. Decide deliberately rather than by omission.
 
@@ -127,7 +127,7 @@ stops being free. Decide deliberately rather than by omission.
 - **TeX in WebAssembly.** SwiftLaTeX compiles XeTeX and pdfTeX to WASM and runs them entirely
   client-side (<https://github.com/SwiftLaTeX/SwiftLaTeX>). TeXlyre-BusyTeX supports TeX Live 2026 with
   pdfLaTeX, XeLaTeX and LuaLaTeX plus BibTeX and makeindex
-  (<https://github.com/TeXlyre/texlyre-busytex>). **Not tested against NextTeX output.**
+  (<https://github.com/TeXlyre/texlyre-busytex>). **Not tested against ExactTeX output.**
 - **LSP prior art in the same domain:** texlab (<https://github.com/latex-lsp/texlab>, Rust, **GPL-3.0** — do
   not copy code into this MIT project) and digestif (<https://github.com/astoff/digestif>).
 
@@ -185,7 +185,7 @@ SKIP_ENV_NAMES = ('lstlisting', 'verbatim', 'verbatimtab', 'Verbatim', 'listing'
 ```
 
 `Verbatim` (capitalised, from `fancyvrb`), `verbatimtab` and `listing` were not in our list. Use this as the
-seed for the `nextex.toml` default.
+seed for the `xtex.toml` default.
 
 ### Other shallow parsers, not read
 
@@ -210,7 +210,7 @@ The novelty check of 2026-08-28 established what may not be claimed. Closest pri
 - **MyST / mystmd** (<https://mystmd.org>) — typed directives, labelled cross-references, emits LaTeX, and
   parses `.tex` via `@unified-latex`. Its own documentation calls the LaTeX path "a transitional solution"
   and states it is not a full LaTeX renderer; a broken cross-reference "raise[s] a warning". It **converts**;
-  NextTeX **transports**.
+  ExactTeX **transports**.
 - **sTeX / sTeXIDE** (arXiv 1005.5489, 1010.5935) — semantic macros inside a LaTeX superset, with an AST,
   semantic tagger, consistency validator and context-aware completion. Mathematical semantics, not document
   structure; Eclipse-based, 2010.

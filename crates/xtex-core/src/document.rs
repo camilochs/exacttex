@@ -33,7 +33,7 @@ pub enum ParseConfidence {
 }
 
 impl ParseConfidence {
-    /// Whether NextTeX constructs are still recognised after this region.
+    /// Whether ExactTeX constructs are still recognised after this region.
     #[must_use]
     pub const fn recognition_continues(self) -> bool {
         !matches!(self, Self::OpaqueToEof)
@@ -76,7 +76,7 @@ pub enum Node {
         /// How much of the region the parser could bound.
         confidence: ParseConfidence,
     },
-    /// A recognised NextTeX construct.
+    /// A recognised ExactTeX construct.
     ///
     /// Its source span contains the values used when lowering it to LaTeX.
     Construct {
@@ -212,7 +212,7 @@ impl Document {
     /// Returns a value in `0.0..=1.0`. An empty document is fully covered:
     /// there is nothing unchecked in it.
     ///
-    /// This is the number `nextex check` reports. Under full annotation the
+    /// This is the number `xtex check` reports. Under full annotation the
     /// useful signal is a **drop** — something entered the document that the
     /// compiler does not model — rather than an absolute threshold.
     #[must_use]

@@ -382,7 +382,7 @@ mod tests {
 
     fn declared(text: &str) -> Declared {
         let mut sources = Sources::new();
-        let id = sources.add("main.ntex", text.as_bytes().to_vec());
+        let id = sources.add("main.xtex", text.as_bytes().to_vec());
         declared_in(&sources, id)
     }
 
@@ -527,7 +527,7 @@ mod tests {
     /// parse, build the symbol table, assemble the bibliography, compare.
     fn cited(document: &str, files: &[(&str, &str)]) -> Vec<String> {
         let mut sources = Sources::new();
-        let id = sources.add("main.ntex", document.as_bytes().to_vec());
+        let id = sources.add("main.xtex", document.as_bytes().to_vec());
         let parsed = crate::parse(&sources, id);
 
         let mut table = SymbolTable::new();
@@ -575,7 +575,7 @@ mod tests {
 
     #[test]
     fn a_plain_latex_citation_is_never_reported() {
-        // `\\cite` is the author's LaTeX, outside any NextTeX construct. Only
+        // `\\cite` is the author's LaTeX, outside any ExactTeX construct. Only
         // `@cite` carries the guarantee, so only `@cite` is checked.
         let missing = cited(
             "\\bibliography{refs} \\cite{invented2026}",

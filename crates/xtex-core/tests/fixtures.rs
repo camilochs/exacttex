@@ -2,7 +2,7 @@
 //!
 //! `docs/grammar.md` ends six of its sections with "Fixtures must include…".
 //! Each of those entries is a directory under `tests/fixtures/` holding an
-//! `input.ntex` and an `expect.txt`.
+//! `input.xtex` and an `expect.txt`.
 //!
 //! Today only one line of each expectation can be checked — `transport:
 //! identical` — because nothing is recognised yet and every byte is opaque.
@@ -21,18 +21,18 @@
 use std::fs;
 use std::path::{Path, PathBuf};
 
-use nextex_core::bibliography::{Bibliography, Unavailable};
-use nextex_core::check::{check, check_documents};
-use nextex_core::io::Memory;
-use nextex_core::scanner::{Piece, scan};
-use nextex_core::source::Sources;
-use nextex_core::sourcemap::emit_with_map;
-use nextex_core::symbols::SymbolTable;
-use nextex_core::transport;
-use nextex_core::{emit, parse};
+use xtex_core::bibliography::{Bibliography, Unavailable};
+use xtex_core::check::{check, check_documents};
+use xtex_core::io::Memory;
+use xtex_core::scanner::{Piece, scan};
+use xtex_core::source::Sources;
+use xtex_core::sourcemap::emit_with_map;
+use xtex_core::symbols::SymbolTable;
+use xtex_core::transport;
+use xtex_core::{emit, parse};
 
 fn fixtures_root() -> PathBuf {
-    // CARGO_MANIFEST_DIR is crates/nextex-core; the fixtures are repo-relative
+    // CARGO_MANIFEST_DIR is crates/xtex-core; the fixtures are repo-relative
     // so that they are shared with any future front end rather than owned by
     // one crate.
     Path::new(env!("CARGO_MANIFEST_DIR"))
@@ -48,7 +48,7 @@ fn collect(dir: &Path, found: &mut Vec<PathBuf>) {
         let path = entry.path();
         if path.is_dir() {
             collect(&path, found);
-        } else if path.file_name().is_some_and(|n| n == "input.ntex") {
+        } else if path.file_name().is_some_and(|n| n == "input.xtex") {
             found.push(path);
         }
     }
@@ -63,7 +63,7 @@ fn all_fixtures() -> Vec<PathBuf> {
 
 /// Name a failure reports, e.g. `exclusions/03-entry-token-as-a-verb-delimiter`.
 fn label(input: &Path) -> String {
-    let dir = input.parent().expect("input.ntex has a parent");
+    let dir = input.parent().expect("input.xtex has a parent");
     let group = dir
         .parent()
         .and_then(Path::file_name)
@@ -391,7 +391,7 @@ fn has_construct(bytes: &[u8]) -> bool {
     })
 }
 
-fn short(kind: nextex_core::scanner::EntryToken) -> String {
+fn short(kind: xtex_core::scanner::EntryToken) -> String {
     kind.name().trim_start_matches(['@', '\\']).to_owned()
 }
 
@@ -438,7 +438,7 @@ fn every_fixture_produces_the_pieces_it_declares() {
 
 #[test]
 fn ordinary_latex_yields_no_constructs() {
-    // The promise the whole project rests on: rename a `.tex` to `.ntex`,
+    // The promise the whole project rests on: rename a `.tex` to `.xtex`,
     // change nothing, and the compiler has nothing to say. It cannot hold if
     // the scanner recognises a construct in bytes the author wrote as LaTeX.
     let ordinary: &[&[u8]] = &[
@@ -477,7 +477,7 @@ fn a_declared_view_is_a_built_document_and_the_two_differ() {
     // code would only record what the code does.
     //
     // Two properties are checkable now. A view is a *built* `.tex`, so no
-    // NextTeX markup may survive in it. And the two views must differ, or the
+    // ExactTeX markup may survive in it. And the two views must differ, or the
     // fixture is not testing a revision at all.
     //
     // The derivation itself — that `--final` really is the input with every
@@ -499,7 +499,7 @@ fn a_declared_view_is_a_built_document_and_the_two_differ() {
                 .unwrap_or_else(|e| panic!("{name}: declares views but has no {view} ({e})"));
             assert!(
                 found_pieces(&bytes).is_empty(),
-                "{name}: {view} still carries NextTeX markup; a view is a built document"
+                "{name}: {view} still carries ExactTeX markup; a view is a built document"
             );
             views.push(bytes);
         }

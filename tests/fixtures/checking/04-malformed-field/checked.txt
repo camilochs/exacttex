@@ -1,1 +1,1 @@
-NT1008|table|-|18|7|field requires a braced group, because it may span lines and contain LaTeX
+XT1008|table|-|18|7|field requires a braced group, because it may span lines and contain LaTeX

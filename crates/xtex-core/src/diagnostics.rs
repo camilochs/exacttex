@@ -8,7 +8,7 @@ use crate::sourcemap::{OriginKind, SourceMap};
 pub enum Blame {
     /// LaTeX transported from the source.
     AuthorLatex,
-    /// An explicit NextTeX construct.
+    /// An explicit ExactTeX construct.
     NextTexConstruct,
     /// Output synthesized by the emitter.
     NextTexGenerated,
@@ -22,8 +22,8 @@ impl Blame {
     pub const fn as_str(self) -> &'static str {
         match self {
             Self::AuthorLatex => "author-latex",
-            Self::NextTexConstruct => "nextex-construct",
-            Self::NextTexGenerated => "nextex-generated",
+            Self::NextTexConstruct => "xtex-construct",
+            Self::NextTexGenerated => "xtex-generated",
             Self::Unresolved => "unresolved",
         }
     }
@@ -130,8 +130,8 @@ mod tests {
     use crate::source::Sources;
     use crate::sourcemap::emit_with_map;
 
-    /// The case the whole feature exists for: an error inside bytes NextTeX
-    /// produced must name NextTeX, not the author.
+    /// The case the whole feature exists for: an error inside bytes ExactTeX
+    /// produced must name ExactTeX, not the author.
     ///
     /// Without it the compiler hands the author a TeX error against a line
     /// they never wrote, and the honest answer — "this is mine" — is exactly
@@ -140,7 +140,7 @@ mod tests {
     fn an_error_in_generated_bytes_blames_the_emitter() {
         let mut sources = Sources::new();
         let id = sources.add(
-            "paper.ntex",
+            "paper.xtex",
             b"\\figure(fig:x) {\n  src = \"p.pdf\"\n  caption = {C}\n}\n".to_vec(),
         );
         let document = crate::parse(&sources, id);
@@ -172,7 +172,7 @@ mod tests {
     #[test]
     fn missing_map_reach_is_explicitly_unresolved() {
         let mut sources = Sources::new();
-        let id = sources.add("paper.ntex", b"abc".as_slice());
+        let id = sources.add("paper.xtex", b"abc".as_slice());
         let document = parse(&sources, id);
         let mut emission = emit_with_map(&sources, &document).expect("emission");
         emission.map.segments.clear();
@@ -186,7 +186,7 @@ mod tests {
     #[test]
     fn transported_latex_maps_to_its_author_location() {
         let mut sources = Sources::new();
-        let id = sources.add("paper.ntex", b"one\ntwo".as_slice());
+        let id = sources.add("paper.xtex", b"one\ntwo".as_slice());
         let document = parse(&sources, id);
         let emission = emit_with_map(&sources, &document).expect("emission");
         let diagnostic = map_emitted_diagnostic(
@@ -200,7 +200,7 @@ mod tests {
         let span = diagnostic.span.expect("mapped span");
         assert_eq!(
             (span.file.as_str(), span.offset, span.line, span.column),
-            ("paper.ntex", 5, 2, 2)
+            ("paper.xtex", 5, 2, 2)
         );
     }
 }

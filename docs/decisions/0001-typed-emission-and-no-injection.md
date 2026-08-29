@@ -2,7 +2,7 @@
 
 **Status:** accepted, 2026-08-29. Decided by the director.
 **Supersedes:** the `needs` field, and the README sentence promising package synthesis.
-**Issue:** [#5](https://github.com/camilochs/nexttex/issues/5)
+**Issue:** [#5](https://github.com/camilochs/exacttex/issues/5)
 
 ---
 
@@ -11,7 +11,7 @@
 Two documents in this repository prescribed different emitted bytes for the same typed block.
 
 - `README.md` said a typed block "writes the packages it needs into the preamble for you".
-- `AGENTS.md` §4 and `PHILOSOPHY.md` §5 say NextTeX emits no support package, wrapper environment, or
+- `AGENTS.md` §4 and `PHILOSOPHY.md` §5 say ExactTeX emits no support package, wrapper environment, or
   assertion of its own.
 
 Both cannot be true. The emitter could not be written while they disagreed.
@@ -50,7 +50,7 @@ Reproduce with `tests/experiments/package-loading/`.
 
 ## The decision
 
-1. **`needs` is not a field.** Writing it in a block is a malformed field, `NT1008`, like any other unknown
+1. **`needs` is not a field.** Writing it in a block is a malformed field, `XT1008`, like any other unknown
    key. Packages are declared where LaTeX declares them: `\usepackage` in the preamble, written by the
    author, transported byte for byte.
 2. **A typed block lowers to the LaTeX its fields describe, and to nothing else.** The lowering is in the

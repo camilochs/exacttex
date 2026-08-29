@@ -1,4 +1,4 @@
-//! Finds where a NextTeX construct may begin.
+//! Finds where a ExactTeX construct may begin.
 //!
 //! This is the half of the parser that decides whether `@ref(` is syntax or
 //! ordinary text. `docs/grammar.md` §8 lists the regions in which it is text,
@@ -63,7 +63,7 @@ const MAX_UNKNOWN_COMMAND_GROUPS: usize = 16;
 /// Seeded from what a shallow LaTeX parser that handles real papers already
 /// skips — `TexSoup`'s list, which names three this project had missed:
 /// `Verbatim` from `fancyvrb`, `verbatimtab`, and `listing`. Extended per
-/// project by `nextex.toml`.
+/// project by `xtex.toml`.
 pub const DEFAULT_VERBATIM_ENVIRONMENTS: &[&str] = &[
     "verbatim",
     "verbatim*",
@@ -86,7 +86,7 @@ pub enum Piece {
     /// source for something other than a construct — a bibliography
     /// declaration, say — must not find it here either.
     Excluded(Span),
-    /// A complete NextTeX entry token and everything it delimits.
+    /// A complete ExactTeX entry token and everything it delimits.
     Construct {
         /// Which construct the entry token opened.
         kind: EntryToken,
@@ -737,7 +737,7 @@ pub enum CommentRule {
     /// `width=120%` fails with `File ended while scanning use of \Gin@ii`.
     ///
     /// One byte of context decides it, so it stays a left-to-right rule. It
-    /// applies only inside a NextTeX block body, never to transported LaTeX,
+    /// applies only inside a ExactTeX block body, never to transported LaTeX,
     /// where a comment must keep meaning what TeX says it means.
     PercentAfterDigit,
 }
@@ -1436,7 +1436,7 @@ mod tests {
     fn longest_keyword_wins() {
         // `@import(` must not be read as `@i` plus text, and `@id(` must not
         // shadow it.
-        assert_eq!(constructs(b"@import(\"a.ntex\")"), [EntryToken::Import]);
+        assert_eq!(constructs(b"@import(\"a.xtex\")"), [EntryToken::Import]);
         assert_eq!(constructs(b"@cite(k)"), [EntryToken::Cite]);
     }
 }
