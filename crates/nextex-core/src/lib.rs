@@ -46,6 +46,7 @@ pub mod blocks;
 pub mod document;
 pub mod io;
 pub mod scanner;
+pub mod signatures;
 pub mod source;
 
 use std::error::Error;
