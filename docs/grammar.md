@@ -987,8 +987,17 @@ The following decisions remain open because the available evidence does not sele
    title-specific check or reference would justify the latter.
 6. **Typed algorithm and panel blocks.** Light annotations admit both. A demonstrated typed check with a
    stable field set would justify new blocks.
-7. ~~**What `@cite` emits.**~~ Settled 2026-08-29 by the director: a citation construct is a LaTeX
+7. **What a percentage width lowers to.** `width = 80%` has to become a TeX length, and the choice of
+   reference width changes the PDF. The corpus uses `\textwidth` 124 times, `\columnwidth` 65 and
+   `\linewidth` 49, so it is not settled by practice either. The emitter currently writes
+   `0.80\linewidth` because something had to be written; that is a placeholder, not a decision. A field
+   naming the reference, or a project-wide default in `nextex.toml`, are the obvious shapes.
+8. **Whether `@import` lowers to `\input` or `\include`.** They differ: `\include` starts a new page and
+   cannot nest, `\input` does neither. The emitter currently writes `\input` because it preserves file
+   boundaries without imposing page breaks, and that reasoning is worth keeping, but the choice is not
+   recorded anywhere as accepted.
+9. ~~**What `@cite` emits.**~~ Settled 2026-08-29 by the director: a citation construct is a LaTeX
    citation command written with `@`, and it emits that command. No style vocabulary, no package
    inference, no fields. See §4.
-8. ~~**Package requirements.**~~ Settled 2026-08-29: `needs` is not a field, packages are source-authored.
+10. ~~**Package requirements.**~~ Settled 2026-08-29: `needs` is not a field, packages are source-authored.
    See `decisions/0001-typed-emission-and-no-injection.md`.

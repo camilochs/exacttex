@@ -4,13 +4,16 @@
 //! and process exit codes. `nextex-core` has none of them, which is what lets
 //! the same core compile to WebAssembly.
 
+use std::collections::BTreeSet;
 use std::fs;
 use std::path::{Path, PathBuf};
 use std::process::ExitCode;
 
+use nextex_core::document::Node;
 use nextex_core::io::{IoError, OutputSink, SourceLoader};
+use nextex_core::scanner::EntryToken;
 use nextex_core::source::{SourceId, Sources};
-use nextex_core::transport;
+use nextex_core::{BuildError, emit, parse};
 
 /// Largest source the CLI will read, in bytes.
 ///
@@ -98,8 +101,7 @@ fn main() -> ExitCode {
     let Some(input) = args.next() else {
         eprintln!("usage: nextex <file.ntex>");
         eprintln!();
-        eprintln!("Reads the file and writes it to build/, unchanged.");
-        eprintln!("There is no parser yet: this is the transport half only.");
+        eprintln!("Emits the file and its imports as LaTeX under build/.");
         return ExitCode::from(2);
     };
 
@@ -110,9 +112,11 @@ fn main() -> ExitCode {
         root: PathBuf::from("build"),
     };
 
-    match transport(&input, &loader, &mut sink) {
+    match build(&input, &loader, &mut sink) {
         Ok(()) => {
-            println!("build/{input}");
+            let mut output = PathBuf::from(&input);
+            output.set_extension("tex");
+            println!("build/{}", output.display());
             ExitCode::SUCCESS
         }
         Err(error) => {
@@ -120,4 +124,50 @@ fn main() -> ExitCode {
             ExitCode::FAILURE
         }
     }
+}
+
+fn build(root: &str, loader: &FileSystem, sink: &mut BuildDirectory) -> Result<(), BuildError> {
+    let mut pending = vec![root.to_owned()];
+    let mut emitted = BTreeSet::new();
+
+    while let Some(name) = pending.pop() {
+        if !emitted.insert(name.clone()) {
+            continue;
+        }
+        let mut sources = Sources::new();
+        let id = loader.load(&name, None, &mut sources)?;
+        let document = parse(&sources, id);
+        let source = sources
+            .get(id)
+            .expect("the loader returned an absent source");
+
+        for node in document.iter() {
+            if let Node::Construct {
+                kind: EntryToken::Import,
+                span,
+                ..
+            } = node
+            {
+                let bytes = source.slice(*span).expect("a parsed span left its source");
+                let first = bytes.iter().position(|byte| *byte == b'"').unwrap_or(0);
+                let last = bytes
+                    .iter()
+                    .rposition(|byte| *byte == b'"')
+                    .unwrap_or(first);
+                let import = String::from_utf8_lossy(&bytes[first + 1..last]);
+                let relative = Path::new(&name).parent().map_or_else(
+                    || PathBuf::from(import.as_ref()),
+                    |dir| dir.join(import.as_ref()),
+                );
+                pending.push(relative.to_string_lossy().into_owned());
+            }
+        }
+
+        let mut bytes = Vec::new();
+        emit(&sources, &document, &mut bytes)?;
+        let mut output = PathBuf::from(source.name());
+        output.set_extension("tex");
+        sink.write(&output.to_string_lossy(), &bytes)?;
+    }
+    Ok(())
 }

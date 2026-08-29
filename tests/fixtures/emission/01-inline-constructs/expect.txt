@@ -1,0 +1,3 @@
+transport: lowered
+scanner: id ref cite cite cite cite cite
+constructs: all inline constructs lower without changing the sentinel bytes around them

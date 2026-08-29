@@ -1,0 +1,3 @@
+transport: lowered
+scanner: figure table
+constructs: braced content is copied and recognition resumes after both blocks

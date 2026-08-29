@@ -190,8 +190,13 @@ are compared by rendering both and diffing the rasters. If emission injected any
 differ by construction and the property would be untestable rather than merely violated.
 
 Practical consequence for anyone extending the emitter: a typed block lowers to the LaTeX its fields
-describe and nothing else. A block that "helpfully" adds `\centering`, or loads a package its body needs, has
-broken the contract even when the PDF happens to look right.
+describe, plus `\centering` and nothing more. A block that "helpfully" adds a `\FloatBarrier`, or loads a
+package its body needs, has broken the contract even when the PDF happens to look right.
+
+`\centering` is the one exception and it is not an oversight in this list. It is part of what `\figure` and
+`\table` *mean* here — the construct is a centred float, and an author who does not want one writes the
+environment in LaTeX. The reasoning, and the rule that a second exception needs its own decision record, are
+in [`decisions/0001`](decisions/0001-typed-emission-and-no-injection.md).
 
 ---
 

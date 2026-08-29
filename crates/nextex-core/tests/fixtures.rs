@@ -101,19 +101,19 @@ fn every_fixture_declares_what_it_expects() {
 }
 
 #[test]
-fn every_fixture_transports_byte_identical() {
+fn fixtures_without_constructs_transport_byte_identical() {
     let mut checked = 0usize;
 
     for input in all_fixtures() {
         let name = label(&input);
         let raw = fs::read(&input).unwrap_or_else(|e| panic!("{name}: cannot read ({e})"));
 
-        let declared = fs::read_to_string(input.with_file_name("expect.txt"))
-            .unwrap_or_else(|e| panic!("{name}: cannot read expect.txt ({e})"));
-        assert!(
-            declared.contains("transport: identical"),
-            "{name}: this harness only knows how to check identical transport"
-        );
+        if scan(&raw)
+            .iter()
+            .any(|piece| matches!(piece, Piece::Construct { .. }))
+        {
+            continue;
+        }
 
         let mut store = Memory::new().with_input(name.clone(), raw.clone());
         transport(&name, &store.clone(), &mut store)
@@ -130,11 +130,11 @@ fn every_fixture_transports_byte_identical() {
         checked += 1;
     }
 
-    assert!(checked >= 40, "only {checked} fixtures ran");
+    assert!(checked >= 20, "only {checked} fixtures ran");
 }
 
 #[test]
-fn every_fixture_transports_at_every_truncation() {
+fn every_construct_free_truncation_transports_byte_identical() {
     // Truncating manufactures unterminated constructs of every shape from
     // inputs that already contain the awkward ones. It is the cheapest
     // generator that finds boundary bugs, and it will keep finding them once
@@ -145,6 +145,12 @@ fn every_fixture_transports_at_every_truncation() {
 
         for cut in 0..=raw.len() {
             let slice = &raw[..cut];
+            if scan(slice)
+                .iter()
+                .any(|piece| matches!(piece, Piece::Construct { .. }))
+            {
+                continue;
+            }
             let mut store = Memory::new().with_input(name.clone(), slice.to_vec());
             transport(&name, &store.clone(), &mut store)
                 .unwrap_or_else(|e| panic!("{name}: transport failed at cut {cut} ({e})"));
@@ -156,6 +162,93 @@ fn every_fixture_transports_at_every_truncation() {
             );
         }
     }
+}
+
+#[test]
+fn emission_leaves_every_byte_outside_a_construct_alone() {
+    // Property A says untouched LaTeX comes out byte-identical, and a fixture
+    // holding a construct cannot satisfy it — emitting the construct is the
+    // point. But the invariant underneath it still applies to every fixture:
+    // bytes the author wrote and the parser did not model are copied, never
+    // reformatted.
+    //
+    // This asserts exactly that. Walk the pieces in order; every non-construct
+    // piece must appear in the output, unchanged and in sequence, with the
+    // emitted constructs free to be any length in between.
+    //
+    // It exists because the byte-identity test was narrowed to construct-free
+    // fixtures when emission landed, which left 33 of 56 fixtures with no
+    // assertion on their output at all. Narrowing was right; leaving the gap
+    // was not.
+    let mut checked = 0usize;
+
+    for input in all_fixtures() {
+        let name = label(&input);
+        let raw = fs::read(&input).unwrap_or_else(|e| panic!("{name}: cannot read ({e})"));
+
+        let mut store = Memory::new().with_input(name.clone(), raw.clone());
+        transport(&name, &store.clone(), &mut store)
+            .unwrap_or_else(|e| panic!("{name}: emission failed ({e})"));
+        let out = store.output(&name).unwrap_or_default().to_vec();
+
+        let mut at = 0usize;
+        for piece in scan(&raw) {
+            let span = match piece {
+                Piece::Construct { .. } => continue,
+                Piece::Text(s) | Piece::Excluded(s) | Piece::Malformed { span: s, .. } => s,
+            };
+            let carried = &raw[span.start()..span.end()];
+            if carried.is_empty() {
+                continue;
+            }
+            let found = out[at..]
+                .windows(carried.len())
+                .position(|w| w == carried)
+                .unwrap_or_else(|| {
+                    panic!(
+                        "{name}: emission changed bytes the parser did not model, at {}..{}: {:?}",
+                        span.start(),
+                        span.end(),
+                        String::from_utf8_lossy(carried)
+                    )
+                });
+            at += found + carried.len();
+        }
+        checked += 1;
+    }
+
+    assert!(checked >= 50, "only {checked} fixtures ran");
+}
+
+#[test]
+fn emission_fixtures_match_their_expected_output() {
+    // Exact bytes, hand-written. The test above pins what emission must leave
+    // alone; this one pins what it must produce.
+    let mut checked = 0usize;
+
+    for input in all_fixtures() {
+        let expected = input.with_file_name("emitted.tex");
+        if !expected.exists() {
+            continue;
+        }
+        let name = label(&input);
+        let raw = fs::read(&input).unwrap_or_else(|e| panic!("{name}: cannot read ({e})"));
+        let want =
+            fs::read(&expected).unwrap_or_else(|e| panic!("{name}: cannot read emitted.tex ({e})"));
+
+        let mut store = Memory::new().with_input(name.clone(), raw);
+        transport(&name, &store.clone(), &mut store)
+            .unwrap_or_else(|e| panic!("{name}: emission failed ({e})"));
+
+        assert_eq!(
+            String::from_utf8_lossy(store.output(&name).unwrap_or_default()),
+            String::from_utf8_lossy(&want),
+            "{name}: emitted output differs from emitted.tex"
+        );
+        checked += 1;
+    }
+
+    assert!(checked >= 3, "only {checked} emission fixtures ran");
 }
 
 /// The pieces an `expect.txt` declares, in order.

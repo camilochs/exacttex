@@ -245,7 +245,12 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                     flush!(at);
                     // A construct that never closes on its line is reported at
                     // its entry token, and its bytes are still transported.
-                    let (piece, resume) = match close_paren(bytes, end) {
+                    let close = if token == EntryToken::Import {
+                        close_import(bytes, end)
+                    } else {
+                        close_paren(bytes, end)
+                    };
+                    let (piece, resume) = match close {
                         Some(close) => (
                             Piece::Construct {
                                 kind: token,
@@ -580,6 +585,22 @@ fn close_paren(bytes: &[u8], from: usize) -> Option<usize> {
         match bytes[i] {
             b')' => return Some(i),
             b'\n' => return None,
+            _ => i += 1,
+        }
+    }
+    None
+}
+
+fn close_import(bytes: &[u8], from: usize) -> Option<usize> {
+    if bytes.get(from) != Some(&b'"') {
+        return None;
+    }
+    let mut i = from + 1;
+    while i < bytes.len() {
+        match bytes[i] {
+            b'\\' => i += 2,
+            b'"' if bytes.get(i + 1) == Some(&b')') => return Some(i + 1),
+            b'"' | b'\n' => return None,
             _ => i += 1,
         }
     }
