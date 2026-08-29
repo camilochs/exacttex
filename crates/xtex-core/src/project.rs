@@ -114,13 +114,18 @@ pub fn check_project(
     let inventory = root_inventory(labels, labels_unavailable);
     let mut diagnostics = check_with_labels(&table, &bibliography, &inventory);
     diagnostics.extend(bibliography_advisory(&table, &bibliography));
-    diagnostics.extend(check_documents(&sources, &documents, |source, name| {
-        let beside = sources
-            .get(source)
-            .map(|s| s.name().to_owned())
-            .unwrap_or_default();
-        loader.file_exists(&beside, name)
-    }));
+    diagnostics.extend(check_documents(
+        &sources,
+        &documents,
+        &table,
+        |source, name| {
+            let beside = sources
+                .get(source)
+                .map(|s| s.name().to_owned())
+                .unwrap_or_default();
+            loader.file_exists(&beside, name)
+        },
+    ));
     diagnostics.extend(import_diagnostics);
     let coverage = root_coverage(&sources, &documents);
     Ok((sources, diagnostics, coverage, bibliography))

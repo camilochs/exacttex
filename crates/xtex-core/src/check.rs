@@ -178,6 +178,7 @@ pub fn check_with_labels(
 pub fn check_documents(
     sources: &Sources,
     documents: &[Document],
+    table: &SymbolTable,
     mut resolves: impl FnMut(SourceId, &str) -> bool,
 ) -> Vec<Diagnostic> {
     let mut diagnostics = Vec::new();
@@ -197,6 +198,18 @@ pub fn check_documents(
                 // hole that let `@id(x` fail only at its references.
                 if malformed {
                     if let Some(entry) = inline_entry(kind) {
+                        // The half-written payload often names the thing the
+                        // writer was reaching for; when that name is declared,
+                        // point at the declaration so nobody has to hunt it.
+                        let related = half_written_target(sources, source, span, kind, table)
+                            .map(|(candidate, declaration)| {
+                                vec![Related {
+                                    source: declaration.payload.source,
+                                    span: declaration.payload.span,
+                                    message: format!("`{candidate}` is declared here"),
+                                }]
+                            })
+                            .unwrap_or_default();
                         diagnostics.push(Diagnostic {
                             code: "XT1014",
                             entity: EntityClass::UnknownOpen,
@@ -206,7 +219,7 @@ pub fn check_documents(
                             message: format!(
                                 "`{entry}` never closes before the end of its line — expected `)`"
                             ),
-                            related: Vec::new(),
+                            related,
                             severity: Severity::Error,
                             blame: Blame::XtexConstruct,
                         });
@@ -345,6 +358,29 @@ fn levenshtein(a: &str, b: &str) -> usize {
         }
     }
     row[b.len()]
+}
+
+/// The identifier a malformed `@ref(` was reaching for, when the bytes
+/// after the entry token spell a declared name.
+fn half_written_target<'a>(
+    sources: &Sources,
+    source: SourceId,
+    span: Span,
+    kind: EntryToken,
+    table: &'a SymbolTable,
+) -> Option<(String, &'a crate::symbols::Declaration)> {
+    if kind != EntryToken::Ref {
+        return None;
+    }
+    let bytes = sources.get(source).map(crate::source::Source::bytes)?;
+    let rest = bytes.get(span.end()..)?;
+    let len = rest
+        .iter()
+        .take_while(|b| b.is_ascii_alphanumeric() || matches!(b, b'_' | b':' | b'.' | b'-'))
+        .count();
+    let candidate = std::str::from_utf8(&rest[..len]).ok()?;
+    let declaration = table.declaration(candidate)?;
+    Some((candidate.to_owned(), declaration))
 }
 
 fn inline_entry(kind: EntryToken) -> Option<&'static str> {
@@ -646,13 +682,40 @@ mod tests {
         let mut sources = Sources::new();
         let id = sources.add("main.xtex", b"hola @id(x:one\nSee @ref(x:one).".to_vec());
         let document = parse(&sources, id);
-        let found = check_documents(&sources, std::slice::from_ref(&document), |_, _| true);
+        let mut table = SymbolTable::new();
+        table.merge(&sources, &document);
+        let found = check_documents(&sources, std::slice::from_ref(&document), &table, |_, _| {
+            true
+        });
         assert_eq!(found.len(), 1, "{found:?}");
         assert_eq!(found[0].code, "XT1014");
         assert!(found[0].message.contains("`@id`"));
         // At the entry token on the FIRST line — where the fix belongs —
         // not at the reference that fails as a consequence.
         assert_eq!(found[0].span.start(), 5);
+    }
+
+    #[test]
+    fn an_unterminated_ref_points_at_the_declaration_it_was_reaching_for() {
+        let mut sources = Sources::new();
+        let id = sources.add(
+            "main.xtex",
+            b"start @id(sec:results) then @ref(sec:results\nmore".to_vec(),
+        );
+        let document = parse(&sources, id);
+        let mut table = SymbolTable::new();
+        table.merge(&sources, &document);
+        let found = check_documents(&sources, std::slice::from_ref(&document), &table, |_, _| {
+            true
+        });
+        assert_eq!(found.len(), 1, "{found:?}");
+        assert_eq!(found[0].code, "XT1014");
+        assert_eq!(found[0].related.len(), 1, "{found:?}");
+        assert!(
+            found[0].related[0]
+                .message
+                .contains("`sec:results` is declared here")
+        );
     }
 
     #[test]
