@@ -56,6 +56,7 @@ pub mod signatures;
 pub mod source;
 pub mod sourcemap;
 pub mod symbols;
+pub mod texlog;
 
 use std::error::Error;
 use std::fmt;

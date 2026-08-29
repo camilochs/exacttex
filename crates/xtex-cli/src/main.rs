@@ -7,7 +7,7 @@
 use std::collections::BTreeSet;
 use std::fs;
 use std::path::{Path, PathBuf};
-use std::process::ExitCode;
+use std::process::{Command, ExitCode};
 
 use xtex_core::bibliography::{Bibliography, Declared, Unavailable, assemble, declared_in};
 use xtex_core::check::{Diagnostic, check, check_documents, to_json};
@@ -134,6 +134,9 @@ fn main() -> ExitCode {
 
     if first == "check" {
         return check_command(&args[1..]);
+    }
+    if first == "compile" {
+        return compile_command(&args[1..]);
     }
     if first == "confidence" {
         return confidence_command(&args[1..]);
@@ -1116,4 +1119,125 @@ fn confidence_command(args: &[String]) -> ExitCode {
     println!("bytes: {total}");
     println!("coverage: {:.6}", document.coverage());
     ExitCode::SUCCESS
+}
+
+/// Emits, runs the TeX engine, and reports what it said against the source.
+///
+/// The engine reports against a file the author has never seen. Everything
+/// here exists to close that gap: the message is the engine's, unchanged, and
+/// the location beside it is the author's.
+fn compile_command(args: &[String]) -> ExitCode {
+    let Some(input) = args.first() else {
+        eprintln!("usage: xtex compile <file.xtex>");
+        return ExitCode::from(2);
+    };
+
+    let loader = FileSystem {
+        root: PathBuf::from("."),
+    };
+    let mut sources = Sources::new();
+    let Ok(id) = loader.load(input, None, &mut sources) else {
+        eprintln!("error: cannot read {input}");
+        return ExitCode::from(2);
+    };
+    let document = parse(&sources, id);
+    let Ok(emission) = emit_with_map(&sources, &document) else {
+        eprintln!("error: {input} could not be emitted");
+        return ExitCode::from(2);
+    };
+
+    let mut emitted = PathBuf::from("build").join(input);
+    emitted.set_extension("tex");
+    if let Some(dir) = emitted.parent()
+        && let Err(error) = fs::create_dir_all(dir)
+    {
+        eprintln!("error: {}: {error}", dir.display());
+        return ExitCode::from(2);
+    }
+    if let Err(error) = fs::write(&emitted, &emission.bytes) {
+        eprintln!("error: {}: {error}", emitted.display());
+        return ExitCode::from(2);
+    }
+
+    // The engine is named by the project rather than assumed. `AGENTS.md` §4
+    // forbids proposing a dependency from memory, and an engine is one.
+    let engine = tex_engine();
+    let Ok(run) = Command::new(&engine)
+        .args(["-X", "compile", "--keep-logs", "--outfmt", "pdf"])
+        .arg(emitted.file_name().unwrap_or_default())
+        .current_dir(emitted.parent().unwrap_or(Path::new(".")))
+        .output()
+    else {
+        eprintln!("error: cannot run `{engine}`. Name another in xtex.toml under [tex] command.");
+        return ExitCode::from(2);
+    };
+
+    let output = String::from_utf8_lossy(&run.stderr);
+    let records = xtex_core::texlog::parse(&output);
+    let mut reported = 0usize;
+
+    for record in &records {
+        match record {
+            xtex_core::texlog::Record::Located {
+                severity,
+                line,
+                message,
+                ..
+            } => {
+                let mapped = map_emitted_diagnostic(
+                    message.clone(),
+                    &emission.bytes,
+                    *line,
+                    1,
+                    &emission.map,
+                );
+                let label = match severity {
+                    xtex_core::texlog::Severity::Error => "error[TEX]",
+                    xtex_core::texlog::Severity::Warning => "warning[TEX]",
+                };
+                println!("{label}: {}", mapped.message);
+                println!("  emitted at {}:{line}", emitted.display());
+                match &mapped.span {
+                    Some(span) => {
+                        println!(
+                            "  corresponds to {}:{}:{}",
+                            span.file, span.line, span.column
+                        );
+                    }
+                    None => println!("  corresponds to an unmapped position"),
+                }
+                println!("  blame: {}", mapped.blame.as_str());
+                reported += 1;
+            }
+            // Kept and printed unchanged. An engine's output is evidence, and
+            // a line we cannot place is still a line it said.
+            xtex_core::texlog::Record::Unrecognised(line) => println!("{line}"),
+        }
+    }
+
+    if reported == 0 && run.status.success() {
+        println!("{}: compiled with nothing to report", emitted.display());
+    }
+    if run.status.success() {
+        ExitCode::SUCCESS
+    } else {
+        ExitCode::FAILURE
+    }
+}
+
+/// The engine this project uses.
+///
+/// `tectonic` by default because it needs no installed distribution, and
+/// replaceable in `xtex.toml` so the choice is the project's rather than ours.
+fn tex_engine() -> String {
+    fs::read_to_string("xtex.toml")
+        .ok()
+        .and_then(|text| {
+            text.lines()
+                .find_map(|line| line.trim().strip_prefix("command = ").map(str::to_owned))
+        })
+        .map_or_else(
+            || "tectonic".to_owned(),
+            |value| value.trim().trim_matches('"').to_owned(),
+        )
 }
