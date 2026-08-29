@@ -70,9 +70,47 @@ and which something is yours to pin.
 
 ---
 
-## What this does not do yet
+## Typesetting failures, said about your entity
 
-Translating a supported visual failure — an overfull box, a float that drifted, a missing glyph — into a
-sentence about *your* entity rather than TeX's box is
-[#23](https://github.com/camilochs/exacttex/issues/23). Today an overfull box arrives mapped to your line,
-with TeX's own words.
+When a supported failure lands inside something you declared, the compiler names it:
+
+```
+warning[TEX]: table `tab:wide` overflows its line
+  TeX said: Overfull \hbox (215.64pt too wide) detected at line 7
+  emitted at build/v.tex:7
+  corresponds to v.xtex:4:1
+  blame: xtex-generated
+```
+
+When it does not, the engine's own sentence stands:
+
+```
+warning[TEX]: Overfull \hbox (192.54001pt too wide) detected at line 11
+  emitted at build/v.tex:11
+  corresponds to v.xtex:9:1
+  blame: author-latex
+```
+
+**Both halves are the feature.** Restating requires a map segment *and* a declared entity enclosing the
+position. Where either is missing, nothing is named — "something overflows" is worse than a message that at
+least locates a box.
+
+### The five supported shapes
+
+Every one transcribed from a live engine run:
+
+| Shape | Said as |
+|---|---|
+| `Overfull \hbox (…pt too wide) …` | overflows its line |
+| `Overfull \vbox (…pt too high) …` | overflows its box |
+| `Missing character: There is no X ("65E5) in font …!` | uses a character the font does not have |
+| `LaTeX Warning: Float too large for page by …pt on input line 9.` | is too large for the page |
+
+Anything else keeps TeX's words and gains no entity. An *underfull* box is a real warning about a real
+typesetting problem, and it is not in this set, so it is not restated as a claim about your figure.
+
+### The raw log is read, not just stderr
+
+`Float too large for page` **never reaches stderr** — checked against a live run. A reader taking stderr
+alone would silently miss the whole class, so `xtex compile` reads the `.log` beside the emitted file and
+prefers the richer record where both exist.

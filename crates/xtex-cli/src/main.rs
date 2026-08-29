@@ -13,6 +13,7 @@ use xtex_core::bibliography::{Bibliography, Declared, Unavailable, assemble, dec
 use xtex_core::check::{Diagnostic, check, check_documents, to_json};
 use xtex_core::diagnostics::map_emitted_diagnostic;
 use xtex_core::document::Node;
+use xtex_core::editor::entity_at;
 use xtex_core::io::{IoError, OutputSink, SourceLoader};
 use xtex_core::review::{
     Resolution, parse_sidecar, prune_sidecar, resolve, resolve_sidecar, validate,
@@ -1141,6 +1142,8 @@ fn compile_command(args: &[String]) -> ExitCode {
         return ExitCode::from(2);
     };
     let document = parse(&sources, id);
+    let mut table = SymbolTable::new();
+    table.merge(&sources, &document);
     let Ok(emission) = emit_with_map(&sources, &document) else {
         eprintln!("error: {input} could not be emitted");
         return ExitCode::from(2);
@@ -1173,46 +1176,41 @@ fn compile_command(args: &[String]) -> ExitCode {
     };
 
     let output = String::from_utf8_lossy(&run.stderr);
-    let records = xtex_core::texlog::parse(&output);
-    let mut reported = 0usize;
+    let mut records = xtex_core::texlog::parse(&output);
 
-    for record in &records {
-        match record {
-            xtex_core::texlog::Record::Located {
-                severity,
-                line,
-                message,
-                ..
-            } => {
-                let mapped = map_emitted_diagnostic(
-                    message.clone(),
-                    &emission.bytes,
-                    *line,
-                    1,
-                    &emission.map,
-                );
-                let label = match severity {
-                    xtex_core::texlog::Severity::Error => "error[TEX]",
-                    xtex_core::texlog::Severity::Warning => "warning[TEX]",
-                };
-                println!("{label}: {}", mapped.message);
-                println!("  emitted at {}:{line}", emitted.display());
-                match &mapped.span {
-                    Some(span) => {
-                        println!(
-                            "  corresponds to {}:{}:{}",
-                            span.file, span.line, span.column
-                        );
-                    }
-                    None => println!("  corresponds to an unmapped position"),
-                }
-                println!("  blame: {}", mapped.blame.as_str());
-                reported += 1;
+    // The raw log carries records stderr never shows — `Float too large for
+    // page` is one, checked against a live run. Reading stderr alone would
+    // silently miss a whole class of failure.
+    let mut log = emitted.clone();
+    log.set_extension("log");
+    if let Ok(text) = fs::read_to_string(&log) {
+        let name = emitted
+            .file_name()
+            .unwrap_or_default()
+            .to_string_lossy()
+            .into_owned();
+        for record in xtex_core::texlog::parse_log(&text, &name) {
+            // A typesetting failure supersedes the plainer stderr line for the
+            // same message, so the restated form is the one an author reads.
+            let xtex_core::texlog::Record::Typeset { message, .. } = &record else {
+                continue;
+            };
+            records.retain(|existing| {
+                !matches!(
+                    existing,
+                    xtex_core::texlog::Record::Located { message: other, .. } if other == message
+                )
+            });
+            if !records.contains(&record) {
+                records.push(record);
             }
-            // Kept and printed unchanged. An engine's output is evidence, and
-            // a line we cannot place is still a line it said.
-            xtex_core::texlog::Record::Unrecognised(line) => println!("{line}"),
         }
+    }
+    let mut reported = 0usize;
+    for record in &records {
+        reported += usize::from(report_record(
+            record, &emission, &emitted, &sources, &document, &table,
+        ));
     }
 
     if reported == 0 && run.status.success() {
@@ -1240,4 +1238,78 @@ fn tex_engine() -> String {
             || "tectonic".to_owned(),
             |value| value.trim().trim_matches('"').to_owned(),
         )
+}
+
+/// Prints one engine record, and says whether it had a location to print.
+///
+/// Split out of `compile_command` because that function was doing three jobs;
+/// this is the one an author actually reads.
+fn report_record(
+    record: &xtex_core::texlog::Record,
+    emission: &xtex_core::sourcemap::MappedEmission,
+    emitted: &Path,
+    sources: &Sources,
+    document: &xtex_core::document::Document,
+    table: &SymbolTable,
+) -> bool {
+    use xtex_core::texlog::{Record, Severity};
+
+    let (label, line, message, visual) = match record {
+        Record::Located {
+            severity,
+            line,
+            message,
+            ..
+        } => (
+            match severity {
+                Severity::Error => "error[TEX]",
+                Severity::Warning => "warning[TEX]",
+            },
+            *line,
+            message,
+            None,
+        ),
+        Record::Typeset {
+            visual,
+            line,
+            message,
+            ..
+        } => ("warning[TEX]", *line, message, Some(*visual)),
+        // Kept and printed unchanged. An engine's output is evidence, and a
+        // line we cannot place is still a line it said.
+        Record::Unrecognised(line) => {
+            println!("{line}");
+            return false;
+        }
+    };
+
+    let mapped = map_emitted_diagnostic(message.clone(), &emission.bytes, line, 1, &emission.map);
+
+    // A typesetting failure is restated in the author's terms only when a map
+    // segment and a declared entity both supply the evidence. Where either is
+    // missing the engine's own sentence stands, because "something overflows"
+    // is worse than a message that at least locates a box.
+    let named = visual.and_then(|visual| {
+        let span = mapped.span.as_ref()?;
+        let (name, class) = entity_at(sources, document, table, span.offset as usize)?;
+        Some((visual, name, class))
+    });
+
+    match named {
+        Some((visual, name, class)) => {
+            println!("{label}: {} `{name}` {}", class.name(), visual.name());
+            println!("  TeX said: {message}");
+        }
+        None => println!("{label}: {}", mapped.message),
+    }
+    println!("  emitted at {}:{line}", emitted.display());
+    match &mapped.span {
+        Some(span) => println!(
+            "  corresponds to {}:{}:{}",
+            span.file, span.line, span.column
+        ),
+        None => println!("  corresponds to an unmapped position"),
+    }
+    println!("  blame: {}", mapped.blame.as_str());
+    true
 }

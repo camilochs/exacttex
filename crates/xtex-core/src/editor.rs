@@ -199,6 +199,47 @@ pub fn completions(
         .collect()
 }
 
+/// The declared entity whose construct encloses `offset`, innermost first.
+///
+/// What turns "an overfull box at line 12" into "the caption of figure
+/// `fig:runtime` overflows its line". Returns `None` where no declared entity
+/// encloses the position, and the caller must then leave the engine's message
+/// alone rather than name something it cannot support.
+#[must_use]
+pub fn entity_at(
+    sources: &Sources,
+    document: &Document,
+    table: &SymbolTable,
+    offset: usize,
+) -> Option<(String, EntityClass)> {
+    let mut best: Option<(String, EntityClass, usize)> = None;
+    document.walk(|node| {
+        let Node::Construct { kind, span, .. } = node else {
+            return;
+        };
+        if !matches!(
+            kind,
+            EntryToken::Id | EntryToken::Figure | EntryToken::Table
+        ) {
+            return;
+        }
+        if offset < span.start() || offset >= span.end() {
+            return;
+        }
+        let Some(name) = payload_text(sources, node.source(), *span) else {
+            return;
+        };
+        let class = table
+            .declaration(&name)
+            .map_or(EntityClass::UnknownOpen, |declaration| declaration.class);
+        let width = span.end() - span.start();
+        if best.as_ref().is_none_or(|(_, _, best)| width < *best) {
+            best = Some((name, class, width));
+        }
+    });
+    best.map(|(name, class, _)| (name, class))
+}
+
 /// Where the name at `offset` is declared.
 #[must_use]
 pub fn definition(
@@ -349,6 +390,29 @@ mod tests {
         // sentence is worse than offering nothing.
         let (sources, document, table) = document();
         assert!(completions(&sources, &document, &table, at("See ")).is_empty());
+    }
+
+    #[test]
+    fn an_entity_is_found_only_where_one_encloses_the_position() {
+        let text = "\\table(tab:x) { caption = {C} }\nOutside any entity.\n";
+        let mut sources = Sources::new();
+        let id = sources.add("a.xtex", text.as_bytes().to_vec());
+        let document = parse(&sources, id);
+        let mut table = SymbolTable::new();
+        table.merge(&sources, &document);
+
+        let inside = text.find("caption").expect("present");
+        let (name, class) =
+            entity_at(&sources, &document, &table, inside).expect("inside the block");
+        assert_eq!(name, "tab:x");
+        assert_eq!(class, EntityClass::Table);
+
+        // The negative case carries the weight: a position outside every
+        // declared entity must yield nothing, so a typesetting failure there
+        // keeps TeX's own sentence instead of naming something it cannot
+        // support.
+        let outside = text.find("Outside").expect("present");
+        assert!(entity_at(&sources, &document, &table, outside).is_none());
     }
 
     #[test]
