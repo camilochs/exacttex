@@ -61,7 +61,11 @@ function bundle(dir, root) {
 
 const project = bundle(projectDir, rootName);
 writeFileSync(`${outDir}/wasm.tex`, call("xtex_emit", project));
-writeFileSync(`${outDir}/wasm.json`, call("xtex_check_json", project));
+const checkJson = call("xtex_check_json", project);
+// Byte-equality between builds is satisfied by two equally malformed
+// answers; parsing is what proves the JSON is JSON.
+JSON.parse(new TextDecoder().decode(checkJson));
+writeFileSync(`${outDir}/wasm.json`, checkJson);
 writeFileSync(`${outDir}/wasm.map`, call("xtex_source_map", project));
 
 // Helper: length-prefixed texts followed by the bundle.

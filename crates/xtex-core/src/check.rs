@@ -596,11 +596,15 @@ pub fn to_json(sources: &Sources, diagnostics: &[Diagnostic], coverage: f64, out
             if related_index > 0 {
                 out.push(',');
             }
-            out.push('{');
-            // A related note has a span and a message and no code of its own.
-            write_span(sources, related.source, related.span, out);
-            out.push_str(",\"message\":");
+            // A related note has a message and a span and no code of its
+            // own. The message comes first because `write_span` writes a
+            // leading comma on the assumption that a field precedes it — the
+            // assumption this loop broke, emitting `{,\"span\":` and handing
+            // every consumer of a related-carrying diagnostic malformed
+            // JSON. Found by the first real document the web UI checked.
+            out.push_str("{\"message\":");
             write_json_string(&related.message, out);
+            write_span(sources, related.source, related.span, out);
             out.push('}');
         }
         out.push_str("]}");
