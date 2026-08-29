@@ -189,7 +189,7 @@ pub unsafe extern "C" fn xtex_check_json(pointer: *const u8, len: usize) -> *mut
     };
     // No `xtex.toml` reaches a browser yet; the default prefixes apply, as
     // they do for a project on disk that carries none.
-    let Ok((sources, diagnostics, coverage, _)) = check_project(
+    let Ok((sources, diagnostics, coverage, bibliography)) = check_project(
         &bundle.store,
         &bundle.root,
         xtex_core::symbols::PrefixMap::default(),
@@ -197,7 +197,29 @@ pub unsafe extern "C" fn xtex_check_json(pointer: *const u8, len: usize) -> *mut
         return result(&[]);
     };
     let mut json = String::new();
-    to_json(&sources, &diagnostics, coverage, &mut json);
+    to_json(&sources, &diagnostics, coverage, &bibliography, &mut json);
+    result(json.as_bytes())
+}
+
+/// The project's identity inventory: every declaration with its class, its
+/// site, and how many references demand it. One JSON array, sorted by name —
+/// what an editor needs to draw the typed world and to say "3 references"
+/// above an `@id` without guessing.
+///
+/// # Safety
+///
+/// `pointer` must point at `len` readable bytes.
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn xtex_inventory(pointer: *const u8, len: usize) -> *mut u8 {
+    let bytes = unsafe { input(pointer, len) };
+    let Some(bundle) = decode_bundle(&bytes) else {
+        return result(&[]);
+    };
+    let Ok(analysed) = xtex_core::project::analyse(&bundle.store, &bundle.root) else {
+        return result(&[]);
+    };
+    let mut json = String::new();
+    xtex_core::editor::inventory_to_json(&analysed.sources, &analysed.table, &mut json);
     result(json.as_bytes())
 }
 

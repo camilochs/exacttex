@@ -589,6 +589,31 @@ mod json_tests {
 
     /// The JSON was unrendered by any test until the WebAssembly build needed
     /// it. A scripted refactor scrambled the field order and every test still
+    #[test]
+    fn the_inventory_names_every_declaration_with_its_uses() {
+        let mut sources = Sources::new();
+        let id = sources.add(
+            "j.xtex",
+            b"\\section{A}@id(sec:a) then @ref(sec:a) and @ref(sec:a) and @id(fig:b)\n".to_vec(),
+        );
+        let document = parse(&sources, id);
+        let mut table = SymbolTable::new();
+        table.merge(&sources, &document);
+        let mut json = String::new();
+        crate::editor::inventory_to_json(&sources, &table, &mut json);
+        assert!(json.starts_with("[{") && json.ends_with("}]"), "{json}");
+        // Sorted by name: fig:b before sec:a; counts and class exact.
+        let fig = json.find("\"name\":\"fig:b\"").expect("fig:b listed");
+        let sec = json.find("\"name\":\"sec:a\"").expect("sec:a listed");
+        assert!(fig < sec, "{json}");
+        assert!(
+            json.contains("\"name\":\"sec:a\",\"class\":\"section\",\"references\":2"),
+            "{json}"
+        );
+        assert!(json.contains("\"references\":0"), "{json}");
+        assert!(json.contains("\"span\":{\"file\":\"j.xtex\""), "{json}");
+    }
+
     /// passed, which is how this one came to exist.
     #[test]
     fn the_json_is_well_formed_and_carries_every_field() {
@@ -597,15 +622,23 @@ mod json_tests {
         let document = parse(&sources, id);
         let mut table = SymbolTable::new();
         table.merge(&sources, &document);
-        let diagnostics = check(
-            &table,
-            &Bibliography::Unavailable(Unavailable::NoneDeclared),
-        );
+        let bibliography = Bibliography::Unavailable(Unavailable::NoneDeclared);
+        let diagnostics = check(&table, &bibliography);
 
         let mut json = String::new();
-        to_json(&sources, &diagnostics, document.coverage(), &mut json);
+        to_json(
+            &sources,
+            &diagnostics,
+            document.coverage(),
+            &bibliography,
+            &mut json,
+        );
 
         assert!(json.starts_with("{\"coverage\":"), "{json}");
+        assert!(
+            json.contains("\"bibliography\":{\"state\":\"unavailable\",\"reason\":"),
+            "{json}"
+        );
         assert!(json.ends_with("]}"), "{json}");
         for field in [
             "\"code\":\"XT1003\"",
@@ -789,13 +822,30 @@ fn location(
 /// has no stdout and the exit criterion of #18 is that its JSON equals the
 /// native tool's byte for byte. One implementation makes that true by
 /// construction; two would make it a coincidence to be re-checked.
-pub fn to_json(sources: &Sources, diagnostics: &[Diagnostic], coverage: f64, out: &mut String) {
+pub fn to_json(
+    sources: &Sources,
+    diagnostics: &[Diagnostic],
+    coverage: f64,
+    bibliography: &Bibliography,
+    out: &mut String,
+) {
     // Six decimals, not the sixteen an f64 prints. The extra digits are false
     // precision on a ratio of byte counts, and they are not reproducible: the
     // WebAssembly build computes `1.0 - opaque/total` on 32-bit `usize` and
     // lands one bit away from the native build, which made the two outputs
     // differ at the sixteenth digit and nowhere else.
-    let _ = write!(out, "{{\"coverage\":{coverage:.6},\"diagnostics\":[");
+    let _ = write!(out, "{{\"coverage\":{coverage:.6},\"bibliography\":");
+    match bibliography {
+        Bibliography::Complete(keys) => {
+            let _ = write!(out, "{{\"state\":\"complete\",\"entries\":{}}}", keys.len());
+        }
+        Bibliography::Unavailable(unavailable) => {
+            out.push_str("{\"state\":\"unavailable\",\"reason\":");
+            write_json_string(&unavailable.reason(), out);
+            out.push('}');
+        }
+    }
+    out.push_str(",\"diagnostics\":[");
     for (index, diagnostic) in diagnostics.iter().enumerate() {
         if index > 0 {
             out.push(',');
@@ -838,7 +888,12 @@ pub fn to_json(sources: &Sources, diagnostics: &[Diagnostic], coverage: f64, out
 
 /// Appends `,"span":{...}` for one span. The leading comma is included because
 /// every caller has already written a field before it.
-fn write_span(sources: &Sources, source: SourceId, span: crate::source::Span, out: &mut String) {
+pub(crate) fn write_span(
+    sources: &Sources,
+    source: SourceId,
+    span: crate::source::Span,
+    out: &mut String,
+) {
     let (file, line, column) = location(sources, source, span);
     out.push_str(",\"span\":{\"file\":");
     write_json_string(file, out);
@@ -851,7 +906,7 @@ fn write_span(sources: &Sources, source: SourceId, span: crate::source::Span, ou
 }
 
 /// Appends `value` as a quoted JSON string.
-fn write_json_string(value: &str, out: &mut String) {
+pub(crate) fn write_json_string(value: &str, out: &mut String) {
     out.push('"');
     for character in value.chars() {
         match character {

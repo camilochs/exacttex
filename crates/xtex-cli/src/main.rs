@@ -256,13 +256,13 @@ fn check_command(args: &[String]) -> ExitCode {
     }
 
     match run_check(inputs[0]) {
-        Ok((sources, diagnostics, coverage, _bibliography)) => {
+        Ok((sources, diagnostics, coverage, bibliography)) => {
             if json {
                 {
                     // One renderer, shared with the WebAssembly build, so the two
                     // cannot drift.
                     let mut json = String::new();
-                    to_json(&sources, &diagnostics, coverage, &mut json);
+                    to_json(&sources, &diagnostics, coverage, &bibliography, &mut json);
                     println!("{json}");
                 }
             } else {
@@ -270,6 +270,14 @@ fn check_command(args: &[String]) -> ExitCode {
                     print_human(&sources, diagnostic);
                 }
                 println!("coverage: {:.1}%", coverage * 100.0);
+                match &bibliography {
+                    xtex_core::bibliography::Bibliography::Complete(keys) => {
+                        println!("bibliography: complete ({} entries)", keys.len());
+                    }
+                    xtex_core::bibliography::Bibliography::Unavailable(unavailable) => {
+                        println!("bibliography: unavailable — {}", unavailable.reason());
+                    }
+                }
             }
             if diagnostics
                 .iter()

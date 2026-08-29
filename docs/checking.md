@@ -369,6 +369,11 @@ The fields:
 | `message` | One sentence, no trailing period, naming the thing rather than the rule. |
 | `related` | Zero or more spans that explain the first, each with its own message. |
 
+Beside the diagnostics, both forms carry two run-level facts: `coverage`, and `bibliography` — `complete`
+with its entry count, or `unavailable` with the same reason §7 gives the advisory. A tool that wants to say
+"your citations are actually being checked" reads it here instead of inferring it from the absence of
+`XT2001`.
+
 Human form:
 
 ```

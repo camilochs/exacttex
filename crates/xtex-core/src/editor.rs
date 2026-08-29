@@ -307,6 +307,33 @@ pub fn hover_to_json(found: &Hover, out: &mut String) {
     out.push('}');
 }
 
+/// Renders the whole identity inventory: every declaration, sorted by name,
+/// with its class, its declaration site, and its reference count.
+pub fn inventory_to_json(sources: &Sources, table: &SymbolTable, out: &mut String) {
+    out.push('[');
+    for (index, (name, declaration)) in table.declarations().enumerate() {
+        if index > 0 {
+            out.push(',');
+        }
+        out.push_str("{\"name\":");
+        crate::check::write_json_string(name, out);
+        let _ = write!(
+            out,
+            ",\"class\":\"{}\",\"references\":{}",
+            declaration.class.name(),
+            table.reference_count(name)
+        );
+        crate::check::write_span(
+            sources,
+            declaration.payload.source,
+            declaration.payload.span,
+            out,
+        );
+        out.push('}');
+    }
+    out.push(']');
+}
+
 /// Renders completions as JSON, one renderer for both hosts.
 pub fn completions_to_json(items: &[Completion], out: &mut String) {
     out.push('[');

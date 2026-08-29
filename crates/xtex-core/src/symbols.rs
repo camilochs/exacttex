@@ -311,6 +311,22 @@ impl SymbolTable {
         self.declarations.keys().map(String::as_str)
     }
 
+    /// Every declaration with its name, sorted by name.
+    pub fn declarations(&self) -> impl Iterator<Item = (&str, &Declaration)> {
+        self.declarations
+            .iter()
+            .map(|(name, declaration)| (name.as_str(), declaration))
+    }
+
+    /// How many references demand `name`.
+    #[must_use]
+    pub fn reference_count(&self, name: &str) -> usize {
+        self.references
+            .iter()
+            .filter(|(reference, _)| reference == name)
+            .count()
+    }
+
     /// Class demanded by `name` under this table's project prefix map.
     #[must_use]
     pub fn demand_of(&self, name: &str) -> EntityClass {
