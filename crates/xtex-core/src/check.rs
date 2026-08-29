@@ -215,6 +215,27 @@ pub fn check_documents(
                 Node::Opaque { .. } => return,
             };
             let Some(block_kind) = block_kind(kind) else {
+                // An explicit inline construct that never closed: the scanner
+                // reported it at its entry token, and the grammar makes that a
+                // hard error (grammar.md §inline). Dropping it here was the
+                // hole that let `@id(x` fail only at its references.
+                if malformed {
+                    if let Some(entry) = inline_entry(kind) {
+                        diagnostics.push(Diagnostic {
+                            code: "XT1014",
+                            entity: EntityClass::UnknownOpen,
+                            name: None,
+                            source,
+                            span,
+                            message: format!(
+                                "`{entry}` never closes before the end of its line — expected `)`"
+                            ),
+                            related: Vec::new(),
+                            severity: Severity::Error,
+                            blame: Blame::XtexConstruct,
+                        });
+                    }
+                }
                 return;
             };
             let Some(bytes) = sources.get(source).map(crate::source::Source::bytes) else {
@@ -241,6 +262,16 @@ pub fn check_documents(
         });
     }
     diagnostics
+}
+
+fn inline_entry(kind: EntryToken) -> Option<&'static str> {
+    match kind {
+        EntryToken::Id => Some("@id"),
+        EntryToken::Ref => Some("@ref"),
+        EntryToken::Cite => Some("@cite"),
+        EntryToken::Import => Some("@import"),
+        _ => None,
+    }
 }
 
 fn block_kind(kind: EntryToken) -> Option<BlockKind> {
@@ -525,6 +556,20 @@ mod tests {
             }),
         );
         assert!(found.is_empty());
+    }
+
+    #[test]
+    fn an_unterminated_inline_construct_is_a_hard_error_at_its_entry_token() {
+        let mut sources = Sources::new();
+        let id = sources.add("main.xtex", b"hola @id(x:one\nSee @ref(x:one).".to_vec());
+        let document = parse(&sources, id);
+        let found = check_documents(&sources, std::slice::from_ref(&document), |_, _| true);
+        assert_eq!(found.len(), 1, "{found:?}");
+        assert_eq!(found[0].code, "XT1014");
+        assert!(found[0].message.contains("`@id`"));
+        // At the entry token on the FIRST line — where the fix belongs —
+        // not at the reference that fails as a consequence.
+        assert_eq!(found[0].span.start(), 5);
     }
 
     #[test]
