@@ -48,6 +48,8 @@ pub enum Unavailable {
     UnparsableEntry {
         /// The resource the entry is in.
         name: String,
+        /// A location and description that can be printed without a source map.
+        detail: String,
     },
 }
 
@@ -64,8 +66,8 @@ impl Unavailable {
                 "the declared bibliography path is computed rather than literal".to_owned()
             }
             Self::Unreadable { name } => format!("`{name}` could not be read"),
-            Self::UnparsableEntry { name } => {
-                format!("an entry boundary in `{name}` could not be located")
+            Self::UnparsableEntry { name, detail } => {
+                format!("`{name}` did not parse — {detail}")
             }
         }
     }
@@ -287,11 +289,12 @@ pub fn assemble(
                 name: resource.name.clone(),
             });
         };
-        match keys_in_bib(&bytes) {
-            Some(found) => keys.extend(found),
-            None => {
+        match scan_bib(&bytes) {
+            Ok(found) => keys.extend(found),
+            Err(detail) => {
                 return Bibliography::Unavailable(Unavailable::UnparsableEntry {
                     name: resource.name.clone(),
+                    detail,
                 });
             }
         }
@@ -305,6 +308,10 @@ pub fn assemble(
 /// `@string` declare no citation key and are skipped.
 #[must_use]
 pub fn keys_in_bib(bytes: &[u8]) -> Option<BTreeSet<String>> {
+    scan_bib(bytes).ok()
+}
+
+fn scan_bib(bytes: &[u8]) -> Result<BTreeSet<String>, String> {
     let mut keys = BTreeSet::new();
     let mut at = 0usize;
     while at < bytes.len() {
@@ -320,32 +327,149 @@ pub fn keys_in_bib(bytes: &[u8]) -> Option<BTreeSet<String>> {
         let entry_type = bytes[type_start..cursor].to_ascii_lowercase();
         cursor = skip_space(bytes, cursor);
         let opener = match bytes.get(cursor) {
-            Some(b'{') => b'}',
-            Some(b'(') => b')',
+            Some(b'{') => (b'{', b'}'),
+            Some(b'(') => (b'(', b')'),
             _ => {
                 at = type_start;
                 continue;
             }
         };
+        let entry_line = line_at(bytes, cursor);
         cursor += 1;
-        if matches!(entry_type.as_slice(), b"comment" | b"preamble" | b"string") {
+        // `@comment` is the one entry type BibTeX does not read. It skips to the
+        // next `@` and resumes there, so an unbalanced brace inside a comment is
+        // not an error, and an entry a writer commented out by wrapping it is
+        // still a database entry. Measured against BibTeX 0.99e, both ways:
+        // `@comment{a stray { brace}` is accepted, and a `@book` inside a
+        // `@comment` still resolves when cited.
+        if entry_type == b"comment" {
             at = cursor;
             continue;
         }
+        let body_start = cursor;
+        let close = entry_end(
+            bytes,
+            cursor,
+            opener.0,
+            opener.1,
+            entry_line,
+            entry_type == b"preamble",
+        )?;
         let key_start = skip_space(bytes, cursor);
         let mut key_end = key_start;
-        while matches!(bytes.get(key_end), Some(b) if !b.is_ascii_whitespace() && *b != b',' && *b != opener)
+        while matches!(bytes.get(key_end), Some(b) if !b.is_ascii_whitespace() && *b != b',' && *b != opener.1)
         {
             key_end += 1;
         }
-        if key_end > key_start {
+        if !matches!(entry_type.as_slice(), b"preamble" | b"string") {
+            validate_field_separators(bytes, body_start, close)?;
+        }
+        if !matches!(entry_type.as_slice(), b"preamble" | b"string") && key_end > key_start {
             if let Ok(key) = std::str::from_utf8(&bytes[key_start..key_end]) {
                 keys.insert(key.to_owned());
             }
         }
-        at = key_end.max(cursor);
+        at = close + 1;
     }
-    Some(keys)
+    Ok(keys)
+}
+
+fn entry_end(
+    bytes: &[u8],
+    mut at: usize,
+    open: u8,
+    close: u8,
+    entry_line: usize,
+    mut value_position: bool,
+) -> Result<usize, String> {
+    let mut braces = Vec::new();
+    let mut quote = None;
+    while let Some(&byte) = bytes.get(at) {
+        if quote.is_some() && byte == b'"' && braces.is_empty() {
+            quote = None;
+        } else if quote.is_none() && value_position && byte == b'"' && braces.is_empty() {
+            quote = Some(line_at(bytes, at));
+            value_position = false;
+        } else if byte == b'{' {
+            braces.push(line_at(bytes, at));
+        } else if byte == b'}' && !braces.is_empty() {
+            braces.pop();
+        } else if byte == close && braces.is_empty() && quote.is_none() {
+            return Ok(at);
+        } else if braces.is_empty() && quote.is_none() {
+            if matches!(byte, b'=' | b'#') {
+                value_position = true;
+            } else if !byte.is_ascii_whitespace() {
+                value_position = false;
+            }
+        }
+        at += 1;
+    }
+    if let Some(line) = quote {
+        Err(format!(
+            "a quoted value opened at line {line} is never closed"
+        ))
+    } else if let Some(line) = braces.first() {
+        Err(format!("a value opened at line {line} is never closed"))
+    } else {
+        let delimiter = char::from(open);
+        Err(format!(
+            "an entry delimiter `{delimiter}` opened at line {entry_line} is never closed"
+        ))
+    }
+}
+
+fn validate_field_separators(bytes: &[u8], start: usize, end: usize) -> Result<(), String> {
+    let mut at = start;
+    let mut braces = 0usize;
+    let mut quoted = false;
+    while at < end {
+        match bytes[at] {
+            b'"' if braces == 0 => quoted = !quoted,
+            b'{' if !quoted => braces += 1,
+            b'}' if !quoted => braces = braces.saturating_sub(1),
+            _ => {}
+        }
+        if braces == 0
+            && !quoted
+            && matches!(bytes[at], b'}' | b'"' | b'0'..=b'9' | b'a'..=b'z' | b'A'..=b'Z')
+        {
+            let mut next = at + 1;
+            while next < end && bytes[next].is_ascii_whitespace() {
+                next += 1;
+            }
+            let value_just_closed = matches!(bytes[at], b'}' | b'"');
+            if (value_just_closed || next > at + 1)
+                && bytes.get(next).is_some_and(u8::is_ascii_alphabetic)
+            {
+                let mut equals = next + 1;
+                while equals < end
+                    && (bytes[equals].is_ascii_alphanumeric() || bytes[equals] == b'_')
+                {
+                    equals += 1;
+                }
+                equals = skip_space(bytes, equals);
+                if bytes.get(equals) == Some(&b'=') {
+                    return Err(format!(
+                        "two fields at line {} have no comma between them",
+                        line_at(bytes, next)
+                    ));
+                }
+            }
+        }
+        at += 1;
+    }
+    Ok(())
+}
+
+fn line_at(bytes: &[u8], at: usize) -> usize {
+    let mut line = 1;
+    for &byte in &bytes[..at.min(bytes.len())] {
+        if byte == b'\n' {
+            line += 1;
+        }
+    }
+    line
 }
 
 fn find(haystack: &[u8], from: usize, needle: &[u8]) -> Option<usize> {
@@ -546,6 +670,139 @@ mod tests {
     fn a_bib_entry_may_use_parentheses() {
         let keys = keys_in_bib(b"@article(paren_style, title = {T})").unwrap();
         assert!(keys.contains("paren_style"));
+    }
+
+    #[test]
+    fn validation_matches_bibtex_on_the_experiment_corpus() {
+        let rejected = [
+            include_bytes!(
+                "../../../tests/experiments/bib-validator/corpus/bad-01-unclosed-field.bib"
+            )
+            .as_slice(),
+            include_bytes!(
+                "../../../tests/experiments/bib-validator/corpus/bad-02-unclosed-entry.bib"
+            )
+            .as_slice(),
+            include_bytes!(
+                "../../../tests/experiments/bib-validator/corpus/bad-03-missing-comma.bib"
+            )
+            .as_slice(),
+            include_bytes!(
+                "../../../tests/experiments/bib-validator/corpus/bad-04-unclosed-quote.bib"
+            )
+            .as_slice(),
+            include_bytes!(
+                "../../../tests/experiments/bib-validator/corpus/bad-08-preamble-unbalanced.bib"
+            )
+            .as_slice(),
+            include_bytes!(
+                "../../../tests/experiments/bib-validator/corpus/bad-09-string-unbalanced.bib"
+            )
+            .as_slice(),
+            b"@article{k, title={A}year={2020}}",
+        ];
+        for bytes in rejected {
+            assert!(keys_in_bib(bytes).is_none());
+        }
+
+        let accepted = [
+            include_bytes!("../../../tests/experiments/bib-validator/corpus/bad-05-no-key.bib")
+                .as_slice(),
+            include_bytes!(
+                "../../../tests/experiments/bib-validator/corpus/bad-06-stray-brace.bib"
+            )
+            .as_slice(),
+            include_bytes!(
+                "../../../tests/experiments/bib-validator/corpus/bad-07-undefined-string.bib"
+            )
+            .as_slice(),
+            include_bytes!("../../../tests/experiments/bib-validator/corpus/ok-01-plain.bib")
+                .as_slice(),
+            include_bytes!("../../../tests/experiments/bib-validator/corpus/ok-02-quotes.bib")
+                .as_slice(),
+            include_bytes!("../../../tests/experiments/bib-validator/corpus/ok-03-strings.bib")
+                .as_slice(),
+            include_bytes!(
+                "../../../tests/experiments/bib-validator/corpus/ok-04-preamble-hash.bib"
+            )
+            .as_slice(),
+            include_bytes!(
+                "../../../tests/experiments/bib-validator/corpus/ok-05-comment-and-junk.bib"
+            )
+            .as_slice(),
+            include_bytes!(
+                "../../../tests/experiments/bib-validator/corpus/ok-06-nested-braces.bib"
+            )
+            .as_slice(),
+            include_bytes!("../../../tests/experiments/bib-validator/corpus/ok-07-concat.bib")
+                .as_slice(),
+            include_bytes!(
+                "../../../tests/experiments/bib-validator/corpus/ok-08-comment-unbalanced.bib"
+            )
+            .as_slice(),
+            include_bytes!(
+                "../../../tests/experiments/bib-validator/corpus/ok-09-comment-wraps-an-entry.bib"
+            )
+            .as_slice(),
+            b"@comment{\" is ordinary comment text}\n@book{k, title={T}}",
+            b"@article{k\"x, title={T}, year=2020}",
+        ];
+        for bytes in accepted {
+            assert!(keys_in_bib(bytes).is_some());
+        }
+    }
+
+    #[test]
+    fn a_comment_is_skipped_to_the_next_at_sign_the_way_bibtex_skips_it() {
+        // Both halves were settled by running the files through BibTeX 0.99e.
+        // It accepts an unbalanced brace inside `@comment`, because it never
+        // reads the body; and an entry a writer commented out by wrapping it
+        // still resolves when cited, because the skip stops at the next `@`.
+        // Validating the body would reject the first and lose the key in the
+        // second, and losing a key turns a correct `@cite` into `XT1005`.
+        let unbalanced = include_bytes!(
+            "../../../tests/experiments/bib-validator/corpus/ok-08-comment-unbalanced.bib"
+        );
+        assert_eq!(
+            keys_in_bib(unbalanced),
+            Some(BTreeSet::from(["k1".to_owned()]))
+        );
+
+        let wrapped = include_bytes!(
+            "../../../tests/experiments/bib-validator/corpus/ok-09-comment-wraps-an-entry.bib"
+        );
+        assert_eq!(
+            keys_in_bib(wrapped),
+            Some(BTreeSet::from([
+                "commented_out".to_owned(),
+                "k1".to_owned()
+            ]))
+        );
+    }
+
+    #[test]
+    fn an_invalid_file_makes_the_whole_bibliography_unavailable() {
+        let d = declared("\\bibliography{refs}");
+        let bibliography = assemble(&d, |_| Some(b"@book{k,\n title = {never closed\n".to_vec()));
+        assert_eq!(
+            bibliography,
+            Bibliography::Unavailable(Unavailable::UnparsableEntry {
+                name: "refs.bib".to_owned(),
+                detail: "a value opened at line 2 is never closed".to_owned(),
+            })
+        );
+        assert!(!bibliography.is_missing("anything"));
+
+        let mut sources = Sources::new();
+        let id = sources.add("main.xtex", b"@cite(anything)".to_vec());
+        let document = crate::parse(&sources, id);
+        let mut table = SymbolTable::new();
+        table.merge(&sources, &document);
+        assert!(
+            crate::check::check(&table, &bibliography)
+                .iter()
+                .all(|diagnostic| diagnostic.code != "XT1005")
+        );
     }
     /// The three outcomes issue #12 requires, driven through the real pipeline:
     /// parse, build the symbol table, assemble the bibliography, compare.

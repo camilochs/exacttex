@@ -33,6 +33,8 @@ pub enum Unavailable {
     /// A `\label` after that point cannot be seen, so the ones before it are a
     /// subset rather than a set.
     Quarantined,
+    /// A literal LaTeX project edge did not resolve or could not be read.
+    UnreadableEdge,
 }
 
 /// What a document's own `\label` commands amount to.

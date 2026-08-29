@@ -282,7 +282,7 @@ fn run_check(root: &str) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography)
     // `\label` in an imported file declares its name for the root, exactly as
     // an `@id` there does.
     let mut labels: BTreeMap<String, xtex_core::source::Span> = BTreeMap::new();
-    let mut labels_available = true;
+    let mut labels_unavailable = None;
 
     while let Some(id) = pending.pop() {
         let name = sources
@@ -300,9 +300,16 @@ fn run_check(root: &str) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography)
             // One file that went dark makes the root's inventory a subset, and
             // a subset that looks complete turns every name it missed into a
             // false "not declared".
-            xtex_core::labels::Inventory::Unavailable(_) => labels_available = false,
+            xtex_core::labels::Inventory::Unavailable(reason) => labels_unavailable = Some(reason),
         }
         merge_declared(&mut declared, declared_in(&sources, id));
+        follow_latex_edges(
+            &loader,
+            id,
+            &mut sources,
+            &mut pending,
+            &mut labels_unavailable,
+        )?;
         let mut imports = Vec::new();
         document.walk(|node| {
             if let Node::Construct {
@@ -319,6 +326,7 @@ fn run_check(root: &str) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography)
             match loader.load(&path, Some(id), &mut sources) {
                 Ok(imported) => pending.push(imported),
                 Err(IoError::NotFound { .. } | IoError::Unresolvable { .. }) => {
+                    labels_unavailable = Some(xtex_core::labels::Unavailable::UnreadableEdge);
                     import_diagnostics.push(Diagnostic {
                         code: "XT1009",
                         entity: EntityClass::UnknownOpen,
@@ -342,7 +350,7 @@ fn run_check(root: &str) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography)
     // The author's own `\label` commands resolve `@ref` too, so annotating a
     // document one figure at a time does not report the unannotated ones as
     // missing. Merged across the root, like every other declaration.
-    let inventory = root_inventory(labels, labels_available);
+    let inventory = root_inventory(labels, labels_unavailable);
     let mut diagnostics = check_with_labels(&table, &bibliography, &inventory);
     diagnostics.extend(bibliography_advisory(&table, &bibliography));
     diagnostics.extend(check_documents(&sources, &documents, |source, name| {
@@ -353,30 +361,129 @@ fn run_check(root: &str) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography)
         base.join(name).is_file()
     }));
     diagnostics.extend(import_diagnostics);
-    let total_bytes: f64 = documents
-        .iter()
-        .filter_map(|document| sources.get(document.source()))
-        .map(|source| {
-            f64::from(u32::try_from(source.bytes().len()).expect("source exceeds u32 addressing"))
-        })
-        .sum();
-    let checked_bytes: f64 = documents
-        .iter()
-        .filter_map(|document| {
-            sources.get(document.source()).map(|source| {
-                document.coverage()
-                    * f64::from(
-                        u32::try_from(source.bytes().len()).expect("source exceeds u32 addressing"),
-                    )
-            })
-        })
-        .sum();
-    let coverage = if total_bytes == 0.0 {
-        1.0
-    } else {
-        checked_bytes / total_bytes
-    };
+    let coverage = root_coverage(&sources, &documents);
     Ok((sources, diagnostics, coverage, bibliography))
+}
+
+fn root_coverage(sources: &Sources, documents: &[xtex_core::document::Document]) -> f64 {
+    let mut total = 0.0;
+    let mut checked = 0.0;
+    for document in documents {
+        let Some(source) = sources.get(document.source()) else {
+            continue;
+        };
+        let bytes =
+            f64::from(u32::try_from(source.bytes().len()).expect("source exceeds u32 addressing"));
+        total += bytes;
+        checked += document.coverage() * bytes;
+    }
+    if total == 0.0 { 1.0 } else { checked / total }
+}
+
+fn follow_latex_edges(
+    loader: &impl SourceLoader,
+    id: SourceId,
+    sources: &mut Sources,
+    pending: &mut Vec<SourceId>,
+    unavailable: &mut Option<xtex_core::labels::Unavailable>,
+) -> Result<(), IoError> {
+    let (edges, computed) = sources
+        .get(id)
+        .map(|source| latex_inventory_edges(source.bytes()))
+        .unwrap_or_default();
+    if computed {
+        *unavailable = Some(xtex_core::labels::Unavailable::UnreadableEdge);
+    }
+    for path in edges {
+        match load_latex_edge(loader, &path, id, sources) {
+            Ok(included) => pending.push(included),
+            Err(error @ IoError::TooLarge { .. }) => return Err(error),
+            Err(_) => *unavailable = Some(xtex_core::labels::Unavailable::UnreadableEdge),
+        }
+    }
+    Ok(())
+}
+
+fn load_latex_edge(
+    loader: &impl SourceLoader,
+    path: &str,
+    relative_to: SourceId,
+    sources: &mut Sources,
+) -> Result<SourceId, IoError> {
+    if Path::new(path).extension().is_some() {
+        return loader.load(path, Some(relative_to), sources);
+    }
+    match loader.load(&format!("{path}.tex"), Some(relative_to), sources) {
+        Ok(id) => Ok(id),
+        Err(IoError::NotFound { .. }) => {
+            loader.load(&format!("{path}.xtex"), Some(relative_to), sources)
+        }
+        Err(error) => Err(error),
+    }
+}
+
+fn latex_inventory_edges(bytes: &[u8]) -> (Vec<String>, bool) {
+    let mut edges = Vec::new();
+    let mut computed = false;
+    for span in xtex_core::scanner::readable_for(bytes, &["include", "input"]) {
+        let region = &bytes[span.start()..span.end()];
+        computed |= collect_latex_edges(region, &mut edges);
+    }
+    (edges, computed)
+}
+
+fn collect_latex_edges(mut region: &[u8], edges: &mut Vec<String>) -> bool {
+    let mut computed = false;
+    while let Some(at) = region.windows(2).position(|window| window == b"\\i") {
+        region = &region[at..];
+        let command_len = if region.starts_with(b"\\include") {
+            b"\\include".len()
+        } else if region.starts_with(b"\\input") {
+            b"\\input".len()
+        } else {
+            region = &region[2..];
+            continue;
+        };
+        if region
+            .get(command_len)
+            .is_some_and(|byte| byte.is_ascii_alphabetic() || *byte == b'@')
+        {
+            region = &region[command_len..];
+            continue;
+        }
+        let rest = &region[command_len..];
+        let whitespace = rest
+            .iter()
+            .position(|byte| !byte.is_ascii_whitespace())
+            .unwrap_or(rest.len());
+        let rest = &rest[whitespace..];
+        let Some(body) = rest.strip_prefix(b"{") else {
+            computed = true;
+            region = rest;
+            continue;
+        };
+        let Some(close) = body.iter().position(|byte| *byte == b'}') else {
+            return true;
+        };
+        let path = &body[..close];
+        if path
+            .iter()
+            .any(|byte| matches!(byte, b'\\' | b'{' | b'}' | b'#'))
+        {
+            computed = true;
+        } else if let Ok(path) = std::str::from_utf8(path) {
+            let path = path.trim();
+            if path.is_empty() {
+                computed = true;
+            } else {
+                edges.push(path.to_owned());
+            }
+        } else {
+            computed = true;
+        }
+        region = &body[close + 1..];
+    }
+    computed
 }
 
 fn literal_import(
@@ -1431,12 +1538,11 @@ fn report_record(
 /// whole inventory exists to prevent.
 fn root_inventory(
     labels: BTreeMap<String, xtex_core::source::Span>,
-    available: bool,
+    unavailable: Option<xtex_core::labels::Unavailable>,
 ) -> xtex_core::labels::Inventory {
-    if available {
-        xtex_core::labels::Inventory::Complete(labels)
-    } else {
-        xtex_core::labels::Inventory::Unavailable(xtex_core::labels::Unavailable::Quarantined)
+    match unavailable {
+        Some(reason) => xtex_core::labels::Inventory::Unavailable(reason),
+        None => xtex_core::labels::Inventory::Complete(labels),
     }
 }
 
@@ -1490,6 +1596,7 @@ mod bibliography_advisory_tests {
             },
             Unavailable::UnparsableEntry {
                 name: "refs.bib".to_owned(),
+                detail: "a value opened at line 3 is never closed".to_owned(),
             },
         ] {
             let message = bibliography_advisory(&table, &Bibliography::Unavailable(reason.clone()))
