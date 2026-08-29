@@ -1,0 +1,14 @@
+BEFORE
+\figure(fig:pct) {
+  src = "a.pdf"
+  width = 80%
+  height = 40%
+  caption = {Both relative}
+}
+MIDDLE
+\figure(fig:abs) {
+  src = "b.pdf"
+  width = 12cm
+  caption = {Absolute}
+}
+AFTER

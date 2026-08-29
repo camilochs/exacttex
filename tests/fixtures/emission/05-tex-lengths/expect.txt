@@ -1,0 +1,6 @@
+transport: lowered
+scanner: figure figure
+constructs: two figures naming their own reference. A TeX length is emitted as
+  written, with or without a coefficient. This is how an author reaches
+  \columnwidth, which the percentage form cannot express because its reference
+  is fixed at \linewidth.

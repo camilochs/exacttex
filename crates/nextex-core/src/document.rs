@@ -78,9 +78,7 @@ pub enum Node {
     },
     /// A recognised NextTeX construct.
     ///
-    /// Its bytes are still emitted from the span for now. Lowering each kind to
-    /// its LaTeX form is the emitter's next job; until then a construct
-    /// transports like anything else, so recognising one cannot change output.
+    /// Its source span contains the values used when lowering it to LaTeX.
     Construct {
         /// Source this construct came from.
         source: SourceId,

@@ -1,0 +1,20 @@
+BEFORE
+\begin{figure}
+  \centering
+  \includegraphics[width=0.80\linewidth]{plot.pdf}
+  \caption{A {nested} caption\\
+with bytes}
+  \label{fig:main}
+\end{figure}
+MIDDLE
+\begin{table}
+  \centering
+  \caption{Data}
+\begin{tabular}{ll}
+a & b \\
+\end{tabular}
+% keep this comment
+{\small trailing}
+  \label{tab:data}
+\end{table}
+AFTER

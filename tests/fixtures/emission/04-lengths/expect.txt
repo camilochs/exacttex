@@ -1,0 +1,5 @@
+transport: lowered
+scanner: figure figure
+constructs: two figures. A percentage takes the reference its field fixes —
+  width against \linewidth, height against \textheight — and an absolute length
+  is emitted as written. No keepaspectratio: grammar §11.11 is open.

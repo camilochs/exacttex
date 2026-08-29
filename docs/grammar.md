@@ -423,7 +423,7 @@ until one succeeds.
 | Kind | Form | Ends at |
 |---|---|---|
 | `string` | `"` followed by bytes using `\"` and `\\` escapes | unescaped closing `"` |
-| `length` | decimal number plus `pt`, `mm`, `cm`, `in`, `em` or `ex` | first byte outside that token |
+| `length` | a decimal number plus `pt`, `mm`, `cm`, `in`, `em` or `ex`; **or** a TeX length such as `\linewidth`, with an optional coefficient before it | first byte outside that token |
 | `percentage` | decimal number plus `%` | byte after `%` |
 | `integer` | one or more ASCII digits | first non-digit byte |
 | `bare` | bytes other than a line ending | immediately before the line ending |
@@ -438,6 +438,7 @@ until one succeeds.
 figure-fields:
   src       = string
   width     = length | percentage
+  height    = length | percentage
   caption   = braced
 ```
 
@@ -504,6 +505,39 @@ field.
 
 This decision removes duplicated information. The hand annotation restated
 `\begin{tabular}{@{}lcccccc@{}}` as `columns = 7`, allowing the two annotations to disagree.
+
+### Lengths
+
+A `length` is emitted as written. A `percentage` becomes a fraction of a fixed reference, and the reference
+is part of the field's meaning rather than something the author selects:
+
+| Field | `80%` becomes |
+|---|---|
+| `width` | `0.80\linewidth` |
+| `height` | `0.80\textheight` |
+
+`\linewidth` is the only width correct both inside a single-column float and inside a spanning one; measured
+by compiling, `\textwidth` overflows the first and `\columnwidth` under-fills the second. For height no
+adaptive reference exists — TeX exposes no "space available in this float" — so `\textheight` is used, and
+the asymmetry is what TeX offers rather than a choice.
+
+**An author who needs a different reference names it, and that is why a `length` admits a TeX length:**
+
+```
+width = 80%                shorthand, 0.80\linewidth
+width = 0.8\columnwidth     the reference named
+width = \textwidth          no coefficient
+width = 12cm                absolute
+```
+
+`\columnwidth` cannot be reached any other way. Inside a float that spans both columns, `\linewidth` is the
+full page width, so a column-width image there has no percentage form. Restricting `length` to a number and
+a unit made that unreachable without abandoning the block for plain LaTeX, and the restriction was written
+without anyone asking whether it should hold.
+
+A control word followed by `{` is a command taking an argument, not a length, and is rejected.
+
+See [`decisions/0004`](decisions/0004-lengths-and-inclusion.md).
 
 ### Package requirements
 
@@ -987,8 +1021,16 @@ The following decisions remain open because the available evidence does not sele
    title-specific check or reference would justify the latter.
 6. **Typed algorithm and panel blocks.** Light annotations admit both. A demonstrated typed check with a
    stable field set would justify new blocks.
-7. ~~**What `@cite` emits.**~~ Settled 2026-08-29 by the director: a citation construct is a LaTeX
+7. ~~**What a percentage lowers to.**~~ Settled 2026-08-29: `width` against `\linewidth`, `height` against
+   `\textheight`, no keyword. See §5 and `decisions/0004`.
+8. ~~**Whether `@import` lowers to `\input` or `\include`.**~~ Settled 2026-08-29: `\input`, and
+   `\include` was never available — it cannot be nested and `@import` nests. See `decisions/0004`.
+11. **Whether `keepaspectratio` is emitted when a block gives both `width` and `height`.** Of 243 measured
+    `\includegraphics` calls, 17 give both and 15 of those also give `keepaspectratio`, so the intent is
+    almost always a bounding box rather than a stretch. Following it would be a second exception to
+    no-injection and needs its own decision record.
+9. ~~**What `@cite` emits.**~~ Settled 2026-08-29 by the director: a citation construct is a LaTeX
    citation command written with `@`, and it emits that command. No style vocabulary, no package
    inference, no fields. See §4.
-8. ~~**Package requirements.**~~ Settled 2026-08-29: `needs` is not a field, packages are source-authored.
+10. ~~**Package requirements.**~~ Settled 2026-08-29: `needs` is not a field, packages are source-authored.
    See `decisions/0001-typed-emission-and-no-injection.md`.

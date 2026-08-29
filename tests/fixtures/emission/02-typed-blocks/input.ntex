@@ -1,0 +1,17 @@
+BEFORE
+\figure(fig:main) {
+  src = "plot.pdf"
+  width = 80%
+  caption = {A {nested} caption\\
+with bytes}
+}
+MIDDLE
+\table(tab:data) {
+  caption = {Data}
+  body = {\begin{tabular}{ll}
+a & b \\
+\end{tabular}}
+  trailing = {% keep this comment
+{\small trailing}}
+}
+AFTER
