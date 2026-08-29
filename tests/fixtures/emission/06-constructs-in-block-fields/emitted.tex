@@ -1,0 +1,17 @@
+BEFORE
+\begin{figure}
+  \centering
+  \includegraphics{@ref(not-a-reference).pdf}
+  \caption{Scalar path, nested \cite{figure-source}}
+  \label{fig:scalar}
+\end{figure}
+BETWEEN
+\begin{table}
+  \centering
+  \caption{Results for \cite{knuth1984}; \textbf{@cite(hidden-command)}; \verb|@cite(hidden-verb)|; $@cite(hidden-math)$; % @cite(hidden-comment)
+continued}
+row for \ref{fig:a}
+tail \ref{tab:x}
+  \label{tab:x}
+\end{table}
+AFTER \ref{sec:after}

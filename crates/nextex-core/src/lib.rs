@@ -112,10 +112,18 @@ pub fn parse(sources: &Sources, id: SourceId) -> Document {
                 // end, it is simply not modelled. Nothing has given up.
                 confidence: ParseConfidence::OpaqueBalanced,
             },
-            Piece::Construct { kind, span } => Node::Construct {
+            Piece::Construct {
+                kind,
+                span,
+                children,
+            } => Node::Construct {
                 source: id,
                 span,
                 kind,
+                children: children
+                    .into_iter()
+                    .map(|piece| node_from_piece(piece, id))
+                    .collect(),
             },
             Piece::Malformed { kind, span } => Node::Malformed {
                 source: id,
@@ -126,6 +134,30 @@ pub fn parse(sources: &Sources, id: SourceId) -> Document {
         document.push(node);
     }
     document
+}
+
+fn node_from_piece(piece: Piece, source: SourceId) -> Node {
+    match piece {
+        Piece::Text(span) | Piece::Excluded(span) => Node::Opaque {
+            source,
+            span,
+            confidence: ParseConfidence::OpaqueBalanced,
+        },
+        Piece::Construct {
+            kind,
+            span,
+            children,
+        } => Node::Construct {
+            source,
+            span,
+            kind,
+            children: children
+                .into_iter()
+                .map(|piece| node_from_piece(piece, source))
+                .collect(),
+        },
+        Piece::Malformed { kind, span } => Node::Malformed { source, span, kind },
+    }
 }
 
 /// Writes a document as LaTeX in emission order.
@@ -175,6 +207,19 @@ fn emit_construct(kind: EntryToken, bytes: &[u8], out: &mut Vec<u8>) {
             out.extend_from_slice(&bytes[open + 1..bytes.len() - 1]);
         }
         EntryToken::Figure | EntryToken::Table => emit_block(kind, bytes, out),
+    }
+}
+
+fn emit_content(bytes: &[u8], out: &mut Vec<u8>) {
+    for piece in scanner::scan(bytes) {
+        match piece {
+            Piece::Construct { kind, span, .. } => {
+                emit_construct(kind, &bytes[span.start()..span.end()], out);
+            }
+            Piece::Text(span) | Piece::Excluded(span) | Piece::Malformed { span, .. } => {
+                out.extend_from_slice(&bytes[span.start()..span.end()]);
+            }
+        }
     }
 }
 
@@ -275,15 +320,15 @@ fn emit_block(token: EntryToken, bytes: &[u8], out: &mut Vec<u8>) {
     }
     if let Some(caption) = field(b"caption") {
         out.extend_from_slice(b"  \\caption{");
-        copy_value(bytes, caption.value, true, out);
+        emit_braced_content(bytes, caption.value, out);
         out.extend_from_slice(b"}\n");
     }
     if let Some(body) = field(b"body") {
-        copy_value(bytes, body.value, true, out);
+        emit_braced_content(bytes, body.value, out);
         out.push(b'\n');
     }
     if let Some(trailing) = field(b"trailing") {
-        copy_value(bytes, trailing.value, true, out);
+        emit_braced_content(bytes, trailing.value, out);
         out.push(b'\n');
     }
     out.extend_from_slice(b"  \\label{");
@@ -291,6 +336,11 @@ fn emit_block(token: EntryToken, bytes: &[u8], out: &mut Vec<u8>) {
     out.extend_from_slice(b"}\n\\end{");
     out.extend_from_slice(environment);
     out.push(b'}');
+}
+
+fn emit_braced_content(bytes: &[u8], value: Value, out: &mut Vec<u8>) {
+    let span = value.span();
+    emit_content(&bytes[span.start() + 1..span.end() - 1], out);
 }
 
 fn emit_percentage(bytes: &[u8], span: source::Span, out: &mut Vec<u8>) {
