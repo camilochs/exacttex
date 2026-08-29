@@ -451,16 +451,21 @@ This decision removes duplicated information. The hand annotation restated
 
 ### Package requirements
 
-A `needs` field is not admitted in v0.1. Emitting `\usepackage` would inject bytes, while retaining a field
-that has no defined effect would make the construct misleading. Package synthesis remains open only if a
-future correctness rule permits injection or an erasure-preserving interpretation is specified. An
-end-to-end example that requires a package absent from the source and still satisfies typesetting
-equivalence would settle the issue.
+`needs` is not a field. Writing it in a block is a malformed field like any other unknown key.
 
-> **Open against a director decision.** The director chose that packages be declared by the block. This
-> specification removes the field instead, because emitting `\usepackage` contradicts the binding
-> no-injection rule and a field with no effect misleads. The conflict is real and unresolved; see repository
-> issue #5. This section records the specification's position, not a settled decision.
+Packages are declared where LaTeX declares them: `\usepackage` in the preamble, written by the author,
+transported byte for byte. Emitting one would inject bytes the erased build does not have, which contradicts
+the binding no-injection rule and makes property B untestable rather than merely violated.
+
+The alternative that would have kept the field — declare it, never emit it, check that the preamble already
+loads it — was measured and rejected. Across 224 `.tex` files grouped by project, between 17% and 50% of
+projects that use a package's commands never write its `\usepackage`: a journal class or another package
+loads it, and the compiler reads neither `.cls` nor `.sty`. The check would have reported a missing package
+in 9 of the 40 projects that use `booktabs`, each of which compiles.
+
+Settled by the director on 2026-08-29 with that measurement in hand. Full record and the emission contract:
+[`decisions/0001-typed-emission-and-no-injection.md`](decisions/0001-typed-emission-and-no-injection.md).
+Reproduce the measurement with `tests/experiments/package-loading/`.
 
 ### Balanced-region scanning
 
@@ -892,7 +897,7 @@ scanner hand-written, producing two parsing systems without removing the difficu
 | `columns` was declared | Column count is read from the tabular column specification | The hand annotation duplicated information already present in `@{}lcccccc@{}` |
 | Argument-position detection was left for corpus validation | Command arguments are selected from `xparse` and unified-latex signatures | LaTeX already provides declarative command-shape specifications |
 | Entity coverage was implicit | v0.1 admissions and exclusions are explicit | The hand annotation and counts for algorithms, lines and subfigures exposed the missing cases |
-| `needs` was admitted while its effect remained unresolved | `needs` is not v0.1 syntax | Package injection contradicts the binding correctness properties — **and contradicts a director decision; see §5** |
+| `needs` was admitted while its effect remained unresolved | `needs` is not a field | Emitting `\usepackage` injects bytes; the non-emitting check was measured wrong in 17–50% of real projects. Settled by the director, `decisions/0001` |
 
 ### Open decisions
 
@@ -910,6 +915,5 @@ The following decisions remain open because the available evidence does not sele
    title-specific check or reference would justify the latter.
 6. **Typed algorithm and panel blocks.** Light annotations admit both. A demonstrated typed check with a
    stable field set would justify new blocks.
-7. **Package requirements.** Options are source-authored `\usepackage`, a non-emitting advisory declaration,
-   or a documented exception to no-injection. Only a rule consistent with the binding typesetting property
-   can admit `needs`. **This one is not merely open: it stands against an explicit director decision.**
+7. ~~**Package requirements.**~~ Settled 2026-08-29: `needs` is not a field, packages are source-authored.
+   See `decisions/0001-typed-emission-and-no-injection.md`.
