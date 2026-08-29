@@ -284,6 +284,65 @@ fn block_error(source: SourceId, kind: BlockKind, error: BlockError, bytes: &[u8
 }
 
 #[cfg(test)]
+mod json_tests {
+    use super::*;
+    use crate::bibliography::{Bibliography, Unavailable};
+    use crate::parse;
+    use crate::symbols::SymbolTable;
+
+    /// The JSON was unrendered by any test until the WebAssembly build needed
+    /// it. A scripted refactor scrambled the field order and every test still
+    /// passed, which is how this one came to exist.
+    #[test]
+    fn the_json_is_well_formed_and_carries_every_field() {
+        let mut sources = Sources::new();
+        let id = sources.add("j.xtex", b"@id(a) @ref(b)\n".to_vec());
+        let document = parse(&sources, id);
+        let mut table = SymbolTable::new();
+        table.merge(&sources, &document);
+        let diagnostics = check(
+            &table,
+            &Bibliography::Unavailable(Unavailable::NoneDeclared),
+        );
+
+        let mut json = String::new();
+        to_json(&sources, &diagnostics, document.coverage(), &mut json);
+
+        assert!(json.starts_with("{\"coverage\":"), "{json}");
+        assert!(json.ends_with("]}"), "{json}");
+        for field in [
+            "\"code\":\"XT1003\"",
+            "\"severity\":\"error\"",
+            "\"blame\":\"xtex-construct\"",
+            "\"entity\":",
+            "\"name\":\"b\"",
+            "\"span\":{\"file\":\"j.xtex\"",
+            "\"offset\":",
+            "\"length\":",
+            "\"line\":1",
+            "\"column\":",
+            "\"message\":",
+            "\"related\":[]",
+        ] {
+            assert!(json.contains(field), "missing {field} in {json}");
+        }
+        // Braces balance, which a scrambled render does not.
+        assert_eq!(
+            json.matches('{').count(),
+            json.matches('}').count(),
+            "{json}"
+        );
+    }
+
+    #[test]
+    fn a_message_with_a_quote_or_a_newline_is_escaped() {
+        let mut out = String::new();
+        write_json_string("a \"quoted\" line\nand another", &mut out);
+        assert_eq!(out, "\"a \\\"quoted\\\" line\\nand another\"");
+    }
+}
+
+#[cfg(test)]
 mod tests {
     use std::collections::BTreeSet;
 
@@ -330,4 +389,105 @@ mod tests {
         assert_eq!(found.len(), 1);
         assert_eq!(found[0].code, "XT1005");
     }
+}
+
+use std::fmt::Write as _;
+
+/// File, one-based line and one-based column of a span.
+fn location(
+    sources: &Sources,
+    source: SourceId,
+    span: crate::source::Span,
+) -> (&str, usize, usize) {
+    let Some(source) = sources.get(source) else {
+        return ("<unresolved>", 1, 1);
+    };
+    let before = &source.bytes()[..span.start().min(source.bytes().len())];
+    #[allow(clippy::naive_bytecount)]
+    let line = before.iter().filter(|byte| **byte == b'\n').count() + 1;
+    let column = before
+        .iter()
+        .rposition(|byte| *byte == b'\n')
+        .map_or(before.len() + 1, |at| before.len() - at);
+    (source.name(), line, column)
+}
+
+/// Renders diagnostics as the JSON `xtex check --json` prints.
+///
+/// It returns bytes rather than printing them, because the WebAssembly build
+/// has no stdout and the exit criterion of #18 is that its JSON equals the
+/// native tool's byte for byte. One implementation makes that true by
+/// construction; two would make it a coincidence to be re-checked.
+pub fn to_json(sources: &Sources, diagnostics: &[Diagnostic], coverage: f64, out: &mut String) {
+    // Six decimals, not the sixteen an f64 prints. The extra digits are false
+    // precision on a ratio of byte counts, and they are not reproducible: the
+    // WebAssembly build computes `1.0 - opaque/total` on 32-bit `usize` and
+    // lands one bit away from the native build, which made the two outputs
+    // differ at the sixteenth digit and nowhere else.
+    let _ = write!(out, "{{\"coverage\":{coverage:.6},\"diagnostics\":[");
+    for (index, diagnostic) in diagnostics.iter().enumerate() {
+        if index > 0 {
+            out.push(',');
+        }
+        let _ = write!(
+            out,
+            "{{\"code\":\"{}\",\"severity\":\"error\",\"blame\":\"xtex-construct\",\"entity\":\"{}\",\"name\":",
+            diagnostic.code,
+            diagnostic.entity.name()
+        );
+        match &diagnostic.name {
+            Some(name) => write_json_string(name, out),
+            None => out.push_str("null"),
+        }
+        write_span(sources, diagnostic.source, diagnostic.span, out);
+        out.push_str(",\"message\":");
+        write_json_string(&diagnostic.message, out);
+        out.push_str(",\"related\":[");
+        for (related_index, related) in diagnostic.related.iter().enumerate() {
+            if related_index > 0 {
+                out.push(',');
+            }
+            out.push('{');
+            // A related note has a span and a message and no code of its own.
+            write_span(sources, related.source, related.span, out);
+            out.push_str(",\"message\":");
+            write_json_string(&related.message, out);
+            out.push('}');
+        }
+        out.push_str("]}");
+    }
+    out.push_str("]}");
+}
+
+/// Appends `,"span":{...}` for one span. The leading comma is included because
+/// every caller has already written a field before it.
+fn write_span(sources: &Sources, source: SourceId, span: crate::source::Span, out: &mut String) {
+    let (file, line, column) = location(sources, source, span);
+    out.push_str(",\"span\":{\"file\":");
+    write_json_string(file, out);
+    let _ = write!(
+        out,
+        ",\"offset\":{},\"length\":{},\"line\":{line},\"column\":{column}}}",
+        span.start(),
+        span.len()
+    );
+}
+
+/// Appends `value` as a quoted JSON string.
+fn write_json_string(value: &str, out: &mut String) {
+    out.push('"');
+    for character in value.chars() {
+        match character {
+            '"' => out.push_str("\\\""),
+            '\\' => out.push_str("\\\\"),
+            '\n' => out.push_str("\\n"),
+            '\r' => out.push_str("\\r"),
+            '\t' => out.push_str("\\t"),
+            control if control.is_control() => {
+                let _ = write!(out, "\\u{:04x}", control as u32);
+            }
+            other => out.push(other),
+        }
+    }
+    out.push('"');
 }

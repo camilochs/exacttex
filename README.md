@@ -8,7 +8,7 @@ you annotate is guaranteed.
 
 > **Status: the compiler and the language server work; the browser does not exist yet.** `xtex` parses,
 > checks, emits LaTeX, writes source maps and applies revisions, and `xtex-lsp` gives an editor diagnostics,
-> hover, completion and go-to-definition. There is no WebAssembly build. Every claim below is about what is
+> hover, completion and go-to-definition. It also builds to WebAssembly, so a browser can run it with no compile server. Every claim below is about what is
 > built, and each number is reproducible with the command that produced it.
 
 ---
@@ -139,6 +139,8 @@ still receives a `.tex` file.
   boundaries, and where constructs are not recognized.
 - [`docs/checking.md`](docs/checking.md) — what the compiler is willing to call an error, and what it
   refuses to: entity classes, the closed list of hard errors, coverage, blame, and the diagnostic fields.
+- [`docs/wasm.md`](docs/wasm.md) — the WebAssembly build: the calling convention, and why it carries the
+  only `unsafe` in the workspace.
 - [`docs/lsp.md`](docs/lsp.md) — the language server: what it answers, what it deliberately does not,
   and why the protocol layer holds no logic.
 - [`docs/revisions.md`](docs/revisions.md) — the change model: the four constructs, the three views,

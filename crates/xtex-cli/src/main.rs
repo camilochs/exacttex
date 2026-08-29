@@ -10,7 +10,7 @@ use std::path::{Path, PathBuf};
 use std::process::ExitCode;
 
 use xtex_core::bibliography::{Bibliography, Declared, Unavailable, assemble, declared_in};
-use xtex_core::check::{Diagnostic, check, check_documents};
+use xtex_core::check::{Diagnostic, check, check_documents, to_json};
 use xtex_core::diagnostics::map_emitted_diagnostic;
 use xtex_core::document::Node;
 use xtex_core::io::{IoError, OutputSink, SourceLoader};
@@ -230,7 +230,13 @@ fn check_command(args: &[String]) -> ExitCode {
     match run_check(inputs[0]) {
         Ok((sources, diagnostics, coverage, bibliography)) => {
             if json {
-                print_json(&sources, &diagnostics, coverage);
+                {
+                    // One renderer, shared with the WebAssembly build, so the two
+                    // cannot drift.
+                    let mut json = String::new();
+                    to_json(&sources, &diagnostics, coverage, &mut json);
+                    println!("{json}");
+                }
             } else {
                 for diagnostic in &diagnostics {
                     print_human(&sources, diagnostic);
@@ -417,105 +423,6 @@ fn parse_prefixes(text: &str) -> Option<PrefixMap> {
         }
     }
     found.then_some(map)
-}
-
-fn location(
-    sources: &Sources,
-    source: SourceId,
-    span: xtex_core::source::Span,
-) -> (&str, usize, usize) {
-    let Some(source) = sources.get(source) else {
-        return ("<unresolved>", 1, 1);
-    };
-    let before = &source.bytes()[..span.start().min(source.bytes().len())];
-    #[allow(clippy::naive_bytecount)]
-    let line = before.iter().filter(|byte| **byte == b'\n').count() + 1;
-    let column = before
-        .iter()
-        .rposition(|byte| *byte == b'\n')
-        .map_or(before.len() + 1, |at| before.len() - at);
-    (source.name(), line, column)
-}
-
-fn print_human(sources: &Sources, diagnostic: &Diagnostic) {
-    let (file, line, column) = location(sources, diagnostic.source, diagnostic.span);
-    println!("error[{}]: {}", diagnostic.code, diagnostic.message);
-    println!("  --> {file}:{line}:{column}");
-    println!("  entity: {}", diagnostic.entity.name());
-    if let Some(name) = &diagnostic.name {
-        println!("  name: {name}");
-    }
-    println!(
-        "  span: offset {}, length {}",
-        diagnostic.span.start(),
-        diagnostic.span.len()
-    );
-    for related in &diagnostic.related {
-        let (file, line, column) = location(sources, related.source, related.span);
-        println!("  --> {file}:{line}:{column}: {}", related.message);
-    }
-    println!("  blame: xtex-construct");
-}
-
-fn print_json(sources: &Sources, diagnostics: &[Diagnostic], coverage: f64) {
-    print!("{{\"coverage\":{coverage},\"diagnostics\":[");
-    for (index, diagnostic) in diagnostics.iter().enumerate() {
-        if index > 0 {
-            print!(",");
-        }
-        let (file, line, column) = location(sources, diagnostic.source, diagnostic.span);
-        print!(
-            "{{\"code\":\"{}\",\"severity\":\"error\",\"blame\":\"xtex-construct\",\"entity\":\"{}\",\"name\":",
-            diagnostic.code,
-            diagnostic.entity.name()
-        );
-        match &diagnostic.name {
-            Some(name) => print_json_string(name),
-            None => print!("null"),
-        }
-        print!(",\"span\":{{\"file\":");
-        print_json_string(file);
-        print!(
-            ",\"offset\":{},\"length\":{},\"line\":{line},\"column\":{column}}},\"message\":",
-            diagnostic.span.start(),
-            diagnostic.span.len()
-        );
-        print_json_string(&diagnostic.message);
-        print!(",\"related\":[");
-        for (related_index, related) in diagnostic.related.iter().enumerate() {
-            if related_index > 0 {
-                print!(",");
-            }
-            let (file, line, column) = location(sources, related.source, related.span);
-            print!("{{\"span\":{{\"file\":");
-            print_json_string(file);
-            print!(
-                ",\"offset\":{},\"length\":{},\"line\":{line},\"column\":{column}}},\"message\":",
-                related.span.start(),
-                related.span.len()
-            );
-            print_json_string(&related.message);
-            print!("}}");
-        }
-        print!("]}}");
-    }
-    println!("]}}");
-}
-
-fn print_json_string(value: &str) {
-    print!("\"");
-    for character in value.chars() {
-        match character {
-            '\"' => print!("\\\""),
-            '\\' => print!("\\\\"),
-            '\n' => print!("\\n"),
-            '\r' => print!("\\r"),
-            '\t' => print!("\\t"),
-            character if character.is_control() => print!("\\u{:04x}", character as u32),
-            character => print!("{character}"),
-        }
-    }
-    print!("\"");
 }
 
 fn print_bibliography_advisory(reason: &Unavailable) {
@@ -1126,4 +1033,46 @@ fn offset_line_column(bytes: &[u8], offset: usize) -> (usize, usize) {
         .rposition(|byte| *byte == b'\n')
         .map_or(0, |at| at + 1);
     (line, offset - start + 1)
+}
+
+/// Prints one diagnostic the way a person reads it.
+fn print_human(sources: &Sources, diagnostic: &Diagnostic) {
+    let (file, line, column) = location(sources, diagnostic.source, diagnostic.span);
+    println!("error[{}]: {}", diagnostic.code, diagnostic.message);
+    println!("  --> {file}:{line}:{column}");
+    println!("  entity: {}", diagnostic.entity.name());
+    if let Some(name) = &diagnostic.name {
+        println!("  name: {name}");
+    }
+    println!(
+        "  span: offset {}, length {}",
+        diagnostic.span.start(),
+        diagnostic.span.len()
+    );
+    for related in &diagnostic.related {
+        let (file, line, column) = location(sources, related.source, related.span);
+        println!("  --> {file}:{line}:{column}: {}", related.message);
+    }
+    println!("  blame: xtex-construct");
+}
+
+/// File, one-based line and one-based column of a span.
+fn location(
+    sources: &Sources,
+    source: SourceId,
+    span: xtex_core::source::Span,
+) -> (String, usize, usize) {
+    let Some(source) = sources.get(source) else {
+        return ("<unresolved>".to_owned(), 1, 1);
+    };
+    let bytes = source.bytes();
+    let before = &bytes[..span.start().min(bytes.len())];
+    // Clippy suggests `bytecount`; `docs/decisions/0005` is why we do not.
+    #[allow(clippy::naive_bytecount)]
+    let line = before.iter().filter(|byte| **byte == b'\n').count() + 1;
+    let column = before
+        .iter()
+        .rposition(|byte| *byte == b'\n')
+        .map_or(before.len() + 1, |at| before.len() - at);
+    (source.name().to_owned(), line, column)
 }

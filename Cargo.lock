@@ -19,3 +19,10 @@ version = "0.0.0"
 dependencies = [
  "xtex-core",
 ]
+
+[[package]]
+name = "xtex-wasm"
+version = "0.0.0"
+dependencies = [
+ "xtex-core",
+]
