@@ -11,9 +11,7 @@ Definition~@ref(def:geakg) captures the \emph{static structure} of a GEAKG---ana
 Table~@ref(tab:roleschema_instances) reports the size and numerical characteristics of $\mathcal{S}$ in both case studies.
 
 \table(tab:roleschema_instances) {
-  needs   = booktabs
-  columns = 3
-  caption = RoleSchema instantiation for both case studies
+  caption = {RoleSchema instantiation for both case studies}
   body    = {
     \toprule
     \textbf{Component} & \textbf{CS1: NAS} & \textbf{CS2: Optimization} \\
@@ -23,24 +21,21 @@ Table~@ref(tab:roleschema_instances) reports the size and numerical characterist
     $|E_{L0}|$ (realized L0 edges)$^*$ & 42 & 38 \\
     \bottomrule
   }
+  trailing = {
+    \vspace{2pt}
+    {\scriptsize $^*$Edge counts depend on the LLM-generated L0 topology and may
+     vary across generations. Values shown are from representative runs.}
+  }
 }
 
-% GAP 1: the table note below has nowhere to live. It is positional LaTeX
-% inside the environment, not a field of the table.
-latex {
-  \vspace{2pt}
-  {\scriptsize $^*$Edge counts depend on the LLM-generated L0 topology and may
-   vary across generations. Values shown are from representative runs.}
-}
+% GAP 1 is closed: the table note now lives in the trailing field, above.
 
 This definition connects to standard KG formalism~@cite(hogan2021knowledge): $\mathcal{S}$ serves as the ontology imposing type constraints.
 
 Table~@ref(tab:kg_comparison) positions GEAKG relative to existing paradigms. Section~@ref(sec:results) presents empirical validation.
 
 \table(tab:kg_comparison) {
-  needs   = booktabs
-  columns = 7
-  caption = GEAKG vs. Existing Knowledge Representation Paradigms
+  caption = {GEAKG vs. Existing Knowledge Representation Paradigms}
   body    = {
     \toprule
     \textbf{Paradigm} & \textbf{Generative} & \textbf{Executable} & \textbf{Transferable} & \textbf{Learned} & \textbf{Domain-Agnostic} & \textbf{Zero-Shot} \\
