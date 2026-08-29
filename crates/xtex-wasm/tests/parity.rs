@@ -58,15 +58,30 @@ fn built_module(repo: &Path) -> Option<PathBuf> {
 
 /// Runs the node driver over one project directory.
 fn run_module(repo: &Path, module: &Path, project: &Path, root: &str, out: &Path) {
+    run_module_with_log(repo, module, project, root, out, None);
+}
+
+/// As [`run_module`], optionally handing the driver a stderr and log pair.
+fn run_module_with_log(
+    repo: &Path,
+    module: &Path,
+    project: &Path,
+    root: &str,
+    out: &Path,
+    log: Option<(&Path, &Path)>,
+) {
     std::fs::create_dir_all(out).expect("a place for the outputs");
-    let ran = Command::new("node")
+    let mut command = Command::new("node");
+    command
         .arg(repo.join("crates/xtex-wasm/tests/parity.mjs"))
         .arg(module)
         .arg(project)
         .arg(root)
-        .arg(out)
-        .status()
-        .expect("node runs");
+        .arg(out);
+    if let Some((stderr, logfile)) = log {
+        command.arg(stderr).arg(logfile);
+    }
+    let ran = command.status().expect("node runs");
     assert!(ran.success(), "the module did not run");
 }
 
@@ -211,6 +226,71 @@ fn a_multi_file_bundle_equals_the_cli_run_on_the_same_project_on_disk() {
     let emission = xtex_core::sourcemap::emit_with_map(&sources, &document).expect("maps");
     let wasm_map = std::fs::read(out.join("wasm.map")).expect("the module mapped");
     assert_eq!(emission.map.to_json(), wasm_map, "source maps differ");
+}
+
+#[test]
+fn a_tex_log_translates_identically_in_both_builds_and_never_guesses_blame() {
+    let repo = repo();
+    let Some(module) = built_module(&repo) else {
+        return;
+    };
+
+    let project = repo.join("tests/fixtures/wasm/project");
+    let stderr_path = repo.join("tests/fixtures/wasm/logs/mixed.stderr");
+    let log_path = repo.join("tests/fixtures/wasm/logs/mixed.log");
+    let out = repo.join("target/wasm-parity/blame");
+    run_module_with_log(
+        &repo,
+        &module,
+        &project,
+        "main.xtex",
+        &out,
+        Some((&stderr_path, &log_path)),
+    );
+    let wasm_json =
+        std::fs::read_to_string(out.join("wasm.blame.json")).expect("the module translated");
+
+    // The native side, through the same core path the CLI prints from.
+    let store = memory_of(&project);
+    let mut sources = xtex_core::source::Sources::new();
+    let id =
+        xtex_core::io::SourceLoader::load(&store, "main.xtex", None, &mut sources).expect("loads");
+    let document = xtex_core::parse(&sources, id);
+    let mut table = xtex_core::symbols::SymbolTable::new();
+    table.merge(&sources, &document);
+    let emission = xtex_core::sourcemap::emit_with_map(&sources, &document).expect("maps");
+    let stderr = std::fs::read_to_string(&stderr_path).expect("the stderr fixture");
+    let log = std::fs::read_to_string(&log_path).expect("the log fixture");
+    let records = xtex_core::blame::merge_records(Some(&stderr), Some(&log), "main.tex");
+    let translated = xtex_core::blame::translate(&records, &emission, &sources, &document, &table);
+    let mut native_json = String::new();
+    xtex_core::blame::to_json(&translated, &mut native_json);
+    assert_eq!(
+        native_json, wasm_json,
+        "the two builds translate one log differently"
+    );
+
+    // The fixture must exercise every shape, or the equality proves less than
+    // it claims: a located error, an unrecognised line carried unchanged, an
+    // overfull that lands on the figure and names it, and a float warning
+    // whose line maps to nothing and must say unresolved rather than guess.
+    assert!(wasm_json.contains("\"kind\":\"error\""), "{wasm_json}");
+    assert!(
+        wasm_json.contains("\"kind\":\"unrecognised\""),
+        "{wasm_json}"
+    );
+    assert!(
+        wasm_json.contains("\"name\":\"fig:plot\"") && wasm_json.contains("overflows its line"),
+        "the overfull at the figure's line must name the figure: {wasm_json}"
+    );
+    assert!(
+        wasm_json.contains("\"blame\":\"unresolved\""),
+        "a line past the emission must be unresolved, never guessed: {wasm_json}"
+    );
+    assert!(
+        wasm_json.contains("Undefined control sequence"),
+        "the engine's own words must be carried unchanged: {wasm_json}"
+    );
 }
 
 #[test]

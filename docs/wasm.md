@@ -56,6 +56,14 @@ file_count × ( u32 name_len   name (UTF-8)   u32 data_len   data )
 | `xtex_emit(ptr, len)` | a bundle | the root's emitted LaTeX |
 | `xtex_check_json(ptr, len)` | a bundle | the JSON `xtex check --json` prints, for the whole project |
 | `xtex_source_map(ptr, len)` | a bundle | the root's source map, as JSON |
+| `xtex_blame(ptr, len)` | two length-prefixed texts, then a bundle | the engine's records, translated |
+
+`xtex_blame`'s input is `u32 stderr_len · stderr · u32 log_len · log · bundle` — the engine's console
+output and its `.log` file, either of which may be empty. The answer carries, per record: the engine's own
+words unchanged, the emitted line, the author's position where a map segment supports one, the entity where
+a declaration supplies the evidence, and `"unresolved"` blame otherwise — never a guess. A browser is
+exactly where a confident wrong attribution does the most damage, because the user cannot check it against
+a terminal.
 
 `xtex_emit` emits the root alone; a host that wants every file's emission calls once per file with that
 file as the root.

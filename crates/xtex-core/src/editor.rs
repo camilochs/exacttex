@@ -101,7 +101,7 @@ pub fn construct_at(sources: &Sources, document: &Document, offset: usize) -> Op
             best = Some(Located {
                 kind: *kind,
                 span: *span,
-                name: payload_text(sources, node.source(), *span).unwrap_or_default(),
+                name: payload_text_for(sources, node.source(), *span, *kind).unwrap_or_default(),
             });
         }
     });
@@ -254,9 +254,28 @@ pub fn definition(
 
 /// The text between a construct's parentheses.
 fn payload_text(sources: &Sources, source: SourceId, span: Span) -> Option<String> {
+    payload_text_for(sources, source, span, EntryToken::Id)
+}
+
+fn payload_text_for(
+    sources: &Sources,
+    source: SourceId,
+    span: Span,
+    kind: EntryToken,
+) -> Option<String> {
     let bytes = sources.get(source)?.slice(span)?;
     let open = bytes.iter().position(|byte| *byte == b'(')? + 1;
-    let close = bytes.iter().rposition(|byte| *byte == b')')?;
+    // An identifier cannot contain `)`, so the first close ends it — and for
+    // a block, whose span covers its whole body, the last `)` in the span may
+    // sit inside a caption's own construct. Scanning from the right returned
+    // `fig:plot) { … caption = {… @ref(sec:intro` as a figure's name, found
+    // by the blame parity fixture. Only `@import` reads to the last close,
+    // because a `)` inside its quoted string is data per grammar §4.
+    let close = if kind == EntryToken::Import {
+        bytes.iter().rposition(|byte| *byte == b')')?
+    } else {
+        open + bytes[open..].iter().position(|byte| *byte == b')')?
+    };
     if open > close {
         return None;
     }
@@ -269,6 +288,23 @@ fn payload_text(sources: &Sources, source: SourceId, span: Span) -> Option<Strin
 mod tests {
     use super::*;
     use crate::parse;
+
+    #[test]
+    fn a_blocks_name_is_its_identifier_even_when_its_caption_holds_a_construct() {
+        // Found by the blame parity fixture: with the block's span covering
+        // its whole body, scanning for the LAST `)` returned everything up to
+        // the caption's own `@ref` as the figure's "name". The identifier
+        // ends at the first close, because an identifier cannot contain one.
+        let text = "\\figure(fig:plot) {\n  caption = {Con @ref(sec:x) dentro.}\n}\n";
+        let mut sources = Sources::new();
+        let id = sources.add("a.xtex", text.as_bytes().to_vec());
+        let document = parse(&sources, id);
+        let mut table = SymbolTable::new();
+        table.merge(&sources, &document);
+        let offset = text.find("caption").unwrap();
+        let (name, _) = entity_at(&sources, &document, &table, offset).expect("an entity");
+        assert_eq!(name, "fig:plot");
+    }
 
     const DOC: &str = "\\section{Intro} @id(sec:intro)\n\
                        \\figure(fig:plot) { src = \"p.pdf\" caption = {C} }\n\

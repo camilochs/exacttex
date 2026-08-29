@@ -1,0 +1,19 @@
+\documentclass{article}
+\begin{document}
+\section{Intro}\label{sec:intro}
+
+Como muestra \cite{knuth1984}, y la Sección~\ref{sec:model},
+la figura~\ref{fig:plot} lo ilustra.
+
+\input{sections/model.tex}
+\include{appendix}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\linewidth]{figures/plot.pdf}
+  \caption{Una figura con \ref{sec:intro} dentro del pie.}
+  \label{fig:plot}
+\end{figure}
+
+\bibliography{refs}
+\end{document}
