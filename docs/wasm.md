@@ -22,6 +22,19 @@ its exports and a linear memory.
 
 ---
 
+## Where this module sits
+
+```
+                xtex-core   the compiler
+               /    |    \
+        xtex-cli  xtex-lsp  xtex-wasm   <- this file's subject
+        terminal   editor    browser
+```
+
+Three doors over one statically linked core. The CLI and the language server build from this repository;
+the module is the door that ships, because a browser downloads it rather than compiling Rust. The parity
+suite holds the three to one answer.
+
 ## The calling convention
 
 1. `xtex_alloc(len)` returns a pointer to `len` writable bytes.
