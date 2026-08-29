@@ -49,6 +49,7 @@ pub mod diagnostics;
 pub mod document;
 pub mod editor;
 pub mod io;
+pub mod labels;
 pub mod rename;
 pub mod review;
 pub mod scanner;
@@ -112,6 +113,7 @@ pub fn parse(sources: &Sources, id: SourceId) -> Document {
         let piece_span = match piece {
             Piece::Text(span)
             | Piece::Excluded(span)
+            | Piece::Arguments(span)
             | Piece::Quarantined(span)
             | Piece::Construct { span, .. }
             | Piece::Malformed { span, .. } => span,
@@ -124,7 +126,7 @@ pub fn parse(sources: &Sources, id: SourceId) -> Document {
             // Prose the parser modelled nothing in, and a region §8 excludes,
             // are both transported. They differ for a consumer searching the
             // source, not for the emitter.
-            Piece::Text(span) | Piece::Excluded(span) => Node::Opaque {
+            Piece::Text(span) | Piece::Excluded(span) | Piece::Arguments(span) => Node::Opaque {
                 source: id,
                 span,
                 // Balanced rather than to-end-of-file: the region has a known
@@ -165,7 +167,7 @@ pub fn parse(sources: &Sources, id: SourceId) -> Document {
 
 fn node_from_piece(piece: Piece, source: SourceId) -> Node {
     match piece {
-        Piece::Text(span) | Piece::Excluded(span) => Node::Opaque {
+        Piece::Text(span) | Piece::Excluded(span) | Piece::Arguments(span) => Node::Opaque {
             source,
             span,
             confidence: ParseConfidence::OpaqueBalanced,
@@ -388,6 +390,7 @@ fn emit_content(bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
         let piece_span = match piece {
             Piece::Text(span)
             | Piece::Excluded(span)
+            | Piece::Arguments(span)
             | Piece::Quarantined(span)
             | Piece::Construct { span, .. }
             | Piece::Malformed { span, .. } => span,
@@ -403,6 +406,7 @@ fn emit_content(bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
             // Giving up on recognising it never changes a byte of it.
             Piece::Text(_)
             | Piece::Excluded(_)
+            | Piece::Arguments(_)
             | Piece::Quarantined(_)
             | Piece::Malformed { .. } => {
                 out.extend_from_slice(fragment);

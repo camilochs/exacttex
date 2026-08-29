@@ -154,3 +154,35 @@ using it.
 
 That is the corpus doing the job it was assembled for. No hand-picked example would have surfaced it,
 because nobody writes `\\[4pt]` to test a parser — they write it to space a title block.
+
+
+---
+
+## Evidence from someone else's LaTeX
+
+The corpus above is one author's. Four permissively licensed public projects were added to get a reading
+that does not depend on this repository's author:
+
+| Project | Licence |
+|---|---|
+| `vdumoulin/conv_arithmetic` | MIT |
+| `soulmachine/leetcode` | BSD-3-Clause |
+| `HarisIqbal88/PlotNeuralNet` | MIT |
+| `sb2nov/resume` | MIT |
+
+```
+30 files
+  median available before quarantine   1.000
+  quarantined before half their bytes  0.0%
+  never quarantined                    30
+```
+
+And all 30 check clean unrenamed, which is the on-ramp promise holding on documents nobody here wrote.
+
+They are cloned rather than vendored, like everything else here — `git clone --depth 1` and point the
+tooling at the directory. Their licences would permit vendoring; the fingerprint discipline applies anyway,
+because a measurement whose input cannot be identified is not reusable.
+
+One thing this does **not** establish is property B. Every eligible caption in those four uses
+`\caption{\label{x} Text}`, which `tests/render/README.md` records as not migratable, so the property suite
+skipped all of them. Transport and checking are confirmed on other people's LaTeX; annotating it is not.

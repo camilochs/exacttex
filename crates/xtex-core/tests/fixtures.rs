@@ -197,6 +197,7 @@ fn emission_leaves_every_byte_outside_a_construct_alone() {
                 Piece::Construct { .. } => continue,
                 Piece::Text(s)
                 | Piece::Excluded(s)
+                | Piece::Arguments(s)
                 | Piece::Quarantined(s)
                 | Piece::Malformed { span: s, .. } => s,
             };
@@ -380,7 +381,7 @@ fn found_pieces(bytes: &[u8]) -> Vec<String> {
         piece.walk(&mut |piece| match piece {
             Piece::Construct { kind, .. } => found.push(short(*kind)),
             Piece::Malformed { kind, .. } => found.push(format!("!{}", short(*kind))),
-            Piece::Text(_) | Piece::Excluded(_) | Piece::Quarantined(_) => {}
+            Piece::Text(_) | Piece::Excluded(_) | Piece::Arguments(_) | Piece::Quarantined(_) => {}
         });
     }
     found

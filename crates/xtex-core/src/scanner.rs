@@ -97,6 +97,14 @@ pub enum Piece {
     /// could not be located, so every byte after it is unrecognisable rather
     /// than merely unrecognised. `ROADMAP.md` calls it `OpaqueToEof`.
     Quarantined(Span),
+    /// A command and its arguments.
+    ///
+    /// Excluded from *construct recognition* like any other §8 region, and
+    /// separate from [`Piece::Excluded`] because it is the only exclusion whose
+    /// bytes are still document content. A `\label` inside `\caption{…}` is a
+    /// real declaration; the same bytes inside a comment or a verbatim block
+    /// are not, and one variant for both made those indistinguishable.
+    Arguments(Span),
     /// A region §8 excludes, such as a comment, math, or a verbatim block.
     ///
     /// Distinguished from [`Piece::Text`] because a consumer that searches the
@@ -214,6 +222,87 @@ const AT_TOKENS: &[EntryToken] = &[
 /// the construct's own bytes, and the emitter reads it there — a variant per
 /// command would put the same information in two places.
 pub const DEFAULT_CITE_COMMANDS: &[&str] = &["parencite", "textcite", "citep", "citet", "cite"];
+
+/// Regions a reader looking for `commands` may search.
+///
+/// Prose, plus any excluded region that *is* one of those commands — a
+/// command's arguments are an exclusion region, and the only reader entitled to
+/// look inside one is the reader that asked for that command by name.
+///
+/// The distinction matters: `\bibliography{refs}` is a declaration, and the
+/// same bytes inside a `\newcommand` body are not. Searching every excluded
+/// region would find both; searching none would find neither.
+#[must_use]
+pub fn readable_for(bytes: &[u8], commands: &[&str]) -> Vec<Span> {
+    let mut spans = Vec::new();
+    for piece in scan(bytes) {
+        match piece {
+            Piece::Text(span) => spans.push(span),
+            Piece::Arguments(span) => {
+                let region = &bytes[span.start()..span.end()];
+                if commands.iter().any(|command| {
+                    region
+                        .strip_prefix(b"\\")
+                        .is_some_and(|rest| rest.starts_with(command.as_bytes()))
+                }) {
+                    spans.push(span);
+                }
+            }
+            _ => {}
+        }
+    }
+    spans
+}
+
+/// Commands whose argument is a *definition* rather than content.
+///
+/// The distinction §8 is actually about. A `\label` inside `\caption{…}` is a
+/// real declaration — that argument is typeset. The same `\label` inside a
+/// `\newcommand` body is not: nothing there has happened yet, and it may never
+/// happen.
+pub const DEFINITION_COMMANDS: &[&str] = &[
+    "newcommand",
+    "renewcommand",
+    "providecommand",
+    "newenvironment",
+    "renewenvironment",
+    "def",
+    "edef",
+    "gdef",
+    "xdef",
+    "csname",
+];
+
+/// Regions holding content a reader may search.
+///
+/// Prose, plus every excluded region except a definition's. A command's
+/// arguments are an exclusion region so that *constructs* are not recognised
+/// there; a reader looking for the author's own `\label` is asking a different
+/// question, and the answer differs only for definitions.
+#[must_use]
+pub fn readable_content(bytes: &[u8]) -> Vec<Span> {
+    let mut spans = Vec::new();
+    for piece in scan(bytes) {
+        match piece {
+            Piece::Text(span) => spans.push(span),
+            Piece::Arguments(span) => {
+                let region = &bytes[span.start()..span.end()];
+                let defines = region.strip_prefix(b"\\").is_some_and(|rest| {
+                    DEFINITION_COMMANDS.iter().any(|command| {
+                        rest.strip_prefix(command.as_bytes()).is_some_and(|after| {
+                            !after.first().is_some_and(u8::is_ascii_alphabetic)
+                        })
+                    })
+                });
+                if !defines {
+                    spans.push(span);
+                }
+            }
+            _ => {}
+        }
+    }
+    spans
+}
 
 /// Splits a source into text and constructs.
 ///
@@ -349,6 +438,17 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                 if bytes[at] == b'\\' {
                     match command_extent(bytes, at) {
                         Extent::Through(end) => {
+                            // §8 makes a command's arguments an exclusion
+                            // region, and `Piece::Excluded` is what tells a
+                            // consumer searching the source not to look here.
+                            // Leaving these bytes inside a `Text` piece made
+                            // that promise false: a `\label` in a
+                            // `\newcommand` body was found by a reader that
+                            // was doing exactly what the documentation said
+                            // was safe.
+                            enter!(at);
+                            pieces.push(Piece::Arguments(span(at, end)));
+                            text_start = end;
                             at = end;
                             continue;
                         }
@@ -561,6 +661,7 @@ impl Piece {
         match self {
             Self::Text(span) => Self::Text(shift(span)),
             Self::Excluded(span) => Self::Excluded(shift(span)),
+            Self::Arguments(span) => Self::Arguments(shift(span)),
             Self::Quarantined(span) => Self::Quarantined(shift(span)),
             Self::Construct {
                 kind,
@@ -714,7 +815,9 @@ fn nested_pieces(bytes: &[u8], start: usize, end: usize) -> Vec<Piece> {
                 kind,
                 span: span(start + inner.start(), start + inner.end()),
             }),
-            Piece::Text(_) | Piece::Excluded(_) | Piece::Quarantined(_) => None,
+            Piece::Text(_) | Piece::Excluded(_) | Piece::Arguments(_) | Piece::Quarantined(_) => {
+                None
+            }
         })
         .collect()
 }
@@ -1265,6 +1368,7 @@ mod tests {
             let span = match piece {
                 Piece::Text(s)
                 | Piece::Excluded(s)
+                | Piece::Arguments(s)
                 | Piece::Quarantined(s)
                 | Piece::Construct { span: s, .. }
                 | Piece::Malformed { span: s, .. } => s,
@@ -1279,6 +1383,7 @@ mod tests {
         match piece {
             Piece::Text(s)
             | Piece::Excluded(s)
+            | Piece::Arguments(s)
             | Piece::Quarantined(s)
             | Piece::Construct { span: s, .. }
             | Piece::Malformed { span: s, .. } => *s,
