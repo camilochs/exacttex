@@ -21,6 +21,50 @@ use crate::document::{Document, Node};
 use crate::scanner::EntryToken;
 use crate::source::{SourceId, Sources, Span};
 
+/// The class of a declared entity.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[non_exhaustive]
+pub enum EntityClass {
+    /// Unmodelled LaTeX, consistent with every known class.
+    UnknownOpen,
+    /// A typed figure or an annotation attached to a figure.
+    Figure,
+    /// A typed table or an annotation attached to a table.
+    Table,
+    /// A displayed equation.
+    Equation,
+    /// A sectioning command, including an appendix.
+    Section,
+    /// An algorithm environment.
+    Algorithm,
+    /// A citation key.
+    Citation,
+}
+
+impl EntityClass {
+    /// Whether two classes can safely be used together.
+    #[must_use]
+    pub const fn is_consistent_with(self, other: Self) -> bool {
+        matches!(self, Self::UnknownOpen)
+            || matches!(other, Self::UnknownOpen)
+            || self as u8 == other as u8
+    }
+
+    /// Stable spelling used by diagnostics.
+    #[must_use]
+    pub const fn name(self) -> &'static str {
+        match self {
+            Self::UnknownOpen => "unknown-open",
+            Self::Figure => "figure",
+            Self::Table => "table",
+            Self::Equation => "equation",
+            Self::Section => "section",
+            Self::Algorithm => "algorithm",
+            Self::Citation => "citation",
+        }
+    }
+}
+
 /// The text a construct carries between its parentheses.
 ///
 /// Borrowed from the source rather than copied, because the source outlives the
@@ -40,6 +84,8 @@ pub struct Declaration {
     pub payload: Payload,
     /// The whole `@id(...)` construct, which is what a diagnostic points at.
     pub construct: Span,
+    /// What the declaration names, or the open unknown class for unmodelled LaTeX.
+    pub class: EntityClass,
 }
 
 /// A use of a name, by `@ref` or `@cite`.
@@ -66,11 +112,17 @@ pub enum SymbolError {
         name: String,
         /// The `@id` that declared it first.
         first: Span,
+        /// Source holding the first declaration.
+        first_source: SourceId,
         /// The `@id` being rejected.
         second: Span,
+        /// Source holding the rejected declaration.
+        second_source: SourceId,
     },
     /// An identifier is empty, or contains bytes an identifier may not.
     Malformed {
+        /// Source holding the construct.
+        source: SourceId,
         /// The construct at fault.
         construct: Span,
     },
@@ -97,13 +149,13 @@ impl SymbolTable {
     /// imported file: the scope is the root, so the two share one namespace and
     /// a clash between them is a real clash.
     pub fn merge(&mut self, sources: &Sources, document: &Document) {
-        for node in document.iter() {
+        document.walk(|node| {
             let (kind, construct) = match node {
                 Node::Construct { kind, span, .. } => (*kind, *span),
-                _ => continue,
+                _ => return,
             };
             let Some(payload) = payload_of(sources, node.source(), construct, kind) else {
-                continue;
+                return;
             };
             match kind {
                 EntryToken::Cite => {
@@ -111,8 +163,11 @@ impl SymbolTable {
                     // naming that key rather than the whole construct.
                     let keys = keys_of(sources, payload);
                     if keys.is_empty() {
-                        self.errors.push(SymbolError::Malformed { construct });
-                        continue;
+                        self.errors.push(SymbolError::Malformed {
+                            source: node.source(),
+                            construct,
+                        });
+                        return;
                     }
                     for key in keys {
                         self.references.push((
@@ -127,30 +182,50 @@ impl SymbolTable {
                 }
                 EntryToken::Id | EntryToken::Figure | EntryToken::Table => {
                     let Some(text) = text_of(sources, payload) else {
-                        continue;
+                        return;
                     };
                     if !is_identifier(text.as_bytes()) {
-                        self.errors.push(SymbolError::Malformed { construct });
-                        continue;
+                        self.errors.push(SymbolError::Malformed {
+                            source: node.source(),
+                            construct,
+                        });
+                        return;
                     }
                     if let Some(first) = self.declarations.get(&text) {
                         self.errors.push(SymbolError::Duplicate {
                             name: text,
                             first: first.construct,
+                            first_source: first.payload.source,
                             second: construct,
+                            second_source: node.source(),
                         });
-                        continue;
+                        return;
                     }
-                    self.declarations
-                        .insert(text, Declaration { payload, construct });
+                    let class = match kind {
+                        EntryToken::Figure => EntityClass::Figure,
+                        EntryToken::Table => EntityClass::Table,
+                        EntryToken::Id => attached_class(sources, payload.source, construct),
+                        _ => EntityClass::UnknownOpen,
+                    };
+                    self.declarations.insert(
+                        text,
+                        Declaration {
+                            payload,
+                            construct,
+                            class,
+                        },
+                    );
                 }
                 EntryToken::Ref => {
                     let Some(text) = text_of(sources, payload) else {
-                        continue;
+                        return;
                     };
                     if text.is_empty() {
-                        self.errors.push(SymbolError::Malformed { construct });
-                        continue;
+                        self.errors.push(SymbolError::Malformed {
+                            source: node.source(),
+                            construct,
+                        });
+                        return;
                     }
                     self.references.push((
                         text,
@@ -163,7 +238,7 @@ impl SymbolTable {
                 }
                 _ => {}
             }
-        }
+        });
     }
 
     /// Declaration of `name`, if one exists.
@@ -196,10 +271,102 @@ impl SymbolTable {
         })
     }
 
+    /// References whose known prefix contradicts their known target class.
+    pub fn inconsistent_references(
+        &self,
+    ) -> impl Iterator<Item = (&str, &Reference, EntityClass, &Declaration)> {
+        self.references.iter().filter_map(|(name, reference)| {
+            if reference.kind != EntryToken::Ref {
+                return None;
+            }
+            let demand = demand_of(name);
+            let declaration = self.declarations.get(name)?;
+            (!demand.is_consistent_with(declaration.class)).then_some((
+                name.as_str(),
+                reference,
+                demand,
+                declaration,
+            ))
+        })
+    }
+
     /// Problems found while building the table.
     pub fn errors(&self) -> impl Iterator<Item = &SymbolError> {
         self.errors.iter()
     }
+}
+
+/// Class demanded by the prefix before the first colon.
+#[must_use]
+pub fn demand_of(name: &str) -> EntityClass {
+    let Some((prefix, _)) = name.split_once(':') else {
+        return EntityClass::UnknownOpen;
+    };
+    match prefix {
+        "fig" => EntityClass::Figure,
+        "tab" => EntityClass::Table,
+        "sec" | "subsec" | "ch" | "app" => EntityClass::Section,
+        "alg" => EntityClass::Algorithm,
+        "eq" => EntityClass::Equation,
+        _ => EntityClass::UnknownOpen,
+    }
+}
+
+fn attached_class(sources: &Sources, source: SourceId, construct: Span) -> EntityClass {
+    let Some(bytes) = sources.get(source).map(crate::source::Source::bytes) else {
+        return EntityClass::UnknownOpen;
+    };
+    let mut start = construct.start();
+    let mut lines = 0usize;
+    while start > 0 && construct.start() - start < 256 && bytes[start - 1].is_ascii_whitespace() {
+        start -= 1;
+        if bytes[start] == b'\n' {
+            lines += 1;
+            if lines > 2 {
+                return EntityClass::UnknownOpen;
+            }
+        }
+    }
+    let before = &bytes[..start];
+    if before.ends_with(b"\\]") || before.ends_with(b"$$") {
+        return EntityClass::Equation;
+    }
+    for command in [
+        b"\\section".as_slice(),
+        b"\\subsection",
+        b"\\subsubsection",
+        b"\\chapter",
+        b"\\part",
+    ] {
+        if last_command_with_balanced_argument(before, command) {
+            return EntityClass::Section;
+        }
+    }
+    for (environment, class) in [
+        ("algorithm", EntityClass::Algorithm),
+        ("figure", EntityClass::Figure),
+        ("table", EntityClass::Table),
+        ("equation", EntityClass::Equation),
+        ("align", EntityClass::Equation),
+        ("gather", EntityClass::Equation),
+        ("multline", EntityClass::Equation),
+    ] {
+        let opening = format!("\\begin{{{environment}}}");
+        if before.ends_with(opening.as_bytes())
+            || before.ends_with(format!("\\begin{{{environment}*}}").as_bytes())
+        {
+            return class;
+        }
+    }
+    EntityClass::UnknownOpen
+}
+
+fn last_command_with_balanced_argument(bytes: &[u8], command: &[u8]) -> bool {
+    let Some(open) = bytes.iter().rposition(|byte| *byte == b'{') else {
+        return false;
+    };
+    bytes[..open].ends_with(command)
+        && crate::scanner::balanced_end(bytes, open) == Some(bytes.len())
 }
 
 /// The span between `(` and `)` of a construct covering `construct`.
@@ -433,5 +600,39 @@ mod tests {
             "% @id(commented)\n$@id(math)$\n\\begin{verbatim}\n@id(verb)\n\\end{verbatim}\n@id(real)",
         )]);
         assert_eq!(t.declared().collect::<Vec<_>>(), ["real"]);
+    }
+
+    #[test]
+    fn typed_blocks_retain_their_classes() {
+        let (_, t) = table(&[("a.ntex", "\\figure(fig:x) { caption = {X} }")]);
+        assert_eq!(t.declaration("fig:x").unwrap().class, EntityClass::Figure);
+    }
+
+    #[test]
+    fn an_id_takes_a_known_attachment_class() {
+        let (_, t) = table(&[("a.ntex", "\\section{X}\n@id(sec:x)")]);
+        assert_eq!(t.declaration("sec:x").unwrap().class, EntityClass::Section);
+    }
+
+    #[test]
+    fn an_id_on_unmodelled_latex_is_unknown_open() {
+        let (_, t) = table(&[("a.ntex", "\\newtheorem{X}\n@id(fig:x)")]);
+        assert_eq!(
+            t.declaration("fig:x").unwrap().class,
+            EntityClass::UnknownOpen
+        );
+    }
+
+    #[test]
+    fn only_two_known_inconsistent_classes_conflict() {
+        let (_, known) = table(&[("a.ntex", "\\table(fig:x) { caption = {X} } @ref(fig:x)")]);
+        assert_eq!(known.inconsistent_references().count(), 1);
+
+        let (_, unknown_target) = table(&[("a.ntex", "\\newtheorem{X} @id(fig:x) @ref(fig:x)")]);
+        assert_eq!(unknown_target.inconsistent_references().count(), 0);
+
+        let (_, unknown_demand) =
+            table(&[("a.ntex", "\\table(def:x) { caption = {X} } @ref(def:x)")]);
+        assert_eq!(unknown_demand.inconsistent_references().count(), 0);
     }
 }

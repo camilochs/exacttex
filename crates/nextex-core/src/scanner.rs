@@ -75,7 +75,7 @@ pub const DEFAULT_VERBATIM_ENVIRONMENTS: &[&str] = &[
 ];
 
 /// A stretch of the source, classified.
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[derive(Debug, Clone, PartialEq, Eq)]
 pub enum Piece {
     /// Prose: bytes in which a construct would have been recognised, and none
     /// was.
@@ -92,6 +92,11 @@ pub enum Piece {
         kind: EntryToken,
         /// The whole construct, entry token through closing delimiter.
         span: Span,
+        /// Constructs recognised inside this construct's document content.
+        ///
+        /// Typed block fields use this to keep their outer boundary as one
+        /// piece while exposing constructs in braced values.
+        children: Vec<Piece>,
     },
     /// An entry token whose construct could not be closed.
     ///
@@ -239,9 +244,8 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                         EntryToken::Add | EntryToken::Del | EntryToken::Sub | EntryToken::Note
                     ) {
                         flush!(at);
-                        let (piece, resume, nested) = revision_piece(bytes, token, at, end);
+                        let (piece, resume) = revision_piece(bytes, token, at, end);
                         pieces.push(piece);
-                        pieces.extend(nested);
                         at = resume;
                         text_start = at;
                         continue;
@@ -252,6 +256,7 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                             Ok(block) => Piece::Construct {
                                 kind: token,
                                 span: block.span,
+                                children: block_children(bytes, &block),
                             },
                             Err(_) => Piece::Malformed {
                                 kind: token,
@@ -287,6 +292,7 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                             Piece::Construct {
                                 kind: token,
                                 span: span(at, close + 1),
+                                children: Vec::new(),
                             },
                             close + 1,
                         ),
@@ -428,6 +434,7 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                     pieces.push(Piece::Construct {
                         kind: EntryToken::Raw,
                         span: span(text_start, at),
+                        children: Vec::new(),
                     });
                     text_start = at;
                     region = Region::Prose;
@@ -457,6 +464,66 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
     pieces
 }
 
+fn block_children(bytes: &[u8], block: &crate::blocks::Block) -> Vec<Piece> {
+    block
+        .fields
+        .iter()
+        .filter_map(|field| match field.value {
+            crate::blocks::Value::Braced(value) => Some(value),
+            _ => None,
+        })
+        .flat_map(|value| {
+            let start = value.start() + 1;
+            scan(&bytes[start..value.end() - 1])
+                .into_iter()
+                .map(move |piece| piece.shifted(start))
+        })
+        .collect()
+}
+
+impl Piece {
+    fn shifted(self, by: usize) -> Self {
+        let shift = |span: Span| span_at(span.start() + by, span.end() + by);
+        match self {
+            Self::Text(span) => Self::Text(shift(span)),
+            Self::Excluded(span) => Self::Excluded(shift(span)),
+            Self::Construct {
+                kind,
+                span,
+                children,
+            } => Self::Construct {
+                kind,
+                span: shift(span),
+                children: children
+                    .into_iter()
+                    .map(|child| child.shifted(by))
+                    .collect(),
+            },
+            Self::Malformed { kind, span } => Self::Malformed {
+                kind,
+                span: shift(span),
+            },
+        }
+    }
+
+    /// Visits this piece and every nested piece in source order.
+    pub fn walk(&self, visit: &mut impl FnMut(&Self)) {
+        visit(self);
+        if let Self::Construct { children, .. } = self {
+            for child in children {
+                child.walk(visit);
+            }
+        }
+    }
+}
+
+fn span_at(start: usize, end: usize) -> Span {
+    Span::new(
+        u32::try_from(start).unwrap_or(u32::MAX),
+        u32::try_from(end).unwrap_or(u32::MAX),
+    )
+}
+
 /// The block kind an entry token opens, if it opens one.
 const fn block_kind(token: EntryToken) -> Option<crate::blocks::BlockKind> {
     match token {
@@ -471,7 +538,7 @@ fn revision_piece(
     token: EntryToken,
     start: usize,
     after_open: usize,
-) -> (Piece, usize, Vec<Piece>) {
+) -> (Piece, usize) {
     let Some(header_end) = revision_header_end(bytes, token, after_open) else {
         return (
             Piece::Malformed {
@@ -479,7 +546,6 @@ fn revision_piece(
                 span: span(start, after_open),
             },
             after_open,
-            Vec::new(),
         );
     };
     let mut open = header_end;
@@ -494,7 +560,6 @@ fn revision_piece(
                 span: span(start, resume),
             },
             resume,
-            Vec::new(),
         );
     }
     let Some(end) = balanced_end(bytes, open) else {
@@ -504,7 +569,6 @@ fn revision_piece(
                 span: span(start, bytes.len()),
             },
             bytes.len(),
-            Vec::new(),
         );
     };
     let nested = nested_pieces(bytes, open + 1, end - 1);
@@ -513,6 +577,7 @@ fn revision_piece(
         Piece::Construct {
             kind: token,
             span: span(start, end),
+            children: nested,
         }
     } else {
         Piece::Malformed {
@@ -520,7 +585,7 @@ fn revision_piece(
             span: span(start, end),
         }
     };
-    (piece, end, nested)
+    (piece, end)
 }
 
 fn revision_header_end(bytes: &[u8], token: EntryToken, mut at: usize) -> Option<usize> {
@@ -569,10 +634,7 @@ fn nested_pieces(bytes: &[u8], start: usize, end: usize) -> Vec<Piece> {
     scan(&bytes[start..end])
         .into_iter()
         .filter_map(|piece| match piece {
-            Piece::Construct { kind, span: inner } => Some(Piece::Construct {
-                kind,
-                span: span(start + inner.start(), start + inner.end()),
-            }),
+            Piece::Construct { .. } => Some(piece.shifted(start)),
             Piece::Malformed { kind, span: inner } => Some(Piece::Malformed {
                 kind,
                 span: span(start + inner.start(), start + inner.end()),
@@ -1114,12 +1176,12 @@ mod tests {
     }
 
     /// Where a piece sits, whatever kind it is.
-    fn extent(piece: Piece) -> Span {
+    fn extent(piece: &Piece) -> Span {
         match piece {
             Piece::Text(s)
             | Piece::Excluded(s)
             | Piece::Construct { span: s, .. }
-            | Piece::Malformed { span: s, .. } => s,
+            | Piece::Malformed { span: s, .. } => *s,
         }
     }
 
@@ -1152,7 +1214,7 @@ mod tests {
                 let slice = &input[..cut];
                 let mut next = 0usize;
                 for piece in scan(slice) {
-                    let span = extent(piece);
+                    let span = extent(&piece);
                     assert_eq!(
                         span.start(),
                         next,
@@ -1175,13 +1237,15 @@ mod tests {
     }
 
     fn constructs(bytes: &[u8]) -> Vec<EntryToken> {
-        scan(bytes)
-            .into_iter()
-            .filter_map(|p| match p {
-                Piece::Construct { kind, .. } => Some(kind),
-                _ => None,
-            })
-            .collect()
+        let mut found = Vec::new();
+        for piece in scan(bytes) {
+            piece.walk(&mut |piece| {
+                if let Piece::Construct { kind, .. } = piece {
+                    found.push(*kind);
+                }
+            });
+        }
+        found
     }
 
     #[test]

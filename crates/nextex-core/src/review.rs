@@ -149,6 +149,7 @@ pub fn validate(bytes: &[u8], sidecar: &Sidecar) -> Result<Vec<Advisory>, Review
             let Piece::Construct {
                 kind: EntryToken::Id,
                 span,
+                ..
             } = piece
             else {
                 return None;
@@ -418,7 +419,7 @@ fn revision_constructs(bytes: &[u8]) -> Vec<RevisionConstruct> {
     scan(bytes)
         .into_iter()
         .filter_map(|piece| {
-            let Piece::Construct { kind, span } = piece else {
+            let Piece::Construct { kind, span, .. } = piece else {
                 return None;
             };
             if !matches!(

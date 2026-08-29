@@ -32,7 +32,7 @@ construction, not from care taken case by case.
 Every checked thing has a class:
 
 ```
-Text  Block  Figure  Table  Equation  Section  Citation  Length
+Figure  Table  Section  Appendix  Algorithm  Equation  Citation  Length
 ```
 
 Everything else — every unknown control sequence, every environment the compiler does not model, every

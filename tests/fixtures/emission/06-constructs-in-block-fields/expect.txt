@@ -1,0 +1,3 @@
+transport: lowered
+scanner: figure cite table cite ref ref ref
+constructs: figure(fig:scalar) contains cite(figure-source), while its scalar src contains no construct; table(tab:x) contains cite(knuth1984), ref(fig:a), and ref(tab:x); ref(sec:after) remains after the block; tokens in a command argument, verbatim, math, and a comment remain ordinary text

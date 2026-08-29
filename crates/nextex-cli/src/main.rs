@@ -9,6 +9,9 @@ use std::fs;
 use std::path::{Path, PathBuf};
 use std::process::ExitCode;
 
+use nextex_core::bibliography::{Bibliography, Unavailable, assemble, declared_in};
+use nextex_core::check::{Diagnostic, check};
+use nextex_core::diagnostics::map_emitted_diagnostic;
 use nextex_core::document::Node;
 use nextex_core::io::{IoError, OutputSink, SourceLoader};
 use nextex_core::review::{
@@ -16,6 +19,7 @@ use nextex_core::review::{
 };
 use nextex_core::scanner::EntryToken;
 use nextex_core::source::{SourceId, Sources};
+use nextex_core::sourcemap::emit_with_map;
 use nextex_core::{RevisionView, emit_view, parse};
 
 /// Largest source the CLI will read, in bytes.
@@ -104,6 +108,11 @@ impl OutputSink for BuildDirectory {
 
 fn main() -> ExitCode {
     let args: Vec<String> = std::env::args().skip(1).collect();
+    let Some(first) = args.first() else {
+        print_usage();
+        return ExitCode::from(2);
+    };
+
     if args.first().is_some_and(|arg| arg == "revise") {
         let mut revision_args = args[1..].to_vec();
         if revision_args
@@ -121,20 +130,22 @@ fn main() -> ExitCode {
         }
         return revise(&revision_args);
     }
-    let mut args = args.into_iter();
-    let first = args.next();
-    let input = if first.as_deref() == Some("build") {
-        args.next()
-    } else {
-        first
-    };
-    let Some(input) = input else {
-        eprintln!("usage: nextex build <file.ntex> [--original|--final|--marked]");
-        eprintln!();
-        eprintln!("Emits the file and its imports as LaTeX under build/.");
-        return ExitCode::from(2);
-    };
 
+    if first == "check" {
+        return check_command(&args[1..]);
+    }
+    if first == "blame" {
+        return blame(args[1..].iter().cloned());
+    }
+    let (input, options) = if first == "build" {
+        let Some(input) = args.get(1) else {
+            print_usage();
+            return ExitCode::from(2);
+        };
+        (input, &args[2..])
+    } else {
+        (first, &args[1..])
+    };
     let loader = FileSystem {
         root: PathBuf::from("."),
     };
@@ -143,7 +154,7 @@ fn main() -> ExitCode {
     };
 
     let mut view = RevisionView::Final;
-    for option in args {
+    for option in options {
         view = match option.as_str() {
             "--original" => RevisionView::Original,
             "--final" => RevisionView::Final,
@@ -154,7 +165,7 @@ fn main() -> ExitCode {
             }
         };
     }
-    match build(&input, view, &loader, &mut sink) {
+    match build(input, view, &loader, &mut sink) {
         Ok(()) => {
             let mut output = PathBuf::from(&input);
             output.set_extension("tex");
@@ -173,6 +184,16 @@ fn main() -> ExitCode {
     }
 }
 
+fn print_usage() {
+    eprintln!("usage: nextex <file.ntex> [--original|--final|--marked]");
+    eprintln!("       nextex build <file.ntex> [--original|--final|--marked]");
+    eprintln!("       nextex check [--json] [--strict-tex] <file.ntex>");
+    eprintln!("       nextex blame <file.ntex> <line>:<column> [message]");
+    eprintln!("       nextex revise <file.ntex> (--accept ID|--reject ID|--accept-all|--prune)");
+    eprintln!();
+    eprintln!("Emits the file and its imports as LaTeX under build/.");
+}
+
 fn sole_document() -> Result<String, String> {
     let mut documents = fs::read_dir(".")
         .map_err(|error| error.to_string())?
@@ -187,6 +208,168 @@ fn sole_document() -> Result<String, String> {
         return Err("more than one .ntex document was found; name the file explicitly".to_owned());
     }
     Ok(document.to_string_lossy().into_owned())
+}
+
+fn check_command(args: &[String]) -> ExitCode {
+    let json = args.iter().any(|arg| arg == "--json");
+    let strict = args.iter().any(|arg| arg == "--strict-tex");
+    let inputs: Vec<&str> = args
+        .iter()
+        .filter(|arg| !arg.starts_with("--"))
+        .map(String::as_str)
+        .collect();
+    if inputs.len() != 1 {
+        eprintln!("usage: nextex check [--json] [--strict-tex] <file.ntex>");
+        return ExitCode::from(2);
+    }
+
+    match run_check(inputs[0]) {
+        Ok((sources, diagnostics, coverage, bibliography)) => {
+            if json {
+                print_json(&sources, &diagnostics, coverage);
+            } else {
+                for diagnostic in &diagnostics {
+                    print_human(&sources, diagnostic);
+                }
+                if strict {
+                    if let Bibliography::Unavailable(reason) = bibliography {
+                        print_bibliography_advisory(&reason);
+                    }
+                }
+                println!("coverage: {:.1}%", coverage * 100.0);
+            }
+            if diagnostics.is_empty() {
+                ExitCode::SUCCESS
+            } else {
+                ExitCode::from(1)
+            }
+        }
+        Err(error) => {
+            eprintln!("fatal: {error}");
+            ExitCode::from(2)
+        }
+    }
+}
+
+fn run_check(root: &str) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography), IoError> {
+    let loader = FileSystem {
+        root: PathBuf::from("."),
+    };
+    let mut sources = Sources::new();
+    let root_id = loader.load(root, None, &mut sources)?;
+    let document = parse(&sources, root_id);
+    let mut table = nextex_core::symbols::SymbolTable::new();
+    table.merge(&sources, &document);
+
+    let declared = declared_in(&sources, root_id);
+    let base = Path::new(root).parent().unwrap_or_else(|| Path::new("."));
+    let bibliography = assemble(&declared, |name| fs::read(base.join(name)).ok());
+    let diagnostics = check(&table, &bibliography);
+    let coverage = document.coverage();
+    Ok((sources, diagnostics, coverage, bibliography))
+}
+
+fn location(
+    sources: &Sources,
+    source: SourceId,
+    span: nextex_core::source::Span,
+) -> (&str, usize, usize) {
+    let Some(source) = sources.get(source) else {
+        return ("<unresolved>", 1, 1);
+    };
+    let before = &source.bytes()[..span.start().min(source.bytes().len())];
+    #[allow(clippy::naive_bytecount)]
+    let line = before.iter().filter(|byte| **byte == b'\n').count() + 1;
+    let column = before
+        .iter()
+        .rposition(|byte| *byte == b'\n')
+        .map_or(before.len() + 1, |at| before.len() - at);
+    (source.name(), line, column)
+}
+
+fn print_human(sources: &Sources, diagnostic: &Diagnostic) {
+    let (file, line, column) = location(sources, diagnostic.source, diagnostic.span);
+    println!("error[{}]: {}", diagnostic.code, diagnostic.message);
+    println!("  --> {file}:{line}:{column}");
+    println!("  entity: {}", diagnostic.entity.name());
+    if let Some(name) = &diagnostic.name {
+        println!("  name: {name}");
+    }
+    println!(
+        "  span: offset {}, length {}",
+        diagnostic.span.start(),
+        diagnostic.span.len()
+    );
+    for related in &diagnostic.related {
+        let (file, line, column) = location(sources, related.source, related.span);
+        println!("  --> {file}:{line}:{column}: {}", related.message);
+    }
+    println!("  blame: nextex-construct");
+}
+
+fn print_json(sources: &Sources, diagnostics: &[Diagnostic], coverage: f64) {
+    print!("{{\"coverage\":{coverage},\"diagnostics\":[");
+    for (index, diagnostic) in diagnostics.iter().enumerate() {
+        if index > 0 {
+            print!(",");
+        }
+        let (file, line, column) = location(sources, diagnostic.source, diagnostic.span);
+        print!(
+            "{{\"code\":\"{}\",\"severity\":\"error\",\"blame\":\"nextex-construct\",\"entity\":\"{}\",\"name\":",
+            diagnostic.code,
+            diagnostic.entity.name()
+        );
+        match &diagnostic.name {
+            Some(name) => print_json_string(name),
+            None => print!("null"),
+        }
+        print!(",\"span\":{{\"file\":");
+        print_json_string(file);
+        print!(
+            ",\"offset\":{},\"length\":{},\"line\":{line},\"column\":{column}}},\"message\":",
+            diagnostic.span.start(),
+            diagnostic.span.len()
+        );
+        print_json_string(&diagnostic.message);
+        print!(",\"related\":[");
+        for (related_index, related) in diagnostic.related.iter().enumerate() {
+            if related_index > 0 {
+                print!(",");
+            }
+            let (file, line, column) = location(sources, related.source, related.span);
+            print!("{{\"span\":{{\"file\":");
+            print_json_string(file);
+            print!(
+                ",\"offset\":{},\"length\":{},\"line\":{line},\"column\":{column}}},\"message\":",
+                related.span.start(),
+                related.span.len()
+            );
+            print_json_string(&related.message);
+            print!("}}");
+        }
+        print!("]}}");
+    }
+    println!("]}}");
+}
+
+fn print_json_string(value: &str) {
+    print!("\"");
+    for character in value.chars() {
+        match character {
+            '\"' => print!("\\\""),
+            '\\' => print!("\\\\"),
+            '\n' => print!("\\n"),
+            '\r' => print!("\\r"),
+            '\t' => print!("\\t"),
+            character if character.is_control() => print!("\\u{:04x}", character as u32),
+            character => print!("{character}"),
+        }
+    }
+    print!("\"");
+}
+
+fn print_bibliography_advisory(reason: &Unavailable) {
+    println!("advisory: citation checking unavailable ({reason:?})");
 }
 
 fn build(
@@ -245,8 +428,6 @@ fn build(
             }
         }
 
-        let mut bytes = Vec::new();
-        emit_view(&sources, &document, view, &mut bytes).map_err(|error| error.to_string())?;
         let mut output = PathBuf::from(source.name());
         if view == RevisionView::Marked {
             let stem = output.file_stem().unwrap_or_default().to_string_lossy();
@@ -254,8 +435,19 @@ fn build(
         } else {
             output.set_extension("tex");
         }
-        sink.write(&output.to_string_lossy(), &bytes)
-            .map_err(|error| error.to_string())?;
+        if view == RevisionView::Final {
+            let emission = emit_with_map(&sources, &document).map_err(|error| error.to_string())?;
+            sink.write(&output.to_string_lossy(), &emission.bytes)
+                .map_err(|error| error.to_string())?;
+            output.set_extension("ntexmap");
+            sink.write(&output.to_string_lossy(), &emission.map.to_json())
+                .map_err(|error| error.to_string())?;
+        } else {
+            let mut bytes = Vec::new();
+            emit_view(&sources, &document, view, &mut bytes).map_err(|error| error.to_string())?;
+            sink.write(&output.to_string_lossy(), &bytes)
+                .map_err(|error| error.to_string())?;
+        }
     }
     Ok(())
 }
@@ -477,4 +669,63 @@ fn review_author() -> String {
 
 fn review_timestamp() -> String {
     std::env::var("NEXTEX_AT").unwrap_or_else(|_| current_timestamp())
+}
+
+/// Reports where a location in the emitted `.tex` came from.
+///
+/// TeX names a line in a file the author never wrote. Without this the author
+/// reads an error against bytes they have never seen, and NextTeX carries the
+/// blame for every LaTeX error in the document.
+///
+/// The map is rebuilt from the source rather than read back from the
+/// `.ntexmap` beside the output: nothing here parses that file yet, and it
+/// exists for editors and CI rather than for this path.
+fn blame(mut args: impl Iterator<Item = String>) -> ExitCode {
+    let (Some(input), Some(location)) = (args.next(), args.next()) else {
+        eprintln!("usage: nextex blame <file.ntex> <line>:<column> [message]");
+        return ExitCode::from(2);
+    };
+    let message = args
+        .next()
+        .unwrap_or_else(|| "TeX reported an error here".to_owned());
+
+    let mut parts = location.split(':');
+    let (Some(Ok(line)), Some(Ok(column))) = (
+        parts.next().map(str::parse::<u32>),
+        parts.next().map(str::parse::<u32>),
+    ) else {
+        eprintln!("error: expected a location such as 11:1, found `{location}`");
+        return ExitCode::from(2);
+    };
+
+    let loader = FileSystem {
+        root: PathBuf::from("."),
+    };
+    let mut sources = Sources::new();
+    let Ok(id) = loader.load(&input, None, &mut sources) else {
+        eprintln!("error: cannot read {input}");
+        return ExitCode::from(2);
+    };
+    let document = parse(&sources, id);
+    let Ok(emission) = emit_with_map(&sources, &document) else {
+        eprintln!("error: {input} could not be emitted");
+        return ExitCode::from(2);
+    };
+
+    let mapped = map_emitted_diagnostic(message, &emission.bytes, line, column, &emission.map);
+    println!("error[TEX]: {}", mapped.message);
+    let mut output = PathBuf::from(&input);
+    output.set_extension("tex");
+    println!("  emitted at build/{}:{line}:{column}", output.display());
+    match &mapped.span {
+        Some(span) => println!(
+            "  corresponds to {}:{}:{}",
+            span.file, span.line, span.column
+        ),
+        // No segment supports an answer. Saying so beats naming the nearest
+        // one, which would blame the author for the emitter's own bytes.
+        None => println!("  corresponds to an unmapped position"),
+    }
+    println!("  blame: {}", mapped.blame.as_str());
+    ExitCode::SUCCESS
 }
