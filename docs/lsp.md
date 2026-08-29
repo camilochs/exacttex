@@ -1,6 +1,6 @@
 # The language server
 
-`xtex-lsp` speaks LSP over stdin and stdout. It answers seven messages and no others.
+`xtex-lsp` speaks LSP over stdin and stdout. It answers nine messages and no others.
 
 ---
 
@@ -14,6 +14,8 @@
 | `textDocument/hover` | What the construct under the cursor is, and whether it resolves. |
 | `textDocument/completion` | Identifiers that may go where the cursor is. |
 | `textDocument/definition` | Where the name under the cursor is declared. |
+| `textDocument/prepareRename` | The range the editor should offer, or `null` where renaming is not possible. |
+| `textDocument/rename` | Edits for every structurally resolved occurrence. |
 | `shutdown` / `exit` | Replies `null`, then leaves. |
 
 **Anything else is not answered, and that is correct behaviour.** The editor's own fallback — its word-based
@@ -21,7 +23,8 @@ completion, its "no definition found" — is better than a wrong answer from a s
 question. A message that is not in this table has no code behind it.
 
 Capabilities declared: `textDocumentSync: 1` (full text on every change), `hoverProvider`,
-`definitionProvider`, and `completionProvider` triggered on `(` and `:`.
+`definitionProvider`, `completionProvider` triggered on `(` and `:`, and `renameProvider` with
+`prepareProvider`.
 
 ---
 
@@ -69,6 +72,48 @@ grounds to exclude it.
 
 Outside a construct, nothing is offered. Suggesting every identifier in a document while someone writes a
 sentence is worse than suggesting none.
+
+---
+
+## Rename, and the thing it will not do
+
+Renaming changes every occurrence the compiler **structurally resolved** — the declaration, every `@ref` to
+it in the document root, and a `@note`'s `on =` field, which is a reference and would otherwise be orphaned.
+
+It changes nothing else, and the gap is the whole design:
+
+```latex
+@id(fig:plot)                              renamed
+@ref(fig:plot)                             renamed
+\label{fig:plot}                           left alone
+\verb|fig:plot|                            left alone
+We call it fig:plot in the text.           left alone
+@cite(fig:plot)                            left alone — a bibliography key
+```
+
+`@id(fig:plot)` emits `\label{fig:plot}`, so an author may also have written a plain `\ref{fig:plot}`. That
+is transported LaTeX: unchecked, and by `AGENTS.md` §4 never rewritten. Renaming the construct and silently
+leaving that `\ref` behind would break a working document; rewriting it would break the invariant. So
+neither happens — and the occurrences left alone are **reported**:
+
+```
+$ xtex rename main.xtex fig:model fig:architecture
+main.xtex: 2 renamed
+sections/part.xtex: 2 renamed
+  left alone: main.xtex:4:28 — transported LaTeX is never rewritten
+  left alone: main.xtex:4:58 — transported LaTeX is never rewritten
+  left alone: main.xtex:5:12 — transported LaTeX is never rewritten
+```
+
+The editor gets the edits; it has no channel for that list, so `xtex rename` is where an author is told.
+An editor renaming a document with plain `\ref` in it should expect to hear about it from the CLI.
+
+**The scope is the document root**, not the open file — an identifier is shared by the root file and
+everything it imports, so renaming one file at a time would leave the rest pointing at a name that no longer
+exists.
+
+A citation cannot be renamed at all. `prepareRename` answers `null` on one, which is how an editor is told
+not to open its rename box; its key lives in a `.bib` this does not own.
 
 ---
 

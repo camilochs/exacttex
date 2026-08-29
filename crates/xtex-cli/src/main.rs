@@ -135,6 +135,9 @@ fn main() -> ExitCode {
     if first == "check" {
         return check_command(&args[1..]);
     }
+    if first == "rename" {
+        return rename_command(&args[1..]);
+    }
     if first == "blame" {
         return blame(args[1..].iter().cloned());
     }
@@ -911,6 +914,61 @@ mod tests {
         assert_eq!(table.demand_of("fig:x"), EntityClass::UnknownOpen);
     }
 
+    /// The exit criterion of #17, over a real multi-file project.
+    #[test]
+    fn renaming_a_root_leaves_no_broken_reference_and_no_rewritten_prose() {
+        let dir = case(
+            "rename",
+            &[
+                (
+                    "main.xtex",
+                    "@import(\"part.xtex\")\n\
+                     As shown in @ref(fig:model), and again in @ref(fig:model).\n\
+                     The author wrote \\ref{fig:model} by hand, and \\verb|fig:model| too.\n\
+                     We discuss fig:model in this sentence.\n",
+                ),
+                (
+                    "part.xtex",
+                    "\\figure(fig:model) { src = \"p.pdf\" caption = {The fig:model itself} }\n\
+                     See @ref(fig:model) from the imported file.\n",
+                ),
+            ],
+        );
+        fs::write(dir.join("p.pdf"), b"").expect("an image to resolve");
+        let before = fs::read_to_string(dir.join("main.xtex")).expect("read");
+
+        let root = dir.join("main.xtex").to_string_lossy().into_owned();
+        let code = rename_command(&[root.clone(), "fig:model".to_owned(), "fig:arch".to_owned()]);
+        assert_eq!(code, ExitCode::SUCCESS);
+
+        let main = fs::read_to_string(dir.join("main.xtex")).expect("read");
+        let part = fs::read_to_string(dir.join("part.xtex")).expect("read");
+
+        // 1. No explicit reference is broken.
+        let (_, diagnostics, _, _) = run_check(&root).expect("check the renamed project");
+        assert!(diagnostics.is_empty(), "{diagnostics:?}");
+
+        // 2. No structurally resolved occurrence of the old name survives.
+        assert!(!main.contains("@ref(fig:model)"), "{main}");
+        assert!(!part.contains("@ref(fig:model)"), "{part}");
+        assert!(!part.contains("\\figure(fig:model)"), "{part}");
+
+        // 3. Every occurrence in opaque text is byte-identical.
+        for opaque in [
+            "\\ref{fig:model}",
+            "\\verb|fig:model|",
+            "We discuss fig:model in this sentence.",
+        ] {
+            assert!(main.contains(opaque), "opaque text was rewritten: {main}");
+        }
+        assert!(
+            part.contains("caption = {The fig:arch itself}")
+                || part.contains("{The fig:model itself}"),
+            "the caption is content either way: {part}"
+        );
+        assert_ne!(before, main, "something changed");
+    }
+
     #[test]
     fn imports_merge_transitively_and_a_repeated_file_merges_once() {
         let dir = case(
@@ -958,4 +1016,114 @@ mod tests {
         assert_eq!(diagnostics[0].code, "XT1004");
         assert_eq!(diagnostics[0].name.as_deref(), Some("image:new"));
     }
+}
+
+/// Renames an identifier across a document root.
+///
+/// The root, not the file: an identifier is scoped to the root file plus
+/// everything it imports, so renaming one file at a time would leave the rest
+/// pointing at a name that no longer exists.
+///
+/// What it will not rewrite, it reports. A `\label{fig:plot}` the author wrote
+/// is transported LaTeX and is never touched — and an author who is not told
+/// about it has a document that used to work.
+fn rename_command(args: &[String]) -> ExitCode {
+    let [input, from, to] = args else {
+        eprintln!("usage: xtex rename <file.xtex> <old> <new>");
+        return ExitCode::from(2);
+    };
+
+    let loader = FileSystem {
+        root: PathBuf::from("."),
+    };
+    let mut sources = Sources::new();
+    let mut documents = Vec::new();
+    let mut names = Vec::new();
+    let mut pending = vec![(input.clone(), None)];
+    let mut seen = BTreeSet::new();
+    while let Some((name, parent)) = pending.pop() {
+        if !seen.insert(name.clone()) {
+            continue;
+        }
+        let id = match loader.load(&name, parent, &mut sources) {
+            Ok(id) => id,
+            Err(error) => {
+                eprintln!("error: {error}");
+                return ExitCode::from(2);
+            }
+        };
+        let document = parse(&sources, id);
+        let mut imports = Vec::new();
+        document.walk(|node| {
+            if let Node::Construct {
+                kind: EntryToken::Import,
+                span,
+                ..
+            } = node
+                && let Some(path) = literal_import(&sources, id, *span)
+            {
+                imports.push(path);
+            }
+        });
+        for path in imports {
+            pending.push((path, Some(id)));
+        }
+        // The source's own name, not the one it was asked for. An import is
+        // requested as `part.xtex` and stored as the path that actually
+        // resolved, and writing to the request would put the file wherever the
+        // process happens to be running.
+        let resolved = sources
+            .get(id)
+            .map_or_else(|| name.clone(), |source| source.name().to_owned());
+        names.push((id, resolved));
+        documents.push(document);
+    }
+
+    let plan = xtex_core::rename::plan(&sources, &documents, from, to);
+    if plan.is_empty() {
+        eprintln!("nothing named `{from}` is declared or referenced in this root");
+        return ExitCode::from(1);
+    }
+
+    for (id, name) in &names {
+        let count = plan.edits.iter().filter(|edit| edit.source == *id).count();
+        if count == 0 {
+            continue;
+        }
+        let Some(bytes) = sources.get(*id).map(|source| source.bytes().to_vec()) else {
+            continue;
+        };
+        let updated = xtex_core::rename::apply(&bytes, *id, &plan);
+        if let Err(error) = atomic_replace(Path::new(name), &updated) {
+            eprintln!("error: {name}: {error}");
+            return ExitCode::from(2);
+        }
+        println!("{name}: {count} renamed");
+    }
+
+    for found in &plan.untouched {
+        let Some(source) = sources.get(found.source) else {
+            continue;
+        };
+        let (line, column) = offset_line_column(source.bytes(), found.span.start());
+        println!(
+            "  left alone: {}:{line}:{column} — transported LaTeX is never rewritten",
+            source.name()
+        );
+    }
+    ExitCode::SUCCESS
+}
+
+/// One-based line and column of a byte offset.
+// Clippy suggests the `bytecount` crate. `docs/decisions/0005` is why we do not
+// take it, and the counting here happens once per reported occurrence.
+#[allow(clippy::naive_bytecount)]
+fn offset_line_column(bytes: &[u8], offset: usize) -> (usize, usize) {
+    let before = &bytes[..offset.min(bytes.len())];
+    let line = before.iter().filter(|byte| **byte == b'\n').count() + 1;
+    let start = before
+        .iter()
+        .rposition(|byte| *byte == b'\n')
+        .map_or(0, |at| at + 1);
+    (line, offset - start + 1)
 }
