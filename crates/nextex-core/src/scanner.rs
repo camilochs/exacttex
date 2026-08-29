@@ -97,6 +97,10 @@ pub enum EntryToken {
     Import,
     /// `latex {`
     Raw,
+    /// `\figure(`
+    Figure,
+    /// `\table(`
+    Table,
 }
 
 impl EntryToken {
@@ -108,6 +112,8 @@ impl EntryToken {
             Self::Cite => b"@cite",
             Self::Import => b"@import",
             Self::Raw => b"latex",
+            Self::Figure => b"\\figure",
+            Self::Table => b"\\table",
         }
     }
 
@@ -120,6 +126,8 @@ impl EntryToken {
             Self::Cite => "@cite",
             Self::Import => "@import",
             Self::Raw => "latex",
+            Self::Figure => "\\figure",
+            Self::Table => "\\table",
         }
     }
 }
@@ -158,6 +166,27 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
         match &region {
             Region::Prose => {
                 if let Some((token, end)) = entry_token_at(bytes, at) {
+                    if let Some(kind) = block_kind(token) {
+                        flush!(at);
+                        let piece = match crate::blocks::parse_block(bytes, kind, at, end) {
+                            Ok(block) => Piece::Construct {
+                                kind: token,
+                                span: block.span,
+                            },
+                            Err(_) => Piece::Malformed {
+                                kind: token,
+                                span: span(at, end),
+                            },
+                        };
+                        let resume = match piece {
+                            Piece::Construct { span, .. } => span.end(),
+                            _ => end,
+                        };
+                        pieces.push(piece);
+                        at = resume;
+                        text_start = at;
+                        continue;
+                    }
                     if token == EntryToken::Raw {
                         flush!(at);
                         region = Region::Raw { depth: 1 };
@@ -300,6 +329,15 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
     pieces
 }
 
+/// The block kind an entry token opens, if it opens one.
+const fn block_kind(token: EntryToken) -> Option<crate::blocks::BlockKind> {
+    match token {
+        EntryToken::Figure => Some(crate::blocks::BlockKind::Figure),
+        EntryToken::Table => Some(crate::blocks::BlockKind::Table),
+        _ => None,
+    }
+}
+
 /// Offset just past the `}` that closes the group opening at `open`.
 ///
 /// Counts with LaTeX's own escaping: `\{`, `\}` and `\%` do not count, decided
@@ -408,6 +446,16 @@ fn entry_token_at(bytes: &[u8], at: usize) -> Option<(EntryToken, usize)> {
             }
         }
         return None;
+    }
+
+    if bytes[at] == b'\\' {
+        for token in [EntryToken::Figure, EntryToken::Table] {
+            let keyword = token.keyword();
+            let end = at + keyword.len();
+            if bytes[at..].starts_with(keyword) && bytes.get(end) == Some(&b'(') {
+                return Some((token, end + 1));
+            }
+        }
     }
 
     if bytes[at] == b'l' && bytes[at..].starts_with(b"latex") {
