@@ -11,11 +11,13 @@ use std::process::ExitCode;
 
 use nextex_core::bibliography::{Bibliography, Unavailable, assemble, declared_in};
 use nextex_core::check::{Diagnostic, check};
+use nextex_core::diagnostics::map_emitted_diagnostic;
 use nextex_core::document::Node;
 use nextex_core::io::{IoError, OutputSink, SourceLoader};
 use nextex_core::scanner::EntryToken;
 use nextex_core::source::{SourceId, Sources};
-use nextex_core::{BuildError, emit, parse};
+use nextex_core::sourcemap::emit_with_map;
+use nextex_core::{BuildError, parse};
 
 /// Largest source the CLI will read, in bytes.
 ///
@@ -101,14 +103,21 @@ impl OutputSink for BuildDirectory {
 fn main() -> ExitCode {
     let args: Vec<String> = std::env::args().skip(1).collect();
     let Some(first) = args.first() else {
-        eprintln!("usage: nextex <file.ntex> | nextex check [--json] [--strict-tex] <file.ntex>");
+        eprintln!("usage: nextex <file.ntex>");
+        eprintln!("       nextex check [--json] [--strict-tex] <file.ntex>");
+        eprintln!("       nextex blame <file.ntex> <line>:<column> [message]");
         eprintln!();
         eprintln!("Emits the file and its imports as LaTeX under build/.");
+        eprintln!("`blame` reads a location in the emitted .tex and reports where");
+        eprintln!("it came from in the source, without rewriting TeX's message.");
         return ExitCode::from(2);
     };
 
     if first == "check" {
         return check_command(&args[1..]);
+    }
+    if first == "blame" {
+        return blame(args[1..].iter().cloned());
     }
     let input = first;
     let loader = FileSystem {
@@ -331,11 +340,71 @@ fn build(root: &str, loader: &FileSystem, sink: &mut BuildDirectory) -> Result<(
             }
         }
 
-        let mut bytes = Vec::new();
-        emit(&sources, &document, &mut bytes)?;
+        let emission = emit_with_map(&sources, &document)?;
         let mut output = PathBuf::from(source.name());
         output.set_extension("tex");
-        sink.write(&output.to_string_lossy(), &bytes)?;
+        sink.write(&output.to_string_lossy(), &emission.bytes)?;
+        output.set_extension("ntexmap");
+        sink.write(&output.to_string_lossy(), &emission.map.to_json())?;
     }
     Ok(())
+}
+
+/// Reports where a location in the emitted `.tex` came from.
+///
+/// TeX names a line in a file the author never wrote. Without this the author
+/// reads an error against bytes they have never seen, and NextTeX carries the
+/// blame for every LaTeX error in the document.
+///
+/// The map is rebuilt from the source rather than read back from the
+/// `.ntexmap` beside the output: nothing here parses that file yet, and it
+/// exists for editors and CI rather than for this path.
+fn blame(mut args: impl Iterator<Item = String>) -> ExitCode {
+    let (Some(input), Some(location)) = (args.next(), args.next()) else {
+        eprintln!("usage: nextex blame <file.ntex> <line>:<column> [message]");
+        return ExitCode::from(2);
+    };
+    let message = args
+        .next()
+        .unwrap_or_else(|| "TeX reported an error here".to_owned());
+
+    let mut parts = location.split(':');
+    let (Some(Ok(line)), Some(Ok(column))) = (
+        parts.next().map(str::parse::<u32>),
+        parts.next().map(str::parse::<u32>),
+    ) else {
+        eprintln!("error: expected a location such as 11:1, found `{location}`");
+        return ExitCode::from(2);
+    };
+
+    let loader = FileSystem {
+        root: PathBuf::from("."),
+    };
+    let mut sources = Sources::new();
+    let Ok(id) = loader.load(&input, None, &mut sources) else {
+        eprintln!("error: cannot read {input}");
+        return ExitCode::from(2);
+    };
+    let document = parse(&sources, id);
+    let Ok(emission) = emit_with_map(&sources, &document) else {
+        eprintln!("error: {input} could not be emitted");
+        return ExitCode::from(2);
+    };
+
+    let mapped = map_emitted_diagnostic(message, &emission.bytes, line, column, &emission.map);
+    println!("error[TEX]: {}", mapped.message);
+    let mut output = PathBuf::from(&input);
+    output.set_extension("tex");
+    println!("  emitted at build/{}:{line}:{column}", output.display());
+    match &mapped.span {
+        Some(span) => println!(
+            "  corresponds to {}:{}:{}",
+            span.file, span.line, span.column
+        ),
+        // No segment supports an answer. Saying so beats naming the nearest
+        // one, which would blame the author for the emitter's own bytes.
+        None => println!("  corresponds to an unmapped position"),
+    }
+    println!("  blame: {}", mapped.blame.as_str());
+    ExitCode::SUCCESS
 }

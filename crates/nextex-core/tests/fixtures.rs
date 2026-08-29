@@ -23,7 +23,10 @@ use std::path::{Path, PathBuf};
 
 use nextex_core::io::Memory;
 use nextex_core::scanner::{Piece, scan};
+use nextex_core::source::Sources;
+use nextex_core::sourcemap::emit_with_map;
 use nextex_core::transport;
+use nextex_core::{emit, parse};
 
 fn fixtures_root() -> PathBuf {
     // CARGO_MANIFEST_DIR is crates/nextex-core; the fixtures are repo-relative
@@ -243,6 +246,55 @@ fn emission_fixtures_match_their_expected_output() {
     }
 
     assert!(checked >= 3, "only {checked} emission fixtures ran");
+}
+
+#[test]
+fn source_maps_cover_every_emission_fixture_without_overlap() {
+    let mut checked = 0usize;
+    for input in all_fixtures() {
+        if !input.with_file_name("emitted.tex").exists() {
+            continue;
+        }
+        let raw =
+            fs::read(&input).unwrap_or_else(|e| panic!("{}: cannot read ({e})", label(&input)));
+        let mut sources = Sources::new();
+        let id = sources.add(label(&input), raw);
+        let document = parse(&sources, id);
+        let emission = emit_with_map(&sources, &document)
+            .unwrap_or_else(|e| panic!("{}: mapped emission failed ({e})", label(&input)));
+        let mut next = 0u32;
+        for segment in &emission.map.segments {
+            assert_eq!(
+                segment.output_start,
+                next,
+                "{}: gap or overlap before {}",
+                label(&input),
+                segment.output_start
+            );
+            assert!(
+                segment.output_start < segment.output_end,
+                "{}: empty segment",
+                label(&input)
+            );
+            next = segment.output_end;
+        }
+        assert_eq!(
+            next,
+            u32::try_from(emission.bytes.len()).expect("fixture output exceeds u32"),
+            "{}: map does not cover output",
+            label(&input)
+        );
+        let mut plain = Vec::new();
+        emit(&sources, &document, &mut plain).expect("plain fixture emission");
+        assert_eq!(
+            emission.bytes,
+            plain,
+            "{}: enabling map changed output",
+            label(&input)
+        );
+        checked += 1;
+    }
+    assert!(checked >= 5, "only {checked} emission fixtures ran");
 }
 
 /// The pieces an `expect.txt` declares, in order.
