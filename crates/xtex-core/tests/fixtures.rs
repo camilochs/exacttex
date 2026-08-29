@@ -272,7 +272,7 @@ fn checker_fixtures_match_their_expected_codes() {
         table.merge(&sources, &document);
         let bibliography = Bibliography::Unavailable(Unavailable::NoneDeclared);
         let mut diagnostics = check(&table, &bibliography);
-        diagnostics.extend(check_documents(&sources, &[document], |_, path| {
+        diagnostics.extend(check_documents(&sources, &[document], &table, |_, path| {
             input
                 .parent()
                 .expect("fixture directory")
