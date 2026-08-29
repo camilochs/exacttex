@@ -1,0 +1,4 @@
+\begin{verbatim}
+@id(a) @ref(b) @cite(c) \figure(d) { } latex {e}
+\end{verbatim}
+After @ref(after).

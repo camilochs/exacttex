@@ -1,0 +1,3 @@
+Before @ref(seen).
+\catcode`\@=11
+After @ref(hidden).

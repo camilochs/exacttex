@@ -1,0 +1,5 @@
+confidence: not a known verbatim environment, so its body is ordinary
+constructs: ref(exposed)
+falsifier: an unconfigured environment is guessed to be verbatim, which would
+  silently stop checking content the author expects checked. The remedy is
+  xtex.toml, not inference.

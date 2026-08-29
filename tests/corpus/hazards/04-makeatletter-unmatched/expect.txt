@@ -1,0 +1,3 @@
+confidence: OpaqueToEof — the opener has no \makeatother
+constructs: none
+falsifier: the control sequence is split at @, or a construct is recognised after the opener

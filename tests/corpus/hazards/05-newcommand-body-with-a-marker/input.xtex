@@ -1,0 +1,2 @@
+\newcommand{\mycmd}[2]{sees @ref(inside) and #1 and #2}
+Then @ref(after).

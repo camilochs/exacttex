@@ -1,0 +1,3 @@
+confidence: OpaqueToEof from the \verb
+constructs: ref(seen) only
+falsifier: bytes inside the literal become constructs, or a terminator is invented

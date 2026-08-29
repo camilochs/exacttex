@@ -135,6 +135,9 @@ fn main() -> ExitCode {
     if first == "check" {
         return check_command(&args[1..]);
     }
+    if first == "confidence" {
+        return confidence_command(&args[1..]);
+    }
     if first == "rename" {
         return rename_command(&args[1..]);
     }
@@ -1075,4 +1078,42 @@ fn location(
         .rposition(|byte| *byte == b'\n')
         .map_or(before.len() + 1, |at| before.len() - at);
     (source.name().to_owned(), line, column)
+}
+
+/// Reports how much of a file the parser recognises before giving up.
+///
+/// One line, meant for `tests/corpus/measure.py` rather than for a person:
+/// the fraction of the file available before `OpaqueToEof`, or `none` when
+/// recognition never stops.
+fn confidence_command(args: &[String]) -> ExitCode {
+    let Some(input) = args.first() else {
+        eprintln!("usage: xtex confidence <file.tex>");
+        return ExitCode::from(2);
+    };
+    let loader = FileSystem {
+        root: PathBuf::from("."),
+    };
+    let mut sources = Sources::new();
+    let Ok(id) = loader.load(input, None, &mut sources) else {
+        eprintln!("error: cannot read {input}");
+        return ExitCode::from(2);
+    };
+    let document = parse(&sources, id);
+    let Some(source) = sources.get(id) else {
+        return ExitCode::from(2);
+    };
+    let total = source.bytes().len();
+
+    match document.quarantine_position() {
+        // A file with no bytes is available in full rather than not at all.
+        Some(at) if total > 0 => {
+            #[allow(clippy::cast_precision_loss)]
+            let fraction = at as f64 / total as f64;
+            println!("quarantine: {fraction:.6}");
+        }
+        _ => println!("quarantine: none"),
+    }
+    println!("bytes: {total}");
+    println!("coverage: {:.6}", document.coverage());
+    ExitCode::SUCCESS
 }
