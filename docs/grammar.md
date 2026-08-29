@@ -135,6 +135,10 @@ ident        = [A-Za-z] [A-Za-z0-9_:.-]*
 bibkey       = [A-Za-z0-9] [A-Za-z0-9_:.+/-]*
 ```
 
+The prefix before the first `:` in an identifier is not decoration: it is the class the reference demands,
+per [`decisions/0003`](decisions/0003-the-prefix-is-the-demand.md). `@ref(fig:x)` requires a `Figure`. An
+unmapped prefix, or none, demands nothing.
+
 `@ref` emits the referenced label value only. The entity-kind word remains author text:
 
 ```latex
