@@ -145,7 +145,7 @@ unmapped prefix, or none, demands nothing.
 `@ref` emits the referenced label value only. The entity-kind word remains author text:
 
 ```latex
-Definition~@ref(def:geakg)
+Definition~@ref(def:sixtuple)
 Table~@ref(tab:roles)
 Section~@ref(sec:results)
 ```
