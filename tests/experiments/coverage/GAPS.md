@@ -1,7 +1,8 @@
 # What the language cannot yet name
 
-Source: `GEAKG/paper_els_cas/main.tex`, lines 332–401, SHA-256 of the extracted chunk `49bec055…`.
-`original.tex` is the extract; `annotated.xtex` is it rewritten by hand in the frozen syntax.
+Source: a 70-line extract of arXiv:2603.27922 (lines 332–401 of its main file), SHA-256 of the
+extracted chunk `49bec055…`. Following the corpus rule, the extract and its hand-annotated rewrite are
+referenced by fingerprint, not stored — the findings below are what the exercise produced.
 
 Chosen because it is the densest real mixture available: a definition environment, two tables, eight
 references, eight citations, math inside table cells, and a table footnote.
@@ -18,13 +19,13 @@ The source ends the first table with a note attached to a `$^*$` marker in a cel
 \begin{table}
   ...tabular...
   \vspace{2pt}
-  {\scriptsize $^*$Edge counts depend on the LLM-generated L0 topology...}
+  {\scriptsize $^*$Counts depend on the generated topology...}
 \end{table}
 ```
 
 The `\table(...)` block has fields for `caption` and `body` and nowhere for this. Writing it in a `latex { }`
 escape moves it **outside** the emitted `\begin{table}…\end{table}`, which changes where it is typeset. So
-the annotation as written in `annotated.xtex` is wrong, and the gap is not cosmetic: **the block cannot
+the annotation as written in the rewrite is wrong, and the gap is not cosmetic: **the block cannot
 express everything a real `table` environment contains.**
 
 Options for Phase 1: a `note` field; a general "trailing content" field; or blocks that accept arbitrary
@@ -33,7 +34,7 @@ LaTeX in body position rather than only in named fields.
 ### 2 · The kind word is written by hand, every time
 
 ```
-Definition~@ref(def:geakg)   Table~@ref(tab:kg_comparison)   Section~@ref(sec:results)
+Definition~@ref(def:sixtuple)   Table~@ref(tab:kg_comparison)   Section~@ref(sec:results)
 ```
 
 The author types `Definition~`, `Table~`, `Section~` before every reference. ExactTeX knows the kind — that
@@ -76,7 +77,7 @@ rather than against the table. It should probably be read from the column spec i
 
 ## Not measured here
 
-**Size.** `original.tex` is 70 lines and `annotated.xtex` is 52, but they are not comparable: item lines were
+**Size.** the extract is 70 lines and the rewrite is 52, but they are not comparable: item lines were
 dropped from the definition to keep the hand-rewrite manageable. No size claim is made from this chunk. If
 that number is wanted, it needs a chunk rewritten line-for-line with nothing omitted.
 

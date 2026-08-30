@@ -145,7 +145,7 @@ unmapped prefix, or none, demands nothing.
 `@ref` emits the referenced label value only. The entity-kind word remains author text:
 
 ```latex
-Definition~@ref(def:geakg)
+Definition~@ref(def:sixtuple)
 Table~@ref(tab:roles)
 Section~@ref(sec:results)
 ```
@@ -202,7 +202,7 @@ Naming the command directly removes the question. It also removes the vocabulary
 `\citep` already knows what `@citep` is.
 
 The earlier draft admitted `@cite(key, style=textual)` and never said what it emitted. Settled by the
-director on 2026-08-29.
+maintainer on 2026-08-29.
 
 #### Migrating an existing project
 
@@ -374,7 +374,7 @@ declarations. Both contribute; neither overrides the other.
 bibliographies = ["refs.bib", "sources/extra.bib"]
 ```
 
-Paths are relative to the directory holding `xtex.toml`; an absolute path is invalid configuration.
+Paths are relative to the maintainery holding `xtex.toml`; an absolute path is invalid configuration.
 
 The built-in signature set includes:
 
@@ -574,7 +574,7 @@ projects that use a package's commands never write its `\usepackage`: a journal 
 loads it, and the compiler reads neither `.cls` nor `.sty`. The check would have reported a missing package
 in 9 of the 40 projects that use `booktabs`, each of which compiles.
 
-Settled by the director on 2026-08-29 with that measurement in hand. Full record and the emission contract:
+Settled by the maintainer on 2026-08-29 with that measurement in hand. Full record and the emission contract:
 [`decisions/0001-typed-emission-and-no-injection.md`](decisions/0001-typed-emission-and-no-injection.md).
 Reproduce the measurement with `tests/experiments/package-loading/`.
 
@@ -681,7 +681,7 @@ content as opaque would prevent those dependencies from being represented.
 
 Nested revisions must be properly contained. Crossing intervals are impossible in the brace grammar, and
 **the sidecar cannot reintroduce them**: it is keyed by identifier and carries no spans, settled by the
-director on 2026-08-29. So non-overlap is not a rule the parser enforces, it is a property the
+maintainer on 2026-08-29. So non-overlap is not a rule the parser enforces, it is a property the
 representation has. There is no fixed nesting-depth lookahead; a counter and stack are updated left to
 right, subject to the configured nesting resource limit.
 
@@ -1034,7 +1034,7 @@ scanner hand-written, producing two parsing systems without removing the difficu
 | `columns` was declared | Column count is read from the tabular column specification | The hand annotation duplicated information already present in `@{}lcccccc@{}` |
 | Argument-position detection was left for corpus validation | Command arguments are selected from `xparse` and unified-latex signatures | LaTeX already provides declarative command-shape specifications |
 | Entity coverage was implicit | v0.1 admissions and exclusions are explicit | The hand annotation and counts for algorithms, lines and subfigures exposed the missing cases |
-| `needs` was admitted while its effect remained unresolved | `needs` is not a field | Emitting `\usepackage` injects bytes; the non-emitting check was measured wrong in 17–50% of real projects. Settled by the director, `decisions/0001` |
+| `needs` was admitted while its effect remained unresolved | `needs` is not a field | Emitting `\usepackage` injects bytes; the non-emitting check was measured wrong in 17–50% of real projects. Settled by the maintainer, `decisions/0001` |
 
 ### Open decisions
 
@@ -1060,7 +1060,7 @@ The following decisions remain open because the available evidence does not sele
     `\includegraphics` calls, 17 give both and 15 of those also give `keepaspectratio`, so the intent is
     almost always a bounding box rather than a stretch. Following it would be a second exception to
     no-injection and needs its own decision record.
-9. ~~**What `@cite` emits.**~~ Settled 2026-08-29 by the director: a citation construct is a LaTeX
+9. ~~**What `@cite` emits.**~~ Settled 2026-08-29 by the maintainer: a citation construct is a LaTeX
    citation command written with `@`, and it emits that command. No style vocabulary, no package
    inference, no fields. See §4.
 10. ~~**Package requirements.**~~ Settled 2026-08-29: `needs` is not a field, packages are source-authored.

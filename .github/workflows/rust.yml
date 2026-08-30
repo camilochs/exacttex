@@ -5,6 +5,9 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: read
+
 env:
   CARGO_TERM_COLOR: always
   RUSTFLAGS: -D warnings
@@ -49,3 +52,19 @@ jobs:
 
       - name: the parity suite ran rather than skipped
         run: '! grep -q "^skipped:" test-output.log'
+
+  msrv:
+    # Cargo.toml declares rust-version = "1.88"; a floor nobody builds on is
+    # a claim, not a guarantee. This job builds the workspace on exactly that
+    # toolchain. Tests stay on stable above — the floor promises "compiles",
+    # not "every dev-dependency of the future works".
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: "1.88"
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+      - name: build on the declared floor
+        run: cargo build --workspace --all-targets

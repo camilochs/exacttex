@@ -1,6 +1,6 @@
 # 0006 · A typed block speaks placement
 
-**Status:** accepted, 2026-08-30. Decided by the director.
+**Status:** accepted, 2026-08-30. Decided by the maintainer.
 **Issue:** [#81](https://github.com/camilochs/exacttex/issues/81)
 
 Phase 0a rewrote a published paper into the syntax and measured the gap that forced this: **634 of 662

@@ -84,7 +84,7 @@ fixed map would have called every one a type error.
 
 Two ways the demand is absent, and both are silence rather than error:
 
-- **An unmapped prefix demands nothing.** `def:geakg` is not in the map, so the reference is `?O`. Adding a
+- **An unmapped prefix demands nothing.** `def:sixtuple` is not in the map, so the reference is `?O`. Adding a
   prefix is how a class opts into checking; never adding one is a valid permanent state.
 - **No prefix demands nothing.** The 30 unprefixed labels keep working.
 

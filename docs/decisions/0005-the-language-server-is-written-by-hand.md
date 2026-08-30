@@ -1,6 +1,6 @@
 # 0005 · The language server is written by hand
 
-**Status:** accepted, 2026-08-29. Decided by the director.
+**Status:** accepted, 2026-08-29. Decided by the maintainer.
 **Issue:** [#16](https://github.com/camilochs/exacttex/issues/16)
 
 ---
@@ -15,7 +15,7 @@ the compiler, and the shape of that meeting is something this project will keep 
 are ours, the entity classes are ours, and the hover text is a rendering of a record `checking.md` §10
 already defines. A dependency that models the protocol also models an opinion about that meeting.
 
-The director set one condition with it: **it has to stay simple enough for an agent to maintain.** That is
+The maintainer set one condition with it: **it has to stay simple enough for an agent to maintain.** That is
 not a wish, it is the design constraint, and the four rules below exist to satisfy it.
 
 ## What keeps it maintainable

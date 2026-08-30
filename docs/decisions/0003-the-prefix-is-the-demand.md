@@ -1,6 +1,6 @@
 # 0003 · The identifier prefix is the reference's demand
 
-**Status:** accepted, 2026-08-29. Decided by the director.
+**Status:** accepted, 2026-08-29. Decided by the maintainer.
 **Issue:** [#11](https://github.com/camilochs/exacttex/issues/11)
 
 ---
@@ -89,7 +89,7 @@ fallback in the next section, not on that sample.
 
 ## Where it does not fire
 
-**An unmapped prefix demands nothing.** `def:geakg` and `lst:algorithm` are not in the map, so the reference
+**An unmapped prefix demands nothing.** `def:sixtuple` and `lst:algorithm` are not in the map, so the reference
 is `?O` and cannot fail. Adding a prefix to the map is how you opt a class into checking, and not adding one
 is a valid permanent state.
 

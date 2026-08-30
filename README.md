@@ -48,6 +48,36 @@ them interoperate. ExactTeX puts the model in the format.
 
 ---
 
+## Try it in a minute
+
+```sh
+git clone https://github.com/camilochs/exacttex
+cd exacttex
+cargo run -p xtex-cli -- check examples/hello.xtex
+```
+
+```
+coverage: 11.8%
+bibliography: unavailable — the document declares no bibliography
+```
+
+The file is ordinary LaTeX with one section annotated; the meter says how much of the document is
+under contract. Now misspell the reference — change `@ref(sec:results)` to `@ref(sec:resutls)` —
+and check again:
+
+```
+error[XT1003]: identifier `sec:resutls` is not declared — did you mean `sec:results`?
+  --> examples/hello.xtex:6:30
+  entity: section
+  name: sec:resutls
+  span: offset 106, length 11
+  --> examples/hello.xtex:4:22: `sec:results` is declared here
+  blame: xtex-construct
+```
+
+Plain LaTeX would have typeset that as a quiet `??`. Requires a [Rust toolchain](https://rustup.rs)
+(1.88 or newer); the compiler itself has zero dependencies to fetch.
+
 ## What it looks like
 
 ```latex
@@ -152,4 +182,4 @@ Two documents are binding for anyone changing the code: [`PHILOSOPHY.md`](PHILOS
 
 MIT. See [`LICENSE`](LICENSE).
 
-An AF Labs project.
+An [AF Labs](https://labs.artificialfallibility.com/) project.
