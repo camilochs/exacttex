@@ -138,29 +138,13 @@ still receives a `.tex` file.
 
 ## Documentation
 
-- [`PHILOSOPHY.md`](PHILOSOPHY.md) — what ExactTeX is, what it is not, and what may be claimed. Binding.
-- [`AGENTS.md`](AGENTS.md) — orientation, invariants, anti-patterns, workflow. Read before non-trivial
-  changes.
-- [`CONTRIBUTING.md`](CONTRIBUTING.md) — setup, tests, and the traps specific to working here.
-- [`ROADMAP.md`](ROADMAP.md) — the correctness properties, the compiler architecture, the parser
-  hazards, and the phases with their exit criteria.
-- [`docs/grammar.md`](docs/grammar.md) — the language specification: entry tokens, constructs,
-  boundaries, and where constructs are not recognized.
-- [`docs/checking.md`](docs/checking.md) — what the compiler is willing to call an error, and what it
-  refuses to: entity classes, the closed list of hard errors, coverage, blame, and the diagnostic fields.
-- [`docs/diagnostics.md`](docs/diagnostics.md) — running TeX and reporting what it said against your file,
-  including who is to blame.
-- [`docs/wasm.md`](docs/wasm.md) — the WebAssembly build: the calling convention, and why it carries the
-  only `unsafe` in the workspace.
-- [`docs/lsp.md`](docs/lsp.md) — the language server: what it answers, what it deliberately does not,
-  and why the protocol layer holds no logic.
-- [`docs/revisions.md`](docs/revisions.md) — the change model: the four constructs, the three views,
-  what accepting rewrites, and what the sidecar holds.
-- [`docs/decisions/`](docs/decisions/) — accepted decisions, one file each, with the evidence behind them.
-- [`docs/references.md`](docs/references.md) — what to read before each phase, and what each source
-  already settled or blocked.
-- [`docs/testing.md`](docs/testing.md) — the six test layers, and why the property tests cannot wait
-  for the last phase.
+The full documentation lives at **<https://camilochs.github.io/exacttex/>** — the language
+specification, what the compiler calls an error, the change model, the WebAssembly and LSP
+surfaces, and every accepted decision with the evidence behind it. The same pages are the
+[`docs/`](docs/) folder in this repository, one Markdown file each.
+
+Two documents are binding for anyone changing the code: [`PHILOSOPHY.md`](PHILOSOPHY.md)
+(what may be claimed) and [`AGENTS.md`](AGENTS.md) (invariants and workflow).
 
 ---
 
