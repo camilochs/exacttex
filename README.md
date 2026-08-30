@@ -10,9 +10,9 @@
   <img src="https://img.shields.io/badge/dependencies-0-082768" alt="zero dependencies">
 </p>
 
-ExactTeX is a document language with LaTeX as its backend. Rename a `.tex` file to `.xtex` and it keeps
-working — your LaTeX passes through byte for byte. From there you annotate what you want checked, and what
-you annotate is guaranteed.
+ExactTeX is LaTeX with gradual annotation: you name the object you want checked, and what you do not name
+stays ordinary LaTeX, transported byte for byte. Rename a `.tex` file to `.xtex` and it keeps working; from
+there you choose how much to annotate, and what you annotate is guaranteed.
 
 > **Status: the compiler works, and three doors open into it.** `xtex` parses, checks, emits LaTeX, writes
 > source maps and applies revisions; `xtex-lsp` gives an editor diagnostics, hover, completion and
