@@ -73,11 +73,15 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 `);
 // The README's centered logo-and-badges header belongs to GitHub; the site
 // already wears the logo, and a private repo's CI badge 404s anonymously.
-// Introduction starts at the first sentence of prose.
+// Introduction starts at the first line of prose — found by structure, not by
+// the sentence it happens to begin with: the earlier version searched for a
+// literal opening line and silently shipped the whole header the day that line
+// was reworded.
 {
   const raw = readFileSync(join(repo, "README.md"), "utf8");
-  const start = raw.indexOf("ExactTeX is a document language");
-  const trimmed = start > 0 ? raw.slice(start) : raw;
+  const lines = raw.split("\n");
+  const start = lines.findIndex((line) => line.trim() && !line.trimStart().startsWith("<"));
+  const trimmed = start > 0 ? lines.slice(start).join("\n") : raw;
   const tmp = join(here, "introduction.tmp.md");
   writeFileSync(tmp, trimmed);
   page(tmp, "introduction.md", "Introduction");
