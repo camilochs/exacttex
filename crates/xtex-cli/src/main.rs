@@ -1054,17 +1054,16 @@ fn cause_at(bytes: &[u8], at: usize) -> String {
             let name = String::from_utf8_lossy(&name);
             // `\begin{lstlisting}` and `\begin{verbatim}` are different
             // problems and collapsing them into `\begin` would hide that.
-            if name == "begin" {
-                if let Some(open) = rest.get(6) {
-                    if *open == b'{' {
-                        let environment: Vec<u8> = rest[7..]
-                            .iter()
-                            .take_while(|byte| **byte != b'}')
-                            .copied()
-                            .collect();
-                        return format!("\\begin{{{}}}", String::from_utf8_lossy(&environment));
-                    }
-                }
+            if name == "begin"
+                && let Some(open) = rest.get(6)
+                && *open == b'{'
+            {
+                let environment: Vec<u8> = rest[7..]
+                    .iter()
+                    .take_while(|byte| **byte != b'}')
+                    .copied()
+                    .collect();
+                return format!("\\begin{{{}}}", String::from_utf8_lossy(&environment));
             }
             return format!("\\{name}");
         }

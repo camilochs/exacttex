@@ -257,10 +257,10 @@ fn collect_bibitems(region: &[u8], found: &mut Declared) {
             at = open;
             continue;
         };
-        if let Ok(key) = std::str::from_utf8(trim(&region[open..close])) {
-            if !key.is_empty() {
-                found.inline_keys.insert(key.to_owned());
-            }
+        if let Ok(key) = std::str::from_utf8(trim(&region[open..close]))
+            && !key.is_empty()
+        {
+            found.inline_keys.insert(key.to_owned());
         }
         at = close + 1;
     }
@@ -364,10 +364,11 @@ fn scan_bib(bytes: &[u8]) -> Result<BTreeSet<String>, String> {
         if !matches!(entry_type.as_slice(), b"preamble" | b"string") {
             validate_field_separators(bytes, body_start, close)?;
         }
-        if !matches!(entry_type.as_slice(), b"preamble" | b"string") && key_end > key_start {
-            if let Ok(key) = std::str::from_utf8(&bytes[key_start..key_end]) {
-                keys.insert(key.to_owned());
-            }
+        if !matches!(entry_type.as_slice(), b"preamble" | b"string")
+            && key_end > key_start
+            && let Ok(key) = std::str::from_utf8(&bytes[key_start..key_end])
+        {
+            keys.insert(key.to_owned());
         }
         at = close + 1;
     }
