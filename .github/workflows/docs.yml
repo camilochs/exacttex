@@ -27,9 +27,12 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    # Pages is unavailable on this plan while the repository is private; the
-    # build must stay green anyway, and deploys begin the day it goes public.
-    continue-on-error: true
+    # Pages is unavailable while the repository is private, so the deploy
+    # SKIPS on a private repo — visibly, in the checks list. The day the
+    # repository goes public this condition turns true by itself, and from
+    # then on a broken deploy is red, never quietly tolerated. The old form
+    # (continue-on-error) would have reported green forever.
+    if: ${{ !github.event.repository.private }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
