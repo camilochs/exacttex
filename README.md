@@ -107,18 +107,18 @@ Known(A) ~ Known(B)   if and only if A == B     <- this can fail
 ```
 
 `?O` is consistent with everything, so nothing involving unmodelled LaTeX can be inconsistent, so nothing
-involving unmodelled LaTeX can fail. **`?O` does not mean invalid. It means the compiler has no grounds.**
+involving unmodelled LaTeX can fail. **`?O` marks absence of grounds, not invalidity.**
 
 Two consequences worth stating plainly.
 
-**Renaming a `.tex` to `.xtex` and changing nothing checks clean.** Not by care taken case by case — by
-construction, because every entity in it is `?O`. That is the gradual guarantee (Siek, Vitousek, Cimini and
+**Renaming a `.tex` to `.xtex` and changing nothing checks clean, because every entity in it is `?O`.**
+That holds by construction, without case-by-case care. That is the gradual guarantee (Siek, Vitousek, Cimini and
 Boyland, SNAPL 2015) instantiated for documents, and it is what makes the on-ramp real rather than a
 promise.
 
 **You choose how much to annotate, and the compiler tells you how much you chose.** `xtex check` reports
-coverage: the fraction of the document it checked. This is the analogue of `any` and `noImplicitAny`. What
-matters is not the number but a fall in it — a file that was 60% checked and is now 30% gained something the
+coverage: the fraction of the document it checked. This is the analogue of `any` and `noImplicitAny`. The
+number matters less than its trend: a file that was 60% checked and is now 30% gained something the
 parser cannot model.
 
 The check that types buy, and that no LaTeX tool performs: `@ref` to a `\table(fig:main)` while your prose

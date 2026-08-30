@@ -64,7 +64,7 @@ not go in a README, a PR body, or a report.
   opaque region is a silent corruption of somebody's accepted paper. If a change makes the output "nicer",
   it is a bug.
 - **`?O` is not "invalid".** Ordinary LaTeX has an unknown *open* type and is consistent with everything.
-  Making it fail is not stricter checking, it is a broken promise: a renamed `.tex` must check clean.
+  Making it fail would break a promise rather than tighten the checking: a renamed `.tex` must check clean.
 - **A structural check has to survive the constructs that legitimately break it.** Count columns without
   summing `\multicolumn` widths and the checker reports false positives on ordinary tables.
 - **A hazard has to be reproduced before it is handled.** The parser's behaviour on `\catcode` is decided by

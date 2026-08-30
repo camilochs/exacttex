@@ -64,8 +64,7 @@ exists today.
 ## 4 · Invariants — never break these
 
 - **Untouched LaTeX comes out byte-identical.** `emit(parse(u)) == u` for input containing no ExactTeX
-  constructs. A transporter that sometimes reformats is not a slower transporter, it is a false one, and the
-  file it corrupts is an already-accepted paper.
+  constructs. A transporter that sometimes reformats is a false transporter — and the file it corrupts is an already-accepted paper.
 - **Annotating never changes the PDF.** Adding a valid annotation must not alter a rendered pixel, and must
   not turn a passing build into a failing one. Test by fuzzing annotations and comparing rasters.
 - **Erasure, never injection.** No assertions, wrapper environments or support packages are written into the
@@ -86,8 +85,7 @@ exists today.
   changes its meaning.
 - **Numbers in docs have a command behind them.** If a README or a PR claims a coverage figure, a runtime or
   an error rate, a documented command reproduces it.
-- **Dependencies are permissively licensed.** MIT, Apache-2.0, BSD, ISC. SPDX identifier read from package
-  metadata, not recalled. GPL, AGPL and SSPL are never proposed — ExactTeX is MIT, which is why texlab's
+- **Dependencies are permissively licensed.** MIT, Apache-2.0, BSD, ISC. SPDX identifier (the standard machine-readable licence code, e.g. `MIT`, `GPL-3.0-only`) read from package metadata, not recalled. GPL, AGPL and SSPL are never proposed — ExactTeX is MIT, which is why texlab's
   parser cannot be reused.
 
 ---
@@ -182,8 +180,7 @@ This repo has one maintainer, who reviews every PR. That removes the second pair
 manufactured instead:
 
 - **Run the diff past a decorrelated model arm before requesting review.** An agent writing and one human
-  reviewing is a two-link chain whose second link is the only filter. A second model lineage reading the diff
-  is not a second opinion; it is a substrate whose errors do not correlate with the one that wrote the code.
+  reviewing is a two-link chain whose second link is the only filter. A second model lineage reading the diff is a substrate whose errors do not correlate with the one that wrote the code — which a same-lineage second opinion cannot give.
   It never authors the fix — it locates defects, and the maintainer decides what to adopt.
 - **The PR carries the evidence; the reviewer does not reconstruct it.** A PR whose test plan has no real
   command output is returned unread, not reviewed partially.

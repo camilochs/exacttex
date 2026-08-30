@@ -287,9 +287,7 @@ diagnostics:
   Every diagnostic in this project names something the author declared; what cannot be declared is what will
   never get a good error message. This does not judge the notation, which is a settled design decision;
 - run a minimal defective example for every error class through `tectonic`, `chktex`, `chklref` and
-  `texlab`, and record what each one reports. This is not about whether the checks are worth having — it is
-  about where the messages have to be better than what LaTeX already prints, and which classes have no
-  existing message at all.
+  `texlab`, and record what each one reports. The question here is where the messages have to be better than what LaTeX already prints, and which classes have no existing message at all — not whether the checks are worth having.
 
 **Done when** both write-ups exist: the list of things the language cannot yet name, and the table of what
 existing tools already report. Both feed Phase 1 — the first says what the grammar has to cover, the second
@@ -377,8 +375,7 @@ phase is translation, not new behaviour — with one exception worth naming: the
 sequence` and nothing this project exists to add.
 
 The phase ends with the module published as a versioned artefact, which is what lets the browser product live
-in its own repository. That separation is not about size. The browser TeX engine under consideration is
-AGPL-3.0 while this project is MIT, and a licence boundary cannot be undone once it is in a repository's
+in its own repository. That separation follows from licensing, not size: the browser TeX engine under consideration is AGPL-3.0 while this project is MIT, and a licence boundary cannot be undone once it is in a repository's
 history; and this workspace holds four packages in `Cargo.lock` and no external dependencies, a promise a
 `package.json` in the same tree would quietly weaken.
 

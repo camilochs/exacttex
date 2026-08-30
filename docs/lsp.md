@@ -30,17 +30,16 @@ Capabilities declared: `textDocumentSync: 1` (full text on every change), `hover
 
 ## Diagnostics are the checker's, not the server's
 
-The server calls `check`. It does not have diagnostics of its own, does not filter them, and does not
-reword them. `xtex check` and the editor show the same code, the same message and the same span for the same
-input, and that is true because there is one implementation rather than because two are kept in step.
+The server calls `check`. It has no diagnostics of its own and never filters or rewords the checker's:
+`xtex check` and the editor show the same code, the same message and the same span for the same input,
+because one implementation answers both.
 
 That is the exit criterion of this phase, and `opening_a_document_publishes_the_same_diagnostics_the_cli_reports`
 is where it is checked.
 
 One difference is deliberate: **the server reads no bibliography.** It is handed a document, not a project
 root, so the bibliography is `Unavailable` — which is exactly the state that keeps every `@cite` silent
-rather than reported as missing. An editor that flagged every citation in a file it could not resolve would
-be worse than one that flagged none.
+rather than reported as missing. An editor that flagged every citation in a file it could not resolve would train the author to ignore the warning.
 
 ---
 
@@ -70,8 +69,7 @@ This is the type system paying for itself in the editor rather than only in the 
 whose class is `?O` is always offered, because `?O` is consistent with everything and the compiler has no
 grounds to exclude it.
 
-Outside a construct, nothing is offered. Suggesting every identifier in a document while someone writes a
-sentence is worse than suggesting none.
+Outside a construct, nothing is offered. Outside a construct, suggesting every identifier in the document turns completion into noise.
 
 ---
 
