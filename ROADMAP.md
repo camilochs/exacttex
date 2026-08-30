@@ -403,18 +403,17 @@ artefact using nothing but [`docs/wasm.md`](docs/wasm.md).
 
 ## Not yet verified
 
-- No compiler, LSP, native binary, WASM package, or browser integration currently exists.
-- The Phase 0 syntax comparison has not been run.
-- The Phase 0 tool comparison is a prediction, not a measurement.
-- The formal grammar and its lexical-boundary examples are not written.
-- The acceptable `OpaqueToEof` corpus threshold has not been selected.
-- Group-local quarantine after `\catcode` has not been established as reliable; the safe fallback remains
-  `OpaqueToEof`.
-- The transport and typesetting-equivalence properties have not been exercised against a licensed corpus.
-- TeX raster normalization and its noise floor have not been measured.
-- The source-map format and the revision sidecar schema are not frozen.
-- The interaction between typed constructs and the no-injection rule requires an explicit specification
-  decision.
-- The browser TeX integrations named above have not been tested with ExactTeX output.
-- Literature outside the languages and indexes already searched remains outside the novelty-check boundary.
+The compiler, the CLI, the LSP and the WebAssembly module exist and their suites run in CI; the formal
+grammar is written; transport (property A) and clean checking are measured against the corpus in
+`tests/corpus/RESULTS.md`. What remains open, honestly stated:
+
+- **Typesetting equivalence (property B) is unmeasured.** That annotating a document moves no pixel of
+  its typeset output requires compiling each corpus document twice and comparing rasters; the raster
+  normalization and its noise floor have not been established.
+- The WebAssembly artefact's only downstream consumer today is a private repository; no public
+  integration has exercised the published contract yet.
+- Group-local quarantine after `\catcode` remains unestablished; the shipping behaviour is the safe
+  fallback, `OpaqueToEof` (grammar §confidence).
+- Literature outside the languages and indexes already searched remains outside the novelty-check
+  boundary.
 - Any new external capability or priority claim requires a fresh check against sources opened for it.
