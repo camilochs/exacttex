@@ -11,3 +11,11 @@
   --sl-color-accent-high: #c9bcff;
 }
 .site-title img { height: 1.75rem; }
+
+/* The hero: the headline is a sentence, not a repeated brand; scale it, and
+   let the wordmark image yield on narrow screens instead of stacking. */
+.hero h1 { font-size: clamp(1.9rem, 3.6vw, 2.9rem); line-height: 1.2; }
+.hero h1 em { font-style: italic; color: var(--sl-color-accent); }
+@media (max-width: 50rem) {
+  .hero img { max-width: 14rem; margin-inline: auto; }
+}

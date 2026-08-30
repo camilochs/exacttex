@@ -5,6 +5,8 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const here = dirname(fileURLToPath(import.meta.url));
+const base = process.env.DOCS_BASE ?? "/exacttex/";
+const prefix = base.endsWith("/") ? base : base + "/";
 const repo = join(here, "..", "..");
 const out = join(here, "..", "src", "content", "docs");
 
@@ -17,7 +19,8 @@ function page(src, dest, titleOverride, order) {
   const title = titleOverride ?? (heading ? heading[1].replace(/[`*]/g, "") : dest);
   if (heading) text = text.replace(/^#\s+.+\n/m, "");
   // Root-relative repo links have no meaning on the site; point them at GitHub.
-  text = text.replaceAll("](docs/", "](/exacttex/");
+  text = text.replaceAll("](docs/", `](${prefix}`);
+  text = text.replaceAll('src="docs/assets/', `src="${prefix}assets/`);
   const front = ["---", `title: "${title.replaceAll('"', '\\"')}"`];
   if (order !== undefined) front.push(`sidebar:`, `  order: ${order}`);
   front.push("---", "");
@@ -29,15 +32,16 @@ title: ExactTeX
 description: Know whether your document is sound before you look at the PDF.
 template: splash
 hero:
+  title: Know whether your document is sound <em>before you look at the PDF</em>.
   tagline: A document language with LaTeX as its backend. Rename your .tex and it keeps working — what you annotate is guaranteed by a compiler.
   image:
     file: ../../assets/exacttex-logo.svg
   actions:
     - text: Introduction
-      link: /exacttex/introduction/
+      link: ${prefix}introduction/
       icon: right-arrow
     - text: The grammar
-      link: /exacttex/grammar/
+      link: ${prefix}grammar/
       variant: minimal
     - text: GitHub
       link: https://github.com/camilochs/exacttex
@@ -67,7 +71,18 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
   </Card>
 </CardGrid>
 `);
-page(join(repo, "README.md"), "introduction.md", "Introduction");
+// The README's centered logo-and-badges header belongs to GitHub; the site
+// already wears the logo, and a private repo's CI badge 404s anonymously.
+// Introduction starts at the first sentence of prose.
+{
+  const raw = readFileSync(join(repo, "README.md"), "utf8");
+  const start = raw.indexOf("ExactTeX is a document language");
+  const trimmed = start > 0 ? raw.slice(start) : raw;
+  const tmp = join(here, "introduction.tmp.md");
+  writeFileSync(tmp, trimmed);
+  page(tmp, "introduction.md", "Introduction");
+  rmSync(tmp);
+}
 page(join(repo, "PHILOSOPHY.md"), "philosophy.md", "Philosophy");
 page(join(repo, "ROADMAP.md"), "roadmap.md", "Roadmap");
 page(join(repo, "CONTRIBUTING.md"), "contributing.md", "Contributing");

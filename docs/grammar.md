@@ -47,7 +47,7 @@ There is no top-level ExactTeX replacement grammar. A `.xtex` file is a LaTeX by
 constructs are recognized at the positions defined by this specification.
 
 ```text
-document    = ( ntex-construct | latex-bytes )*
+document    = ( xtex-construct | latex-bytes )*
 latex-bytes = ⟨bytes not beginning a recognized ExactTeX construct at the current position⟩
 ```
 
@@ -70,7 +70,7 @@ construct, an invalid annotation encoding, an I/O failure, a resource limit, or 
 Only these byte sequences can begin a ExactTeX construct:
 
 ```text
-ntex-construct = at-construct | block-construct | raw
+xtex-construct = at-construct | block-construct | raw
 
 at-entry        = "@" at-keyword "("
 block-entry     = "\" block-keyword "("
