@@ -6,7 +6,9 @@ import starlight from "@astrojs/starlight";
 
 export default defineConfig({
   site: "https://camilochs.github.io",
-  base: "/exacttex",
+  // The Pages deploy lives under /exacttex; a tailnet preview builds with
+  // DOCS_BASE=/ so it can be served from any static server's root.
+  base: process.env.DOCS_BASE ?? "/exacttex",
   integrations: [
     starlight({
       title: "ExactTeX",
