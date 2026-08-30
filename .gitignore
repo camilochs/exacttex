@@ -25,3 +25,12 @@ Cargo.lock.bak
 # Experiments build on their own
 /tests/experiments/**/target/
 /tests/experiments/**/Cargo.lock
+
+# The docs site's build artifacts, also ignored from its own .gitignore once
+# the site branch merges — doubled here so a branch cut from main before that
+# can never sweep node_modules into a commit again (it happened twice).
+site/node_modules/
+site/dist/
+site/.astro/
+site/src/content/docs/
+site/public/assets/

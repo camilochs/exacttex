@@ -12,9 +12,9 @@ pub enum OriginKind {
     /// LaTeX copied from the author's source.
     AuthorLatex,
     /// Bytes copied from an explicit ExactTeX construct.
-    NextTexNative,
+    XtexNative,
     /// Bytes synthesized while lowering a ExactTeX construct.
-    NextTexGenerated,
+    XtexGenerated,
 }
 
 impl OriginKind {
@@ -23,8 +23,8 @@ impl OriginKind {
     pub const fn as_str(self) -> &'static str {
         match self {
             Self::AuthorLatex => "author-latex",
-            Self::NextTexNative => "xtex-construct",
-            Self::NextTexGenerated => "xtex-generated",
+            Self::XtexNative => "xtex-construct",
+            Self::XtexGenerated => "xtex-generated",
         }
     }
 }
@@ -196,8 +196,8 @@ pub fn emit_with_map(sources: &Sources, document: &Document) -> Result<MappedEmi
             Node::Construct {
                 kind: EntryToken::Raw,
                 ..
-            } => OriginKind::NextTexNative,
-            Node::Construct { .. } => OriginKind::NextTexGenerated,
+            } => OriginKind::XtexNative,
+            Node::Construct { .. } => OriginKind::XtexGenerated,
         };
         let span = if matches!(
             node,
