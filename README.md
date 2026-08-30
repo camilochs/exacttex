@@ -182,4 +182,4 @@ Two documents are binding for anyone changing the code: [`PHILOSOPHY.md`](PHILOS
 
 MIT. See [`LICENSE`](LICENSE).
 
-An AF Labs project.
+An [AF Labs](https://labs.artificialfallibility.com/) project.

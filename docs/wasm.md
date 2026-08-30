@@ -14,7 +14,7 @@ The same compiler, as a `.wasm` file the browser runs. No compile server, and no
 ```sh
 rustup target add wasm32-unknown-unknown
 cargo build -p xtex-wasm --target wasm32-unknown-unknown --release
-# target/wasm32-unknown-unknown/release/xtex_wasm.wasm — about 140 KB
+# target/wasm32-unknown-unknown/release/xtex_wasm.wasm — about 290 KB
 ```
 
 There is no build step after that. No bundler, no generated glue, no `npm install`. The module is a file with

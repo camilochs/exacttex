@@ -366,7 +366,7 @@ fn positional_query(
     answer(&analysed, document, offset).map_or_else(Vec::new, String::into_bytes)
 }
 
-/// Hover text for a position. See [`positional_query`] for the input.
+/// Hover text for a position. See `positional_query` for the input.
 ///
 /// # Safety
 ///
@@ -382,7 +382,7 @@ pub unsafe extern "C" fn xtex_hover(pointer: *const u8, len: usize) -> *mut u8 {
     }))
 }
 
-/// Completions at a position. See [`positional_query`] for the input.
+/// Completions at a position. See `positional_query` for the input.
 ///
 /// # Safety
 ///
@@ -402,7 +402,7 @@ pub unsafe extern "C" fn xtex_completions(pointer: *const u8, len: usize) -> *mu
     }))
 }
 
-/// The declaration a position refers to. See [`positional_query`].
+/// The declaration a position refers to. See `positional_query`.
 ///
 /// # Safety
 ///

@@ -19,3 +19,12 @@ unsafe_code = "forbid"
 [workspace.lints.clippy]
 all = { level = "deny", priority = -1 }
 pedantic = { level = "warn", priority = -1 }
+
+# The wasm artefact ships to browsers; docs/wasm.md quotes its size. Without
+# this profile a release build weighed ~406 KB — the settings below are what
+# make the documented number true.
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
+codegen-units = 1
