@@ -12,7 +12,11 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "ExactTeX",
-      logo: { src: "./src/assets/exacttex-logo.svg", replacesTitle: true },
+      logo: {
+        light: "./src/assets/exacttex-logo.svg",
+        dark: "./src/assets/exacttex-logo-dark.svg",
+        replacesTitle: true,
+      },
       customCss: ["./src/styles/theme.css"],
       social: [{ icon: "github", label: "GitHub", href: "https://github.com/camilochs/exacttex" }],
       sidebar: [

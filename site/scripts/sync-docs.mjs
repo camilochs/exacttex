@@ -35,7 +35,8 @@ hero:
   title: Know whether your document is sound <em>before you look at the PDF</em>.
   tagline: A document language with LaTeX as its backend. Rename your .tex and it keeps working — what you annotate is guaranteed by a compiler.
   image:
-    file: ../../assets/exacttex-logo.svg
+    light: ../../assets/exacttex-logo.svg
+    dark: ../../assets/exacttex-logo-dark.svg
   actions:
     - text: Introduction
       link: ${prefix}introduction/
