@@ -162,7 +162,7 @@ Neither front door owns resolution, checking, emission, diagnostics, or editor b
 5. **Attribute and report**
    - Parse TeX file-line diagnostics.
    - Map output byte offsets back to source spans.
-   - Assign blame as `AuthorLatex`, `NextTexNative`, `NextTexGenerated`, or `unresolved`.
+   - Assign blame as `AuthorLatex`, `XtexNative`, `XtexGenerated`, or `unresolved`.
    - Translate supported visual failures using declared entity names.
    - Render one diagnostic model as human-readable text, JSON, and LSP diagnostics.
 
@@ -191,8 +191,8 @@ Each emitted file has a corresponding map such as `paper.xtexmap` containing:
 ```rust
 enum OriginKind {
     AuthorLatex,
-    NextTexNative,
-    NextTexGenerated,
+    XtexNative,
+    XtexGenerated,
 }
 
 struct MapSegment {
