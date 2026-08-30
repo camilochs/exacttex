@@ -68,7 +68,7 @@ REPOSITORIES = [
 
 SEED = 20260829
 DELAY = 3.0  # seconds between requests to arxiv.org, per their terms of use
-AGENT = "exacttex-corpus/0.1 (research measurement; camilochs@gmail.com)"
+AGENT = "exacttex-corpus/0.1 (research measurement; https://github.com/camilochs/exacttex)"
 
 _last_request = [0.0]
 

@@ -1,6 +1,6 @@
 # 0003 · The identifier prefix is the reference's demand
 
-**Status:** accepted, 2026-08-29. Decided by the director.
+**Status:** accepted, 2026-08-29. Decided by the maintainer.
 **Issue:** [#11](https://github.com/camilochs/exacttex/issues/11)
 
 ---

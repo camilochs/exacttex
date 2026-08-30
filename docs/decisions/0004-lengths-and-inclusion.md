@@ -1,6 +1,6 @@
 # 0004 · What a percentage becomes, and what `@import` becomes
 
-**Status:** accepted, 2026-08-29. Decided by the director.
+**Status:** accepted, 2026-08-29. Decided by the maintainer.
 **Constraint he set:** resolve both without adding a keyword.
 **Issue:** [#13](https://github.com/camilochs/exacttex/issues/13)
 
@@ -42,7 +42,7 @@ This was a hole rather than a trade. The first draft defined a `length` as a num
 which left `\columnwidth` unreachable without abandoning the typed block for plain LaTeX — and inside a
 float spanning both columns, `\linewidth` is the full page width, so a column-width image there has no
 percentage form at all. The restriction was written without anyone asking whether it should hold. The
-director asked.
+maintainer asked.
 
 A control word followed by `{` is a command taking an argument, not a length, and is rejected.
 

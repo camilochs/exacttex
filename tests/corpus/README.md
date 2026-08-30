@@ -173,7 +173,7 @@ With caches excluded the rate was still 15.9%, and the files were real papers go
 bytes. One byte was responsible:
 
 ```latex
-{\LARGE\bfseries CERTAIN}\\[4pt]
+{\LARGE\bfseries TITLE}\\[4pt]
                           ^^
 ```
 

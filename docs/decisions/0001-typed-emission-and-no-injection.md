@@ -1,6 +1,6 @@
 # 0001 · Typed emission, and no injection
 
-**Status:** accepted, 2026-08-29. Decided by the director.
+**Status:** accepted, 2026-08-29. Decided by the maintainer.
 **Supersedes:** the `needs` field, and the README sentence promising package synthesis.
 **Issue:** [#5](https://github.com/camilochs/exacttex/issues/5)
 
@@ -16,9 +16,9 @@ Two documents in this repository prescribed different emitted bytes for the same
 
 Both cannot be true. The emitter could not be written while they disagreed.
 
-The director's original decision was that a block declares the packages it needs — a `needs` field. The
+The maintainer's original decision was that a block declares the packages it needs — a `needs` field. The
 specification removed the field instead, and recorded that it was doing so against that decision. This record
-closes the gap: **the decision is now to remove it**, taken by the director with the measurement below.
+closes the gap: **the decision is now to remove it**, taken by the maintainer with the measurement below.
 
 ## The measurement that decided it
 
