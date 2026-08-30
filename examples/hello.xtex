@@ -1,0 +1,10 @@
+\documentclass{article}
+\begin{document}
+
+\section{Results}@id(sec:results)
+
+The findings in Section~@ref(sec:results) hold: every reference on this
+page is a checked identity, and everything else is ordinary LaTeX that
+travels to the emitted file byte for byte.
+
+\end{document}
