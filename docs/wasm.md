@@ -180,8 +180,7 @@ result. Sixteen significant digits of a ratio is false precision anyway, and it 
 targets, so the JSON now writes six decimals. The diagnostics themselves were identical throughout.
 
 `cargo test -p xtex-wasm` runs the whole comparison. It builds the module, runs it under Node, and compares
-against the native path. When the target or Node is missing it says so and returns — a silently skipped test
-is worse than an absent one.
+against the native path. When the target or Node is missing it says so and returns — a test that silently skips reports nothing went wrong when nothing ran.
 
 ---
 

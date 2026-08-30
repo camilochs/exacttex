@@ -59,7 +59,7 @@ paper.xtex:212 — column 3 does not fit the width you declared
 
 Same fact, said in the author's terms, using the name the author gave the object. This is only possible
 because the author declared the entity. **That is what the syntax is for: it gives the tooling names to speak
-with.** Not brevity. Names.
+with, not brevity.**
 
 An agent repairing a document needs this even more than a human does. A human annoyed by a misplaced error
 complains; an agent edits the wrong place and loops without converging.
@@ -84,8 +84,8 @@ This is what separates ExactTeX from converters. MyST *converts* LaTeX into its 
 documentation calls that "a transitional solution" and states it is not a full LaTeX renderer. Converting is
 a one-way trip. Transporting lets you go back, hand the file to a coauthor, and submit it.
 
-Transport is not the product. It is the on-ramp that makes 3.1 and 3.2 reachable from documents that already
-exist.
+Transport is the on-ramp that makes 3.1 and 3.2 reachable from documents that already exist, not the
+product in itself.
 
 ## 4. Binding design rules
 
