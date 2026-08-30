@@ -76,7 +76,7 @@ error[XT1003]: identifier `sec:resutls` is not declared — did you mean `sec:re
 ```
 
 Plain LaTeX would have typeset that as a quiet `??`. Requires a [Rust toolchain](https://rustup.rs)
-(1.85 or newer); the compiler itself has zero dependencies to fetch.
+(1.88 or newer); the compiler itself has zero dependencies to fetch.
 
 ## What it looks like
 
