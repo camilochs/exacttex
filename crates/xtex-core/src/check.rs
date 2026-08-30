@@ -196,34 +196,32 @@ pub fn check_documents(
                 // reported it at its entry token, and the grammar makes that a
                 // hard error (grammar.md §inline). Dropping it here was the
                 // hole that let `@id(x` fail only at its references.
-                if malformed {
-                    if let Some(entry) = inline_entry(kind) {
-                        // The half-written payload often names the thing the
-                        // writer was reaching for; when that name is declared,
-                        // point at the declaration so nobody has to hunt it.
-                        let related = half_written_target(sources, source, span, kind, table)
-                            .map(|(candidate, declaration)| {
-                                vec![Related {
-                                    source: declaration.payload.source,
-                                    span: declaration.payload.span,
-                                    message: format!("`{candidate}` is declared here"),
-                                }]
-                            })
-                            .unwrap_or_default();
-                        diagnostics.push(Diagnostic {
-                            code: "XT1014",
-                            entity: EntityClass::UnknownOpen,
-                            name: None,
-                            source,
-                            span,
-                            message: format!(
-                                "`{entry}` never closes before the end of its line — expected `)`"
-                            ),
-                            related,
-                            severity: Severity::Error,
-                            blame: Blame::XtexConstruct,
-                        });
-                    }
+                if malformed && let Some(entry) = inline_entry(kind) {
+                    // The half-written payload often names the thing the
+                    // writer was reaching for; when that name is declared,
+                    // point at the declaration so nobody has to hunt it.
+                    let related = half_written_target(sources, source, span, kind, table)
+                        .map(|(candidate, declaration)| {
+                            vec![Related {
+                                source: declaration.payload.source,
+                                span: declaration.payload.span,
+                                message: format!("`{candidate}` is declared here"),
+                            }]
+                        })
+                        .unwrap_or_default();
+                    diagnostics.push(Diagnostic {
+                        code: "XT1014",
+                        entity: EntityClass::UnknownOpen,
+                        name: None,
+                        source,
+                        span,
+                        message: format!(
+                            "`{entry}` never closes before the end of its line — expected `)`"
+                        ),
+                        related,
+                        severity: Severity::Error,
+                        blame: Blame::XtexConstruct,
+                    });
                 }
                 return;
             };

@@ -76,13 +76,12 @@ pub(crate) fn substitution_arrows(bytes: &[u8], start: usize, end: usize) -> usi
         let mut at = start + text.start();
         let text_end = start + text.end();
         while at + 1 < text_end {
-            if bytes[at] == b'\\' {
-                if let Extent::Through(next) = command_extent(bytes, at) {
-                    if next <= text_end {
-                        at = next;
-                        continue;
-                    }
-                }
+            if bytes[at] == b'\\'
+                && let Extent::Through(next) = command_extent(bytes, at)
+                && next <= text_end
+            {
+                at = next;
+                continue;
             }
             if !is_escaped(bytes, at) {
                 match bytes[at] {
@@ -111,13 +110,12 @@ pub fn substitution_separator(bytes: &[u8], start: usize, end: usize) -> Option<
         let mut at = start + text.start();
         let text_end = start + text.end();
         while at + 1 < text_end {
-            if bytes[at] == b'\\' {
-                if let Extent::Through(next) = command_extent(bytes, at) {
-                    if next <= text_end {
-                        at = next;
-                        continue;
-                    }
-                }
+            if bytes[at] == b'\\'
+                && let Extent::Through(next) = command_extent(bytes, at)
+                && next <= text_end
+            {
+                at = next;
+                continue;
             }
             if !is_escaped(bytes, at) {
                 match bytes[at] {

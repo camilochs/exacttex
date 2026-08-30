@@ -201,26 +201,26 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
     while at < bytes.len() {
         match &region {
             Region::Prose => {
-                if let Some(&(interior_end, call_end)) = text_arguments.last() {
-                    if at >= interior_end {
-                        flush!(at.min(interior_end));
-                        text_arguments.pop();
-                        let tail = at.max(interior_end);
-                        if tail < call_end {
-                            pieces.push(Piece::Arguments(span(tail, call_end)));
-                            at = call_end;
-                        }
-                        text_start = at;
-                        continue;
+                if let Some(&(interior_end, call_end)) = text_arguments.last()
+                    && at >= interior_end
+                {
+                    flush!(at.min(interior_end));
+                    text_arguments.pop();
+                    let tail = at.max(interior_end);
+                    if tail < call_end {
+                        pieces.push(Piece::Arguments(span(tail, call_end)));
+                        at = call_end;
                     }
+                    text_start = at;
+                    continue;
                 }
-                if let Some((start, name)) = display_opening.as_ref() {
-                    if at == *start {
-                        enter!(at);
-                        region = Region::Environment { name: name.clone() };
-                        display_opening = None;
-                        continue;
-                    }
+                if let Some((start, name)) = display_opening.as_ref()
+                    && at == *start
+                {
+                    enter!(at);
+                    region = Region::Environment { name: name.clone() };
+                    display_opening = None;
+                    continue;
                 }
                 if display_opening.is_none()
                     && let Some(opening) = display_math_environment_opening(bytes, at)
