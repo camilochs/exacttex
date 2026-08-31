@@ -112,6 +112,38 @@ pub fn classify(message: &str) -> Option<Visual> {
     None
 }
 
+/// The quantity a visual failure names, exactly as the engine wrote it.
+///
+/// `Overfull \hbox (113.94pt too wide)` carries it in parentheses; `Float
+/// too large for page by 327.53pt` after `by`. Value and unit stay together
+/// and untouched — `12.3pt` is the engine's number, not a recomputation —
+/// so the restated sentence can say *how much* without discarding evidence
+/// (issue #101). A message with no recognisable amount answers `None`, and
+/// the sentence simply goes without.
+#[must_use]
+pub fn amount_in(message: &str) -> Option<&str> {
+    if let Some(open) = message.find('(') {
+        let rest = &message[open + 1..];
+        for tail in ["pt too wide", "pt too high"] {
+            if let Some(end) = rest.find(tail) {
+                let digits = &rest[..end];
+                if !digits.is_empty() && digits.chars().all(|c| c.is_ascii_digit() || c == '.') {
+                    return Some(&rest[..end + 2]);
+                }
+            }
+        }
+    }
+    if let Some(at) = message.find(" by ") {
+        let rest = &message[at + 4..];
+        let end = rest.find("pt")? + 2;
+        let candidate = &rest[..end - 2];
+        if !candidate.is_empty() && candidate.chars().all(|c| c.is_ascii_digit() || c == '.') {
+            return Some(&rest[..end]);
+        }
+    }
+    None
+}
+
 /// The line a `.log` record names, when it names one in its own text.
 ///
 /// `LaTeX Warning: … on input line 9.` carries its line inside the sentence
@@ -396,5 +428,37 @@ mod tests {
         };
         assert_eq!(file, "odd:name.tex");
         assert_eq!(line, 12);
+    }
+}
+
+#[cfg(test)]
+mod amount_tests {
+    use super::amount_in;
+
+    #[test]
+    fn the_amount_is_the_engines_own_number() {
+        // Transcribed from the same live shapes the classifier holds.
+        assert_eq!(
+            amount_in("Overfull \\hbox (113.94pt too wide) in paragraph at lines 5--5"),
+            Some("113.94pt")
+        );
+        assert_eq!(
+            amount_in("Overfull \\vbox (38.48pt too high) detected at line 16"),
+            Some("38.48pt")
+        );
+        assert_eq!(
+            amount_in("LaTeX Warning: Float too large for page by 327.53pt on input line 9."),
+            Some("327.53pt")
+        );
+        // No amount, no invention.
+        assert_eq!(
+            amount_in("Missing character: There is no X in font ec-lmr10!"),
+            None
+        );
+        // A parenthesis that is not a measurement stays out.
+        assert_eq!(
+            amount_in("Overfull \\hbox (badness 10000) in paragraph"),
+            None
+        );
     }
 }

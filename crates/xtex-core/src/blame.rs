@@ -36,8 +36,9 @@ pub struct Translated {
     /// The author's position, when a map segment supports one.
     pub span: Option<DiagnosticSpan>,
     /// The author's entity, when a map segment and a declaration both supply
-    /// the evidence: its name, its class, and how the failure reads.
-    pub entity: Option<(String, EntityClass, Visual)>,
+    /// the evidence: its name, its class, how the failure reads, and how
+    /// much — the engine's own quantity, where its message named one.
+    pub entity: Option<(String, EntityClass, Visual, Option<String>)>,
 }
 
 /// Merges the engine's stderr with its log file, the way the CLI always has.
@@ -123,6 +124,8 @@ fn translate_one(
         }
     };
 
+    // Read the amount before the message moves into the mapper.
+    let amount = crate::texlog::amount_in(&message).map(str::to_owned);
     let mapped = map_emitted_diagnostic(message, &emission.bytes, line, 1, &emission.map);
 
     // A typesetting failure is restated in the author's terms only when a map
@@ -132,7 +135,7 @@ fn translate_one(
     let entity = visual.and_then(|visual| {
         let span = mapped.span.as_ref()?;
         let (name, class) = entity_at(sources, document, table, span.offset as usize)?;
-        Some((name, class, visual))
+        Some((name, class, visual, amount.clone()))
     });
 
     Translated {
@@ -189,14 +192,19 @@ pub fn to_json(translated: &[Translated], out: &mut String) {
         }
         out.push_str(",\"entity\":");
         match &record.entity {
-            Some((name, class, visual)) => {
+            Some((name, class, visual, amount)) => {
                 out.push_str("{\"name\":");
                 push_json_string(name, out);
                 out.push_str(",\"class\":\"");
                 out.push_str(class.name());
                 out.push_str("\",\"reads\":\"");
                 out.push_str(visual.name());
-                out.push_str("\"}");
+                out.push_str("\",\"amount\":");
+                match amount {
+                    Some(amount) => push_json_string(amount, out),
+                    None => out.push_str("null"),
+                }
+                out.push('}');
             }
             None => out.push_str("null"),
         }

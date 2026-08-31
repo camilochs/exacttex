@@ -1185,8 +1185,15 @@ fn report_record(record: &xtex_core::blame::Translated, emitted: &Path) -> bool 
         "warning[TEX]"
     };
     match &record.entity {
-        Some((name, class, visual)) => {
-            println!("{label}: {} `{name}` {}", class.name(), visual.name());
+        Some((name, class, visual, amount)) => {
+            match amount {
+                Some(amount) => println!(
+                    "{label}: {} `{name}` {} by {amount}",
+                    class.name(),
+                    visual.name()
+                ),
+                None => println!("{label}: {} `{name}` {}", class.name(), visual.name()),
+            }
             println!("  TeX said: {}", record.message);
         }
         None => println!("{label}: {}", record.message),
