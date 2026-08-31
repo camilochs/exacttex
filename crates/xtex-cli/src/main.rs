@@ -1186,13 +1186,23 @@ fn report_record(record: &xtex_core::blame::Translated, emitted: &Path) -> bool 
     };
     match &record.entity {
         Some((name, class, visual, amount)) => {
-            match amount {
-                Some(amount) => println!(
+            // Decision 0018's sentences, in evidence order: the column when
+            // the trace named exactly one cell, otherwise the entity.
+            match (&record.column, amount) {
+                (Some((index, content)), Some(amount)) => println!(
+                    "{label}: {} `{name}` — column {index} does not fit; \"{content}\" runs {amount} past the declared width",
+                    class.name(),
+                ),
+                (Some((index, content)), None) => println!(
+                    "{label}: {} `{name}` — column {index} does not fit: \"{content}\"",
+                    class.name(),
+                ),
+                (None, Some(amount)) => println!(
                     "{label}: {} `{name}` {} by {amount}",
                     class.name(),
                     visual.name()
                 ),
-                None => println!("{label}: {} `{name}` {}", class.name(), visual.name()),
+                (None, None) => println!("{label}: {} `{name}` {}", class.name(), visual.name()),
             }
             println!("  TeX said: {}", record.message);
         }

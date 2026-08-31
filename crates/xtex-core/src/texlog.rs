@@ -82,6 +82,10 @@ pub enum Record {
         line: u32,
         /// The engine's own words, unchanged.
         message: String,
+        /// The box trace that followed — the engine printing the very
+        /// content that did not fit — where the raw log carried one.
+        /// What lets a table overfull name its column (decision 0018).
+        trace: Option<String>,
     },
     /// A line that matched no known form.
     ///
@@ -166,19 +170,39 @@ pub fn line_in_message(message: &str) -> Option<u32> {
 #[must_use]
 pub fn parse_log(log: &str, file: &str) -> Vec<Record> {
     let mut records = Vec::new();
-    for line in log.lines() {
-        let line = line.trim_end();
+    let lines: Vec<&str> = log.lines().collect();
+    for (index, raw) in lines.iter().enumerate() {
+        let line = raw.trim_end();
         let Some(visual) = classify(line) else {
             continue;
         };
         let Some(number) = line_in_message(line).or_else(|| line_after(line)) else {
             continue;
         };
+        // An Overfull record is followed by the box trace — the engine
+        // printing the very content that did not fit. Keeping it is what
+        // lets a table overfull name its column by matching that content
+        // against the row's cells (decision 0018). The trace ends at the
+        // bare `[]` line the engine closes it with.
+        let mut trace = String::new();
+        for follow in lines.iter().skip(index + 1).take(3) {
+            let follow = follow.trim_end();
+            if follow.trim() == "[]" || follow.is_empty() {
+                break;
+            }
+            if let Some(text) = trace_text(follow) {
+                if !trace.is_empty() {
+                    trace.push(' ');
+                }
+                trace.push_str(&text);
+            }
+        }
         let record = Record::Typeset {
             visual,
             file: file.to_owned(),
             line: number,
             message: line.to_owned(),
+            trace: (!trace.is_empty()).then_some(trace),
         };
         if !records.contains(&record) {
             records.push(record);
@@ -187,6 +211,35 @@ pub fn parse_log(log: &str, file: &str) -> Vec<Record> {
     records
 }
 
+/// The readable text of one box-trace line: font runs, `[]` markers and
+/// `|` edges stripped, discretionary hyphens rejoined.
+///
+/// `[]\OT1/cmr/m/n/10 ThisWordIsFarTooWide|` becomes
+/// `ThisWordIsFarTooWide`. A line that carries no text answers `None`.
+fn trace_text(line: &str) -> Option<String> {
+    let mut out = String::new();
+    let mut rest = line;
+    while let Some(at) = rest.find('\\') {
+        out.push_str(&rest[..at]);
+        // A control word runs to the first non-letter; its trailing space
+        // separates it from the text it applies to.
+        let after = &rest[at + 1..];
+        let end = after
+            .find(|c: char| !c.is_ascii_alphanumeric() && c != '/' && c != '.' && c != '-')
+            .unwrap_or(after.len());
+        rest = after[end..].strip_prefix(' ').unwrap_or(&after[end..]);
+    }
+    out.push_str(rest);
+    let cleaned: String = out.replace("[]", "").replace('|', "").trim().to_owned();
+    (!cleaned.is_empty()).then_some(cleaned)
+}
+
+/// The line a `.log` record names, when it names one in its own text.
+///
+/// `LaTeX Warning: … on input line 9.` carries its line inside the sentence
+/// rather than in a `file:line:` prefix, which is why the raw log needs its own
+/// reader: that record never reaches stderr at all.
+#[must_use]
 /// The line an `Overfull` record names in its trailing `at line N` or
 /// `at lines N--M`.
 fn line_after(message: &str) -> Option<u32> {
