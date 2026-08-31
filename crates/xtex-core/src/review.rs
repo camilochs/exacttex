@@ -458,7 +458,7 @@ struct RevisionConstruct {
 /// `\newcommand` body is not. Deciding it again here would let review and
 /// emission disagree — which is how a proposed deletion of an author name
 /// came to be resolvable and, at the same time, printed into the PDF as
-/// `@del(change:…)` on a real Springer book, 2026-08-31.
+/// `@del(change:…)` on a real book, 2026-08-31.
 fn revision_constructs(bytes: &[u8]) -> Vec<RevisionConstruct> {
     scan(bytes)
         .into_iter()

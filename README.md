@@ -182,7 +182,7 @@ What is solid: the transport guarantee — untouched LaTeX comes out
 byte-identical — is the oldest invariant here and the most heavily tested. The
 checker, the emitter and the two surfaces (WebAssembly and LSP) answer
 identically for the same input, and a parity suite in CI holds them to it. A
-127-page Springer book with forty packages, an index, per-chapter
+book of a little over a hundred pages — forty packages, an index, per-chapter
 bibliographies and TikZ compiles to the same page count as a full TeX Live.
 
 Where it is still tender: the change model. Three defects surfaced in one

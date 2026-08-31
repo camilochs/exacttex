@@ -120,7 +120,7 @@ fn marked_imports_target_the_distinct_marked_artifact() {
 
 #[test]
 fn a_revision_inside_a_command_argument_is_a_real_revision() {
-    // Found on a real 127-page Springer book, 2026-08-31: a deletion proposed
+    // Found on a real book of a little over a hundred pages, 2026-08-31: a deletion proposed
     // on an author name
     // inside `\\author{…}` showed in the margin and could never be accepted —
     // `xtex revise` answered XT1012 "sidecar record has no construct", because
