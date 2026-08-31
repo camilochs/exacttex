@@ -184,3 +184,25 @@ fn resolving_a_change_does_not_leave_its_replies_dangling() {
         "the reply must go with the change it answered:\n{text}"
     );
 }
+
+#[test]
+fn a_resolved_dialogue_leaves_no_stray_blank_behind() {
+    // The director, 2026-08-31: rejecting a change that carried a reply left
+    // a space where the conversation had been. Inside a title that space is
+    // not only in the source — it is in the PDF.
+    let source =
+        b"\\author{Gabriela, @del(d:blum) {Christian} @note(n:why, on = d:blum) {moved}}\n";
+    let (rewritten, _) = resolve(source, "d:blum", Resolution::Reject).expect("resolves");
+    assert_eq!(
+        String::from_utf8_lossy(&rewritten),
+        "\\author{Gabriela, Christian}\n",
+        "the reply leaves, and takes the blank that separated it"
+    );
+
+    let (accepted, _) = resolve(source, "d:blum", Resolution::Accept).expect("resolves");
+    assert_eq!(
+        String::from_utf8_lossy(&accepted),
+        "\\author{Gabriela, }\n",
+        "accepting removes the name and the reply, and adds nothing"
+    );
+}
