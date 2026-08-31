@@ -300,8 +300,15 @@ pub fn resolve(
     if construct.kind != EntryToken::Note {
         for reply in replies_to(&rewritten, id) {
             let text = rewritten[reply.span.start()..reply.span.end()].to_vec();
+            // A reply takes the blank that separated it. Leaving that byte
+            // behind put a stray space where the conversation had been —
+            // visible in the source and, inside a title, in the PDF.
+            let mut from = reply.span.start();
+            if from > 0 && rewritten[from - 1] == b' ' {
+                from -= 1;
+            }
             let mut without = Vec::with_capacity(rewritten.len());
-            without.extend_from_slice(&rewritten[..reply.span.start()]);
+            without.extend_from_slice(&rewritten[..from]);
             without.extend_from_slice(&rewritten[reply.span.end()..]);
             rewritten = without;
             removed.extend_from_slice(&text);
