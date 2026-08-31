@@ -120,7 +120,8 @@ fn marked_imports_target_the_distinct_marked_artifact() {
 
 #[test]
 fn a_revision_inside_a_command_argument_is_a_real_revision() {
-    // The director's book, 2026-08-31: a deletion proposed on an author name
+    // Found on a real 127-page Springer book, 2026-08-31: a deletion proposed
+    // on an author name
     // inside `\\author{…}` showed in the margin and could never be accepted —
     // `xtex revise` answered XT1012 "sidecar record has no construct", because
     // only the top level was scanned. Arguments are document content (see
@@ -142,7 +143,7 @@ fn a_revision_inside_a_command_argument_is_a_real_revision() {
 fn recognition_and_emission_agree_about_where_a_document_carries_text() {
     // One rule decides both: `TEXT_MANDATORY_COMMANDS`. When the two paths
     // disagreed, a proposed deletion of an author name could be accepted in
-    // the margin AND printed into the PDF as `@del(change:…)` — the director
+    // the margin AND printed into the PDF as `@del(change:…)` — the author
     // saw both on 2026-08-31.
     let prose: [(&str, &[u8], &[u8]); 5] = [
         (
