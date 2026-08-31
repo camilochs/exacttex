@@ -117,3 +117,75 @@ fn marked_imports_target_the_distinct_marked_artifact() {
     emit_view(&sources, &document, RevisionView::Marked, &mut output).unwrap();
     assert!(output.ends_with(b"\\input{part.marked.tex}"));
 }
+
+#[test]
+fn a_revision_inside_a_command_argument_is_a_real_revision() {
+    // The director's book, 2026-08-31: a deletion proposed on an author name
+    // inside `\\author{…}` showed in the margin and could never be accepted —
+    // `xtex revise` answered XT1012 "sidecar record has no construct", because
+    // only the top level was scanned. Arguments are document content (see
+    // `Piece::Arguments`), so a revision written there is a real revision.
+    // The same reasoning fixed rename in #83.
+    let text = b"\\author{@del(change:gabriela) {Gabriela Ochoa}, Camilo}\n".to_vec();
+
+    let (rewritten, removed) =
+        resolve(&text, "change:gabriela", Resolution::Accept).expect("the construct is found");
+    assert_eq!(
+        String::from_utf8_lossy(&rewritten),
+        "\\author{, Camilo}\n",
+        "accepting a deletion removes the payload where it stands"
+    );
+    assert_eq!(String::from_utf8_lossy(&removed), "Gabriela Ochoa");
+}
+
+#[test]
+fn revisions_are_found_wherever_the_document_carries_text() {
+    // Generality, demanded after the \author{…} case: a revision is a
+    // revision wherever the DOCUMENT carries text — a command argument, a
+    // nested argument, a caption inside an environment. And it is still not
+    // one where the document does not carry text: a comment, verbatim.
+    let cases: [(&str, &[u8]); 5] = [
+        ("prosa suelta", b"Texto @del(a:one) {fuera} normal.\n"),
+        (
+            "argumento simple",
+            b"\\author{@del(a:two) {Nombre}, Otro}\n",
+        ),
+        (
+            "argumento anidado",
+            b"\\textbf{\\footnote{@del(a:three) {al fondo}}}\n",
+        ),
+        (
+            "caption dentro de un entorno",
+            b"\\begin{figure}\n\\caption{Pie con @del(a:four) {sobra}.}\n\\end{figure}\n",
+        ),
+        (
+            "segundo argumento",
+            b"\\newcommand{\\x}{@del(a:five) {en el segundo}}\n",
+        ),
+    ];
+    for (what, text) in cases {
+        let ids = xtex_core::review::revision_ids(text);
+        assert_eq!(
+            ids.len(),
+            1,
+            "{what}: la revision debe verse, se vio {ids:?}"
+        );
+        let id = &ids[0];
+        resolve(text, id, Resolution::Accept)
+            .unwrap_or_else(|error| panic!("{what}: no se pudo aceptar: {error:?}"));
+    }
+
+    let blind: [(&str, &[u8]); 2] = [
+        ("comentario", b"% @del(a:six) {en un comentario}\nTexto.\n"),
+        (
+            "verbatim",
+            b"\\begin{verbatim}\n@del(a:seven) {literal}\n\\end{verbatim}\n",
+        ),
+    ];
+    for (what, text) in blind {
+        assert!(
+            xtex_core::review::revision_ids(text).is_empty(),
+            "{what}: no es contenido del documento y no debe contar como revision"
+        );
+    }
+}

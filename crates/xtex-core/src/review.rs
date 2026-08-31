@@ -415,46 +415,124 @@ struct RevisionConstruct {
     on: Option<String>,
 }
 
+/// Every revision construct in the file, including those written inside a
+/// command's arguments.
+///
+/// `Piece::Arguments` is the one exclusion whose bytes are still document
+/// content — a `\label` inside `\caption{…}` is a real declaration — so a
+/// revision written into `\author{…}` is a real revision. Scanning only the
+/// top level reported "sidecar record has no construct" for a change the
+/// author could see on screen and could never accept (the director's book,
+/// 2026-08-31). The same reasoning fixed rename in #83.
 fn revision_constructs(bytes: &[u8]) -> Vec<RevisionConstruct> {
-    scan(bytes)
-        .into_iter()
-        .filter_map(|piece| {
-            let Piece::Construct { kind, span, .. } = piece else {
-                return None;
-            };
-            if !matches!(
-                kind,
-                EntryToken::Add | EntryToken::Del | EntryToken::Sub | EntryToken::Note
-            ) {
-                return None;
+    let mut found = Vec::new();
+    collect_revision_constructs(bytes, 0, 0, &mut found);
+    found.sort_by_key(|construct| construct.span.start());
+    found
+}
+
+/// Depth guard: an argument region whose inner scan returns the same region
+/// would otherwise recurse forever. Real documents nest a few levels.
+const ARGUMENT_DEPTH: usize = 8;
+
+fn collect_revision_constructs(
+    bytes: &[u8],
+    offset: usize,
+    depth: usize,
+    found: &mut Vec<RevisionConstruct>,
+) {
+    for piece in scan(bytes) {
+        if let Piece::Arguments(span) = piece {
+            if depth < ARGUMENT_DEPTH {
+                // Descend into each brace group's CONTENT: the piece itself
+                // spans `\cmd{…}`, so scanning it again would return the same
+                // region for ever.
+                let region = &bytes[span.start()..span.end()];
+                for (start, end) in brace_groups(region) {
+                    collect_revision_constructs(
+                        &region[start..end],
+                        offset + span.start() + start,
+                        depth + 1,
+                        found,
+                    );
+                }
             }
-            let source = &bytes[span.start()..span.end()];
-            let open = source.iter().position(|byte| *byte == b'(')? + 1;
-            let end = source[open..].iter().position(|byte| {
-                !byte.is_ascii_alphanumeric() && !matches!(byte, b'_' | b':' | b'.' | b'-')
-            })? + open;
-            Some(RevisionConstruct {
-                id: String::from_utf8_lossy(&source[open..end]).into_owned(),
-                kind,
-                span,
-                on: if kind == EntryToken::Note {
-                    let equals = source.iter().position(|byte| *byte == b'=')? + 1;
-                    let target_start = equals
-                        + source[equals..]
-                            .iter()
-                            .position(|byte| !byte.is_ascii_whitespace())?;
-                    let target_end = target_start
-                        + source[target_start..].iter().position(|byte| {
-                            !byte.is_ascii_alphanumeric()
-                                && !matches!(byte, b'_' | b':' | b'.' | b'-')
-                        })?;
-                    Some(String::from_utf8_lossy(&source[target_start..target_end]).into_owned())
-                } else {
-                    None
-                },
-            })
+            continue;
+        }
+        if let Some(construct) = revision_construct_of(bytes, offset, &piece) {
+            found.push(construct);
+        }
+    }
+}
+
+/// Byte ranges of each top-level `{…}` group's content within `bytes`.
+fn brace_groups(bytes: &[u8]) -> Vec<(usize, usize)> {
+    let mut groups = Vec::new();
+    let mut depth = 0usize;
+    let mut opened_at = 0usize;
+    let mut index = 0usize;
+    while index < bytes.len() {
+        match bytes[index] {
+            b'\\' => index += 1,
+            b'{' => {
+                depth += 1;
+                if depth == 1 {
+                    opened_at = index + 1;
+                }
+            }
+            b'}' if depth > 0 => {
+                depth -= 1;
+                if depth == 0 && index > opened_at {
+                    groups.push((opened_at, index));
+                }
+            }
+            _ => {}
+        }
+        index += 1;
+    }
+    groups
+}
+
+fn revision_construct_of(bytes: &[u8], offset: usize, piece: &Piece) -> Option<RevisionConstruct> {
+    let Piece::Construct { kind, span, .. } = *piece else {
+        return None;
+    };
+    {
+        if !matches!(
+            kind,
+            EntryToken::Add | EntryToken::Del | EntryToken::Sub | EntryToken::Note
+        ) {
+            return None;
+        }
+        let source = &bytes[span.start()..span.end()];
+        let open = source.iter().position(|byte| *byte == b'(')? + 1;
+        let end = source[open..].iter().position(|byte| {
+            !byte.is_ascii_alphanumeric() && !matches!(byte, b'_' | b':' | b'.' | b'-')
+        })? + open;
+        let span = Span::new(
+            u32::try_from(offset + span.start()).ok()?,
+            u32::try_from(offset + span.end()).ok()?,
+        );
+        Some(RevisionConstruct {
+            id: String::from_utf8_lossy(&source[open..end]).into_owned(),
+            kind,
+            span,
+            on: if kind == EntryToken::Note {
+                let equals = source.iter().position(|byte| *byte == b'=')? + 1;
+                let target_start = equals
+                    + source[equals..]
+                        .iter()
+                        .position(|byte| !byte.is_ascii_whitespace())?;
+                let target_end = target_start
+                    + source[target_start..].iter().position(|byte| {
+                        !byte.is_ascii_alphanumeric() && !matches!(byte, b'_' | b':' | b'.' | b'-')
+                    })?;
+                Some(String::from_utf8_lossy(&source[target_start..target_end]).into_owned())
+            } else {
+                None
+            },
         })
-        .collect()
+    }
 }
 
 fn kind_name(kind: EntryToken) -> &'static str {
