@@ -6,6 +6,42 @@ specific to working here** — it does not restate the other two.
 
 ---
 
+## What is open, and what is not
+
+The project is open by zone. The reason is not ceremony: the compiler holds a
+few invariants that hold the whole design up — untouched LaTeX comes out
+byte-identical, opaque bytes are never rewritten, one table decides where the
+document carries text — and those are easy to break by accident and expensive
+to discover later. So the closer a change sits to them, the more this project
+asks of it.
+
+**Open, and the most useful thing you can send.**
+
+- **Documents that break it.** A `.tex` or `.xtex` file that the compiler
+  mishandles, with what you expected and what you got. Licence and provenance
+  stated, so it can live in the corpus. This is worth more to the project than
+  any patch: every real document so far has found something.
+- **Bug reports** of any kind, especially with a minimal reproduction.
+- **Documentation, examples, the site, editor integrations, tooling around the
+  compiler.** Pull requests welcome, reviewed on their own merits.
+
+**Open with a contract: `xtex-cli`, `xtex-lsp`, `xtex-wasm`, diagnostics.**
+Pull requests welcome, and each one carries a test that would fail without it.
+A change that alters what the compiler *says* — a diagnostic's wording, a code,
+an exit status — is a change to an interface other tools read, so say so in the
+description.
+
+**Closed for now: `xtex-core`'s scanner, document model and emitter.**
+These are where the invariants live. Issues are read and answered; pull requests
+against them are likely to be declined, not because the idea is unwelcome but
+because the design is still moving under them and a merged change would freeze
+a decision that is not made yet. If you have one, open an issue first and it
+will get a real answer.
+
+This boundary is meant to move. When the core stops changing weekly, it opens.
+
+---
+
 ## Local stack
 
 Rust via [`rustup`](https://rustup.rs). Nothing else is installed globally.
