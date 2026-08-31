@@ -139,53 +139,91 @@ fn a_revision_inside_a_command_argument_is_a_real_revision() {
 }
 
 #[test]
-fn revisions_are_found_wherever_the_document_carries_text() {
-    // Generality, demanded after the \author{…} case: a revision is a
-    // revision wherever the DOCUMENT carries text — a command argument, a
-    // nested argument, a caption inside an environment. And it is still not
-    // one where the document does not carry text: a comment, verbatim.
-    let cases: [(&str, &[u8]); 5] = [
-        ("prosa suelta", b"Texto @del(a:one) {fuera} normal.\n"),
+fn recognition_and_emission_agree_about_where_a_document_carries_text() {
+    // One rule decides both: `TEXT_MANDATORY_COMMANDS`. When the two paths
+    // disagreed, a proposed deletion of an author name could be accepted in
+    // the margin AND printed into the PDF as `@del(change:…)` — the director
+    // saw both on 2026-08-31.
+    let prose: [(&str, &[u8], &[u8]); 5] = [
         (
-            "argumento simple",
-            b"\\author{@del(a:two) {Nombre}, Otro}\n",
+            "prosa suelta",
+            b"Texto @del(a:one) {fuera} normal.\n",
+            b"Texto  normal.\n",
         ),
         (
-            "argumento anidado",
-            b"\\textbf{\\footnote{@del(a:three) {al fondo}}}\n",
+            "el titulo",
+            b"\\title{Redes @del(a:two) {que sobran} de busqueda}\n",
+            b"\\title{Redes  de busqueda}\n",
         ),
         (
-            "caption dentro de un entorno",
-            b"\\begin{figure}\n\\caption{Pie con @del(a:four) {sobra}.}\n\\end{figure}\n",
+            "los autores",
+            b"\\author{Gabriela, @del(a:three) {Christian}}\n",
+            b"\\author{Gabriela, }\n",
         ),
         (
-            "segundo argumento",
-            b"\\newcommand{\\x}{@del(a:five) {en el segundo}}\n",
+            "un pie de figura",
+            b"\\caption{Pie @del(a:four) {con sobra} claro}\n",
+            b"\\caption{Pie  claro}\n",
+        ),
+        (
+            "anidado",
+            b"\\textbf{\\footnote{@del(a:five) {al fondo}}}\n",
+            b"\\textbf{\\footnote{}}\n",
         ),
     ];
-    for (what, text) in cases {
-        let ids = xtex_core::review::revision_ids(text);
+    for (what, source, expected_final) in prose {
+        let ids = xtex_core::review::revision_ids(source);
         assert_eq!(
             ids.len(),
             1,
-            "{what}: la revision debe verse, se vio {ids:?}"
+            "{what}: la revision debe reconocerse, se vio {ids:?}"
         );
-        let id = &ids[0];
-        resolve(text, id, Resolution::Accept)
+        resolve(source, &ids[0], Resolution::Accept)
             .unwrap_or_else(|error| panic!("{what}: no se pudo aceptar: {error:?}"));
+
+        let mut sources = Sources::new();
+        let id = sources.add("t.xtex", source.to_vec());
+        let document = parse(&sources, id);
+        let mut out = Vec::new();
+        emit_view(&sources, &document, RevisionView::Final, &mut out).expect("emits");
+        assert_eq!(
+            String::from_utf8_lossy(&out),
+            String::from_utf8_lossy(expected_final),
+            "{what}: la vista Final debe borrar el constructo, no imprimirlo"
+        );
+
+        let mut marked = Vec::new();
+        emit_view(&sources, &document, RevisionView::Marked, &mut marked).expect("emits");
+        let marked = String::from_utf8_lossy(&marked);
+        assert!(
+            !marked.contains("@del("),
+            "{what}: la vista Marked tampoco imprime el constructo: {marked}"
+        );
     }
 
-    let blind: [(&str, &[u8]); 2] = [
+    // And where the document carries no text, nothing is a revision — in
+    // recognition and in emission alike.
+    let blind: [(&str, &[u8]); 3] = [
         ("comentario", b"% @del(a:six) {en un comentario}\nTexto.\n"),
         (
             "verbatim",
             b"\\begin{verbatim}\n@del(a:seven) {literal}\n\\end{verbatim}\n",
         ),
+        (
+            "cuerpo de una definicion",
+            b"\\newcommand{\\x}{@del(a:eight) {no ha pasado nada aun}}\n",
+        ),
     ];
-    for (what, text) in blind {
+    for (what, source) in blind {
         assert!(
-            xtex_core::review::revision_ids(text).is_empty(),
+            xtex_core::review::revision_ids(source).is_empty(),
             "{what}: no es contenido del documento y no debe contar como revision"
         );
+        let mut sources = Sources::new();
+        let id = sources.add("t.xtex", source.to_vec());
+        let document = parse(&sources, id);
+        let mut out = Vec::new();
+        emit_view(&sources, &document, RevisionView::Final, &mut out).expect("emits");
+        assert_eq!(out, source, "{what}: los bytes se transportan intactos");
     }
 }
