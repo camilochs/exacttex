@@ -190,6 +190,13 @@ pub fn parse_log(log: &str, file: &str) -> Vec<Record> {
             if follow.trim() == "[]" || follow.is_empty() {
                 break;
             }
+            // A box-trace line starts with a box marker or a font run.
+            // Anything else is the surrounding log — page ships, file
+            // closes — and swallowing it once put "(./main.aux)" inside a
+            // quoted cell (found by the gate the same hour this shipped).
+            if !(follow.starts_with("[]") || follow.starts_with('\\')) {
+                break;
+            }
             if let Some(text) = trace_text(follow) {
                 if !trace.is_empty() {
                     trace.push(' ');

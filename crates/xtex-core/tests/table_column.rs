@@ -108,3 +108,31 @@ fn an_ambiguous_trace_names_no_column() {
         "an ambiguous trace must not name a column"
     );
 }
+
+#[test]
+fn the_trace_never_swallows_the_surrounding_log() {
+    // Near the end of a log the record is followed by page ships and file
+    // closes, not a trace terminator. Those lines must not be quoted as the
+    // offending content.
+    let mut sources = Sources::new();
+    let id = sources.add("t.xtex", DOC.to_vec());
+    let document = parse(&sources, id);
+    let emission = emit_with_map(&sources, &document).expect("emits");
+    let row = emitted_row_line(&emission.bytes);
+    let log = format!(
+        "Overfull \\hbox (137.35315pt too wide) in paragraph at lines {row}--{row}\n\
+         []\\OT1/cmr/m/n/10 ThisWordIsFarTooWideForItsColumn|\n\
+         [2] (./main.aux) )\n\
+         (see the transcript file for additional information)\n"
+    );
+    let translated = translated_for(&log);
+    let record = translated
+        .iter()
+        .find(|t| t.column.is_some())
+        .expect("the column is still named");
+    let (_, content) = record.column.as_ref().expect("checked");
+    assert!(
+        !content.contains("main.aux") && !content.contains("transcript"),
+        "log tail leaked into the quoted content: {content}"
+    );
+}
