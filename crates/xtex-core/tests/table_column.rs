@@ -136,3 +136,30 @@ fn the_trace_never_swallows_the_surrounding_log() {
         "log tail leaked into the quoted content: {content}"
     );
 }
+
+#[test]
+fn a_backslash_line_that_is_not_a_font_run_is_not_trace() {
+    // `\openout1 = main.aux` starts with a backslash and is log, not trace.
+    // The whitelist errs toward LOSING trace — the sentence then names the
+    // table, never a wrong column built from swallowed log.
+    let mut sources = Sources::new();
+    let id = sources.add("t.xtex", DOC.to_vec());
+    let document = parse(&sources, id);
+    let emission = emit_with_map(&sources, &document).expect("emits");
+    let row = emitted_row_line(&emission.bytes);
+    let log = format!(
+        "Overfull \\hbox (137.35315pt too wide) in paragraph at lines {row}--{row}\n\
+         \\openout1 = main.aux\n"
+    );
+    let translated = translated_for(&log);
+    assert!(
+        translated.iter().all(|t| t.column.is_none()),
+        "an openout line must not become quoted cell content"
+    );
+    // And the record itself still stands, with its amount.
+    assert!(translated.iter().any(|t| {
+        t.entity
+            .as_ref()
+            .is_some_and(|(_, _, _, amount)| amount.as_deref() == Some("137.35315pt"))
+    }));
+}

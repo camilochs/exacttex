@@ -190,11 +190,18 @@ pub fn parse_log(log: &str, file: &str) -> Vec<Record> {
             if follow.trim() == "[]" || follow.is_empty() {
                 break;
             }
-            // A box-trace line starts with a box marker or a font run.
-            // Anything else is the surrounding log — page ships, file
-            // closes — and swallowing it once put "(./main.aux)" inside a
+            // A box-trace line starts with a box marker or a FONT run —
+            // `\OT1/cmr/m/n/10 …`, always an encoding, a slash, a family.
+            // A bare backslash is not enough: `\openout1 = main.aux` also
+            // starts with one and is the surrounding log, like the page
+            // ships and file closes that once put "(./main.aux)" inside a
             // quoted cell (found by the gate the same hour this shipped).
-            if !(follow.starts_with("[]") || follow.starts_with('\\')) {
+            let is_font_run = follow.strip_prefix('\\').is_some_and(|rest| {
+                rest.split_once('/').is_some_and(|(encoding, _)| {
+                    !encoding.is_empty() && encoding.chars().all(|c| c.is_ascii_alphanumeric())
+                })
+            });
+            if !(follow.starts_with("[]") || is_font_run) {
                 break;
             }
             if let Some(text) = trace_text(follow) {
