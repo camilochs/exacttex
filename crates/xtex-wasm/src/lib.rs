@@ -336,11 +336,7 @@ pub unsafe extern "C" fn xtex_rename_apply(pointer: *const u8, len: usize) -> *m
 /// an opaque region returns the empty result rather than a guess.
 fn positional_query(
     bytes: &[u8],
-    answer: impl Fn(
-        &xtex_core::project::Analysed,
-        &xtex_core::document::Document,
-        usize,
-    ) -> Option<String>,
+    answer: impl Fn(&mut xtex_core::project::Analysed, &Memory, usize, usize) -> Option<String>,
 ) -> Vec<u8> {
     let mut at = 0usize;
     let Some(target) = take_text(bytes, &mut at) else {
@@ -362,8 +358,8 @@ fn positional_query(
     let Some(position) = analysed.names.iter().position(|(_, name)| *name == target) else {
         return Vec::new();
     };
-    let document = &analysed.documents[position];
-    answer(&analysed, document, offset).map_or_else(Vec::new, String::into_bytes)
+    let mut analysed = analysed;
+    answer(&mut analysed, &bundle.store, position, offset).map_or_else(Vec::new, String::into_bytes)
 }
 
 /// Hover text for a position. See `positional_query` for the input.
@@ -374,12 +370,17 @@ fn positional_query(
 #[unsafe(no_mangle)]
 pub unsafe extern "C" fn xtex_hover(pointer: *const u8, len: usize) -> *mut u8 {
     let bytes = unsafe { input(pointer, len) };
-    result(&positional_query(&bytes, |analysed, document, offset| {
-        let found = xtex_core::editor::hover(&analysed.sources, document, &analysed.table, offset)?;
-        let mut json = String::new();
-        xtex_core::editor::hover_to_json(&found, &mut json);
-        Some(json)
-    }))
+    result(&positional_query(
+        &bytes,
+        |analysed, _, position, offset| {
+            let document = &analysed.documents[position];
+            let found =
+                xtex_core::editor::hover(&analysed.sources, document, &analysed.table, offset)?;
+            let mut json = String::new();
+            xtex_core::editor::hover_to_json(&found, &mut json);
+            Some(json)
+        },
+    ))
 }
 
 /// Completions at a position. See `positional_query` for the input.
@@ -390,16 +391,24 @@ pub unsafe extern "C" fn xtex_hover(pointer: *const u8, len: usize) -> *mut u8 {
 #[unsafe(no_mangle)]
 pub unsafe extern "C" fn xtex_completions(pointer: *const u8, len: usize) -> *mut u8 {
     let bytes = unsafe { input(pointer, len) };
-    result(&positional_query(&bytes, |analysed, document, offset| {
-        let items =
-            xtex_core::editor::completions(&analysed.sources, document, &analysed.table, offset);
-        if items.is_empty() {
-            return None;
-        }
-        let mut json = String::new();
-        xtex_core::editor::completions_to_json(&items, &mut json);
-        Some(json)
-    }))
+    result(&positional_query(
+        &bytes,
+        |analysed, _, position, offset| {
+            let document = &analysed.documents[position];
+            let items = xtex_core::editor::completions(
+                &analysed.sources,
+                document,
+                &analysed.table,
+                offset,
+            );
+            if items.is_empty() {
+                return None;
+            }
+            let mut json = String::new();
+            xtex_core::editor::completions_to_json(&items, &mut json);
+            Some(json)
+        },
+    ))
 }
 
 /// The declaration a position refers to. See `positional_query`.
@@ -410,17 +419,39 @@ pub unsafe extern "C" fn xtex_completions(pointer: *const u8, len: usize) -> *mu
 #[unsafe(no_mangle)]
 pub unsafe extern "C" fn xtex_definition(pointer: *const u8, len: usize) -> *mut u8 {
     let bytes = unsafe { input(pointer, len) };
-    result(&positional_query(&bytes, |analysed, document, offset| {
-        let (source, span) = xtex_core::editor::definition_site(
-            &analysed.sources,
-            document,
-            &analysed.table,
-            offset,
-        )?;
-        let mut json = String::new();
-        xtex_core::editor::definition_to_json(&analysed.sources, source, span, &mut json);
-        Some(json)
-    }))
+    result(&positional_query(
+        &bytes,
+        |analysed, store, position, offset| {
+            let document_id = analysed.names[position].0;
+            let document = &analysed.documents[position];
+            // A construct's declaration first; failing that, a citation's — the
+            // key's own line in the declared .bib, which the symbol table never
+            // holds because a bib entry is not a construct.
+            let site = xtex_core::editor::definition_site(
+                &analysed.sources,
+                document,
+                &analysed.table,
+                offset,
+            );
+            let (source, span) = if let Some(found) = site {
+                found
+            } else {
+                let xtex_core::project::Analysed {
+                    sources, documents, ..
+                } = analysed;
+                xtex_core::editor::citation_definition_site(
+                    sources,
+                    store,
+                    &documents[position],
+                    document_id,
+                    offset,
+                )?
+            };
+            let mut json = String::new();
+            xtex_core::editor::definition_to_json(&analysed.sources, source, span, &mut json);
+            Some(json)
+        },
+    ))
 }
 
 /// Emits the bundle's root under one revision view.

@@ -312,7 +312,28 @@ pub fn keys_in_bib(bytes: &[u8]) -> Option<BTreeSet<String>> {
 }
 
 fn scan_bib(bytes: &[u8]) -> Result<BTreeSet<String>, String> {
-    let mut keys = BTreeSet::new();
+    Ok(scan_bib_entries(bytes)?
+        .into_iter()
+        .map(|(key, _)| key)
+        .collect())
+}
+
+/// The span of `key`'s own token in a `.bib` file, when the file declares it.
+///
+/// This is a citation's definition site: the one place a `@cite` can send
+/// the editor. The scan is [`scan_bib`]'s — same entries, same skips — so a
+/// key this finds is exactly a key the checker accepts.
+#[must_use]
+pub fn entry_span_in_bib(bytes: &[u8], key: &str) -> Option<Span> {
+    scan_bib_entries(bytes)
+        .ok()?
+        .into_iter()
+        .find(|(found, _)| found == key)
+        .map(|(_, span)| span)
+}
+
+fn scan_bib_entries(bytes: &[u8]) -> Result<Vec<(String, Span)>, String> {
+    let mut keys = Vec::new();
     let mut at = 0usize;
     while at < bytes.len() {
         if bytes[at] != b'@' {
@@ -368,7 +389,8 @@ fn scan_bib(bytes: &[u8]) -> Result<BTreeSet<String>, String> {
             && key_end > key_start
             && let Ok(key) = std::str::from_utf8(&bytes[key_start..key_end])
         {
-            keys.insert(key.to_owned());
+            #[allow(clippy::cast_possible_truncation)] // a .bib past 4GB is not a .bib
+            keys.push((key.to_owned(), Span::new(key_start as u32, key_end as u32)));
         }
         at = close + 1;
     }

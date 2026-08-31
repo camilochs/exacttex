@@ -268,6 +268,45 @@ pub fn definition_site(
     Some((declaration.payload.source, declaration.construct))
 }
 
+/// A citation's definition site: the key's own line in the `.bib`.
+///
+/// The symbol table holds constructs, and a citation's declaration is not a
+/// construct — it is the `@entry{key,` line of a resource the document
+/// declared. The resources consulted are exactly [`declared_in`]'s, loaded
+/// through the same loader the checker uses, and interned into `sources` so
+/// the ordinary definition JSON path speaks for the answer too.
+///
+/// `None` when the position is not a citation, or no declared resource
+/// holds the key — the same silence as an unknown identifier.
+///
+/// [`declared_in`]: crate::bibliography::declared_in
+pub fn citation_definition_site(
+    sources: &mut Sources,
+    loader: &impl crate::io::SourceLoader,
+    document: &Document,
+    id: crate::source::SourceId,
+    offset: usize,
+) -> Option<(crate::source::SourceId, Span)> {
+    let located = construct_at(sources, document, offset)?;
+    if located.kind != EntryToken::Cite {
+        return None;
+    }
+    let key = located.name;
+    let declared = crate::bibliography::declared_in(sources, id);
+    for resource in &declared.resources {
+        let Ok(bib) = loader.load(&resource.name, Some(id), sources) else {
+            continue;
+        };
+        let Some(bytes) = sources.get(bib).map(crate::source::Source::bytes) else {
+            continue;
+        };
+        if let Some(span) = crate::bibliography::entry_span_in_bib(bytes, &key) {
+            return Some((bib, span));
+        }
+    }
+    None
+}
+
 /// The text between a construct's parentheses.
 fn payload_text(sources: &Sources, source: SourceId, span: Span) -> Option<String> {
     payload_text_for(sources, source, span, EntryToken::Id)
