@@ -60,8 +60,12 @@ fn talk(bodies: &[String]) -> Vec<String> {
 }
 
 fn open(uri: &str) -> String {
+    open_with(uri, DOCUMENT)
+}
+
+fn open_with(uri: &str, document: &str) -> String {
     let mut text = String::new();
-    xtex_lsp_escape(DOCUMENT, &mut text);
+    xtex_lsp_escape(document, &mut text);
     format!(
         r#"{{"jsonrpc":"2.0","method":"textDocument/didOpen","params":{{"textDocument":{{"uri":"{uri}","text":{text}}}}}}}"#
     )
@@ -81,8 +85,12 @@ fn xtex_lsp_escape(text: &str, out: &mut String) {
 }
 
 fn positional(id: u32, method: &str, line: u32, character: u32) -> String {
+    positional_in(id, method, "file:///p.xtex", line, character)
+}
+
+fn positional_in(id: u32, method: &str, uri: &str, line: u32, character: u32) -> String {
     format!(
-        r#"{{"jsonrpc":"2.0","id":{id},"method":"textDocument/{method}","params":{{"textDocument":{{"uri":"file:///p.xtex"}},"position":{{"line":{line},"character":{character}}}}}}}"#
+        r#"{{"jsonrpc":"2.0","id":{id},"method":"textDocument/{method}","params":{{"textDocument":{{"uri":"{uri}"}},"position":{{"line":{line},"character":{character}}}}}}}"#
     )
 }
 
@@ -158,6 +166,46 @@ fn definition_points_at_the_declaring_construct() {
     let reply = frames.last().expect("a reply");
     // The `\figure` block is the second line, zero-based line one.
     assert!(reply.contains(r#""line":1"#), "{reply}");
+}
+
+#[test]
+fn a_citation_lands_on_its_bib_entry_in_its_own_file() {
+    // The .bib must exist ON DISK beside the root: the loader reads it the
+    // way an editor's project actually is, not through a fixture shortcut.
+    let dir = std::env::temp_dir().join(format!("xtex-lsp-cite-{}", std::process::id()));
+    std::fs::create_dir_all(&dir).expect("tempdir");
+    std::fs::write(
+        dir.join("refs.bib"),
+        "% classics\n@book{knuth1984, title={The TeXbook}}\n",
+    )
+    .expect("the bib is written");
+    let uri = format!("file://{}/paper.tex", dir.display());
+    let frames = talk(&[
+        open_with(&uri, "See \\cite{knuth1984}.\n\\bibliography{refs}\n"),
+        positional_in(6, "definition", &uri, 0, 12),
+        EXIT.to_owned(),
+    ]);
+    let reply = frames.last().expect("a reply");
+    assert!(
+        reply.contains("refs.bib"),
+        "the answer names the bib file: {reply}"
+    );
+    // The key's own token sits on the @book line — zero-based line one.
+    assert!(reply.contains(r#""line":1"#), "{reply}");
+    std::fs::remove_dir_all(&dir).ok();
+}
+
+#[test]
+fn a_definition_reply_names_the_file_it_lands_in() {
+    // The root's own constructs answer with the REQUEST's uri, not "" — an
+    // empty uri sent every cross-file landing to the wrong buffer.
+    let frames = talk(&[
+        open("file:///p.xtex"),
+        positional(7, "definition", 2, 9),
+        EXIT.to_owned(),
+    ]);
+    let reply = frames.last().expect("a reply");
+    assert!(reply.contains("file:///p.xtex"), "{reply}");
 }
 
 #[test]

@@ -27,7 +27,10 @@ use json::{Value, write_text};
 use xtex_core::bibliography::{Bibliography, Unavailable};
 use xtex_core::check::check_with_labels;
 use xtex_core::document::Document;
-use xtex_core::editor::{Position, completions, construct_at, definition, hover, offset_at};
+use xtex_core::editor::{
+    Position, citation_definition_site, completions, construct_at, definition, definition_site,
+    hover, offset_at,
+};
 use xtex_core::parse;
 use xtex_core::rename::plan;
 use xtex_core::scanner::EntryToken;
@@ -195,8 +198,47 @@ fn on_completion(uri: &str, text: &str, position: Position) -> Option<String> {
 }
 
 fn on_definition(uri: &str, text: &str, position: Position) -> Option<String> {
-    let (sources, document, table) = analyse(uri, text);
     let offset = offset_at(text.as_bytes(), position)?;
+    // The project-wide path keeps the loader alive, because a definition can
+    // land in another file — a citation's always does, in the `.bib` — and
+    // answering it takes the target file's identity, its own text for the
+    // positions, and the ability to read the `.bib` beside the root. The
+    // citation fallback is the WebAssembly surface's chain, so the two
+    // hosts answer alike (#131).
+    if let Some(overlay) = overlay_for(uri, text)
+        && let Ok(analysed) = xtex_core::project::analyse(&overlay, &overlay.root)
+    {
+        let xtex_core::project::Analysed {
+            mut sources,
+            documents,
+            names,
+            table,
+        } = analysed;
+        let document = documents.first()?;
+        let root = names.first()?.0;
+        let (source, span) = definition_site(&sources, document, &table, offset)
+            .or_else(|| citation_definition_site(&mut sources, &overlay, document, root, offset))?;
+        let target = sources.get(source)?;
+        let (line, column) = line_column(target.bytes(), span.start());
+        let (end_line, end_column) = line_column(target.bytes(), span.end());
+        let target_uri = if target.name() == overlay.root {
+            uri.to_owned()
+        } else {
+            format!(
+                "file://{}",
+                overlay.dir.join(target.name()).to_string_lossy()
+            )
+        };
+        let mut body = String::from(r#"{"uri":"#);
+        write_text(&target_uri, &mut body);
+        let _ = write!(
+            body,
+            r#","range":{{"start":{{"line":{line},"character":{column}}},"end":{{"line":{end_line},"character":{end_column}}}}}}}"#
+        );
+        return Some(body);
+    }
+    // A URI that is not a file answers from the buffer alone, as before.
+    let (sources, document, table) = analyse(uri, text);
     let span = definition(&sources, &document, &table, offset)?;
     let (line, column) = line_column(text.as_bytes(), span.start());
     let (end_line, end_column) = line_column(text.as_bytes(), span.end());
@@ -215,21 +257,23 @@ fn on_definition(uri: &str, text: &str, position: Position) -> Option<String> {
 /// uses, so the two hosts cannot diverge. A URI that is not a file, or an
 /// import that cannot be read, falls back to the buffer alone: a worse answer
 /// beats no answer while the author is mid-keystroke.
+fn overlay_for(uri: &str, text: &str) -> Option<Overlay> {
+    let path = std::path::Path::new(uri.strip_prefix("file://")?);
+    let (dir, name) = (path.parent()?, path.file_name()?);
+    Some(Overlay {
+        dir: dir.to_path_buf(),
+        root: name.to_string_lossy().into_owned(),
+        text: text.to_owned(),
+    })
+}
+
 fn analyse(uri: &str, text: &str) -> (Sources, Document, SymbolTable) {
-    if let Some(path) = uri.strip_prefix("file://") {
-        let path = std::path::Path::new(path);
-        if let (Some(dir), Some(name)) = (path.parent(), path.file_name()) {
-            let overlay = Overlay {
-                dir: dir.to_path_buf(),
-                root: name.to_string_lossy().into_owned(),
-                text: text.to_owned(),
-            };
-            if let Ok(analysed) = xtex_core::project::analyse(&overlay, &overlay.root) {
-                let mut documents = analysed.documents;
-                if !documents.is_empty() {
-                    return (analysed.sources, documents.remove(0), analysed.table);
-                }
-            }
+    if let Some(overlay) = overlay_for(uri, text)
+        && let Ok(analysed) = xtex_core::project::analyse(&overlay, &overlay.root)
+    {
+        let mut documents = analysed.documents;
+        if !documents.is_empty() {
+            return (analysed.sources, documents.remove(0), analysed.table);
         }
     }
     let mut sources = Sources::new();
