@@ -171,10 +171,9 @@ fn where_the_document_carries_no_text_a_dialogue_is_not_one() {
 
 #[test]
 fn resolving_a_change_does_not_leave_its_replies_dangling() {
-    // The director, 2026-08-31: "cuando se responde y después de reject la
-    // root, la nota de respuesta queda ahí suelta". A reply is about a change;
-    // once that change is gone, a reply pointing at nothing is debris the
-    // author has to clean by hand.
+    // Reported 2026-08-31: after replying to a change and then rejecting it,
+    // the reply stayed behind. A reply is about a change; once that change is
+    // gone, a reply pointing at nothing is debris the author cleans by hand.
     let source =
         b"\\author{Gabriela, @del(d:blum) {Christian} @note(n:why, on = d:blum) {moved}}\n";
     let (rewritten, _) = resolve(source, "d:blum", Resolution::Reject).expect("resolves");
@@ -187,9 +186,9 @@ fn resolving_a_change_does_not_leave_its_replies_dangling() {
 
 #[test]
 fn a_resolved_dialogue_leaves_no_stray_blank_behind() {
-    // The director, 2026-08-31: rejecting a change that carried a reply left
-    // a space where the conversation had been. Inside a title that space is
-    // not only in the source — it is in the PDF.
+    // Reported 2026-08-31: rejecting a change that carried a reply left a
+    // space where the conversation had been. Inside a title that space is not
+    // only in the source — it is in the PDF.
     let source =
         b"\\author{Gabriela, @del(d:blum) {Christian} @note(n:why, on = d:blum) {moved}}\n";
     let (rewritten, _) = resolve(source, "d:blum", Resolution::Reject).expect("resolves");

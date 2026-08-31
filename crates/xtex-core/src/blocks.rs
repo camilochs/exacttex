@@ -45,7 +45,7 @@ impl BlockKind {
             (Self::Figure | Self::Table, b"caption") | (Self::Table, b"body" | b"trailing") => {
                 Some(ValueKind::Braced)
             }
-            // Decided by the director, 2026-08-30 (issue #81), after Phase 0a
+            // Decided by the maintainer, 2026-08-30 (issue #81), after Phase 0a
             // measured that 96% of the corpus's floats carry explicit
             // placement and the block could not say it.
             (Self::Figure | Self::Table, b"placement") => Some(ValueKind::Placement),

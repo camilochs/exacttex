@@ -294,7 +294,7 @@ pub fn resolve(
     rewritten.extend_from_slice(&bytes[construct.span.end()..]);
     // A reply is about a change. Once the change is gone the reply points at
     // nothing, and leaving it behind makes the author clean up by hand after
-    // every decision (the director, 2026-08-31). Replies leave with it — and
+    // every decision (reported 2026-08-31). Replies leave with it — and
     // their text rides out in `removed`, so nothing said is lost.
     let mut removed = removed.to_vec();
     if construct.kind != EntryToken::Note {
@@ -458,7 +458,7 @@ struct RevisionConstruct {
 /// `\newcommand` body is not. Deciding it again here would let review and
 /// emission disagree — which is how a proposed deletion of an author name
 /// came to be resolvable and, at the same time, printed into the PDF as
-/// `@del(change:…)` (the director's book, 2026-08-31).
+/// `@del(change:…)` on a real Springer book, 2026-08-31.
 fn revision_constructs(bytes: &[u8]) -> Vec<RevisionConstruct> {
     scan(bytes)
         .into_iter()
