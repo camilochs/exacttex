@@ -118,15 +118,22 @@ pub(crate) const ARGUMENT_OPENERS: &[u8] = b"[<(*";
 /// A caption is a sentence; treating it as data made `@ref(fig:x)` inside
 /// one emit literally into the PDF with exit 0 — Phase 0a's gap 3, decided
 /// as issue #83. Each entry is transcribed against its signature in the
-/// table above; a command absent from the signature table cannot be listed
-/// (`title` and `author` are not, and stay excluded — the conservative
-/// default the issue fixes for the unclassified).
+/// table above; a command absent from the signature table cannot be listed.
+///
+/// `title`, `author`, `date` and `thanks` joined the list on 2026-08-31,
+/// each with its signature transcribed first. A title page is prose: a
+/// proposed deletion of an author's name showed in the margin, resolved
+/// against the source, and then emitted its own construct into the PDF —
+/// recognition and emission disagreed because this list was the only thing
+/// deciding, and they were not on it.
 ///
 /// `item` is not here because its prose lives in its *optional* argument;
 /// see [`TEXT_OPTIONAL_COMMANDS`].
 pub(crate) const TEXT_MANDATORY_COMMANDS: &[&[u8]] = &[
+    b"author",
     b"caption",
     b"chapter",
+    b"date",
     b"emph",
     b"footnote",
     b"footnotetext",
@@ -139,6 +146,8 @@ pub(crate) const TEXT_MANDATORY_COMMANDS: &[&[u8]] = &[
     b"subsubsection",
     b"textbf",
     b"textit",
+    b"thanks",
+    b"title",
     b"underline",
 ];
 // `\texttt` is deliberately absent, against the issue's first list: it is
