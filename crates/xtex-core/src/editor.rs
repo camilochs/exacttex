@@ -287,11 +287,13 @@ pub fn citation_definition_site(
     id: crate::source::SourceId,
     offset: usize,
 ) -> Option<(crate::source::SourceId, Span)> {
-    let located = construct_at(sources, document, offset)?;
-    if located.kind != EntryToken::Cite {
-        return None;
-    }
-    let key = located.name;
+    let key = match construct_at(sources, document, offset) {
+        Some(located) if located.kind == EntryToken::Cite => located.name,
+        // Plain `\cite{…}`: no construct and no checker guarantee, but
+        // "where is this defined?" has the same answer either way. The
+        // recognition is navigational only; diagnostics are unchanged.
+        _ => crate::bibliography::latex_citation_key_at(sources.get(id)?.bytes(), offset)?,
+    };
     let declared = crate::bibliography::declared_in(sources, id);
     for resource in &declared.resources {
         let Ok(bib) = loader.load(&resource.name, Some(id), sources) else {

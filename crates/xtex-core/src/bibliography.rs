@@ -318,6 +318,110 @@ fn scan_bib(bytes: &[u8]) -> Result<BTreeSet<String>, String> {
         .collect())
 }
 
+/// Citation commands a reader may look inside: `\cite` and the natbib and
+/// biblatex families. `cite` covers every `\cite…` variant by prefix; the
+/// rest carry the word later in their name, where a prefix cannot reach it.
+const CITATION_COMMANDS: &[&str] = &[
+    "cite",
+    "Cite",
+    "parencite",
+    "Parencite",
+    "textcite",
+    "Textcite",
+    "autocite",
+    "Autocite",
+    "footcite",
+    "smartcite",
+    "nocite",
+];
+
+/// The plain-LaTeX citation key under `offset`: a `\cite{a,b}` (or any of
+/// [`CITATION_COMMANDS`], starred, with optional `[…]` arguments) whose
+/// braces cover the offset, answered as the one key the cursor is on.
+///
+/// Plain `\cite` is the author's LaTeX, outside any ExactTeX construct, and
+/// the checker never reports its keys. Navigation asks a different question
+/// — "where is this defined?" — and the answer is the same either way. The
+/// offset must fall in one of [`crate::scanner::readable_for`]'s regions,
+/// same prose and same skips as every other reader, so a commented-out
+/// citation stays silent here exactly as it does everywhere else. (The
+/// command's shape is read from the bytes directly, because the scanner
+/// splits a starred or bracketed `\citep*[…]{…}` across two regions.)
+#[must_use]
+pub fn latex_citation_key_at(bytes: &[u8], offset: usize) -> Option<String> {
+    crate::scanner::readable_for(bytes, CITATION_COMMANDS)
+        .into_iter()
+        .find(|region| offset >= region.start() && offset < region.end())?;
+
+    // The brace group covering the offset. Keys carry no braces of their
+    // own, so the nearest brace to the left decides: a `}` means the offset
+    // sits between groups, not inside one.
+    let open = bytes[..offset]
+        .iter()
+        .rposition(|&b| b == b'{' || b == b'}')?;
+    if bytes[open] != b'{' {
+        return None;
+    }
+    let close = open + bytes[open..].iter().position(|&b| b == b'}')?;
+    if offset >= close {
+        return None;
+    }
+
+    // Walk left from the brace over what a citation may carry — up to two
+    // `[…]` arguments and a star — to the command that owns the group.
+    let mut cursor = open;
+    for _ in 0..2 {
+        if cursor > 0 && bytes[cursor - 1] == b']' {
+            cursor = bytes[..cursor - 1].iter().rposition(|&b| b == b'[')?;
+        }
+    }
+    if cursor > 0 && bytes[cursor - 1] == b'*' {
+        cursor -= 1;
+    }
+    let name_end = cursor;
+    while cursor > 0 && bytes[cursor - 1].is_ascii_alphabetic() {
+        cursor -= 1;
+    }
+    if cursor == name_end || cursor == 0 || bytes[cursor - 1] != b'\\' {
+        return None;
+    }
+    let name = &bytes[cursor..name_end];
+    if !CITATION_COMMANDS
+        .iter()
+        .any(|command| name.starts_with(command.as_bytes()))
+    {
+        return None;
+    }
+
+    // The one key the cursor is on, out of a comma-separated list. A cursor
+    // sitting exactly on a comma is on no key, and no key is the answer.
+    let mut start = open + 1;
+    let mut boundary = start;
+    while boundary <= close {
+        if boundary < close && bytes[boundary] != b',' {
+            boundary += 1;
+            continue;
+        }
+        if offset >= start && offset < boundary {
+            let mut from = start;
+            let mut to = boundary;
+            while from < to && bytes[from].is_ascii_whitespace() {
+                from += 1;
+            }
+            while to > from && bytes[to - 1].is_ascii_whitespace() {
+                to -= 1;
+            }
+            if from == to {
+                return None;
+            }
+            return Some(String::from_utf8_lossy(&bytes[from..to]).into_owned());
+        }
+        start = boundary + 1;
+        boundary += 1;
+    }
+    None
+}
+
 /// The span of `key`'s own token in a `.bib` file, when the file declares it.
 ///
 /// This is a citation's definition site: the one place a `@cite` can send
