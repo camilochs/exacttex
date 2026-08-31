@@ -9,7 +9,7 @@ Two shapes were considered for getting a multi-file project into the WebAssembly
 functions.
 
 **Call back into the host per file.** The only thing this buys is not knowing the file set in advance —
-and the host is an editor, which is the thing that opened the files. Measured against a real Springer
+and the host is an editor, which is the thing that opened the files. Measured against a real
 monograph: 388 KB across 20 files, checked in 71 ms *including twenty process starts*; in-process there is
 nothing to save. And WebAssembly imports are synchronous, so a file arriving over a network cannot be
 awaited from inside one without heavy machinery. The shape that appears to serve the network case serves
