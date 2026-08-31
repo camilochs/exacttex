@@ -39,6 +39,12 @@ pub struct Translated {
     /// the evidence: its name, its class, how the failure reads, and how
     /// much — the engine's own quantity, where its message named one.
     pub entity: Option<(String, EntityClass, Visual, Option<String>)>,
+    /// For a table overfull whose box trace named the offending content:
+    /// the column it sits in (one-based) and that content, quoted. Only
+    /// present when the content matches exactly ONE cell of the author's
+    /// row — a confident wrong column is worse than a located table
+    /// (decision 0018).
+    pub column: Option<(u32, String)>,
 }
 
 /// Merges the engine's stderr with its log file, the way the CLI always has.
@@ -110,8 +116,14 @@ fn translate_one(
             visual,
             line,
             message,
+            trace,
             ..
-        } => ("warning", *line, message.clone(), Some(*visual)),
+        } => (
+            "warning",
+            *line,
+            message.clone(),
+            Some((*visual, trace.clone())),
+        ),
         Record::Unrecognised(text) => {
             return Translated {
                 kind: "unrecognised",
@@ -120,12 +132,17 @@ fn translate_one(
                 blame: None,
                 span: None,
                 entity: None,
+                column: None,
             };
         }
     };
 
     // Read the amount before the message moves into the mapper.
     let amount = crate::texlog::amount_in(&message).map(str::to_owned);
+    let (visual, trace) = match visual {
+        Some((visual, trace)) => (Some(visual), trace),
+        None => (None, None),
+    };
     let mapped = map_emitted_diagnostic(message, &emission.bytes, line, 1, &emission.map);
 
     // A typesetting failure is restated in the author's terms only when a map
@@ -137,6 +154,13 @@ fn translate_one(
         let (name, class) = entity_at(sources, document, table, span.offset as usize)?;
         Some((name, class, visual, amount.clone()))
     });
+    let column = entity
+        .as_ref()
+        .filter(|(_, class, ..)| *class == EntityClass::Table)
+        .and_then(|_| {
+            let trace = trace.as_deref()?;
+            column_of(&emission.bytes, line, trace)
+        });
 
     Translated {
         kind,
@@ -145,7 +169,41 @@ fn translate_one(
         blame: Some(mapped.blame),
         span: mapped.span,
         entity,
+        column,
     }
+}
+
+/// The one-based column whose cell carries the trace content — and the
+/// content itself — when exactly one cell of the row does.
+///
+/// The row is the EMITTED line the engine named: the trace content came
+/// from that very line, and in a transported table body its `&`-separated
+/// cells are the author's own. Matching is containment over
+/// whitespace-collapsed text, both directions. Zero matches or several
+/// answer `None`: the honest sentence then names the table, never a
+/// guessed column (decision 0018).
+fn column_of(emitted: &[u8], line: u32, trace: &str) -> Option<(u32, String)> {
+    let text = std::str::from_utf8(emitted).ok()?;
+    let row = text.lines().nth(line.checked_sub(1)? as usize)?;
+    let collapse = |s: &str| s.split_whitespace().collect::<Vec<_>>().join(" ");
+    let needle = collapse(trace);
+    if needle.len() < 4 {
+        return None;
+    }
+    let mut hit = None;
+    for (index, cell) in row.split('&').enumerate() {
+        let cell_text = collapse(cell);
+        if cell_text.is_empty() {
+            continue;
+        }
+        if cell_text.contains(&needle) || needle.contains(&cell_text) {
+            if hit.is_some() {
+                return None;
+            }
+            hit = Some((u32::try_from(index + 1).ok()?, needle.clone()));
+        }
+    }
+    hit
 }
 
 /// Renders translations as JSON, one renderer for both hosts.
@@ -187,6 +245,16 @@ pub fn to_json(translated: &[Translated], out: &mut String) {
                     ",\"offset\":{},\"length\":{},\"line\":{},\"column\":{}}}",
                     span.offset, span.length, span.line, span.column
                 );
+            }
+            None => out.push_str("null"),
+        }
+        out.push_str(",\"column\":");
+        match &record.column {
+            Some((index, content)) => {
+                use std::fmt::Write as _;
+                let _ = write!(out, "{{\"index\":{index},\"content\":");
+                push_json_string(content, out);
+                out.push('}');
             }
             None => out.push_str("null"),
         }
