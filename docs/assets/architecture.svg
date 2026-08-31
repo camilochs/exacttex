@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#082768"/>
+    </marker>
+    <marker id="arrv" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#7351ff"/>
+    </marker>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7351ff"/>
+      <stop offset="1" stop-color="#082768"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="640" fill="#ffffff"/>
+
+  <!-- input -->
+  <rect x="40" y="28" width="270" height="66" rx="8" fill="#ffffff" stroke="#082768" stroke-width="1.6"/>
+  <text x="58" y="55" font-size="15" font-weight="bold" fill="#071a4d">.xtex / .tex project</text>
+  <text x="58" y="76" font-size="12" fill="#4a5068">every .tex is already valid input</text>
+
+  <!-- output -->
+  <rect x="650" y="28" width="270" height="66" rx="8" fill="#ffffff" stroke="#082768" stroke-width="1.6"/>
+  <text x="668" y="55" font-size="15" font-weight="bold" fill="#071a4d">valid LaTeX out — always</text>
+  <text x="668" y="76" font-size="12" fill="#4a5068">plus answers in your own names</text>
+
+  <path d="M175 94 V126" stroke="#082768" stroke-width="1.6" fill="none" marker-end="url(#arr)"/>
+  <path d="M785 126 V94" stroke="#082768" stroke-width="1.6" fill="none" marker-end="url(#arr)"/>
+
+  <!-- core -->
+  <rect x="40" y="130" width="880" height="292" rx="12" fill="#f6f5ff" stroke="url(#brand)" stroke-width="2"/>
+  <text x="64" y="158" font-size="14" font-weight="bold" fill="#5a23ee">xtex-core</text>
+  <text x="150" y="158" font-size="12" fill="#4a5068">zero dependencies — one library both surfaces call</text>
+
+  <!-- pipeline row -->
+  <rect x="70" y="178" width="200" height="88" rx="8" fill="#ffffff" stroke="#7351ff" stroke-width="1.6"/>
+  <text x="86" y="203" font-size="14" font-weight="bold" fill="#071a4d">scanner</text>
+  <text x="86" y="222" font-size="11.5" fill="#4a5068">where the document</text>
+  <text x="86" y="237" font-size="11.5" fill="#4a5068">carries text — one rule,</text>
+  <text x="86" y="252" font-size="11.5" fill="#4a5068">recognition and emission</text>
+
+  <rect x="330" y="178" width="200" height="88" rx="8" fill="#ffffff" stroke="#7351ff" stroke-width="1.6"/>
+  <text x="346" y="203" font-size="14" font-weight="bold" fill="#071a4d">document model</text>
+  <text x="346" y="222" font-size="11.5" fill="#4a5068">typed constructs +</text>
+  <text x="346" y="237" font-size="11.5" fill="#4a5068">opaque bytes, kept apart</text>
+  <text x="346" y="252" font-size="11.5" fill="#4a5068">and never normalised</text>
+
+  <rect x="590" y="178" width="200" height="88" rx="8" fill="#ffffff" stroke="#7351ff" stroke-width="1.6"/>
+  <text x="606" y="203" font-size="14" font-weight="bold" fill="#071a4d">symbol table</text>
+  <text x="606" y="222" font-size="11.5" fill="#4a5068">declarations, references,</text>
+  <text x="606" y="237" font-size="11.5" fill="#4a5068">entity classes — checked</text>
+  <text x="606" y="252" font-size="11.5" fill="#4a5068">against latex2e signatures</text>
+
+  <path d="M270 222 H326" stroke="#7351ff" stroke-width="1.6" fill="none" marker-end="url(#arrv)"/>
+  <path d="M530 222 H586" stroke="#7351ff" stroke-width="1.6" fill="none" marker-end="url(#arrv)"/>
+
+  <!-- bus -->
+  <path d="M430 266 V286" stroke="#7351ff" stroke-width="1.4" fill="none"/>
+  <path d="M690 266 V286" stroke="#7351ff" stroke-width="1.4" fill="none"/>
+  <path d="M120 286 H852" stroke="#7351ff" stroke-width="1.4" fill="none"/>
+  <path d="M120 286 V306" stroke="#7351ff" stroke-width="1.4" fill="none" marker-end="url(#arrv)"/>
+  <path d="M290 286 V306" stroke="#7351ff" stroke-width="1.4" fill="none" marker-end="url(#arrv)"/>
+  <path d="M475 286 V306" stroke="#7351ff" stroke-width="1.4" fill="none" marker-end="url(#arrv)"/>
+  <path d="M660 286 V306" stroke="#7351ff" stroke-width="1.4" fill="none" marker-end="url(#arrv)"/>
+  <path d="M845 286 V306" stroke="#7351ff" stroke-width="1.4" fill="none" marker-end="url(#arrv)"/>
+
+  <!-- consumers -->
+  <rect x="60" y="310" width="150" height="86" rx="8" fill="#ffffff" stroke="#082768" stroke-width="1.4"/>
+  <text x="74" y="334" font-size="13.5" font-weight="bold" fill="#071a4d">check</text>
+  <text x="74" y="352" font-size="11" fill="#4a5068">hard errors before</text>
+  <text x="74" y="366" font-size="11" fill="#4a5068">TeX runs · coverage</text>
+  <text x="74" y="380" font-size="11" fill="#4a5068">· bibliography</text>
+
+  <rect x="230" y="310" width="150" height="86" rx="8" fill="#ffffff" stroke="#082768" stroke-width="1.4"/>
+  <text x="244" y="334" font-size="13.5" font-weight="bold" fill="#071a4d">emit · sourcemap</text>
+  <text x="244" y="352" font-size="11" fill="#4a5068">three views:</text>
+  <text x="244" y="366" font-size="11" fill="#4a5068">original · final ·</text>
+  <text x="244" y="380" font-size="11" fill="#4a5068">marked (in print)</text>
+
+  <rect x="400" y="310" width="150" height="86" rx="8" fill="#ffffff" stroke="#082768" stroke-width="1.4"/>
+  <text x="414" y="334" font-size="13.5" font-weight="bold" fill="#071a4d">editor</text>
+  <text x="414" y="352" font-size="11" fill="#4a5068">hover · completion</text>
+  <text x="414" y="366" font-size="11" fill="#4a5068">· go-to-definition,</text>
+  <text x="414" y="380" font-size="11" fill="#4a5068">project-wide</text>
+
+  <rect x="570" y="310" width="150" height="86" rx="8" fill="#ffffff" stroke="#082768" stroke-width="1.4"/>
+  <text x="584" y="334" font-size="13.5" font-weight="bold" fill="#071a4d">review · rename</text>
+  <text x="584" y="352" font-size="11" fill="#4a5068">revisions inside the</text>
+  <text x="584" y="366" font-size="11" fill="#4a5068">document · safe rename,</text>
+  <text x="584" y="380" font-size="11" fill="#4a5068">opaque text reported</text>
+
+  <rect x="740" y="310" width="160" height="86" rx="8" fill="#ffffff" stroke="#082768" stroke-width="1.4"/>
+  <text x="754" y="334" font-size="13.5" font-weight="bold" fill="#071a4d">blame · texlog</text>
+  <text x="754" y="352" font-size="11" fill="#4a5068">TeX's own errors,</text>
+  <text x="754" y="366" font-size="11" fill="#4a5068">restated on your</text>
+  <text x="754" y="380" font-size="11" fill="#4a5068">entities — never a guess</text>
+
+  <!-- transport note -->
+  <path d="M305 61 C 470 61, 560 40, 649 58" stroke="#7351ff" stroke-width="1.4" stroke-dasharray="5 4" fill="none" marker-end="url(#arrv)"/>
+  <text x="360" y="36" font-size="11.5" font-style="italic" fill="#5a23ee">bytes you never annotated pass through byte-identical</text>
+
+  <!-- surfaces -->
+  <path d="M195 422 V448" stroke="#082768" stroke-width="1.6" fill="none" marker-end="url(#arr)"/>
+  <path d="M480 422 V448" stroke="#082768" stroke-width="1.6" fill="none" marker-end="url(#arr)"/>
+  <path d="M765 422 V448" stroke="#082768" stroke-width="1.6" fill="none" marker-end="url(#arr)"/>
+
+  <rect x="80" y="452" width="230" height="84" rx="8" fill="#071a4d"/>
+  <text x="98" y="479" font-size="14" font-weight="bold" fill="#ffffff">xtex-cli</text>
+  <text x="98" y="498" font-size="11.5" fill="#c9c4f5">the terminal — build · check</text>
+  <text x="98" y="513" font-size="11.5" fill="#c9c4f5">· rename · revise · blame</text>
+
+  <rect x="365" y="452" width="230" height="84" rx="8" fill="#071a4d"/>
+  <text x="383" y="479" font-size="14" font-weight="bold" fill="#ffffff">xtex-lsp</text>
+  <text x="383" y="498" font-size="11.5" fill="#c9c4f5">your editor — diagnostics,</text>
+  <text x="383" y="513" font-size="11.5" fill="#c9c4f5">hover, rename as you type</text>
+
+  <rect x="650" y="452" width="230" height="84" rx="8" fill="#071a4d"/>
+  <text x="668" y="479" font-size="14" font-weight="bold" fill="#ffffff">xtex-wasm</text>
+  <text x="668" y="498" font-size="11.5" fill="#c9c4f5">the browser — one module,</text>
+  <text x="668" y="513" font-size="11.5" fill="#c9c4f5">linear memory, no runtime</text>
+
+  <!-- parity -->
+  <path d="M195 536 V566 H765 V536" stroke="#5a23ee" stroke-width="1.4" stroke-dasharray="5 4" fill="none"/>
+  <text x="480" y="592" font-size="12" font-style="italic" fill="#5a23ee" text-anchor="middle">parity, held in CI: the same input gets byte-identical answers from every surface</text>
+</svg>

@@ -156,6 +156,14 @@ says "Figure". LaTeX compiles it and prints the wrong word. See [`docs/checking.
 
 ---
 
+## How it is built
+
+![ExactTeX architecture](docs/assets/architecture.svg)
+
+One zero-dependency core; three thin surfaces (terminal, editor, browser) that call it and are held byte-identical by a parity suite in CI; and the transport guarantee drawn where it belongs — outside the pipeline, because unannotated bytes are carried, never processed. The full walk: [docs/architecture.md](docs/architecture.md).
+
+---
+
 ## What it is not
 
 It is not a shorter way to write LaTeX. TypeScript is more verbose than JavaScript; nobody adopted it to type
