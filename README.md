@@ -166,6 +166,33 @@ still receives a `.tex` file.
 
 ---
 
+## How young this is
+
+The compiler is young, and pretending otherwise would waste your time.
+
+What is solid: the transport guarantee — untouched LaTeX comes out
+byte-identical — is the oldest invariant here and the most heavily tested. The
+checker, the emitter and the two surfaces (WebAssembly and LSP) answer
+identically for the same input, and a parity suite in CI holds them to it. A
+127-page Springer book with forty packages, an index, per-chapter
+bibliographies and TikZ compiles to the same page count as a full TeX Live.
+
+Where it is still tender: the change model. Three defects surfaced in one
+evening of real use in August 2026 — a revision written inside `\author{…}`
+was resolvable on screen and printed into the PDF as itself; a reply outlived
+the change it answered; and rejecting one left a stray space behind. All three
+were the same thing seen from three sides: two code paths consulting different
+rules about where a document carries text. They are fixed, each with a test
+that fails against the previous compiler, and `tests/dialogues.rs` now runs a
+full conversation through a title page, a caption, a nested command, a table
+cell and a list item.
+
+Which is the honest summary: **the parts that transport your document are
+careful; the parts that let people argue about it are new.** If you find
+something, the thing to send is the document.
+
+---
+
 ## Documentation
 
 The full documentation lives at **<https://camilochs.github.io/exacttex/>** — the language
