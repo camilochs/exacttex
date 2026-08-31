@@ -83,7 +83,7 @@ file_count × ( u32 name_len   name (UTF-8)   u32 data_len   data )
 | `xtex_hover(ptr, len)` | `target`, `u32 offset`, then a bundle | hover text |
 | `xtex_completions(ptr, len)` | `target`, `u32 offset`, then a bundle | completion items |
 | `xtex_inventory(ptr, len)` | a bundle | every declaration — name, class, declaration site, reference count — sorted by name |
-| `xtex_definition(ptr, len)` | `target`, `u32 offset`, then a bundle | the declaration, file included |
+| `xtex_definition(ptr, len)` | `target`, `u32 offset`, then a bundle | the declaration, file included — for a citation, the key's own line in the declared `.bib` |
 | `xtex_view(ptr, len)` | `view` (`original`/`final`/`marked`), then a bundle | the root under that view |
 | `xtex_revise(ptr, len)` | `action`, `id`, `by`, `at`, `sidecar`, then a bundle | the rewritten root, then the updated sidecar, both length-prefixed |
 
@@ -100,6 +100,14 @@ query made in the root — and a definition can land in another file, which is w
 file. The language server answers from the same core functions over the same project-wide load (the open
 buffer overlays the file on disk; imports read from beside it), so the browser and a desktop editor cannot
 disagree about one project.
+
+A citation's definition is the key's own line in the declared `.bib`. The definition query tries the
+construct's declaration first; failing that, a citation at the offset — `@cite`, or the author's plain
+`\cite` and its natbib/biblatex family (starred, with optional arguments), answered with the one key under
+the cursor out of a comma-separated list. Recognition is bounded by the scanner's readable regions, so a
+commented-out citation stays silent, and the checking policy is untouched: a plain `\cite` key is still
+never reported missing. This landing is answered by the WebAssembly surface; the desktop language server
+does not answer it yet — the gap is tracked openly rather than papered over.
 
 A rename's plan is computed over the whole project and applied one file per call, the way `xtex rename`
 writes one file at a time. The plan's `untouched` list is the honest half: every occurrence left alone

@@ -13,7 +13,7 @@
 | `textDocument/didChange` | The same, on every keystroke the editor sends. |
 | `textDocument/hover` | What the construct under the cursor is, and whether it resolves. |
 | `textDocument/completion` | Identifiers that may go where the cursor is. |
-| `textDocument/definition` | Where the name under the cursor is declared. |
+| `textDocument/definition` | Where the name under the cursor is declared. Constructs only: the citation landing (`@cite` or plain `\cite` to the key's line in the `.bib`) is answered by the WebAssembly surface and not by this server yet. |
 | `textDocument/prepareRename` | The range the editor should offer, or `null` where renaming is not possible. |
 | `textDocument/rename` | Edits for every structurally resolved occurrence. |
 | `shutdown` / `exit` | Replies `null`, then leaves. |
