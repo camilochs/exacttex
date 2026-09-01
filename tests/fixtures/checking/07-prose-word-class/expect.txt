@@ -1,0 +1,7 @@
+transport: lowered
+scanner: table ref ref ref ref ref id ref
+constructs: one table, one `@id` on unmodelled LaTeX and six references.
+  `Figure~@ref(tab:a)` and each name of `Figs.~@cref(tab:a, tab:a)` contradict
+  the table and are XT1020 at the word; the matching word, the lower-case word,
+  the word not immediately before, and the word before the unknown-open target
+  are silent

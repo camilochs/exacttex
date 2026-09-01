@@ -156,9 +156,10 @@ number matters less than its trend: a file that was 60% checked and is now 30% g
 parser cannot model.
 
 The check that types buy, and that no LaTeX tool performs: `@ref(fig:main)` pointing at a `\table(fig:main)`
-— the prefix demands a figure, the declaration is a table. LaTeX compiles it and prints "Table" wherever a
-`\cref` reads the counter, whatever the sentence around it says; the sentence itself is not read by any
-tool, ExactTeX included. See [`docs/checking.md`](docs/checking.md).
+— the prefix demands a figure, the declaration is a table. Its sibling: `Figure~@ref(tab:main)` on a
+table — the sentence says figure, the declaration says table. LaTeX compiles both and prints the wrong
+word. See [`docs/checking.md`](docs/checking.md) and
+[`docs/decisions/0019`](docs/decisions/0019-prose-is-a-checked-side.md).
 
 ---
 

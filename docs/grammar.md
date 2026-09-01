@@ -188,6 +188,14 @@ one identifier, and their payload is one name as written: `\autoref{a,b}` is a s
 under `hyperref` — compiled to check, not recalled — so `@autoref(a, b)` is reported as the single undeclared
 identifier `a, b`, which is what TeX sees.
 
+**The entity-kind word before a reference is read.** `Figure~@ref(tab:main)`, with `tab:main` declared as
+a table, is `XT1020`: the word names one class and the declaration another. The word must be immediately
+before the construct — nothing, one space or tildes between them — and one of a fixed vocabulary: `Figure`,
+`Figures`, `Fig.`, `Figs.`, `Table`, `Tables`, `Tab.`, `Section`, `Sections`, `Sec.`, `Equation`,
+`Equations`, `Eq.`, `Algorithm`, `Algorithms`, `Alg.`, `Appendix`, `Appendices`. Lower case is not read,
+a target whose class is unknown never fires, and a `cref`-family reference is read only when an author
+wrote a word before it anyway. [`decisions/0019`](decisions/0019-prose-is-a-checked-side.md).
+
 A word after `@` that is none of these — `@eqref(eq:x)`, `@nameref(sec:a)`, `@citeyear(k)` — is not a
 construct. The bytes are transported, which puts them into the PDF as literal text with exit 0, so the
 checker reports the shape as advisory `XT2002` ([`checking.md`](checking.md) §4) and names the commands it
@@ -409,6 +417,9 @@ Fixtures must include:
 9. Every reference command, and a `cref` list, lowering to the command named (`emission/08`).
 10. An `@word(…)` in prose that is no construct, reported as advisory `XT2002`, beside the §3 shapes that
     are ordinary bytes and report nothing (`checking/05`).
+11. `Figure~@ref(tab:main)` on a declared table, reported as `XT1020`, beside a matching word, a plural,
+    an abbreviation, a lower-case word, a word not immediately before, and an unknown-class target, each
+    silent (`checking/07`).
 
 ### Bibliography discovery and citation checking
 

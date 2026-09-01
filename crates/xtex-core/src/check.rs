@@ -167,8 +167,42 @@ pub fn check_with_labels(
             blame: Blame::XtexConstruct,
         });
     }
+    for (name, reference, prose, declaration) in table.prose_mismatches() {
+        diagnostics.push(Diagnostic {
+            code: "XT1020",
+            entity: prose.class,
+            name: Some(name.to_owned()),
+            source: reference.payload.source,
+            span: prose.span,
+            message: format!(
+                "prose says `{}` but `{name}` is {} {}",
+                prose.word,
+                article(declaration.class.name()),
+                declaration.class.name()
+            ),
+            related: vec![Related {
+                source: declaration.payload.source,
+                span: declaration.payload.span,
+                message: format!("{} declared here", declaration.class.name()),
+            }],
+            severity: Severity::Error,
+            blame: Blame::XtexConstruct,
+        });
+    }
     missing_citation_diagnostics(table, bibliography, &mut diagnostics);
     diagnostics
+}
+
+/// `a` or `an`, for a class name in a sentence.
+const fn article(word: &str) -> &'static str {
+    if matches!(
+        word.as_bytes().first(),
+        Some(b'a' | b'e' | b'i' | b'o' | b'u')
+    ) {
+        "an"
+    } else {
+        "a"
+    }
 }
 
 /// Checks typed blocks in every source belonging to one document root.
@@ -869,6 +903,37 @@ mod tests {
                      $@eqref(m)$ % @eqref(c)\n\\texttt{@eqref(t)} \\verb|@eqref(v)| @home(x)";
         let found = document_diagnostics(quiet);
         assert!(found.is_empty(), "{found:?}");
+    }
+
+    #[test]
+    fn a_prose_word_contradicting_the_target_is_an_error_at_the_word() {
+        let found = diagnostics(
+            "\\table(tab:main) { caption = {T} } Figure~@ref(tab:main)",
+            &Bibliography::Complete(BTreeSet::default()),
+        );
+        assert_eq!(found.len(), 1, "{found:?}");
+        assert_eq!(found[0].code, "XT1020");
+        assert_eq!(found[0].severity, Severity::Error);
+        assert_eq!(
+            found[0].message,
+            "prose says `Figure` but `tab:main` is a table"
+        );
+        assert_eq!(found[0].span.len(), "Figure".len());
+        assert_eq!(found[0].related.len(), 1);
+        assert!(found[0].related[0].message.contains("table declared here"));
+    }
+
+    #[test]
+    fn prefix_and_prose_are_two_facts_and_may_both_fire() {
+        // `Figure~@ref(fig:main)` on a table: the prefix demands a figure
+        // (XT1004) and so does the word (XT1020). Two contradictions, two
+        // diagnostics, neither hiding the other.
+        let found = diagnostics(
+            "\\table(fig:main) { caption = {T} } Figure~@ref(fig:main)",
+            &Bibliography::Complete(BTreeSet::default()),
+        );
+        let codes: Vec<_> = found.iter().map(|d| d.code).collect();
+        assert_eq!(codes, ["XT1004", "XT1020"], "{found:?}");
     }
 
     #[test]

@@ -1,0 +1,3 @@
+XT1020|figure|tab:a|32|6|prose says `Figure` but `tab:a` is a table
+XT1020|figure|tab:a|69|5|prose says `Figs.` but `tab:a` is a table
+XT1020|figure|tab:a|69|5|prose says `Figs.` but `tab:a` is a table

@@ -668,7 +668,7 @@ fn failure_paths_fail_identically_in_both_builds() {
     // (`{,"span"`) until the first real document met it.
     std::fs::write(
         broken.join("main.xtex"),
-        "@id(dup:x) y @id(dup:x).\nVer @cite(clave) y @ref(sec:x).\n@import(\"dark.xtex\")\n\\bibliography{ausente}\n",
+        "@id(dup:x) y @id(dup:x).\nVer @cite(clave) y @ref(sec:x).\n@import(\"dark.xtex\")\n\\bibliography{ausente}\n\\table(tab:t) { caption = {T} }\nFigure~@ref(tab:t).\n",
     )
     .expect("writes");
     std::fs::write(
@@ -712,5 +712,12 @@ fn failure_paths_fail_identically_in_both_builds() {
     assert!(
         wasm_json.contains("XT1001") && wasm_json.contains("first declared here"),
         "the duplicate must carry its related entry: {wasm_json}"
+    );
+    // The prose word before a reference is a checked side (decisions/0019),
+    // and both builds report it the same way.
+    assert!(
+        wasm_json.contains("XT1020")
+            && wasm_json.contains("prose says `Figure` but `tab:t` is a table"),
+        "the prose-word mismatch must be reported: {wasm_json}"
     );
 }
