@@ -93,6 +93,16 @@ Two ways the demand is absent, and both are silence rather than error:
 Full record, including the two rejected alternatives:
 [`decisions/0003`](decisions/0003-the-prefix-is-the-demand.md).
 
+### The word before the reference is a second demand
+
+`Figure~@ref(tab:main)` says two things about `tab:main`: the prefix says table, the sentence says figure.
+The sentence is read too, under the same both-sides-known rule: when the word immediately before a
+reference construct is one of a fixed vocabulary (`Figure`, `Fig.`, `Tables`, `Sec.`, … — the list is in
+[`grammar.md`](grammar.md) §4) and the target's declared class is known and differs, that is `XT1020`, at
+the word. Nothing fires for a lower-case word, a word not immediately before, a `\label` target, or an
+`@id` on unmodelled LaTeX. The reasoning, and what would reverse it:
+[`decisions/0019`](decisions/0019-prose-is-a-checked-side.md).
+
 ---
 
 ## 3 · When the compiler may fail
@@ -116,14 +126,16 @@ error.
 | `XT1012` | A sidecar record whose revision construct no longer exists | any |
 | `XT1013` | A sidecar that cannot be read, or that names a different document | any |
 | `XT1014` | An explicit inline construct (`@id`, a reference or citation command, `@import`) whose closing `)` is not found before line end | any |
+| `XT1020` | An entity-kind word immediately before a reference construct names class A, and the target's known class is B, A ≠ B | both known |
 
 Two properties hold across the whole table and are tested as properties, not as examples:
 
 1. **Every row requires an explicit construct, or ExactTeX's own sidecar.** There is no row that ordinary
    LaTeX can reach. `XT1010`–`XT1013` are about a `.xtexrev` file, which ExactTeX writes and owns; a renamed
    `.tex` has none, so they cannot fire on one. See [`revisions.md`](revisions.md) §5.
-2. **Every row requires both sides known.** `XT1004` cannot fire when either side is `?O`, and `XT1005`
-   cannot fire when the bibliography is `Unavailable`. Uncertainty on either side means silence.
+2. **Every row requires both sides known.** `XT1004` and `XT1020` cannot fire when either side is `?O`,
+   and `XT1005` cannot fire when the bibliography is `Unavailable`. Uncertainty on either side means
+   silence.
 
 ### Exit codes
 

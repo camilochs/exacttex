@@ -103,6 +103,81 @@ pub struct Reference {
     pub payload: Payload,
     /// The whole construct, which is what a diagnostic points at.
     pub construct: Span,
+    /// The entity-kind word written immediately before a reference, when
+    /// there is one: `Figure~@ref(x)` carries `Figure`. See
+    /// [`prose_word_before`] and `docs/decisions/0019`.
+    pub prose: Option<ProseWord>,
+}
+
+/// An entity-kind word the author wrote before a reference.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub struct ProseWord {
+    /// The word as written, for the diagnostic to quote.
+    pub word: &'static str,
+    /// The class the word names.
+    pub class: EntityClass,
+    /// The word's bytes in the source, for the diagnostic to quote.
+    pub span: Span,
+}
+
+/// The words the check reads, and the class each names.
+///
+/// A fixed vocabulary, deliberately: the capitalised forms authors put
+/// before a reference, their plurals, and the abbreviations LaTeX
+/// manuals use. Lower case is not matched — "figure" mid-sentence is
+/// prose about figures, not a label for the next reference — and a class
+/// the symbol table cannot assign (theorem, listing) has no word here,
+/// because a word with no class to compare against could never fire.
+const PROSE_WORDS: &[(&str, EntityClass)] = &[
+    ("Figure", EntityClass::Figure),
+    ("Figures", EntityClass::Figure),
+    ("Fig.", EntityClass::Figure),
+    ("Figs.", EntityClass::Figure),
+    ("Table", EntityClass::Table),
+    ("Tables", EntityClass::Table),
+    ("Tab.", EntityClass::Table),
+    ("Section", EntityClass::Section),
+    ("Sections", EntityClass::Section),
+    ("Sec.", EntityClass::Section),
+    ("Equation", EntityClass::Equation),
+    ("Equations", EntityClass::Equation),
+    ("Eq.", EntityClass::Equation),
+    ("Algorithm", EntityClass::Algorithm),
+    ("Algorithms", EntityClass::Algorithm),
+    ("Alg.", EntityClass::Algorithm),
+    ("Appendix", EntityClass::Appendix),
+    ("Appendices", EntityClass::Appendix),
+];
+
+/// The entity-kind word immediately before a construct starting at `at`.
+///
+/// Immediately: separated by nothing, one space, or one or more `~`. A word
+/// further away is not about this reference, and a word after a line
+/// ending is not either. The byte before the word must not be a letter,
+/// so `Subfigure` does not end in a `figure` this reads. A construct is
+/// only recognised in prose, so a word inside a comment or verbatim text
+/// never precedes one.
+#[must_use]
+pub fn prose_word_before(bytes: &[u8], at: usize) -> Option<ProseWord> {
+    let mut end = at;
+    if bytes.get(end.wrapping_sub(1)) == Some(&b' ') {
+        end -= 1;
+    }
+    while end > 0 && bytes[end - 1] == b'~' {
+        end -= 1;
+    }
+    let (word, class) = PROSE_WORDS
+        .iter()
+        .find(|(word, _)| bytes[..end].ends_with(word.as_bytes()))?;
+    let start = end - word.len();
+    if start > 0 && bytes[start - 1].is_ascii_alphanumeric() {
+        return None;
+    }
+    Some(ProseWord {
+        word,
+        class: *class,
+        span: Span::new(u32::try_from(start).ok()?, u32::try_from(end).ok()?),
+    })
 }
 
 /// Something the table cannot accept.
@@ -235,6 +310,7 @@ impl SymbolTable {
                                 kind,
                                 payload,
                                 construct,
+                                prose: None,
                             },
                         ));
                     }
@@ -275,45 +351,58 @@ impl SymbolTable {
                         },
                     );
                 }
-                EntryToken::Ref => {
-                    // `@cref(a, b)` names two identifiers and each is checked
-                    // on its own, like a citation's keys. The other reference
-                    // commands take one, so their whole payload is the name:
-                    // `\autoref{a,b}` is one undefined reference in LaTeX
-                    // too, and this reports it as one.
-                    let list = sources
-                        .get(node.source())
-                        .and_then(|source| source.slice(construct))
-                        .is_some_and(crate::scanner::names_a_list);
-                    let names = if list {
-                        keys_of(sources, payload)
-                    } else {
-                        text_of(sources, payload)
-                            .filter(|text| !text.is_empty())
-                            .into_iter()
-                            .collect()
-                    };
-                    if names.is_empty() {
-                        self.errors.push(SymbolError::Malformed {
-                            source: node.source(),
-                            construct,
-                        });
-                        return;
-                    }
-                    for name in names {
-                        self.references.push((
-                            name,
-                            Reference {
-                                kind,
-                                payload,
-                                construct,
-                            },
-                        ));
-                    }
-                }
+                EntryToken::Ref => self.merge_reference(sources, node.source(), construct, payload),
                 _ => {}
             }
         });
+    }
+
+    /// Adds one reference construct's names to the table.
+    ///
+    /// `@cref(a, b)` names two identifiers and each is checked on its own,
+    /// like a citation's keys. The other reference commands take one, so
+    /// their whole payload is the name: `\autoref{a,b}` is one undefined
+    /// reference in LaTeX too, and this reports it as one.
+    fn merge_reference(
+        &mut self,
+        sources: &Sources,
+        source: SourceId,
+        construct: Span,
+        payload: Payload,
+    ) {
+        let list = sources
+            .get(source)
+            .and_then(|s| s.slice(construct))
+            .is_some_and(crate::scanner::names_a_list);
+        let names = if list {
+            keys_of(sources, payload)
+        } else {
+            text_of(sources, payload)
+                .filter(|text| !text.is_empty())
+                .into_iter()
+                .collect()
+        };
+        if names.is_empty() {
+            self.errors
+                .push(SymbolError::Malformed { source, construct });
+            return;
+        }
+        // The word before the construct applies to every name it lists:
+        // "Figures~@cref(a, b)" says both are figures.
+        let prose = sources
+            .get(source)
+            .and_then(|s| prose_word_before(s.bytes(), construct.start()));
+        for name in names {
+            self.references.push((
+                name,
+                Reference {
+                    kind: EntryToken::Ref,
+                    payload,
+                    construct,
+                    prose,
+                },
+            ));
+        }
     }
 
     /// Declaration of `name`, if one exists.
@@ -405,6 +494,23 @@ impl SymbolTable {
                 name.as_str(),
                 reference,
                 demand,
+                declaration,
+            ))
+        })
+    }
+
+    /// References whose preceding entity-kind word contradicts the known
+    /// class of their target. `docs/decisions/0019`.
+    pub fn prose_mismatches(
+        &self,
+    ) -> impl Iterator<Item = (&str, &Reference, ProseWord, &Declaration)> {
+        self.references.iter().filter_map(|(name, reference)| {
+            let prose = reference.prose?;
+            let declaration = self.declarations.get(name)?;
+            (!prose.class.is_consistent_with(declaration.class)).then_some((
+                name.as_str(),
+                reference,
+                prose,
                 declaration,
             ))
         })
@@ -737,6 +843,102 @@ mod tests {
             "\\table(fig:x) { caption = {X} } @cref(fig:x) @autoref(fig:x) @pageref(fig:x)",
         )]);
         assert_eq!(t.inconsistent_references().count(), 3);
+    }
+
+    fn prose_mismatch_names(text: &str) -> Vec<String> {
+        let (_, t) = table(&[("a.xtex", text)]);
+        t.prose_mismatches()
+            .map(|(name, _, _, _)| name.to_owned())
+            .collect()
+    }
+
+    #[test]
+    fn a_prose_word_naming_another_class_than_the_target_is_a_mismatch() {
+        let table_decl = "\\table(tab:main) { caption = {T} }";
+        assert_eq!(
+            prose_mismatch_names(&format!("{table_decl} Figure~@ref(tab:main)")),
+            ["tab:main"]
+        );
+        // Nothing, one space, or tildes between the word and the construct.
+        for form in [
+            "Figure@ref(tab:main)",
+            "Figure @ref(tab:main)",
+            "Figure~~@ref(tab:main)",
+        ] {
+            assert_eq!(
+                prose_mismatch_names(&format!("{table_decl} {form}")),
+                ["tab:main"],
+                "{form}"
+            );
+        }
+    }
+
+    #[test]
+    fn a_prose_word_matching_the_target_is_silent() {
+        assert!(
+            prose_mismatch_names("\\table(tab:main) { caption = {T} } Table~@ref(tab:main)")
+                .is_empty()
+        );
+    }
+
+    #[test]
+    fn plurals_and_abbreviations_name_the_same_class() {
+        let decl = "\\table(tab:a) { caption = {A} } \\table(tab:b) { caption = {B} }";
+        assert_eq!(
+            prose_mismatch_names(&format!("{decl} Figures~@cref(tab:a, tab:b)")),
+            ["tab:a", "tab:b"]
+        );
+        assert_eq!(
+            prose_mismatch_names(&format!("{decl} Fig.~@ref(tab:a)")),
+            ["tab:a"]
+        );
+        assert_eq!(
+            prose_mismatch_names(&format!("{decl} Figs.~@Cref(tab:a,tab:b)")),
+            ["tab:a", "tab:b"]
+        );
+        assert!(
+            prose_mismatch_names(&format!(
+                "{decl} Tab.~@ref(tab:a) Tables~@cref(tab:a, tab:b)"
+            ))
+            .is_empty()
+        );
+    }
+
+    #[test]
+    fn an_unknown_open_target_never_fires() {
+        // A `\label` supplies no class, and neither does an `@id` on
+        // unmodelled LaTeX; both sides must be known.
+        let (_, t) = table(&[(
+            "a.xtex",
+            "\\newtheorem{X}{Open}\n@id(tab:x) Figure~@ref(tab:x)",
+        )]);
+        assert_eq!(
+            t.declaration("tab:x").map(|d| d.class),
+            Some(EntityClass::UnknownOpen),
+            "the control must be a declared, unknown-open target"
+        );
+        assert_eq!(t.prose_mismatches().count(), 0);
+        assert!(prose_mismatch_names("\\label{tab:x} Figure~@ref(tab:x)").is_empty());
+    }
+
+    #[test]
+    fn no_word_or_a_word_that_is_not_immediately_before_is_silent() {
+        let decl = "\\table(tab:x) { caption = {T} }";
+        for text in [
+            "see @ref(tab:x)",
+            "Figure 3 and @ref(tab:x)",
+            "Figure~\n@ref(tab:x)",
+            "figure~@ref(tab:x)",
+            "Subfigure~@ref(tab:x)",
+            "% Figure\n@ref(tab:x)",
+            "\\emph{Figure}~@ref(tab:x)",
+            "@cref(tab:x)",
+        ] {
+            assert!(
+                prose_mismatch_names(&format!("{decl} {text}")).is_empty(),
+                "{text}"
+            );
+        }
     }
 
     #[test]

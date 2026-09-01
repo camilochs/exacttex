@@ -281,6 +281,24 @@ fn a_cleveref_reference_is_hovered_defined_and_renamed_like_ref() {
 }
 
 #[test]
+fn a_prose_word_contradicting_the_target_is_published_as_an_error() {
+    let frames = talk(&[
+        open_with(
+            "file:///w.xtex",
+            "\\table(tab:main) { caption = {T} }\nFigure~@ref(tab:main).\n",
+        ),
+        EXIT.to_owned(),
+    ]);
+    let published = &frames[0];
+    assert!(published.contains("XT1020"), "{published}");
+    assert!(
+        published.contains("prose says `Figure` but `tab:main` is a table"),
+        "{published}"
+    );
+    assert!(published.contains(r#""severity":1"#), "{published}");
+}
+
+#[test]
 fn a_construct_shaped_word_is_published_as_a_warning_not_an_error() {
     // XT2002 is an advisory: the CLI exits 0 on it, so the editor shows a
     // warning squiggle — severity 2 — never an error one.

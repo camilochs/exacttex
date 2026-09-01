@@ -1,0 +1,4 @@
+\table(tab:a) { caption = {A} }
+Figure~@ref(tab:a) Table~@ref(tab:a) Figs.~@cref(tab:a, tab:a) figure~@ref(tab:a)
+Figure 3 and @ref(tab:a) \newtheorem{X}{Open}
+@id(tab:open) Figure~@ref(tab:open)

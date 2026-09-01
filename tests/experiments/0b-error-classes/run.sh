@@ -12,7 +12,7 @@ set -uo pipefail
 stem="${1:-main}"
 cd "$(dirname "$0")/cases"
 xtex="$(cd ../../../.. && pwd)/target/debug/xtex"
-for case in broken-ref missing-cite duplicate-label wrong-class missing-figure invalid-unit; do
+for case in broken-ref missing-cite duplicate-label wrong-class prose-word missing-figure invalid-unit; do
   echo "=== $case ($stem)"
   cd "$case"
   # tectonic: exit code + errors/warnings in output
