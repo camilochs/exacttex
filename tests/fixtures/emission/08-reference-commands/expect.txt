@@ -1,0 +1,4 @@
+transport: lowered
+scanner: ref ref ref ref ref ref
+constructs: every reference command lowers to the LaTeX command it names, and a
+  cref list keeps its keys comma-separated without the spaces, as a citation does

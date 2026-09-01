@@ -1,11 +1,18 @@
-// Speaks just enough LSP to texlab: open the case's main.tex, collect
-// every diagnostic it publishes for a few seconds, print them.
+// Speaks just enough LSP to texlab: open the case's main.tex (or the stem
+// named as the second argument, e.g. `clean`), collect every diagnostic it
+// publishes for that file for a few seconds, print them once each.
+//   node texlab-probe.mjs cases/<name> [main|clean]
+//
+// texlab publishes diagnostics for every .tex it finds under the workspace,
+// and a case directory holds two roots (main.tex and clean.tex), so only
+// the opened file's diagnostics are kept — without the filter, probing the
+// clean twin printed the defective twin's findings under its name.
 import { spawn } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const dir = resolve(process.argv[2]);
-const file = resolve(dir, "main.tex");
+const file = resolve(dir, `${process.argv[3] ?? "main"}.tex`);
 const server = spawn("texlab", [], { stdio: ["pipe", "pipe", "ignore"] });
 const send = (msg) => {
   const body = JSON.stringify(msg);
@@ -22,8 +29,11 @@ server.stdout.on("data", (chunk) => {
     if (buffer.length < head + 4 + length) return;
     const msg = JSON.parse(buffer.slice(head + 4, head + 4 + length).toString());
     buffer = buffer.slice(head + 4 + length);
-    if (msg.method === "textDocument/publishDiagnostics" && msg.params.diagnostics.length) {
-      for (const d of msg.params.diagnostics) diagnostics.push(`${d.severity === 1 ? "ERROR" : d.severity === 2 ? "WARN" : "info"} L${d.range.start.line + 1}: ${d.message}`);
+    if (msg.method === "textDocument/publishDiagnostics" && msg.params.uri === `file://${file}`) {
+      for (const d of msg.params.diagnostics) {
+        const line = `${d.severity === 1 ? "ERROR" : d.severity === 2 ? "WARN" : "info"} L${d.range.start.line + 1}: ${d.message}`;
+        if (!diagnostics.includes(line)) diagnostics.push(line);
+      }
     }
   }
 });

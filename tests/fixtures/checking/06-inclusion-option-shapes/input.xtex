@@ -1,0 +1,2 @@
+\figure(fig:a) { trim = 1cm 0 0 }
+\figure(fig:b) { clip = yes }

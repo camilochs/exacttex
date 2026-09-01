@@ -5,12 +5,12 @@ use super::boundaries::{
     balanced_end, close_paren, delimited_end, is_escaped, skip_ascii_whitespace,
 };
 use super::tables::AT_TOKENS;
-use super::tables::DEFAULT_CITE_COMMANDS;
 use super::tables::{
     ARGUMENT_OPENERS, DEFAULT_VERBATIM_ENVIRONMENTS, DISPLAY_MATH_ENVIRONMENTS,
     MAX_UNKNOWN_COMMAND_GROUPS, TEXT_MANDATORY_COMMANDS, TEXT_OPTIONAL_COMMANDS,
     if_name_is_not_a_conditional,
 };
+use super::tables::{DEFAULT_CITE_COMMANDS, DEFAULT_REF_COMMANDS};
 use crate::signatures::{Argument, is_known, signature_of};
 
 /// Where the scanner is in the byte stream.
@@ -62,10 +62,16 @@ pub(crate) fn entry_token_at(bytes: &[u8], at: usize) -> Option<(EntryToken, usi
                 return Some((*token, end + 1));
             }
         }
-        for command in DEFAULT_CITE_COMMANDS {
-            let end = at + 1 + command.len();
-            if bytes[at + 1..].starts_with(command.as_bytes()) && bytes.get(end) == Some(&b'(') {
-                return Some((EntryToken::Cite, end + 1));
+        for (commands, token) in [
+            (DEFAULT_CITE_COMMANDS, EntryToken::Cite),
+            (DEFAULT_REF_COMMANDS, EntryToken::Ref),
+        ] {
+            for command in commands {
+                let end = at + 1 + command.len();
+                if bytes[at + 1..].starts_with(command.as_bytes()) && bytes.get(end) == Some(&b'(')
+                {
+                    return Some((token, end + 1));
+                }
             }
         }
         return None;

@@ -245,6 +245,56 @@ fn rename_edits_the_constructs_and_leaves_opaque_text_alone() {
 }
 
 #[test]
+fn a_cleveref_reference_is_hovered_defined_and_renamed_like_ref() {
+    // `@Cref(a, b)` names two identifiers. The cursor on the second one is
+    // asked about; hover names the command as written and the key under the
+    // cursor, definition lands on that key's declaration, and rename
+    // rewrites the key inside the list.
+    let document = "\\section{Intro} @id(sec:intro)\n\
+                    \\figure(fig:plot) { src = \"p.pdf\" caption = {C} }\n\
+                    See @Cref(sec:intro, fig:plot) and @autoref(fig:plot).\n";
+    let uri = "file:///c.xtex";
+    let frames = talk(&[
+        open_with(uri, document),
+        positional_in(2, "hover", uri, 2, 23),
+        positional_in(3, "definition", uri, 2, 23),
+        EXIT.to_owned(),
+    ]);
+    let published = &frames[0];
+    assert!(
+        !published.contains("XT1003"),
+        "every name is declared: {published}"
+    );
+    let hover = &frames[1];
+    assert!(hover.contains("@Cref(fig:plot)"), "{hover}");
+    assert!(hover.contains("declared as: figure"), "{hover}");
+    // The `\figure` block is the second line, zero-based line one.
+    assert!(frames[2].contains(r#""line":1"#), "{}", frames[2]);
+
+    let body = format!(
+        r#"{{"jsonrpc":"2.0","id":4,"method":"textDocument/rename","params":{{"textDocument":{{"uri":"{uri}"}},"position":{{"line":2,"character":23}},"newName":"fig:arch"}}}}"#
+    );
+    let frames = talk(&[open_with(uri, document), body, EXIT.to_owned()]);
+    let reply = frames.last().expect("a reply");
+    // The block, the key inside the list, and the autoref.
+    assert_eq!(reply.matches(r#""newText""#).count(), 3, "{reply}");
+}
+
+#[test]
+fn a_construct_shaped_word_is_published_as_a_warning_not_an_error() {
+    // XT2002 is an advisory: the CLI exits 0 on it, so the editor shows a
+    // warning squiggle — severity 2 — never an error one.
+    let frames = talk(&[
+        open_with("file:///w.xtex", "As @eqref(eq:x) shows.\n"),
+        EXIT.to_owned(),
+    ]);
+    let published = &frames[0];
+    assert!(published.contains("XT2002"), "{published}");
+    assert!(published.contains(r#""severity":2"#), "{published}");
+    assert!(!published.contains(r#""severity":1"#), "{published}");
+}
+
+#[test]
 fn prepare_rename_refuses_a_citation() {
     // Its key lives in a `.bib` this server does not own, and answering null
     // is how an editor is told not to open its rename box at all.

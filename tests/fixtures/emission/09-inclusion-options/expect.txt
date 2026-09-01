@@ -1,0 +1,5 @@
+transport: lowered
+scanner: figure figure
+constructs: two figures. The inclusion options come out in the order the fields
+  were written — angle before width rotates and then fits — and trim, clip and
+  scale pass through as written. Grammar §5.

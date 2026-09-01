@@ -42,6 +42,13 @@ impl BlockKind {
             // width against \linewidth, height against \textheight. Here they
             // only have to be the same kind of value. See docs/decisions/0004.
             (Self::Figure, b"width" | b"height") => Some(ValueKind::LengthOrPercentage),
+            // The remaining `\includegraphics` options an author writes by
+            // hand, passed through as written. Each takes the shape graphicx
+            // gives it, compiled to check: `scale` and `angle` are numbers,
+            // `trim` is four lengths, `clip` is a boolean.
+            (Self::Figure, b"scale" | b"angle") => Some(ValueKind::Number),
+            (Self::Figure, b"trim") => Some(ValueKind::Trim),
+            (Self::Figure, b"clip") => Some(ValueKind::Boolean),
             (Self::Figure | Self::Table, b"caption") | (Self::Table, b"body" | b"trailing") => {
                 Some(ValueKind::Braced)
             }
@@ -61,6 +68,9 @@ enum ValueKind {
     LengthOrPercentage,
     Braced,
     Placement,
+    Number,
+    Trim,
+    Boolean,
 }
 
 /// A field's value, as it appears in the source.
@@ -77,6 +87,13 @@ pub enum Value {
     Braced(Span),
     /// A float placement specifier: bytes from `htbp!H`, unquoted.
     Placement(Span),
+    /// A decimal number, optionally negative: `0.5`, `-90`.
+    Number(Span),
+    /// Four lengths separated by spaces — left, bottom, right, top — as
+    /// `\includegraphics`'s `trim` takes them.
+    Trim(Span),
+    /// `true` or `false`, unquoted.
+    Boolean(Span),
 }
 
 impl Value {
@@ -88,7 +105,10 @@ impl Value {
             | Self::Length(s)
             | Self::Percentage(s)
             | Self::Braced(s)
-            | Self::Placement(s) => s,
+            | Self::Placement(s)
+            | Self::Number(s)
+            | Self::Trim(s)
+            | Self::Boolean(s) => s,
         }
     }
 }
@@ -253,8 +273,10 @@ pub fn parse_block(
         // nothing is empty — not a licence to take the next line's key as the
         // value. Writing the field and saying nothing is malformed; silence
         // stays the author's explicit choice of omitting the field.
-        if expected == ValueKind::Placement
-            && bytes[after_equals..at.min(body_end)].contains(&b'\n')
+        if matches!(
+            expected,
+            ValueKind::Placement | ValueKind::Number | ValueKind::Trim | ValueKind::Boolean
+        ) && bytes[after_equals..at.min(body_end)].contains(&b'\n')
         {
             return Err(BlockError::WrongValueKind {
                 key,
@@ -308,7 +330,42 @@ const fn describe(kind: ValueKind) -> &'static str {
         ValueKind::Placement => {
             "one or more of the letters h, t, b, p, H and `!`, written without quotes"
         }
+        ValueKind::Number => "a number such as 0.5 or -90, written without quotes",
+        ValueKind::Trim => {
+            "four lengths separated by spaces — left, bottom, right, top — such as \
+             1cm 0 0 2mm, where a bare number is in big points as graphicx reads it"
+        }
+        ValueKind::Boolean => "true or false, written without quotes",
     }
+}
+
+/// The units a `length` may carry, transcribed from grammar §5.
+const LENGTH_UNITS: [&[u8; 2]; 6] = [b"pt", b"mm", b"cm", b"in", b"em", b"ex"];
+
+/// The end of a decimal number at `at`, with an optional leading `-`.
+///
+/// `None` when no digit is present: a sign or a lone `.` is not a number.
+fn number_end(bytes: &[u8], at: usize, limit: usize) -> Option<usize> {
+    let mut i = at;
+    if bytes.get(i) == Some(&b'-') {
+        i += 1;
+    }
+    let digits_start = i;
+    while i < limit && (bytes[i].is_ascii_digit() || bytes[i] == b'.') {
+        i += 1;
+    }
+    bytes[digits_start..i]
+        .iter()
+        .any(u8::is_ascii_digit)
+        .then_some(i)
+}
+
+/// Whether a scalar value ends cleanly at `at`: whitespace, the block's
+/// closing brace, or the end of the buffer. `0.5x` is not a number.
+fn ends_a_scalar(bytes: &[u8], at: usize) -> bool {
+    bytes
+        .get(at)
+        .is_none_or(|byte| byte.is_ascii_whitespace() || *byte == b'}')
 }
 
 fn read_value(
@@ -343,7 +400,7 @@ fn read_value(
                 if bytes.get(i) == Some(&b'%') {
                     return Some((Value::Percentage(span(at, i + 1)), i + 1));
                 }
-                for unit in [b"pt", b"mm", b"cm", b"in", b"em", b"ex"] {
+                for unit in LENGTH_UNITS {
                     if bytes[i..].starts_with(unit) {
                         return Some((Value::Length(span(at, i + 2)), i + 2));
                     }
@@ -373,6 +430,9 @@ fn read_value(
             let end = balanced_end(bytes, at)?;
             Some((Value::Braced(span(at, end)), end))
         }
+        ValueKind::Number | ValueKind::Trim | ValueKind::Boolean => {
+            read_option_value(bytes, at, limit, expected)
+        }
         ValueKind::Placement => {
             let mut i = at;
             while i < limit && !bytes[i].is_ascii_whitespace() && bytes[i] != b'}' {
@@ -386,6 +446,69 @@ fn read_value(
             }
             Some((Value::Placement(span(at, i)), i))
         }
+    }
+}
+
+/// The `\includegraphics` option shapes: a number, four lengths, a boolean.
+fn read_option_value(
+    bytes: &[u8],
+    at: usize,
+    limit: usize,
+    expected: ValueKind,
+) -> Option<(Value, usize)> {
+    match expected {
+        ValueKind::Number => {
+            let end = number_end(bytes, at, limit)?;
+            ends_a_scalar(bytes, end).then_some((Value::Number(span(at, end)), end))
+        }
+        ValueKind::Trim => {
+            // Four lengths on one line. graphicx reads a bare number as big
+            // points, so a unit is optional here and required for `width`,
+            // where TeX itself rejects `width=3` — the asymmetry is the
+            // packages' own, not this parser's.
+            let mut i = at;
+            for n in 0..4 {
+                if n > 0 {
+                    let spaces = i;
+                    while i < limit && matches!(bytes[i], b' ' | b'\t') {
+                        i += 1;
+                    }
+                    if i == spaces {
+                        return None;
+                    }
+                }
+                let end = number_end(bytes, i, limit)?;
+                i = match bytes.get(end..end + 2) {
+                    Some(unit) if LENGTH_UNITS.iter().any(|known| *known == unit) => end + 2,
+                    _ => end,
+                };
+                if !ends_a_scalar(bytes, i) {
+                    return None;
+                }
+            }
+            // A fifth value is not a fifth length; the line must be done.
+            let mut rest = i;
+            while rest < limit && matches!(bytes[rest], b' ' | b'\t') {
+                rest += 1;
+            }
+            if !bytes
+                .get(rest)
+                .is_none_or(|byte| matches!(byte, b'\n' | b'\r' | b'}'))
+            {
+                return None;
+            }
+            Some((Value::Trim(span(at, i)), i))
+        }
+        ValueKind::Boolean => {
+            for word in [&b"true"[..], &b"false"[..]] {
+                let end = at + word.len();
+                if bytes.get(at..end) == Some(word) && ends_a_scalar(bytes, end) {
+                    return Some((Value::Boolean(span(at, end)), end));
+                }
+            }
+            None
+        }
+        _ => None,
     }
 }
 
@@ -523,6 +646,44 @@ mod tests {
         for value in ["80%", "4cm", "12.5pt"] {
             let input = format!("\\figure(f) {{ width = {value} }}");
             assert_eq!(keys(&input), ["width"], "{value} was refused");
+        }
+    }
+
+    #[test]
+    fn inclusion_options_read_the_shapes_graphicx_gives_them() {
+        let input = "\\figure(f) {\n  scale = 0.5\n  angle = -90\n  trim = 1cm 0 0.5in 2\n  clip = true\n  caption = {x}\n}";
+        assert_eq!(keys(input), ["scale", "angle", "trim", "clip", "caption"]);
+        let block = parse(input).unwrap();
+        let bytes = input.as_bytes();
+        let text = |value: Value| {
+            String::from_utf8_lossy(&bytes[value.span().start()..value.span().end()]).into_owned()
+        };
+        assert!(matches!(block.fields[0].value, Value::Number(_)));
+        assert_eq!(text(block.fields[1].value), "-90");
+        assert!(matches!(block.fields[2].value, Value::Trim(_)));
+        assert_eq!(text(block.fields[2].value), "1cm 0 0.5in 2");
+        assert!(matches!(block.fields[3].value, Value::Boolean(_)));
+    }
+
+    #[test]
+    fn inclusion_options_refuse_what_graphicx_would_choke_on() {
+        // Three lengths, a unit TeX does not know, a number with a tail, a
+        // boolean in quotes, and an empty value: each is malformed at its key.
+        for (field, value) in [
+            ("trim", "1cm 0 0"),
+            ("trim", "1qm 0 0 0"),
+            ("trim", "1cm 0 0 0 0"),
+            ("scale", "0.5x"),
+            ("angle", "ninety"),
+            ("clip", "\"true\""),
+            ("clip", "yes"),
+            ("scale", ""),
+        ] {
+            let input = format!("\\figure(f) {{\n  {field} = {value}\n  caption = {{x}}\n}}");
+            let Err(BlockError::WrongValueKind { key, .. }) = parse(&input) else {
+                panic!("{field} = {value:?} was accepted")
+            };
+            assert_eq!(&input.as_bytes()[key.start()..key.end()], field.as_bytes());
         }
     }
 

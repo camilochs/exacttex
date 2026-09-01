@@ -32,7 +32,12 @@ Capabilities declared: `textDocumentSync: 1` (full text on every change), `hover
 
 The server calls `check`. It has no diagnostics of its own and never filters or rewords the checker's:
 `xtex check` and the editor show the same code, the same message and the same span for the same input,
-because one implementation answers both.
+because one implementation answers both. An advisory arrives as a warning squiggle (LSP severity 2), an
+error as an error one, so the editor and the exit code agree about what is fatal.
+
+One silence is deliberate beside the bibliography's: **an image path is never called missing.** The server
+has no project root to resolve it against, so `XT1006` cannot be substantiated and is not raised; every
+other block finding is.
 
 That is the exit criterion of this phase, and `opening_a_document_publishes_the_same_diagnostics_the_cli_reports`
 is where it is checked.
@@ -57,6 +62,10 @@ is. When they disagree you are looking at `XT1004` before the compiler has run.
 
 An unresolved reference says `not declared in this document root` rather than showing an empty popup, which
 is what an author sees for most of the time they are typing a name.
+
+The first line is the construct as written — `@Cref(sec:model)`, `@citep(knuth1984)` — and inside a list
+(`@cref(a, b)`, `@citep(a, b)`) it is the key under the cursor, which is also the one definition and
+completion answer for.
 
 ---
 
@@ -83,6 +92,7 @@ It changes nothing else, and the gap is the whole design:
 ```latex
 @id(fig:plot)                              renamed
 @ref(fig:plot)                             renamed
+@cref(fig:plot, fig:other)                 renamed, inside the list
 \label{fig:plot}                           left alone
 \verb|fig:plot|                            left alone
 We call it fig:plot in the text.           left alone

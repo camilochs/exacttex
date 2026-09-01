@@ -1,0 +1,2 @@
+XT1007|length|-|17|4|field requires four lengths separated by spaces — left, bottom, right, top — such as 1cm 0 0 2mm, where a bare number is in big points as graphicx reads it
+XT1008|figure|-|51|4|field requires true or false, written without quotes

@@ -234,6 +234,13 @@ fn name_spans(sources: &Sources, source: SourceId, construct: Span, kind: EntryT
             u32::try_from(construct.start() + to).unwrap_or(u32::MAX),
         )
     };
+    // A `cref` names a list, and every name in it is structural.
+    if kind == EntryToken::Ref && crate::scanner::names_a_list(bytes) {
+        return crate::scanner::split_keys(&bytes[open..close])
+            .into_iter()
+            .map(|(start, end)| at(open + start, open + end))
+            .collect();
+    }
     let Some(comma) = bytes[open..close].iter().position(|byte| *byte == b',') else {
         return vec![at(open, close)];
     };
@@ -347,6 +354,22 @@ mod tests {
         );
         assert!(!out.contains("fig:plot"), "{out}");
         assert_eq!(out.matches("fig:runtime").count(), 3, "{out}");
+    }
+
+    #[test]
+    fn every_reference_command_is_renamed_including_each_name_in_a_list() {
+        let (out, untouched) = renamed(
+            "@id(fig:plot) @cref(fig:plot, fig:other) @Cref(fig:other,fig:plot) \
+             @autoref(fig:plot) @pageref(fig:plot)",
+            "fig:plot",
+            "fig:new",
+        );
+        assert_eq!(
+            out,
+            "@id(fig:new) @cref(fig:new, fig:other) @Cref(fig:other,fig:new) \
+             @autoref(fig:new) @pageref(fig:new)"
+        );
+        assert_eq!(untouched, 0, "{out}");
     }
 
     #[test]

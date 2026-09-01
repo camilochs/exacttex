@@ -1,0 +1,2 @@
+See @eqref(eq:x) and mail name@example.org and @ref alone.
+\table(tab:a) { caption = {see @nameref(tab:a)} }

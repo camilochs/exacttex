@@ -101,11 +101,44 @@ pub fn construct_at(sources: &Sources, document: &Document, offset: usize) -> Op
             best = Some(Located {
                 kind: *kind,
                 span: *span,
-                name: payload_text_for(sources, node.source(), *span, *kind).unwrap_or_default(),
+                name: name_under(sources, node.source(), *span, *kind, offset).unwrap_or_default(),
             });
         }
     });
     best
+}
+
+/// The name the cursor is on.
+///
+/// A citation or a `cref` names several keys, and the question an editor asks
+/// — what is this, where is it declared — is about the one under the cursor.
+/// On the entry token, before any key, the first key answers.
+fn name_under(
+    sources: &Sources,
+    source: SourceId,
+    span: Span,
+    kind: EntryToken,
+    offset: usize,
+) -> Option<String> {
+    if !matches!(kind, EntryToken::Ref | EntryToken::Cite) {
+        return payload_text_for(sources, source, span, kind);
+    }
+    let bytes = sources.get(source)?.slice(span)?;
+    if !crate::scanner::names_a_list(bytes) && kind != EntryToken::Cite {
+        return payload_text_for(sources, source, span, kind);
+    }
+    let open = bytes.iter().position(|byte| *byte == b'(')? + 1;
+    let close = open + bytes[open..].iter().position(|byte| *byte == b')')?;
+    let relative = offset.saturating_sub(span.start());
+    let keys = crate::scanner::split_keys(&bytes[open..close]);
+    let (start, end) = keys
+        .iter()
+        .copied()
+        .find(|(_, end)| relative <= open + end)
+        .or_else(|| keys.first().copied())?;
+    std::str::from_utf8(&bytes[open + start..open + end])
+        .ok()
+        .map(|key| key.trim().to_owned())
 }
 
 /// What to show for the construct at `offset`.
@@ -123,9 +156,17 @@ pub fn hover(
     let located = construct_at(sources, document, offset)?;
     let mut text = String::new();
 
+    // The construct's own command word — `@Cref`, `@citep` — rather than the
+    // family: the hover describes what the author wrote.
+    let command = sources
+        .get(document.source())
+        .and_then(|source| source.slice(located.span))
+        .map(crate::scanner::at_command)
+        .map(|command| String::from_utf8_lossy(command).into_owned())
+        .unwrap_or_default();
     match located.kind {
         EntryToken::Ref => {
-            let _ = writeln!(text, "@ref({})", located.name);
+            let _ = writeln!(text, "@{command}({})", located.name);
             let demanded = table.demand_of(&located.name);
             if demanded != EntityClass::UnknownOpen {
                 let _ = writeln!(text, "requires: {}", demanded.name());
@@ -141,7 +182,7 @@ pub fn hover(
             }
         }
         EntryToken::Cite => {
-            let _ = write!(text, "@cite({})\ncitation key", located.name);
+            let _ = write!(text, "@{command}({})\ncitation key", located.name);
         }
         EntryToken::Id | EntryToken::Figure | EntryToken::Table => {
             let class = table

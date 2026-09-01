@@ -56,7 +56,10 @@ pub(crate) const DISPLAY_MATH_ENVIRONMENTS: &[(&str, &[Argument])] = &[
     ("xxalignat", &[Argument::Mandatory]),
 ];
 
-/// Every `@`-keyword, longest first so that `@import` is tried before `@id`.
+/// Every fixed `@`-keyword, longest first so that `@import` is tried before
+/// `@id`. Citation and reference commands are not here: their keyword is
+/// the LaTeX command's own name, read from [`DEFAULT_CITE_COMMANDS`] and
+/// [`DEFAULT_REF_COMMANDS`].
 pub(crate) const AT_TOKENS: &[EntryToken] = &[
     EntryToken::Import,
     EntryToken::Note,
@@ -64,7 +67,6 @@ pub(crate) const AT_TOKENS: &[EntryToken] = &[
     EntryToken::Del,
     EntryToken::Sub,
     EntryToken::Cite,
-    EntryToken::Ref,
     EntryToken::Id,
 ];
 
@@ -79,6 +81,43 @@ pub(crate) const AT_TOKENS: &[EntryToken] = &[
 /// the construct's own bytes, and the emitter reads it there — a variant per
 /// command would put the same information in two places.
 pub const DEFAULT_CITE_COMMANDS: &[&str] = &["parencite", "textcite", "citep", "citet", "cite"];
+
+/// The reference commands a construct may name, longest first.
+///
+/// The same rule as citations: a reference construct is a LaTeX reference
+/// command written with `@`, checked exactly as `@ref` is. The kernel
+/// provides `ref` and `pageref`; `hyperref` provides `autoref`; `cleveref`
+/// provides `cref` and `Cref`. All five map to one [`EntryToken::Ref`], and
+/// the emitter reads the command from the construct's own bytes.
+///
+/// `cref` and `Cref` accept a comma-separated list; the other three take
+/// one identifier, and `\autoref{a,b}` is an undefined reference in LaTeX
+/// itself — compiled to check, not recalled. `docs/grammar.md` §4.
+pub const DEFAULT_REF_COMMANDS: &[&str] = &["pageref", "autoref", "Cref", "cref", "ref"];
+
+/// The reference commands whose argument may name several identifiers.
+pub const LIST_REF_COMMANDS: &[&str] = &["Cref", "cref"];
+
+/// Whether `@word(` — a shape no construct claims — is close enough to one to
+/// be worth telling the author about.
+///
+/// The bytes are transported either way; the advisory exists because
+/// `@eqref(eq:x)` in prose reaches the PDF as literal text with exit 0,
+/// which is worse than an unsupported command. The families are the
+/// reference and citation vocabularies, the construct keywords in any
+/// letter case, and any command the signature table knows. A word outside
+/// them — `@home(` in a sentence — is left alone: an advisory that fires on
+/// prose trains its reader to ignore it.
+pub(crate) fn looks_like_a_construct_word(word: &[u8]) -> bool {
+    let lower: Vec<u8> = word.to_ascii_lowercase();
+    lower.ends_with(b"ref")
+        || lower.windows(4).any(|window| window == b"cite")
+        || matches!(
+            lower.as_slice(),
+            b"id" | b"import" | b"add" | b"del" | b"sub" | b"note"
+        )
+        || crate::signatures::is_known(word)
+}
 
 /// Commands whose argument is a *definition* rather than content.
 ///

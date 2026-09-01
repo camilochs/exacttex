@@ -1,0 +1,4 @@
+transport: identical because both explicit blocks are malformed and preserved
+scanner: !figure !figure
+constructs: two malformed figures — a trim with three lengths is XT1007 at its key,
+  a clip that is not true or false is XT1008 at its key
