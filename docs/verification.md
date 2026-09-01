@@ -59,8 +59,22 @@ asks the open sources about each claim and writes the record beside the root doc
 - The record is **persisted after every claim settles**, so an interrupted run keeps everything it
   obtained and the next run completes the holes.
 
-A timeout is never conflated with nonexistence: a claim the network failed to answer is recorded as
-unanswered **with the failure note**, and is always retried on the next run.
+A timeout is never conflated with nonexistence, and nonexistence is never conflated with a timeout. A
+claim the network failed to answer — a timeout, a refusal, a malformed reply — is recorded as unanswered
+**with the failure note** and is retried on the next run, always. A registry that answered "nothing
+matched", or a server that answered 404, has answered: that negative is recorded with its note and carried
+over like any verdict while the entry is unchanged and inside the freshness window, and re-asked only
+after it. On ten real bibliographies (corpus E6) 39% of entries are absent from Crossref and OpenAlex;
+re-asking them every run had cost half of a full run, forever.
+
+Author lists are compared by family name after folding what formatting varies and truth does not: TeX
+accent macros and diacritics (`Gr\'{e}goire`, `Grégoire`), `Family, Given` against `Given Family`,
+particles (`van de Wetering`), suffixes, hyphens and typographic apostrophes, and a list cut with `and
+others` or `et al.`, which must be contained in the other. Initials against full given names never
+differ, because given names are not compared. A diff that survives that folding is a diff in a family
+name or in the count, and it stays high severity — the fabricated author list behind a valid DOI is the
+failure verification exists to catch. Measured on the same ten bibliographies, the blunt comparison had
+flagged 229 author lists of which about 43 differed in substance.
 
 ## 3 · The record
 

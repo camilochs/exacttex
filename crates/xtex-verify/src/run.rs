@@ -114,8 +114,37 @@ fn with_budget<T>(
     }
 }
 
+/// The note a registry's "nothing matched" is recorded with. Its first
+/// words are what [`is_settled_negative`] reads, so they are fixed here.
+pub const NOT_FOUND_NOTE: &str = "not found at the registries — books published before DOIs often are not registered; the entry may still be correct";
+
+/// Whether an unanswered-looking claim is in fact a settled negative: the
+/// source answered, and the answer was "no".
+///
+/// A registry that answers "nothing matched" has answered; a server that
+/// answers 404 has answered. Neither is a transport failure, and neither
+/// changes on the next run unless the entry changes or the freshness
+/// window elapses. Retrying them every run cost half of a full run,
+/// forever, on bibliographies where 39% of entries are not in Crossref
+/// (corpus E6: run 2 spent 325 of run 1's 688 requests re-asking 382
+/// claims that had been answered "not found"). A timeout, a refusal or a
+/// malformed answer keeps its failure note and is retried.
+#[must_use]
+pub fn is_settled_negative(recorded: &VerifiedClaim) -> bool {
+    let Some(note) = recorded.failure_note.as_deref() else {
+        return false;
+    };
+    match recorded.verdict {
+        Verdict::Bibliographic(BibVerdict::Unverified) => {
+            note.starts_with("not found at the registries")
+        }
+        Verdict::Reachability(Reachability::Unreachable) => note.starts_with("answered "),
+        _ => false,
+    }
+}
+
 /// True when the recorded claim still answers for the document's: same
-/// fields, young enough, and an answered verdict.
+/// fields, young enough, and either answered or a settled negative.
 fn still_fresh(claim: &Claim, recorded: &VerifiedClaim, now: &str, max_age_days: i64) -> bool {
     if recorded.fields != claim.fields {
         return false;
@@ -125,8 +154,8 @@ fn still_fresh(claim: &Claim, recorded: &VerifiedClaim, now: &str, max_age_days:
         Verdict::Bibliographic(BibVerdict::Unverified)
             | Verdict::Reachability(Reachability::Unreachable)
     );
-    if unanswered {
-        return false; // a failure is retried on the next run, always
+    if unanswered && !is_settled_negative(recorded) {
+        return false; // a transport failure is retried on the next run, always
     }
     match (super::civil(now), super::civil(&recorded.fetched_at)) {
         (Some(today), Some(then)) => today - then <= max_age_days,
@@ -309,11 +338,7 @@ pub fn verify(
                             failure_note: None,
                         }
                     }
-                    None => unverified(
-                        claim,
-                        run,
-                        "not found at the registries — books published before DOIs often are not registered; the entry may still be correct",
-                    ),
+                    None => unverified(claim, run, NOT_FOUND_NOTE),
                 }
             }
             ClaimKind::Url | ClaimKind::Doi | ClaimKind::Repository => {
