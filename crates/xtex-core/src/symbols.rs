@@ -47,11 +47,27 @@ pub enum EntityClass {
 
 impl EntityClass {
     /// Whether two classes can safely be used together.
+    ///
+    /// Equal classes, either side open, or both in the sectioning family:
+    /// an appendix is a section in LaTeX's own terms (the same `\section`
+    /// command, after the `\appendix` switch), so `sec:` on an appendix
+    /// and `app:` on a section after the switch are both consistent, and
+    /// so are the words "Section" and "Appendix" before either. Reading
+    /// them as distinct rejected 14 correct references in 3 corpus papers
+    /// the day after reading them as one had rejected 98. Figure, table,
+    /// equation and algorithm against the family stay errors.
     #[must_use]
     pub const fn is_consistent_with(self, other: Self) -> bool {
         matches!(self, Self::UnknownOpen)
             || matches!(other, Self::UnknownOpen)
             || self as u8 == other as u8
+            || (self.is_sectioning() && other.is_sectioning())
+    }
+
+    /// Section or appendix.
+    #[must_use]
+    pub const fn is_sectioning(self) -> bool {
+        matches!(self, Self::Section | Self::Appendix)
     }
 
     /// Stable spelling used by diagnostics.
@@ -600,11 +616,22 @@ fn inside_display_math(bytes: &[u8], at: usize) -> bool {
             }
         }
     }
-    if let Some(open) = before.windows(2).rposition(|window| window == b"\\[") {
-        let closed = before[open..].windows(2).any(|window| window == b"\\]");
-        if !closed {
-            return true;
+    // `\[` opens a display only when its backslash is not itself escaped:
+    // `\\[2pt]` is a tabular line break with spacing, and reading it as an
+    // opener classed every later declaration in the file as an equation
+    // (47 XT1004 and 61 XT1020 on correct documents, corpus E2 re-run).
+    let mut from = before.len();
+    while let Some(open) = before[..from]
+        .windows(2)
+        .rposition(|window| window == b"\\[")
+    {
+        if !crate::scanner::is_escaped(before, open) {
+            let closed = before[open..].windows(2).enumerate().any(|(at, window)| {
+                window == b"\\]" && !crate::scanner::is_escaped(before, open + at)
+            });
+            return !closed;
         }
+        from = open;
     }
     false
 }
@@ -1074,14 +1101,38 @@ mod tests {
         assert_eq!(t.declaration("app:c").unwrap().class, EntityClass::Appendix);
         assert_eq!(t.inconsistent_references().count(), 0);
 
-        // Before the switch, `app:` on a section is still the mismatch.
+        // Before the switch a section is a section; `app:` on it is
+        // consistent all the same, because the two are one family.
         let (_, t) = table(&[("a.xtex", "\\section{A}@id(app:a) @ref(app:a)\n\\appendix")]);
-        assert_eq!(t.inconsistent_references().count(), 1);
+        assert_eq!(t.declaration("app:a").unwrap().class, EntityClass::Section);
+        assert_eq!(t.inconsistent_references().count(), 0);
 
         // A commented-out switch switches nothing.
         let (_, t) = table(&[("a.xtex", "% \\appendix\n\\section{A}@id(app:a) @ref(app:a)")]);
-        assert_eq!(t.inconsistent_references().count(), 1);
+        assert_eq!(t.declaration("app:a").unwrap().class, EntityClass::Section);
         assert_eq!(appendix_switch_at(b"\\appendixname"), None);
+    }
+
+    #[test]
+    fn section_and_appendix_are_one_family_for_prefix_and_prose() {
+        let text = "\\section{M}@id(sec:m) Section~@ref(sec:m) Appendix~@ref(sec:m)\n\\appendix\n\
+                    \\section{E}@id(sec:e) Section~@ref(sec:e) @ref(app:e2)\n\\section{F}@id(app:f) Appendix~@ref(app:f) Section~@ref(app:f)";
+        let (_, t) = table(&[("a.xtex", text)]);
+        assert_eq!(t.declaration("sec:e").unwrap().class, EntityClass::Appendix);
+        assert_eq!(
+            t.inconsistent_references().count(),
+            0,
+            "sec: on an appendix is consistent"
+        );
+        assert_eq!(t.prose_mismatches().count(), 0);
+        // The family does not reach the other classes: both references
+        // carry the figure prefix, one carries the word.
+        let (_, t) = table(&[(
+            "a.xtex",
+            "\\appendix\n\\section{E}@id(fig:e) @ref(fig:e) Figure~@ref(fig:e)",
+        )]);
+        assert_eq!(t.inconsistent_references().count(), 2);
+        assert_eq!(t.prose_mismatches().count(), 1);
     }
 
     #[test]
@@ -1119,6 +1170,23 @@ mod tests {
             t.declaration("eq:x").unwrap().class,
             EntityClass::UnknownOpen
         );
+    }
+
+    #[test]
+    fn a_tabular_line_break_with_spacing_opens_no_display() {
+        // `\\[2pt]` is `\\` followed by an optional argument; the `\[`
+        // inside it is not the display opener. A section after it is a
+        // section, and a genuine display after it still declares an equation.
+        let text = "\\begin{tabular}{cc}\na & b \\\\[2pt]\nc & d\n\\end{tabular}\n\
+                    \\section{M}@id(sec:m) Section~@ref(sec:m)\n\
+                    \\[ x = 1 @id(eq:x) \\] @ref(eq:x)\n\
+                    a \\\\[4pt] b \\section{N}@id(sec:n)";
+        let (_, t) = table(&[("a.xtex", text)]);
+        assert_eq!(t.declaration("sec:m").unwrap().class, EntityClass::Section);
+        assert_eq!(t.declaration("eq:x").unwrap().class, EntityClass::Equation);
+        assert_eq!(t.declaration("sec:n").unwrap().class, EntityClass::Section);
+        assert_eq!(t.inconsistent_references().count(), 0);
+        assert_eq!(t.prose_mismatches().count(), 0);
     }
 
     #[test]

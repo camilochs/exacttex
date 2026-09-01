@@ -1,0 +1,5 @@
+transport: identical
+scanner: id ref ref
+constructs: a `[` that never closes is prose, not an optional argument, so nothing
+  after it is quarantined and the broken reference to sec:ghost is reported.
+  Corpus E2 reproducer `unclosed-bracket.xtex`.

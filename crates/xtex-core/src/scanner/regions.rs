@@ -2,7 +2,8 @@
 
 use super::EntryToken;
 use super::boundaries::{
-    balanced_end, close_paren, delimited_end, is_escaped, skip_ascii_whitespace,
+    balanced_end, close_paren, delimited_end, is_escaped, optional_argument_end,
+    skip_ascii_whitespace,
 };
 use super::tables::AT_TOKENS;
 use super::tables::{
@@ -149,8 +150,9 @@ pub(crate) fn text_argument_interior(bytes: &[u8], at: usize) -> Option<(usize, 
                 }
             }
             Argument::Optional => {
-                if bytes.get(cursor) == Some(&b'[') {
-                    let end = delimited_end(bytes, cursor, b'[', b']')?;
+                if bytes.get(cursor) == Some(&b'[')
+                    && let Some(end) = optional_argument_end(bytes, cursor)
+                {
                     if first_optional.is_none() {
                         first_optional = Some((cursor + 1, end - 1));
                     }
@@ -230,11 +232,12 @@ pub(crate) fn command_extent(bytes: &[u8], at: usize) -> Extent {
                     }
                 }
                 Argument::Optional => {
-                    if bytes.get(cursor) == Some(&b'[') {
-                        match delimited_end(bytes, cursor, b'[', b']') {
-                            Some(end) => cursor = end,
-                            None => return Extent::Unbounded,
-                        }
+                    // A `[` that never closes, or closes past a blank line,
+                    // is prose and the argument is absent.
+                    if bytes.get(cursor) == Some(&b'[')
+                        && let Some(end) = optional_argument_end(bytes, cursor)
+                    {
+                        cursor = end;
                     }
                 }
                 Argument::Mandatory => {
@@ -276,22 +279,25 @@ pub(crate) fn command_extent(bytes: &[u8], at: usize) -> Extent {
     let mut groups = 0usize;
     loop {
         let next = skip_ascii_whitespace(bytes, cursor);
-        let (open, close) = match bytes.get(next) {
-            Some(b'{') => (b'{', b'}'),
-            Some(b'[') => (b'[', b']'),
+        let open = match bytes.get(next) {
+            Some(b'{') => b'{',
+            Some(b'[') => b'[',
             _ => break,
         };
         if groups == MAX_UNKNOWN_COMMAND_GROUPS {
             return Extent::Unbounded;
         }
-        let end = if open == b'{' {
-            balanced_end(bytes, next)
+        if open == b'{' {
+            match balanced_end(bytes, next) {
+                Some(end) => cursor = end,
+                None => return Extent::Unbounded,
+            }
         } else {
-            delimited_end(bytes, next, open, close)
-        };
-        match end {
-            Some(e) => cursor = e,
-            None => return Extent::Unbounded,
+            // An unclosed bracket is prose, not a group; the claim ends.
+            let Some(end) = optional_argument_end(bytes, next) else {
+                break;
+            };
+            cursor = end;
         }
         groups += 1;
     }
@@ -378,10 +384,9 @@ pub(crate) fn verbatim_command_opening(bytes: &[u8], at: usize) -> Option<(Regio
         }
         b"lstinline" => {
             if bytes.get(cursor) == Some(&b'[') {
-                cursor = match delimited_end(bytes, cursor, b'[', b']') {
-                    Some(end) => end,
-                    None => return Some((Region::Quarantine, cursor)),
-                };
+                // An unclosed option list is prose; this is then not a
+                // verbatim command and the ordinary path reads it.
+                cursor = optional_argument_end(bytes, cursor)?;
             }
             if bytes.get(cursor) == Some(&b'{') {
                 return None;

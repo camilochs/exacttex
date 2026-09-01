@@ -206,6 +206,50 @@ fn an_unterminated_display_environment_quarantines_to_eof() {
 }
 
 #[test]
+fn an_unclosed_optional_bracket_is_prose_and_quarantines_nothing() {
+    // The corpus reproducer: `\foo{}[never closed` hid a planted broken
+    // reference — every construct after it was transported unread.
+    let input = b"A sample: \\foo{}[never closed\n\\section{A}@id(sec:a)\nSee @ref(sec:a) and @ref(sec:ghost).\n";
+    assert_eq!(
+        constructs(input),
+        [EntryToken::Id, EntryToken::Ref, EntryToken::Ref]
+    );
+    assert!(
+        !scan(input)
+            .iter()
+            .any(|piece| matches!(piece, Piece::Quarantined(_)))
+    );
+    // A bracket that closes only past a blank line is prose too, for a
+    // known signature as for an unknown command.
+    for input in [
+        &b"\\includegraphics[width=3cm\n\nSee @ref(after) ]"[..],
+        b"\\foo[a\n\nb] @ref(after)",
+        b"\\lstinline[never @ref(after)",
+    ] {
+        assert_eq!(
+            constructs(input),
+            [EntryToken::Ref],
+            "{}",
+            String::from_utf8_lossy(input)
+        );
+        assert!(
+            !scan(input)
+                .iter()
+                .any(|piece| matches!(piece, Piece::Quarantined(_)))
+        );
+    }
+    // A real optional argument may span a line, and still bounds its call.
+    assert_eq!(
+        constructs(b"\\caption[short\ntitle]{x @ref(inside)} @ref(after)"),
+        [EntryToken::Ref, EntryToken::Ref]
+    );
+    assert_eq!(
+        constructs(b"\\foo[a\nb @ref(hidden)] @ref(after)"),
+        [EntryToken::Ref]
+    );
+}
+
+#[test]
 fn newif_defines_a_conditional_and_does_not_open_one() {
     // The E2 reproducer: `\newif\iffoo` in a preamble sent the rest of the
     // file to quarantine with no diagnostic. The definition claims its name;

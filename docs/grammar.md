@@ -366,7 +366,9 @@ had been emitted as written, and LaTeX could not find it.)
 
 **`\appendix` is a switch.** An `@id` attached to a sectioning command after `\appendix` — in the same
 file, or in a file imported after it, transitively — declares an `Appendix`; before it, a `Section`. The
-switch is read in readable content only, so a commented-out `\appendix` switches nothing. Authors label
+two are one family for every class comparison ([`checking.md`](checking.md) §2): `sec:` on an appendix is
+consistent, as is `app:` on a section after the switch. The switch is read in readable content only, so a
+commented-out `\appendix` switches nothing. Authors label
 appendix sections `app:x`, and reading them as sections reported 98 false `XT1004` on three correct papers
 (corpus E2).
 
@@ -895,6 +897,18 @@ entry token are ordinary bytes.
 | Raw escape | complete `latex` entry through its opening `{` | matching `}` |
 | Command argument | an argument start selected by a known signature — except a text-bearing argument, whose interior is prose (see below) | that argument's specified boundary |
 | Quarantine | a hazard listed below | end of file |
+
+**An unclosed `[` is prose.** An optional argument closes before a blank line, or it is not an argument: a
+`[` with no `]` before the end of the file, or one whose `]` lies past a paragraph break, is an ordinary
+bracket and the command's argument list ends before it. Read as an argument it had no boundary, and the rest
+of the file went opaque with no diagnostic — `\foo{}[never closed` hid a planted broken reference in a real
+paper (corpus E2). An unclosed `{` still quarantines: a brace is a group under any category code and a
+bracket is a character. Fixture `exclusions/18`.
+
+**`\\[2pt]` opens no display.** The display opener is `\[` only when its backslash is not itself escaped;
+`\\[2pt]` is a line break with spacing, and reading its bracket as an opener classed every later
+declaration in the file as an equation (corpus E2 re-run: 47 `XT1004` and 61 `XT1020` on correct documents).
+Fixture `checking/09`.
 
 `\newif\iffoo` defines a conditional and opens no region: the `\if…` control word after `\newif` is the
 command's argument. Read as an opener it has no `\fi`, and the rest of the file went to quarantine with no

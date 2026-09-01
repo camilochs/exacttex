@@ -598,7 +598,7 @@ mod appendix_tests {
     fn a_file_imported_after_the_appendix_switch_declares_appendices() {
         // The corpus shape: `\appendix` in the root, the appendices in their
         // own files, `app:` labels on their sections. Correct, and it must
-        // check clean; the same file imported before the switch is not.
+        // check clean.
         let after = codes(&[
             (
                 "main.xtex",
@@ -612,14 +612,18 @@ mod appendix_tests {
         ]);
         assert!(after.is_empty(), "{after:?}");
 
-        let before = codes(&[
+        // The classes are what the switch says, which the figure prefix
+        // shows: it contradicts an appendix after the switch and a section
+        // before it alike, while `app:` on either is one family.
+        let classes = codes(&[
             (
                 "main.xtex",
-                "@import(\"back/app.xtex\")\n\\appendix\n@ref(app:b)\n",
+                "@import(\"front/b.xtex\")\n\\appendix\n@import(\"back/a.xtex\")\n@ref(fig:b) @ref(fig:a)\n",
             ),
-            ("back/app.xtex", "\\section{B}@id(app:b)\n"),
+            ("front/b.xtex", "\\section{B}@id(fig:b)\n"),
+            ("back/a.xtex", "\\section{A}@id(fig:a)\n"),
         ]);
-        assert_eq!(before, ["XT1004 app:b"]);
+        assert_eq!(classes, ["XT1004 fig:b", "XT1004 fig:a"]);
     }
 }
 

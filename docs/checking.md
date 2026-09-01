@@ -47,10 +47,16 @@ The term is from Malewski, Greenberg and Tanter, *Gradually Structured Data* (OO
 Comparison is **consistency**, not equality:
 
 ```
-Known(A) ~ Known(B)   if and only if A == B
+Known(A) ~ Known(B)   if and only if A == B, or both are Section or Appendix
 ?O       ~ T          for every T
 T        ~ ?O         for every T
 ```
+
+Section and Appendix are one family. An appendix is what LaTeX makes of the same `\section` command after
+the `\appendix` switch, so `sec:` on an appendix, `app:` on a section after the switch, and the words
+"Section" or "Appendix" before either are all consistent; Figure, Table, Equation and Algorithm against the
+family stay errors. Reading the two as distinct rejected 14 correct references in 3 corpus papers the day
+after reading them as one had rejected 98.
 
 The second and third lines are the whole checking policy in two symbols. `?O` is consistent with
 everything, so nothing involving unmodelled LaTeX can ever be inconsistent, so nothing involving unmodelled
