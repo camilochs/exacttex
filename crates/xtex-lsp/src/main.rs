@@ -16,14 +16,12 @@
 //! A message not in the table is not answered, and the editor's own fallback
 //! is the correct behaviour.
 
-mod json;
 mod rpc;
 
 use std::collections::BTreeMap;
 use std::fmt::Write as _;
 use std::io::{BufReader, Write};
 
-use json::{Value, write_text};
 use xtex_core::bibliography::{Bibliography, Unavailable};
 use xtex_core::check::check_with_labels;
 use xtex_core::document::Document;
@@ -31,6 +29,7 @@ use xtex_core::editor::{
     Position, citation_definition_site, completions, construct_at, definition, definition_site,
     hover, offset_at,
 };
+use xtex_core::json::{Value, write_text};
 use xtex_core::parse;
 use xtex_core::rename::plan;
 use xtex_core::scanner::EntryToken;

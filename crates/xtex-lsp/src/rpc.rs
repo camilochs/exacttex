@@ -13,7 +13,7 @@ pub struct Message {
     /// The method the client named.
     pub method: String,
     /// `params`, unexamined.
-    pub params: crate::json::Value,
+    pub params: xtex_core::json::Value,
 }
 
 /// Reads one message, or `None` at end of stream.
@@ -48,7 +48,7 @@ pub fn read(input: &mut impl BufRead) -> std::io::Result<Option<Message>> {
     let mut body = vec![0u8; length];
     input.read_exact(&mut body)?;
 
-    let Some(value) = crate::json::parse(&body) else {
+    let Some(value) = xtex_core::json::parse(&body) else {
         return Err(std::io::Error::new(
             std::io::ErrorKind::InvalidData,
             "a frame body was not JSON",
@@ -56,16 +56,16 @@ pub fn read(input: &mut impl BufRead) -> std::io::Result<Option<Message>> {
     };
     let method = value
         .get("method")
-        .and_then(crate::json::Value::text)
+        .and_then(xtex_core::json::Value::text)
         .unwrap_or_default()
         .to_owned();
     Ok(Some(Message {
-        id: value.get("id").and_then(crate::json::Value::integer),
+        id: value.get("id").and_then(xtex_core::json::Value::integer),
         method,
         params: value
             .get("params")
             .cloned()
-            .unwrap_or(crate::json::Value::Null),
+            .unwrap_or(xtex_core::json::Value::Null),
     }))
 }
 
