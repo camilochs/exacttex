@@ -68,3 +68,19 @@ jobs:
       - uses: Swatinem/rust-cache@v2
       - name: build on the declared floor
         run: cargo build --workspace --all-targets
+
+  # The verifier lives OUTSIDE the workspace (its dependencies must not
+  # reach the compiler's lock file), so it earns its own job.
+  verify-crate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: crates/xtex-verify
+      - run: cargo test --manifest-path crates/xtex-verify/Cargo.toml
+      - run: cargo clippy --manifest-path crates/xtex-verify/Cargo.toml --all-targets -- -D warnings
+      - run: cargo fmt --manifest-path crates/xtex-verify/Cargo.toml --check

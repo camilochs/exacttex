@@ -21,7 +21,7 @@
 use crate::json::{self, Value};
 
 /// What kind of thing the document asserted exists.
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
 pub enum ClaimKind {
     /// An entry in a declared `.bib`, keyed by its citation key.
     BibEntry,
@@ -395,7 +395,9 @@ pub fn write_record(record: &VerificationRecord) -> String {
 /// Days since the civil epoch for an RFC 3339 date's day part, or `None`
 /// for a shape this reader does not recognise. Enough calendar for an age
 /// in days; not a datetime library and not on its way to becoming one.
-fn civil_days(date: &str) -> Option<i64> {
+/// Public because the verifier asks the same question about freshness.
+#[must_use]
+pub fn civil_days(date: &str) -> Option<i64> {
     let bytes = date.as_bytes();
     if bytes.len() < 10 || bytes[4] != b'-' || bytes[7] != b'-' {
         return None;

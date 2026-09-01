@@ -3,7 +3,7 @@ resolver = "3"
 members = ["crates/xtex-core", "crates/xtex-cli", "crates/xtex-lsp", "crates/xtex-wasm"]
 # Experiments carry dependencies the compiler must not inherit through the lock
 # file. They are built on their own.
-exclude = ["tests/experiments"]
+exclude = ["tests/experiments", "crates/xtex-verify"]
 
 [workspace.package]
 version = "0.0.0"
