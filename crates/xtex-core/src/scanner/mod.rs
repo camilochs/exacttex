@@ -25,6 +25,7 @@ mod tables;
 #[path = "tests.rs"]
 mod tests;
 
+pub(crate) use boundaries::is_escaped;
 pub use boundaries::{CommentRule, balanced_end, balanced_end_with};
 pub use queries::{construct_shaped_text, split_keys};
 pub use queries::{is_display_math_region, readable_content};
@@ -34,7 +35,7 @@ pub use tables::{
     DEFINITION_COMMANDS, LIST_REF_COMMANDS,
 };
 
-use boundaries::{close_import, close_paren, ident_end, is_escaped, span, span_at};
+use boundaries::{close_import, close_paren, ident_end, span, span_at};
 use queries::substitution_arrows;
 use regions::{
     Extent, Region, command_extent, display_math_environment_opening, entry_token_at,

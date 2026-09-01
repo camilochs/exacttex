@@ -171,6 +171,33 @@ pub(crate) fn delimited_end(bytes: &[u8], from: usize, open: u8, close: u8) -> O
     None
 }
 
+/// Offset just past the `]` closing an optional argument opened at `from`,
+/// when it closes before a blank line.
+///
+/// A `[` with no `]` before the end of the file, or one that would reach
+/// across a paragraph break, is not an optional argument; it is a bracket
+/// in prose. Read as an argument it had no boundary, and the rest of the
+/// file went opaque with no diagnostic — `\foo{}[never closed` hid a
+/// planted broken reference in a real paper (corpus E2). A real optional
+/// argument may span lines (`\caption[short\ntitle]{…}`), never a blank one.
+pub(crate) fn optional_argument_end(bytes: &[u8], from: usize) -> Option<usize> {
+    let end = delimited_end(bytes, from, b'[', b']')?;
+    let mut at = from;
+    while at < end {
+        if bytes[at] == b'\n' {
+            let mut next = at + 1;
+            while matches!(bytes.get(next), Some(b' ' | b'\t' | b'\r')) {
+                next += 1;
+            }
+            if bytes.get(next) == Some(&b'\n') {
+                return None;
+            }
+        }
+        at += 1;
+    }
+    Some(end)
+}
+
 pub(crate) fn skip_ascii_whitespace(bytes: &[u8], mut at: usize) -> usize {
     while matches!(bytes.get(at), Some(b' ' | b'\t')) {
         at += 1;

@@ -1,0 +1,6 @@
+\documentclass{article}
+\begin{document}
+A sample: \foo{}[never closed
+\section{A}@id(sec:a)
+See @ref(sec:a) and @ref(sec:ghost).
+\end{document}

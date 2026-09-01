@@ -1,0 +1,8 @@
+\begin{tabular}{cc}
+a & b \\[2pt]
+c & d
+\end{tabular}
+\section{M}@id(sec:m) Section~@ref(sec:m)
+\appendix
+\section{E}@id(sec:e) Section~@ref(sec:e) Appendix~@ref(app:e)
+\section{F}@id(fig:f) Figure~@ref(fig:f)

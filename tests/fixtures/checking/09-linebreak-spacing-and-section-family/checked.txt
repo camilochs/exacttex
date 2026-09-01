@@ -1,0 +1,3 @@
+XT1003|appendix|app:e|162|5|identifier `app:e` is not declared
+XT1004|figure|fig:f|203|5|reference `fig:f` requires figure, but its target is appendix
+XT1020|figure|fig:f|191|6|prose says `Figure` but `fig:f` is an appendix

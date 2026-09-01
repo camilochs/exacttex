@@ -1,0 +1,6 @@
+transport: identical
+scanner: id ref id ref ref id ref
+constructs: `\\[2pt]` opens no display, so sec:m is a section; after `\appendix`
+  the `sec:` prefix and the word Section on an appendix are consistent (one
+  sectioning family); `app:e` is undeclared; a figure prefix and the word
+  Figure on a section after the switch are still XT1004 and XT1020.
