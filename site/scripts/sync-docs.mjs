@@ -21,6 +21,9 @@ function page(src, dest, titleOverride, order) {
   // Root-relative repo links have no meaning on the site; point them at GitHub.
   text = text.replaceAll("](docs/", `](${prefix}`);
   text = text.replaceAll('src="docs/assets/', `src="${prefix}assets/`);
+  // A docs page referencing its sibling assets/ resolves against the built
+  // page's own URL and 404s; the served copy lives at the site root.
+  text = text.replaceAll("](assets/", `](${prefix}assets/`);
   const front = ["---", `title: "${title.replaceAll('"', '\\"')}"`];
   if (order !== undefined) front.push(`sidebar:`, `  order: ${order}`);
   front.push("---", "");
@@ -95,7 +98,7 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 page(join(repo, "PHILOSOPHY.md"), "philosophy.md", "Philosophy");
 page(join(repo, "ROADMAP.md"), "roadmap.md", "Roadmap");
 page(join(repo, "CONTRIBUTING.md"), "contributing.md", "Contributing");
-for (const name of ["grammar", "checking", "verification", "revisions", "diagnostics", "wasm", "lsp", "testing", "references"]) {
+for (const name of ["architecture", "grammar", "checking", "verification", "revisions", "diagnostics", "wasm", "lsp", "testing", "references"]) {
   page(join(repo, "docs", `${name}.md`), `${name}.md`);
 }
 let order = 1;

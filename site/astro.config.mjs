@@ -18,6 +18,7 @@ export default defineConfig({
       sidebar: [
         { label: "Start", items: [
           { label: "Introduction", slug: "introduction" },
+          { label: "Architecture", slug: "architecture" },
           { label: "Philosophy", slug: "philosophy" },
         ]},
         { label: "The language", items: [
