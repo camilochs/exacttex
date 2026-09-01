@@ -526,84 +526,99 @@ pub fn check_against_record(input: &RecordCheck<'_>) -> Vec<crate::check::Diagno
             }
         }
 
-        match recorded.verdict {
-            Verdict::Bibliographic(BibVerdict::Verified)
-            | Verdict::Reachability(Reachability::Reachable) => {}
-            Verdict::Bibliographic(BibVerdict::Partial) => {
-                let matched: Vec<&str> = recorded
-                    .fields
-                    .iter()
-                    .map(|(name, _)| name.as_str())
-                    .filter(|name| !recorded.diffs.iter().any(|diff| diff.field == *name))
-                    .collect();
-                let mut message = format!("partial against {} (as of {date})", recorded.source);
-                if !matched.is_empty() {
-                    message.push_str(&format!(" — {} match", matched.join(", ")));
-                }
-                for diff in &recorded.diffs {
-                    message.push_str(&format!(
-                        "; {} differs: this entry says \"{}\", the source says \"{}\"",
-                        diff.field, diff.in_document, diff.in_source
-                    ));
-                }
-                let hard = demanded.contains(claim.target.as_str())
-                    && recorded
-                        .diffs
-                        .iter()
-                        .any(|diff| diff.severity == DiffSeverity::High);
-                push(
-                    "XT1018",
-                    if hard {
-                        Severity::Error
-                    } else {
-                        Severity::Advisory
-                    },
-                    message,
-                );
-            }
-            Verdict::Bibliographic(BibVerdict::Mismatch) => {
-                let hard = demanded.contains(claim.target.as_str());
-                push(
-                    "XT1018",
-                    if hard {
-                        Severity::Error
-                    } else {
-                        Severity::Advisory
-                    },
-                    format!(
-                        "the source answers with a different work ({}, as of {date})",
-                        recorded.source
-                    ),
-                );
-            }
-            Verdict::Bibliographic(BibVerdict::Unverified) => {
-                push(
-                    "XT1019",
-                    Severity::Advisory,
-                    format!(
-                        "could not be verified ({date}): {}",
-                        recorded.failure_note.as_deref().unwrap_or("no note")
-                    ),
-                );
-            }
-            Verdict::Reachability(Reachability::Unreachable) => {
-                push(
-                    "XT1019",
-                    Severity::Advisory,
-                    format!(
-                        "unreachable as of {date}: {}",
-                        recorded.failure_note.as_deref().unwrap_or("no note")
-                    ),
-                );
-            }
-            Verdict::Reachability(Reachability::Redirected) => {
-                push(
-                    "XT1019",
-                    Severity::Advisory,
-                    format!("answered from somewhere else as of {date} — worth a look"),
-                );
-            }
-        }
+        replay_verdict(recorded, &demanded, claim, date, &mut push);
     }
     findings
+}
+
+/// Replays one recorded verdict as its finding, dated. Split from
+/// [`check_against_record`] to keep each half readable on one screen.
+fn replay_verdict(
+    recorded: &VerifiedClaim,
+    demanded: &std::collections::BTreeSet<&str>,
+    claim: &crate::claims::Claim,
+    date: &str,
+    push: &mut impl FnMut(&'static str, crate::check::Severity, String),
+) {
+    use crate::check::Severity;
+    use std::fmt::Write as _;
+    match recorded.verdict {
+        Verdict::Bibliographic(BibVerdict::Verified)
+        | Verdict::Reachability(Reachability::Reachable) => {}
+        Verdict::Bibliographic(BibVerdict::Partial) => {
+            let matched: Vec<&str> = recorded
+                .fields
+                .iter()
+                .map(|(name, _)| name.as_str())
+                .filter(|name| !recorded.diffs.iter().any(|diff| diff.field == *name))
+                .collect();
+            let mut message = format!("partial against {} (as of {date})", recorded.source);
+            if !matched.is_empty() {
+                let _ = write!(message, " — {} match", matched.join(", "));
+            }
+            for diff in &recorded.diffs {
+                let _ = write!(
+                    message,
+                    "; {} differs: this entry says \"{}\", the source says \"{}\"",
+                    diff.field, diff.in_document, diff.in_source
+                );
+            }
+            let hard = demanded.contains(claim.target.as_str())
+                && recorded
+                    .diffs
+                    .iter()
+                    .any(|diff| diff.severity == DiffSeverity::High);
+            push(
+                "XT1018",
+                if hard {
+                    Severity::Error
+                } else {
+                    Severity::Advisory
+                },
+                message,
+            );
+        }
+        Verdict::Bibliographic(BibVerdict::Mismatch) => {
+            let hard = demanded.contains(claim.target.as_str());
+            push(
+                "XT1018",
+                if hard {
+                    Severity::Error
+                } else {
+                    Severity::Advisory
+                },
+                format!(
+                    "the source answers with a different work ({}, as of {date})",
+                    recorded.source
+                ),
+            );
+        }
+        Verdict::Bibliographic(BibVerdict::Unverified) => {
+            push(
+                "XT1019",
+                Severity::Advisory,
+                format!(
+                    "could not be verified ({date}): {}",
+                    recorded.failure_note.as_deref().unwrap_or("no note")
+                ),
+            );
+        }
+        Verdict::Reachability(Reachability::Unreachable) => {
+            push(
+                "XT1019",
+                Severity::Advisory,
+                format!(
+                    "unreachable as of {date}: {}",
+                    recorded.failure_note.as_deref().unwrap_or("no note")
+                ),
+            );
+        }
+        Verdict::Reachability(Reachability::Redirected) => {
+            push(
+                "XT1019",
+                Severity::Advisory,
+                format!("answered from somewhere else as of {date} — worth a look"),
+            );
+        }
+    }
 }
