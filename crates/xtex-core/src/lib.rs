@@ -46,6 +46,7 @@ pub mod bibliography;
 pub mod blame;
 pub mod blocks;
 pub mod check;
+pub mod claims;
 pub mod diagnostics;
 pub mod document;
 pub mod editor;
