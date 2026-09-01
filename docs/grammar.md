@@ -121,6 +121,8 @@ Fixtures must pin these decisions:
 3. `@ref(a)` in prose begins a reference.
 4. `\figure(a) { ... }` begins a block, while `\figure { ... }` does not.
 5. Every entry token inside each exclusion region in §8 remains ordinary bytes.
+6. `\newif\iffoo` followed by constructs that stay recognised, and a later `\iffoo … \fi` that hides
+   one (`exclusions/17`).
 
 ---
 
@@ -355,11 +357,30 @@ imposing a project-wide one on separately emitted documents.
 `@id(sec:intro)` emits `\label{sec:intro}` at the annotation's source position, and nothing else — no
 wrapper, no support command.
 
+**`@import` resolves relative to the file that contains it and emits the path TeX resolves from the
+root.** `sections/intro.xtex` importing `nested.xtex` reads `sections/nested.xtex` and emits
+`\input{sections/nested.tex}`, because TeX resolves `\input` from the root document's directory, never from
+the including file's. Writing `@import("sections/nested.xtex")` inside `sections/intro.xtex` therefore
+resolves to `sections/sections/nested.xtex` and is `XT1009`. (Corpus E2, `repro-nested-import`: the path
+had been emitted as written, and LaTeX could not find it.)
+
+**`\appendix` is a switch.** An `@id` attached to a sectioning command after `\appendix` — in the same
+file, or in a file imported after it, transitively — declares an `Appendix`; before it, a `Section`. The
+switch is read in readable content only, so a commented-out `\appendix` switches nothing. Authors label
+appendix sections `app:x`, and reading them as sections reported 98 false `XT1004` on three correct papers
+(corpus E2).
+
+**A display-math body declares.** `@id(eq:x)` inside `\begin{equation}…\end{equation}`, the other display
+environments of §8, `\[ … \]` or `$$ … $$` is recognised and declares an `Equation`; every other entry
+token inside a formula stays formula. The label inventory reads `\label` in the same bodies. An equation
+is labelled from inside its own body far more often than from the header slot — 17 references to such
+labels were reported undeclared across 6 papers in corpus E2.
+
 Before checking each root builds a **label inventory**. `\label` is a built-in known command with signature
 `m`, so its mandatory argument is selectable under §8 even though its bytes are otherwise opaque. A label
 enters the inventory only when it is tokenized as `\label` under default category codes, occurs outside every
-§8 exclusion region, has one balanced braced argument, and that argument is an `ident` after trimming ASCII
-whitespace.
+§8 exclusion region except a display-math body, has one balanced braced argument, and that argument is an
+`ident` after trimming ASCII whitespace.
 
 The inventory also reads `label` from the header options of a `lstlisting` environment, because `listings`
 runs `\label` internally for it — `\begin{lstlisting}[…, label={lst:x}]` declares `lst:x` with no `\label`
@@ -414,6 +435,9 @@ Fixtures must include:
 7. An unterminated inline construct followed by a valid construct on the next line; the second remains
    recognizable.
 8. Empty and non-ASCII identifiers, which are hard errors inside the explicit construct.
+8a. `@id` inside an `align` body and inside `\[ \]`, each declaring an equation, beside a reference in
+    the same body that stays formula (`inline/09`); a section labelled `app:` before and after
+    `\appendix` (`checking/08`).
 9. Every reference command, and a `cref` list, lowering to the command named (`emission/08`).
 10. An `@word(…)` in prose that is no construct, reported as advisory `XT2002`, beside the §3 shapes that
     are ordinary bytes and report nothing (`checking/05`).
@@ -863,7 +887,7 @@ entry token are ordinary bytes.
 |---|---|---|
 | Comment | unescaped `%` under current default category codes | line ending or end of file |
 | Inline math | unescaped `$` not followed by `$` | next corresponding unescaped `$` |
-| Display math | `$$` or `\[`; for a display-math environment, the first byte after the header slot in §4 | corresponding `$$`, `\]` or matching `\end{name}` |
+| Display math | `$$` or `\[`; for a display-math environment, the first byte after the header slot in §4 | corresponding `$$`, `\]` or matching `\end{name}` — `@id(` alone is recognised inside (§4) |
 | Verbatim command | a known verbatim command and its delimiter byte | next occurrence of that delimiter |
 | Verbatim environment | a configured verbatim `\begin{name}` | its line-exact `\end{name}` |
 | Listing | `\begin{lstlisting}` or a configured listing name | its line-exact terminator |
@@ -871,6 +895,11 @@ entry token are ordinary bytes.
 | Raw escape | complete `latex` entry through its opening `{` | matching `}` |
 | Command argument | an argument start selected by a known signature — except a text-bearing argument, whose interior is prose (see below) | that argument's specified boundary |
 | Quarantine | a hazard listed below | end of file |
+
+`\newif\iffoo` defines a conditional and opens no region: the `\if…` control word after `\newif` is the
+command's argument. Read as an opener it has no `\fi`, and the rest of the file went to quarantine with no
+diagnostic — the TACL template does this in its preamble (corpus E2, arXiv 2301.00303). A later `\iffoo …
+\fi` is a conditional region like any other.
 
 **Text-bearing arguments are prose.** A caption is a sentence, so the final mandatory argument of
 `\caption`, `\footnote`, `\footnotetext`, `\emph`, `\textbf`, `\textit`, `\underline`, `\mbox` and the
@@ -1045,9 +1074,10 @@ Subfigure panels are included at the light level because 34 `subfigure` environm
 No typed panel fields are specified because the available observations establish naming demand but not a
 stable field set.
 
-An appendix remains a section entity. The source must retain the manual kind word in prose. v0.1 does not
-add a separate appendix block because `@id` already provides naming and no appendix-specific checked field
-has been demonstrated.
+An appendix is a sectioning command after the `\appendix` switch (§4), and its `@id` declares the
+`Appendix` class. The source must retain the manual kind word in prose. v0.1 does not add a separate
+appendix block because `@id` already provides naming and no appendix-specific checked field has been
+demonstrated.
 
 ### Not admitted as separate entities
 

@@ -1,0 +1,3 @@
+\section{A}@id(app:a) @ref(app:a)
+\appendix
+\section{B}@id(app:b) @ref(app:b) @ref(sec:b)

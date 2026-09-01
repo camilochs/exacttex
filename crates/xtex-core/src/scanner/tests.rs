@@ -140,14 +140,16 @@ fn math_hides_a_construct_and_prose_after_it_does_not() {
 
 #[test]
 fn display_math_environments_hide_commands_and_constructs() {
+    // Every construct but `@id`: an equation is labelled from inside its
+    // body, so the declaration is recognised there and nothing else is.
     for (name, signature) in DISPLAY_MATH_ENVIRONMENTS {
         let argument = if signature.is_empty() { "" } else { "{2}" };
         let input = format!(
-            "\\begin{{{name}}}{argument} X \\in [A,B) @id(hidden) @ref(hidden) \\bigg \\end{{{name}}} @ref(after)"
+            "\\begin{{{name}}}{argument} X \\in [A,B) @id(inside) @ref(hidden) \\bigg \\end{{{name}}} @ref(after)"
         );
         assert_eq!(
             constructs(input.as_bytes()),
-            [EntryToken::Ref],
+            [EntryToken::Id, EntryToken::Ref],
             "{name} did not hide its body"
         );
         assert!(
@@ -157,6 +159,29 @@ fn display_math_environments_hide_commands_and_constructs() {
             "{name} quarantined a bounded display"
         );
     }
+}
+
+#[test]
+fn an_id_inside_a_display_body_is_a_declaration_and_the_rest_stays_formula() {
+    for input in [
+        &b"\\begin{equation}\n x = 1 @id(eq:a) @ref(no)\n\\end{equation} @ref(after)"[..],
+        b"\\begin{align}\n y &= 2 @id(eq:a) \\\\ z &= 3 @cite(no)\n\\end{align} @ref(after)",
+        b"\\[ z = 3 @id(eq:a) @ref(no) \\] @ref(after)",
+        b"$$ z = 3 @id(eq:a) $$ @ref(after)",
+    ] {
+        assert_eq!(
+            constructs(input),
+            [EntryToken::Id, EntryToken::Ref],
+            "{}",
+            String::from_utf8_lossy(input)
+        );
+    }
+    // Inline math and verbatim bodies recognise nothing, as before.
+    assert_eq!(constructs(b"$ @id(no) $ @ref(after)"), [EntryToken::Ref]);
+    assert_eq!(
+        constructs(b"\\begin{verbatim}\n@id(no)\n\\end{verbatim} @ref(after)"),
+        [EntryToken::Ref]
+    );
 }
 
 #[test]
@@ -178,6 +203,24 @@ fn an_unterminated_display_environment_quarantines_to_eof() {
     let pieces = scan(input);
     assert_eq!(constructs(input), []);
     assert!(matches!(pieces.last(), Some(Piece::Quarantined(span)) if span.end() == input.len()));
+}
+
+#[test]
+fn newif_defines_a_conditional_and_does_not_open_one() {
+    // The E2 reproducer: `\newif\iffoo` in a preamble sent the rest of the
+    // file to quarantine with no diagnostic. The definition claims its name;
+    // a later use of the defined conditional is still a real region.
+    let input = b"\\documentclass{article}\n\\newif\\iffoo\n\\begin{document}\n\\section{A}@id(sec:a)\nSee @ref(sec:a).\n\\end{document}\n";
+    assert_eq!(constructs(input), [EntryToken::Id, EntryToken::Ref]);
+    assert!(
+        !scan(input)
+            .iter()
+            .any(|piece| matches!(piece, Piece::Quarantined(_)))
+    );
+    let used = b"\\newif\\iffoo \\iffoo @ref(hidden) \\fi @ref(after)";
+    assert_eq!(constructs(used), [EntryToken::Ref]);
+    let bare = b"\\newif @ref(after)";
+    assert_eq!(constructs(bare), [EntryToken::Ref]);
 }
 
 #[test]

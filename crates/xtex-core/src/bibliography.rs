@@ -535,7 +535,7 @@ fn scan_bib_entries(bytes: &[u8]) -> Result<Vec<(String, Span)>, String> {
                 continue;
             }
         };
-        let entry_line = line_at(bytes, cursor);
+        let entry_open = cursor;
         cursor += 1;
         // `@comment` is the one entry type BibTeX does not read. It skips to the
         // next `@` and resumes there, so an unbalanced brace inside a comment is
@@ -553,7 +553,7 @@ fn scan_bib_entries(bytes: &[u8]) -> Result<Vec<(String, Span)>, String> {
             cursor,
             opener.0,
             opener.1,
-            entry_line,
+            entry_open,
             entry_type == b"preamble",
         )?;
         let key_start = skip_space(bytes, cursor);
@@ -577,24 +577,29 @@ fn scan_bib_entries(bytes: &[u8]) -> Result<Vec<(String, Span)>, String> {
     Ok(keys)
 }
 
+/// Offsets are remembered and lines computed only on the error path. Each
+/// `line_at` walks the file from its start, and computing one per opening
+/// brace made reading a bibliography cost entries × braces × bytes — sixty
+/// seconds on a 1.6 MB file with 2,313 entries (arXiv 2212.13773, corpus
+/// E1), paid by every check of a document that merely declared it.
 fn entry_end(
     bytes: &[u8],
     mut at: usize,
     open: u8,
     close: u8,
-    entry_line: usize,
+    entry_open: usize,
     mut value_position: bool,
 ) -> Result<usize, String> {
-    let mut braces = Vec::new();
-    let mut quote = None;
+    let mut braces: Vec<usize> = Vec::new();
+    let mut quote: Option<usize> = None;
     while let Some(&byte) = bytes.get(at) {
         if quote.is_some() && byte == b'"' && braces.is_empty() {
             quote = None;
         } else if quote.is_none() && value_position && byte == b'"' && braces.is_empty() {
-            quote = Some(line_at(bytes, at));
+            quote = Some(at);
             value_position = false;
         } else if byte == b'{' {
-            braces.push(line_at(bytes, at));
+            braces.push(at);
         } else if byte == b'}' && !braces.is_empty() {
             braces.pop();
         } else if byte == close && braces.is_empty() && quote.is_none() {
@@ -608,16 +613,21 @@ fn entry_end(
         }
         at += 1;
     }
-    if let Some(line) = quote {
+    if let Some(offset) = quote {
         Err(format!(
-            "a quoted value opened at line {line} is never closed"
+            "a quoted value opened at line {} is never closed",
+            line_at(bytes, offset)
         ))
-    } else if let Some(line) = braces.first() {
-        Err(format!("a value opened at line {line} is never closed"))
+    } else if let Some(offset) = braces.first() {
+        Err(format!(
+            "a value opened at line {} is never closed",
+            line_at(bytes, *offset)
+        ))
     } else {
         let delimiter = char::from(open);
         Err(format!(
-            "an entry delimiter `{delimiter}` opened at line {entry_line} is never closed"
+            "an entry delimiter `{delimiter}` opened at line {} is never closed",
+            line_at(bytes, entry_open)
         ))
     }
 }
@@ -866,6 +876,35 @@ mod tests {
         assert_eq!(
             keys.iter().map(String::as_str).collect::<Vec<_>>(),
             ["real"]
+        );
+    }
+
+    #[test]
+    fn reading_a_large_bibliography_is_linear_in_its_size() {
+        use std::fmt::Write as _;
+        // The E1 reproducer: 2,313 entries and 1.6 MB took sixty seconds
+        // because a line number was computed per opening brace. Five
+        // thousand entries of a realistic size must read in a small
+        // fraction of that; the bound is loose enough for a slow runner and
+        // tight enough that the quadratic version cannot pass it.
+        let abstract_text =
+            "This is a filler sentence that makes the entry about as long as a real one. "
+                .repeat(7);
+        let mut bib = String::new();
+        for i in 0..5_000 {
+            let _ = write!(
+                bib,
+                "@article{{k{i},\n  author = {{Author {i}}},\n  title = {{Title {{{i}}}}},\n  journal = {{J}},\n  year = {{2020}},\n  abstract = {{{abstract_text}}}\n}}\n\n"
+            );
+        }
+        assert!(bib.len() > 3_000_000, "{}", bib.len());
+        let started = std::time::Instant::now();
+        let keys = keys_in_bib(bib.as_bytes()).expect("a valid bibliography");
+        let elapsed = started.elapsed();
+        assert_eq!(keys.len(), 5_000);
+        assert!(
+            elapsed < std::time::Duration::from_secs(2),
+            "reading 5,000 entries took {elapsed:?}"
         );
     }
 

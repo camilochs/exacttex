@@ -1,2 +1,3 @@
 \section{Model}@id(sec:model)
 El modelo cita a @cite(lamport1994).
+@import("deeper.xtex")

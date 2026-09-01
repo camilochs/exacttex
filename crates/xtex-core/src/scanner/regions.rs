@@ -30,7 +30,12 @@ pub(crate) enum Region {
     /// From a verbatim command plus a delimiter byte to its next occurrence.
     Verb { delimiter: u8 },
     /// An environment body whose bytes are copied through its matching end.
-    Environment { name: Vec<u8> },
+    ///
+    /// `math` marks a display-math body, inside which `@id(` is still
+    /// recognised — an equation is labelled from inside its own body far
+    /// more often than from the header slot (17 such labels across 6 papers
+    /// in corpus E2). A verbatim body recognises nothing.
+    Environment { name: Vec<u8>, math: bool },
     /// From `\makeatletter` to `\makeatother`.
     InternalMacros,
     /// From `\csname` to `\endcsname`.
@@ -188,6 +193,25 @@ pub(crate) fn command_extent(bytes: &[u8], at: usize) -> Extent {
     let name = &bytes[name_start..name_end];
     let mut cursor = name_end;
 
+    // `\newif\iffoo` *defines* a conditional; the `\iffoo` after it opens
+    // nothing and has no `\fi`. Read as an opener it quarantined the rest of
+    // the file — the TACL template does this at line 52, and every construct
+    // after it went dark with exit 0 (arXiv 2301.00303, corpus E2). The
+    // defined name is claimed here as the command's argument.
+    if name == b"newif" {
+        let next = skip_ascii_whitespace(bytes, cursor);
+        if bytes.get(next) == Some(&b'\\') {
+            let mut end = next + 1;
+            while bytes.get(end).is_some_and(u8::is_ascii_alphabetic) {
+                end += 1;
+            }
+            if end > next + 1 {
+                return Extent::Through(end);
+            }
+        }
+        return Extent::Through(cursor);
+    }
+
     if let Some(signature) = signature_of(name) {
         // A signature is a claim about this call, and the call can refute it.
         // 15 of the built-in commands carry a different signature under another
@@ -326,6 +350,7 @@ pub(crate) fn region_opening_at(bytes: &[u8], at: usize) -> Option<(Region, usiz
                     return Some((
                         Region::Environment {
                             name: name.to_vec(),
+                            math: false,
                         },
                         consumed,
                     ));

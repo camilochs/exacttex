@@ -240,12 +240,22 @@ fn emission_fixtures_match_their_expected_output() {
         let want =
             fs::read(&expected).unwrap_or_else(|e| panic!("{name}: cannot read emitted.tex ({e})"));
 
-        let mut store = Memory::new().with_input(name.clone(), raw);
-        transport(&name, &store.clone(), &mut store)
+        // Named as a root-level file: an `@import` is emitted with its
+        // source's directory in front, and the label's group is not one.
+        let file = format!(
+            "{}.xtex",
+            input
+                .parent()
+                .and_then(Path::file_name)
+                .map(|n| n.to_string_lossy())
+                .unwrap_or_default()
+        );
+        let mut store = Memory::new().with_input(file.clone(), raw);
+        transport(&file, &store.clone(), &mut store)
             .unwrap_or_else(|e| panic!("{name}: emission failed ({e})"));
 
         assert_eq!(
-            String::from_utf8_lossy(store.output(&name).unwrap_or_default()),
+            String::from_utf8_lossy(store.output(&file).unwrap_or_default()),
             String::from_utf8_lossy(&want),
             "{name}: emitted output differs from emitted.tex"
         );

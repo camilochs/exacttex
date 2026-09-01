@@ -283,6 +283,24 @@ impl SymbolTable {
     /// imported file: the scope is the root, so the two share one namespace and
     /// a clash between them is a real clash.
     pub fn merge(&mut self, sources: &Sources, document: &Document) {
+        self.merge_from(sources, document, false);
+    }
+
+    /// As [`merge`](Self::merge), for a document that begins inside the
+    /// appendices.
+    ///
+    /// `\appendix` is a switch, not a scope: everything after it is an
+    /// appendix, including the files imported after it. A file that begins
+    /// after the switch has no `\appendix` of its own, so its importer has to
+    /// say so. See [`appendix_switch_at`].
+    pub fn merge_from(&mut self, sources: &Sources, document: &Document, in_appendix: bool) {
+        let switch = if in_appendix {
+            Some(0)
+        } else {
+            sources
+                .get(document.source())
+                .and_then(|source| appendix_switch_at(source.bytes()))
+        };
         document.walk(|node| {
             let (kind, construct) = match node {
                 Node::Construct { kind, span, .. } => (*kind, *span),
@@ -339,7 +357,12 @@ impl SymbolTable {
                     let class = match kind {
                         EntryToken::Figure => EntityClass::Figure,
                         EntryToken::Table => EntityClass::Table,
-                        EntryToken::Id => attached_class(sources, payload.source, construct),
+                        EntryToken::Id => attached_class(
+                            sources,
+                            payload.source,
+                            construct,
+                            switch.is_some_and(|at| at < construct.start()),
+                        ),
                         _ => EntityClass::UnknownOpen,
                     };
                     self.declarations.insert(
@@ -528,10 +551,76 @@ pub fn demand_of(name: &str) -> EntityClass {
     PrefixMap::default().demand_of(name)
 }
 
-fn attached_class(sources: &Sources, source: SourceId, construct: Span) -> EntityClass {
+/// Where `\appendix` switches a file into its appendices, if it does.
+///
+/// The first `\appendix` control word in readable content — not one in a
+/// comment, a verbatim body or a macro definition. After it, sectioning
+/// commands declare appendices: authors label them `app:x`, and reading
+/// them as sections raised 98 false `XT1004` on three correct papers
+/// (corpus E2: 2212.13570, 2212.14882, 2603.02873).
+#[must_use]
+pub fn appendix_switch_at(bytes: &[u8]) -> Option<usize> {
+    let needle = b"\\appendix";
+    for span in crate::scanner::readable_content(bytes) {
+        let region = &bytes[span.start()..span.end()];
+        let mut from = 0usize;
+        while let Some(hit) = region[from..]
+            .windows(needle.len())
+            .position(|window| window == needle)
+            .map(|at| from + at)
+        {
+            let after = region.get(hit + needle.len());
+            if !after.is_some_and(u8::is_ascii_alphabetic) {
+                return Some(span.start() + hit);
+            }
+            from = hit + 1;
+        }
+    }
+    None
+}
+
+/// Whether `at` sits inside a display-math body that opened before it and
+/// has not closed: a `\begin{align}` with no `\end{align}` between, or a
+/// `\[` with no `\]` between.
+fn inside_display_math(bytes: &[u8], at: usize) -> bool {
+    let before = &bytes[..at];
+    let last_open = before
+        .windows(b"\\begin{".len())
+        .rposition(|window| window == b"\\begin{");
+    if let Some(open) = last_open {
+        let rest = &before[open + b"\\begin{".len()..];
+        if let Some(close) = rest.iter().position(|byte| *byte == b'}') {
+            let name = &rest[..close];
+            let mut end = b"\\end{".to_vec();
+            end.extend_from_slice(name);
+            end.push(b'}');
+            let closed = rest.windows(end.len()).any(|window| window == end);
+            if !closed && crate::scanner::is_display_math_region(&before[open..]) {
+                return true;
+            }
+        }
+    }
+    if let Some(open) = before.windows(2).rposition(|window| window == b"\\[") {
+        let closed = before[open..].windows(2).any(|window| window == b"\\]");
+        if !closed {
+            return true;
+        }
+    }
+    false
+}
+
+fn attached_class(
+    sources: &Sources,
+    source: SourceId,
+    construct: Span,
+    in_appendix: bool,
+) -> EntityClass {
     let Some(bytes) = sources.get(source).map(crate::source::Source::bytes) else {
         return EntityClass::UnknownOpen;
     };
+    if inside_display_math(bytes, construct.start()) {
+        return EntityClass::Equation;
+    }
     let mut start = construct.start();
     let mut lines = 0usize;
     while start > 0 && construct.start() - start < 256 && bytes[start - 1].is_ascii_whitespace() {
@@ -555,7 +644,11 @@ fn attached_class(sources: &Sources, source: SourceId, construct: Span) -> Entit
         b"\\part",
     ] {
         if last_command_with_balanced_argument(before, command) {
-            return EntityClass::Section;
+            return if in_appendix {
+                EntityClass::Appendix
+            } else {
+                EntityClass::Section
+            };
         }
     }
     for (environment, class) in [
@@ -970,6 +1063,78 @@ mod tests {
     fn an_id_takes_a_known_attachment_class() {
         let (_, t) = table(&[("a.xtex", "\\section{X}\n@id(sec:x)")]);
         assert_eq!(t.declaration("sec:x").unwrap().class, EntityClass::Section);
+    }
+
+    #[test]
+    fn a_section_after_the_appendix_switch_is_an_appendix() {
+        let text = "\\section{A}@id(sec:a) @ref(app:a)\n\\appendix\n\\section{B}@id(app:b)\n\\subsection{C}@id(app:c)\n@ref(app:b) @ref(app:c) @ref(sec:a)";
+        let (_, t) = table(&[("a.xtex", text)]);
+        assert_eq!(t.declaration("sec:a").unwrap().class, EntityClass::Section);
+        assert_eq!(t.declaration("app:b").unwrap().class, EntityClass::Appendix);
+        assert_eq!(t.declaration("app:c").unwrap().class, EntityClass::Appendix);
+        assert_eq!(t.inconsistent_references().count(), 0);
+
+        // Before the switch, `app:` on a section is still the mismatch.
+        let (_, t) = table(&[("a.xtex", "\\section{A}@id(app:a) @ref(app:a)\n\\appendix")]);
+        assert_eq!(t.inconsistent_references().count(), 1);
+
+        // A commented-out switch switches nothing.
+        let (_, t) = table(&[("a.xtex", "% \\appendix\n\\section{A}@id(app:a) @ref(app:a)")]);
+        assert_eq!(t.inconsistent_references().count(), 1);
+        assert_eq!(appendix_switch_at(b"\\appendixname"), None);
+    }
+
+    #[test]
+    fn a_file_imported_after_the_switch_begins_in_the_appendices() {
+        let mut sources = Sources::new();
+        let mut t = SymbolTable::new();
+        let id = sources.add("app.xtex", b"\\section{B}@id(app:b) @ref(app:b)".to_vec());
+        let document = parse(&sources, id);
+        t.merge_from(&sources, &document, true);
+        assert_eq!(t.declaration("app:b").unwrap().class, EntityClass::Appendix);
+        assert_eq!(t.inconsistent_references().count(), 0);
+    }
+
+    #[test]
+    fn an_id_inside_a_display_body_declares_an_equation() {
+        for text in [
+            "\\begin{equation}\n x = 1 @id(eq:x)\n\\end{equation}",
+            "\\begin{align}\n y &= 2 \\\\\n z &= 3 @id(eq:x)\n\\end{align}",
+            "\\begin{align*} y = 2 @id(eq:x) \\end{align*}",
+            "\\[ z = 3 @id(eq:x) \\]",
+        ] {
+            let (_, t) = table(&[("a.xtex", text)]);
+            assert_eq!(
+                t.declaration("eq:x").map(|d| d.class),
+                Some(EntityClass::Equation),
+                "{text}"
+            );
+        }
+        // A closed display before the construct does not enclose it.
+        let (_, t) = table(&[(
+            "a.xtex",
+            "\\begin{equation} x \\end{equation}\n\\newtheorem{X}{Y}\n@id(eq:x)",
+        )]);
+        assert_eq!(
+            t.declaration("eq:x").unwrap().class,
+            EntityClass::UnknownOpen
+        );
+    }
+
+    #[test]
+    fn an_id_inside_a_caption_is_declared() {
+        // Recognised because a caption is prose; its class is open because
+        // the caption's float is not read. Declared is what keeps a
+        // reference to it from being a false XT1003.
+        let (_, t) = table(&[(
+            "a.xtex",
+            "\\begin{figure}\\caption{A figure @id(fig:c)}\\end{figure} @ref(fig:c)",
+        )]);
+        assert_eq!(
+            t.declaration("fig:c").map(|d| d.class),
+            Some(EntityClass::UnknownOpen)
+        );
+        assert_eq!(t.unresolved_references().count(), 0);
     }
 
     #[test]

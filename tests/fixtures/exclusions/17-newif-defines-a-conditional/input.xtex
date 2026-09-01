@@ -1,0 +1,7 @@
+\documentclass{article}
+\newif\iffoo
+\begin{document}
+\section{A}@id(sec:a)
+See @ref(sec:a).
+\iffoo @ref(hidden) \fi
+\end{document}

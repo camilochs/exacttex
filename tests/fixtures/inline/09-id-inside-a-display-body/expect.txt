@@ -1,0 +1,4 @@
+transport: identical
+scanner: id id ref ref
+constructs: an `@id` inside a display body is a declaration of class equation; a
+  reference inside the same body stays formula. Corpus E2, 17 labels in 6 papers.
