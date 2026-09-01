@@ -391,3 +391,219 @@ pub fn write_record(record: &VerificationRecord) -> String {
     out.push_str("]}");
     out
 }
+
+/// Days since the civil epoch for an RFC 3339 date's day part, or `None`
+/// for a shape this reader does not recognise. Enough calendar for an age
+/// in days; not a datetime library and not on its way to becoming one.
+fn civil_days(date: &str) -> Option<i64> {
+    let bytes = date.as_bytes();
+    if bytes.len() < 10 || bytes[4] != b'-' || bytes[7] != b'-' {
+        return None;
+    }
+    let number = |range: std::ops::Range<usize>| -> Option<i64> {
+        std::str::from_utf8(&bytes[range]).ok()?.parse().ok()
+    };
+    let (y, m, d) = (number(0..4)?, number(5..7)?, number(8..10)?);
+    if !(1..=12).contains(&m) || !(1..=31).contains(&d) {
+        return None;
+    }
+    // Howard Hinnant's days-from-civil, the standard branchless form.
+    let y = if m <= 2 { y - 1 } else { y };
+    let era = if y >= 0 { y } else { y - 399 } / 400;
+    let yoe = y - era * 400;
+    let mp = (m + 9) % 12;
+    let doy = (153 * mp + 2) / 5 + d - 1;
+    let doe = yoe * 365 + yoe / 4 - yoe / 100 + doy;
+    Some(era * 146_097 + doe - 719_468)
+}
+
+/// What the record-aware check needs, all supplied by the caller — this
+/// module owns no clock and no filesystem, deliberately.
+pub struct RecordCheck<'a> {
+    /// The parsed record.
+    pub record: &'a VerificationRecord,
+    /// The document's claims (see [`crate::claims`]).
+    pub claims: &'a [crate::claims::Claim],
+    /// The symbol table, for the one severity question: does an explicit
+    /// `@cite` demand this key?
+    pub table: &'a crate::symbols::SymbolTable,
+    /// Today, RFC 3339 — the caller's clock, never ours.
+    pub now: &'a str,
+    /// The freshness window, in days.
+    pub max_age_days: i64,
+}
+
+/// The deterministic half of verification: findings from crossing the
+/// document's claims with the record — offline, reproducible, dated.
+///
+/// Three findings exist, each speaking its date plainly:
+/// - the claim was **edited since its verification** (the document's fields
+///   no longer match the record's), which retires the old verdict — the
+///   drift is reported and the verdict is not replayed;
+/// - the verification **expired** (older than the window);
+/// - the recorded verdict itself: `partial`/`mismatch` replayed with their
+///   diffs, `unverified`/`unreachable` with their notes.
+///
+/// Severity follows the standing policy: a bibliographic finding is a hard
+/// error only when an explicit `@cite` demands the key AND the finding is a
+/// mismatch or a high-severity diff (the author list). Everything else —
+/// every reachability finding included, because a plain `\url` is not a
+/// construct — is advisory.
+#[must_use]
+pub fn check_against_record(input: &RecordCheck<'_>) -> Vec<crate::check::Diagnostic> {
+    use crate::check::{Blame, Diagnostic, Severity};
+    use crate::symbols::EntityClass;
+    let mut findings = Vec::new();
+    let demanded: std::collections::BTreeSet<&str> =
+        input.table.citations().map(|(key, _)| key).collect();
+    let today = civil_days(input.now);
+
+    for claim in input.claims {
+        let Some(recorded) = input
+            .record
+            .claims
+            .iter()
+            .find(|r| r.kind == claim.kind && r.target == claim.target)
+        else {
+            continue; // never verified: the verifier's business, not a finding
+        };
+        let entity = match claim.kind {
+            ClaimKind::BibEntry => EntityClass::Citation,
+            _ => EntityClass::UnknownOpen,
+        };
+        let date = &recorded.fetched_at[..recorded.fetched_at.len().min(10)];
+        let mut push = |code: &'static str, severity: Severity, message: String| {
+            findings.push(Diagnostic {
+                code,
+                entity,
+                name: Some(claim.target.clone()),
+                source: claim.source,
+                span: claim.span,
+                message,
+                related: Vec::new(),
+                severity,
+                blame: if severity == Severity::Error {
+                    Blame::XtexConstruct
+                } else {
+                    Blame::Unresolved
+                },
+            });
+        };
+
+        // Drift retires the verdict: an edited claim's old diffs are noise.
+        if claim.kind == ClaimKind::BibEntry && claim.fields != recorded.fields {
+            push(
+                "XT1016",
+                Severity::Advisory,
+                format!(
+                    "`{}` was edited after its verification ({date}) — the recorded verdict no longer speaks for it; verify again",
+                    claim.target
+                ),
+            );
+            continue;
+        }
+
+        match (today, civil_days(&recorded.fetched_at)) {
+            (Some(now), Some(then)) => {
+                let age = now - then;
+                if age > input.max_age_days {
+                    push(
+                        "XT1017",
+                        Severity::Advisory,
+                        format!(
+                            "`{}` was last verified {age} days ago ({date}) — older than the {}-day window",
+                            claim.target, input.max_age_days
+                        ),
+                    );
+                }
+            }
+            _ => {
+                push(
+                    "XT1017",
+                    Severity::Advisory,
+                    format!("`{}` carries an unreadable verification date", claim.target),
+                );
+            }
+        }
+
+        match recorded.verdict {
+            Verdict::Bibliographic(BibVerdict::Verified)
+            | Verdict::Reachability(Reachability::Reachable) => {}
+            Verdict::Bibliographic(BibVerdict::Partial) => {
+                let matched: Vec<&str> = recorded
+                    .fields
+                    .iter()
+                    .map(|(name, _)| name.as_str())
+                    .filter(|name| !recorded.diffs.iter().any(|diff| diff.field == *name))
+                    .collect();
+                let mut message = format!("partial against {} (as of {date})", recorded.source);
+                if !matched.is_empty() {
+                    message.push_str(&format!(" — {} match", matched.join(", ")));
+                }
+                for diff in &recorded.diffs {
+                    message.push_str(&format!(
+                        "; {} differs: this entry says \"{}\", the source says \"{}\"",
+                        diff.field, diff.in_document, diff.in_source
+                    ));
+                }
+                let hard = demanded.contains(claim.target.as_str())
+                    && recorded
+                        .diffs
+                        .iter()
+                        .any(|diff| diff.severity == DiffSeverity::High);
+                push(
+                    "XT1018",
+                    if hard {
+                        Severity::Error
+                    } else {
+                        Severity::Advisory
+                    },
+                    message,
+                );
+            }
+            Verdict::Bibliographic(BibVerdict::Mismatch) => {
+                let hard = demanded.contains(claim.target.as_str());
+                push(
+                    "XT1018",
+                    if hard {
+                        Severity::Error
+                    } else {
+                        Severity::Advisory
+                    },
+                    format!(
+                        "the source answers with a different work ({}, as of {date})",
+                        recorded.source
+                    ),
+                );
+            }
+            Verdict::Bibliographic(BibVerdict::Unverified) => {
+                push(
+                    "XT1019",
+                    Severity::Advisory,
+                    format!(
+                        "could not be verified ({date}): {}",
+                        recorded.failure_note.as_deref().unwrap_or("no note")
+                    ),
+                );
+            }
+            Verdict::Reachability(Reachability::Unreachable) => {
+                push(
+                    "XT1019",
+                    Severity::Advisory,
+                    format!(
+                        "unreachable as of {date}: {}",
+                        recorded.failure_note.as_deref().unwrap_or("no note")
+                    ),
+                );
+            }
+            Verdict::Reachability(Reachability::Redirected) => {
+                push(
+                    "XT1019",
+                    Severity::Advisory,
+                    format!("answered from somewhere else as of {date} — worth a look"),
+                );
+            }
+        }
+    }
+    findings
+}
