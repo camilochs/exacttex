@@ -1,11 +1,12 @@
-//! Just enough JSON to speak LSP.
+//! Just enough JSON for the two callers that need it.
 //!
-//! Not a JSON library and not on its way to becoming one. It reads the handful
-//! of shapes the protocol sends us and writes the handful we send back, and a
-//! message using something outside that is refused rather than guessed at.
+//! Not a JSON library and not on its way to becoming one. The language server
+//! reads the handful of shapes the protocol sends and writes the handful it
+//! answers; the verification record ({`crate::verification`}) reads and writes
+//! its own fixed shape. Anything outside those shapes is refused rather than
+//! guessed at.
 //!
-//! Written by hand for the reason in `docs/decisions/0005`: the compiler core
-//! has no dependencies and the server is small enough to keep it that way.
+//! Written by hand for the standing reason: this crate has no dependencies.
 
 use std::fmt::Write as _;
 

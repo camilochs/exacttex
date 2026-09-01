@@ -50,6 +50,7 @@ pub mod diagnostics;
 pub mod document;
 pub mod editor;
 pub mod io;
+pub mod json;
 pub mod labels;
 pub mod project;
 pub mod rename;
@@ -60,6 +61,7 @@ pub mod source;
 pub mod sourcemap;
 pub mod symbols;
 pub mod texlog;
+pub mod verification;
 
 use std::error::Error;
 use std::fmt;
