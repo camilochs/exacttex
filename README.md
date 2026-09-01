@@ -166,6 +166,10 @@ says "Figure". LaTeX compiles it and prints the wrong word. See [`docs/checking.
 
 One zero-dependency core; three thin surfaces (terminal, editor, browser) that call it and are held byte-identical by a parity suite in CI; and the transport guarantee drawn where it belongs — outside the pipeline, because unannotated bytes are carried, never processed. The full walk: [docs/architecture.md](docs/architecture.md).
 
+External verification — bibliography entries, URLs, DOIs and repositories checked against live
+sources — lives behind its own door: a separate step writes a dated record, and the compiler replays
+it offline, so the network never enters a compile. How and why: [docs/verification.md](docs/verification.md).
+
 ---
 
 ## What it is not
