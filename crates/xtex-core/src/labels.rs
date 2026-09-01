@@ -183,6 +183,31 @@ mod tests {
     }
 
     #[test]
+    fn labels_inside_display_bodies_and_captions_are_declarations() {
+        // Where equations and floats are actually labelled: before
+        // `\end{align}`, inside `\[ \]`, inside the caption, in the float
+        // body. Corpus E2 found 17 references to such labels reported as
+        // undeclared across 6 papers.
+        let text = "\\begin{equation} x = 1 \\label{eq:a} \\end{equation}\n\
+                    \\begin{align} y &= 2 \\label{eq:b} \\\\ z &= 3 \\label{eq:c} \\end{align}\n\
+                    \\[ w = 4 \\label{eq:d} \\]\n\
+                    \\begin{figure}\\caption{A figure \\label{fig:in}}\\label{fig:out}\\end{figure}\n";
+        let found = built(text);
+        for name in ["eq:a", "eq:b", "eq:c", "eq:d", "fig:in", "fig:out"] {
+            assert!(found.contains(name), "{name} missing from {found:?}");
+        }
+    }
+
+    #[test]
+    fn labels_inside_comments_verbatim_and_inline_math_declare_nothing() {
+        let text = "% \\label{c}\n\\begin{verbatim}\n\\label{v}\n\\end{verbatim}\n$\\label{m}$\n\\newcommand{\\x}{\\label{d}}\n";
+        let found = built(text);
+        for name in ["c", "v", "m", "d"] {
+            assert!(!found.contains(name), "{name} declared by {found:?}");
+        }
+    }
+
+    #[test]
     fn a_computed_label_option_makes_the_inventory_unavailable() {
         // What cannot be read might declare a label, so nothing may be called
         // absent. The same all-or-nothing rule as the bibliography.

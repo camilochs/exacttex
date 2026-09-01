@@ -654,6 +654,27 @@ mod label_tests {
     }
 
     #[test]
+    fn a_reference_to_a_label_inside_a_display_body_resolves() {
+        assert!(
+            diagnose("\\begin{align} y &= 2 \\label{eq:b} \\end{align}\nSee @ref(eq:b).")
+                .is_empty()
+        );
+        assert!(diagnose("\\[ w \\label{eq:d} \\] See @ref(eq:d).").is_empty());
+    }
+
+    #[test]
+    fn an_id_inside_a_display_body_declares_an_equation_for_its_references() {
+        assert!(
+            diagnose("\\begin{align} y &= 2 @id(eq:b) \\end{align}\nSee @ref(eq:b).").is_empty()
+        );
+        // And the class is known: a figure prefix on it is XT1004.
+        assert_eq!(
+            diagnose("\\begin{equation} y @id(fig:b) \\end{equation}\nSee @ref(fig:b)."),
+            ["fig:b"]
+        );
+    }
+
+    #[test]
     fn a_reference_to_nothing_still_fails() {
         // The fix widened what resolves. It must not have weakened what fails.
         assert_eq!(

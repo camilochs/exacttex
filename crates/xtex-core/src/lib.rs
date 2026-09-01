@@ -272,11 +272,31 @@ fn emit_nodes(
                 end: span.end(),
             })?;
         match node {
-            Node::Construct { kind, .. } => emit_construct(*kind, bytes, view, out),
+            Node::Construct { kind, .. } => {
+                let base = sources
+                    .get(node.source())
+                    .map_or(&[][..], |source| directory_of(source.name().as_bytes()));
+                emit_construct(*kind, bytes, base, view, out);
+            }
             Node::Opaque { .. } | Node::Malformed { .. } => out.extend_from_slice(bytes),
         }
     }
     Ok(())
+}
+
+/// The directory part of a source name, with its trailing `/`, or nothing
+/// for a name at the root.
+///
+/// Source names are root-relative — `sections/intro.xtex` — and an
+/// `@import` inside that file resolves relative to it. TeX resolves the
+/// emitted `\input` from the root's directory instead, so the emitter has
+/// to put the directory back: `@import("nested.xtex")` in `sections/intro`
+/// emits `\input{sections/nested.tex}`. Emitting the path as written
+/// produced an `\input` that LaTeX could not find (corpus E2).
+fn directory_of(name: &[u8]) -> &[u8] {
+    name.iter()
+        .rposition(|byte| *byte == b'/')
+        .map_or(&[][..], |slash| &name[..=slash])
 }
 
 fn documentclass_end(bytes: &[u8]) -> Option<usize> {
@@ -314,7 +334,13 @@ fn documentclass_end(bytes: &[u8]) -> Option<usize> {
     )
 }
 
-fn emit_construct(kind: EntryToken, bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
+fn emit_construct(
+    kind: EntryToken,
+    bytes: &[u8],
+    base: &[u8],
+    view: RevisionView,
+    out: &mut Vec<u8>,
+) {
     match kind {
         EntryToken::Id => emit_inline(bytes, b"\\label{", out),
         // A reference or citation construct is the LaTeX command it names,
@@ -335,19 +361,25 @@ fn emit_construct(kind: EntryToken, bytes: &[u8], view: RevisionView, out: &mut 
             }
             out.push(b'}');
         }
-        EntryToken::Import => emit_import(bytes, view, out),
+        EntryToken::Import => emit_import(bytes, base, view, out),
         EntryToken::Add | EntryToken::Del | EntryToken::Sub | EntryToken::Note => {
-            emit_revision(kind, bytes, view, out);
+            emit_revision(kind, bytes, base, view, out);
         }
         EntryToken::Raw => {
             let open = bytes.iter().position(|byte| *byte == b'{').unwrap_or(0);
             out.extend_from_slice(&bytes[open + 1..bytes.len() - 1]);
         }
-        EntryToken::Figure | EntryToken::Table => emit_block(kind, bytes, view, out),
+        EntryToken::Figure | EntryToken::Table => emit_block(kind, bytes, base, view, out),
     }
 }
 
-fn emit_revision(kind: EntryToken, bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
+fn emit_revision(
+    kind: EntryToken,
+    bytes: &[u8],
+    base: &[u8],
+    view: RevisionView,
+    out: &mut Vec<u8>,
+) {
     let Some(open) = bytes.iter().position(|byte| *byte == b'{') else {
         return;
     };
@@ -364,24 +396,24 @@ fn emit_revision(kind: EntryToken, bytes: &[u8], view: RevisionView, out: &mut V
     match (kind, view) {
         (EntryToken::Add, RevisionView::Final)
         | (EntryToken::Del | EntryToken::Sub, RevisionView::Original) => {
-            emit_fragment(left, view, out);
+            emit_content(left, base, view, out);
         }
-        (EntryToken::Sub, RevisionView::Final) => emit_fragment(right, view, out),
+        (EntryToken::Sub, RevisionView::Final) => emit_content(right, base, view, out),
         (EntryToken::Add, RevisionView::Marked) => {
             out.extend_from_slice(b"\\textcolor{blue}{");
-            emit_fragment(left, view, out);
+            emit_content(left, base, view, out);
             out.push(b'}');
         }
         (EntryToken::Del, RevisionView::Marked) => {
             out.extend_from_slice(b"\\textcolor{red}{\\sout{");
-            emit_fragment(left, view, out);
+            emit_content(left, base, view, out);
             out.extend_from_slice(b"}}");
         }
         (EntryToken::Sub, RevisionView::Marked) => {
             out.extend_from_slice(b"\\textcolor{red}{\\sout{");
-            emit_fragment(left, view, out);
+            emit_content(left, base, view, out);
             out.extend_from_slice(b"}}\\textcolor{blue}{");
-            emit_fragment(right, view, out);
+            emit_content(right, base, view, out);
             out.push(b'}');
         }
         _ => {}
@@ -402,11 +434,7 @@ fn trim_end(mut bytes: &[u8]) -> &[u8] {
     bytes
 }
 
-fn emit_fragment(bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
-    emit_content(bytes, view, out);
-}
-
-fn emit_content(bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
+fn emit_content(bytes: &[u8], base: &[u8], view: RevisionView, out: &mut Vec<u8>) {
     let mut covered_until = 0usize;
     for piece in scanner::scan(bytes) {
         let piece_span = match piece {
@@ -423,7 +451,7 @@ fn emit_content(bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
         covered_until = piece_span.end();
         let fragment = &bytes[piece_span.start()..piece_span.end()];
         match piece {
-            Piece::Construct { kind, .. } => emit_construct(kind, fragment, view, out),
+            Piece::Construct { kind, .. } => emit_construct(kind, fragment, base, view, out),
             // A quarantined region is transported like any other opaque one.
             // Giving up on recognising it never changes a byte of it.
             Piece::Text(_)
@@ -463,13 +491,14 @@ fn emit_keys(keys: &[u8], out: &mut Vec<u8>) {
     }
 }
 
-fn emit_import(bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
+fn emit_import(bytes: &[u8], base: &[u8], view: RevisionView, out: &mut Vec<u8>) {
     let first_quote = bytes.iter().position(|byte| *byte == b'"').unwrap_or(0);
     let last_quote = bytes
         .iter()
         .rposition(|byte| *byte == b'"')
         .unwrap_or(first_quote);
     out.extend_from_slice(b"\\input{");
+    out.extend_from_slice(base);
     let path = &bytes[first_quote + 1..last_quote];
     let stem = path.strip_suffix(b".xtex").unwrap_or(path);
     out.extend_from_slice(stem);
@@ -480,7 +509,7 @@ fn emit_import(bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
     }
 }
 
-fn emit_block(token: EntryToken, bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
+fn emit_block(token: EntryToken, bytes: &[u8], base: &[u8], view: RevisionView, out: &mut Vec<u8>) {
     let (kind, entry_len, environment) = match token {
         EntryToken::Figure => (BlockKind::Figure, b"\\figure(".len(), b"figure".as_slice()),
         EntryToken::Table => (BlockKind::Table, b"\\table(".len(), b"table".as_slice()),
@@ -553,15 +582,15 @@ fn emit_block(token: EntryToken, bytes: &[u8], view: RevisionView, out: &mut Vec
     }
     if let Some(caption) = field(b"caption") {
         out.extend_from_slice(b"  \\caption{");
-        emit_braced_content(bytes, caption.value, view, out);
+        emit_braced_content(bytes, caption.value, base, view, out);
         out.extend_from_slice(b"}\n");
     }
     if let Some(body) = field(b"body") {
-        emit_braced_content(bytes, body.value, view, out);
+        emit_braced_content(bytes, body.value, base, view, out);
         out.push(b'\n');
     }
     if let Some(trailing) = field(b"trailing") {
-        emit_braced_content(bytes, trailing.value, view, out);
+        emit_braced_content(bytes, trailing.value, base, view, out);
         out.push(b'\n');
     }
     out.extend_from_slice(b"  \\label{");
@@ -571,9 +600,15 @@ fn emit_block(token: EntryToken, bytes: &[u8], view: RevisionView, out: &mut Vec
     out.push(b'}');
 }
 
-fn emit_braced_content(bytes: &[u8], value: Value, view: RevisionView, out: &mut Vec<u8>) {
+fn emit_braced_content(
+    bytes: &[u8],
+    value: Value,
+    base: &[u8],
+    view: RevisionView,
+    out: &mut Vec<u8>,
+) {
     let span = value.span();
-    emit_content(&bytes[span.start() + 1..span.end() - 1], view, out);
+    emit_content(&bytes[span.start() + 1..span.end() - 1], base, view, out);
 }
 
 fn emit_percentage(bytes: &[u8], span: source::Span, out: &mut Vec<u8>) {
@@ -731,6 +766,32 @@ mod tests {
     /// Bytes chosen to break anything that decodes, normalises or re-encodes:
     /// a lone `0xFF`, Latin-1 text, a CRLF, a trailing tab and no final newline.
     const AWKWARD: &[u8] = b"\\section{Caf\xE9}\r\n%% comment\t\n\\ref{a}\xFF  ";
+
+    #[test]
+    fn a_nested_import_emits_the_path_tex_resolves_from_the_root() {
+        // `sections/intro.xtex` importing `nested.xtex` finds
+        // `sections/nested.xtex`; the emitted `\input` must say so, because
+        // TeX resolves it from the root's directory, not the file's.
+        let mut sources = Sources::new();
+        let id = sources.add(
+            "sections/intro.xtex",
+            b"\\section{S}\n@import(\"nested.xtex\")\n@add(c) {@import(\"deeper/x.xtex\")}"
+                .to_vec(),
+        );
+        let document = parse(&sources, id);
+        let mut out = Vec::new();
+        emit(&sources, &document, &mut out).unwrap();
+        let text = String::from_utf8(out).unwrap();
+        assert!(text.contains("\\input{sections/nested.tex}"), "{text}");
+        assert!(text.contains("\\input{sections/deeper/x.tex}"), "{text}");
+
+        // A root-level file gains no prefix.
+        let root = sources.add("main.xtex", b"@import(\"sections/intro.xtex\")".to_vec());
+        let document = parse(&sources, root);
+        let mut out = Vec::new();
+        emit(&sources, &document, &mut out).unwrap();
+        assert_eq!(out, b"\\input{sections/intro.tex}");
+    }
 
     #[test]
     fn untouched_latex_comes_out_byte_identical() {

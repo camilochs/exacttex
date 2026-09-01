@@ -242,6 +242,76 @@ fn a_multi_file_bundle_equals_the_cli_run_on_the_same_project_on_disk() {
 }
 
 #[test]
+fn a_nested_import_emits_the_same_root_relative_input_from_the_cli_and_the_module() {
+    // `sections/model.xtex` imports `deeper.xtex`, found beside it. The CLI's
+    // build writes `build/sections/model.tex`; the module emits the same file
+    // as a bundle root under its root-relative name. Both must say
+    // `\input{sections/deeper.tex}`, which is what TeX resolves from the
+    // root — corpus E2 found the module and the CLI emitting `\input{deeper.tex}`.
+    let repo = repo();
+    let Some(module) = built_module(&repo) else {
+        return;
+    };
+    let project = repo.join("tests/fixtures/wasm/project");
+    let out = repo.join("target/wasm-parity/nested");
+    run_module(&repo, &module, &project, "main.xtex", &out);
+    let wasm_nested = std::fs::read(out.join("wasm.nested.tex")).expect("the module emitted");
+
+    // The CLI builds into a copy, so the fixture directory stays clean.
+    let scratch = repo.join("target/wasm-parity/nested-src");
+    if scratch.exists() {
+        std::fs::remove_dir_all(&scratch).expect("a fresh scratch copy");
+    }
+    copy_tree(&project, &scratch);
+    let built = Command::new(env!("CARGO"))
+        .args([
+            "run",
+            "--quiet",
+            "-p",
+            "xtex-cli",
+            "--",
+            "build",
+            "main.xtex",
+        ])
+        .current_dir(&scratch)
+        .output()
+        .expect("the CLI runs");
+    assert!(
+        built.status.success(),
+        "{}",
+        String::from_utf8_lossy(&built.stderr)
+    );
+    let cli_nested =
+        std::fs::read(scratch.join("build/sections/model.tex")).expect("the CLI built");
+    assert_eq!(
+        cli_nested, wasm_nested,
+        "the two hosts emit one nested file differently"
+    );
+    assert!(
+        String::from_utf8_lossy(&cli_nested).contains("\\input{sections/deeper.tex}"),
+        "{}",
+        String::from_utf8_lossy(&cli_nested)
+    );
+    assert!(
+        scratch.join("build/sections/deeper.tex").is_file(),
+        "the nested import is built too"
+    );
+}
+
+fn copy_tree(from: &Path, to: &Path) {
+    std::fs::create_dir_all(to).expect("a target directory");
+    for entry in std::fs::read_dir(from).expect("readable") {
+        let path = entry.expect("an entry").path();
+        let target = to.join(path.file_name().expect("a name"));
+        if path.is_dir() {
+            copy_tree(&path, &target);
+        } else {
+            std::fs::copy(&path, &target).expect("copied");
+        }
+    }
+}
+
+#[test]
 fn editor_queries_answer_project_wide_and_identically_in_both_builds() {
     let repo = repo();
     let Some(module) = built_module(&repo) else {
@@ -417,7 +487,12 @@ fn a_rename_plans_and_applies_identically_and_reports_what_it_left_alone() {
     ] {
         rewritten = rewritten.with_input(name, bytes);
     }
-    for name in ["appendix.tex", "refs.bib", "figures/plot.pdf"] {
+    for name in [
+        "appendix.tex",
+        "refs.bib",
+        "figures/plot.pdf",
+        "sections/deeper.xtex",
+    ] {
         rewritten = rewritten.with_input(
             name,
             std::fs::read(project.join(name)).expect("fixture file"),

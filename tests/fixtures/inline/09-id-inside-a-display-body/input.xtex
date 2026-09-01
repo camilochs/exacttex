@@ -1,0 +1,6 @@
+\begin{align}
+ y &= 2 @id(eq:a) \\
+ z &= 3 @ref(hidden)
+\end{align}
+\[ w = 4 @id(eq:b) \]
+See @ref(eq:a) and @ref(eq:b).

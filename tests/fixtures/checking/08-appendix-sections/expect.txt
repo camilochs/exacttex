@@ -1,0 +1,5 @@
+transport: identical
+scanner: id ref id ref ref
+constructs: before `\appendix` a section labelled `app:` is XT1004; after it the
+  section is an appendix and `app:` matches, while `sec:` on it does not.
+  Corpus E2: 98 false XT1004 on three correct papers.

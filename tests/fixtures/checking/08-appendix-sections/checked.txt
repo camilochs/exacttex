@@ -1,0 +1,2 @@
+XT1003|section|sec:b|83|5|identifier `sec:b` is not declared
+XT1004|appendix|app:a|27|5|reference `app:a` requires appendix, but its target is section

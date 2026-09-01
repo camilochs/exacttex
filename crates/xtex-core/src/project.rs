@@ -150,7 +150,6 @@ fn check_project_inner(
             continue;
         }
         let document = parse(&sources, id);
-        table.merge(&sources, &document);
         match crate::labels::inventory(&sources, &document, id) {
             crate::labels::Inventory::Complete(found) => labels.extend(found),
             // One file that went dark makes the root's inventory a subset, and
@@ -200,6 +199,8 @@ fn check_project_inner(
         }
         documents.push(document);
     }
+
+    merge_all(&mut table, &sources, &documents);
 
     let bibliography = assemble(&declared, |name| loader.read_aux(root, name));
     // The author's own `\label` commands resolve `@ref` too, so annotating a
@@ -381,6 +382,69 @@ pub fn literal_import(
         .flatten()
 }
 
+/// Merges every document into one table, after all are loaded: a file
+/// imported after `\appendix` begins in the appendices, and only its
+/// importer can say so.
+fn merge_all(table: &mut SymbolTable, sources: &Sources, documents: &[crate::document::Document]) {
+    let in_appendix = appendix_flags(sources, documents);
+    for document in documents {
+        table.merge_from(sources, document, in_appendix.contains(&document.source()));
+    }
+}
+
+/// The documents that begin inside the appendices: those imported after
+/// `\appendix` in their importer, or by a document that itself began there.
+///
+/// `documents` are in load order, importer before imported, so one pass
+/// settles every file. An import is matched to its document by the
+/// root-relative name the loader gave it — the importer's directory joined
+/// with the literal path — and a path that matches nothing (a computed one,
+/// or one that failed to load) marks nothing.
+#[must_use]
+pub fn appendix_flags(
+    sources: &Sources,
+    documents: &[crate::document::Document],
+) -> BTreeSet<SourceId> {
+    let mut flagged = BTreeSet::new();
+    for document in documents {
+        let id = document.source();
+        let Some(source) = sources.get(id) else {
+            continue;
+        };
+        let switch = if flagged.contains(&id) {
+            Some(0)
+        } else {
+            crate::symbols::appendix_switch_at(source.bytes())
+        };
+        let Some(switch) = switch else {
+            continue;
+        };
+        let directory = source
+            .name()
+            .rfind('/')
+            .map_or("", |slash| &source.name()[..=slash]);
+        let mut after = Vec::new();
+        document.walk(|node| {
+            if let Node::Construct {
+                kind: EntryToken::Import,
+                span,
+                ..
+            } = node
+                && span.start() > switch
+                && let Some(path) = literal_import(sources, id, *span)
+            {
+                after.push(format!("{directory}{path}"));
+            }
+        });
+        for name in after {
+            if let Some(imported) = sources.iter().find(|s| s.name() == name) {
+                flagged.insert(imported.id());
+            }
+        }
+    }
+    flagged
+}
+
 fn merge_declared(target: &mut Declared, found: Declared) {
     target.resources.extend(found.resources);
     target.inline_keys.extend(found.inline_keys);
@@ -502,15 +566,61 @@ pub struct Analysed {
 pub fn analyse(loader: &impl SourceLoader, root: &str) -> Result<Analysed, IoError> {
     let (sources, documents, names) = load_imports(loader, root)?;
     let mut table = SymbolTable::new();
-    for document in &documents {
-        table.merge(&sources, document);
-    }
+    merge_all(&mut table, &sources, &documents);
     Ok(Analysed {
         sources,
         documents,
         names,
         table,
     })
+}
+
+#[cfg(test)]
+mod appendix_tests {
+    use super::*;
+    use crate::io::Memory;
+
+    fn codes(files: &[(&str, &str)]) -> Vec<String> {
+        let mut store = Memory::new();
+        for (name, text) in files {
+            store = store.with_input(*name, text.as_bytes().to_vec());
+        }
+        let (_, diagnostics, _, _) =
+            check_project(&store, "main.xtex", crate::symbols::PrefixMap::default())
+                .expect("loads");
+        diagnostics
+            .iter()
+            .map(|d| format!("{} {}", d.code, d.name.as_deref().unwrap_or("-")))
+            .collect()
+    }
+
+    #[test]
+    fn a_file_imported_after_the_appendix_switch_declares_appendices() {
+        // The corpus shape: `\appendix` in the root, the appendices in their
+        // own files, `app:` labels on their sections. Correct, and it must
+        // check clean; the same file imported before the switch is not.
+        let after = codes(&[
+            (
+                "main.xtex",
+                "\\section{A}@id(sec:a)\n\\appendix\n@import(\"back/app.xtex\")\n@ref(app:b) @ref(app:c)\n",
+            ),
+            (
+                "back/app.xtex",
+                "\\section{B}@id(app:b)\n@import(\"more.xtex\")\n",
+            ),
+            ("back/more.xtex", "\\subsection{C}@id(app:c)\n"),
+        ]);
+        assert!(after.is_empty(), "{after:?}");
+
+        let before = codes(&[
+            (
+                "main.xtex",
+                "@import(\"back/app.xtex\")\n\\appendix\n@ref(app:b)\n",
+            ),
+            ("back/app.xtex", "\\section{B}@id(app:b)\n"),
+        ]);
+        assert_eq!(before, ["XT1004 app:b"]);
+    }
 }
 
 #[cfg(test)]

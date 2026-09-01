@@ -2,7 +2,7 @@
 
 use super::boundaries::{balanced_end, is_escaped};
 use super::regions::{Extent, command_extent};
-use super::tables::{DEFINITION_COMMANDS, looks_like_a_construct_word};
+use super::tables::{DEFINITION_COMMANDS, DISPLAY_MATH_ENVIRONMENTS, looks_like_a_construct_word};
 use super::{EntryToken, Piece, scan};
 use crate::source::Span;
 
@@ -37,18 +37,59 @@ pub fn readable_for(bytes: &[u8], commands: &[&str]) -> Vec<Span> {
     spans
 }
 
+/// Whether a region is a display-math body: it opens with `\[`, `$$` or the
+/// `\begin{…}` of a display environment, or it closes with that
+/// environment's `\end{…}`.
+///
+/// Both ends are checked because the scanner's excluded piece for an
+/// environment begins after the header slot (grammar §4) and so does not
+/// carry its own `\begin`; it does carry the `\end`.
+#[must_use]
+pub fn is_display_math_region(region: &[u8]) -> bool {
+    if region.starts_with(b"\\[") || region.starts_with(b"$$") {
+        return true;
+    }
+    if let Some(rest) = region.strip_prefix(b"\\begin{")
+        && let Some(close) = rest.iter().position(|byte| *byte == b'}')
+        && is_display_math_name(&rest[..close])
+    {
+        return true;
+    }
+    let Some(open) = region
+        .windows(b"\\end{".len())
+        .rposition(|w| w == b"\\end{")
+    else {
+        return false;
+    };
+    region.ends_with(b"}")
+        && is_display_math_name(&region[open + b"\\end{".len()..region.len() - 1])
+}
+
+fn is_display_math_name(name: &[u8]) -> bool {
+    DISPLAY_MATH_ENVIRONMENTS
+        .iter()
+        .any(|(known, _)| known.as_bytes() == name)
+}
+
 /// Regions holding content a reader may search.
 ///
-/// Prose, plus every excluded region except a definition's. A command's
-/// arguments are an exclusion region so that *constructs* are not recognised
-/// there; a reader looking for the author's own `\label` is asking a different
-/// question, and the answer differs only for definitions.
+/// Prose, plus every excluded region except a definition's, plus display-math
+/// bodies. A command's arguments are an exclusion region so that *constructs*
+/// are not recognised there; a reader looking for the author's own `\label`
+/// is asking a different question, and the answer differs only for
+/// definitions. A display body is excluded for the same reason and read for
+/// the same one: `\label{eq:x}` before `\end{align}` is where equations are
+/// labelled, and an inventory that skipped it called correct references
+/// undeclared (corpus E2, 17 labels in 6 papers).
 #[must_use]
 pub fn readable_content(bytes: &[u8]) -> Vec<Span> {
     let mut spans = Vec::new();
     for piece in scan(bytes) {
         match piece {
             Piece::Text(span) => spans.push(span),
+            Piece::Excluded(span) if is_display_math_region(&bytes[span.start()..span.end()]) => {
+                spans.push(span);
+            }
             Piece::Arguments(span) => {
                 let region = &bytes[span.start()..span.end()];
                 let defines = region.strip_prefix(b"\\").is_some_and(|rest| {

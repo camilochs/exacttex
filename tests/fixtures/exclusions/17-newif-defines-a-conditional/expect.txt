@@ -1,0 +1,5 @@
+transport: identical
+scanner: id ref
+constructs: `\newif\iffoo` defines a conditional and opens no region, so the section
+  and the reference after it are recognised; the later `\iffoo … \fi` is a real
+  conditional region and hides its reference. Corpus E2, arXiv 2301.00303.

@@ -72,6 +72,9 @@ const checkJson = call("xtex_check_json", project);
 JSON.parse(new TextDecoder().decode(checkJson));
 writeFileSync(`${outDir}/wasm.json`, checkJson);
 writeFileSync(`${outDir}/wasm.map`, call("xtex_source_map", project));
+// A nested file emitted as the bundle's root keeps its root-relative name,
+// so its own `@import` must come out as the path TeX resolves from the root.
+writeFileSync(`${outDir}/wasm.nested.tex`, call("xtex_emit", bundle(projectDir, "sections/model.xtex")));
 
 // The claims inventory parses as JSON, and the record-aware check with NO
 // record must equal the plain check byte for byte — the record is opt-in

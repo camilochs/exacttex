@@ -27,7 +27,8 @@ mod tests;
 
 pub use boundaries::{CommentRule, balanced_end, balanced_end_with};
 pub use queries::{construct_shaped_text, split_keys};
-pub use queries::{listing_header_labels, readable_content, readable_for, substitution_separator};
+pub use queries::{is_display_math_region, readable_content};
+pub use queries::{listing_header_labels, readable_for, substitution_separator};
 pub use tables::{
     DEFAULT_CITE_COMMANDS, DEFAULT_REF_COMMANDS, DEFAULT_VERBATIM_ENVIRONMENTS,
     DEFINITION_COMMANDS, LIST_REF_COMMANDS,
@@ -249,7 +250,10 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                     && at == *start
                 {
                     enter!(at);
-                    region = Region::Environment { name: name.clone() };
+                    region = Region::Environment {
+                        name: name.clone(),
+                        math: true,
+                    };
                     display_opening = None;
                     continue;
                 }
@@ -414,6 +418,11 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
             }
 
             Region::DisplayMath { dollars } => {
+                if let Some(resume) = display_body_id(bytes, at, excluded_start, &mut pieces) {
+                    at = resume;
+                    excluded_start = at;
+                    continue;
+                }
                 if *dollars {
                     if bytes[at] == b'$'
                         && !is_escaped(bytes, at)
@@ -445,7 +454,14 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                 }
             }
 
-            Region::Environment { name } => {
+            Region::Environment { name, math } => {
+                if *math
+                    && let Some(resume) = display_body_id(bytes, at, excluded_start, &mut pieces)
+                {
+                    at = resume;
+                    excluded_start = at;
+                    continue;
+                }
                 if let Some(end) = environment_end(bytes, at, name) {
                     at = end;
                     pieces.push(Piece::Excluded(span(excluded_start, at)));
@@ -566,6 +582,32 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
     }
 
     pieces
+}
+
+/// An `@id(…)` inside a display-math body, if one starts at `at`.
+///
+/// The bytes before it become their own excluded piece, the construct is
+/// recognised, and scanning resumes after it with the region unchanged.
+/// Only `@id`: a reference or citation inside a formula stays formula.
+fn display_body_id(
+    bytes: &[u8],
+    at: usize,
+    excluded_start: usize,
+    pieces: &mut Vec<Piece>,
+) -> Option<usize> {
+    let (EntryToken::Id, after_open) = entry_token_at(bytes, at)? else {
+        return None;
+    };
+    let close = close_paren(bytes, after_open)?;
+    if at > excluded_start {
+        pieces.push(Piece::Excluded(span(excluded_start, at)));
+    }
+    pieces.push(Piece::Construct {
+        kind: EntryToken::Id,
+        span: span(at, close + 1),
+        children: Vec::new(),
+    });
+    Some(close + 1)
 }
 
 fn block_children(bytes: &[u8], block: &crate::blocks::Block) -> Vec<Piece> {
