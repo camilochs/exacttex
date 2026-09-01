@@ -218,6 +218,145 @@ fn a_second_unchanged_run_touches_no_network_for_the_settled() {
     assert_eq!(record.claims.len(), claims.len());
 }
 
+const CROSSREF_NOTHING: &str = r#"{"message":{"items":[]}}"#;
+
+fn not_in_crossref() -> Claim {
+    bib(
+        "thesis",
+        &[
+            ("title", "A Thesis Nobody Registered"),
+            ("author", "A. Student"),
+            ("year", "2001"),
+        ],
+    )
+}
+
+#[test]
+fn a_registry_answering_not_found_is_an_answer_and_is_not_asked_again_inside_the_window() {
+    // Corpus E6: 382 claims answered "not found" were re-asked on every
+    // run, half of a full run forever. The answer is carried over like any
+    // other while the entry is unchanged and the window holds.
+    let canned = Canned {
+        answers: vec![("crossref", Ok((200, CROSSREF_NOTHING)))],
+        calls: RefCell::new(Vec::new()),
+    };
+    let claims = vec![not_in_crossref()];
+    let (written, calls) = run_with(&canned, &claims, None);
+    assert_eq!(calls.len(), 1, "{calls:?}");
+    let record = parse_record(written.as_bytes()).expect("parses");
+    assert_eq!(
+        record.claims[0].verdict,
+        Verdict::Bibliographic(BibVerdict::Unverified)
+    );
+    assert!(
+        record.claims[0]
+            .failure_note
+            .as_deref()
+            .is_some_and(|note| note.starts_with("not found at the registries"))
+    );
+
+    let second = Canned {
+        answers: vec![("crossref", Ok((200, CROSSREF_NOTHING)))],
+        calls: RefCell::new(Vec::new()),
+    };
+    let (rewritten, calls) = run_with(&second, &claims, Some(written.as_bytes()));
+    assert!(
+        calls.is_empty(),
+        "a settled negative was re-asked: {calls:?}"
+    );
+    let record = parse_record(rewritten.as_bytes()).expect("parses");
+    assert_eq!(record.claims.len(), 1);
+    assert_eq!(
+        record.claims[0].verdict,
+        Verdict::Bibliographic(BibVerdict::Unverified),
+        "the negative is carried over as recorded"
+    );
+}
+
+#[test]
+fn a_settled_negative_is_asked_again_when_the_entry_changes_or_the_window_elapses() {
+    let canned = Canned {
+        answers: vec![("crossref", Ok((200, CROSSREF_NOTHING)))],
+        calls: RefCell::new(Vec::new()),
+    };
+    let mut claims = vec![not_in_crossref()];
+    let (written, _) = run_with(&canned, &claims, None);
+
+    // The author edits the title: the old answer was about another text.
+    claims[0].fields[0].1 = "A Thesis, Registered After All".to_owned();
+    let edited = Canned {
+        answers: vec![("crossref", Ok((200, CROSSREF_NOTHING)))],
+        calls: RefCell::new(Vec::new()),
+    };
+    let (_, calls) = run_with(&edited, &claims, Some(written.as_bytes()));
+    assert_eq!(calls.len(), 1, "the changed entry pays: {calls:?}");
+
+    // The window elapses: the negative is stale like any verdict.
+    let claims = vec![not_in_crossref()];
+    let later = Canned {
+        answers: vec![("crossref", Ok((200, CROSSREF_NOTHING)))],
+        calls: RefCell::new(Vec::new()),
+    };
+    let mut persist = |_: &xtex_core::verification::VerificationRecord| {};
+    let mut progress = |_: &str| {};
+    let mut run = Run {
+        transport: &later,
+        user_agent: "test".to_owned(),
+        now: "2026-11-01T00:00:00Z".to_owned(),
+        max_age_days: 30,
+        timeout: Duration::from_millis(10),
+        persist: &mut persist,
+        progress: &mut progress,
+    };
+    let _ = verify(&mut run, &claims, Some(written.as_bytes()));
+    assert_eq!(
+        later.calls.borrow().len(),
+        1,
+        "past the window the negative is re-asked"
+    );
+}
+
+#[test]
+fn a_transport_failure_is_still_retried_on_the_next_run() {
+    // The other half of the rule: a timeout answered nothing, and the
+    // next run asks again.
+    let canned = Canned {
+        answers: vec![("crossref", Err("timeout"))],
+        calls: RefCell::new(Vec::new()),
+    };
+    let claims = vec![not_in_crossref()];
+    let (written, _) = run_with(&canned, &claims, None);
+    let record = parse_record(written.as_bytes()).expect("parses");
+    assert!(
+        record.claims[0]
+            .failure_note
+            .as_deref()
+            .is_some_and(|note| !note.starts_with("not found")),
+        "{:?}",
+        record.claims[0].failure_note
+    );
+    let second = Canned {
+        answers: vec![("crossref", Ok((200, CROSSREF_NOTHING)))],
+        calls: RefCell::new(Vec::new()),
+    };
+    let (_, calls) = run_with(&second, &claims, Some(written.as_bytes()));
+    assert_eq!(calls.len(), 1, "a transport failure is retried: {calls:?}");
+
+    // And a server that answered 404 has answered: not retried.
+    let gone = Canned {
+        answers: vec![("gone", Ok((404, "no such page")))],
+        calls: RefCell::new(Vec::new()),
+    };
+    let claims = vec![url_claim("https://example.org/gone")];
+    let (written, _) = run_with(&gone, &claims, None);
+    let again = Canned {
+        answers: vec![("gone", Ok((404, "no such page")))],
+        calls: RefCell::new(Vec::new()),
+    };
+    let (_, calls) = run_with(&again, &claims, Some(written.as_bytes()));
+    assert!(calls.is_empty(), "a 404 is an answer: {calls:?}");
+}
+
 #[test]
 fn an_edited_entry_is_refetched_and_the_rest_stay_skipped() {
     let canned = Canned {
