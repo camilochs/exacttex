@@ -68,6 +68,28 @@ JSON.parse(new TextDecoder().decode(checkJson));
 writeFileSync(`${outDir}/wasm.json`, checkJson);
 writeFileSync(`${outDir}/wasm.map`, call("xtex_source_map", project));
 
+// The claims inventory parses as JSON, and the record-aware check with NO
+// record must equal the plain check byte for byte — the record is opt-in
+// and its absence must change nothing.
+const claimsJson = call("xtex_claims", project);
+JSON.parse(new TextDecoder().decode(claimsJson));
+writeFileSync(`${outDir}/wasm.claims.json`, claimsJson);
+{
+  const now = new TextEncoder().encode("2026-01-01T00:00:00Z");
+  const input = new Uint8Array(4 + now.length + 4 + 4 + project.length);
+  const view = new DataView(input.buffer);
+  let at = 0;
+  view.setUint32(at, now.length, true); at += 4;
+  input.set(now, at); at += now.length;
+  view.setUint32(at, 30, true); at += 4;
+  view.setUint32(at, 0, true); at += 4;
+  input.set(project, at);
+  const recordless = call("xtex_check_with_record", input);
+  if (Buffer.compare(Buffer.from(recordless), Buffer.from(checkJson)) !== 0) {
+    throw new Error("xtex_check_with_record without a record diverged from the plain check");
+  }
+}
+
 // Helper: length-prefixed texts followed by the bundle.
 function framed(texts, bundleBytes) {
   const enc = new TextEncoder();
