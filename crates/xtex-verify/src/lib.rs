@@ -8,6 +8,7 @@
 
 pub mod bucket;
 pub mod compare;
+pub mod materialize;
 pub mod run;
 pub mod sources;
 pub mod transport;

@@ -107,7 +107,30 @@ else — reachability, expiry, drift — is advisory. The WebAssembly surface ex
 (`xtex_claims`, `xtex_check_with_record`), so an editor in a browser replays the same record with the
 same answers; the parity suite holds it to that.
 
-## 5 · What this refuses to be
+## 5 · The provider: offering instead of checking
+
+```sh
+xtex-verify materialize 10.1000/xyz [--key=name]
+```
+
+The constructive half. Instead of checking an entry someone typed, the provider **transcribes** the
+entry from the DOI's live record and prints it, dated:
+
+```bibtex
+% transcribed from crossref on 2026-09-01 — doi:10.1000/xyz
+@article{lovelace2021,
+  title = {A Very Exact Result},
+  author = {Ada Lovelace and Alan Turing},
+  ...
+```
+
+An entry nobody typed cannot carry an invented field — the classic fabricated reference is composed
+from memory, and this path has no memory to compose from. A DOI the source does not know is a refusal,
+never a guess; a record without a title is refused, never completed. Editors expose the same operation
+(in Vitela: *Add entry from DOI* in the submission report), and once the entry is in the project the
+deterministic check owns it like any other.
+
+## 6 · What this refuses to be
 
 - **Not a compile-time network.** `--verify-external` inside the pipeline was considered and rejected:
   hundreds of citations would make compilation minutes long, and a timeout would turn weather into build

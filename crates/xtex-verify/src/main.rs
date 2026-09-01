@@ -96,8 +96,54 @@ fn now_utc() -> String {
     )
 }
 
+/// `xtex-verify materialize <doi>` — the constructive half: a BibTeX
+/// entry transcribed from the DOI's live record, printed with its dated
+/// provenance comment. Nothing is composed from memory; a DOI the source
+/// does not know is an error, never a guessed entry.
+fn materialize(args: &[String]) -> ExitCode {
+    let mut doi = None;
+    let mut key = None;
+    let mut now = None;
+    for argument in args {
+        if let Some(value) = argument.strip_prefix("--key=") {
+            key = Some(value.to_owned());
+        } else if let Some(value) = argument.strip_prefix("--now=") {
+            now = Some(value.to_owned());
+        } else if argument.starts_with("--") {
+            eprintln!("usage: xtex-verify materialize <doi> [--key=name]");
+            return ExitCode::from(2);
+        } else {
+            doi = Some(argument.clone());
+        }
+    }
+    let Some(doi) = doi else {
+        eprintln!("usage: xtex-verify materialize <doi> [--key=name]");
+        return ExitCode::from(2);
+    };
+    match xtex_verify::materialize::entry_from_doi(
+        &xtex_verify::transport::Http,
+        "xtex-verify (https://github.com/camilochs/exacttex)",
+        Duration::from_secs(10),
+        &doi,
+        key.as_deref(),
+        &now.unwrap_or_else(now_utc),
+    ) {
+        Ok(entry) => {
+            println!("{}", entry.bibtex);
+            ExitCode::SUCCESS
+        }
+        Err(error) => {
+            eprintln!("error: {error}");
+            ExitCode::from(2)
+        }
+    }
+}
+
 fn main() -> ExitCode {
     let args: Vec<String> = std::env::args().skip(1).collect();
+    if args.first().is_some_and(|first| first == "materialize") {
+        return materialize(&args[1..]);
+    }
     let mut root_arg = None;
     let mut max_age_days = 30i64;
     let mut mailto = String::new();
