@@ -14,6 +14,10 @@ ExactTeX is LaTeX with gradual annotation: you name the object you want checked,
 stays ordinary LaTeX, transported byte for byte. Rename a `.tex` file to `.xtex` and it keeps working; from
 there you choose how much to annotate, and what you annotate is guaranteed.
 
+You can use ExactTeX in the browser today at **[Vitela](https://vitela.artificialfallibility.com/)** —
+an editor built on the compiler's WebAssembly build, with the same checks, diagnostics and navigation
+running locally in the page.
+
 > **Status: the compiler works, and three doors open into it.** `xtex` parses, checks, emits LaTeX, writes
 > source maps and applies revisions; `xtex-lsp` gives an editor diagnostics, hover, completion and
 > go-to-definition; and the WebAssembly build runs the same core in any host with no compile server. A
