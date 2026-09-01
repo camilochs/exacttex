@@ -309,7 +309,11 @@ pub fn verify(
                             failure_note: None,
                         }
                     }
-                    None => unverified(claim, run, "no source answered for this entry"),
+                    None => unverified(
+                        claim,
+                        run,
+                        "not found at the registries — books published before DOIs often are not registered; the entry may still be correct",
+                    ),
                 }
             }
             ClaimKind::Url | ClaimKind::Doi | ClaimKind::Repository => {
