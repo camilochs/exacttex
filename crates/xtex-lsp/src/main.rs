@@ -23,7 +23,7 @@ use std::fmt::Write as _;
 use std::io::{BufReader, Write};
 
 use xtex_core::bibliography::{Bibliography, Unavailable};
-use xtex_core::check::check_with_labels;
+use xtex_core::check::{Severity, check_documents, check_with_labels};
 use xtex_core::document::Document;
 use xtex_core::editor::{
     Position, citation_definition_site, completions, construct_at, definition, definition_site,
@@ -143,15 +143,32 @@ fn diagnose(uri: &str, text: &str) -> String {
 
     let mut items = String::new();
     let labels = xtex_core::labels::inventory(&sources, &document, id);
-    for diagnostic in check_with_labels(&table, &bibliography, &labels) {
+    let mut diagnostics = check_with_labels(&table, &bibliography, &labels);
+    // The per-document checks too — a malformed block, an unclosed entry
+    // token, an `@word(` that is no construct. An image path is never called
+    // missing here: the server has no project root to resolve it against,
+    // the same silence the bibliography keeps.
+    diagnostics.extend(check_documents(
+        &sources,
+        std::slice::from_ref(&document),
+        &table,
+        |_, _| true,
+    ));
+    for diagnostic in diagnostics {
         let (line, column) = line_column(text.as_bytes(), diagnostic.span.start());
         let (end_line, end_column) = line_column(text.as_bytes(), diagnostic.span.end());
         if !items.is_empty() {
             items.push(',');
         }
+        // LSP severities: 1 is an error, 2 a warning. An advisory never
+        // touches the exit code, so it is not shown as an error either.
+        let severity = match diagnostic.severity {
+            Severity::Error => 1,
+            Severity::Advisory => 2,
+        };
         let _ = write!(
             items,
-            r#"{{"range":{{"start":{{"line":{},"character":{}}},"end":{{"line":{},"character":{}}}}},"severity":1,"code":"{}","source":"xtex","message":"#,
+            r#"{{"range":{{"start":{{"line":{},"character":{}}},"end":{{"line":{},"character":{}}}}},"severity":{severity},"code":"{}","source":"xtex","message":"#,
             line, column, end_line, end_column, diagnostic.code
         );
         write_text(&diagnostic.message, &mut items);

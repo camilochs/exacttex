@@ -1,0 +1,16 @@
+BEFORE
+\figure(fig:rot) {
+  src = "a.pdf"
+  angle = 90
+  width = 80%
+  caption = {Rotated, then fitted}
+}
+MIDDLE
+\figure(fig:cut) {
+  src = "b.pdf"
+  trim = 1cm 0 0.5in 2
+  clip = true
+  scale = 0.5
+  caption = {Trimmed}
+}
+AFTER

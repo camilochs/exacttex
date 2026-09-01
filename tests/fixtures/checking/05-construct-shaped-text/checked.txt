@@ -1,0 +1,2 @@
+XT2002|unknown-open|eqref|4|12|`@eqref(eq:x)` is not a construct and is typeset as literal text — the reference commands checked here are @ref, @cref, @Cref, @autoref, @pageref
+XT2002|unknown-open|nameref|90|15|`@nameref(tab:a)` is not a construct and is typeset as literal text — the reference commands checked here are @ref, @cref, @Cref, @autoref, @pageref

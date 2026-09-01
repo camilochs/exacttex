@@ -15,7 +15,9 @@ referenced here rather than restated.
 ## 1 · Only explicit constructs are checked
 
 `@ref`, `@cite`, `@id` and the typed blocks carry the guarantee. The author wrote them, so the compiler
-knows what they mean and may fail on them.
+knows what they mean and may fail on them. `@ref` stands here for every reference command written with `@`
+— `@cref`, `@Cref`, `@autoref`, `@pageref` — and `@cite` for every citation command, per
+[`grammar.md`](grammar.md) §4; each is checked identically.
 
 Plain LaTeX does not. A `\cite{x}` in transported bytes may come from a macro body, an inactive branch of a
 conditional, or a package that redefines it. The compiler has no way to tell, so it says nothing.
@@ -106,14 +108,14 @@ error.
 | `XT1004` | `@ref(x)` demanding class A on a target of known class B, A ≠ B | both known |
 | `XT1005` | `@cite(k)` where `k` is absent from a bibliography read completely | `Citation` |
 | `XT1006` | A `\figure` block whose image file does not resolve | `Figure` |
-| `XT1007` | A length with an unsupported unit, or a percentage outside 0–100 | `Length` |
+| `XT1007` | A length with an unsupported unit, a `trim` that is not four lengths, or a percentage outside 0–100 | `Length` |
 | `XT1008` | A block field that is required and absent, or present and malformed | `Figure`, `Table` |
 | `XT1009` | An `@import` path that does not resolve | any |
 | `XT1010` | Two sidecar records share one revision identifier | any |
 | `XT1011` | A sidecar record's `kind` disagrees with its construct | any |
 | `XT1012` | A sidecar record whose revision construct no longer exists | any |
 | `XT1013` | A sidecar that cannot be read, or that names a different document | any |
-| `XT1014` | An explicit inline construct (`@id`, `@ref`, `@cite`, `@import`) whose closing `)` is not found before line end | any |
+| `XT1014` | An explicit inline construct (`@id`, a reference or citation command, `@import`) whose closing `)` is not found before line end | any |
 
 Two properties hold across the whole table and are tested as properties, not as examples:
 
@@ -153,12 +155,24 @@ The class of things that are advisory and not errors:
 | Code | Condition | Printed |
 |---|---|---|
 | `XT2001` | The document contains `@cite`, and the bibliography is `Unavailable` (see §7) — the advisory is about the file, never about a key | by default |
+| `XT2002` | An `@word(…)` in prose that no construct claims and that reads like a command — `@eqref(eq:x)`, `@citeyear(k)`. The bytes are transported, so they reach the PDF as literal text with exit 0; the advisory names the reference or citation commands that are checked | by default |
 | — | An unresolved `\ref` or `\cite` written in plain LaTeX | `--strict-tex` |
 | — | A `\label` in an opaque region that appears to collide with an `@id` | `--strict-tex` |
 | — | A region that entered quarantine early, which is a coverage signal rather than a defect | `--strict-tex` |
 
 Codes are assigned in two ranges that do not overlap: `XT1nnn` is a hard error, `XT2nnn` an advisory. A row
 without a code is not implemented yet.
+
+`XT2002` is printed by default rather than behind `--strict-tex` for one reason: the shape it reports is
+ExactTeX's own entry-token shape, not plain LaTeX. Measured on 2026-09-01 with
+`grep -rhoE '(^|[^\\A-Za-z0-9@])@[A-Za-z]+\(' --include='*.tex' <corpus>` over the 548 `.tex` files in the
+maintainer's workspace: every hit was `@ref(`, `@cite(` or `@id(` in an ExactTeX example, and none was prose.
+One author's files, so it is an existence claim about the shape's rarity and not a measurement of LaTeX;
+the command runs on any corpus. It stays an advisory because a rule that cannot see inside a
+package cannot prove the word is not a command that package defines, and the gradual guarantee admits no hard
+error from bytes the author did not write as a construct. What it never does is fire on an address, a control
+symbol, a tabular column specification, or an `@word` with no `(` — [`grammar.md`](grammar.md) §4 lists the
+shapes, and `checking/05` pins them.
 
 **Never scan inside an opaque region and treat what you find as checkable.** Such a scan matches inside a
 `\newcommand` body, inside verbatim text, and inside an inactive `\if` branch. This was a design error caught
@@ -315,8 +329,9 @@ everything and the hand reader disagrees anywhere would reverse it.
 
 ## 8 · References
 
-An `@ref` whose identifier neither an `@id` nor a completely inventoried source `\label` declares is
-`XT1003`. The symbol scope is the document root — its root file plus everything reached through `@import`.
+An `@ref` — or `@cref`, `@Cref`, `@autoref`, `@pageref` — whose identifier neither an `@id` nor a
+completely inventoried source `\label` declares is `XT1003`. A `@cref` list is checked one identifier at a
+time. The symbol scope is the document root — its root file plus everything reached through `@import`.
 The label inventory additionally follows literal `\include` and `\input` paths in readable content, matching
 the assembly the author already wrote without changing emission. If any such file cannot be resolved, read or
 parsed through the end, the whole inventory is unavailable and `XT1003` is silent.

@@ -317,13 +317,22 @@ fn documentclass_end(bytes: &[u8]) -> Option<usize> {
 fn emit_construct(kind: EntryToken, bytes: &[u8], view: RevisionView, out: &mut Vec<u8>) {
     match kind {
         EntryToken::Id => emit_inline(bytes, b"\\label{", out),
-        EntryToken::Ref => emit_inline(bytes, b"\\ref{", out),
-        EntryToken::Cite => {
-            out.push(b'\\');
+        // A reference or citation construct is the LaTeX command it names,
+        // written with `@`; the command is read from the construct's own
+        // bytes. A command that takes a list gets its keys separated by bare
+        // commas; a single-identifier command gets its payload as written.
+        EntryToken::Ref | EntryToken::Cite => {
+            let command = scanner::at_command(bytes);
             let open = bytes.iter().position(|byte| *byte == b'(').unwrap_or(1);
-            out.extend_from_slice(&bytes[1..open]);
+            out.push(b'\\');
+            out.extend_from_slice(command);
             out.push(b'{');
-            emit_citation_keys(&bytes[open + 1..bytes.len() - 1], out);
+            let payload = &bytes[open + 1..bytes.len() - 1];
+            if kind == EntryToken::Cite || scanner::names_a_list(bytes) {
+                emit_keys(payload, out);
+            } else {
+                out.extend_from_slice(payload);
+            }
             out.push(b'}');
         }
         EntryToken::Import => emit_import(bytes, view, out),
@@ -435,7 +444,7 @@ fn emit_inline(bytes: &[u8], prefix: &[u8], out: &mut Vec<u8>) {
     out.push(b'}');
 }
 
-fn emit_citation_keys(keys: &[u8], out: &mut Vec<u8>) {
+fn emit_keys(keys: &[u8], out: &mut Vec<u8>) {
     let mut first = true;
     for key in keys.split(|byte| *byte == b',') {
         if !first {
@@ -504,16 +513,23 @@ fn emit_block(token: EntryToken, bytes: &[u8], view: RevisionView, out: &mut Vec
     }
     if let Some(src) = field(b"src") {
         out.extend_from_slice(b"  \\includegraphics");
-        // A percentage becomes a fraction of a reference fixed by the field,
-        // never one the author selects. `\\linewidth` is the only width correct
-        // both inside a single-column float and inside a spanning one; for
-        // height TeX offers no adaptive reference at all. `decisions/0004`.
+        // Options in the order the fields were written, because graphicx
+        // applies them in order — `angle` before `width` rotates and then
+        // fits, the reverse fits and then rotates — and reordering would
+        // change the picture. A percentage becomes a fraction of a reference
+        // fixed by the field, never one the author selects. `\\linewidth` is
+        // the only width correct both inside a single-column float and
+        // inside a spanning one; for height TeX offers no adaptive reference
+        // at all. `decisions/0004`.
         let mut options: Vec<u8> = Vec::new();
-        for (name, reference) in [
-            (&b"width"[..], &b"\\linewidth"[..]),
-            (&b"height"[..], &b"\\textheight"[..]),
-        ] {
-            let Some(field) = field(name) else { continue };
+        for field in &block.fields {
+            let name = &bytes[field.key.start()..field.key.end()];
+            let reference: &[u8] = match name {
+                b"width" => b"\\linewidth",
+                b"height" => b"\\textheight",
+                b"scale" | b"angle" | b"trim" | b"clip" => b"",
+                _ => continue,
+            };
             if !options.is_empty() {
                 options.push(b',');
             }

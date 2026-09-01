@@ -1,0 +1,6 @@
+\documentclass{article}
+\begin{document}
+As shown by @cite(real1984).
+\bibliographystyle{plain}
+\bibliography{refs}
+\end{document}

@@ -26,8 +26,12 @@ mod tables;
 mod tests;
 
 pub use boundaries::{CommentRule, balanced_end, balanced_end_with};
+pub use queries::{construct_shaped_text, split_keys};
 pub use queries::{listing_header_labels, readable_content, readable_for, substitution_separator};
-pub use tables::{DEFAULT_CITE_COMMANDS, DEFAULT_VERBATIM_ENVIRONMENTS, DEFINITION_COMMANDS};
+pub use tables::{
+    DEFAULT_CITE_COMMANDS, DEFAULT_REF_COMMANDS, DEFAULT_VERBATIM_ENVIRONMENTS,
+    DEFINITION_COMMANDS, LIST_REF_COMMANDS,
+};
 
 use boundaries::{close_import, close_paren, ident_end, is_escaped, span, span_at};
 use queries::substitution_arrows;
@@ -101,9 +105,11 @@ pub enum EntryToken {
     Note,
     /// `@id(`
     Id,
-    /// `@ref(`
+    /// `@ref(`, `@cref(`, `@Cref(`, `@autoref(` or `@pageref(`; see
+    /// [`DEFAULT_REF_COMMANDS`].
     Ref,
-    /// `@cite(`
+    /// `@cite(`, `@citep(`, `@citet(`, `@textcite(` or `@parencite(`; see
+    /// [`DEFAULT_CITE_COMMANDS`].
     Cite,
     /// `@import(`
     Import,
@@ -150,6 +156,31 @@ impl EntryToken {
             Self::Table => "\\table",
         }
     }
+}
+
+/// The command word an `@` construct names: the bytes between its `@` and
+/// its `(`.
+///
+/// A citation or reference construct carries the LaTeX command it emits in
+/// its own bytes — `@citep(` names `citep`, `@Cref(` names `Cref` — so the
+/// emitter, the checker and the editor all read it here rather than keeping
+/// a variant per command.
+#[must_use]
+pub fn at_command(construct: &[u8]) -> &[u8] {
+    let open = construct
+        .iter()
+        .position(|byte| *byte == b'(')
+        .unwrap_or(construct.len());
+    construct.get(1..open).unwrap_or_default()
+}
+
+/// Whether a reference construct's command accepts a list of identifiers.
+#[must_use]
+pub fn names_a_list(construct: &[u8]) -> bool {
+    let command = at_command(construct);
+    LIST_REF_COMMANDS
+        .iter()
+        .any(|known| known.as_bytes() == command)
 }
 
 /// Splits a source into text and constructs.

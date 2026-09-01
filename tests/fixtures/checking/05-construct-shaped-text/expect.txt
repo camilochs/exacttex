@@ -1,0 +1,5 @@
+transport: lowered because the table is an explicit block
+scanner: table
+constructs: one table; `@eqref(eq:x)` and `@nameref(tab:a)` are not constructs and
+  stay literal text, each reported as advisory XT2002; the address and the bare
+  `@ref` are ordinary bytes and reported as nothing

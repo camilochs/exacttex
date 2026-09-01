@@ -183,6 +183,7 @@ pub fn check_documents(
 ) -> Vec<Diagnostic> {
     let mut diagnostics = Vec::new();
     for document in documents {
+        construct_shaped_text_diagnostics(sources, document.source(), &mut diagnostics);
         document.walk(|node| {
             let (source, span, kind, malformed) = match node {
                 Node::Construct {
@@ -196,7 +197,7 @@ pub fn check_documents(
                 // reported it at its entry token, and the grammar makes that a
                 // hard error (grammar.md §inline). Dropping it here was the
                 // hole that let `@id(x` fail only at its references.
-                if malformed && let Some(entry) = inline_entry(kind) {
+                if malformed && let Some(entry) = inline_entry(sources, source, span, kind) {
                     // The half-written payload often names the thing the
                     // writer was reaching for; when that name is declared,
                     // point at the declaration so nobody has to hunt it.
@@ -381,13 +382,79 @@ fn half_written_target<'a>(
     Some((candidate.to_owned(), declaration))
 }
 
-fn inline_entry(kind: EntryToken) -> Option<&'static str> {
+/// The entry token a malformed inline construct opened with, as written.
+///
+/// A reference or citation names its own command, so the message quotes the
+/// bytes — `@Cref` when that is what never closed — rather than the family.
+fn inline_entry(
+    sources: &Sources,
+    source: SourceId,
+    span: Span,
+    kind: EntryToken,
+) -> Option<String> {
     match kind {
-        EntryToken::Id => Some("@id"),
-        EntryToken::Ref => Some("@ref"),
-        EntryToken::Cite => Some("@cite"),
-        EntryToken::Import => Some("@import"),
+        EntryToken::Id => Some("@id".to_owned()),
+        EntryToken::Import => Some("@import".to_owned()),
+        EntryToken::Ref | EntryToken::Cite => {
+            let bytes = sources.get(source)?.slice(span)?;
+            let command = crate::scanner::at_command(bytes);
+            Some(format!("@{}", String::from_utf8_lossy(command)))
+        }
         _ => None,
+    }
+}
+
+/// XT2002: an `@word(…)` in prose that no construct claims, transported as
+/// literal text. Advisory, because ordinary LaTeX is never a hard error; and
+/// printed without being asked for, because the shape is the entry token's
+/// own and the measured corpus holds no such bytes that are not a construct.
+fn construct_shaped_text_diagnostics(
+    sources: &Sources,
+    source: SourceId,
+    diagnostics: &mut Vec<Diagnostic>,
+) {
+    let Some(bytes) = sources.get(source).map(crate::source::Source::bytes) else {
+        return;
+    };
+    for span in crate::scanner::construct_shaped_text(bytes) {
+        let shape = &bytes[span.start()..span.end()];
+        let word = crate::scanner::at_command(shape);
+        let lower = word.to_ascii_lowercase();
+        let family = if lower.ends_with(b"ref") {
+            Some(("reference", crate::scanner::DEFAULT_REF_COMMANDS))
+        } else if lower.windows(4).any(|window| window == b"cite") {
+            Some(("citation", crate::scanner::DEFAULT_CITE_COMMANDS))
+        } else {
+            None
+        };
+        let shown = String::from_utf8_lossy(shape);
+        let message = match family {
+            Some((kind, commands)) => {
+                // The tables are longest-first for the scanner; a reader
+                // wants `@ref` before `@pageref`.
+                let known = commands
+                    .iter()
+                    .rev()
+                    .map(|command| format!("@{command}"))
+                    .collect::<Vec<_>>()
+                    .join(", ");
+                format!(
+                    "`{shown}` is not a construct and is typeset as literal text — the {kind} commands checked here are {known}"
+                )
+            }
+            None => format!("`{shown}` is not a construct and is typeset as literal text"),
+        };
+        diagnostics.push(Diagnostic {
+            code: "XT2002",
+            entity: EntityClass::UnknownOpen,
+            name: Some(String::from_utf8_lossy(word).into_owned()),
+            source,
+            span,
+            message,
+            related: Vec::new(),
+            severity: Severity::Advisory,
+            blame: Blame::Unresolved,
+        });
     }
 }
 
@@ -474,7 +541,7 @@ fn block_error(source: SourceId, kind: BlockKind, error: BlockError, bytes: &[u8
             (
                 key,
                 format!("field requires {expected}"),
-                name == b"width" || name == b"height",
+                matches!(name, b"width" | b"height" | b"trim"),
                 false,
             )
         }
@@ -747,6 +814,61 @@ mod tests {
                 .message
                 .contains("`sec:results` is declared here")
         );
+    }
+
+    fn document_diagnostics(source: &str) -> Vec<Diagnostic> {
+        let mut sources = Sources::new();
+        let id = sources.add("main.xtex", source.as_bytes().to_vec());
+        let document = parse(&sources, id);
+        let mut table = SymbolTable::new();
+        table.merge(&sources, &document);
+        check_documents(&sources, std::slice::from_ref(&document), &table, |_, _| {
+            true
+        })
+    }
+
+    #[test]
+    fn an_unterminated_reference_command_is_named_as_written() {
+        let found = document_diagnostics("see @Cref(sec:a\nmore");
+        assert_eq!(found.len(), 1, "{found:?}");
+        assert_eq!(found[0].code, "XT1014");
+        assert!(found[0].message.contains("`@Cref`"), "{}", found[0].message);
+    }
+
+    #[test]
+    fn a_construct_shaped_word_in_prose_is_an_advisory_naming_the_commands() {
+        let found = document_diagnostics("As @eqref(eq:x) shows, and @citeyear(k) too.");
+        assert_eq!(found.len(), 2, "{found:?}");
+        for diagnostic in &found {
+            assert_eq!(diagnostic.code, "XT2002");
+            assert_eq!(diagnostic.severity, Severity::Advisory);
+            assert_eq!(diagnostic.blame, Blame::Unresolved);
+        }
+        assert_eq!(found[0].name.as_deref(), Some("eqref"));
+        assert!(found[0].message.contains("@cref"), "{}", found[0].message);
+        assert!(found[1].message.contains("@citep"), "{}", found[1].message);
+        assert_eq!(found[0].span.start(), 3);
+        assert_eq!(found[0].span.len(), "@eqref(eq:x)".len());
+    }
+
+    #[test]
+    fn the_advisory_reaches_captions_and_revision_content() {
+        let found = document_diagnostics(
+            "\\figure(f) { caption = {see @nameref(x)} }\n@add(c) {and @vref(y)}",
+        );
+        let names: Vec<_> = found.iter().filter_map(|d| d.name.as_deref()).collect();
+        assert_eq!(names, ["nameref", "vref"], "{found:?}");
+    }
+
+    #[test]
+    fn plain_latex_at_shapes_raise_no_advisory() {
+        // The shapes grammar §3 lists as ordinary LaTeX, plus the ones a
+        // scan of prose could mistake: an address, a control symbol, a
+        // tabular column spec, a bare word, math, a comment, a code font.
+        let quiet = "mail name@example.org and \\@ifnextchar(x) and @{} and @ref alone\n\
+                     $@eqref(m)$ % @eqref(c)\n\\texttt{@eqref(t)} \\verb|@eqref(v)| @home(x)";
+        let found = document_diagnostics(quiet);
+        assert!(found.is_empty(), "{found:?}");
     }
 
     #[test]

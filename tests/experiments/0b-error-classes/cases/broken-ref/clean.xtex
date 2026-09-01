@@ -1,0 +1,5 @@
+\documentclass{article}
+\begin{document}
+\section{Intro}@id(sec:intro)
+See Section~@ref(sec:intro).
+\end{document}

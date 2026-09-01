@@ -1,11 +1,11 @@
 \documentclass{article}
 \begin{document}
-\table(fig:main) {
+\table(tab:main) {
   placement = ht
   caption = {A table}
   body = {
     \begin{tabular}{c} a \end{tabular}
   }
 }
-Table~@ref(fig:main) shows the layout.
+Table~@ref(tab:main) shows the layout.
 \end{document}

@@ -1,0 +1,1 @@
+BEFORE<@ref(sec:a)|@cref(sec:a)|@Cref(sec:a, sec:b)|@autoref(sec:a)|@pageref(sec:b)|@cref(sec:b,sec:a)>AFTER

@@ -1,9 +1,9 @@
 //! Questions other modules ask about a scanned buffer.
 
-use super::boundaries::is_escaped;
+use super::boundaries::{balanced_end, is_escaped};
 use super::regions::{Extent, command_extent};
-use super::tables::DEFINITION_COMMANDS;
-use super::{Piece, scan};
+use super::tables::{DEFINITION_COMMANDS, looks_like_a_construct_word};
+use super::{EntryToken, Piece, scan};
 use crate::source::Span;
 
 /// Regions a reader looking for `commands` may search.
@@ -66,6 +66,138 @@ pub fn readable_content(bytes: &[u8]) -> Vec<Span> {
         }
     }
     spans
+}
+
+/// The comma-separated keys in a construct payload, as byte ranges relative
+/// to the payload, untrimmed.
+///
+/// One splitter for the checker, the editor and rename, so that "which key
+/// is this" has one answer. A payload with no comma is one key; an empty
+/// payload is one empty key.
+#[must_use]
+pub fn split_keys(payload: &[u8]) -> Vec<(usize, usize)> {
+    let mut keys = Vec::new();
+    let mut start = 0usize;
+    for (at, byte) in payload.iter().enumerate() {
+        if *byte == b',' {
+            keys.push((start, at));
+            start = at + 1;
+        }
+    }
+    keys.push((start, payload.len()));
+    keys
+}
+
+/// Every `@word(…)` in prose that no construct claims and that reads like
+/// one.
+///
+/// The shape is the entry token's own — `@`, letters, `(`, a payload, `)` on
+/// one line — with a word the grammar does not know. Such bytes are
+/// transported, so `@eqref(eq:x)` reaches the PDF as literal text with exit
+/// 0; the advisory built on this is what tells the author. Only prose is
+/// searched: a comment, verbatim text, math or a command's data argument
+/// keeps its bytes, and so does an email address (`a@b(` has a letter
+/// before the `@`) or a control symbol (`\@ifnextchar(`). The prose inside
+/// a typed block's braced fields and inside revision content is searched
+/// too, because a caption is where the shape was first found in the wild.
+#[must_use]
+pub fn construct_shaped_text(bytes: &[u8]) -> Vec<Span> {
+    let mut found = Vec::new();
+    shapes_in(bytes, 0, bytes.len(), &mut found);
+    found
+}
+
+fn shapes_in(bytes: &[u8], start: usize, end: usize, found: &mut Vec<Span>) {
+    for piece in scan(&bytes[start..end]) {
+        match piece {
+            Piece::Text(text) => {
+                shapes_in_text(bytes, start + text.start(), start + text.end(), found);
+            }
+            Piece::Construct { kind, span, .. } => {
+                let at = start + span.start();
+                let close = start + span.end();
+                match kind {
+                    EntryToken::Figure | EntryToken::Table => {
+                        let (block_kind, entry) = if kind == EntryToken::Figure {
+                            (crate::blocks::BlockKind::Figure, b"\\figure(".len())
+                        } else {
+                            (crate::blocks::BlockKind::Table, b"\\table(".len())
+                        };
+                        let Ok(block) =
+                            crate::blocks::parse_block(bytes, block_kind, at, at + entry)
+                        else {
+                            continue;
+                        };
+                        for field in block.fields {
+                            if let crate::blocks::Value::Braced(value) = field.value {
+                                shapes_in(bytes, value.start() + 1, value.end() - 1, found);
+                            }
+                        }
+                    }
+                    EntryToken::Add | EntryToken::Del | EntryToken::Sub | EntryToken::Note => {
+                        // The header ends at its first `)`; the content is the
+                        // balanced group after it.
+                        let Some(header) = bytes[at..close].iter().position(|byte| *byte == b')')
+                        else {
+                            continue;
+                        };
+                        let Some(open) = bytes[at + header..close]
+                            .iter()
+                            .position(|byte| *byte == b'{')
+                        else {
+                            continue;
+                        };
+                        let open = at + header + open;
+                        if let Some(end) = balanced_end(bytes, open).filter(|end| *end <= close) {
+                            shapes_in(bytes, open + 1, end - 1, found);
+                        }
+                    }
+                    _ => {}
+                }
+            }
+            _ => {}
+        }
+    }
+}
+
+fn shapes_in_text(bytes: &[u8], start: usize, end: usize, found: &mut Vec<Span>) {
+    let mut at = start;
+    while at < end {
+        if bytes[at] != b'@' {
+            at += 1;
+            continue;
+        }
+        let before = at.checked_sub(1).map(|i| bytes[i]);
+        if before.is_some_and(|b| b == b'\\' || b == b'@' || b.is_ascii_alphanumeric()) {
+            at += 1;
+            continue;
+        }
+        let word_start = at + 1;
+        let mut word_end = word_start;
+        while word_end < end && bytes[word_end].is_ascii_alphabetic() {
+            word_end += 1;
+        }
+        if word_end == word_start || bytes.get(word_end) != Some(&b'(') {
+            at = word_end.max(at + 1);
+            continue;
+        }
+        let Some(close) = bytes[word_end..end]
+            .iter()
+            .position(|byte| matches!(byte, b')' | b'\n' | b'\r'))
+            .map(|i| word_end + i)
+            .filter(|i| bytes[*i] == b')')
+        else {
+            at = word_end;
+            continue;
+        };
+        if looks_like_a_construct_word(&bytes[word_start..word_end]) {
+            found.push(Span::new(
+                u32::try_from(at).unwrap_or(u32::MAX),
+                u32::try_from(close + 1).unwrap_or(u32::MAX),
+            ));
+        }
+        at = close + 1;
+    }
 }
 
 pub(crate) fn substitution_arrows(bytes: &[u8], start: usize, end: usize) -> usize {

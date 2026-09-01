@@ -3,7 +3,7 @@
 \section{Intro}@id(sec:intro)
 
 Como muestra @cite(knuth1984), y la Sección~@ref(sec:model),
-la figura~@ref(fig:plot) lo ilustra.
+la figura~@ref(fig:plot) lo ilustra; ver @Cref(sec:model, sec:intro).
 
 @import("sections/model.xtex")
 \include{appendix}

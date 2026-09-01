@@ -57,6 +57,13 @@ fn built_module(repo: &Path) -> Option<PathBuf> {
 }
 
 /// Runs the node driver over one project directory.
+///
+/// `out` must belong to one test. Tests run on parallel threads, and the
+/// driver truncates and rewrites every file it produces; two tests sharing
+/// a directory read each other's half-written files — the revision-views
+/// test failed about once in six full runs with an empty `original` view,
+/// and passed alone every time. One directory per test is the fix; a mutex
+/// would serialise work that has no reason to wait.
 fn run_module(repo: &Path, module: &Path, project: &Path, root: &str, out: &Path) {
     run_module_with_log(repo, module, project, root, out, None);
 }
@@ -241,7 +248,7 @@ fn editor_queries_answer_project_wide_and_identically_in_both_builds() {
         return;
     };
     let project = repo.join("tests/fixtures/wasm/project");
-    let out = repo.join("target/wasm-parity/project");
+    let out = repo.join("target/wasm-parity/editor");
     run_module(&repo, &module, &project, "main.xtex", &out);
 
     let store = memory_of(&project);
@@ -310,6 +317,32 @@ fn editor_queries_answer_project_wide_and_identically_in_both_builds() {
         "a definition in another file must say which: {wasm}"
     );
 
+    // A cleveref reference naming two identifiers: the hover and the
+    // definition are about the key under the cursor, and both builds agree.
+    let cref_at = root_text
+        .find("@Cref(sec:model, sec:intro)")
+        .expect("the cref")
+        + 7;
+    let found = xtex_core::editor::hover(&analysed.sources, document, &analysed.table, cref_at)
+        .expect("hover on the cref");
+    let mut native = String::new();
+    xtex_core::editor::hover_to_json(&found, &mut native);
+    let wasm =
+        std::fs::read_to_string(out.join("wasm.hover.cref.json")).expect("the module hovered");
+    assert_eq!(native, wasm);
+    assert!(
+        wasm.contains("@Cref(sec:model)") && wasm.contains("declared as: section"),
+        "the hover names the command written and the key under the cursor: {wasm}"
+    );
+    let (source, span) =
+        xtex_core::editor::definition_site(&analysed.sources, document, &analysed.table, cref_at)
+            .expect("definition of the cref key");
+    let mut native = String::new();
+    xtex_core::editor::definition_to_json(&analysed.sources, source, span, &mut native);
+    let wasm = std::fs::read_to_string(out.join("wasm.definition.cref.json")).expect("ran");
+    assert_eq!(native, wasm);
+    assert!(wasm.contains("\"file\":\"sections/model.xtex\""), "{wasm}");
+
     // A position inside opaque text answers nothing rather than a guess, and
     // a position past the end answers nothing rather than trusting it.
     let opaque = std::fs::read(out.join("wasm.hover.opaque.json")).expect("ran");
@@ -331,7 +364,7 @@ fn a_rename_plans_and_applies_identically_and_reports_what_it_left_alone() {
         return;
     };
     let project = repo.join("tests/fixtures/wasm/project");
-    let out = repo.join("target/wasm-parity/project");
+    let out = repo.join("target/wasm-parity/rename");
     run_module(&repo, &module, &project, "main.xtex", &out);
 
     let store = memory_of(&project);
@@ -351,8 +384,8 @@ fn a_rename_plans_and_applies_identically_and_reports_what_it_left_alone() {
     // in the imported file where the @id lives, and the \verb occurrence
     // reported untouched with a location an editor can show.
     assert!(
-        plan.edits.len() >= 2,
-        "cross-file edits are the point: {plan:?}"
+        plan.edits.len() >= 3,
+        "cross-file edits are the point, and the cref's key is one of them: {plan:?}"
     );
     assert_eq!(
         plan.untouched.len(),
@@ -475,7 +508,7 @@ fn revision_views_and_resolutions_cross_between_the_module_and_the_cli() {
         return;
     };
     let revisions = repo.join("tests/fixtures/wasm/revisions");
-    let out = repo.join("target/wasm-parity/project");
+    let out = repo.join("target/wasm-parity/revisions");
     run_module(
         &repo,
         &module,

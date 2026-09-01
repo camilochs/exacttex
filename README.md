@@ -155,8 +155,10 @@ coverage: the fraction of the document it checked. This is the analogue of `any`
 number matters less than its trend: a file that was 60% checked and is now 30% gained something the
 parser cannot model.
 
-The check that types buy, and that no LaTeX tool performs: `@ref` to a `\table(fig:main)` while your prose
-says "Figure". LaTeX compiles it and prints the wrong word. See [`docs/checking.md`](docs/checking.md).
+The check that types buy, and that no LaTeX tool performs: `@ref(fig:main)` pointing at a `\table(fig:main)`
+— the prefix demands a figure, the declaration is a table. LaTeX compiles it and prints "Table" wherever a
+`\cref` reads the counter, whatever the sentence around it says; the sentence itself is not read by any
+tool, ExactTeX included. See [`docs/checking.md`](docs/checking.md).
 
 ---
 

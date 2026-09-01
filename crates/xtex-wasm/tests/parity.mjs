@@ -139,6 +139,9 @@ writeFileSync(`${outDir}/wasm.definition.json`, call("xtex_definition", position
 writeFileSync(`${outDir}/wasm.hover.opaque.json`, call("xtex_hover", positional(rootName, rootText.indexOf("verb|sec:model") + 6, project)));
 writeFileSync(`${outDir}/wasm.hover.pastend.json`, call("xtex_hover", positional(rootName, 10_000_000, project)));
 writeFileSync(`${outDir}/wasm.hover.cite.json`, call("xtex_hover", positional(rootName, citeAt, project)));
+const crefAt = rootText.indexOf("@Cref(sec:model, sec:intro)") + 7;
+writeFileSync(`${outDir}/wasm.hover.cref.json`, call("xtex_hover", positional(rootName, crefAt, project)));
+writeFileSync(`${outDir}/wasm.definition.cref.json`, call("xtex_definition", positional(rootName, crefAt, project)));
 
 // Revision views and one accept, over the revisions fixture when present.
 const revDir = join(projectDir, "../revisions");

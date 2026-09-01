@@ -76,10 +76,12 @@ at-entry        = "@" at-keyword "("
 block-entry     = "\" block-keyword "("
 raw-entry       = "latex" ws* "{"
 
-at-keyword      = "id" | "ref" | "import"
+at-keyword      = "id" | "import"
+                | ref-command
                 | cite-command
                 | "add" | "del" | "sub" | "note"
 
+ref-command     = "ref" | "cref" | "Cref" | "autoref" | "pageref"
 cite-command    = "cite" | "citep" | "citet" | "textcite" | "parencite"
 
 block-keyword   = "figure" | "table"
@@ -128,10 +130,11 @@ Fixtures must pin these decisions:
 at-construct = id-decl | reference | citation | import
 
 id-decl      = "@id"     "(" ident ")"
-reference    = "@ref"    "(" ident ")"
+reference    = "@" ref-command  "(" ident ( "," ws* ident )* ")"
 citation     = "@" cite-command "(" bibkey ( "," ws* bibkey )* ")"
 import       = "@import" "(" string ")"
 
+ref-command  = "ref" | "cref" | "Cref" | "autoref" | "pageref"
 cite-command = "cite" | "citep" | "citet" | "textcite" | "parencite"
 
 ident        = [A-Za-z] [A-Za-z0-9_:.-]*
@@ -153,6 +156,45 @@ Section~@ref(sec:results)
 ExactTeX does not generate `Definition`, `Table`, `Section`, `Appendix`, or a nonbreaking space. Generating
 them would inject bytes absent from the source and would violate the binding erasure rule. v0.1 makes no
 exception to that rule.
+
+### References
+
+**A reference construct is a LaTeX reference command written with `@`.** The same rule as citations below,
+and `@ref` is simply its first case: ExactTeX emits the command you named, checks the identifier exactly as
+it checks `@ref`, and knows nothing about the package that defines the command.
+
+```
+@ref(sec:a)         emits  \ref{sec:a}
+@cref(sec:a)        emits  \cref{sec:a}
+@Cref(sec:a)        emits  \Cref{sec:a}
+@autoref(sec:a)     emits  \autoref{sec:a}
+@pageref(sec:a)     emits  \pageref{sec:a}
+```
+
+The kernel provides `\ref` and `\pageref`; `hyperref` provides `\autoref`; `cleveref` provides `\cref`
+and `\Cref`. Every one of them resolves against the same declarations — `@id`, a typed block, or the author's
+own `\label` — and every one carries the prefix demand of [`decisions/0003`](decisions/0003-the-prefix-is-the-demand.md):
+`@cref(fig:x)` pointing at a `\table(fig:x)` is `XT1004`, and `@autoref(fig:ghost)` is `XT1003`. Rename
+rewrites all five.
+
+`\cref` and `\Cref` accept a list, so their constructs do:
+
+```
+@cref(fig:a, tab:b)   emits  \cref{fig:a,tab:b}
+```
+
+**Each identifier in the list is checked separately**, like a citation's keys. The other three commands take
+one identifier, and their payload is one name as written: `\autoref{a,b}` is a single undefined reference
+under `hyperref` — compiled to check, not recalled — so `@autoref(a, b)` is reported as the single undeclared
+identifier `a, b`, which is what TeX sees.
+
+A word after `@` that is none of these — `@eqref(eq:x)`, `@nameref(sec:a)`, `@citeyear(k)` — is not a
+construct. The bytes are transported, which puts them into the PDF as literal text with exit 0, so the
+checker reports the shape as advisory `XT2002` ([`checking.md`](checking.md) §4) and names the commands it
+does check. The advisory covers `@`, letters, `(`, a payload and `)` on one line, only in prose, and only
+for a word that reads like a command: the reference and citation families, a construct keyword in another
+letter case, or a command the signature table knows. An address (`name@example.org`), a control symbol
+(`\@ifnextchar(`), a column specification (`@{}`) and a bare `@ref` are ordinary bytes and raise nothing.
 
 ### Citations
 
@@ -337,8 +379,8 @@ evidence from absence, and stops a passing build from silently acquiring a dupli
 
 ### Boundaries
 
-`@id`, `@ref` and `@cite` end at the first `)` after their entry token. Their identifier, bibliography key and
-field productions do not admit parentheses.
+`@id`, every reference command and every citation command end at the first `)` after their entry token.
+Their identifier and bibliography key productions do not admit parentheses.
 
 `@import` ends at the `)` immediately following its closing string quote. A `)` inside the string is data.
 
@@ -364,6 +406,9 @@ Fixtures must include:
 7. An unterminated inline construct followed by a valid construct on the next line; the second remains
    recognizable.
 8. Empty and non-ASCII identifiers, which are hard errors inside the explicit construct.
+9. Every reference command, and a `cref` list, lowering to the command named (`emission/08`).
+10. An `@word(…)` in prose that is no construct, reported as advisory `XT2002`, beside the §3 shapes that
+    are ordinary bytes and report nothing (`checking/05`).
 
 ### Bibliography discovery and citation checking
 
@@ -439,6 +484,9 @@ until one succeeds.
 | `length` | a decimal number plus `pt`, `mm`, `cm`, `in`, `em` or `ex`; **or** a TeX length such as `\linewidth`, with an optional coefficient before it | first byte outside that token |
 | `percentage` | decimal number plus `%` | byte after `%` |
 | `integer` | one or more ASCII digits | first non-digit byte |
+| `number` | a decimal number, optionally negative: `0.5`, `-90` | first byte after the digits, which must be whitespace or `}` |
+| `boolean` | `true` or `false`, unquoted | after the word, which must be followed by whitespace or `}` |
+| `trim` | four lengths separated by spaces — left, bottom, right, top — each a number with an optional unit, on one line | end of the line |
 | `bare` | bytes other than a line ending | immediately before the line ending |
 | `braced` | balanced `{ ... }` | matching `}` |
 
@@ -452,9 +500,29 @@ figure-fields:
   src       = string
   width     = length | percentage
   height    = length | percentage
+  scale     = number
+  angle     = number
+  trim      = trim
+  clip      = boolean
   caption   = braced
   placement = bare
 ```
+
+`scale`, `angle`, `trim` and `clip` are the remaining `\includegraphics` options an author writes by hand,
+and each takes the shape `graphicx` gives it, compiled to check: a number, a number, four lengths, a boolean.
+They pass through into the emitted `\includegraphics[...]` as written — `trim = 1cm 0 0.5in 2` emits
+`trim=1cm 0 0.5in 2`, `clip = true` emits `clip=true`. A bare number inside `trim` is in big points, because
+that is how `graphicx` reads one; `width = 3` stays rejected, because TeX itself rejects `width=3` with
+*Illegal unit of measure*. The asymmetry is the packages', not the grammar's.
+
+**The options are emitted in the order the fields were written.** `graphicx` applies its keys in order:
+`angle` before `width` rotates the image and then fits the result, the reverse fits and then rotates, and
+the two pictures differ. The block therefore keeps the author's order rather than imposing one — the same
+rule `placement` follows. A document that wrote `height` before `width` emits `height=…,width=…`, and a
+hand-written original is reproduced in its option order exactly when the block's fields follow it. What is
+not reproduced byte for byte is the environment around the options — `\centering`, the indentation, the
+`\label` after the caption — which is the block's own shape ([`decisions/0001`](decisions/0001-typed-emission-and-no-injection.md)).
+Property B is the guarantee: the annotated and the erased document render the same pixels.
 
 `placement` holds a float placement specifier — bytes from `h t b p !`, plus the `float` package's `H` — and
 emits verbatim inside `[ ]` after the environment header: `placement = !htbp` emits `\begin{figure}[!htbp]`.
@@ -558,6 +626,10 @@ without anyone asking whether it should hold.
 
 A control word followed by `{` is a command taking an argument, not a length, and is rejected.
 
+A `trim` value is four lengths, and a malformed one — three values, a fifth value, a unit TeX does not
+know — is `XT1007` at the field's key, as a malformed `width` is. A malformed `scale`, `angle` or `clip` is
+`XT1008`, a malformed block field of no particular length.
+
 See [`decisions/0004`](decisions/0004-lengths-and-inclusion.md).
 
 ### Package requirements
@@ -639,6 +711,9 @@ Fixtures must include:
 8. `caption = unbraced text`, `columns = 7` and `needs = booktabs`, each rejected as a malformed explicit
    block.
 9. An unmatched block opening whose boundary is end of file.
+10. `angle` before `width`, and `trim`, `clip` and `scale` passed through, emitted in field order
+    (`emission/09`); a three-length `trim` and a `clip` that is not a boolean, each rejected at its key
+    (`checking/06`).
 
 ---
 

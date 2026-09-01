@@ -94,7 +94,7 @@ pub struct Declaration {
     pub class: EntityClass,
 }
 
-/// A use of a name, by `@ref` or `@cite`.
+/// A use of a name, by a reference or citation construct.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct Reference {
     /// Which construct made the reference.
@@ -276,24 +276,40 @@ impl SymbolTable {
                     );
                 }
                 EntryToken::Ref => {
-                    let Some(text) = text_of(sources, payload) else {
-                        return;
+                    // `@cref(a, b)` names two identifiers and each is checked
+                    // on its own, like a citation's keys. The other reference
+                    // commands take one, so their whole payload is the name:
+                    // `\autoref{a,b}` is one undefined reference in LaTeX
+                    // too, and this reports it as one.
+                    let list = sources
+                        .get(node.source())
+                        .and_then(|source| source.slice(construct))
+                        .is_some_and(crate::scanner::names_a_list);
+                    let names = if list {
+                        keys_of(sources, payload)
+                    } else {
+                        text_of(sources, payload)
+                            .filter(|text| !text.is_empty())
+                            .into_iter()
+                            .collect()
                     };
-                    if text.is_empty() {
+                    if names.is_empty() {
                         self.errors.push(SymbolError::Malformed {
                             source: node.source(),
                             construct,
                         });
                         return;
                     }
-                    self.references.push((
-                        text,
-                        Reference {
-                            kind,
-                            payload,
-                            construct,
-                        },
-                    ));
+                    for name in names {
+                        self.references.push((
+                            name,
+                            Reference {
+                                kind,
+                                payload,
+                                construct,
+                            },
+                        ));
+                    }
                 }
                 _ => {}
             }
@@ -473,9 +489,9 @@ fn payload_of(
     construct: Span,
     kind: EntryToken,
 ) -> Option<Payload> {
-    // A citation names its own command, so its keyword is not fixed: the
-    // payload starts after the construct's first `(`.
-    if kind == EntryToken::Cite {
+    // A citation or reference names its own command, so its keyword is not
+    // fixed: the payload starts after the construct's first `(`.
+    if matches!(kind, EntryToken::Cite | EntryToken::Ref) {
         let bytes = sources.get(source)?.slice(construct)?;
         if !bytes.ends_with(b")") {
             return None;
@@ -493,7 +509,6 @@ fn payload_of(
 
     let keyword = match kind {
         EntryToken::Id => "@id(",
-        EntryToken::Ref => "@ref(",
         EntryToken::Import => "@import(",
         // A block declares its identifier just as `@id` does: the name between
         // its parentheses is what a reference resolves to.
@@ -684,6 +699,44 @@ mod tests {
             t.citations().map(|(n, _)| n).collect::<Vec<_>>(),
             ["a", "b", "c", "d", "e"]
         );
+    }
+
+    #[test]
+    fn every_reference_command_is_a_construct_checked_like_ref() {
+        let (_, t) = table(&[(
+            "a.xtex",
+            "@ref(a) @cref(b) @Cref(c) @autoref(d) @pageref(e) @id(a)",
+        )]);
+        let unresolved: Vec<_> = t.unresolved_references().map(|(n, _)| n).collect();
+        assert_eq!(unresolved, ["b", "c", "d", "e"]);
+    }
+
+    #[test]
+    fn a_cleveref_reference_may_name_several_identifiers() {
+        // `\cref{a,b}` is cleveref's own form, compiled to check. Each name
+        // is one reference, so one absent name is one diagnostic naming it.
+        let (_, t) = table(&[("a.xtex", "@id(a) @cref(a, b) @Cref(b,c)")]);
+        let unresolved: Vec<_> = t.unresolved_references().map(|(n, _)| n).collect();
+        assert_eq!(unresolved, ["b", "b", "c"]);
+        assert_eq!(t.reference_count("a"), 1);
+    }
+
+    #[test]
+    fn a_single_identifier_command_does_not_split_on_commas() {
+        // `\autoref{a,b}` is one undefined reference in LaTeX, measured with
+        // hyperref; reporting two would describe a document TeX never sees.
+        let (_, t) = table(&[("a.xtex", "@id(a) @id(b) @autoref(a, b)")]);
+        let unresolved: Vec<_> = t.unresolved_references().map(|(n, _)| n).collect();
+        assert_eq!(unresolved, ["a, b"]);
+    }
+
+    #[test]
+    fn a_prefix_demand_applies_to_every_reference_command() {
+        let (_, t) = table(&[(
+            "a.xtex",
+            "\\table(fig:x) { caption = {X} } @cref(fig:x) @autoref(fig:x) @pageref(fig:x)",
+        )]);
+        assert_eq!(t.inconsistent_references().count(), 3);
     }
 
     #[test]
