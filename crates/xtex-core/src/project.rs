@@ -17,6 +17,18 @@ use crate::scanner::EntryToken;
 use crate::source::{SourceId, Sources};
 use crate::symbols::{EntityClass, SymbolTable};
 
+/// Everything one project walk produces — what [`check_project`] returns
+/// plus the table and ids the record-aware variant needs.
+struct Checked {
+    sources: Sources,
+    diagnostics: Vec<Diagnostic>,
+    coverage: f64,
+    bibliography: Bibliography,
+    table: SymbolTable,
+    root_id: crate::source::SourceId,
+    ids: Vec<crate::source::SourceId>,
+}
+
 /// Checks one document root, wherever its bytes live.
 ///
 /// This is the whole pipeline behind `xtex check`, host-independent: the
@@ -32,6 +44,88 @@ pub fn check_project(
     root: &str,
     prefixes: crate::symbols::PrefixMap,
 ) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography), IoError> {
+    let checked = check_project_inner(loader, root, prefixes)?;
+    Ok((
+        checked.sources,
+        checked.diagnostics,
+        checked.coverage,
+        checked.bibliography,
+    ))
+}
+
+/// The record's half of a [`check_project_with_record`] call, all supplied
+/// by the caller: the raw record bytes, the caller's clock, the window.
+pub struct RecordInput<'a> {
+    /// The `.xtexverified` bytes, unparsed.
+    pub record: &'a [u8],
+    /// Today, RFC 3339 — the caller's clock, never this crate's.
+    pub now: &'a str,
+    /// The freshness window, in days.
+    pub max_age_days: i64,
+}
+
+/// [`check_project`], with the verification record's dated findings
+/// appended. An unreadable record is itself an advisory — never a silent
+/// skip, never a hard failure: verification is opt-in and its record must
+/// not be able to break a build by rotting.
+///
+/// # Errors
+///
+/// Exactly [`check_project`]'s: the record can add findings, never an error.
+pub fn check_project_with_record(
+    loader: &impl SourceLoader,
+    root: &str,
+    prefixes: crate::symbols::PrefixMap,
+    record: Option<RecordInput<'_>>,
+) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography), IoError> {
+    let mut checked = check_project_inner(loader, root, prefixes)?;
+    if let Some(input) = record {
+        match crate::verification::parse_record(input.record) {
+            Err(error) => checked.diagnostics.push(Diagnostic {
+                code: "XT1015",
+                entity: EntityClass::UnknownOpen,
+                name: None,
+                source: checked.root_id,
+                span: crate::source::Span::new(0, 0),
+                message: format!("the verification record is unreadable: {}", error.message),
+                related: Vec::new(),
+                severity: Severity::Advisory,
+                blame: Blame::Unresolved,
+            }),
+            Ok(parsed) => {
+                let claims = crate::claims::collect(
+                    &mut checked.sources,
+                    loader,
+                    checked.root_id,
+                    &checked.ids,
+                );
+                checked
+                    .diagnostics
+                    .extend(crate::verification::check_against_record(
+                        &crate::verification::RecordCheck {
+                            record: &parsed,
+                            claims: &claims,
+                            table: &checked.table,
+                            now: input.now,
+                            max_age_days: input.max_age_days,
+                        },
+                    ));
+            }
+        }
+    }
+    Ok((
+        checked.sources,
+        checked.diagnostics,
+        checked.coverage,
+        checked.bibliography,
+    ))
+}
+
+fn check_project_inner(
+    loader: &impl SourceLoader,
+    root: &str,
+    prefixes: crate::symbols::PrefixMap,
+) -> Result<Checked, IoError> {
     let mut sources = Sources::new();
     let root_id = loader.load(root, None, &mut sources)?;
     let mut table = SymbolTable::with_prefixes(prefixes);
@@ -128,7 +222,19 @@ pub fn check_project(
     ));
     diagnostics.extend(import_diagnostics);
     let coverage = root_coverage(&sources, &documents);
-    Ok((sources, diagnostics, coverage, bibliography))
+    let ids: Vec<_> = documents
+        .iter()
+        .map(super::document::Document::source)
+        .collect();
+    Ok(Checked {
+        sources,
+        diagnostics,
+        coverage,
+        bibliography,
+        table,
+        root_id,
+        ids,
+    })
 }
 
 fn root_coverage(sources: &Sources, documents: &[crate::document::Document]) -> f64 {

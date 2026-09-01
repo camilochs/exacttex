@@ -201,6 +201,99 @@ pub unsafe extern "C" fn xtex_check_json(pointer: *const u8, len: usize) -> *mut
     result(json.as_bytes())
 }
 
+/// The document's external claims, inventoried as `xtex claims` prints
+/// them: every declared bibliography entry with its fields, every url, doi
+/// and repository address, each with the span it was written at.
+/// Deterministic and offline, like everything on this surface.
+///
+/// # Safety
+///
+/// `pointer` must point at `len` readable bytes.
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn xtex_claims(pointer: *const u8, len: usize) -> *mut u8 {
+    let bytes = unsafe { input(pointer, len) };
+    let Some(bundle) = decode_bundle(&bytes) else {
+        return result(&[]);
+    };
+    let Ok(analysed) = xtex_core::project::analyse(&bundle.store, &bundle.root) else {
+        return result(&[]);
+    };
+    let xtex_core::project::Analysed {
+        mut sources, names, ..
+    } = analysed;
+    let ids: Vec<_> = names.iter().map(|(id, _)| *id).collect();
+    let Some(&root) = ids.first() else {
+        return result(&[]);
+    };
+    let claims = xtex_core::claims::collect(&mut sources, &bundle.store, root, &ids);
+    result(xtex_core::claims::to_json(&sources, &claims).as_bytes())
+}
+
+/// [`xtex_check_json`], with a verification record's dated findings
+/// appended. Input: `u32 now_len · now` (RFC 3339, the HOST's clock — this
+/// module deliberately cannot ask one), `u32 max_age_days`, `u32
+/// record_len · record` (the `.xtexverified` bytes; zero length = no
+/// record, plain check), then the bundle. The network never enters here:
+/// the host produced the record however it liked, and this surface only
+/// reads it.
+///
+/// # Safety
+///
+/// `pointer` must point at `len` readable bytes.
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn xtex_check_with_record(pointer: *const u8, len: usize) -> *mut u8 {
+    let bytes = unsafe { input(pointer, len) };
+    let mut at = 0usize;
+    let Some(now) = take_text(&bytes, &mut at) else {
+        return result(&[]);
+    };
+    let Some(field_end) = at.checked_add(4) else {
+        return result(&[]);
+    };
+    let Some(field) = bytes.get(at..field_end) else {
+        return result(&[]);
+    };
+    let max_age_days = i64::from(u32::from_le_bytes([field[0], field[1], field[2], field[3]]));
+    at = field_end;
+    let Some(record_end) = at.checked_add(4) else {
+        return result(&[]);
+    };
+    let Some(field) = bytes.get(at..record_end) else {
+        return result(&[]);
+    };
+    let record_len = u32::from_le_bytes([field[0], field[1], field[2], field[3]]) as usize;
+    at = record_end;
+    let Some(record) = bytes.get(at..at + record_len) else {
+        return result(&[]);
+    };
+    at += record_len;
+    let Some(bundle) = decode_bundle(&bytes[at..]) else {
+        return result(&[]);
+    };
+    let record_input = if record.is_empty() {
+        None
+    } else {
+        Some(xtex_core::project::RecordInput {
+            record,
+            now: &now,
+            max_age_days,
+        })
+    };
+    let Ok((sources, diagnostics, coverage, bibliography)) =
+        xtex_core::project::check_project_with_record(
+            &bundle.store,
+            &bundle.root,
+            xtex_core::symbols::PrefixMap::default(),
+            record_input,
+        )
+    else {
+        return result(&[]);
+    };
+    let mut json = String::new();
+    to_json(&sources, &diagnostics, coverage, &bibliography, &mut json);
+    result(json.as_bytes())
+}
+
 /// The project's identity inventory: every declaration with its class, its
 /// site, and how many references demand it. One JSON array, sorted by name —
 /// what an editor needs to draw the typed world and to say "3 references"
