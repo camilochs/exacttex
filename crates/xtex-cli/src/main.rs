@@ -216,7 +216,8 @@ fn main() -> ExitCode {
 fn print_usage() {
     eprintln!("usage: xtex <file.xtex> [--original|--final|--marked]");
     eprintln!("       xtex build <file.xtex> [--original|--final|--marked]");
-    eprintln!("       xtex check [--json] [--strict-tex] <file.xtex>");
+    eprintln!("       xtex check [--json] [--strict-tex] [--verified[=record]] <file.xtex>");
+    eprintln!("       xtex claims <file.xtex>");
     eprintln!("       xtex blame <file.xtex> <line>:<column> [message]");
     eprintln!("       xtex revise <file.xtex> (--accept ID|--reject ID|--accept-all|--prune)");
     eprintln!();
@@ -239,11 +240,32 @@ fn sole_document() -> Result<String, String> {
     Ok(document.to_string_lossy().into_owned())
 }
 
+/// A plain check, for tests that only need the recordless answer.
+#[cfg(test)]
 fn run_check(root: &str) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography), IoError> {
+    run_check_with_record(root, None, "", 0)
+}
+
+/// The check, with the verification record's findings when one rides.
+fn run_check_with_record(
+    root: &str,
+    record: Option<&[u8]>,
+    now: &str,
+    max_age_days: i64,
+) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography), IoError> {
     let loader = FileSystem {
         root: PathBuf::from("."),
     };
-    xtex_core::project::check_project(&loader, root, read_prefixes(Path::new(root)))
+    xtex_core::project::check_project_with_record(
+        &loader,
+        root,
+        read_prefixes(Path::new(root)),
+        record.map(|bytes| xtex_core::project::RecordInput {
+            record: bytes,
+            now,
+            max_age_days,
+        }),
+    )
 }
 
 /// `xtex claims <file>` — the document's external claims, inventoried as
@@ -286,19 +308,87 @@ fn claims_command(args: &[String]) -> ExitCode {
     }
 }
 
+/// Today as an RFC 3339 UTC timestamp, from the system clock — the CLI is
+/// a host, and hosts own clocks; the core never does.
+fn now_utc() -> String {
+    let seconds = std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH)
+        .map_or(0, |d| d.as_secs());
+    let days = i64::try_from(seconds / 86_400).unwrap_or(0);
+    let rem = seconds % 86_400;
+    let z = days + 719_468;
+    let era = if z >= 0 { z } else { z - 146_096 } / 146_097;
+    let doe = z - era * 146_097;
+    let yoe = (doe - doe / 1460 + doe / 36_524 - doe / 146_096) / 365;
+    let year = yoe + era * 400;
+    let doy = doe - (365 * yoe + yoe / 4 - yoe / 100);
+    let mp = (5 * doy + 2) / 153;
+    let day = doy - (153 * mp + 2) / 5 + 1;
+    let month = if mp < 10 { mp + 3 } else { mp - 9 };
+    let year = if month <= 2 { year + 1 } else { year };
+    format!(
+        "{year:04}-{month:02}-{day:02}T{:02}:{:02}:{:02}Z",
+        rem / 3600,
+        (rem % 3600) / 60,
+        rem % 60
+    )
+}
+
 fn check_command(args: &[String]) -> ExitCode {
     let json = args.iter().any(|arg| arg == "--json");
+    // --verified reads the .xtexverified record beside the root (or the
+    // given path) and appends its dated findings; without the flag the
+    // check is exactly what it always was. The record is produced by the
+    // separate xtex-verify binary — the network's only door.
+    let verified = args
+        .iter()
+        .any(|arg| arg == "--verified" || arg.starts_with("--verified="));
+    let record_path = args
+        .iter()
+        .find_map(|arg| arg.strip_prefix("--verified="))
+        .map(str::to_owned);
+    let max_age_days: i64 = args
+        .iter()
+        .find_map(|arg| arg.strip_prefix("--verify-max-age="))
+        .and_then(|v| v.strip_suffix('d'))
+        .and_then(|v| v.parse().ok())
+        .unwrap_or(30);
+    let now = args
+        .iter()
+        .find_map(|arg| arg.strip_prefix("--now="))
+        .map_or_else(now_utc, str::to_owned);
     let inputs: Vec<&str> = args
         .iter()
         .filter(|arg| !arg.starts_with("--"))
         .map(String::as_str)
         .collect();
     if inputs.len() != 1 {
-        eprintln!("usage: xtex check [--json] [--strict-tex] <file.xtex>");
+        eprintln!(
+            "usage: xtex check [--json] [--strict-tex] [--verified[=record]] [--verify-max-age=30d] <file.xtex>"
+        );
         return ExitCode::from(2);
     }
+    let record_bytes = if verified {
+        let path = record_path.unwrap_or_else(|| {
+            Path::new(inputs[0])
+                .parent()
+                .unwrap_or_else(|| Path::new("."))
+                .join(".xtexverified")
+                .display()
+                .to_string()
+        });
+        match fs::read(&path) {
+            Ok(bytes) => Some(bytes),
+            Err(error) => {
+                eprintln!("error: the record at `{path}` is unreadable: {error}");
+                return ExitCode::from(2);
+            }
+        }
+    } else {
+        None
+    };
 
-    match run_check(inputs[0]) {
+    match run_check_with_record(inputs[0], record_bytes.as_deref(), &now, max_age_days) {
         Ok((sources, diagnostics, coverage, bibliography)) => {
             if json {
                 {

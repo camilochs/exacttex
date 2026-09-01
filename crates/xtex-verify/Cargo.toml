@@ -1,0 +1,24 @@
+# Excluded from the workspace on purpose: the verifier is the ONE place
+# this project touches the network, and its dependencies must not reach
+# the compiler's lock file. Built and tested on its own, like the
+# experiments.
+[package]
+name = "xtex-verify"
+version = "0.0.0"
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/camilochs/exacttex"
+rust-version = "1.88"
+
+[workspace]
+
+[dependencies]
+xtex-core = { path = "../xtex-core" }
+ureq = "2.10"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+all = { level = "deny", priority = -1 }
+pedantic = { level = "warn", priority = -1 }

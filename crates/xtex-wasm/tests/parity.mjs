@@ -12,6 +12,11 @@ const { instance } = await WebAssembly.instantiate(readFileSync(wasmPath), {});
 const api = instance.exports;
 
 function call(name, bytes) {
+  if (typeof api[name] !== "function") {
+    // A stale cached module dies here by NAME, not as empty answers
+    // three tests later (it did, once, in CI).
+    throw new Error(`the module has no export named ${name} — stale build?`);
+  }
   const input = api.xtex_alloc(bytes.length);
   new Uint8Array(api.memory.buffer, input, bytes.length).set(bytes);
   const result = api[name](input, bytes.length);
