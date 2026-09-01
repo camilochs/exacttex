@@ -436,6 +436,82 @@ pub fn entry_span_in_bib(bytes: &[u8], key: &str) -> Option<Span> {
         .map(|(_, span)| span)
 }
 
+/// The named entry's fields, parsed: `title`, `author`, `doi`, … — names
+/// lowercased, one level of braces stripped from values. This is the
+/// document's side of a verification diff; the scan and balancing are
+/// [`scan_bib_entries`]'s, so an entry it reads is exactly an entry the
+/// checker accepts.
+#[must_use]
+pub fn entry_fields(bytes: &[u8], key: &str) -> Option<Vec<(String, String)>> {
+    let span = entry_span_in_bib(bytes, key)?;
+    // From just past the key to the entry's balanced close.
+    let mut at = span.end();
+    let mut depth = 1usize; // we are inside the entry's opener
+    let mut fields = Vec::new();
+    while at < bytes.len() && depth > 0 {
+        match bytes[at] {
+            b',' | b' ' | b'\t' | b'\n' | b'\r' => at += 1,
+            b'}' | b')' => {
+                depth -= 1;
+                at += 1;
+            }
+            _ => {
+                let name_start = at;
+                while matches!(bytes.get(at), Some(b) if b.is_ascii_alphanumeric() || *b == b'-' || *b == b'_')
+                {
+                    at += 1;
+                }
+                if at == name_start {
+                    at += 1;
+                    continue;
+                }
+                let name = String::from_utf8_lossy(&bytes[name_start..at]).to_lowercase();
+                at = skip_space(bytes, at);
+                if bytes.get(at) != Some(&b'=') {
+                    continue;
+                }
+                at = skip_space(bytes, at + 1);
+                let value = match bytes.get(at) {
+                    Some(b'{') => {
+                        let start = at + 1;
+                        let mut inner = 1usize;
+                        at += 1;
+                        while at < bytes.len() && inner > 0 {
+                            match bytes[at] {
+                                b'{' => inner += 1,
+                                b'}' => inner -= 1,
+                                _ => {}
+                            }
+                            at += 1;
+                        }
+                        String::from_utf8_lossy(&bytes[start..at.saturating_sub(1)]).into_owned()
+                    }
+                    Some(b'"') => {
+                        let start = at + 1;
+                        at += 1;
+                        while at < bytes.len() && bytes[at] != b'"' {
+                            at += 1;
+                        }
+                        let value = String::from_utf8_lossy(&bytes[start..at]).into_owned();
+                        at += 1;
+                        value
+                    }
+                    _ => {
+                        let start = at;
+                        while matches!(bytes.get(at), Some(b) if *b != b',' && *b != b'}' && *b != b')')
+                        {
+                            at += 1;
+                        }
+                        String::from_utf8_lossy(&bytes[start..at]).trim().to_owned()
+                    }
+                };
+                fields.push((name, value.trim().to_owned()));
+            }
+        }
+    }
+    Some(fields)
+}
+
 fn scan_bib_entries(bytes: &[u8]) -> Result<Vec<(String, Span)>, String> {
     let mut keys = Vec::new();
     let mut at = 0usize;

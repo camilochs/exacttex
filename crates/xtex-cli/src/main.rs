@@ -151,6 +151,9 @@ fn main() -> ExitCode {
     if first == "check" {
         return check_command(&args[1..]);
     }
+    if first == "claims" {
+        return claims_command(&args[1..]);
+    }
     if first == "compile" {
         return compile_command(&args[1..]);
     }
@@ -241,6 +244,46 @@ fn run_check(root: &str) -> Result<(Sources, Vec<Diagnostic>, f64, Bibliography)
         root: PathBuf::from("."),
     };
     xtex_core::project::check_project(&loader, root, read_prefixes(Path::new(root)))
+}
+
+/// `xtex claims <file>` — the document's external claims, inventoried as
+/// JSON: every declared bibliography entry with its fields, every url,
+/// doi and repository address, each with the span it was written at.
+/// Deterministic and offline; the verifier consumes this, the network
+/// never enters here.
+fn claims_command(args: &[String]) -> ExitCode {
+    let inputs: Vec<&str> = args
+        .iter()
+        .filter(|arg| !arg.starts_with("--"))
+        .map(String::as_str)
+        .collect();
+    if inputs.len() != 1 {
+        eprintln!("usage: xtex claims <file.xtex>");
+        return ExitCode::from(2);
+    }
+    let loader = FileSystem {
+        root: PathBuf::from("."),
+    };
+    match xtex_core::project::analyse(&loader, inputs[0]) {
+        Ok(analysed) => {
+            let xtex_core::project::Analysed {
+                mut sources, names, ..
+            } = analysed;
+            let ids: Vec<_> = names.iter().map(|(id, _)| *id).collect();
+            let root = ids.first().copied();
+            let Some(root) = root else {
+                eprintln!("error: nothing loaded");
+                return ExitCode::from(2);
+            };
+            let claims = xtex_core::claims::collect(&mut sources, &loader, root, &ids);
+            println!("{}", xtex_core::claims::to_json(&sources, &claims));
+            ExitCode::SUCCESS
+        }
+        Err(error) => {
+            eprintln!("error: {error}");
+            ExitCode::from(2)
+        }
+    }
 }
 
 fn check_command(args: &[String]) -> ExitCode {
