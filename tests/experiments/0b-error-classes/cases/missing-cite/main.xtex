@@ -1,0 +1,6 @@
+\documentclass{article}
+\begin{document}
+As shown by @cite(ghost2020).
+\bibliographystyle{plain}
+\bibliography{refs}
+\end{document}

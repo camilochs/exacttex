@@ -1,0 +1,9 @@
+\documentclass{article}
+\usepackage{graphicx}
+\begin{document}
+\figure(fig:ghost) {
+  src = "figures/ghost.pdf"
+  width = 50%
+  caption = {Ghost}
+}
+\end{document}

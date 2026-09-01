@@ -1,0 +1,11 @@
+\documentclass{article}
+\begin{document}
+\table(fig:main) {
+  placement = ht
+  caption = {A table}
+  body = {
+    \begin{tabular}{c} a \end{tabular}
+  }
+}
+Figure~@ref(fig:main) shows the layout.
+\end{document}

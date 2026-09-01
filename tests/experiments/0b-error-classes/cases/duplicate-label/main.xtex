@@ -1,0 +1,6 @@
+\documentclass{article}
+\begin{document}
+\section{One}@id(sec:x)
+\section{Two}@id(sec:x)
+See~@ref(sec:x).
+\end{document}
