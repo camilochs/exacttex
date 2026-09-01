@@ -23,6 +23,7 @@ export default defineConfig({
         { label: "The language", items: [
           { label: "Grammar", slug: "grammar" },
           { label: "Checking", slug: "checking" },
+          { label: "Verification", slug: "verification" },
           { label: "Revisions", slug: "revisions" },
         ]},
         { label: "The three doors", items: [

@@ -69,6 +69,11 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
     CLI, language server and WebAssembly build share one core, and a parity
     suite holds them byte-for-byte to the same output.
   </Card>
+  <Card title="References checked against the world" icon="open-book">
+    Bibliography entries, URLs, DOIs and repositories verified against live
+    sources — a separate step writes a dated record, and the compiler
+    replays it offline. The network never enters a compile.
+  </Card>
 </CardGrid>
 `);
 // The README's centered logo-and-badges header belongs to GitHub; the site
@@ -90,7 +95,7 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 page(join(repo, "PHILOSOPHY.md"), "philosophy.md", "Philosophy");
 page(join(repo, "ROADMAP.md"), "roadmap.md", "Roadmap");
 page(join(repo, "CONTRIBUTING.md"), "contributing.md", "Contributing");
-for (const name of ["grammar", "checking", "revisions", "diagnostics", "wasm", "lsp", "testing", "references"]) {
+for (const name of ["grammar", "checking", "verification", "revisions", "diagnostics", "wasm", "lsp", "testing", "references"]) {
   page(join(repo, "docs", `${name}.md`), `${name}.md`);
 }
 let order = 1;
