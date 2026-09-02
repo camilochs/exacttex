@@ -357,6 +357,11 @@ fn editor_queries_answer_project_wide_and_identically_in_both_builds() {
         wasm_inventory.contains("\"name\":\"fig:body\",\"class\":\"figure\""),
         "the float's class must reach the inventory: {wasm_inventory}"
     );
+    // A `sidewaystable` is a float too (#163), in both builds.
+    assert!(
+        wasm_inventory.contains("\"name\":\"tab:rotated\",\"class\":\"table\""),
+        "the rotated float's class must reach the inventory: {wasm_inventory}"
+    );
 
     // Completions, which must include identifiers from every file.
     let items =

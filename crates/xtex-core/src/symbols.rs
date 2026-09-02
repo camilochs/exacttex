@@ -649,6 +649,11 @@ fn inside_display_math(bytes: &[u8], at: usize) -> bool {
 /// declared that way was never `XT1004` (issue #161). Nested `subfigure`,
 /// `minipage` and `tabular` bodies belong to the float around them; a
 /// display body inside a float keeps its own class.
+///
+/// The rotated (`rotating`), wrapped (`wrapfig`) and long (`longtable`)
+/// floats are floats in practice and carry the class of the counter they
+/// step; five census identifiers stayed unknown-open with only the three
+/// standard names listed (issue #163).
 const FLOAT_ENVIRONMENTS: &[(&str, EntityClass)] = &[
     ("figure", EntityClass::Figure),
     ("figure*", EntityClass::Figure),
@@ -656,6 +661,14 @@ const FLOAT_ENVIRONMENTS: &[(&str, EntityClass)] = &[
     ("table*", EntityClass::Table),
     ("algorithm", EntityClass::Algorithm),
     ("algorithm*", EntityClass::Algorithm),
+    ("sidewaysfigure", EntityClass::Figure),
+    ("sidewaysfigure*", EntityClass::Figure),
+    ("sidewaystable", EntityClass::Table),
+    ("sidewaystable*", EntityClass::Table),
+    ("wrapfigure", EntityClass::Figure),
+    ("wraptable", EntityClass::Table),
+    ("longtable", EntityClass::Table),
+    ("longtable*", EntityClass::Table),
 ];
 
 /// Every closed float in `bytes`, with the class it gives and its span.
@@ -685,9 +698,9 @@ fn enclosing_float(floats: &[(EntityClass, Span)], at: usize) -> Option<EntityCl
 ///
 /// In order: a display-math body around it; the construct it attaches
 /// backwards to within the bounded whitespace of `docs/grammar.md` §4 — a
-/// sectioning command, a closed display, an environment header; then the
-/// float whose body holds it. An `@id` on nothing the compiler models is
-/// unknown-open.
+/// sectioning command, a caption written by hand, a closed display, an
+/// environment header; then the float whose body holds it. An `@id` on
+/// nothing the compiler models is unknown-open.
 fn attached_class(
     sources: &Sources,
     source: SourceId,
@@ -739,6 +752,20 @@ fn header_class(bytes: &[u8], at: usize, in_appendix: bool) -> Option<EntityClas
             });
         }
     }
+    // `\captionof{figure}{…}` steps the figure counter wherever it is
+    // written, so the kind in its first argument is the class, and the
+    // construct attaches to the second argument as it does to a section
+    // title. A figure set in a `minipage` or `center` with no float around
+    // it is classed by this rule alone.
+    for (kind, class) in [
+        ("figure", EntityClass::Figure),
+        ("table", EntityClass::Table),
+    ] {
+        if last_command_with_balanced_argument(before, format!("\\captionof{{{kind}}}").as_bytes())
+        {
+            return Some(class);
+        }
+    }
     for (environment, class) in [
         ("algorithm", EntityClass::Algorithm),
         ("figure", EntityClass::Figure),
@@ -758,12 +785,66 @@ fn header_class(bytes: &[u8], at: usize, in_appendix: bool) -> Option<EntityClas
     None
 }
 
+/// Whether `bytes` ends with `command` followed by one balanced braced
+/// argument.
+///
+/// The argument's `{` is found by walking back from the end over the
+/// groups inside it, so a title or caption holding `\textbf{…}`,
+/// `\cite{…}` or `$x^{2}$` attaches; the last `{` in the prefix, which is
+/// what was read before, is that inner group's. The forward scan then
+/// confirms the group, with its own rule for `%`. The last `{` stays as
+/// the second reading, so that nothing that attached before stops
+/// attaching: it is what reaches a command on a line that a `%` opens.
 fn last_command_with_balanced_argument(bytes: &[u8], command: &[u8]) -> bool {
-    let Some(open) = bytes.iter().rposition(|byte| *byte == b'{') else {
-        return false;
+    let attaches = |open: usize| {
+        bytes[..open].ends_with(command)
+            && crate::scanner::balanced_end(bytes, open) == Some(bytes.len())
     };
-    bytes[..open].ends_with(command)
-        && crate::scanner::balanced_end(bytes, open) == Some(bytes.len())
+    argument_opening(bytes).is_some_and(attaches)
+        || bytes
+            .iter()
+            .rposition(|byte| *byte == b'{')
+            .is_some_and(attaches)
+}
+
+/// The `{` opening the braced group `bytes` ends with, if it ends with one.
+///
+/// Walked back one line at a time, and on each line only the part before
+/// an unescaped `%` counts, since the forward scan that confirms the group
+/// drops a comment too; an escaped brace is text.
+fn argument_opening(bytes: &[u8]) -> Option<usize> {
+    let mut depth = 0usize;
+    let mut end = bytes.len();
+    loop {
+        let start = bytes[..end]
+            .iter()
+            .rposition(|byte| *byte == b'\n')
+            .map_or(0, |at| at + 1);
+        let live = bytes[start..end]
+            .iter()
+            .enumerate()
+            .position(|(offset, byte)| {
+                *byte == b'%' && !crate::scanner::is_escaped(bytes, start + offset)
+            })
+            .map_or(end, |offset| start + offset);
+        for at in (start..live).rev() {
+            match bytes[at] {
+                b'}' if !crate::scanner::is_escaped(bytes, at) => depth += 1,
+                b'{' if !crate::scanner::is_escaped(bytes, at) => {
+                    depth = depth.checked_sub(1)?;
+                    if depth == 0 {
+                        return Some(at);
+                    }
+                }
+                _ if depth == 0 => return None,
+                _ => {}
+            }
+        }
+        if start == 0 || depth == 0 {
+            return None;
+        }
+        end = start - 1;
+    }
 }
 
 /// The span between `(` and `)` of a construct covering `construct`.
@@ -1209,6 +1290,124 @@ mod tests {
             "\\begin{figure}\n\\begin{lstlisting}\n@id(x)\n\\end{lstlisting}\n\\end{figure}",
         )]);
         assert!(t.declaration("x").is_none());
+    }
+
+    #[test]
+    fn the_rotated_wrapped_and_long_floats_and_a_caption_by_hand_class_an_id() {
+        // Five census identifiers stayed unknown-open with only `figure`,
+        // `table` and `algorithm` listed: their float is one a package
+        // adds, or their caption is `\captionof` (issue #163).
+        for (text, class) in [
+            (
+                "\\begin{sidewaysfigure}\n\\includegraphics{y.png}\n\\caption{A}@id(x)\n\\end{sidewaysfigure}",
+                EntityClass::Figure,
+            ),
+            (
+                "\\begin{sidewaysfigure*}\n\\caption{A}\n@id(x)\n\\end{sidewaysfigure*}",
+                EntityClass::Figure,
+            ),
+            (
+                "\\begin{sidewaystable}\n\\caption{A}@id(x)\n\\begin{tabular}{cc}\na & b\n\\end{tabular}\n\\end{sidewaystable}",
+                EntityClass::Table,
+            ),
+            (
+                "\\begin{sidewaystable*}\n\\caption{A}@id(x)\n\\end{sidewaystable*}",
+                EntityClass::Table,
+            ),
+            (
+                "\\begin{wrapfigure}{r}{0.5\\textwidth}\n\\includegraphics{y.png}\n\\caption{A}@id(x)\n\\end{wrapfigure}",
+                EntityClass::Figure,
+            ),
+            (
+                "\\begin{wraptable}{l}{0.4\\textwidth}\n\\caption{A}@id(x)\n\\end{wraptable}",
+                EntityClass::Table,
+            ),
+            (
+                "\\begin{longtable}{cc}\n\\caption{A}@id(x) \\\\\na & b \\\\\n\\end{longtable}",
+                EntityClass::Table,
+            ),
+            (
+                "\\begin{longtable*}{cc}\n\\caption{A}@id(x) \\\\\n\\end{longtable*}",
+                EntityClass::Table,
+            ),
+            // The caption written by hand attaches as a section title does:
+            // right after it, or on the next line.
+            (
+                "\\begin{minipage}{\\linewidth}\n\\includegraphics{y.png}\n\\captionof{figure}{A}@id(x)\n\\end{minipage}",
+                EntityClass::Figure,
+            ),
+            (
+                "\\begin{center}\n\\captionof{table}{A}\n@id(x)\n\\end{center}",
+                EntityClass::Table,
+            ),
+            // Its kind is the class even inside a float of the other kind,
+            // as the header rules keep their precedence over the body.
+            (
+                "\\begin{figure}\n\\captionof{table}{A}@id(x)\n\\end{figure}",
+                EntityClass::Table,
+            ),
+            // The header slot of a package float.
+            (
+                "\\begin{sidewaystable}@id(x)\n\\caption{A}\n\\end{sidewaystable}",
+                EntityClass::Table,
+            ),
+        ] {
+            let (_, t) = table(&[("a.xtex", text)]);
+            assert_eq!(t.declaration("x").map(|d| d.class), Some(class), "{text}");
+        }
+        // Prose between two package floats, and a `\captionof` two blank
+        // lines back, class nothing.
+        for text in [
+            "\\begin{wrapfigure}{r}{1in}\\caption{A}\\end{wrapfigure}\n@id(x)\n\\begin{longtable}{c}\\caption{B}\\end{longtable}",
+            "\\captionof{figure}{A}\n\n\n@id(x)",
+        ] {
+            let (_, t) = table(&[("a.xtex", text)]);
+            assert_eq!(
+                t.declaration("x").map(|d| d.class),
+                Some(EntityClass::UnknownOpen),
+                "{text}"
+            );
+        }
+    }
+
+    #[test]
+    fn an_argument_with_a_braced_group_inside_still_attaches() {
+        // The last `{` in the prefix was taken as the argument's, so a title
+        // or caption holding `\textbf{…}` or `\cite{…}` never attached.
+        for (text, class) in [
+            ("\\section{A \\textbf{b}}@id(x)", EntityClass::Section),
+            (
+                "\\subsection{Growth as $n^{2}$ and \\emph{more}}\n@id(x)",
+                EntityClass::Section,
+            ),
+            (
+                "\\captionof{figure}{A \\cite{k} figure}@id(x)",
+                EntityClass::Figure,
+            ),
+            // An escaped brace is text, not a group, and a brace inside a
+            // comment is not one either.
+            ("\\section{A \\} b}@id(x)", EntityClass::Section),
+            ("\\section{A % }\nB}@id(x)", EntityClass::Section),
+            ("\\section{A \\% b}@id(x)", EntityClass::Section),
+        ] {
+            let (_, t) = table(&[("a.xtex", text)]);
+            assert_eq!(t.declaration("x").map(|d| d.class), Some(class), "{text}");
+        }
+        // Braces that do not balance attach nothing. (An unclosed group
+        // runs to the line's end and takes the `@id` with it before this
+        // rule is reached, so the unbalanced case here is a stray `}`.)
+        for text in [
+            "\\section{A}}@id(x)",
+            "\\captionof{figure}{A} b}@id(x)",
+            "\\section{A} % }\n@id(x)",
+        ] {
+            let (_, t) = table(&[("a.xtex", text)]);
+            assert_eq!(
+                t.declaration("x").map(|d| d.class),
+                Some(EntityClass::UnknownOpen),
+                "{text}"
+            );
+        }
     }
 
     #[test]

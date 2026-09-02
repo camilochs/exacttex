@@ -390,6 +390,14 @@ floats, or inside a float whose `\end` the scanner never read, is unknown-open; 
 inside a float is not live text. The environment is delimited by the scanner's own `\begin` and `\end`, so
 one inside a comment or a listing opens nothing. Fixture `checking/10`.
 
+**The floats packages add are floats.** The same body rule reads `sidewaysfigure` and `sidewaystable`
+(`rotating`, starred or not) and `wrapfigure` and `wraptable` (`wrapfig`) as `Figure` and `Table`, and
+`longtable` (starred or not) as `Table`; nesting is as above, the enclosing float wins. **A caption written
+by hand declares.** `@id` attached to `\captionof{figure}{…}` declares `Figure` and to `\captionof{table}{…}`
+declares `Table` — the attachment is the sectioning rule's, read on the second argument, with the class
+taken from the first — so a figure set in a `minipage` or `center` with no float around it is classed, and
+a `\captionof` inside a float keeps its own kind. Fixture `checking/11`.
+
 Before checking each root builds a **label inventory**. `\label` is a built-in known command with signature
 `m`, so its mandatory argument is selectable under §8 even though its bytes are otherwise opaque. A label
 enters the inventory only when it is tokenized as `\label` under default category codes, occurs outside every
@@ -462,6 +470,10 @@ Fixtures must include:
     and a `subfigure` inside a float, at the end of a `figure*`, right after `\begin{table}`, in prose
     between two floats, and inside a `lstlisting`, each with a reference that reports its class or its
     absence (`checking/10`).
+13. `@id` after the caption of a `sidewaysfigure`, a `sidewaysfigure*`, a `sidewaystable`, a
+    `sidewaystable*`, a `wrapfigure`, a `wraptable`, a `longtable` and a `longtable*`, after
+    `\captionof{figure}` inside a `minipage` and `\captionof{table}` inside a `center`, and in prose between
+    two of them, each with a reference that reports its class or its absence (`checking/11`).
 
 ### Bibliography discovery and citation checking
 
