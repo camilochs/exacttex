@@ -1,0 +1,10 @@
+XT1004|figure|fig:turned|1009|10|reference `fig:turned` requires figure, but its target is table
+XT1020|table|fig:rot|960|5|prose says `Table` but `fig:rot` is a figure
+XT1020|table|fig:rotwide|980|5|prose says `Table` but `fig:rotwide` is a figure
+XT1020|figure|tab:turnedwide|1021|6|prose says `Figure` but `tab:turnedwide` is a table
+XT1020|table|fig:wrap|1049|5|prose says `Table` but `fig:wrap` is a figure
+XT1020|figure|tab:wrap|1070|6|prose says `Figure` but `tab:wrap` is a table
+XT1020|figure|tab:long|1092|6|prose says `Figure` but `tab:long` is a table
+XT1020|figure|tab:longwide|1114|6|prose says `Figure` but `tab:longwide` is a table
+XT1020|table|fig:hand|1140|5|prose says `Table` but `fig:hand` is a figure
+XT1020|figure|tab:hand|1161|6|prose says `Figure` but `tab:hand` is a table

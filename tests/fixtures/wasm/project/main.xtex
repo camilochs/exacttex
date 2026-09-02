@@ -22,5 +22,9 @@ El literal \verb|sec:model| queda como transporte.
   \caption{Un pie seguido de su identificador.}@id(fig:body)
 \end{figure}
 
+\begin{sidewaystable}
+  \caption{Una tabla girada.}@id(tab:rotated)
+\end{sidewaystable}
+
 \bibliography{refs}
 \end{document}

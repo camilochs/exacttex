@@ -1,0 +1,42 @@
+\begin{sidewaysfigure}
+\includegraphics{a.png}
+\caption{Rotated}@id(fig:rot)
+\end{sidewaysfigure}
+\begin{sidewaysfigure*}
+\caption{Rotated wide}@id(fig:rotwide)
+\end{sidewaysfigure*}
+\begin{sidewaystable}
+\caption{Turned}@id(fig:turned)
+\begin{tabular}{cc}
+a & b
+\end{tabular}
+\end{sidewaystable}
+\begin{sidewaystable*}
+\caption{Turned wide}@id(tab:turnedwide)
+\end{sidewaystable*}
+\begin{wrapfigure}{r}{0.5\textwidth}
+\includegraphics{b.png}
+\caption{Wrapped}@id(fig:wrap)
+\end{wrapfigure}
+\begin{wraptable}{l}{0.4\textwidth}
+\caption{Wrapped table}@id(tab:wrap)
+\end{wraptable}
+\begin{longtable}{cc}
+\caption{Long}@id(tab:long) \\
+a & b \\
+\end{longtable}
+\begin{longtable*}{cc}
+\caption{Long wide}@id(tab:longwide) \\
+\end{longtable*}
+\begin{minipage}{\linewidth}
+\includegraphics{c.png}
+\captionof{figure}{By hand}@id(fig:hand)
+\end{minipage}
+\begin{center}
+\captionof{table}{By hand}
+@id(tab:hand)
+\end{center}
+Prose between two of them. @id(fig:between)
+Table~@ref(fig:rot) Table~@ref(fig:rotwide) @ref(fig:turned) Figure~@ref(tab:turnedwide)
+Table~@ref(fig:wrap) Figure~@ref(tab:wrap) Figure~@ref(tab:long) Figure~@ref(tab:longwide)
+Table~@ref(fig:hand) Figure~@ref(tab:hand) Table~@ref(fig:between)

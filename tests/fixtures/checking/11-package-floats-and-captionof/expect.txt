@@ -1,0 +1,11 @@
+transport: identical
+scanner: id id id id id id id id id id id ref ref ref ref ref ref ref ref ref ref ref
+constructs: the floats packages add class an `@id` inside them as the
+  standard three do — sidewaysfigure and sidewaystable (starred or not)
+  from rotating, wrapfigure and wraptable from wrapfig, longtable (starred
+  or not) — and a caption written by hand attaches: `\captionof{figure}`
+  in a minipage declares a figure, `\captionof{table}` in a center a
+  table. So the word Table before a rotated, wrapped or hand-captioned
+  figure and Figure before a turned, wrapped, long or hand-captioned table
+  are XT1020, and `fig:turned` on a sidewaystable is XT1004. `fig:between`
+  in prose stays unknown-open and is silent. Issue #163.
