@@ -129,6 +129,9 @@ Every entity is either a class the compiler knows or `?O`, the **unknown open** 
 | `Citation` | `@cite`, checked against the bibliography rather than against identifiers |
 | `?O` | everything else |
 
+`xtex inventory paper.xtex` prints that table for your own document: one line per identifier, with its
+class, how many references demand it, and where it was declared.
+
 *Open* is the load-bearing word. `?` in a gradual type system means "unknown among a fixed set of types".
 LaTeX has no fixed set — any package may define new constructors at any time — so the unknown here is
 unbounded. The term is from Malewski, Greenberg and Tanter, *Gradually Structured Data* (OOPSLA 2021).

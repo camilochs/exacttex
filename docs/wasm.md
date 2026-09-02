@@ -82,7 +82,7 @@ file_count × ( u32 name_len   name (UTF-8)   u32 data_len   data )
 | `xtex_rename_apply(ptr, len)` | `from`, `to`, `target`, then a bundle | the target file's rewritten bytes |
 | `xtex_hover(ptr, len)` | `target`, `u32 offset`, then a bundle | hover text |
 | `xtex_completions(ptr, len)` | `target`, `u32 offset`, then a bundle | completion items |
-| `xtex_inventory(ptr, len)` | a bundle | every declaration — name, class, declaration site, reference count — sorted by name |
+| `xtex_inventory(ptr, len)` | a bundle | every declaration — name, class, declaration site, reference count — sorted by name; the JSON `xtex inventory --json` prints |
 | `xtex_definition(ptr, len)` | `target`, `u32 offset`, then a bundle | the declaration, file included — for a citation, the key's own line in the declared `.bib` |
 | `xtex_view(ptr, len)` | `view` (`original`/`final`/`marked`), then a bundle | the root under that view |
 | `xtex_revise(ptr, len)` | `action`, `id`, `by`, `at`, `sidecar`, then a bundle | the rewritten root, then the updated sidecar, both length-prefixed |

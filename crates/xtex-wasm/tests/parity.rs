@@ -8,14 +8,16 @@
 //! as a one-entry bundle, because a single file is a small project and not a
 //! special case. The multi-file case is a project with an `@import`, an
 //! author's own `\include`, a bibliography and a figure asset, and its check
-//! output is compared against **the CLI binary run on the same project on
-//! disk**, which is the strongest form of the claim: two hosts, one answer.
+//! output and its inventory are compared against **the CLI binary run on the
+//! same project on disk**, which is the strongest form of the claim: two
+//! hosts, one answer.
 //!
 //! The test is skipped, loudly, when the wasm target or Node are absent. A
 //! silently skipped test is worse than an absent one.
 
 use std::path::{Path, PathBuf};
 use std::process::Command;
+use std::sync::Mutex;
 
 fn repo() -> PathBuf {
     Path::new(env!("CARGO_MANIFEST_DIR"))
@@ -90,6 +92,27 @@ fn run_module_with_log(
     }
     let ran = command.status().expect("node runs");
     assert!(ran.success(), "the module did not run");
+}
+
+/// Runs the CLI over a project directory, one call at a time.
+///
+/// `cargo run` builds the binary and then replaces itself with it, and four
+/// tests here want it at once. Two overlapping calls left a process wedged
+/// inside the dynamic loader for as long as the run lasted, and an earlier
+/// overlap exited non-zero with nothing on stderr — a failure that says
+/// nothing about the compiler. The lock costs a few hundred milliseconds
+/// and closes the window; the tests themselves stay parallel.
+fn run_cli(project: &Path, args: &[&str]) -> std::process::Output {
+    static ONE_AT_A_TIME: Mutex<()> = Mutex::new(());
+    let _held = ONE_AT_A_TIME
+        .lock()
+        .unwrap_or_else(std::sync::PoisonError::into_inner);
+    Command::new(env!("CARGO"))
+        .args(["run", "--quiet", "-p", "xtex-cli", "--"])
+        .args(args)
+        .current_dir(project)
+        .output()
+        .expect("the CLI runs")
 }
 
 /// A `Memory` loader holding every file under `dir`, under `/`-relative names.
@@ -188,20 +211,7 @@ fn a_multi_file_bundle_equals_the_cli_run_on_the_same_project_on_disk() {
     run_module(&repo, &module, &project, "main.xtex", &out);
 
     // The CLI, on the same project, from disk. Two hosts, one answer.
-    let cli = Command::new(env!("CARGO"))
-        .args([
-            "run",
-            "--quiet",
-            "-p",
-            "xtex-cli",
-            "--",
-            "check",
-            "--json",
-            "main.xtex",
-        ])
-        .current_dir(&project)
-        .output()
-        .expect("the CLI runs");
+    let cli = run_cli(&project, &["check", "--json", "main.xtex"]);
     let wasm_json = std::fs::read(out.join("wasm.json")).expect("the module checked");
     // The CLI prints a line; the module returns bytes. The newline is the
     // terminal's convention, not part of the answer.
@@ -224,9 +234,58 @@ fn a_multi_file_bundle_equals_the_cli_run_on_the_same_project_on_disk() {
         "the project fixture must check clean, or parity proves less than it claims: {json}"
     );
 
+    // The inventory, the same way: the terminal, the library and the module
+    // on one project. A census a reader can reproduce from the released
+    // binary is the point of the command (#169), and it is worth nothing if
+    // the three disagree about what the document declares.
+    let cli_inventory = run_cli(&project, &["inventory", "--json", "main.xtex"]);
+    assert!(
+        cli_inventory.status.success(),
+        "{}",
+        String::from_utf8_lossy(&cli_inventory.stderr)
+    );
+    let wasm_inventory =
+        std::fs::read_to_string(out.join("wasm.inventory.json")).expect("the module inventoried");
+    assert_eq!(
+        String::from_utf8_lossy(&cli_inventory.stdout),
+        format!("{wasm_inventory}\n"),
+        "the CLI on disk and the module on a bundle disagree about one inventory"
+    );
+
+    let store = memory_of(&project);
+    let analysed = xtex_core::project::analyse(&store, "main.xtex").expect("loads");
+    let mut native_inventory = String::new();
+    xtex_core::editor::inventory_to_json(&analysed.sources, &analysed.table, &mut native_inventory);
+    assert_eq!(
+        native_inventory, wasm_inventory,
+        "the native library and the module disagree about one inventory"
+    );
+    // Three identical answers prove nothing if all three stopped at the root.
+    // The census is pinned to the fixture's declarations, so a traversal that
+    // lost the imported file, the author's `\include`, a class or a count
+    // fails here rather than agreeing wrongly three ways.
+    assert_eq!(
+        native_inventory,
+        concat!(
+            "[",
+            "{\"name\":\"fig:body\",\"class\":\"figure\",\"references\":0,",
+            "\"span\":{\"file\":\"main.xtex\",\"offset\":539,\"length\":8,\"line\":22,\"column\":52}},",
+            "{\"name\":\"fig:plot\",\"class\":\"figure\",\"references\":1,",
+            "\"span\":{\"file\":\"main.xtex\",\"offset\":264,\"length\":8,\"line\":11,\"column\":9}},",
+            "{\"name\":\"sec:deeper\",\"class\":\"section\",\"references\":0,",
+            "\"span\":{\"file\":\"sections/deeper.xtex\",\"offset\":23,\"length\":10,\"line\":1,\"column\":24}},",
+            "{\"name\":\"sec:intro\",\"class\":\"section\",\"references\":2,",
+            "\"span\":{\"file\":\"main.xtex\",\"offset\":60,\"length\":9,\"line\":3,\"column\":20}},",
+            "{\"name\":\"sec:model\",\"class\":\"section\",\"references\":2,",
+            "\"span\":{\"file\":\"sections/model.xtex\",\"offset\":19,\"length\":9,\"line\":1,\"column\":20}},",
+            "{\"name\":\"tab:rotated\",\"class\":\"table\",\"references\":0,",
+            "\"span\":{\"file\":\"main.xtex\",\"offset\":618,\"length\":11,\"line\":26,\"column\":34}}",
+            "]"
+        )
+    );
+
     // Emission of the root, against the native library over the same bundle
     // contents.
-    let store = memory_of(&project);
     let mut sources = xtex_core::source::Sources::new();
     let id =
         xtex_core::io::SourceLoader::load(&store, "main.xtex", None, &mut sources).expect("loads");
@@ -263,19 +322,7 @@ fn a_nested_import_emits_the_same_root_relative_input_from_the_cli_and_the_modul
         std::fs::remove_dir_all(&scratch).expect("a fresh scratch copy");
     }
     copy_tree(&project, &scratch);
-    let built = Command::new(env!("CARGO"))
-        .args([
-            "run",
-            "--quiet",
-            "-p",
-            "xtex-cli",
-            "--",
-            "build",
-            "main.xtex",
-        ])
-        .current_dir(&scratch)
-        .output()
-        .expect("the CLI runs");
+    let built = run_cli(&scratch, &["build", "main.xtex"]);
     assert!(
         built.status.success(),
         "{}",
@@ -733,13 +780,7 @@ fn adopt_converts_identically_in_the_module_and_the_cli_and_writes_only_what_pas
     }
     copy_tree(&fixture, &scratch);
     std::fs::remove_dir_all(scratch.join("expect")).expect("the expectations are not input");
-    let cli = Command::new(env!("CARGO"))
-        .args([
-            "run", "--quiet", "-p", "xtex-cli", "--", "adopt", "--json", "main.tex",
-        ])
-        .current_dir(&scratch)
-        .output()
-        .expect("the CLI runs");
+    let cli = run_cli(&scratch, &["adopt", "--json", "main.tex"]);
     assert!(
         cli.status.success(),
         "{}",

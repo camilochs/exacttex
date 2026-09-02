@@ -163,6 +163,9 @@ fn main() -> ExitCode {
     if first == "confidence" {
         return confidence_command(&args[1..]);
     }
+    if first == "inventory" {
+        return inventory_command(&args[1..]);
+    }
     if first == "rename" {
         return rename_command(&args[1..]);
     }
@@ -222,6 +225,7 @@ fn print_usage() {
     eprintln!("       xtex check [--json] [--strict-tex] [--verified[=record]] <file.xtex>");
     eprintln!("       xtex adopt [--in-place] [--json] <file.tex>");
     eprintln!("       xtex claims <file.xtex>");
+    eprintln!("       xtex inventory [--json] <file.xtex>");
     eprintln!("       xtex blame <file.xtex> <line>:<column> [message]");
     eprintln!("       xtex revise <file.xtex> (--accept ID|--reject ID|--accept-all|--prune)");
     eprintln!();
@@ -310,6 +314,105 @@ fn claims_command(args: &[String]) -> ExitCode {
             ExitCode::from(2)
         }
     }
+}
+
+/// `xtex inventory [--json] <root.xtex>` — what the document declares.
+///
+/// The same core call the WebAssembly export makes — `analyse` over the root
+/// and its imports, then the shared renderer for `--json` — so the terminal
+/// and the browser cannot disagree about one project. The plain form is the
+/// same rows laid out for a person to read.
+///
+/// Listing is not checking, so a document whose references do not resolve
+/// still exits zero here; `xtex check` is what owns the exit code.
+fn inventory_command(args: &[String]) -> ExitCode {
+    let json = args.iter().any(|arg| arg == "--json");
+    if let Some(option) = args
+        .iter()
+        .find(|arg| arg.starts_with("--") && *arg != "--json")
+    {
+        eprintln!("error: unknown option {option}");
+        return ExitCode::from(2);
+    }
+    let inputs: Vec<&str> = args
+        .iter()
+        .filter(|arg| !arg.starts_with("--"))
+        .map(String::as_str)
+        .collect();
+    let [input] = inputs[..] else {
+        eprintln!("usage: xtex inventory [--json] <file.xtex>");
+        return ExitCode::from(2);
+    };
+    let loader = FileSystem {
+        root: PathBuf::from("."),
+    };
+    let analysed = match xtex_core::project::analyse(&loader, input) {
+        Ok(analysed) => analysed,
+        Err(error) => {
+            eprintln!("error: {error}");
+            return ExitCode::from(2);
+        }
+    };
+    if json {
+        // One renderer, shared with the WebAssembly build, so the two
+        // cannot drift.
+        let mut rendered = String::new();
+        xtex_core::editor::inventory_to_json(&analysed.sources, &analysed.table, &mut rendered);
+        println!("{rendered}");
+        return ExitCode::SUCCESS;
+    }
+    print_inventory(&analysed);
+    ExitCode::SUCCESS
+}
+
+/// One line per declared entity, in the order the JSON lists them.
+///
+/// Names and classes are padded so the reference counts and the sites line
+/// up down the page: a census is read by scanning a column, not a row.
+fn print_inventory(analysed: &xtex_core::project::Analysed) {
+    let rows: Vec<(&str, &'static str, usize, String)> = analysed
+        .table
+        .declarations()
+        .map(|(name, declaration)| {
+            let (file, line, column) = location(
+                &analysed.sources,
+                declaration.payload.source,
+                declaration.payload.span,
+            );
+            (
+                name,
+                declaration.class.name(),
+                analysed.table.reference_count(name),
+                format!("{file}:{line}:{column}"),
+            )
+        })
+        .collect();
+    if rows.is_empty() {
+        println!("this document declares no entities");
+        return;
+    }
+    let counted: Vec<String> = rows
+        .iter()
+        .map(|(_, _, references, _)| {
+            if *references == 1 {
+                "1 reference".to_owned()
+            } else {
+                format!("{references} references")
+            }
+        })
+        .collect();
+    let names = width(rows.iter().map(|row| row.0));
+    let classes = width(rows.iter().map(|row| row.1));
+    let uses = width(counted.iter().map(String::as_str));
+    for ((name, class, _, at), count) in rows.iter().zip(&counted) {
+        println!("{name:names$}  {class:classes$}  {count:uses$}  {at}");
+    }
+}
+
+/// Characters, not bytes: a column padded by byte length is ragged wherever
+/// a name is not ASCII.
+fn width<'a>(cells: impl Iterator<Item = &'a str>) -> usize {
+    cells.map(|cell| cell.chars().count()).max().unwrap_or(0)
 }
 
 /// Today as an RFC 3339 UTC timestamp, from the system clock — the CLI is
