@@ -785,12 +785,66 @@ fn header_class(bytes: &[u8], at: usize, in_appendix: bool) -> Option<EntityClas
     None
 }
 
+/// Whether `bytes` ends with `command` followed by one balanced braced
+/// argument.
+///
+/// The argument's `{` is found by walking back from the end over the
+/// groups inside it, so a title or caption holding `\textbf{…}`,
+/// `\cite{…}` or `$x^{2}$` attaches; the last `{` in the prefix, which is
+/// what was read before, is that inner group's. The forward scan then
+/// confirms the group, with its own rule for `%`. The last `{` stays as
+/// the second reading, so that nothing that attached before stops
+/// attaching: it is what reaches a command on a line that a `%` opens.
 fn last_command_with_balanced_argument(bytes: &[u8], command: &[u8]) -> bool {
-    let Some(open) = bytes.iter().rposition(|byte| *byte == b'{') else {
-        return false;
+    let attaches = |open: usize| {
+        bytes[..open].ends_with(command)
+            && crate::scanner::balanced_end(bytes, open) == Some(bytes.len())
     };
-    bytes[..open].ends_with(command)
-        && crate::scanner::balanced_end(bytes, open) == Some(bytes.len())
+    argument_opening(bytes).is_some_and(attaches)
+        || bytes
+            .iter()
+            .rposition(|byte| *byte == b'{')
+            .is_some_and(attaches)
+}
+
+/// The `{` opening the braced group `bytes` ends with, if it ends with one.
+///
+/// Walked back one line at a time, and on each line only the part before
+/// an unescaped `%` counts, since the forward scan that confirms the group
+/// drops a comment too; an escaped brace is text.
+fn argument_opening(bytes: &[u8]) -> Option<usize> {
+    let mut depth = 0usize;
+    let mut end = bytes.len();
+    loop {
+        let start = bytes[..end]
+            .iter()
+            .rposition(|byte| *byte == b'\n')
+            .map_or(0, |at| at + 1);
+        let live = bytes[start..end]
+            .iter()
+            .enumerate()
+            .position(|(offset, byte)| {
+                *byte == b'%' && !crate::scanner::is_escaped(bytes, start + offset)
+            })
+            .map_or(end, |offset| start + offset);
+        for at in (start..live).rev() {
+            match bytes[at] {
+                b'}' if !crate::scanner::is_escaped(bytes, at) => depth += 1,
+                b'{' if !crate::scanner::is_escaped(bytes, at) => {
+                    depth = depth.checked_sub(1)?;
+                    if depth == 0 {
+                        return Some(at);
+                    }
+                }
+                _ if depth == 0 => return None,
+                _ => {}
+            }
+        }
+        if start == 0 || depth == 0 {
+            return None;
+        }
+        end = start - 1;
+    }
 }
 
 /// The span between `(` and `)` of a construct covering `construct`.
@@ -1306,6 +1360,46 @@ mod tests {
         for text in [
             "\\begin{wrapfigure}{r}{1in}\\caption{A}\\end{wrapfigure}\n@id(x)\n\\begin{longtable}{c}\\caption{B}\\end{longtable}",
             "\\captionof{figure}{A}\n\n\n@id(x)",
+        ] {
+            let (_, t) = table(&[("a.xtex", text)]);
+            assert_eq!(
+                t.declaration("x").map(|d| d.class),
+                Some(EntityClass::UnknownOpen),
+                "{text}"
+            );
+        }
+    }
+
+    #[test]
+    fn an_argument_with_a_braced_group_inside_still_attaches() {
+        // The last `{` in the prefix was taken as the argument's, so a title
+        // or caption holding `\textbf{…}` or `\cite{…}` never attached.
+        for (text, class) in [
+            ("\\section{A \\textbf{b}}@id(x)", EntityClass::Section),
+            (
+                "\\subsection{Growth as $n^{2}$ and \\emph{more}}\n@id(x)",
+                EntityClass::Section,
+            ),
+            (
+                "\\captionof{figure}{A \\cite{k} figure}@id(x)",
+                EntityClass::Figure,
+            ),
+            // An escaped brace is text, not a group, and a brace inside a
+            // comment is not one either.
+            ("\\section{A \\} b}@id(x)", EntityClass::Section),
+            ("\\section{A % }\nB}@id(x)", EntityClass::Section),
+            ("\\section{A \\% b}@id(x)", EntityClass::Section),
+        ] {
+            let (_, t) = table(&[("a.xtex", text)]);
+            assert_eq!(t.declaration("x").map(|d| d.class), Some(class), "{text}");
+        }
+        // Braces that do not balance attach nothing. (An unclosed group
+        // runs to the line's end and takes the `@id` with it before this
+        // rule is reached, so the unbalanced case here is a stray `}`.)
+        for text in [
+            "\\section{A}}@id(x)",
+            "\\captionof{figure}{A} b}@id(x)",
+            "\\section{A} % }\n@id(x)",
         ] {
             let (_, t) = table(&[("a.xtex", text)]);
             assert_eq!(
