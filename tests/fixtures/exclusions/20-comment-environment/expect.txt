@@ -1,0 +1,5 @@
+transport: identical
+scanner: id
+constructs: the `comment` package discards everything between `\begin{comment}` and
+  `\end{comment}`, so nothing there is typeset and nothing there is a construct.
+  Corpus E2, arXiv 2601.02404: a commented-out draft of the introduction.

@@ -1,0 +1,14 @@
+\documentclass{article}
+\begin{document}
+% \label{c:1} \cite{c:2}
+Text @ref(live) % \ref{c:3}
+\iffalse
+\label{c:4} \cite{c:5}
+\fi
+\begin{comment}
+\section{Old}\label{c:6}
+See \ref{c:6} and \cite{c:7}.
+\end{comment}
+\makeatletter \label{c:8} \makeatother
+Percent sign 100\% then @cite(live).
+\end{document}

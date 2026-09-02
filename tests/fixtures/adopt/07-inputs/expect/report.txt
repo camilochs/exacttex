@@ -1,0 +1,12 @@
+main.tex -> main.xtex: 0 citations (0 keys), 0 ids, 0 refs, 3 imports
+  left: main.tex:6:1 \input{missing} — no .tex file exists at that path beside the root
+  left: main.tex:7:1 \include{sections/a} — \include is never converted
+  left: main.tex:8:1 \input{\sectiondir/a} — the path is not literal: \, #, $, a quote, a parenthesis or edge spaces
+  left: main.tex:9:1 \input{sections/#1} — the path is not literal: \, #, $, a quote, a parenthesis or edge spaces
+  left: main.tex:10:1 \input{a$b} — the path is not literal: \, #, $, a quote, a parenthesis or edge spaces
+  left: main.tex:11:1 \input{ sections/a } — the path is not literal: \, #, $, a quote, a parenthesis or edge spaces
+sections/a.tex -> sections/a.xtex: 0 citations (0 keys), 1 ids, 0 refs, 0 imports
+  left: sections/a.tex:2:1 \input{c} — \input is converted in the root file only
+  left: sections/a.tex:3:1 \include{c} — \include is never converted
+sections/b.tex -> sections/b.xtex: 1 citations (1 keys), 0 ids, 0 refs, 0 imports
+3 of 3 files converted

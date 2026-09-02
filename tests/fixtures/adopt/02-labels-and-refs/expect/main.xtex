@@ -1,0 +1,10 @@
+\documentclass{article}
+\begin{document}
+\section{Introduction}@id(sec:intro)
+\subsection{Scope}
+@id(sec:scope-1.2_a)
+See Section~@ref(sec:intro) and @ref(sec:scope-1.2_a).
+Kept as written: \label{sec:with space}, \ref{sec:with space}, \ref{1abc},
+\ref*{sec:intro}, \label[overlay]{sec:x}, \cref{sec:intro}, \eqref{eq:x},
+\pageref{sec:intro}, \ref{}.
+\end{document}

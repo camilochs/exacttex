@@ -662,6 +662,104 @@ fn revision_views_and_resolutions_cross_between_the_module_and_the_cli() {
     xtex_core::review::parse_sidecar(&cli_sidecar).expect("readable both ways");
 }
 
+#[test]
+fn adopt_converts_identically_in_the_module_and_the_cli_and_writes_only_what_passed() {
+    let repo = repo();
+    let Some(module) = built_module(&repo) else {
+        return;
+    };
+    let fixture = repo.join("tests/fixtures/adopt/10-project");
+    let out = repo.join("target/wasm-parity/adopt");
+    run_module(
+        &repo,
+        &module,
+        &repo.join("tests/fixtures/wasm/project"),
+        "main.xtex",
+        &out,
+    );
+    let answer = std::fs::read(out.join("wasm.adopt.bin")).expect("the module adopted");
+    let mut at = 0usize;
+    let json = take_field(&answer, &mut at);
+    let count =
+        u32::from_le_bytes([answer[at], answer[at + 1], answer[at + 2], answer[at + 3]]) as usize;
+    at += 4;
+    let mut written = Vec::new();
+    for _ in 0..count {
+        let name = String::from_utf8(take_field(&answer, &mut at)).expect("a UTF-8 name");
+        written.push((name, take_field(&answer, &mut at)));
+    }
+    assert_eq!(at, answer.len(), "trailing bytes in the answer");
+
+    // The native library over the same bundle contents.
+    let store = memory_of(&fixture);
+    let adopted = xtex_core::adopt::adopt(&store, "main.tex").expect("adopts");
+    let mut native_json = String::new();
+    xtex_core::adopt::to_json(&adopted, &mut native_json);
+    assert_eq!(String::from_utf8_lossy(&json), native_json);
+    let native_written: Vec<(String, Vec<u8>)> = adopted
+        .files
+        .iter()
+        .filter_map(|file| {
+            file.converted
+                .clone()
+                .map(|bytes| (file.output.clone(), bytes))
+        })
+        .collect();
+    assert_eq!(written, native_written, "the files differ");
+
+    // The fixture only proves parity if it exercises the rules: two
+    // imports converted, a citation with an option left, three files.
+    assert!(
+        native_json.contains("\"imports\":2") && native_json.contains("a star or an optional"),
+        "{native_json}"
+    );
+    assert_eq!(written.len(), 3, "{native_json}");
+
+    // The CLI, on the same project on disk, and what it leaves behind.
+    let scratch = repo.join("target/wasm-parity/adopt-src");
+    if scratch.exists() {
+        std::fs::remove_dir_all(&scratch).expect("a fresh scratch copy");
+    }
+    copy_tree(&fixture, &scratch);
+    std::fs::remove_dir_all(scratch.join("expect")).expect("the expectations are not input");
+    let cli = Command::new(env!("CARGO"))
+        .args([
+            "run", "--quiet", "-p", "xtex-cli", "--", "adopt", "--json", "main.tex",
+        ])
+        .current_dir(&scratch)
+        .output()
+        .expect("the CLI runs");
+    assert!(
+        cli.status.success(),
+        "{}",
+        String::from_utf8_lossy(&cli.stderr)
+    );
+    let mut printed = json.clone();
+    printed.push(b'\n');
+    assert_eq!(
+        String::from_utf8_lossy(&cli.stdout),
+        String::from_utf8_lossy(&printed),
+        "the CLI on disk and the module on a bundle disagree about one project"
+    );
+    for (name, data) in &written {
+        assert_eq!(
+            &std::fs::read(scratch.join(name)).expect("the CLI wrote it"),
+            data,
+            "{name}"
+        );
+        let original = name.replace(".xtex", ".tex");
+        assert!(scratch.join(&original).is_file(), "{original} must stay");
+    }
+}
+
+fn take_field(bytes: &[u8], at: &mut usize) -> Vec<u8> {
+    let len =
+        u32::from_le_bytes([bytes[*at], bytes[*at + 1], bytes[*at + 2], bytes[*at + 3]]) as usize;
+    let field = bytes[*at + 4..*at + 4 + len].to_vec();
+    *at += 4 + len;
+    field
+}
+
 fn split_pair(bytes: &[u8]) -> (Vec<u8>, Vec<u8>) {
     let first_len = u32::from_le_bytes([bytes[0], bytes[1], bytes[2], bytes[3]]) as usize;
     let first = bytes[4..4 + first_len].to_vec();

@@ -1,0 +1,8 @@
+main.tex -> main.xtex: 5 citations (6 keys), 0 ids, 0 refs, 0 imports
+  left: main.tex:5:18 \cite*{k} — a star or an optional argument keeps the citation as written
+  left: main.tex:5:29 \citep[p.~3]{k} — a star or an optional argument keeps the citation as written
+  left: main.tex:5:46 \citet[see][p.~3]{k} — a star or an optional argument keeps the citation as written
+  left: main.tex:6:1 \citep*{k} — a star or an optional argument keeps the citation as written
+  left: main.tex:6:13 \cite{a, b} — a key is outside the grammar's bibkey, or the list carries spaces
+  left: main.tex:6:26 \cite{} — a key is outside the grammar's bibkey, or the list carries spaces
+1 of 1 files converted

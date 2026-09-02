@@ -1,0 +1,3 @@
+\section{Introduction}@id(sec:intro)
+We build on @cite(knuth1984) and defer details to Section~@ref(sec:method).
+A nested file: \input{sections/deeper}

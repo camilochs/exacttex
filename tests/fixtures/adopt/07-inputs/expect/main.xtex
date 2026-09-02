@@ -1,0 +1,12 @@
+\documentclass{article}
+\begin{document}
+@import("sections/a.xtex")
+@import("sections/b.xtex")
+@import("sections/a.xtex")
+\input{missing}
+\include{sections/a}
+\input{\sectiondir/a}
+\input{sections/#1}
+\input{a$b}
+\input{ sections/a }
+\end{document}

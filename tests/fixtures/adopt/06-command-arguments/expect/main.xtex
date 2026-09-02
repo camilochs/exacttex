@@ -1,0 +1,9 @@
+\documentclass{article}
+\newcommand{\shortcite}{\cite{macro}}
+\begin{document}
+\section{Prose @cite(in-title)}@id(sec:a)
+\caption{A caption citing @cite(in-caption) @id(fig:in-caption)}
+\footnote{See @ref(sec:a).} \emph{@cite(in-emph)} \textbf{@ref(sec:a)}
+\texttt{\ref{sec:a}} \makecell{\cite{in-makecell}} \foo[\cite{in-option}]{\label{in-group}}
+\href{http://x}{\cite{in-href}} \title{@cite(in-title-command)}
+\end{document}

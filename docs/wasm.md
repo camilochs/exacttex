@@ -86,6 +86,7 @@ file_count × ( u32 name_len   name (UTF-8)   u32 data_len   data )
 | `xtex_definition(ptr, len)` | `target`, `u32 offset`, then a bundle | the declaration, file included — for a citation, the key's own line in the declared `.bib` |
 | `xtex_view(ptr, len)` | `view` (`original`/`final`/`marked`), then a bundle | the root under that view |
 | `xtex_revise(ptr, len)` | `action`, `id`, `by`, `at`, `sidecar`, then a bundle | the rewritten root, then the updated sidecar, both length-prefixed |
+| `xtex_adopt(ptr, len)` | a bundle whose root is a `.tex` | the JSON report `xtex adopt --json` prints, then `u32 count` and `count` × (name, bytes) — one `.xtex` per file that passed, every field length-prefixed |
 
 `xtex_revise`'s `action` is `accept`, `reject`, `accept-all` or `prune`; `id` is empty except for the
 first two; `by` and `at` are the reviewer and RFC 3339 timestamp, supplied by the host because the module
@@ -123,6 +124,12 @@ a terminal.
 
 `xtex_emit` emits the root alone; a host that wants every file's emission calls once per file with that
 file as the root.
+
+`xtex_adopt` runs the mechanical ramp ([`adopt.md`](adopt.md)) over the bundle's root. Name the root at the
+bundle's top level: the guarantee compares the emission `xtex build` writes from the project root, and a
+root under a directory emits `\input{dir/…}` where the author wrote `\input{…}`, which the guarantee
+refuses. The host writes the files the answer carries under their `.xtex` names and keeps or removes the
+`.tex` files, as the CLI's two modes do; a file that did not pass is in the report and not in the list.
 
 All the JavaScript it takes:
 

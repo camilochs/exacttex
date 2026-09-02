@@ -1,0 +1,10 @@
+\documentclass{article}
+\begin{document}
+\section{A}@id(sec:a)
+\begin{equation} [a,b] \times @ref(sec:a) \label{eq:a} \end{equation}
+\begin{equation}
+@id(eq:b)
+x = @ref(sec:a)
+\end{equation}
+See @ref(sec:a).
+\end{document}

@@ -1,0 +1,7 @@
+\documentclass{article}
+\begin{document}
+Kernel @cite(knuth1984), natbib @citep(a,b) and @citet(c), biblatex
+@textcite(d) and @parencite(e:f.g+h/i_j).
+Kept as written: \cite*{k}, \citep[p.~3]{k}, \citet[see][p.~3]{k},
+\citep*{k}, \cite{a, b}, \cite{}, \citealp{k}, \citeyear{k}.
+\end{document}

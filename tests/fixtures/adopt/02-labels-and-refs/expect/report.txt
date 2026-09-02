@@ -1,0 +1,8 @@
+main.tex -> main.xtex: 0 citations (0 keys), 2 ids, 2 refs, 0 imports
+  left: main.tex:7:18 \label{sec:with space} — the identifier is outside the grammar's ident
+  left: main.tex:7:42 \ref{sec:with space} — the identifier is outside the grammar's ident
+  left: main.tex:7:64 \ref{1abc} — the identifier is outside the grammar's ident
+  left: main.tex:8:1 \ref*{sec:intro} — a star or an optional argument keeps the command as written
+  left: main.tex:8:19 \label[overlay]{sec:x} — a star or an optional argument keeps the command as written
+  left: main.tex:9:22 \ref{} — the identifier is outside the grammar's ident
+1 of 1 files converted

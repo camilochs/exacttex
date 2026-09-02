@@ -1,0 +1,6 @@
+main.tex -> main.xtex: 2 citations (3 keys), 3 ids, 2 refs, 2 imports
+sections/intro.tex -> sections/intro.xtex: 1 citations (1 keys), 1 ids, 1 refs, 0 imports
+  left: sections/intro.tex:3:16 \input{sections/deeper} — \input is converted in the root file only
+sections/method.tex -> sections/method.xtex: 0 citations (0 keys), 1 ids, 1 refs, 0 imports
+  left: sections/method.tex:2:4 \citep[see][p.~3]{lamport1994} — a star or an optional argument keeps the citation as written
+3 of 3 files converted

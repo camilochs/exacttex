@@ -1,0 +1,3 @@
+\section{A}@id(sec:a)
+\input{c}
+\include{c}

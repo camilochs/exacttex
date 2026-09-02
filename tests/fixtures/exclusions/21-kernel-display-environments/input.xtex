@@ -1,0 +1,14 @@
+\documentclass{article}
+\begin{document}
+\begin{eqnarray}
+ a &=& b @ref(hidden) \\
+ \label{eq:kernel}
+\end{eqnarray}
+\begin{eqnarray*}
+ c &=& d @ref(hidden)
+\end{eqnarray*}
+\begin{displaymath}
+ e = f @ref(hidden)
+\end{displaymath}
+See @ref(eq:kernel).
+\end{document}

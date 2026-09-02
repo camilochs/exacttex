@@ -25,8 +25,8 @@ mod tables;
 #[path = "tests.rs"]
 mod tests;
 
-pub(crate) use boundaries::is_escaped;
 pub use boundaries::{CommentRule, balanced_end, balanced_end_with};
+pub(crate) use boundaries::{is_escaped, optional_argument_end};
 pub use queries::{construct_shaped_text, split_keys};
 pub use queries::{is_display_math_region, readable_content};
 pub use queries::{listing_header_labels, readable_for, substitution_separator};
@@ -258,6 +258,17 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                     display_opening = None;
                     continue;
                 }
+                // A pending opening that scanning has passed can never be
+                // entered, and while it stands no later display is noticed.
+                // The cap on `\begin`'s extent below keeps this from
+                // happening; dropping the opening keeps one miss from
+                // costing the rest of the file.
+                if display_opening
+                    .as_ref()
+                    .is_some_and(|(start, _)| at > *start)
+                {
+                    display_opening = None;
+                }
                 if display_opening.is_none()
                     && let Some(opening) = display_math_environment_opening(bytes, at)
                 {
@@ -357,6 +368,18 @@ pub fn scan(bytes: &[u8]) -> Vec<Piece> {
                 if bytes[at] == b'\\' {
                     match command_extent(bytes, at) {
                         Extent::Through(end) => {
+                            // The body of a display environment begins where
+                            // its header slot ends, whatever follows. Without
+                            // this, `\begin{equation} [a,b)` claimed the
+                            // bracket as an optional argument of `\begin`,
+                            // scanning ran past the body's first byte, and the
+                            // region never opened — nor did any later display
+                            // in the file, because the opening stayed pending
+                            // (corpus E2, arXiv 2312.17141).
+                            let end = match display_opening.as_ref() {
+                                Some((start, _)) if *start > at => end.min(*start),
+                                _ => end,
+                            };
                             // A caption is prose. The head of the call — the
                             // command, its data arguments, the opening
                             // delimiter — stays an exclusion region, and the
