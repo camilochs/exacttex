@@ -66,9 +66,10 @@ LaTeX can ever fail. `?O` does not mean *invalid*. It means *the compiler has no
 
 A comparison needs two sides. The declaration supplies one: `\figure(fig:main)` is a `Figure` by its
 keyword, and an `@id` takes the class of the construct it attached to — `\section` gives `Section`, or
-`Appendix` after the `\appendix` switch; `\begin{algorithm}` gives `Algorithm`; an `@id` inside a
-display-math body gives `Equation`; anything unmodelled gives `?O`. [`grammar.md`](grammar.md) §4 has the
-switch and the body rule.
+`Appendix` after the `\appendix` switch; an `@id` anywhere inside a `figure`, `table` or `algorithm`
+environment (starred or not, nested `subfigure`, `minipage` and `tabular` included) gives that float's
+class; an `@id` inside a display-math body gives `Equation`; anything unmodelled gives `?O`.
+[`grammar.md`](grammar.md) §4 has the switch and the two body rules.
 
 The reference supplies the other, and **it does so through the prefix before the first `:`**.
 `@ref(fig:main)` demands a `Figure`; pointing it at a `\table(fig:main)` is `XT1004`.

@@ -339,6 +339,42 @@ fn a_verb_delimiter_may_be_the_sigil_itself() {
 }
 
 #[test]
+fn closed_environments_are_the_ones_the_scanner_read_both_ends_of() {
+    let text = b"\\begin{figure}[t] % \\end{figure}\n\\begin{tabular}{cc} a \\end{tabular}{claimed}\n\
+                 \\begin{align} x \\end{align}\n\\end{figure}\n\\begin{table}\n\\caption{never closed}";
+    let found: Vec<(&[u8], &[u8])> = closed_environments(text)
+        .into_iter()
+        .map(|(name, body)| {
+            (
+                &text[name.start()..name.end()],
+                &text[body.start()..body.end()],
+            )
+        })
+        .collect();
+    assert_eq!(
+        found,
+        [
+            (
+                b"tabular".as_slice(),
+                b"\\begin{tabular}{cc} a \\end{tabular}".as_slice()
+            ),
+            (b"align", b"\\begin{align} x \\end{align}"),
+            (
+                b"figure",
+                &text[..text.len() - b"\n\\begin{table}\n\\caption{never closed}".len()]
+            ),
+        ],
+        "a group after `\\end{{tabular}}` is claimed by the command and is not body"
+    );
+    // A `\\begin` inside a verbatim body opens nothing, and one in a comment
+    // (above) closes nothing.
+    assert!(
+        closed_environments(b"\\begin{verbatim}\n\\begin{figure}\n\\end{verbatim}\n\\end{figure}")
+            .is_empty()
+    );
+}
+
+#[test]
 fn verbatim_environments_hide_constructs() {
     for name in [
         "verbatim",

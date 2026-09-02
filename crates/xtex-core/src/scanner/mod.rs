@@ -27,7 +27,7 @@ mod tests;
 
 pub use boundaries::{CommentRule, balanced_end, balanced_end_with};
 pub(crate) use boundaries::{is_escaped, optional_argument_end};
-pub use queries::{construct_shaped_text, split_keys};
+pub use queries::{closed_environments, construct_shaped_text, split_keys};
 pub use queries::{is_display_math_region, readable_content};
 pub use queries::{listing_header_labels, readable_for, substitution_separator};
 pub use tables::{
