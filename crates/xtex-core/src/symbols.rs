@@ -722,18 +722,7 @@ fn attached_class(
 /// The class of the attachable construct within the bounded whitespace
 /// before `at`, if there is one.
 fn header_class(bytes: &[u8], at: usize, in_appendix: bool) -> Option<EntityClass> {
-    let mut start = at;
-    let mut lines = 0usize;
-    while start > 0 && at - start < 256 && bytes[start - 1].is_ascii_whitespace() {
-        start -= 1;
-        if bytes[start] == b'\n' {
-            lines += 1;
-            if lines > 2 {
-                return None;
-            }
-        }
-    }
-    let before = &bytes[..start];
+    let before = &bytes[..attachment_gap_start(bytes, at)?];
     if before.ends_with(b"\\]") || before.ends_with(b"$$") {
         return Some(EntityClass::Equation);
     }
@@ -783,6 +772,50 @@ fn header_class(bytes: &[u8], at: usize, in_appendix: bool) -> Option<EntityClas
         }
     }
     None
+}
+
+/// Where the gap before the construct at `at` begins, or `None` when the
+/// gap runs past its bounds.
+///
+/// The gap is whitespace: at most two line endings and 256 bytes, as
+/// `docs/grammar.md` §4 bounds it. A line that is wholly a comment is
+/// skipped with its own line ending and counts toward neither bound — TeX
+/// does not read it, so it separates nothing (issue #168: four corpus
+/// identifiers sat under their heading with only commented-out lines
+/// between). A comment that shares a line with live text is not skipped.
+fn attachment_gap_start(bytes: &[u8], at: usize) -> Option<usize> {
+    let mut start = at;
+    let mut skipped = 0usize;
+    let mut lines = 0usize;
+    while start > 0 && skipped < 256 && bytes[start - 1].is_ascii_whitespace() {
+        if bytes[start - 1] == b'\n' {
+            if let Some(line) = comment_line_start(bytes, start - 1) {
+                start = line;
+                continue;
+            }
+            lines += 1;
+            if lines > 2 {
+                return None;
+            }
+        }
+        start -= 1;
+        skipped += 1;
+    }
+    Some(start)
+}
+
+/// The start of the line ending at `newline`, when that line is nothing
+/// but blanks and a comment.
+fn comment_line_start(bytes: &[u8], newline: usize) -> Option<usize> {
+    let line = bytes[..newline]
+        .iter()
+        .rposition(|byte| *byte == b'\n')
+        .map_or(0, |at| at + 1);
+    let content = line
+        + bytes[line..newline]
+            .iter()
+            .position(|byte| !matches!(byte, b' ' | b'\t'))?;
+    (bytes[content] == b'%' && !crate::scanner::is_escaped(bytes, content)).then_some(line)
 }
 
 /// Whether `bytes` ends with `command` followed by one balanced braced
@@ -1391,13 +1424,14 @@ mod tests {
         // Braces that do not balance attach nothing (an unclosed group
         // runs to the line's end and takes the `@id` with it before this
         // rule is reached, so the unbalanced case here is a stray `}`),
-        // and neither does a command on a commented-out line.
+        // and neither does a command on a commented-out line. (One under
+        // a live heading attaches to that heading, across the comment:
+        // `a_line_that_is_wholly_a_comment_does_not_separate_an_id_from_its_construct`.)
         for text in [
             "\\section{A}}@id(x)",
             "\\captionof{figure}{A} b}@id(x)",
             "\\section{A} % }\n@id(x)",
             "% \\section{A}\n@id(x)",
-            "\\section{A}\n%\\subsection{B}\n@id(x)",
             "text % \\captionof{figure}{A}\n@id(x)",
         ] {
             let (_, t) = table(&[("a.xtex", text)]);
@@ -1406,6 +1440,69 @@ mod tests {
                 Some(EntityClass::UnknownOpen),
                 "{text}"
             );
+        }
+    }
+
+    #[test]
+    fn a_line_that_is_wholly_a_comment_does_not_separate_an_id_from_its_construct() {
+        // Four corpus identifiers sat under their heading with only
+        // commented-out lines between, and only whitespace was skipped
+        // (issue #168). The comment lines count toward neither bound.
+        let long = format!(
+            "\\chapter{{A}}\n{}@id(x)",
+            "% a commented-out line\n".repeat(20)
+        );
+        for (text, class) in [
+            ("\\section{A}\n% note\n@id(x)", EntityClass::Section),
+            (
+                "\\section{A}\n  %\\subsection{B}\n\t% c\n@id(x)",
+                EntityClass::Section,
+            ),
+            ("\\section{A}\n\n% note\n@id(x)", EntityClass::Section),
+            ("\\section{A}\r\n% note\r\n@id(x)", EntityClass::Section),
+            (long.as_str(), EntityClass::Section),
+            (
+                "\\captionof{figure}{A}\n% note\n@id(x)",
+                EntityClass::Figure,
+            ),
+            // The opener alone, with no `\end` for the body rule to read.
+            (
+                "\\begin{table}\n% note\n@id(x)\n\\caption{A}",
+                EntityClass::Table,
+            ),
+        ] {
+            let (_, t) = table(&[("a.xtex", text)]);
+            assert_eq!(t.declaration("x").map(|d| d.class), Some(class), "{text}");
+        }
+        // A commented-out heading is still not a heading; the live line
+        // endings are still bounded at two; `\%` opens no comment; and a
+        // comment beside live text is not skipped.
+        for text in [
+            "% \\section{A}\n% note\n@id(x)",
+            "\\section{A}\n\n% note\n\n@id(x)",
+            "\\section{A}\n\\% b\n@id(x)",
+            "\\section{A} % note\n@id(x)",
+        ] {
+            let (_, t) = table(&[("a.xtex", text)]);
+            assert_eq!(
+                t.declaration("x").map(|d| d.class),
+                Some(EntityClass::UnknownOpen),
+                "{text}"
+            );
+        }
+        // The 256-byte bound counts the live whitespace, line endings
+        // included, and a comment line moves it by nothing: with the
+        // heading's own line ending, 255 spaces are the last that attach.
+        for (spaces, class) in [(255, EntityClass::Section), (256, EntityClass::UnknownOpen)] {
+            for comment in ["", "% note\n"] {
+                let text = format!("\\section{{A}}\n{comment}{}@id(x)", " ".repeat(spaces));
+                let (_, t) = table(&[("a.xtex", &text)]);
+                assert_eq!(
+                    t.declaration("x").map(|d| d.class),
+                    Some(class),
+                    "{spaces} spaces, comment {comment:?}"
+                );
+            }
         }
     }
 

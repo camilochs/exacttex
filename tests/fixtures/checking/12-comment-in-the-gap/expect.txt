@@ -1,0 +1,11 @@
+transport: identical
+scanner: id id id id id id id id ref ref ref ref ref ref ref ref
+constructs: a line that is wholly a comment between a construct and its
+  `@id` is skipped and counts toward neither bound, so sec:one (one comment
+  line), sec:two (a commented-out title and a note) and sec:three (a blank
+  line, then a comment line) are sections, fig:six is a figure by its
+  `\captionof` and tab:eight a table by its opener, and the words Figure and
+  Table before them are XT1020. sec:four has a comment line between two
+  blank lines, three live line endings, past the bound; sec:five and
+  fig:seven sit under a commented-out `\section` and `\captionof`; all
+  three stay unknown-open and silent. Issue #168.

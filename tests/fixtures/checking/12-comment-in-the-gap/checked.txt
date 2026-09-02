@@ -1,0 +1,5 @@
+XT1020|figure|sec:one|615|6|prose says `Figure` but `sec:one` is a section
+XT1020|figure|sec:two|636|6|prose says `Figure` but `sec:two` is a section
+XT1020|figure|sec:three|657|6|prose says `Figure` but `sec:three` is a section
+XT1020|table|fig:six|724|5|prose says `Table` but `fig:six` is a figure
+XT1020|figure|tab:eight|766|6|prose says `Figure` but `tab:eight` is a table

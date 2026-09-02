@@ -283,9 +283,12 @@ The skipped region is bounded by both of these limits:
 - no more than two line endings; and
 - no more than 256 bytes.
 
-The first limit reached ends the search. Comments, commands and non-whitespace bytes are not skipped. If no
-attachable construct occurs within the bounded region, `@id` is an explicit but unattached annotation and
-produces a hard error blamed on that annotation.
+The first limit reached ends the search. A line that is wholly a comment — blanks, then `%` to the end of
+the line — is skipped together with its line ending and counts toward neither limit, since TeX does not
+read it and it separates nothing; a commented-out command is still not a command (fixture `checking/12`).
+Other comments, commands and non-whitespace bytes are not skipped. If no attachable construct occurs within
+the bounded region, `@id` is an explicit but unattached annotation and produces a hard error blamed on
+that annotation.
 
 The two-line, 256-byte bound is a locality decision. The corpus establishes that same-line attachment is
 insufficient: 442 of 479 measured labels follow their captions on the next line, while 9 share the caption
@@ -474,6 +477,11 @@ Fixtures must include:
     `sidewaystable*`, a `wrapfigure`, a `wraptable`, a `longtable` and a `longtable*`, after
     `\captionof{figure}` inside a `minipage` and `\captionof{table}` inside a `center`, and in prose between
     two of them, each with a reference that reports its class or its absence (`checking/11`).
+14. `@id` under a `\section`, a `\captionof{figure}` and a `\begin{table}` with a line that is wholly a
+    comment between, under a `\section` with two comment lines and with a comment line after a blank line,
+    under a `\section` with a comment line between two blank lines (past the bound), and under a
+    commented-out `\section` and `\captionof` with a comment line between, each with a reference that
+    reports its class or its absence (`checking/12`).
 
 ### Bibliography discovery and citation checking
 
