@@ -1,0 +1,36 @@
+\section{One}
+% a note between the heading and its identifier
+@id(sec:one)
+\section{Two}
+%\section{An earlier title}
+% and a second note
+@id(sec:two)
+\section{Three}
+
+% a note after a blank line
+@id(sec:three)
+\section{Four}
+
+% a note between two blank lines
+
+@id(sec:four)
+% \section{Five, commented out}
+% a note
+@id(sec:five)
+\begin{minipage}{\linewidth}
+\captionof{figure}{Six}
+% a note under the caption
+@id(fig:six)
+\end{minipage}
+\begin{center}
+% \captionof{figure}{Seven, commented out}
+% a note
+@id(fig:seven)
+\end{center}
+\begin{table}
+% a note under the opener
+@id(tab:eight)
+\caption{Eight}
+\end{table}
+Figure~@ref(sec:one) Figure~@ref(sec:two) Figure~@ref(sec:three) Figure~@ref(sec:four)
+Figure~@ref(sec:five) Table~@ref(fig:six) Table~@ref(fig:seven) Figure~@ref(tab:eight)
