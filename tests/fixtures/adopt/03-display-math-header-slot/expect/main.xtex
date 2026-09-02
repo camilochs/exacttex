@@ -1,0 +1,27 @@
+\documentclass{article}
+\begin{document}
+\begin{equation}
+  @id(eq:slot)
+  x = y
+\end{equation}
+\begin{align}@id(eq:adjacent)
+  a &= b \\
+  c &= d \label{eq:body}
+\end{align}
+\begin{equation}
+
+
+
+  \label{eq:past-the-slot}
+\end{equation}
+\begin{equation}
+  @id(eq:crlf)
+\end{equation}
+\begin{equation} [a,b] \label{eq:bracket} \end{equation}
+\begin{eqnarray}
+  @id(eq:kernel) e &=& f
+\end{eqnarray}
+\[ \label{eq:display} \]
+$$ \label{eq:dollars} $$
+$ \ref{eq:slot} $ and @ref(eq:slot).
+\end{document}

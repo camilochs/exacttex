@@ -1,0 +1,4 @@
+main.tex -> main.xtex: 1 citations (1 keys), 0 ids, 0 refs, 0 imports
+  left: main.tex:3:1 \input{part} — the target file did not pass the guarantee
+part.tex: left as it was — the file already carries an ExactTeX construct
+1 of 2 files converted

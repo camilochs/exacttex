@@ -262,6 +262,10 @@ Mechanical, and partial by design. Change `\citep{` to `@citep(` wherever you wa
 citation you do not touch keeps working exactly as it does now, transported byte for byte and unchecked —
 which is the same trade every other construct offers.
 
+`xtex adopt` makes that change for a whole project — citations, labels, references and the root's
+`\input` edges, in live text only — and checks that the converted file emits the original bytes before
+writing it. [`adopt.md`](adopt.md).
+
 ### `@id` attachment
 
 `@id` attaches backwards to the nearest completed, attachable LaTeX construct. An attachable construct is:
@@ -925,8 +929,10 @@ font, and `\texttt{@ref(x)}` is how prose shows the literal token. A known comma
 classification bears data, which is the conservative default. Decided in issue #83; found as Phase 0a's
 gap 3, where a construct in a caption was emitted literally into the PDF with exit 0.
 
-The default verbatim environment set is `verbatim`, `verbatimtab`, `Verbatim`, `listing` and `lstlisting`,
-extended by `xtex.toml`.
+The default verbatim environment set is `verbatim`, `verbatim*`, `verbatimtab`, `Verbatim`, `listing`,
+`lstlisting`, `minted`, and the `comment` package's `comment`, whose documentation says that everything
+between `\begin{comment}` and `\end{comment}` is discarded (fixture `exclusions/20`). Extended by
+`xtex.toml`.
 
 The verbatim **command** set is `\verb` and `\verb*` from the LaTeX kernel, `\lstinline` from `listings`, and
 `\mint` and `\mintinline` from `minted`. The last three are transcribed from unified-latex, which marks them

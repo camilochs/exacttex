@@ -42,6 +42,7 @@
 //! assert_eq!(out, b"\\section{Hi}\r\n");
 //! ```
 
+pub mod adopt;
 pub mod bibliography;
 pub mod blame;
 pub mod blocks;

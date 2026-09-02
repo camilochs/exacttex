@@ -98,7 +98,7 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 page(join(repo, "PHILOSOPHY.md"), "philosophy.md", "Philosophy");
 page(join(repo, "ROADMAP.md"), "roadmap.md", "Roadmap");
 page(join(repo, "CONTRIBUTING.md"), "contributing.md", "Contributing");
-for (const name of ["architecture", "grammar", "checking", "verification", "revisions", "diagnostics", "wasm", "lsp", "testing", "references"]) {
+for (const name of ["architecture", "grammar", "checking", "verification", "revisions", "adopt", "diagnostics", "wasm", "lsp", "testing", "references"]) {
   page(join(repo, "docs", `${name}.md`), `${name}.md`);
 }
 let order = 1;

@@ -1,0 +1,2 @@
+main.tex -> main.xtex: 4 citations (4 keys), 2 ids, 2 refs, 0 imports
+1 of 1 files converted

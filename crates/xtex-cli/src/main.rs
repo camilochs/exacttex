@@ -148,6 +148,9 @@ fn main() -> ExitCode {
         return revise(&revision_args);
     }
 
+    if first == "adopt" {
+        return adopt_command(&args[1..]);
+    }
     if first == "check" {
         return check_command(&args[1..]);
     }
@@ -217,6 +220,7 @@ fn print_usage() {
     eprintln!("usage: xtex <file.xtex> [--original|--final|--marked]");
     eprintln!("       xtex build <file.xtex> [--original|--final|--marked]");
     eprintln!("       xtex check [--json] [--strict-tex] [--verified[=record]] <file.xtex>");
+    eprintln!("       xtex adopt [--in-place] [--json] <file.tex>");
     eprintln!("       xtex claims <file.xtex>");
     eprintln!("       xtex blame <file.xtex> <line>:<column> [message]");
     eprintln!("       xtex revise <file.xtex> (--accept ID|--reject ID|--accept-all|--prune)");
@@ -425,6 +429,105 @@ fn check_command(args: &[String]) -> ExitCode {
             eprintln!("fatal: {error}");
             ExitCode::from(2)
         }
+    }
+}
+
+/// `xtex adopt <root.tex>` — the mechanical ramp, with its guarantee
+/// checked before a byte is written.
+///
+/// The project root is the directory holding the file named, so the
+/// emission the guarantee compares is the one `xtex build` writes from
+/// there. Every output is checked for absence before any is written: the
+/// command never overwrites a `.tex`, and never a `.xtex` either, because
+/// an earlier run's output is somebody's edited file by now.
+fn adopt_command(args: &[String]) -> ExitCode {
+    let json = args.iter().any(|arg| arg == "--json");
+    let in_place = args.iter().any(|arg| arg == "--in-place");
+    if let Some(option) = args
+        .iter()
+        .find(|arg| arg.starts_with("--") && !matches!(arg.as_str(), "--json" | "--in-place"))
+    {
+        eprintln!("error: unknown option {option}");
+        return ExitCode::from(2);
+    }
+    let inputs: Vec<&str> = args
+        .iter()
+        .filter(|arg| !arg.starts_with("--"))
+        .map(String::as_str)
+        .collect();
+    let [input] = inputs[..] else {
+        eprintln!("usage: xtex adopt [--in-place] [--json] <file.tex>");
+        return ExitCode::from(2);
+    };
+    let input = Path::new(input);
+    let Some(file_name) = input.file_name().and_then(|name| name.to_str()) else {
+        eprintln!("error: {} has no file name", input.display());
+        return ExitCode::from(2);
+    };
+    let dir = input
+        .parent()
+        .filter(|parent| !parent.as_os_str().is_empty())
+        .unwrap_or_else(|| Path::new("."));
+    let loader = FileSystem {
+        root: dir.to_path_buf(),
+    };
+    let adopted = match xtex_core::adopt::adopt(&loader, file_name) {
+        Ok(adopted) => adopted,
+        Err(error) => {
+            eprintln!("error: {error}");
+            return ExitCode::from(2);
+        }
+    };
+
+    let outputs: Vec<(PathBuf, &[u8], PathBuf)> = adopted
+        .files
+        .iter()
+        .filter_map(|file| {
+            file.converted
+                .as_deref()
+                .map(|bytes| (dir.join(&file.output), bytes, dir.join(&file.name)))
+        })
+        .collect();
+    for (output, _, _) in &outputs {
+        if output.exists() {
+            eprintln!(
+                "error: {} already exists, and adopt never overwrites a file",
+                output.display()
+            );
+            return ExitCode::from(2);
+        }
+    }
+    for (output, bytes, original) in &outputs {
+        let written = fs::OpenOptions::new()
+            .write(true)
+            .create_new(true)
+            .open(output)
+            .and_then(|mut file| {
+                use std::io::Write;
+                file.write_all(bytes)
+            });
+        if let Err(error) = written {
+            eprintln!("error: {}: {error}", output.display());
+            return ExitCode::from(2);
+        }
+        if in_place && let Err(error) = fs::remove_file(original) {
+            eprintln!("error: {}: {error}", original.display());
+            return ExitCode::from(2);
+        }
+    }
+
+    let mut report = String::new();
+    if json {
+        xtex_core::adopt::to_json(&adopted, &mut report);
+        println!("{report}");
+    } else {
+        xtex_core::adopt::render(&adopted, &mut report);
+        print!("{report}");
+    }
+    if adopted.all_passed() {
+        ExitCode::SUCCESS
+    } else {
+        ExitCode::FAILURE
     }
 }
 

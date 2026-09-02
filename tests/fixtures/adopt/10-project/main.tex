@@ -1,0 +1,25 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\title{Adopting a paper}
+\author{Anonymous}
+\begin{document}
+\maketitle
+\input{sections/intro}
+\input{sections/method.tex}
+\section{Results}\label{sec:results}
+The bound in Equation~\ref{eq:bound} follows \citet{knuth1984}; see also
+\citep{lamport1994,knuth1984} and Figure~\ref{fig:plot}.
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.8\linewidth]{figures/plot.pdf}
+  \caption{A plot, with an accent in Latin-1: caf\'e and café (raw byte).}
+  \label{fig:plot}
+\end{figure}
+\begin{equation}
+  \label{eq:bound}
+  T(n) \le c \cdot n \log n
+\end{equation}
+\bibliographystyle{plain}
+\bibliography{refs}
+\end{document}

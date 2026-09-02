@@ -1,0 +1,8 @@
+\documentclass{article}
+\begin{document}
+\begin{comment}
+\section{Old}@id(sec:old)
+Cited @cite(gone) in @ref(sec:old).
+\end{comment}
+\section{New}@id(sec:new)
+\end{document}

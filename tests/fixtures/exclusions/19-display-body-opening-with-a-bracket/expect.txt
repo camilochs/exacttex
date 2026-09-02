@@ -1,0 +1,7 @@
+transport: identical
+scanner: id id ref
+constructs: a display body that opens with a closed `[…]` is hidden like any other, and the
+  display after it is hidden too; only the header-slot @id and the reference in
+  prose are recognised. Corpus E2, arXiv 2312.17141: the bracket was claimed as
+  an optional argument of `\begin`, the body was never entered, and every later
+  display in the file was read as prose.

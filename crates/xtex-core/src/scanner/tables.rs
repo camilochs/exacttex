@@ -21,6 +21,13 @@ pub(crate) const MAX_UNKNOWN_COMMAND_GROUPS: usize = 16;
 /// skips — `TexSoup`'s list, which names three this project had missed:
 /// `Verbatim` from `fancyvrb`, `verbatimtab`, and `listing`. Extended per
 /// project by `xtex.toml`.
+///
+/// `comment` is the environment of the `comment` package (v3.8, Victor
+/// Eijkhout, CTAN, read 2026-09-02): "All text between `\comment` ...
+/// `\endcomment` or `\begin{comment}` ... `\end{comment}` is discarded."
+/// Nothing in it is typeset, so nothing in it is a construct; read as prose
+/// it declared labels and cited keys from a commented-out draft (corpus
+/// E2, arXiv 2601.02404, 33 constructs in one 690-line comment).
 pub const DEFAULT_VERBATIM_ENVIRONMENTS: &[&str] = &[
     "verbatim",
     "verbatim*",
@@ -29,6 +36,7 @@ pub const DEFAULT_VERBATIM_ENVIRONMENTS: &[&str] = &[
     "listing",
     "lstlisting",
     "minted",
+    "comment",
 ];
 
 /// Environments whose bodies are display math.
@@ -38,11 +46,20 @@ pub const DEFAULT_VERBATIM_ENVIRONMENTS: &[&str] = &[
 /// xxalignat, flalign, and multline, with starred definitions where listed
 /// here. `aligned`, `gathered`, `split`, and `cases` are inner structures, so
 /// an occurrence of one cannot close the outer display region.
+///
+/// The kernel's own displays are transcribed from `ltmath.dtx` (2026-06-01
+/// v1.2p): `eqnarray` and `eqnarray*` open with `\dollardollar@begin`, and
+/// `displaymath` is `\[`. `math` is `\(` — inline, and not listed here.
+/// Read as prose, an `eqnarray` body offered its closing `\label` to
+/// recognition (corpus E2, arXiv 2301.00068).
 pub(crate) const DISPLAY_MATH_ENVIRONMENTS: &[(&str, &[Argument])] = &[
     ("align", &[]),
     ("align*", &[]),
     ("alignat", &[Argument::Mandatory]),
     ("alignat*", &[Argument::Mandatory]),
+    ("displaymath", &[]),
+    ("eqnarray", &[]),
+    ("eqnarray*", &[]),
     ("equation", &[]),
     ("equation*", &[]),
     ("flalign", &[]),

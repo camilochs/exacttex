@@ -1,0 +1,6 @@
+transport: identical
+scanner: ref
+constructs: the kernel's `eqnarray`, `eqnarray*` and `displaymath` are display
+  bodies like amsmath's, transcribed from ltmath.dtx; the `\label` at the end
+  of the eqnarray is inventoried as an equation, and the references inside
+  the bodies are formula. Corpus E2, arXiv 2301.00068.

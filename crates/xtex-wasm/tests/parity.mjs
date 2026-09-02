@@ -161,6 +161,13 @@ try {
   writeFileSync(`${outDir}/wasm.revise.pair`, accepted);
 } catch {}
 
+// The ramp over a .tex project: the report, then each converted file,
+// every field length-prefixed. The fixture lives beside the wasm ones.
+const adoptDir = join(projectDir, "../../adopt/10-project");
+try {
+  writeFileSync(`${outDir}/wasm.adopt.bin`, call("xtex_adopt", bundle(adoptDir, "main.tex")));
+} catch {}
+
 // Optional: a TeX log to translate. Two length-prefixed texts, then the bundle.
 const [, , , , , , stderrPath, logPath] = process.argv;
 if (stderrPath && logPath) {

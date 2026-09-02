@@ -40,6 +40,14 @@ python3 tests/corpus/measure.py --verify manifest.json       # are the bytes sti
 
 ---
 
+## The adoption ramp against the E2 twins
+
+`adopt-twins.py` runs `xtex adopt` over every paper of the E2 corpus and compares each converted file with
+the experiment's own twin, classifying every difference or failing. The command and the numbers it
+produced are in [`docs/adopt.md`](../../docs/adopt.md).
+
+---
+
 ## What is measured, and over which files
 
 Three numbers, and the first two are the project's promises rather than diagnostics about it.

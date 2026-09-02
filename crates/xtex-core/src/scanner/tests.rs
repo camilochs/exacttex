@@ -162,6 +162,25 @@ fn display_math_environments_hide_commands_and_constructs() {
 }
 
 #[test]
+fn a_display_body_opening_with_a_bracket_is_still_hidden_and_so_is_the_next_one() {
+    // `\begin{equation} [a,b)` once claimed the bracket as an optional
+    // argument of `\begin`, ran past the body's first byte, and left the
+    // opening pending — so neither this body nor any later display in the
+    // file was hidden (corpus E2, arXiv 2312.17141).
+    for (name, signature) in DISPLAY_MATH_ENVIRONMENTS {
+        let argument = if signature.is_empty() { "" } else { "{2}" };
+        let input = format!(
+            "\\begin{{{name}}}{argument} [A,B] @ref(hidden) \\end{{{name}}} then\n\\begin{{{name}}}{argument}\n@id(eq:b) @ref(hidden) \\end{{{name}}} @ref(after)"
+        );
+        assert_eq!(
+            constructs(input.as_bytes()),
+            [EntryToken::Id, EntryToken::Ref],
+            "{name}: {input}"
+        );
+    }
+}
+
+#[test]
 fn an_id_inside_a_display_body_is_a_declaration_and_the_rest_stays_formula() {
     for input in [
         &b"\\begin{equation}\n x = 1 @id(eq:a) @ref(no)\n\\end{equation} @ref(after)"[..],

@@ -684,6 +684,62 @@ pub unsafe extern "C" fn xtex_revise(pointer: *const u8, len: usize) -> *mut u8 
     result(&pair(&rewritten, &updated_sidecar))
 }
 
+/// Runs the mechanical ramp over the bundle's root and returns the report
+/// with the files to write.
+///
+/// Input: a bundle whose root is a `.tex` file, named at the bundle's top
+/// level so that the emission the guarantee compares is the one `xtex
+/// build` writes from the project root. The answer is the JSON report
+/// `xtex adopt --json` prints, length-prefixed, then `u32 count` and
+/// `count × (u32 name_len · name · u32 data_len · data)`: one entry per
+/// file that passed, under the `.xtex` name the host writes it to. The
+/// `.tex` files are the host's to keep or remove — the same two choices
+/// the CLI offers as `--in-place`. A file that did not pass is in the
+/// report and not in the list; nothing is written by this module.
+///
+/// # Safety
+///
+/// `pointer` must point at `len` readable bytes.
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn xtex_adopt(pointer: *const u8, len: usize) -> *mut u8 {
+    let bytes = unsafe { input(pointer, len) };
+    let Some(bundle) = decode_bundle(&bytes) else {
+        return result(&[]);
+    };
+    let Ok(adopted) = xtex_core::adopt::adopt(&bundle.store, &bundle.root) else {
+        return result(&[]);
+    };
+    let mut json = String::new();
+    xtex_core::adopt::to_json(&adopted, &mut json);
+    let written: Vec<(&str, &[u8])> = adopted
+        .files
+        .iter()
+        .filter_map(|file| {
+            file.converted
+                .as_deref()
+                .map(|bytes| (file.output.as_str(), bytes))
+        })
+        .collect();
+    let mut out = Vec::new();
+    push_field(json.as_bytes(), &mut out);
+    out.extend_from_slice(
+        &u32::try_from(written.len())
+            .unwrap_or(u32::MAX)
+            .to_le_bytes(),
+    );
+    for (name, data) in written {
+        push_field(name.as_bytes(), &mut out);
+        push_field(data, &mut out);
+    }
+    result(&out)
+}
+
+/// Appends one length-prefixed field.
+fn push_field(bytes: &[u8], out: &mut Vec<u8>) {
+    out.extend_from_slice(&u32::try_from(bytes.len()).unwrap_or(u32::MAX).to_le_bytes());
+    out.extend_from_slice(bytes);
+}
+
 /// Reads one length-prefixed byte field from a buffer.
 fn take_bytes(bytes: &[u8], at: &mut usize) -> Option<Vec<u8>> {
     let end = at.checked_add(4)?;
