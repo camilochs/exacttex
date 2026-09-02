@@ -1,0 +1,31 @@
+\begin{figure}
+\centering
+\includegraphics{y.png}
+\caption{After the caption}@id(fig:cap)
+\end{figure}
+\begin{table*}
+\caption{Wide}@id(fig:wrong)
+\begin{tabular}{cc}
+a & b @id(tab:cell)
+\end{tabular}
+\end{table*}
+\begin{algorithm}[H]
+\caption{Steps}@id(alg:cap)
+\end{algorithm}
+\begin{figure*}
+\begin{minipage}{0.5\linewidth}
+\begin{subfigure}{\linewidth}
+\caption{Left}@id(fig:sub)
+\end{subfigure}
+\end{minipage}
+@id(fig:end)
+\end{figure*}
+Prose between two floats. @id(fig:between)
+\begin{table}@id(tab:opener)
+\end{table}
+\begin{lstlisting}
+\caption{Shown as code}@id(fig:listing)
+\end{lstlisting}
+Table~@ref(fig:cap) @ref(fig:wrong) Figure~@ref(tab:cell) Figure~@ref(alg:cap)
+Table~@ref(fig:sub) Table~@ref(fig:end) Table~@ref(fig:between) Figure~@ref(tab:opener)
+@ref(fig:listing)

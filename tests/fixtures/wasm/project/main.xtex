@@ -17,5 +17,10 @@ la figura~@ref(fig:plot) lo ilustra; ver @Cref(sec:model, sec:intro).
 
 El literal \verb|sec:model| queda como transporte.
 
+\begin{figure}[t]
+  \centering
+  \caption{Un pie seguido de su identificador.}@id(fig:body)
+\end{figure}
+
 \bibliography{refs}
 \end{document}

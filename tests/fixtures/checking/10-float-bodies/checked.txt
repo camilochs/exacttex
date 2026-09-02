@@ -1,0 +1,8 @@
+XT1003|figure|fig:listing|774|11|identifier `fig:listing` is not declared
+XT1004|figure|fig:wrong|627|9|reference `fig:wrong` requires figure, but its target is table
+XT1020|table|fig:cap|602|5|prose says `Table` but `fig:cap` is a figure
+XT1020|figure|tab:cell|638|6|prose says `Figure` but `tab:cell` is a table
+XT1020|figure|alg:cap|660|6|prose says `Figure` but `alg:cap` is an algorithm
+XT1020|table|fig:sub|681|5|prose says `Table` but `fig:sub` is a figure
+XT1020|table|fig:end|701|5|prose says `Table` but `fig:end` is a figure
+XT1020|figure|tab:opener|745|6|prose says `Figure` but `tab:opener` is a table

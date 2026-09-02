@@ -317,6 +317,9 @@ impl SymbolTable {
                 .get(document.source())
                 .and_then(|source| appendix_switch_at(source.bytes()))
         };
+        let floats = sources
+            .get(document.source())
+            .map_or_else(Vec::new, |source| float_bodies(source.bytes()));
         document.walk(|node| {
             let (kind, construct) = match node {
                 Node::Construct { kind, span, .. } => (*kind, *span),
@@ -378,6 +381,7 @@ impl SymbolTable {
                             payload.source,
                             construct,
                             switch.is_some_and(|at| at < construct.start()),
+                            &floats,
                         ),
                         _ => EntityClass::UnknownOpen,
                     };
@@ -636,11 +640,60 @@ fn inside_display_math(bytes: &[u8], at: usize) -> bool {
     false
 }
 
+/// The environments whose whole body classes an `@id` inside it.
+///
+/// The label of a real float follows its `\caption`, or its
+/// `\includegraphics` lines, or closes the environment; only the header
+/// slot was read, so after `xtex adopt` every `fig:` and `alg:` identifier
+/// in a converted paper was unknown-open, and `@ref(fig:x)` on a table
+/// declared that way was never `XT1004` (issue #161). Nested `subfigure`,
+/// `minipage` and `tabular` bodies belong to the float around them; a
+/// display body inside a float keeps its own class.
+const FLOAT_ENVIRONMENTS: &[(&str, EntityClass)] = &[
+    ("figure", EntityClass::Figure),
+    ("figure*", EntityClass::Figure),
+    ("table", EntityClass::Table),
+    ("table*", EntityClass::Table),
+    ("algorithm", EntityClass::Algorithm),
+    ("algorithm*", EntityClass::Algorithm),
+];
+
+/// Every closed float in `bytes`, with the class it gives and its span.
+fn float_bodies(bytes: &[u8]) -> Vec<(EntityClass, Span)> {
+    crate::scanner::closed_environments(bytes)
+        .into_iter()
+        .filter_map(|(name, body)| {
+            let name = &bytes[name.start()..name.end()];
+            FLOAT_ENVIRONMENTS
+                .iter()
+                .find(|(known, _)| known.as_bytes() == name)
+                .map(|(_, class)| (*class, body))
+        })
+        .collect()
+}
+
+/// The class of the innermost float whose body holds `at`.
+fn enclosing_float(floats: &[(EntityClass, Span)], at: usize) -> Option<EntityClass> {
+    floats
+        .iter()
+        .filter(|(_, body)| body.start() <= at && at < body.end())
+        .min_by_key(|(_, body)| body.len())
+        .map(|(class, _)| *class)
+}
+
+/// The class an `@id` at `construct` declares.
+///
+/// In order: a display-math body around it; the construct it attaches
+/// backwards to within the bounded whitespace of `docs/grammar.md` §4 — a
+/// sectioning command, a closed display, an environment header; then the
+/// float whose body holds it. An `@id` on nothing the compiler models is
+/// unknown-open.
 fn attached_class(
     sources: &Sources,
     source: SourceId,
     construct: Span,
     in_appendix: bool,
+    floats: &[(EntityClass, Span)],
 ) -> EntityClass {
     let Some(bytes) = sources.get(source).map(crate::source::Source::bytes) else {
         return EntityClass::UnknownOpen;
@@ -648,20 +701,28 @@ fn attached_class(
     if inside_display_math(bytes, construct.start()) {
         return EntityClass::Equation;
     }
-    let mut start = construct.start();
+    header_class(bytes, construct.start(), in_appendix)
+        .or_else(|| enclosing_float(floats, construct.start()))
+        .unwrap_or(EntityClass::UnknownOpen)
+}
+
+/// The class of the attachable construct within the bounded whitespace
+/// before `at`, if there is one.
+fn header_class(bytes: &[u8], at: usize, in_appendix: bool) -> Option<EntityClass> {
+    let mut start = at;
     let mut lines = 0usize;
-    while start > 0 && construct.start() - start < 256 && bytes[start - 1].is_ascii_whitespace() {
+    while start > 0 && at - start < 256 && bytes[start - 1].is_ascii_whitespace() {
         start -= 1;
         if bytes[start] == b'\n' {
             lines += 1;
             if lines > 2 {
-                return EntityClass::UnknownOpen;
+                return None;
             }
         }
     }
     let before = &bytes[..start];
     if before.ends_with(b"\\]") || before.ends_with(b"$$") {
-        return EntityClass::Equation;
+        return Some(EntityClass::Equation);
     }
     for command in [
         b"\\section".as_slice(),
@@ -671,11 +732,11 @@ fn attached_class(
         b"\\part",
     ] {
         if last_command_with_balanced_argument(before, command) {
-            return if in_appendix {
+            return Some(if in_appendix {
                 EntityClass::Appendix
             } else {
                 EntityClass::Section
-            };
+            });
         }
     }
     for (environment, class) in [
@@ -691,10 +752,10 @@ fn attached_class(
         if before.ends_with(opening.as_bytes())
             || before.ends_with(format!("\\begin{{{environment}*}}").as_bytes())
         {
-            return class;
+            return Some(class);
         }
     }
-    EntityClass::UnknownOpen
+    None
 }
 
 fn last_command_with_balanced_argument(bytes: &[u8], command: &[u8]) -> bool {
@@ -1093,6 +1154,64 @@ mod tests {
     }
 
     #[test]
+    fn an_id_anywhere_inside_a_float_takes_the_floats_class() {
+        // The label of a real float follows its caption, its graphics
+        // lines, or closes the environment; only the header slot was read,
+        // so every one of these was unknown-open (issue #161).
+        for (text, class) in [
+            (
+                "\\begin{figure}\n\\centering\n\\includegraphics{y.png}\n\\caption{A}@id(x)\n\\end{figure}",
+                EntityClass::Figure,
+            ),
+            (
+                "\\begin{table*}\n\\caption{A}\n\\begin{tabular}{cc}\na & b @id(x)\n\\end{tabular}\n\\end{table*}",
+                EntityClass::Table,
+            ),
+            (
+                "\\begin{algorithm}[H]\n\\caption{A}\n\\begin{algorithmic}\n\\State x\n\\end{algorithmic}\n@id(x)\n\\end{algorithm}",
+                EntityClass::Algorithm,
+            ),
+            (
+                "\\begin{figure*}\n\\begin{minipage}{0.5\\linewidth}\n\\begin{subfigure}{\\linewidth}\n\\caption{L}@id(x)\n\\end{subfigure}\n\\end{minipage}\n\\end{figure*}",
+                EntityClass::Figure,
+            ),
+            // The header slot and a display body keep their precedence.
+            (
+                "\\begin{table}@id(x)\n\\caption{A}\n\\end{table}",
+                EntityClass::Table,
+            ),
+            (
+                "\\begin{table}\n\\caption{A}\n\\begin{equation} y @id(x) \\end{equation}\n\\end{table}",
+                EntityClass::Equation,
+            ),
+        ] {
+            let (_, t) = table(&[("a.xtex", text)]);
+            assert_eq!(t.declaration("x").map(|d| d.class), Some(class), "{text}");
+        }
+        // Prose between two floats, a float whose `\end` is never read, and
+        // a `\begin{figure}` in a comment or a listing class nothing.
+        for text in [
+            "\\begin{figure}\\caption{A}\\end{figure}\n@id(x)\n\\begin{table}\\caption{B}\\end{table}",
+            "\\begin{figure}\n\\caption{A}@id(x)\n",
+            "% \\begin{figure}\n\\caption{A}@id(x)",
+            "\\begin{lstlisting}\n\\begin{figure}\n\\end{lstlisting}\n@id(x)",
+        ] {
+            let (_, t) = table(&[("a.xtex", text)]);
+            assert_eq!(
+                t.declaration("x").map(|d| d.class),
+                Some(EntityClass::UnknownOpen),
+                "{text}"
+            );
+        }
+        // Inside a listing the construct is not live text at all.
+        let (_, t) = table(&[(
+            "a.xtex",
+            "\\begin{figure}\n\\begin{lstlisting}\n@id(x)\n\\end{lstlisting}\n\\end{figure}",
+        )]);
+        assert!(t.declaration("x").is_none());
+    }
+
+    #[test]
     fn a_section_after_the_appendix_switch_is_an_appendix() {
         let text = "\\section{A}@id(sec:a) @ref(app:a)\n\\appendix\n\\section{B}@id(app:b)\n\\subsection{C}@id(app:c)\n@ref(app:b) @ref(app:c) @ref(sec:a)";
         let (_, t) = table(&[("a.xtex", text)]);
@@ -1191,16 +1310,16 @@ mod tests {
 
     #[test]
     fn an_id_inside_a_caption_is_declared() {
-        // Recognised because a caption is prose; its class is open because
-        // the caption's float is not read. Declared is what keeps a
-        // reference to it from being a false XT1003.
+        // Recognised because a caption is prose, and classed by the float
+        // around the caption. Declared is what keeps a reference to it
+        // from being a false XT1003.
         let (_, t) = table(&[(
             "a.xtex",
             "\\begin{figure}\\caption{A figure @id(fig:c)}\\end{figure} @ref(fig:c)",
         )]);
         assert_eq!(
             t.declaration("fig:c").map(|d| d.class),
-            Some(EntityClass::UnknownOpen)
+            Some(EntityClass::Figure)
         );
         assert_eq!(t.unresolved_references().count(), 0);
     }

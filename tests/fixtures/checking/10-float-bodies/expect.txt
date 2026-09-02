@@ -1,0 +1,10 @@
+transport: identical
+scanner: id id id id id id id id ref ref ref ref ref ref ref ref ref
+constructs: an `@id` anywhere inside a figure, table or algorithm environment
+  takes the environment's class — after the caption, in a nested tabular,
+  subfigure or minipage, at the end of the body, and in the starred forms —
+  so the word Table before a figure and Figure before a table or an
+  algorithm are XT1020, and `fig:wrong` on a table is XT1004. The header
+  slot still classes `tab:opener`; `fig:between` in prose stays unknown-open
+  and is silent; `fig:listing` inside a listing is not live text and is
+  undeclared. Issue #161.

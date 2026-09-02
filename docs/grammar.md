@@ -382,6 +382,14 @@ token inside a formula stays formula. The label inventory reads `\label` in the 
 is labelled from inside its own body far more often than from the header slot — 17 references to such
 labels were reported undeclared across 6 papers in corpus E2.
 
+**A float body declares.** `@id` anywhere inside `figure`, `table` or `algorithm`, starred or not — after
+the `\caption`, after the graphics lines, at the end of the body, or inside a nested `subfigure`,
+`minipage` or `tabular` — declares that environment's class, `Figure`, `Table` or `Algorithm`. The header
+slot, a sectioning command and a display-math body keep their precedence; an `@id` in prose between two
+floats, or inside a float whose `\end` the scanner never read, is unknown-open; a verbatim or listing body
+inside a float is not live text. The environment is delimited by the scanner's own `\begin` and `\end`, so
+one inside a comment or a listing opens nothing. Fixture `checking/10`.
+
 Before checking each root builds a **label inventory**. `\label` is a built-in known command with signature
 `m`, so its mandatory argument is selectable under §8 even though its bytes are otherwise opaque. A label
 enters the inventory only when it is tokenized as `\label` under default category codes, occurs outside every
@@ -450,6 +458,10 @@ Fixtures must include:
 11. `Figure~@ref(tab:main)` on a declared table, reported as `XT1020`, beside a matching word, a plural,
     an abbreviation, a lower-case word, a word not immediately before, and an unknown-class target, each
     silent (`checking/07`).
+12. `@id` after the caption of a `figure`, a `table*` and an `algorithm`, inside a `tabular`, a `minipage`
+    and a `subfigure` inside a float, at the end of a `figure*`, right after `\begin{table}`, in prose
+    between two floats, and inside a `lstlisting`, each with a reference that reports its class or its
+    absence (`checking/10`).
 
 ### Bibliography discovery and citation checking
 

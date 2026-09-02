@@ -351,6 +351,12 @@ fn editor_queries_answer_project_wide_and_identically_in_both_builds() {
         wasm_inventory.contains("\"references\":"),
         "counts must be present: {wasm_inventory}"
     );
+    // An `@id` after a caption inside a figure carries the float's class
+    // (#161), and both builds say so.
+    assert!(
+        wasm_inventory.contains("\"name\":\"fig:body\",\"class\":\"figure\""),
+        "the float's class must reach the inventory: {wasm_inventory}"
+    );
 
     // Completions, which must include identifiers from every file.
     let items =

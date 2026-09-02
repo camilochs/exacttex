@@ -109,6 +109,88 @@ pub fn readable_content(bytes: &[u8]) -> Vec<Span> {
     spans
 }
 
+/// Every environment the scanner read both ends of: the span of its name,
+/// and the span from its `\begin` through its `\end`.
+///
+/// A `\begin` or `\end` counts only where the scanner read it as a command,
+/// so one inside a comment, a verbatim body or a macro definition opens or
+/// closes nothing. A display-math body is an excluded region that carries
+/// its own `\end`, and closes here too. An environment whose `\end` was
+/// never read — the author never wrote it, or the file went to quarantine
+/// before it — has no extent the scanner located, and is left out. An
+/// `@id` takes the class of the float around it from this list, which is
+/// what keeps a second walk over the bytes from meeting a `\begin{figure}`
+/// the scanner had excluded.
+#[must_use]
+pub fn closed_environments(bytes: &[u8]) -> Vec<(Span, Span)> {
+    let mut open: Vec<(Span, usize)> = Vec::new();
+    let mut closed = Vec::new();
+    for piece in scan(bytes) {
+        let (span, at) = match piece {
+            Piece::Arguments(span) => (span, span.start()),
+            Piece::Excluded(span) if is_display_math_region(&bytes[span.start()..span.end()]) => {
+                let Some(end) = bytes[span.start()..span.end()]
+                    .windows(b"\\end{".len())
+                    .rposition(|w| w == b"\\end{")
+                else {
+                    continue;
+                };
+                (span, span.start() + end)
+            }
+            _ => continue,
+        };
+        if let Some(name) = environment_name(bytes, at, b"\\begin") {
+            open.push((name, span.start()));
+        } else if let Some(name) = environment_name(bytes, at, b"\\end") {
+            let wanted = &bytes[name.start()..name.end()];
+            // The innermost open environment of that name. Anything opened
+            // after it and still open was never closed, and is dropped. The
+            // body ends at the `}` closing the name: `\end` has no signature,
+            // so its piece also claims any braced group that follows it.
+            if let Some(index) = open
+                .iter()
+                .rposition(|(opened, _)| &bytes[opened.start()..opened.end()] == wanted)
+            {
+                let (opened, begin) = open[index];
+                open.truncate(index);
+                closed.push((
+                    opened,
+                    Span::new(
+                        u32::try_from(begin).unwrap_or(u32::MAX),
+                        u32::try_from(name.end() + 1).unwrap_or(u32::MAX),
+                    ),
+                ));
+            }
+        }
+    }
+    closed
+}
+
+/// The name in `\begin{name}` or `\end{name}` at `at`, given the keyword.
+fn environment_name(bytes: &[u8], at: usize, keyword: &[u8]) -> Option<Span> {
+    let mut cursor = at + keyword.len();
+    if bytes.get(at..cursor)? != keyword {
+        return None;
+    }
+    while bytes.get(cursor).is_some_and(u8::is_ascii_whitespace) {
+        cursor += 1;
+    }
+    if bytes.get(cursor) != Some(&b'{') {
+        return None;
+    }
+    let start = cursor + 1;
+    let end = start
+        + bytes[start..]
+            .iter()
+            .position(|byte| matches!(byte, b'}' | b'{' | b'\n' | b'\r'))?;
+    (bytes[end] == b'}' && end > start).then(|| {
+        Span::new(
+            u32::try_from(start).unwrap_or(u32::MAX),
+            u32::try_from(end).unwrap_or(u32::MAX),
+        )
+    })
+}
+
 /// The comma-separated keys in a construct payload, as byte ranges relative
 /// to the payload, untrimmed.
 ///
