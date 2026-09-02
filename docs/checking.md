@@ -62,6 +62,11 @@ The second and third lines are the whole checking policy in two symbols. `?O` is
 everything, so nothing involving unmodelled LaTeX can ever be inconsistent, so nothing involving unmodelled
 LaTeX can ever fail. `?O` does not mean *invalid*. It means *the compiler has no grounds*.
 
+`xtex inventory [--json] <root.xtex>` lists what a project declares — every identifier with its class, the
+number of references that demand it, and the file, line and column it was declared at — through the same
+core function the WebAssembly module calls, so a count of classes taken from the released binary is the
+count the browser holds for the same project. Listing is not checking: the command reports and exits zero.
+
 ### How a reference states what it wants
 
 A comparison needs two sides. The declaration supplies one: `\figure(fig:main)` is a `Figure` by its
