@@ -792,19 +792,14 @@ fn header_class(bytes: &[u8], at: usize, in_appendix: bool) -> Option<EntityClas
 /// groups inside it, so a title or caption holding `\textbf{…}`,
 /// `\cite{…}` or `$x^{2}$` attaches; the last `{` in the prefix, which is
 /// what was read before, is that inner group's. The forward scan then
-/// confirms the group, with its own rule for `%`. The last `{` stays as
-/// the second reading, so that nothing that attached before stops
-/// attaching: it is what reaches a command on a line that a `%` opens.
+/// confirms the group, with its own rule for `%`. A command on a line
+/// that a `%` opens is a comment, and attaches nothing (issue #166).
 fn last_command_with_balanced_argument(bytes: &[u8], command: &[u8]) -> bool {
-    let attaches = |open: usize| {
-        bytes[..open].ends_with(command)
-            && crate::scanner::balanced_end(bytes, open) == Some(bytes.len())
+    let Some(open) = argument_opening(bytes) else {
+        return false;
     };
-    argument_opening(bytes).is_some_and(attaches)
-        || bytes
-            .iter()
-            .rposition(|byte| *byte == b'{')
-            .is_some_and(attaches)
+    bytes[..open].ends_with(command)
+        && crate::scanner::balanced_end(bytes, open) == Some(bytes.len())
 }
 
 /// The `{` opening the braced group `bytes` ends with, if it ends with one.
@@ -1393,13 +1388,17 @@ mod tests {
             let (_, t) = table(&[("a.xtex", text)]);
             assert_eq!(t.declaration("x").map(|d| d.class), Some(class), "{text}");
         }
-        // Braces that do not balance attach nothing. (An unclosed group
+        // Braces that do not balance attach nothing (an unclosed group
         // runs to the line's end and takes the `@id` with it before this
-        // rule is reached, so the unbalanced case here is a stray `}`.)
+        // rule is reached, so the unbalanced case here is a stray `}`),
+        // and neither does a command on a commented-out line.
         for text in [
             "\\section{A}}@id(x)",
             "\\captionof{figure}{A} b}@id(x)",
             "\\section{A} % }\n@id(x)",
+            "% \\section{A}\n@id(x)",
+            "\\section{A}\n%\\subsection{B}\n@id(x)",
+            "text % \\captionof{figure}{A}\n@id(x)",
         ] {
             let (_, t) = table(&[("a.xtex", text)]);
             assert_eq!(
