@@ -25,7 +25,9 @@ fn codes_in_sources(dir: &Path) -> BTreeSet<String> {
     let mut found = BTreeSet::new();
     let mut stack = vec![dir.to_path_buf()];
     while let Some(here) = stack.pop() {
-        let Ok(entries) = std::fs::read_dir(&here) else { continue };
+        let Ok(entries) = std::fs::read_dir(&here) else {
+            continue;
+        };
         for entry in entries.flatten() {
             let path = entry.path();
             if path.is_dir() {
@@ -63,7 +65,8 @@ fn every_code_the_compiler_emits_is_documented() {
     let root = root();
     let emitted = codes_in_sources(&root.join("crates"));
     let documented = codes_in(
-        &std::fs::read_to_string(root.join("docs/checking.md")).expect("docs/checking.md is readable"),
+        &std::fs::read_to_string(root.join("docs/checking.md"))
+            .expect("docs/checking.md is readable"),
     );
     let undocumented: Vec<&String> = emitted.difference(&documented).collect();
     assert!(
