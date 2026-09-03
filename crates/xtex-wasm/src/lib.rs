@@ -627,7 +627,12 @@ pub unsafe extern "C" fn xtex_revise(pointer: *const u8, len: usize) -> *mut u8 
         return result(&[]);
     };
 
-    let outcome: Result<Resolved, ()> = match action.as_str() {
+    // The reason travels with the refusal. A surface that answers "no" and
+    // keeps the reason to itself leaves its caller to invent one, and an
+    // invented reason is worse than none: on 2026-09-03 an editor told its
+    // author the sidecar was unreadable when the truth was that a construct
+    // written inside a command's argument is invisible to the compiler.
+    let outcome: Result<Resolved, xtex_core::review::ReviewError> = match action.as_str() {
         "accept" | "reject" => {
             let resolution = if action == "accept" {
                 Resolution::Accept
@@ -636,7 +641,6 @@ pub unsafe extern "C" fn xtex_revise(pointer: *const u8, len: usize) -> *mut u8 
             };
             resolve(&source, &id, resolution)
                 .map(|(rewritten, removed)| (rewritten, vec![(id.clone(), resolution, removed)]))
-                .map_err(|_| ())
         }
         "accept-all" => {
             let mut current = source.clone();
@@ -651,7 +655,7 @@ pub unsafe extern "C" fn xtex_revise(pointer: *const u8, len: usize) -> *mut u8 
                         current = rewritten;
                         events.push((next, Resolution::Accept, removed));
                     }
-                    Err(_) => break Err(()),
+                    Err(error) => break Err(error),
                 }
             }
         }
@@ -661,13 +665,14 @@ pub unsafe extern "C" fn xtex_revise(pointer: *const u8, len: usize) -> *mut u8 
             }
             return match prune_sidecar(&sidecar, &source, &by, &stamp) {
                 Ok(pruned) => result(&pair(&source, &pruned)),
-                Err(_) => result(&[]),
+                Err(error) => result(&refusal(&error)),
             };
         }
         _ => return result(&[]),
     };
-    let Ok((rewritten, events)) = outcome else {
-        return result(&[]);
+    let (rewritten, events) = match outcome {
+        Ok(answer) => answer,
+        Err(error) => return result(&refusal(&error)),
     };
     let updated_sidecar = if sidecar.is_empty() {
         Vec::new()
@@ -676,7 +681,7 @@ pub unsafe extern "C" fn xtex_revise(pointer: *const u8, len: usize) -> *mut u8 
         for (event_id, resolution, removed) in &events {
             match resolve_sidecar(&records, event_id, *resolution, &by, &stamp, removed) {
                 Ok(next) => records = next,
-                Err(_) => return result(&[]),
+                Err(error) => return result(&refusal(&error)),
             }
         }
         records
@@ -760,6 +765,14 @@ fn bundle_file(bundle: &Bundle, name: &str) -> Option<Vec<u8>> {
 }
 
 /// Two length-prefixed fields in one result.
+/// A refusal, in the shape a caller already knows how to read: an empty
+/// first item — there is no rewritten document — and the reason in the
+/// second, as `CODE: message`. A caller that only checks the first item
+/// still behaves as it did; one that reads the second can say why.
+fn refusal(error: &xtex_core::review::ReviewError) -> Vec<u8> {
+    pair(&[], format!("{}: {}", error.code, error.message).as_bytes())
+}
+
 fn pair(first: &[u8], second: &[u8]) -> Vec<u8> {
     let mut out = Vec::with_capacity(8 + first.len() + second.len());
     out.extend_from_slice(&u32::try_from(first.len()).unwrap_or(u32::MAX).to_le_bytes());
