@@ -142,6 +142,7 @@ error.
 | `XT1012` | A sidecar record whose revision construct no longer exists | any |
 | `XT1013` | A sidecar that cannot be read, or that names a different document | any |
 | `XT1014` | An explicit inline construct (`@id`, a reference or citation command, `@import`) whose closing `)` is not found before line end | any |
+| `XT1018` | Under `--verified` only: a recorded verdict of `mismatch`, or a `partial` whose difference is high severity, on an entry that an `@cite(k)` demands | `Citation` |
 | `XT1020` | An entity-kind word immediately before a reference construct names class A, and the target's known class is B, A ≠ B | both known |
 
 Two properties hold across the whole table and are tested as properties, not as examples:
@@ -152,6 +153,25 @@ Two properties hold across the whole table and are tested as properties, not as 
 2. **Every row requires both sides known.** `XT1004` and `XT1020` cannot fire when either side is `?O`,
    and `XT1005` cannot fire when the bibliography is `Unavailable`. Uncertainty on either side means
    silence.
+
+`XT1018` is the only row that depends on a file outside the document, and it is the one row with a double
+opt-in. All three conditions must hold together:
+
+- the record exists and the author passed `--verified` (without the flag the check is byte-for-byte what it
+  always was);
+- the entry is demanded by an explicit `@cite(k)`, never by a plain `\cite{k}`;
+- the recorded verdict is `mismatch` — the source answers with a different work — or `partial` with a
+  high-severity difference, which today means the author list.
+
+Everything else the record can say is advisory and cannot change the exit code: a dead address, an address
+that answered from elsewhere, an entry the verifier could not settle, a verdict older than the window, an
+entry edited since it was verified, and a `partial` whose differences are all medium (year, pages, venue).
+The same is true of a `mismatch` on an entry no `@cite` demands.
+
+This is the gradual policy applied to the world outside the document, and it is deliberate: a `.tex` file
+renamed to `.xtex` can never fail because of the network, and the hard error is reserved for the case
+verification exists to catch — an entry that names a work the source does not have. It is also `xtex check`
+that fails, never `xtex build`: the build does not read the record, so the PDF is produced either way.
 
 ### Exit codes
 
@@ -184,12 +204,18 @@ The class of things that are advisory and not errors:
 |---|---|---|
 | `XT2001` | The document contains `@cite`, and the bibliography is `Unavailable` (see §7) — the advisory is about the file, never about a key | by default |
 | `XT2002` | An `@word(…)` in prose that no construct claims and that reads like a command — `@eqref(eq:x)`, `@citeyear(k)`. The bytes are transported, so they reach the PDF as literal text with exit 0; the advisory names the reference or citation commands that are checked | by default |
+| `XT1015` | Under `--verified`: the record itself cannot be read, so nothing in it is replayed | by default |
+| `XT1016` | Under `--verified`: the claim was edited after it was verified, so the recorded verdict no longer speaks for it | by default |
+| `XT1017` | Under `--verified`: the verdict is older than the window, or carries a date that cannot be read | by default |
+| `XT1018` | Under `--verified`: the verdicts of the hard-error row, where no `@cite` demands the entry, or where the differences are all medium — a year, a page range, a venue | by default |
+| `XT1019` | Under `--verified`: the verifier could not settle the entry, an address did not answer, or an address answered from somewhere else | by default |
 | — | An unresolved `\ref` or `\cite` written in plain LaTeX | `--strict-tex` |
 | — | A `\label` in an opaque region that appears to collide with an `@id` | `--strict-tex` |
 | — | A region that entered quarantine early, which is a coverage signal rather than a defect | `--strict-tex` |
 
-Codes are assigned in two ranges that do not overlap: `XT1nnn` is a hard error, `XT2nnn` an advisory. A row
-without a code is not implemented yet.
+Codes are assigned in two ranges: `XT2nnn` is always an advisory, and `XT1nnn` is a hard error **except in
+the record family**, `XT1015`–`XT1019`, where the severity is stated per row above and only `XT1018` can
+reach the exit code. A row without a code is not implemented yet.
 
 `XT2002` is printed by default rather than behind `--strict-tex` for one reason: the shape it reports is
 ExactTeX's own entry-token shape, not plain LaTeX. Measured on 2026-09-01 with
