@@ -5,7 +5,7 @@ use xtex_core::verification::{
     BibVerdict, ClaimKind, DiffSeverity, FieldDiff, Verdict, VerificationRecord, VerifiedClaim,
     write_record,
 };
-use xtex_wasm::{xtex_check_with_record, xtex_claims};
+use xtex_wasm::{xtex_check_with_record, xtex_claims, xtex_revise};
 
 fn push_text(out: &mut Vec<u8>, text: &str) {
     out.extend_from_slice(&u32::try_from(text.len()).expect("fits").to_le_bytes());
@@ -136,4 +136,35 @@ fn an_unreadable_record_is_an_advisory_not_a_silent_skip() {
     let answer = call(xtex_check_with_record, &input);
     assert!(answer.contains("XT1015"), "{answer}");
     assert!(answer.contains("unreadable"), "{answer}");
+}
+
+/// A refusal says why. The editor that consumes this surface printed its own
+/// guess — "rejecting needs the sidecar" — for every failure, including the
+/// one that had nothing to do with a sidecar: a construct written inside a
+/// command's argument, which the compiler does not read. A surface that keeps
+/// the reason to itself invites exactly that invention.
+#[test]
+fn a_refused_resolution_answers_with_its_reason() {
+    let source = "\\documentclass{article}\n\\begin{document}\nplain\n\\end{document}\n";
+    let mut input = Vec::new();
+    for field in [
+        "accept",
+        "change:absent",
+        "camilochs",
+        "2026-09-03T00:00:00Z",
+        "",
+    ] {
+        push_text(&mut input, field);
+    }
+    input.extend_from_slice(&bundle("main.xtex", &[("main.xtex", source)]));
+    let answer = call(xtex_revise, &input);
+    let bytes = answer.as_bytes();
+    let rewritten = u32::from_le_bytes(bytes[..4].try_into().expect("length")) as usize;
+    assert_eq!(rewritten, 0, "a refusal rewrites nothing: {answer}");
+    let reason_len = u32::from_le_bytes(bytes[4..8].try_into().expect("length")) as usize;
+    let reason = &answer[8..8 + reason_len];
+    assert!(
+        reason.starts_with("XT1002") && reason.contains("change:absent"),
+        "the reason names the code and the revision: {reason}"
+    );
 }
