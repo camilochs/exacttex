@@ -115,9 +115,15 @@ its findings as ordinary diagnostics at the claim's own span — a mismatch on t
 on the URL's line, each wording dated. Without `--verified`, the check is byte-for-byte what it always
 was.
 
-Severity follows the gradual policy of the rest of the language: a finding is a hard error only where the
-author opted in (an `@cite` demanding the entry, met by a `mismatch` or a high-severity diff); everything
-else — reachability, expiry, drift — is advisory. The WebAssembly surface exposes the same two calls
+Severity follows the gradual policy of the rest of the language, with the codes named so a reader can find
+them: `XT1018` for a verdict about the entry itself, `XT1019` for one about reaching an address, `XT1017`
+for a verdict older than the window, `XT1016` for a claim edited since it was verified. Of those only
+`XT1018` can reach the exit code, and only when the author opted in twice — the record passed with
+`--verified`, and the entry demanded by an explicit `@cite(k)` — and the verdict is `mismatch` or a
+`partial` whose difference is high severity, which today means the author list. Everything else —
+reachability, expiry, drift, a medium difference in year or pages, a mismatch on an entry no `@cite`
+demands — is advisory, and no advisory changes the exit code. `xtex build` never reads the record:
+the failure, when there is one, belongs to `xtex check`. [`checking.md`](checking.md) §3 carries the rows. The WebAssembly surface exposes the same two calls
 (`xtex_claims`, `xtex_check_with_record`), so an editor in a browser replays the same record with the
 same answers; the parity suite holds it to that.
 
