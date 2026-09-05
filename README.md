@@ -8,6 +8,9 @@
   <a href="https://github.com/camilochs/exacttex/actions/workflows/rust.yml"><img src="https://github.com/camilochs/exacttex/actions/workflows/rust.yml/badge.svg" alt="CI"></a>
   <img src="https://img.shields.io/badge/license-MIT-5a23ee" alt="MIT">
   <img src="https://img.shields.io/badge/dependencies-0-082768" alt="zero dependencies">
+  <a href="https://github.com/camilochs/exacttex/releases"><img src="https://img.shields.io/github/v/release/camilochs/exacttex?label=release&color=082768" alt="latest release"></a>
+  <img src="https://img.shields.io/badge/rust-1.88%2B-5a23ee" alt="Rust 1.88 or newer">
+  <a href="https://camilochs.github.io/exacttex/"><img src="https://github.com/camilochs/exacttex/actions/workflows/docs.yml/badge.svg" alt="docs"></a>
 </p>
 
 ExactTeX is LaTeX with gradual annotation. You name the objects you want checked; everything else stays
