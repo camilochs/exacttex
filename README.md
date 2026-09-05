@@ -10,24 +10,20 @@
   <img src="https://img.shields.io/badge/dependencies-0-082768" alt="zero dependencies">
 </p>
 
-ExactTeX is LaTeX with gradual annotation: you name the object you want checked, and what you do not name
-stays ordinary LaTeX, transported byte for byte. Rename a `.tex` file to `.xtex` and it keeps working; from
-there you choose how much to annotate, and what you annotate is guaranteed.
+ExactTeX is LaTeX with gradual annotation. You name the objects you want checked; everything else stays
+ordinary LaTeX and is copied through byte for byte. Rename a `.tex` file to `.xtex` and it still compiles.
+Annotate as much or as little as you want. What you annotate is checked.
 
-You can use ExactTeX in the browser today at **[Vitela](https://vitela.artificialfallibility.com/)** —
-an editor built on the compiler's WebAssembly build, with the same checks, diagnostics and navigation
-running locally in the page.
-
+You can try it in the browser at [Vitela](https://vitela.artificialfallibility.com/), an editor built on
+the compiler's WebAssembly build. The checks run locally in the page.
 
 > Note: I’m a software engineer and AI researcher. This is a project I built using agents, but the design is entirely my responsibility and is part of my personal project/philosophy, [Artificial Fallibility Labs](https://labs.artificialfallibility.com/).
 
 ---
 
-## What it is for
+## What it does
 
-Two things LaTeX cannot do today.
-
-**Errors in your own words.** When something does not fit on the page, LaTeX says:
+**Errors in your own words.** When a table is too wide, LaTeX says:
 
 ```
 Overfull \hbox (12.3pt too wide) in paragraph at lines 45--47
@@ -40,16 +36,16 @@ your table "results" runs 12.3pt past the right margin
 paper.xtex:212 — column 3 does not fit the width you declared
 ```
 
-Same fact, using the name you gave the object. This works only because you declared it — which is what the
-syntax is for. It gives the tooling names to speak with.
+Same fact, with the name you gave the table. That is what the annotations are for: they give the tooling
+names to use.
 
-**Revisions that live in the file.** Word stores tracked changes inside the `.docx`, which is why tools can
-propose edits you accept or reject. LaTeX has no equivalent, so every tool builds its own layer and none of
-them interoperate. ExactTeX puts the model in the format.
+**Revisions inside the file.** Word keeps tracked changes inside the `.docx`, so other tools can propose
+edits you accept or reject. LaTeX has nothing like it, and every tool builds its own incompatible layer.
+ExactTeX puts the change model in the file format.
 
 ---
 
-## Try it in a minute
+## Try it
 
 ```sh
 git clone https://github.com/camilochs/exacttex
@@ -62,9 +58,8 @@ coverage: 11.8%
 bibliography: unavailable — the document declares no bibliography
 ```
 
-The file is ordinary LaTeX with one section annotated; the meter says how much of the document is
-under contract. Now misspell the reference — change `@ref(sec:results)` to `@ref(sec:resutls)` —
-and check again:
+The file is ordinary LaTeX with one section annotated. `coverage` is the share of the document under
+check. Now misspell the reference: change `@ref(sec:results)` to `@ref(sec:resutls)` and check again.
 
 ```
 error[XT1003]: identifier `sec:resutls` is not declared — did you mean `sec:results`?
@@ -76,8 +71,8 @@ error[XT1003]: identifier `sec:resutls` is not declared — did you mean `sec:re
   blame: xtex-construct
 ```
 
-Plain LaTeX would have typeset that as a quiet `??`. Requires a [Rust toolchain](https://rustup.rs)
-(1.88 or newer); the compiler itself has zero dependencies to fetch.
+Plain LaTeX would have typeset a `??` and said nothing. You need a [Rust toolchain](https://rustup.rs)
+(1.88 or newer). The compiler has no dependencies to fetch.
 
 ## What it looks like
 
@@ -105,59 +100,57 @@ Ordinary LaTeX keeps working: \emph{emphasis}, $E = mc^2$, \citep{blum2020}.
 \end{document}
 ```
 
-Two levels of annotation. `@id(x)` hangs off any LaTeX construct and buys checked references and safe rename
-— theorems and algorithms work without ExactTeX knowing what they are. A typed block such as `\figure(x)`
-also gives the compiler the fields to check: the image resolves, the caption is there, the column count
-matches the `tabular`.
+There are two levels of annotation. `@id(x)` attaches to any LaTeX construct and gives you checked
+references and safe renames; theorems and algorithms work without ExactTeX knowing what they are. A typed
+block such as `\figure(x)` also gives the compiler fields to check: the image exists, the caption is
+present, the column count matches the `tabular`.
 
 ---
 
 ## The type system is gradual
 
-A document is mostly LaTeX the compiler does not model, and that is not a defect to be fixed later. It is
-the state the language is built for.
+Most of a document is LaTeX the compiler does not model. That is the normal state, and the language is
+built for it.
 
-Every entity is either a class the compiler knows or `?O`, the **unknown open** type:
+Every entity is either a class the compiler knows or `?O`, the unknown open type:
 
 | Class | Where it comes from |
 |---|---|
-| `Figure`, `Table` | a typed block — `\figure(fig:x)`, `\table(tab:x)` |
-| `Section`, `Appendix`, `Algorithm`, `Equation` | `@id` attached to the LaTeX construct that is one |
-| `Citation` | `@cite`, checked against the bibliography rather than against identifiers |
+| `Figure`, `Table` | a typed block: `\figure(fig:x)`, `\table(tab:x)` |
+| `Section`, `Appendix`, `Algorithm`, `Equation` | `@id` attached to the LaTeX construct |
+| `Citation` | `@cite`, checked against the bibliography |
 | `?O` | everything else |
 
-`xtex inventory paper.xtex` prints that table for your own document: one line per identifier, with its
-class, how many references demand it, and where it was declared.
+`xtex inventory paper.xtex` prints this table for your document: one line per identifier, with its class,
+how many references use it, and where it was declared.
 
-*Open* is the load-bearing word. `?` in a gradual type system means "unknown among a fixed set of types".
-LaTeX has no fixed set — any package may define new constructors at any time — so the unknown here is
-unbounded. The term is from Malewski, Greenberg and Tanter, *Gradually Structured Data* (OOPSLA 2021).
+"Open" matters. In a gradual type system `?` means "unknown among a fixed set of types". LaTeX has no fixed
+set, because any package can define new constructors, so the unknown here is unbounded. The term comes from
+Malewski, Greenberg and Tanter, *Gradually Structured Data* (OOPSLA 2021).
 
-Comparison is **consistency**, not equality, and two lines are the entire checking policy:
+Comparison is consistency rather than equality. The whole checking policy is two lines:
 
 ```
 Known(A) ~ Known(B)   if and only if A == B     <- this can fail
 ?O       ~ T          for every T               <- this never fails
 ```
 
-`?O` is consistent with everything, so nothing involving unmodelled LaTeX can be inconsistent, so nothing
-involving unmodelled LaTeX can fail. **`?O` marks absence of grounds, not invalidity.**
+`?O` is consistent with everything, so nothing that involves unmodelled LaTeX can fail. `?O` means the
+compiler has no grounds to judge, and nothing more.
 
-Two consequences worth stating plainly.
+Two consequences follow.
 
-**Renaming a `.tex` to `.xtex` and changing nothing checks clean, because every entity in it is `?O`.**
-That holds by construction, without case-by-case care. That is the gradual guarantee (Siek, Vitousek, Cimini and
-Boyland, SNAPL 2015) instantiated for documents, and it is what makes the on-ramp real rather than a
-promise.
+Renaming a `.tex` to `.xtex` and changing nothing checks clean, because every entity in it is `?O`. This is
+the gradual guarantee (Siek, Vitousek, Cimini and Boyland, SNAPL 2015) applied to documents, and it is why
+the on-ramp works.
 
-**You choose how much to annotate, and the compiler tells you how much you chose.** `xtex check` reports
-coverage: the fraction of the document it checked. This is the analogue of `any` and `noImplicitAny`. The
-number matters less than its trend: a file that was 60% checked and is now 30% gained something the
-parser cannot model.
+You choose how much to annotate, and the compiler reports how much you chose. `xtex check` prints coverage,
+the fraction of the document it checked. It is the analogue of `any` and `noImplicitAny`. The trend
+matters more than the number: a file that went from 60% to 30% gained something the parser cannot model.
 
-The check that types buy, and that no LaTeX tool performs: `@ref(fig:main)` pointing at a `\table(fig:main)`
-— the prefix demands a figure, the declaration is a table. Its sibling: `Figure~@ref(tab:main)` on a
-table — the sentence says figure, the declaration says table. LaTeX compiles both and prints the wrong
+One check that types make possible and no LaTeX tool performs: `@ref(fig:main)` pointing at a
+`\table(fig:main)`. The prefix says figure; the declaration says table. Likewise `Figure~@ref(tab:main)`
+on a table: the sentence says figure, the declaration says table. LaTeX compiles both and prints the wrong
 word. See [`docs/checking.md`](docs/checking.md) and
 [`docs/decisions/0019`](docs/decisions/0019-prose-is-a-checked-side.md).
 
@@ -167,21 +160,22 @@ word. See [`docs/checking.md`](docs/checking.md) and
 
 ![ExactTeX architecture](docs/assets/architecture.svg)
 
-One zero-dependency core; three thin surfaces (terminal, editor, browser) that call it and are held byte-identical by a parity suite in CI; and the transport guarantee drawn where it belongs — outside the pipeline, because unannotated bytes are carried, never processed. The full walk: [docs/architecture.md](docs/architecture.md).
+One core with no dependencies. Three thin surfaces (terminal, editor, browser) call it, and a parity suite
+in CI keeps their output byte-identical. Unannotated bytes never enter the pipeline; they are carried
+around it. The full description is in [docs/architecture.md](docs/architecture.md).
 
-External verification — bibliography entries, URLs, DOIs and repositories checked against live
-sources — lives behind its own door: a separate step writes a dated record, and the compiler replays
-it offline, so the network never enters a compile. How and why: [docs/verification.md](docs/verification.md).
+External verification (bibliography entries, URLs, DOIs and repositories checked against live sources) is a
+separate step. It writes a dated record, and the compiler replays that record offline, so a compile never
+touches the network. See [docs/verification.md](docs/verification.md).
 
 ---
 
 ## What it is not
 
-It is not a shorter way to write LaTeX. TypeScript is more verbose than JavaScript; nobody adopted it to type
-less. You write more so the tooling knows more.
+It is not a shorter way to write LaTeX. TypeScript is more verbose than JavaScript, and nobody adopted it to
+type less. You write more so the tooling knows more.
 
-It does not replace TeX, does not typeset, and does not ask you to leave the LaTeX ecosystem. Your journal
-still receives a `.tex` file.
+It does not typeset and it does not replace TeX. Your journal still receives a `.tex` file.
 
 ---
 
@@ -189,24 +183,27 @@ still receives a `.tex` file.
 
 The compiler is still young. And yes, I built it with agents; without them, it would have taken months. The design, however, is mine.
 
-What is solid is the transport guarantee: untouched LaTeX comes out byte-identical. It is the oldest and most tested invariant. The checker, emitter, WebAssembly and LSP agree on the same input, enforced by CI. A book of mine—100+ pages, around forty packages, TikZ, an index and per-chapter bibliographies—compiles to the same page count as with full TeX Live.
+The transport guarantee (untouched LaTeX comes out byte-identical) is the oldest and most tested invariant.
+The checker, the emitter, the WebAssembly build and the LSP give the same answer for the same input, and CI
+enforces it. A book of mine (100+ pages, around forty packages, TikZ, an index, per-chapter
+bibliographies) compiles to the same page count as with a full TeX Live.
 
-What is newer is the change model. Three bugs found during real use in August 2026 exposed one underlying problem: different code paths disagreed about where text lives in a document. All three are fixed and covered by regression tests.
+The change model is newer. Three bugs found in real use in August 2026 had one cause: two code paths
+disagreed about where a document carries text. All three are fixed, each with a regression test.
 
-So the short version is: **document transport is mature; collaborative revision is newer.** If you find a bug, send me the document.
-
+Short version: document transport is mature; collaborative revision is newer. If you find a bug, send me
+the document.
 
 ---
 
 ## Documentation
 
-The full documentation lives at **<https://camilochs.github.io/exacttex/>** — the language
-specification, what the compiler calls an error, the change model, the WebAssembly and LSP
-surfaces, and every accepted decision with the evidence behind it. The same pages are the
-[`docs/`](docs/) folder in this repository, one Markdown file each.
+<https://camilochs.github.io/exacttex/> has the language specification, what the compiler calls an error,
+the change model, the WebAssembly and LSP surfaces, and every accepted decision with its evidence. The same
+pages live in [`docs/`](docs/), one Markdown file each.
 
-Two documents are binding for anyone changing the code: [`PHILOSOPHY.md`](PHILOSOPHY.md)
-(what may be claimed) and [`AGENTS.md`](AGENTS.md) (invariants and workflow).
+Two documents bind anyone changing the code: [`PHILOSOPHY.md`](PHILOSOPHY.md) (what may be claimed) and
+[`AGENTS.md`](AGENTS.md) (invariants and workflow).
 
 ---
 
@@ -215,5 +212,3 @@ Two documents are binding for anyone changing the code: [`PHILOSOPHY.md`](PHILOS
 MIT. See [`LICENSE`](LICENSE).
 
 An [AF Labs](https://labs.artificialfallibility.com/) project.
-
-If ExactTeX is useful to you, a star on this repository helps others find it — and tells us it is worth the care :)
