@@ -18,6 +18,9 @@ You can use ExactTeX in the browser today at **[Vitela](https://vitela.artificia
 an editor built on the compiler's WebAssembly build, with the same checks, diagnostics and navigation
 running locally in the page.
 
+
+> Note: I’m an engineer and AI researcher. This is a project I built using agents, but the design is entirely my responsibility and is part of my personal project, [Artificial Fallibility Labs](https://labs.artificialfallibility.com/).
+
 ---
 
 ## What it is for
