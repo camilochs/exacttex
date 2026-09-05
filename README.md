@@ -188,30 +188,16 @@ still receives a `.tex` file.
 
 ---
 
-## How young this is
+## How early this is
 
-The compiler is young, and pretending otherwise would waste your time.
+The compiler is still young. And yes, I built it with agents; without them, it would have taken months. The design, however, is mine.
 
-What is solid: the transport guarantee — untouched LaTeX comes out
-byte-identical — is the oldest invariant here and the most heavily tested. The
-checker, the emitter and the two surfaces (WebAssembly and LSP) answer
-identically for the same input, and a parity suite in CI holds them to it. A
-book of a little over a hundred pages — forty packages, an index, per-chapter
-bibliographies and TikZ compiles to the same page count as a full TeX Live.
+What is solid is the transport guarantee: untouched LaTeX comes out byte-identical. It is the oldest and most tested invariant. The checker, emitter, WebAssembly and LSP agree on the same input, enforced by CI. A book of mine—100+ pages, around forty packages, TikZ, an index and per-chapter bibliographies—compiles to the same page count as with full TeX Live.
 
-Where it is still tender: the change model. Three defects surfaced in one
-evening of real use in August 2026 — a revision written inside `\author{…}`
-was resolvable on screen and printed into the PDF as itself; a reply outlived
-the change it answered; and rejecting one left a stray space behind. All three
-were the same thing seen from three sides: two code paths consulting different
-rules about where a document carries text. They are fixed, each with a test
-that fails against the previous compiler, and `tests/dialogues.rs` now runs a
-full conversation through a title page, a caption, a nested command, a table
-cell and a list item.
+What is newer is the change model. Three bugs found during real use in August 2026 exposed one underlying problem: different code paths disagreed about where text lives in a document. All three are fixed and covered by regression tests.
 
-Which is the honest summary: **the parts that transport your document are
-careful; the parts that let people argue about it are new.** If you find
-something, the thing to send is the document.
+So the short version is: **document transport is mature; collaborative revision is newer.** If you find a bug, send me the document.
+
 
 ---
 
