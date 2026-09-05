@@ -19,7 +19,7 @@ an editor built on the compiler's WebAssembly build, with the same checks, diagn
 running locally in the page.
 
 
-> Note: I’m an engineer and AI researcher. This is a project I built using agents, but the design is entirely my responsibility and is part of my personal project/philosophy, [Artificial Fallibility Labs](https://labs.artificialfallibility.com/).
+> Note: [I’m an engineer and AI researcher](https://www.camilochacon.com/). This is a project I built using agents, but the design is entirely my responsibility and is part of my personal project/philosophy, [Artificial Fallibility Labs](https://labs.artificialfallibility.com/).
 
 ---
 
