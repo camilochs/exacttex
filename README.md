@@ -216,4 +216,4 @@ MIT. See [`LICENSE`](LICENSE).
 
 An [AF Labs](https://labs.artificialfallibility.com/) project.
 
-If ExactTeX is useful to you, a star on this repository helps others find it — and tells us it is worth the care.
+If ExactTeX is useful to you, a star on this repository helps others find it — and tells us it is worth the care :)
