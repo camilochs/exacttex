@@ -20,8 +20,6 @@ Annotate as much or as little as you want. What you annotate is checked.
 You can try it in the browser at [Vitela](https://vitela.artificialfallibility.com/), an editor built on
 the compiler's WebAssembly build. The checks run locally in the page.
 
-> Note: I’m a software engineer and AI researcher. This is a project I built using agents, but the design is entirely my responsibility and is part of my personal project/philosophy, [Artificial Fallibility Labs](https://labs.artificialfallibility.com/).
-
 ---
 
 ## What it does
