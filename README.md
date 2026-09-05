@@ -18,12 +18,6 @@ You can use ExactTeX in the browser today at **[Vitela](https://vitela.artificia
 an editor built on the compiler's WebAssembly build, with the same checks, diagnostics and navigation
 running locally in the page.
 
-> **Status: the compiler works, and three doors open into it.** `xtex` parses, checks, emits LaTeX, writes
-> source maps and applies revisions; `xtex-lsp` gives an editor diagnostics, hover, completion and
-> go-to-definition; and the WebAssembly build runs the same core in any host with no compile server. A
-> parity suite holds the three doors to one answer. Every claim below is about what is built, and each
-> number is reproducible with the command that produced it.
-
 ---
 
 ## What it is for
@@ -115,7 +109,7 @@ matches the `tabular`.
 
 ---
 
-## The type system is gradual, and that is the whole design
+## The type system is gradual
 
 A document is mostly LaTeX the compiler does not model, and that is not a defect to be fixed later. It is
 the state the language is built for.
