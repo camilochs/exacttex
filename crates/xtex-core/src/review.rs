@@ -317,6 +317,37 @@ pub fn resolve(
     Ok((rewritten, removed))
 }
 
+/// One view of a file's bytes with every revision construct resolved: the
+/// original (every change rejected) or the final (every change accepted).
+/// The marked view is the emitter's and needs a document; for bare bytes it
+/// reads as the final one.
+///
+/// This is what a reader of a file that is not a source needs. A `.bib`
+/// carrying a proposed entry is read by the check, by the claims and by
+/// BibTeX through this, never with the construct in it: met raw, the
+/// construct made the bibliography "unparsable", which silenced every
+/// missing-key diagnostic instead of raising one (2026-09-06).
+#[must_use]
+pub fn view_bytes(bytes: &[u8], view: crate::RevisionView) -> Vec<u8> {
+    let accept = !matches!(view, crate::RevisionView::Original);
+    let mut current = bytes.to_vec();
+    // One construct at a time, re-scanned after each: `resolve` owns the
+    // splice, the nesting and the replies, so a view cannot disagree with a
+    // decision made in the margin.
+    while let Some(id) = revision_ids(&current).into_iter().next() {
+        let resolution = if accept {
+            Resolution::Accept
+        } else {
+            Resolution::Reject
+        };
+        match resolve(&current, &id, resolution) {
+            Ok((rewritten, _)) if rewritten != current => current = rewritten,
+            _ => break,
+        }
+    }
+    current
+}
+
 /// Replies whose `on` names `id`, latest first so removing one does not move
 /// the next one's span.
 fn replies_to(bytes: &[u8], id: &str) -> Vec<RevisionConstruct> {
@@ -647,4 +678,40 @@ fn write_field(output: &mut String, name: &str, value: &str) {
         }
     }
     output.push_str("\"\n");
+}
+
+#[cfg(test)]
+mod view_tests {
+    use super::*;
+    use crate::RevisionView;
+
+    #[test]
+    fn the_two_views_of_bytes_resolve_every_construct() {
+        let bytes = b"a @add(change:1) {b} c @del(change:2) {d} e @sub(change:3) {f -> g} h";
+        assert_eq!(
+            view_bytes(bytes, RevisionView::Original),
+            b"a  c d e f h".to_vec()
+        );
+        assert_eq!(
+            view_bytes(bytes, RevisionView::Final),
+            b"a b c  e g h".to_vec()
+        );
+        assert_eq!(
+            view_bytes(bytes, RevisionView::Marked),
+            view_bytes(bytes, RevisionView::Final)
+        );
+    }
+
+    #[test]
+    fn a_nested_construct_follows_its_holder() {
+        let bytes = b"@add(change:1) {x @del(change:2) {y} z}";
+        assert_eq!(view_bytes(bytes, RevisionView::Original), b"".to_vec());
+        assert_eq!(view_bytes(bytes, RevisionView::Final), b"x  z".to_vec());
+    }
+
+    #[test]
+    fn bytes_without_a_construct_come_back_as_they_were() {
+        let bytes = b"@article{key, title = {T}}\n";
+        assert_eq!(view_bytes(bytes, RevisionView::Final), bytes.to_vec());
+    }
 }

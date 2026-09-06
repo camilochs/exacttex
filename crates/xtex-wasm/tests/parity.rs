@@ -668,6 +668,28 @@ fn revision_views_and_resolutions_cross_between_the_module_and_the_cli() {
         let wasm = std::fs::read(out.join(format!("wasm.view.{name}.tex"))).expect("the view");
         assert_eq!(native, wasm, "view {name} differs");
     }
+    // The text view of bare bytes, against the library byte for byte: a
+    // .bib with a proposed entry reaches BibTeX through this.
+    let paper = std::fs::read(revisions.join("paper.xtex")).expect("the fixture");
+    for (view, name) in [
+        (xtex_core::RevisionView::Original, "original"),
+        (xtex_core::RevisionView::Final, "final"),
+    ] {
+        let native = xtex_core::review::view_bytes(&paper, view);
+        let wasm =
+            std::fs::read(out.join(format!("wasm.textview.{name}.xtex"))).expect("the text view");
+        assert_eq!(native, wasm, "text view {name} differs");
+        assert!(
+            !wasm.windows(4).any(|w| w == b"@add"),
+            "a text view resolves every construct"
+        );
+    }
+    assert_ne!(
+        std::fs::read(out.join("wasm.textview.original.xtex")).unwrap(),
+        std::fs::read(out.join("wasm.textview.final.xtex")).unwrap(),
+        "the two text views differ over the fixture's pending changes"
+    );
+
     let original = std::fs::read(out.join("wasm.view.original.tex")).unwrap();
     let final_view = std::fs::read(out.join("wasm.view.final.tex")).unwrap();
     let marked = std::fs::read(out.join("wasm.view.marked.tex")).unwrap();

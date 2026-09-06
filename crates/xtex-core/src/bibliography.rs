@@ -289,7 +289,10 @@ pub fn assemble(
                 name: resource.name.clone(),
             });
         };
-        match scan_bib(&bytes) {
+        match scan_bib(&crate::review::view_bytes(
+            &bytes,
+            crate::RevisionView::Final,
+        )) {
             Ok(found) => keys.extend(found),
             Err(detail) => {
                 return Bibliography::Unavailable(Unavailable::UnparsableEntry {
@@ -308,7 +311,11 @@ pub fn assemble(
 /// `@string` declare no citation key and are skipped.
 #[must_use]
 pub fn keys_in_bib(bytes: &[u8]) -> Option<BTreeSet<String>> {
-    scan_bib(bytes).ok()
+    scan_bib(&crate::review::view_bytes(
+        bytes,
+        crate::RevisionView::Final,
+    ))
+    .ok()
 }
 
 fn scan_bib(bytes: &[u8]) -> Result<BTreeSet<String>, String> {
@@ -740,6 +747,27 @@ pub fn missing_citations<'a>(
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn a_bib_is_read_through_the_final_view_of_its_revisions() {
+        let bib = b"@article{kept, title = {K}}\n\
+            @add(change:a) {@misc{proposed, title = {P}}}\n\
+            @del(change:b) {@misc{doomed, title = {D}}}\n\
+            @sub(change:c) {@misc{before, title = {B}} -> @misc{after, title = {A}}}\n";
+        let keys = keys_in_bib(bib).expect("a bibliography with proposals is still readable");
+        for key in ["kept", "proposed", "after"] {
+            assert!(
+                keys.contains(key),
+                "{key} should be declared in the final view"
+            );
+        }
+        for key in ["doomed", "before"] {
+            assert!(
+                !keys.contains(key),
+                "{key} belongs to the original view only"
+            );
+        }
+    }
 
     fn declared(text: &str) -> Declared {
         let mut sources = Sources::new();

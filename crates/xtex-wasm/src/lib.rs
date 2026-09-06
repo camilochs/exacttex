@@ -588,6 +588,31 @@ pub unsafe extern "C" fn xtex_view(pointer: *const u8, len: usize) -> *mut u8 {
     }
 }
 
+/// The original or final view of one file's bytes, every revision construct
+/// resolved — what a host hands BibTeX for a `.bib` that carries proposals.
+///
+/// Input: `u32 view_len · view · bytes`; `view` is `original` or `final`
+/// (`marked` reads as `final`). The answer is the bytes of that view; an
+/// unknown view name answers empty.
+///
+/// # Safety
+///
+/// `pointer` must point at `len` readable bytes.
+#[unsafe(no_mangle)]
+pub unsafe extern "C" fn xtex_text_view(pointer: *const u8, len: usize) -> *mut u8 {
+    let bytes = unsafe { input(pointer, len) };
+    let mut at = 0usize;
+    let Some(view) = take_text(&bytes, &mut at) else {
+        return result(&[]);
+    };
+    let view = match view.as_str() {
+        "original" => xtex_core::RevisionView::Original,
+        "final" | "marked" => xtex_core::RevisionView::Final,
+        _ => return result(&[]),
+    };
+    result(&xtex_core::review::view_bytes(&bytes[at..], view))
+}
+
 /// Accepts, rejects or prunes revisions in the bundle's root.
 ///
 /// Input: `u32 action_len · action · u32 id_len · id · u32 by_len · by ·
