@@ -14,7 +14,7 @@
 </p>
 
 ExactTeX is LaTeX with gradual annotation. You name the objects you want checked; everything else stays
-ordinary LaTeX and is copied through byte-for-byte (i.e., the PDF is exactly the same). Rename a `.tex` file to `.xtex` and it still compiles.
+ordinary LaTeX and is copied through byte-for-byte (i.e., your LaTeX code remains the same). Rename a `.tex` file to `.xtex` and it still compiles.
 Annotate as much or as little as you want. What you annotate is checked.
 
 You can try it in the browser at [Vitela](https://vitela.artificialfallibility.com/), an editor built on
