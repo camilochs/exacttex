@@ -155,6 +155,12 @@ try {
   for (const view of ["original", "final", "marked"]) {
     writeFileSync(`${outDir}/wasm.view.${view}.tex`, call("xtex_view", framed([view], revBundle)));
   }
+  // The same two views of bare bytes — what a host hands BibTeX for a .bib
+  // that carries proposals — over the fixture's own source.
+  const paperBytes = readFileSync(join(revDir, "paper.xtex"));
+  for (const view of ["original", "final"]) {
+    writeFileSync(`${outDir}/wasm.textview.${view}.xtex`, call("xtex_text_view", framed([view], paperBytes)));
+  }
   const sidecar = readFileSync(join(revDir, "paper.xtexrev"));
   const accepted = call(
     "xtex_revise",
