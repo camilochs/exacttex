@@ -262,6 +262,10 @@ fn emit_nodes(
     view: RevisionView,
     out: &mut Vec<u8>,
 ) -> Result<(), EmitError> {
+    // Where each source's body begins: a construct before it is in the
+    // preamble, and the marked view must not colour it there (#180). One
+    // scan per source, remembered across the run of nodes it contributes.
+    let mut body_starts: Option<(source::SourceId, Option<usize>)> = None;
     for node in document.iter() {
         let span = node.span();
         let bytes = sources
@@ -277,7 +281,18 @@ fn emit_nodes(
                 let base = sources
                     .get(node.source())
                     .map_or(&[][..], |source| directory_of(source.name().as_bytes()));
-                emit_construct(*kind, bytes, base, view, out);
+                let body_start = match body_starts {
+                    Some((id, start)) if id == node.source() => start,
+                    _ => {
+                        let start = sources
+                            .get(node.source())
+                            .and_then(|source| begin_document_at(source.bytes()));
+                        body_starts = Some((node.source(), start));
+                        start
+                    }
+                };
+                let preamble = body_start.is_some_and(|start| span.start() < start);
+                emit_construct(*kind, bytes, base, view, preamble, out);
             }
             Node::Opaque { .. } | Node::Malformed { .. } => out.extend_from_slice(bytes),
         }
@@ -298,6 +313,13 @@ fn directory_of(name: &[u8]) -> &[u8] {
     name.iter()
         .rposition(|byte| *byte == b'/')
         .map_or(&[][..], |slash| &name[..=slash])
+}
+
+/// Where `\begin{document}` starts, or None for a fragment without one.
+fn begin_document_at(bytes: &[u8]) -> Option<usize> {
+    bytes
+        .windows(b"\\begin{document}".len())
+        .position(|window| window == b"\\begin{document}")
 }
 
 fn documentclass_end(bytes: &[u8]) -> Option<usize> {
@@ -340,6 +362,7 @@ fn emit_construct(
     bytes: &[u8],
     base: &[u8],
     view: RevisionView,
+    preamble: bool,
     out: &mut Vec<u8>,
 ) {
     match kind {
@@ -364,7 +387,7 @@ fn emit_construct(
         }
         EntryToken::Import => emit_import(bytes, base, view, out),
         EntryToken::Add | EntryToken::Del | EntryToken::Sub | EntryToken::Note => {
-            emit_revision(kind, bytes, base, view, out);
+            emit_revision(kind, bytes, base, view, preamble, out);
         }
         EntryToken::Raw => {
             let open = bytes.iter().position(|byte| *byte == b'{').unwrap_or(0);
@@ -379,6 +402,7 @@ fn emit_revision(
     bytes: &[u8],
     base: &[u8],
     view: RevisionView,
+    preamble: bool,
     out: &mut Vec<u8>,
 ) {
     let Some(open) = bytes.iter().position(|byte| *byte == b'{') else {
@@ -394,31 +418,186 @@ fn emit_revision(
     } else {
         (&bytes[open + 1..end], &[][..])
     };
+    // Nothing before \begin{document} wears a colour: a wrapped \usepackage
+    // made LaTeX insert \begin{document} in the preamble and typeset the
+    // rest of it as text (#180). A preamble revision shows in the marked
+    // view as its final text; the editor's margin is where it is read.
+    let view = if view == RevisionView::Marked && preamble {
+        RevisionView::Final
+    } else {
+        view
+    };
     match (kind, view) {
         (EntryToken::Add, RevisionView::Final)
         | (EntryToken::Del | EntryToken::Sub, RevisionView::Original) => {
-            emit_content(left, base, view, out);
+            emit_content(left, base, view, preamble, out);
         }
-        (EntryToken::Sub, RevisionView::Final) => emit_content(right, base, view, out),
-        (EntryToken::Add, RevisionView::Marked) => {
-            out.extend_from_slice(b"\\textcolor{blue}{");
-            emit_content(left, base, view, out);
-            out.push(b'}');
-        }
-        (EntryToken::Del, RevisionView::Marked) => {
-            out.extend_from_slice(b"\\textcolor{red}{\\sout{");
-            emit_content(left, base, view, out);
-            out.extend_from_slice(b"}}");
-        }
+        (EntryToken::Sub, RevisionView::Final) => emit_content(right, base, view, preamble, out),
+        (EntryToken::Add, RevisionView::Marked) => emit_added(left, base, out),
+        (EntryToken::Del, RevisionView::Marked) => emit_deleted(left, base, out),
         (EntryToken::Sub, RevisionView::Marked) => {
-            out.extend_from_slice(b"\\textcolor{red}{\\sout{");
-            emit_content(left, base, view, out);
-            out.extend_from_slice(b"}}\\textcolor{blue}{");
-            emit_content(right, base, view, out);
-            out.push(b'}');
+            emit_deleted(left, base, out);
+            emit_added(right, base, out);
         }
         _ => {}
     }
+}
+
+/// An added half in the marked view: blue. Inline material takes
+/// `\textcolor`; material with structure — a paragraph break, a sectioning
+/// command, an item, an environment — takes a group with `\color`, which
+/// survives `\par` where `\textcolor` does not (#181).
+fn emit_added(bytes: &[u8], base: &[u8], out: &mut Vec<u8>) {
+    if structural(bytes) {
+        let (open, close) = colour_block(bytes, b"blue");
+        out.extend_from_slice(&open);
+        emit_content(bytes, base, RevisionView::Marked, false, out);
+        out.extend_from_slice(&close);
+    } else {
+        out.extend_from_slice(b"\\textcolor{blue}{");
+        emit_content(bytes, base, RevisionView::Marked, false, out);
+        out.push(b'}');
+    }
+}
+
+/// A deleted half in the marked view: red, struck through when it can be.
+/// `\sout` lives in restricted horizontal mode, so material with structure
+/// takes the block route instead: a red group, sectioning commands starred
+/// and labels dropped, so the deleted copy neither numbers nor defines
+/// what the kept text defines (#181).
+fn emit_deleted(bytes: &[u8], base: &[u8], out: &mut Vec<u8>) {
+    if structural(bytes) {
+        let quiet = quiet_deleted(bytes);
+        let (open, close) = colour_block(bytes, b"red");
+        out.extend_from_slice(&open);
+        emit_content(&quiet, base, RevisionView::Marked, false, out);
+        out.extend_from_slice(&close);
+    } else {
+        out.extend_from_slice(b"\\textcolor{red}{\\sout{");
+        emit_content(bytes, base, RevisionView::Marked, false, out);
+        out.extend_from_slice(b"}}");
+    }
+}
+
+/// Material `\sout` and `\textcolor` cannot hold: a paragraph break, `\par`,
+/// a sectioning command, an item, or an environment (a tabular inside
+/// `\sout` does compile, but the block route is safe for it as well).
+fn colour_block(bytes: &[u8], colour: &[u8]) -> (Vec<u8>, Vec<u8>) {
+    // A group when the half's environments balance; a group-free switch
+    // when they do not (a half that opens \begin{table} and leaves its \end
+    // to the kept text, as a substitution inside a table does): a group
+    // cannot close before the environment ends, and LaTeX inserts the
+    // \endgroup itself. The switch keeps the current colour under a name,
+    // sets the new one, and restores by name.
+    let opens = bytes.windows(7).filter(|w| *w == b"\\begin{").count();
+    let closes = bytes.windows(5).filter(|w| *w == b"\\end{").count();
+    if opens == closes {
+        (
+            [b"\\begingroup\\color{", colour, b"}"].concat(),
+            b"\\endgroup".to_vec(),
+        )
+    } else {
+        (
+            [b"\\colorlet{xtexprev}{.}\\color{", colour, b"}"].concat(),
+            b"\\color{xtexprev}".to_vec(),
+        )
+    }
+}
+
+/// A half `\\sout` would set in one unbreakable box: long, or carrying a
+/// long brace group — a paragraph wrapped in the author's own macro,
+/// `\\sout{\\new{…}}`, ran 8000pt past the margin (#181). Such a half takes
+/// the block route, red without the strike.
+fn unbreakable(bytes: &[u8]) -> bool {
+    if bytes.len() > 300 {
+        return true;
+    }
+    let mut depth = 0usize;
+    let mut opened_at = 0usize;
+    for (at, byte) in bytes.iter().enumerate() {
+        match byte {
+            b'{' => {
+                if depth == 0 {
+                    opened_at = at;
+                }
+                depth += 1;
+            }
+            b'}' => {
+                depth = depth.saturating_sub(1);
+                if depth == 0 && at - opened_at > 80 {
+                    return true;
+                }
+            }
+            _ => {}
+        }
+    }
+    false
+}
+
+fn structural(bytes: &[u8]) -> bool {
+    const MARKS: [&[u8]; 9] = [
+        b"\n\n",
+        b"\r\n\r\n",
+        b"\\par",
+        b"\\chapter",
+        b"\\section",
+        b"\\subsection",
+        b"\\subsubsection",
+        b"\\paragraph",
+        b"\\item",
+    ];
+    unbreakable(bytes)
+        || MARKS.iter().any(|mark| contains(bytes, mark))
+        || contains(bytes, b"\\begin{")
+}
+
+fn contains(bytes: &[u8], needle: &[u8]) -> bool {
+    !needle.is_empty() && bytes.windows(needle.len()).any(|window| window == needle)
+}
+
+/// The deleted copy of structured text, made quiet: sectioning commands
+/// starred (no number, no table-of-contents line) and every `\label{…}` and
+/// `@id(…)` removed, since the kept text is the one that defines them.
+fn quiet_deleted(bytes: &[u8]) -> Vec<u8> {
+    let mut out = Vec::with_capacity(bytes.len());
+    let mut at = 0usize;
+    while at < bytes.len() {
+        let rest = &bytes[at..];
+        let starred = [
+            &b"\\chapter{"[..],
+            b"\\section{",
+            b"\\subsection{",
+            b"\\subsubsection{",
+            b"\\paragraph{",
+            b"\\subparagraph{",
+        ]
+        .into_iter()
+        .find(|command| rest.starts_with(command));
+        if let Some(command) = starred {
+            out.extend_from_slice(&command[..command.len() - 1]);
+            out.extend_from_slice(b"*{");
+            at += command.len();
+            continue;
+        }
+        let skip = if rest.starts_with(b"\\label{") {
+            rest.iter()
+                .position(|byte| *byte == b'}')
+                .map(|close| close + 1)
+        } else if rest.starts_with(b"@id(") {
+            rest.iter()
+                .position(|byte| *byte == b')')
+                .map(|close| close + 1)
+        } else {
+            None
+        };
+        if let Some(width) = skip {
+            at += width;
+            continue;
+        }
+        out.push(bytes[at]);
+        at += 1;
+    }
+    out
 }
 
 fn trim_start(mut bytes: &[u8]) -> &[u8] {
@@ -435,7 +614,7 @@ fn trim_end(mut bytes: &[u8]) -> &[u8] {
     bytes
 }
 
-fn emit_content(bytes: &[u8], base: &[u8], view: RevisionView, out: &mut Vec<u8>) {
+fn emit_content(bytes: &[u8], base: &[u8], view: RevisionView, preamble: bool, out: &mut Vec<u8>) {
     let mut covered_until = 0usize;
     for piece in scanner::scan(bytes) {
         let piece_span = match piece {
@@ -452,7 +631,9 @@ fn emit_content(bytes: &[u8], base: &[u8], view: RevisionView, out: &mut Vec<u8>
         covered_until = piece_span.end();
         let fragment = &bytes[piece_span.start()..piece_span.end()];
         match piece {
-            Piece::Construct { kind, .. } => emit_construct(kind, fragment, base, view, out),
+            Piece::Construct { kind, .. } => {
+                emit_construct(kind, fragment, base, view, preamble, out);
+            }
             // A quarantined region is transported like any other opaque one.
             // Giving up on recognising it never changes a byte of it.
             Piece::Text(_)
@@ -609,7 +790,13 @@ fn emit_braced_content(
     out: &mut Vec<u8>,
 ) {
     let span = value.span();
-    emit_content(&bytes[span.start() + 1..span.end() - 1], base, view, out);
+    emit_content(
+        &bytes[span.start() + 1..span.end() - 1],
+        base,
+        view,
+        false,
+        out,
+    );
 }
 
 fn emit_percentage(bytes: &[u8], span: source::Span, out: &mut Vec<u8>) {
@@ -743,6 +930,126 @@ mod tests {
             "a fragment must not receive the marked preamble: {text}"
         );
         assert!(text.contains("dramatic"), "{text}");
+    }
+
+    /// A revision before \begin{document} wears no colour in the marked
+    /// view: `\textcolor{blue}{\usepackage{longtable}}` in the preamble made
+    /// LaTeX insert \begin{document} there and typeset the rest as text
+    /// (#180). The change shows as its final text; the body keeps its colour.
+    #[test]
+    fn a_preamble_revision_in_the_marked_view_wears_no_colour() {
+        let mut sources = source::Sources::new();
+        let id = sources.add(
+            "paper.xtex",
+            b"\\documentclass{article}\n\\usepackage{booktabs}\n@add(c) {\\usepackage{longtable}}\n@sub(d) {\\title{Old} -> \\title{New}}\n\\begin{document}\nx @add(e) {y}\n\\end{document}\n".to_vec(),
+        );
+        let document = parse(&sources, id);
+        let mut out = Vec::new();
+        emit_view(&sources, &document, RevisionView::Marked, &mut out).unwrap();
+        let text = String::from_utf8(out).unwrap();
+        let body = text.find("\\begin{document}").unwrap();
+        let preamble = &text[..body];
+        assert!(
+            !preamble.contains("textcolor") && !preamble.contains("\\color"),
+            "{preamble}"
+        );
+        assert!(preamble.contains("\\usepackage{longtable}"), "{preamble}");
+        assert!(
+            preamble.contains("\\title{New}") && !preamble.contains("Old"),
+            "{preamble}"
+        );
+        assert!(text[body..].contains("\\textcolor{blue}{y}"), "{text}");
+    }
+
+    /// A deleted half with structure cannot go through \sout (restricted
+    /// horizontal mode): it takes a red group, sections starred, labels and
+    /// ids dropped, so the deleted copy neither numbers nor defines (#181).
+    #[test]
+    fn a_structural_deletion_in_the_marked_view_takes_the_block_route() {
+        let mut sources = source::Sources::new();
+        let id = sources.add(
+            "paper.xtex",
+            b"\\documentclass{article}\n\\begin{document}\n@del(c) {\\subsection{Objectives}\\label{sec:obj}@id(sec:obj2)\n\nGone for good.}\n\\end{document}\n".to_vec(),
+        );
+        let document = parse(&sources, id);
+        let mut out = Vec::new();
+        emit_view(&sources, &document, RevisionView::Marked, &mut out).unwrap();
+        let text = String::from_utf8(out).unwrap();
+        assert!(!text.contains("sout"), "{text}");
+        assert!(
+            text.contains("\\begingroup\\color{red}\\subsection*{Objectives}"),
+            "{text}"
+        );
+        assert!(!text.contains("label{"), "{text}");
+        assert!(text.contains("Gone for good.\\endgroup"), "{text}");
+    }
+
+    /// An added half with a paragraph break takes a blue group, since
+    /// \textcolor cannot cross \par; an inline one keeps \textcolor.
+    #[test]
+    fn a_structural_addition_in_the_marked_view_is_a_group() {
+        let mut sources = source::Sources::new();
+        let id = sources.add(
+            "paper.xtex",
+            b"\\documentclass{article}\n\\begin{document}\n@add(c) {First.\n\nSecond.} and @add(d) {inline}\n\\end{document}\n".to_vec(),
+        );
+        let document = parse(&sources, id);
+        let mut out = Vec::new();
+        emit_view(&sources, &document, RevisionView::Marked, &mut out).unwrap();
+        let text = String::from_utf8(out).unwrap();
+        assert!(
+            text.contains("\\begingroup\\color{blue}First.\n\nSecond.\\endgroup"),
+            "{text}"
+        );
+        assert!(text.contains("\\textcolor{blue}{inline}"), "{text}");
+    }
+
+    /// A half that opens an environment and leaves its end to the kept text
+    /// cannot be a group: LaTeX would insert the \endgroup itself. It takes
+    /// the group-free switch, colour kept by name and restored by name.
+    #[test]
+    fn a_half_with_unbalanced_environments_switches_colour_without_a_group() {
+        let mut sources = source::Sources::new();
+        let id = sources.add(
+            "paper.xtex",
+            b"\\documentclass{article}\n\\begin{document}\n@sub(c) {\\begin{table}\\caption{Old}\n\n -> \\begin{table}\\caption{New}\n\n}\\end{table}\n\\end{document}\n".to_vec(),
+        );
+        let document = parse(&sources, id);
+        let mut out = Vec::new();
+        emit_view(&sources, &document, RevisionView::Marked, &mut out).unwrap();
+        let text = String::from_utf8(out).unwrap();
+        assert!(!text.contains("begingroup"), "{text}");
+        assert!(
+            text.contains("\\colorlet{xtexprev}{.}\\color{red}\\begin{table}\\caption{Old}"),
+            "{text}"
+        );
+        assert!(
+            text.contains(
+                "\\color{xtexprev}\\colorlet{xtexprev}{.}\\color{blue}\\begin{table}\\caption{New}"
+            ),
+            "{text}"
+        );
+    }
+
+    /// A deleted half wrapped in a macro argument cannot be struck: \sout
+    /// sets the argument in one box. It goes red without the strike.
+    #[test]
+    fn a_long_braced_deletion_is_not_struck() {
+        let mut sources = source::Sources::new();
+        let long = "x".repeat(120);
+        let source = format!(
+            "\\documentclass{{article}}\n\\begin{{document}}\n@del(c) {{\\new{{{long}}}}} and @del(d) {{\\emph{{short}}}}\n\\end{{document}}\n"
+        );
+        let id = sources.add("paper.xtex", source.into_bytes());
+        let document = parse(&sources, id);
+        let mut out = Vec::new();
+        emit_view(&sources, &document, RevisionView::Marked, &mut out).unwrap();
+        let text = String::from_utf8(out).unwrap();
+        assert!(text.contains("\\begingroup\\color{red}\\new{"), "{text}");
+        assert!(
+            text.contains("\\textcolor{red}{\\sout{\\emph{short}}}"),
+            "{text}"
+        );
     }
 
     #[test]

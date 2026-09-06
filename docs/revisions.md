@@ -201,6 +201,19 @@ It is permitted here, bounded by three conditions:
 3. **The normal build is unaffected.** `xtex build` on the same source emits the same bytes whether or not
    `--marked` was ever run.
 
+How the view colours a change, learned on a manuscript under review (#180, #181):
+
+- **Nothing before `\begin{document}` wears a colour.** A preamble revision is emitted as its final
+  text; a wrapped `\usepackage` made LaTeX insert `\begin{document}` in the preamble.
+- **`\sout` and `\textcolor` only for inline halves**: short, without a paragraph break, a sectioning
+  command, an item, an environment, or a long brace group (`\sout{\new{…}}` sets the argument in one
+  unbreakable box). Anything else takes a block route: `\begingroup\color{red} … \endgroup` for a
+  deleted half, with sectioning commands starred and `\label`/`@id` dropped so the deleted copy neither
+  numbers nor defines; `\begingroup\color{blue} … \endgroup` for an added half.
+- **A half whose environments do not balance** (a substitution inside a table that opens `\begin{table}`
+  and leaves the `\end` to the kept text) cannot be a group: it takes a group-free switch,
+  `\colorlet{xtexprev}{.}\color{c} … \color{xtexprev}`.
+
 Recorded as [`decisions/0002`](decisions/0002-the-marked-view-may-inject.md), because decision 0001 says a
 second exception to no-injection needs its own record.
 
