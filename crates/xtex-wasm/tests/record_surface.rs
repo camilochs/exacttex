@@ -168,3 +168,45 @@ fn a_refused_resolution_answers_with_its_reason() {
         "the reason names the code and the revision: {reason}"
     );
 }
+
+/// The payloads a host is most likely to send and the compiler cannot
+/// resolve — a bare `%` inside the construct, which comments out its closing
+/// brace, and an arrow in a substitution's new half, which the grammar reads
+/// as a second separator — come back as refusals too, not as documents. A
+/// host that took the empty first item for a document emptied an author's
+/// paper (#178); this pins the shape for every such payload.
+#[test]
+fn an_unresolvable_payload_is_refused_not_emptied() {
+    let sidecar = "version = 1\ndocument = \"main.xtex\"\n\n[[revision]]\nid = \"r1\"\nkind = \"sub\"\nauthor = \"agent\"\nat = \"2026-09-07T00:00:00Z\"\n";
+    let poisons = [
+        (
+            "a bare % in the payload",
+            "\\documentclass{article}\n\\begin{document}\n@sub(r1){Hello -> Hello % note}\n\\end{document}\n",
+        ),
+        (
+            "an arrow in the new half",
+            "\\documentclass{article}\n\\begin{document}\n@sub(r1){Hello -> a -> b}\n\\end{document}\n",
+        ),
+    ];
+    for (label, source) in poisons {
+        let mut input = Vec::new();
+        for field in ["accept", "r1", "camilochs", "2026-09-07T00:00:00Z", sidecar] {
+            push_text(&mut input, field);
+        }
+        input.extend_from_slice(&bundle("main.xtex", &[("main.xtex", source)]));
+        let answer = call(xtex_revise, &input);
+        let bytes = answer.as_bytes();
+        assert!(bytes.len() >= 8, "{label}: the answer is not even a pair");
+        let rewritten = u32::from_le_bytes(bytes[..4].try_into().expect("length")) as usize;
+        assert_eq!(
+            rewritten, 0,
+            "{label}: a refusal rewrites nothing, but the first item has {rewritten} bytes"
+        );
+        let reason_len = u32::from_le_bytes(bytes[4..8].try_into().expect("length")) as usize;
+        let reason = &answer[8..8 + reason_len];
+        assert!(
+            reason.starts_with("XT"),
+            "{label}: the reason carries a code: {reason}"
+        );
+    }
+}

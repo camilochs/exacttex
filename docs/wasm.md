@@ -85,14 +85,19 @@ file_count × ( u32 name_len   name (UTF-8)   u32 data_len   data )
 | `xtex_inventory(ptr, len)` | a bundle | every declaration — name, class, declaration site, reference count — sorted by name; the JSON `xtex inventory --json` prints |
 | `xtex_definition(ptr, len)` | `target`, `u32 offset`, then a bundle | the declaration, file included — for a citation, the key's own line in the declared `.bib` |
 | `xtex_view(ptr, len)` | `view` (`original`/`final`/`marked`), then a bundle | the root under that view |
-| `xtex_revise(ptr, len)` | `action`, `id`, `by`, `at`, `sidecar`, then a bundle | the rewritten root, then the updated sidecar, both length-prefixed |
+| `xtex_revise(ptr, len)` | `action`, `id`, `by`, `at`, `sidecar`, then a bundle | the rewritten root, then the updated sidecar, both length-prefixed — or a **refusal**: an empty first item and the reason in the second, as `CODE: message` |
 | `xtex_adopt(ptr, len)` | a bundle whose root is a `.tex` | the JSON report `xtex adopt --json` prints, then `u32 count` and `count` × (name, bytes) — one `.xtex` per file that passed, every field length-prefixed |
 
 `xtex_revise`'s `action` is `accept`, `reject`, `accept-all` or `prune`; `id` is empty except for the
 first two; `by` and `at` are the reviewer and RFC 3339 timestamp, supplied by the host because the module
 deliberately cannot ask a clock; `sidecar` is the `.xtexrev` content, empty when none exists. A sidecar
 the module updates is read by the CLI without complaint, and the reverse — the parity suite crosses them
-both ways. The marked view remains the one sanctioned exception to no-injection (`decisions/0002`);
+both ways. A revision the module cannot resolve — an id the sidecar does not carry, a payload with a
+bare `%` (a comment swallows the closing brace), a substitution with `->` in its new half — is answered
+with a refusal, never with a document: the first item is empty and the second is the reason. A host
+must read the first item's length before treating the pair as a resolution; one that did not wrote an
+empty document over an author's file and the reason over the sidecar (#178). The marked view remains
+the one sanctioned exception to no-injection (`decisions/0002`);
 neither of the other two views gains injected markup by passing through this layer.
 
 The three query exports share one input shape: the target file's name, a byte offset into it, then the
