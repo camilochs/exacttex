@@ -217,3 +217,20 @@ second exception to no-injection needs its own record.
   a document format.
 - **No automatic identifiers.** `@add(c1)` is named by whoever writes it, like every other identifier.
   Generating them is a job for the tool that inserts revisions, not for the language.
+
+## 8 · A revision in a file that is not a source
+
+A `.bib` can carry the same constructs — a host that lets a reviewer propose a bibliography entry
+writes an `@add` there, with `refs.xtexrev` beside it, as it would for `paper.xtex`. What differs is
+who reads the file: not the scanner building a document, but the check collecting citation keys, the
+claims inventory and BibTeX. Each of them reads the **final view** of the bytes, every construct
+resolved as if accepted (`review::view_bytes`), because that is the view the sources are checked in: a
+proposed citation and the proposed entry it cites are consistent together, and a deletion still
+pending does not yet remove its key. Met raw, a construct made the bibliography unparsable, and an
+unparsable bibliography silences every missing-key diagnostic — the failure that motivated this
+(2026-09-06).
+
+The wasm surface offers the same view of any file's bytes (`xtex_text_view`), so a host hands BibTeX
+the view rather than the construct. The CLI does not rewrite a `.bib`: `xtex build` emits the
+document's views, and a `.bib` with pending revisions is resolved with `xtex revise` before BibTeX
+runs.
