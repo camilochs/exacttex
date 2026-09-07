@@ -46,7 +46,10 @@ zero-dependency invariant stays byte-true — its lock file never learns that an
 asks the open sources about each claim and writes the record beside the root document:
 
 - **Bibliographic entries with a DOI** go to OpenAlex, batched up to fifty DOIs per request.
-- **Entries without a DOI** go to Crossref's bibliographic search, matched by normalized title.
+- **Entries without a DOI** go to Crossref's bibliographic search, matched by normalized title. A title
+  match is not a work match: for a book, Crossref may answer with a review of it. A verdict reached this way is the verifier's guess about
+  which work the entry means, so the check never turns it into a hard error — only a record reached
+  through an identifier the entry declares can stop a build (`docs/checking.md`, `XT1018`).
 - **URLs, DOIs and repositories** are probed directly; a redirect is an answer, not an error.
 - A **fixed token bucket per host** keeps every request inside the sources' polite-pool limits, and a
   **retry budget** (three attempts per request, globally at most one retry per ten requests) means a dead
