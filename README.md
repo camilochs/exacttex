@@ -184,17 +184,6 @@ It does not typeset and it does not replace TeX. Your journal still receives a `
 
 The compiler is still young. And yes, I built it with agents; without them, it would have taken months. The design, however, is mine.
 
-The transport guarantee (untouched LaTeX comes out byte-identical) is the oldest and most tested invariant.
-The checker, the emitter, the WebAssembly build and the LSP give the same answer for the same input, and CI
-enforces it. A book of mine (100+ pages, around forty packages, TikZ, an index, per-chapter
-bibliographies) compiles to the same page count as with a full TeX Live.
-
-The change model is newer. Three bugs found in real use in August 2026 had one cause: two code paths
-disagreed about where a document carries text. All three are fixed, each with a regression test.
-
-Short version: document transport is mature; collaborative revision is newer. If you find a bug, send me
-the document.
-
 ---
 
 ## Documentation
