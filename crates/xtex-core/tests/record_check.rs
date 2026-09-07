@@ -170,6 +170,46 @@ fn a_high_severity_diff_on_a_demanded_key_is_a_hard_error() {
 }
 
 #[test]
+fn the_same_finding_found_by_search_is_advisory_and_says_so() {
+    // Issue #183: for `lamport1994latex` Crossref's text search answered
+    // with a review of the book — seven authors in a journal. A row the
+    // verifier guessed at cannot refuse the build; the message names the
+    // guess so the author can judge.
+    let (_, table, id) = table_and_sources();
+    let claims = [bib_claim(id, "knuth1984", "The TeXbook")];
+    let mut partial = recorded(
+        "knuth1984",
+        "The TeXbook",
+        Verdict::Bibliographic(BibVerdict::Partial),
+        FRESH,
+    );
+    partial.source = "crossref-query".to_owned();
+    partial.diffs.push(FieldDiff {
+        field: "authors".to_owned(),
+        in_document: "Donald E. Knuth".to_owned(),
+        in_source: "C. D. Kemp and D. E. Knuth".to_owned(),
+        severity: DiffSeverity::High,
+    });
+    let record = VerificationRecord {
+        claims: vec![partial],
+    };
+    let findings = run(&claims, &record, &table);
+    assert_eq!(findings.len(), 1);
+    assert_eq!(findings[0].code, "XT1018");
+    assert_eq!(
+        findings[0].severity,
+        Severity::Advisory,
+        "a demanded key, but the row was found by search: {}",
+        findings[0].message
+    );
+    assert!(
+        findings[0].message.contains("found by search"),
+        "{}",
+        findings[0].message
+    );
+}
+
+#[test]
 fn the_same_finding_on_an_undemanded_key_is_advisory() {
     let (_, table, id) = table_and_sources();
     // `lamport1994` is in no @cite: the gradual policy keeps it advisory.

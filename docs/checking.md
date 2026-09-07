@@ -142,7 +142,7 @@ error.
 | `XT1012` | A sidecar record whose revision construct no longer exists | any |
 | `XT1013` | A sidecar that cannot be read, or that names a different document | any |
 | `XT1014` | An explicit inline construct (`@id`, a reference or citation command, `@import`) whose closing `)` is not found before line end | any |
-| `XT1018` | Under `--verified` only: a recorded verdict of `mismatch`, or a `partial` whose difference is high severity, on an entry that an `@cite(k)` demands | `Citation` |
+| `XT1018` | Under `--verified` only: a recorded verdict of `mismatch`, or a `partial` whose difference is high severity, on an entry that an `@cite(k)` demands — and only when the record was reached through an identifier the entry declares (a DOI), never through a text search | `Citation` |
 | `XT1020` | An entity-kind word immediately before a reference construct names class A, and the target's known class is B, A ≠ B | both known |
 
 Two properties hold across the whole table and are tested as properties, not as examples:
@@ -207,7 +207,7 @@ The class of things that are advisory and not errors:
 | `XT1015` | Under `--verified`: the record itself cannot be read, so nothing in it is replayed | by default |
 | `XT1016` | Under `--verified`: the claim was edited after it was verified, so the recorded verdict no longer speaks for it | by default |
 | `XT1017` | Under `--verified`: the verdict is older than the window, or carries a date that cannot be read | by default |
-| `XT1018` | Under `--verified`: the verdicts of the hard-error row, where no `@cite` demands the entry, or where the differences are all medium — a year, a page range, a venue | by default |
+| `XT1018` | Under `--verified`: the verdicts of the hard-error row, where no `@cite` demands the entry, where the differences are all medium — a year, a page range, a venue — or where the row was found by search (`crossref-query`): a row the verifier guessed at may be another work, and the message says so | by default |
 | `XT1019` | Under `--verified`: the verifier could not settle the entry, an address did not answer, or an address answered from somewhere else | by default |
 | — | An unresolved `\ref` or `\cite` written in plain LaTeX | `--strict-tex` |
 | — | A `\label` in an opaque region that appears to collide with an `@id` | `--strict-tex` |

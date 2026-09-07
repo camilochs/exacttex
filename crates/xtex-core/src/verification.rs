@@ -533,6 +533,19 @@ pub fn check_against_record(input: &RecordCheck<'_>) -> Vec<crate::check::Diagno
     findings
 }
 
+/// Whether the record was reached through an identifier the entry itself
+/// declares (a DOI), as opposed to a text search that picked the top row
+/// with the same title. Only the first can carry a build-stopping verdict:
+/// the hard error exists for a fabricated author list behind a correct
+/// DOI, and that inference needs the row to be the entry's own. A row
+/// found by searching is the verifier's guess about which work the entry
+/// means — for `lamport1994latex` Crossref answered with a *review* of the
+/// book, seven authors in a journal — and a guess stays an advisory
+/// (issue #183).
+fn located_by_identifier(source: &str) -> bool {
+    !source.ends_with("-query")
+}
+
 /// Replays one recorded verdict as its finding, dated. Split from
 /// [`check_against_record`] to keep each half readable on one screen.
 fn replay_verdict(
@@ -565,7 +578,14 @@ fn replay_verdict(
                     diff.field, diff.in_document, diff.in_source
                 );
             }
+            if !located_by_identifier(&recorded.source) {
+                let _ = write!(
+                    message,
+                    " — found by search, not by an identifier this entry declares, so the row may be another work"
+                );
+            }
             let hard = demanded.contains(claim.target.as_str())
+                && located_by_identifier(&recorded.source)
                 && recorded
                     .diffs
                     .iter()
@@ -581,7 +601,8 @@ fn replay_verdict(
             );
         }
         Verdict::Bibliographic(BibVerdict::Mismatch) => {
-            let hard = demanded.contains(claim.target.as_str());
+            let hard =
+                demanded.contains(claim.target.as_str()) && located_by_identifier(&recorded.source);
             push(
                 "XT1018",
                 if hard {
