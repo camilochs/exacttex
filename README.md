@@ -263,14 +263,6 @@ touches the network. See [docs/verification.md](docs/verification.md).
 
 ---
 
-## What it is not
-
-It is not a shorter way to write LaTeX. TypeScript is more verbose than JavaScript, and nobody adopted it to type less. You write more so the tooling knows more.
-
-It does not typeset and it does not replace TeX. Your journal still receives a `.tex` file.
-
----
-
 ## How early this is
 
 The compiler is still young. And yes, I built it with agents; without them, it would have taken months. The design, however, is mine.
