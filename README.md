@@ -14,27 +14,39 @@
 </p>
 
 ExactTeX is LaTeX with gradual annotation. You name the objects you want checked; everything else stays
-ordinary LaTeX and is copied through byte-for-byte (i.e., your LaTeX code remains the same). Rename a `.tex` file to `.xtex` and it still compiles.
-Annotate as much or as little as you want. What you annotate is checked.
+ordinary LaTeX and comes out unchanged. Rename a `.tex` file to `.xtex` and it still compiles. Annotate as
+much or as little as you want. What you annotate is checked.
+
+The paper I had in mind has forty figures and three coauthors. Rename `fig:runtime` and every reference
+follows. Write `Figure~\ref` on a table and the compiler tells you, before the PDF prints the wrong word
+and nobody notices. The pain was never the types. It was the silent `??`.
 
 You can try it in the browser at [Vitela](https://vitela.artificialfallibility.com/), an editor built on
 the compiler's WebAssembly build. The checks run locally in the page.
+
+<p align="center">
+  <img src="docs/assets/vitela-undeclared.png" alt="Vitela: a misspelled reference, underlined as you type, with the compiler's answer on hover" width="760">
+</p>
 
 ---
 
 ## What it does
 
-**Errors in your own words.** When a table is too wide, LaTeX says:
+**Errors in your own words.** ExactTeX does not typeset. `xtex compile` hands the emitted LaTeX to the engine
+you name (`tectonic` by default), reads the `.log` it leaves, and maps each warning back through the source
+map to the entity that encloses it. When a table is too wide, TeX says:
 
 ```
-Overfull \hbox (12.3pt too wide) in paragraph at lines 45--47
+Overfull \hbox (99.82014pt too wide) in paragraph at lines 7--10
 ```
 
 ExactTeX says:
 
 ```
-your table "results" runs 12.3pt past the right margin
-paper.xtex:212 — column 3 does not fit the width you declared
+warning[TEX]: table `tab:wide` overflows its line by 99.82014pt
+  TeX said: Overfull \hbox (99.82014pt too wide) in paragraph at lines 7--10
+  emitted at build/wide.tex:7
+  corresponds to wide.xtex:3:1
 ```
 
 Same fact, with the name you gave the table. That is what the annotations are for: they give the tooling
@@ -42,16 +54,75 @@ names to use.
 
 **Revisions inside the file.** Word keeps tracked changes inside the `.docx`, so other tools can propose
 edits you accept or reject. LaTeX has nothing like it, and every tool builds its own incompatible layer.
-ExactTeX puts the change model in the file format.
+ExactTeX puts the change model in the file format. A proposed change is text in the document:
+
+```latex
+The gain is @sub(change:gain) {dramatic -> consistent} across both corpora.
+```
+
+The file still builds. `xtex build paper.xtex --marked` prints the change for reading, old text struck
+through and new text in colour:
+
+```latex
+The gain is \textcolor{red}{\sout{dramatic}}\textcolor{blue}{consistent} across both corpora.
+```
+
+`--original` and `--final` build the document without the change and with it. Accepting is a rewrite of the
+source, and a change that has been accepted is no longer a change:
+
+```sh
+xtex revise paper.xtex --accept change:gain
+```
+
+```latex
+The gain is consistent across both corpora.
+```
+
+A sidecar file, `paper.xtexrev`, records who proposed each change and when. Rejecting keeps the removed text
+there, so a paragraph thrown away in review can still be produced six months later. A coauthor, a reviewer
+or a coding agent can propose; only the author accepts. The model is in [docs/revisions.md](docs/revisions.md).
+
+**Plain LaTeX out.** Your journal receives a `.tex` file. This block:
+
+```latex
+\figure(fig:runtime) {
+  src     = "figures/runtime.pdf"
+  width   = 80%
+  caption = {Runtime architecture for \emph{multi-agent} systems}
+}
+```
+
+is emitted by `xtex build` as:
+
+```latex
+\begin{figure}
+  \centering
+  \includegraphics[width=0.80\linewidth]{figures/runtime.pdf}
+  \caption{Runtime architecture for \emph{multi-agent} systems}
+  \label{fig:runtime}
+\end{figure}
+```
+
+and `@ref(fig:runtime)` becomes `\ref{fig:runtime}`. Everything you did not annotate is carried around the
+compiler untouched, so the emitted file is yours to keep if you stop using ExactTeX tomorrow.
 
 ---
 
 ## Try it
 
+There are no prebuilt binaries yet. With a [Rust toolchain](https://rustup.rs) (1.88 or newer), one
+command builds and installs the compiler; it has no dependencies to fetch:
+
+```sh
+cargo install --git https://github.com/camilochs/exacttex xtex-cli
+```
+
+Then, on the example in this repository:
+
 ```sh
 git clone https://github.com/camilochs/exacttex
 cd exacttex
-cargo run -p xtex-cli -- check examples/hello.xtex
+xtex check examples/hello.xtex
 ```
 
 ```
@@ -72,8 +143,29 @@ error[XT1003]: identifier `sec:resutls` is not declared — did you mean `sec:re
   blame: xtex-construct
 ```
 
-Plain LaTeX would have typeset a `??` and said nothing. You need a [Rust toolchain](https://rustup.rs)
-(1.88 or newer). The compiler has no dependencies to fetch.
+Plain LaTeX would have typeset a `??` and said nothing.
+
+Renaming is a command, and it follows every reference across the project:
+
+```sh
+xtex rename paper.xtex sec:results sec:findings
+```
+
+```
+paper.xtex: 1 renamed
+```
+
+**In your editor.** The same checks run as you type through a language server:
+
+```sh
+cargo install --git https://github.com/camilochs/exacttex xtex-lsp
+```
+
+`xtex-lsp` speaks LSP over stdin and stdout and takes no arguments. Point your editor's "custom language
+server" setting at it for `.xtex` files. It answers diagnostics on every keystroke, hover, completion, go to
+definition and rename. The protocol it speaks, message by message, is in [docs/lsp.md](docs/lsp.md).
+
+---
 
 ## What it looks like
 
@@ -102,7 +194,7 @@ Ordinary LaTeX keeps working: \emph{emphasis}, $E = mc^2$, \citep{blum2020}.
 ```
 
 There are two levels of annotation. `@id(x)` attaches to any LaTeX construct and gives you checked
-references and safe renames; theorems and algorithms work without ExactTeX knowing what they are. A typed
+references and `xtex rename`; theorems and algorithms work without ExactTeX knowing what they are. A typed
 block such as `\figure(x)` also gives the compiler fields to check: the image exists, the caption is
 present, the column count matches the `tabular`.
 
@@ -173,7 +265,7 @@ touches the network. See [docs/verification.md](docs/verification.md).
 
 ## What it is not
 
-It is not a shorter way to write LaTeX. TypeScript is more verbose than JavaScript, and nobody adopted it to type less. You write more so the tooling knows more. Nor is it a language designed to speed up TeX compilation.
+It is not a shorter way to write LaTeX. TypeScript is more verbose than JavaScript, and nobody adopted it to type less. You write more so the tooling knows more.
 
 It does not typeset and it does not replace TeX. Your journal still receives a `.tex` file.
 
