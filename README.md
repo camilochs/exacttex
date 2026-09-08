@@ -173,7 +173,7 @@ touches the network. See [docs/verification.md](docs/verification.md).
 
 ## What it is not
 
-It is not a shorter way to write LaTeX. TypeScript is more verbose than JavaScript, and nobody adopted it to type less. You write more so the tooling knows more. Nor is it a language designed to speed up TeX compilation; that is the price you pay.
+It is not a shorter way to write LaTeX. TypeScript is more verbose than JavaScript, and nobody adopted it to type less. You write more so the tooling knows more. Nor is it a language designed to speed up TeX compilation.
 
 It does not typeset and it does not replace TeX. Your journal still receives a `.tex` file.
 
