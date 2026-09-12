@@ -1,0 +1,3 @@
+planted=fig:planted_missing sites=[('MT_kinetochore_dynamics.xtex', 132)]
+xtex new=[('XT1006', 'figures/planted_ghost.pdf', 'MT_kinetochore_dynamics.xtex', 132)]
+texlab new=[]

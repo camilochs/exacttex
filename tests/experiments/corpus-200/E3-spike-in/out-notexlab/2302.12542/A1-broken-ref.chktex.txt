@@ -1,0 +1,136 @@
+exit=2
+lines=456
+unique_findings=115
+                           ^
+Warning 2 in main.tex line 508: Non-breaking space (`~') should have been used.
+For more information on different Bayesian priors in cancer prognosis, we suggest a recent review by \cite{Chu2022} which summarized other different shrinkage priors on regression coefficients, such as Gaussian-gamma, Gaussian, Cauchy, pMOM (product moment distribution), piMOM (product inverse moment distribution) and peNMIG (parameter-expanded normal-mixture-of-inverse-gamma distribution) priors.  
+                                                                                                    ^
+Warning 2 in main.tex line 514: Non-breaking space (`~') should have been used.
+For example, the Cox model \eqref{eq:Cox} requires proportional hazards and the logarithm of the hazard to be linear with respect to the model covariates.   
+                          ^
+Warning 2 in main.tex line 520: Non-breaking space (`~') should have been used.
+\cite{Johnson2011} used heuristic methods to investigate the Cox model assumptions by separately fitting univariate Cox models one feature at one time, and check $p$-values for the score tests of individual features and $p$-values for testing the proportional hazards assumption of univariate Cox models.   
+^
+Warning 18 in main.tex line 528: Use either `` or '' as an alternative to `"'.
+Feature selection using penalized regressions as described in Section ``\hyperref[sec:penalized]{Supervised learning via penalized regressions}" heavily depends on the values of the penalty parameters (e.g., for the $\lambda$ parameter in Lasso Cox model \eqref{eq:Lasso}).   
+                                                                                                                                               ^
+Warning 2 in main.tex line 528: Non-breaking space (`~') should have been used.
+Feature selection using penalized regressions as described in Section ``\hyperref[sec:penalized]{Supervised learning via penalized regressions}" heavily depends on the values of the penalty parameters (e.g., for the $\lambda$ parameter in Lasso Cox model \eqref{eq:Lasso}).   
+                                                                                                                                                                                                                                                              ^
+Warning 18 in main.tex line 533: Use either `` or '' as an alternative to `"'.
+For the Bayesian models in Section ``\hyperref[sec:bayes]{Supervised learning via Bayesian priors}", feature selection stability is naturally assessed by the uncertainty of coefficients' estimators, as reflected in the posterior variances of $\beta_j$ or the posterior selection probabilities $p(\gamma_j | \mathcal D)$ (in SSVS), which is a natural benefit of utilizing full Bayesian inference.   
+                                                                                                  ^
+Warning 2 in main.tex line 542: Non-breaking space (`~') should have been used.
+The simplest way to demonstrate the prognostic power is to dichotomize the prognostic scores (i.e., linear predictor $\mathbf X_i\bm\beta$ in the Cox model, \cite{Cox1957}) by its median value, and then use a log-rank test to compare the survival probabilities of the patients in the two groups, see \hyperref[fig:KM]{Figure~\ref*{fig:KM}b}.   
+                                                                                                                                                            ^
+Warning 2 in main.tex line 569: Non-breaking space (`~') should have been used.
+In this context, \cite{Antolini2005} proposed a time-dependent C-index, which assesses the concordance of a model's survival distribution predictions $\hat{S}(t)$.   
+                ^
+Warning 2 in main.tex line 572: Non-breaking space (`~') should have been used.
+To avoid C-hacking among different C-indices in model comparison, \cite{Sonabend2022} recommended that if all models make survival distribution predictions, then select a time-dependent C-index; otherwise choose a time-independent measure (e.g., Uno's C-index); if there is a combination of risk- and distribution-predicting models, then choose a transformation method for analysis (e.g., expected mortality).  
+                                                                 ^
+Warning 11 in main.tex line 578: You should use \ldots to achieve an ellipsis.
+A survival model can be reported with the estimated $t$-year survival probabilities in predefined subgroups, denoted as $S_{\text{model}}(t|g)$ for subgroups $g=1,\cdots,G$.   
+                                                                                                                                                                   ^^^^^^
+Warning 2 in main.tex line 589: Non-breaking space (`~') should have been used.
+As an alternative to the calibration slope at a single time point, \cite{Andres2018} and \cite{Haider2020} suggested the distributional (D)-calibration for accounting survival probabilities across all time points. This can be useful when assessing the entire post-treatment survival prediction, for example, assessing post liver transplantation survival utility in \cite{Andres2018}.  
+                                                                  ^
+Warning 2 in main.tex line 589: Non-breaking space (`~') should have been used.
+As an alternative to the calibration slope at a single time point, \cite{Andres2018} and \cite{Haider2020} suggested the distributional (D)-calibration for accounting survival probabilities across all time points. This can be useful when assessing the entire post-treatment survival prediction, for example, assessing post liver transplantation survival utility in \cite{Andres2018}.  
+                                                                                        ^
+Warning 2 in main.tex line 589: Non-breaking space (`~') should have been used.
+As an alternative to the calibration slope at a single time point, \cite{Andres2018} and \cite{Haider2020} suggested the distributional (D)-calibration for accounting survival probabilities across all time points. This can be useful when assessing the entire post-treatment survival prediction, for example, assessing post liver transplantation survival utility in \cite{Andres2018}.  
+                                                                                                                                                                                                                                                                                                                                                                            ^
+Warning 2 in main.tex line 594: Non-breaking space (`~') should have been used.
+The idea of scoring rules dates back to \cite{Brier1950} which assigned a numerical score for verifying ensemble-based probabilistic predictions of discrete outcomes.   
+                                       ^
+Warning 2 in main.tex line 596: Non-breaking space (`~') should have been used.
+\cite{Graf1999} proposed the time-dependent Brier score, which is the expected mean-squared error of survival probability prediction at different time points, i.e.  
+^
+Warning 3 in main.tex line 599: You should enclose the previous parenthesis with `{}'.
+\text{BS}(t) = \frac{1}{n} \sum_{i=1}^n \left\{ \frac{\hat S(t|t_i)^2 \mathbbm{1}\{t_i \le t\ \&\ \delta_i=1\}}{\hat G(t_i)}\ +\ \frac{\{1-\hat S(t|t_i)\}^2 \mathbbm{1}\{t_i > t\}}{\hat G(t)} \right\},  
+                                                                  ^
+Warning 3 in main.tex line 599: You should enclose the previous parenthesis with `{}'.
+\text{BS}(t) = \frac{1}{n} \sum_{i=1}^n \left\{ \frac{\hat S(t|t_i)^2 \mathbbm{1}\{t_i \le t\ \&\ \delta_i=1\}}{\hat G(t_i)}\ +\ \frac{\{1-\hat S(t|t_i)\}^2 \mathbbm{1}\{t_i > t\}}{\hat G(t)} \right\},  
+                                                                                                                                                        ^^
+Warning 36 in main.tex line 604: You should put a space in front of parenthesis.
+The integrated Brier score (IBS) is as a single measure of prediction accuracy integrating BS($t$) over an entire follow-up time period.   
+                                                                                             ^
+Warning 2 in main.tex line 605: Non-breaking space (`~') should have been used.
+\cite{Hielscher2010} presented a comparison between the IBS and a $D$ measure \citep{Schemper2000}, which is an integrated measure based on the mean absolute deviation rather than the mean-squared error used in IBS.   
+^
+Warning 13 in main.tex line 605: Intersentence spacing (`\@') should perhaps be used.
+\cite{Hielscher2010} presented a comparison between the IBS and a $D$ measure \citep{Schemper2000}, which is an integrated measure based on the mean absolute deviation rather than the mean-squared error used in IBS.   
+                                                                                                                                                                                                                      ^
+Warning 13 in main.tex line 606: Intersentence spacing (`\@') should perhaps be used.
+The $D$ measure is more robust towards extreme observations and has a smaller variance than the IBS.   
+                                                                                                   ^
+Warning 12 in main.tex line 637: Interword spacing (`\ ') should perhaps be used.
+  \caption{\it Discrimination and calibration of survival prediction for 20\% TCGA-BRCA validation data. TCGA-BRCA data were split to a 80\% training set and a 20\% validation set. (a) Receiver operating characteristic (ROC) curve estimated at 5-year survival evaluation time point based on the Cox model in \hyperref[fig:nomogram]{Figure~\ref*{fig:nomogram}}. The AUC score is the area under the ROC curve. The 45-degree line represents the performance of a random prediction of the outcome event with AUC = 0.5. (b) Calibration plot estimating 5-year survival probabilities in TCGA-BRCA patients grouped by the quartiles of the predicted probabilities based on the Cox model in \hyperref[fig:nomogram]{Figure~\ref*{fig:nomogram}}. The actual 5-year survival probabilities in each group (green colored dot and error bar) were estimated by the Kaplan-Meier (KM) method with a 95\% confidence interval by bootstrapping. The blue colored cross indicates a bias-corrected KM estimate. The predicted survival probability of each quartile group was the mean of the 5-year survival probabilities based on the Cox model for the corresponding group.}\label{fig:calibration}  
+                                                                                                                                                                                    ^
+Warning 12 in main.tex line 637: Interword spacing (`\ ') should perhaps be used.
+  \caption{\it Discrimination and calibration of survival prediction for 20\% TCGA-BRCA validation data. TCGA-BRCA data were split to a 80\% training set and a 20\% validation set. (a) Receiver operating characteristic (ROC) curve estimated at 5-year survival evaluation time point based on the Cox model in \hyperref[fig:nomogram]{Figure~\ref*{fig:nomogram}}. The AUC score is the area under the ROC curve. The 45-degree line represents the performance of a random prediction of the outcome event with AUC = 0.5. (b) Calibration plot estimating 5-year survival probabilities in TCGA-BRCA patients grouped by the quartiles of the predicted probabilities based on the Cox model in \hyperref[fig:nomogram]{Figure~\ref*{fig:nomogram}}. The actual 5-year survival probabilities in each group (green colored dot and error bar) were estimated by the Kaplan-Meier (KM) method with a 95\% confidence interval by bootstrapping. The blue colored cross indicates a bias-corrected KM estimate. The predicted survival probability of each quartile group was the mean of the 5-year survival probabilities based on the Cox model for the corresponding group.}\label{fig:calibration}  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+Warning 2 in main.tex line 648: Non-breaking space (`~') should have been used.
+\cite{Hothorn2006} introduced ensemble tree methods for analyzing right-censored survival data, which construct ensembles from base learners, e.g., binary survival trees for each omics feature.   
+^
+Warning 2 in main.tex line 649: Non-breaking space (`~') should have been used.
+\cite{Hothorn2006} also proposed a gradient boosting algorithm to predict the survival time of patients with acute myeloid leukemia (AML), based on clinical and omics features.   
+^
+Warning 2 in main.tex line 650: Non-breaking space (`~') should have been used.
+Similarly, \cite{Binder2008} developed a likelihood-based boosting method, which aims to maximize the Cox partial likelihood function, for modeling time-to-event data based on high-dimensional omics input data and which also allows the inclusion of a small number of mandatory covariates.   
+          ^
+Warning 2 in main.tex line 651: Non-breaking space (`~') should have been used.
+In general, one needs to be cautious if using some machine learning methods that are not well-suited for high-dimensional features. For example, \cite{Kvamme2019} proposed extensions of the Cox model with neural networks, which are only valid if the number of covariates is smaller than the number of samples, i.e., if $p < n$.   
+                                                                                                                                                ^
+Warning 2 in main.tex line 652: Non-breaking space (`~') should have been used.
+A systematic review of deep learning for survival analysis, which includes a survey of methods suitable for high-dimensional data ($p > n$), is provided by \cite{Wiegrebe2023}.   
+                                                                                                                                                           ^
+Warning 2 in main.tex line 655: Non-breaking space (`~') should have been used.
+For example, \cite{Ma2006} combined Lin and Yin's additive hazard model \citep{Lin1994} with principal component regression for dimension reduction of omics features, which was applied to the study of gene expression-based survival prediction for diffuse large B-cell lymphoma.   
+            ^
+Warning 2 in main.tex line 656: Non-breaking space (`~') should have been used.
+\cite{Engler2009} added the Elastic Net penalty in an accelerated ATF model, which assumes that the effect of a covariate accelerates or decelerates the life course of patients.   
+^
+Warning 2 in main.tex line 657: Non-breaking space (`~') should have been used.
+\cite{Schmid2008} and \cite{Barnwal2022} used boosting algorithms to learn parametric AFT models.   
+^
+Warning 2 in main.tex line 657: Non-breaking space (`~') should have been used.
+\cite{Schmid2008} and \cite{Barnwal2022} used boosting algorithms to learn parametric AFT models.   
+                     ^
+Warning 2 in main.tex line 658: Non-breaking space (`~') should have been used.
+\cite{Ha2014} considered the Lasso, SCAD and a penalized h-likelihood for feature selection in frailty models which assume that individuals have unobserved heterogeneity captured by a latent random term $Z$, which adapts the Cox model (\ref{eq:Cox}) into $h(t|X) = Zh_0(t)\exp(X\beta)$.   
+^
+Warning 2 in main.tex line 663: Non-breaking space (`~') should have been used.
+\cite{Liu2012} studied the Lasso and SCAD feature selection for the proportional hazard mixture cure model, in which a certain fraction of individuals will never experience the event of interest.   
+^
+Warning 2 in main.tex line 664: Non-breaking space (`~') should have been used.
+\cite{Tapak2015} investigated Lasso, Elastic Net and likelihood-based boosting for microarray-based survival modeling with competing risks, such as ``progression'' versus ``death from non-cancer cause'', i.e., the event of a patient can occur due to one of multiple distinct causes.   
+^
+Warning 2 in main.tex line 665: Non-breaking space (`~') should have been used.
+There is a growing awareness of the impact of competing risks when developing prognostic models with high-dimensional input data, for example, \cite{Binder2009}, \cite{Ambrogi2016} and \cite{Fu2017}.   
+                                                                                                                                              ^
+Warning 2 in main.tex line 665: Non-breaking space (`~') should have been used.
+There is a growing awareness of the impact of competing risks when developing prognostic models with high-dimensional input data, for example, \cite{Binder2009}, \cite{Ambrogi2016} and \cite{Fu2017}.   
+                                                                                                                                                                 ^
+Warning 2 in main.tex line 665: Non-breaking space (`~') should have been used.
+There is a growing awareness of the impact of competing risks when developing prognostic models with high-dimensional input data, for example, \cite{Binder2009}, \cite{Ambrogi2016} and \cite{Fu2017}.   
+                                                                                                                                                                                        ^
+Warning 2 in main.tex line 666: Non-breaking space (`~') should have been used.
+For a single individual who can experience several possible events, \cite{Dutta2016} proposed a multi-state model to identify risk factors in different stages of disease based on high-dimensional input data.   
+                                                                   ^
+Warning 2 in main.tex line 672: Non-breaking space (`~') should have been used.
+For example, \cite{Zhou2019} showed that tumor microenvironment-related gene expression signatures do not only accurately predict the survival among colon cancer patients, but also serve as biomarkers for identifying patients who could potentially benefit from adjuvant chemotherapy.   
+            ^
+Warning 2 in main.tex line 681: Non-breaking space (`~') should have been used.
+For example, \cite{Guo2018} introduced a generalizable approach to first study T-cells in 14 non-small cell lung cancer (NSCLC) patients and to identify gene signatures from the tumor-enriched T cell clusters, and then investigated these gene signatures using bulk RNA-seq and survival data from larger TCGA-NSCLC patient cohort.   
+            ^
+Warning 2 in main.tex line 682: Non-breaking space (`~') should have been used.
+Similarly, \cite{Zhang2020} developed a scRNA-seq-based approach to reconstruct a multilayer signaling network based on 16 glioma patients, and then investigated the network genes using survival data from TCGA Chinese glioma genome atlas (TCGA-CGGA) patients.   
+          ^
+Warning 2 in main.tex line 703: Non-breaking space (`~') should have been used.
+\cite{Farooq2023} utilized SCM-based causal discovery approaches to unravel relationships between omics features and survival of breast cancer patients.   
+^
+Warning 2 in main.tex line 709: Non-breaking space (`~') should have been used.
+\cite{Tuglus2011} used targeted maximum likelihood estimation to provide an interpretable causal measure of variable importance for the discovery of biomarkers and omics features.   
+^

@@ -1,0 +1,25 @@
+warning: algorithmic.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: CASE_ver2.tex:98: Underfull \hbox (badness 10000) in paragraph at lines 89--98
+warning: CASE_ver2.tex:98: Underfull \hbox (badness 10000) in paragraph at lines 89--98
+warning: CASE_ver2.tex:176: Underfull \hbox (badness 7832) in paragraph at lines 173--176
+warning: CASE_ver2.tex:176: Underfull \hbox (badness 10000) in paragraph at lines 173--176
+warning: CASE_ver2.tex:252: Underfull \hbox (badness 7649) in paragraph at lines 237--252
+warning: algorithmic.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: CASE_ver2.tex:98: Underfull \hbox (badness 10000) in paragraph at lines 89--98
+warning: CASE_ver2.tex:98: Underfull \hbox (badness 10000) in paragraph at lines 89--98
+warning: CASE_ver2.tex:176: Underfull \hbox (badness 7832) in paragraph at lines 173--176
+warning: CASE_ver2.tex:176: Underfull \hbox (badness 10000) in paragraph at lines 173--176
+warning: CASE_ver2.tex:252: Underfull \hbox (badness 7649) in paragraph at lines 237--252
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: Object @equation.3.1 already defined.
+warning: Object @equation.3.2 already defined.
+warning: Object @equation.3.1 already defined.
+warning: Object @equation.3.2 already defined.
+warning: Object @equation.3.3 already defined.
+warning: Object @equation.3.6 already defined.

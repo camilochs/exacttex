@@ -1,0 +1,97 @@
+{
+ "paper": "1603.01987",
+ "main": "wiki16v1.tex",
+ "files": [
+  {
+   "file": "wiki16v1.tex",
+   "chars_before": 61780,
+   "chars_after": 61729,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 61780,
+ "chars_after": 61729,
+ "delta_pct": -0.08255098737455487,
+ "unrepaired": {
+  "chars_after": 61726,
+  "chars_before": 61780,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.024285,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`biblio.bib` could not be read"
+  },
+  "errors": 1,
+  "advisories": 1,
+  "build_exit": 1,
+  "build_emitted": false,
+  "delta_pct": -0.08740692780835221
+ },
+ "stats": {
+  "cite_cmds_live": 43,
+  "cite_keys_live": 43,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 18,
+  "labels_outside_grammar": 0,
+  "refs_live": 31,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 9,
+  "cite_cmds_annotated": 43,
+  "cite_keys_annotated": 43,
+  "ids_annotated": 17,
+  "refs_annotated": 31,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 1,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [
+  {
+   "code": "XT1001",
+   "name": "tab:comparison",
+   "file": "wiki16v1.xtex",
+   "line": 731,
+   "message": "identifier `tab:comparison` is already declared",
+   "classification": "real: \\label{tab:comparison} appears 2x in the sources",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.023976,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`biblio.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "wiki16v1.xtex",
+    "offset": 4025,
+    "length": 10,
+    "line": 104,
+    "column": 54
+   },
+   "message": "citation checking unavailable: `biblio.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

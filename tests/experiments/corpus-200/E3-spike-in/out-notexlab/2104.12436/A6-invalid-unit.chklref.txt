@@ -1,0 +1,777 @@
+pdf=0
+exit=0
+lines=2225
+unique_findings=11
+Reference `eq:plant' on page 1 undefined on input line 305.
+
+
+LaTeX Warning: Reference `eq:controller' on page 1 undefined on input line 305.
+
+
+
+LaTeX Warning: Reference `fig:scenario' on page 1 undefined on input line 307.
+
+
+LaTeX Warning: Reference `eq:controller' on page 1 undefined on input line 309.
+
+
+
+LaTeX Warning: Reference `def:mhe' on page 1 undefined on input line 309.
+
+
+LaTeX Warning: Reference `eq:controller' on page 1 undefined on input line 328.
+
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.336 \begin{figure}[!t]
+                        
+
+LaTeX Warning: Reference `eq:system' on page 1 undefined on input line 346.
+
+
+LaTeX Warning: Reference `eq:plant' on page 1 undefined on input line 366.
+
+
+LaTeX Warning: Reference `def:adversary' on page 1 undefined on input line 369.
+
+
+
+LaTeX Warning: Reference `fig:scenario' on page 1 undefined on input line 371.
+
+
+LaTeX Warning: Reference `def:adversary' on page 1 undefined on input line 376.
+
+
+
+LaTeX Warning: Reference `def:security' on page 1 undefined on input line 380.
+
+
+LaTeX Warning: Reference `eq:system' on page 1 undefined on input line 385.
+
+
+LaTeX Warning: Reference `fig:scenario' on page 1 undefined on input line 390.
+
+
+LaTeX Warning: Reference `def:adversary' on page 1 undefined on input line 390.
+
+
+
+LaTeX Warning: Reference `def:security' on page 1 undefined on input line 391.
+
+
+LaTeX Warning: Reference `prob:security' on page 1 undefined on input line 394.
+
+
+
+LaTeX Warning: Reference `prob:security' on page 1 undefined on input line 397.
+
+
+
+LaTeX Warning: Reference `fig:scenario' on page 1 undefined on input line 412.
+
+
+LaTeX Warning: Reference `app:quantization' on page 1 undefined on input line 4
+15.
+
+
+LaTeX Warning: Reference `eq:system' on page 1 undefined on input line 419.
+
+
+LaTeX Warning: Reference `eq:controller' on page 1 undefined on input line 420.
+
+
+
+LaTeX Warning: Reference `def:security' on page 1 undefined on input line 432.
+
+
+LaTeX Warning: Reference `eq:system' on page 1 undefined on input line 432.
+
+
+LaTeX Warning: Reference `fig:scenario' on page 1 undefined on input line 435.
+
+
+LaTeX Warning: Reference `def:adversary' on page 1 undefined on input line 435.
+
+
+
+LaTeX Warning: Reference `eq:system' on page 1 undefined on input line 436.
+
+
+LaTeX Warning: Reference `def:adversary' on page 1 undefined on input line 437.
+
+
+
+LaTeX Warning: Reference `proof:lem_gamma' on page 1 undefined on input line 45
+2.
+
+
+LaTeX Warning: Reference `eq:system' on page 1 undefined on input line 455.
+
+
+LaTeX Warning: Reference `lem:gamma' on page 1 undefined on input line 456.
+
+
+LaTeX Warning: Reference `eq:security' on page 1 undefined on input line 456.
+
+
+LaTeX Warning: Reference `eq:gamma' on page 1 undefined on input line 460.
+
+
+LaTeX Warning: Reference `fig:sic' on page 1 undefined on input line 467.
+
+
+LaTeX Warning: Reference `eq:system' on page 1 undefined on input line 468.
+
+
+LaTeX Warning: Reference `eq:est_variance' on page 1 undefined on input line 47
+0.
+
+
+LaTeX Warning: Reference `eq:est_mean' on page 1 undefined on input line 470.
+
+
+LaTeX Warning: Reference `eq:est_variance' on page 1 undefined on input line 47
+4.
+
+
+LaTeX Warning: Reference `eq:est_mean' on page 1 undefined on input line 479.
+
+
+LaTeX Warning: Reference `proof:cor_est_error' on page 1 undefined on input lin
+e 483.
+
+
+LaTeX Warning: Reference `eq:gamma' on page 1 undefined on input line 486.
+
+
+LaTeX Warning: Reference `eq:est_error' on page 1 undefined on input line 486.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.489 \begin{figure*}[!t]
+                         
+
+LaTeX Warning: Reference `lem:gamma' on page 1 undefined on input line 502.
+
+
+LaTeX Warning: Reference `eq:no_info' on page 1 undefined on input line 505.
+
+
+LaTeX Warning: Reference `eq:gamma' on page 1 undefined on input line 505.
+
+
+LaTeX Warning: Reference `proof:cor_gamma' on page 1 undefined on input line 51
+3.
+
+
+LaTeX Warning: Reference `def:security' on page 1 undefined on input line 516.
+
+
+LaTeX Warning: Reference `prob:security' on page 1 undefined on input line 517.
+
+
+
+LaTeX Warning: Reference `eq:security' on page 1 undefined on input line 528.
+
+
+LaTeX Warning: Reference `def:security' on page 1 undefined on input line 532.
+
+
+LaTeX Warning: Reference `sec:preliminaries' on page 1 undefined on input line 
+537.
+
+
+LaTeX Warning: Reference `eq:subexp_time' on page 1 undefined on input line 559
+.
+
+
+LaTeX Warning: Reference `eq:subexp_time_key' on page 1 undefined on input line
+ 567.
+
+
+LaTeX Warning: Reference `eq:subexp_time' on page 1 undefined on input line 567
+.
+
+
+LaTeX Warning: Reference `def:adversary' on page 1 undefined on input line 577.
+
+
+
+LaTeX Warning: Reference `eq:security' on page 1 undefined on input line 578.
+
+
+LaTeX Warning: Reference `fig:scenario' on page 1 undefined on input line 579.
+
+
+LaTeX Warning: Reference `eq:tau_0' on page 1 undefined on input line 583.
+
+
+LaTeX Warning: Reference `def:dynenc' on page 1 undefined on input line 619.
+
+
+LaTeX Warning: Reference `proof:correctness' on page 1 undefined on input line 
+638.
+
+
+LaTeX Warning: Reference `fig:scenario' on page 1 undefined on input line 641.
+
+
+LaTeX Warning: Reference `eq:system' on page 1 undefined on input line 641.
+
+
+LaTeX Warning: Reference `proof:negligible' on page 1 undefined on input line 6
+58.
+
+
+LaTeX Warning: Reference `prop:negligible' on page 1 undefined on input line 66
+1.
+
+
+LaTeX Warning: Reference `proof:IND-CPA' on page 1 undefined on input line 669.
+
+
+
+LaTeX Warning: Reference `prop:negligible' on page 1 undefined on input line 67
+2.
+
+
+LaTeX Warning: Reference `prop:IND-CPA' on page 1 undefined on input line 672.
+
+
+LaTeX Warning: Reference `fig:scenario' on page 1 undefined on input line 678.
+
+
+LaTeX Warning: Reference `def:dynenc' on page 1 undefined on input line 678.
+
+
+LaTeX Warning: Reference `eq:subexp_time_key' on page 1 undefined on input line
+ 683.
+
+
+LaTeX Warning: Reference `def:adversary' on page 1 undefined on input line 683.
+
+
+
+LaTeX Warning: Reference `eq:tau' on page 1 undefined on input line 686.
+
+
+LaTeX Warning: Reference `fig:sdt' on page 1 undefined on input line 688.
+
+
+LaTeX Warning: Reference `fig:scenario' on page 1 undefined on input line 690.
+
+
+LaTeX Warning: Reference `def:dynenc' on page 1 undefined on input line 690.
+
+
+LaTeX Warning: Reference `eq:gamma' on page 1 undefined on input line 692.
+
+
+LaTeX Warning: Reference `eq:system' on page 1 undefined on input line 692.
+
+
+LaTeX Warning: Reference `eq:tau' on page 1 undefined on input line 693.
+
+
+LaTeX Warning: Reference `prob:security' on page 1 undefined on input line 695.
+
+
+
+LaTeX Warning: Reference `cor:gamma' on page 1 undefined on input line 700.
+
+
+LaTeX Warning: Reference `def:security' on page 1 undefined on input line 701.
+
+
+LaTeX Warning: Reference `cor:gamma' on page 1 undefined on input line 701.
+
+
+LaTeX Warning: Reference `eq:gamma_simple' on page 1 undefined on input line 70
+6.
+
+
+LaTeX Warning: Reference `eq:tau' on page 1 undefined on input line 706.
+
+
+LaTeX Warning: Reference `fig:scenario' on page 1 undefined on input line 706.
+
+
+LaTeX Warning: Reference `def:dynenc' on page 1 undefined on input line 706.
+
+
+LaTeX Warning: Reference `eq:gamma_simple' on page 1 undefined on input line 71
+0.
+
+
+LaTeX Warning: Reference `prob:security' on page 1 undefined on input line 721.
+
+
+
+LaTeX Warning: Reference `eq:opt_security' on page 1 undefined on input line 72
+1.
+
+
+LaTeX Warning: Reference `eq:gramian' on page 1 undefined on input line 722.
+
+
+LaTeX Warning: Reference `eq:system' on page 1 undefined on input line 722.
+
+
+LaTeX Warning: Reference `eq:opt_security' on page 1 undefined on input line 72
+9.
+
+
+LaTeX Warning: Reference `eq:gamma_norm' on page 1 undefined on input line 730.
+
+
+
+LaTeX Warning: Reference `eq:system' on page 1 undefined on input line 739.
+
+
+LaTeX Warning: Reference `eq:cost' on page 1 undefined on input line 739.
+
+
+LaTeX Warning: Reference `proof:opt_input' on page 1 undefined on input line 75
+4.
+
+
+LaTeX Warning: Reference `eq:opt_input' on page 1 undefined on input line 757.
+
+
+LaTeX Warning: Reference `eq:controller' on page 1 undefined on input line 768.
+
+
+
+LaTeX Warning: Reference `eq:opt_input' on page 1 undefined on input line 769.
+
+
+LaTeX Warning: Reference `def:adversary' on page 1 undefined on input line 771.
+
+
+
+LaTeX Warning: Reference `eq:F_star' on page 1 undefined on input line 772.
+
+
+LaTeX Warning: Reference `eq:opt_security' on page 1 undefined on input line 77
+4.
+
+
+LaTeX Warning: Reference `eq:gramian' on page 1 undefined on input line 779.
+
+
+LaTeX Warning: Reference `fig:sic' on page 1 undefined on input line 780.
+
+
+LaTeX Warning: Reference `eq:T_star' on page 1 undefined on input line 781.
+
+
+LaTeX Warning: Reference `eq:system' on page 1 undefined on input line 781.
+
+
+LaTeX Warning: Reference `eq:F_star' on page 1 undefined on input line 782.
+
+
+LaTeX Warning: Reference `eq:T_star' on page 1 undefined on input line 787.
+
+
+LaTeX Warning: Reference `proof:sum_tr_Wt' on page 1 undefined on input line 80
+0.
+
+
+LaTeX Warning: Reference `eq:T_star' on page 1 undefined on input line 803.
+
+
+LaTeX Warning: Reference `eq:T_star' on page 1 undefined on input line 803.
+
+
+LaTeX Warning: Reference `eq:T_star' on page 1 undefined on input line 809.
+
+
+LaTeX Warning: Reference `eq:opt_security' on page 1 undefined on input line 81
+0.
+
+
+LaTeX Warning: Reference `eq:opt_security' on page 1 undefined on input line 81
+1.
+
+
+LaTeX Warning: Reference `eq:tau' on page 1 undefined on input line 811.
+
+
+LaTeX Warning: Reference `fig:sdt' on page 1 undefined on input line 816.
+
+
+LaTeX Warning: Reference `prob:security' on page 1 undefined on input line 821.
+
+
+
+LaTeX Warning: Reference `cor:gamma' on page 1 undefined on input line 821.
+
+
+LaTeX Warning: Reference `eq:F_star' on page 1 undefined on input line 822.
+
+
+LaTeX Warning: Reference `eq:k_star' on page 1 undefined on input line 822.
+
+
+LaTeX Warning: Reference `fig:scenario' on page 1 undefined on input line 823.
+
+
+LaTeX Warning: Reference `def:dynenc' on page 1 undefined on input line 823.
+
+
+LaTeX Warning: Reference `proof:design' on page 1 undefined on input line 827.
+
+
+LaTeX Warning: Reference `alg:opt_ecs' on page 1 undefined on input line 830.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.832 \begin{figure}[!t]
+                        
+
+LaTeX Warning: Reference `eq:T_star' on page 1 undefined on input line 842.
+
+
+LaTeX Warning: Reference `eq:k_star' on page 1 undefined on input line 851.
+
+
+LaTeX Warning: Reference `prob:security' on page 1 undefined on input line 866.
+
+
+
+LaTeX Warning: Reference `prob:security' on page 1 undefined on input line 869.
+
+
+
+LaTeX Warning: Reference `prob:security' on page 1 undefined on input line 873.
+
+
+
+LaTeX Warning: Reference `prob:security' on page 1 undefined on input line 874.
+
+
+
+LaTeX Warning: Reference `prob:security' on page 1 undefined on input line 875.
+
+
+
+LaTeX Warning: Reference `eq:plant' on page 1 undefined on input line 880.
+
+
+LaTeX Warning: Reference `eq:controller' on page 1 undefined on input line 898.
+
+
+
+LaTeX Warning: Reference `eq:system' on page 1 undefined on input line 898.
+
+
+LaTeX Warning: Reference `def:adversary' on page 1 undefined on input line 899.
+
+
+
+LaTeX Warning: Reference `fig:be' on page 1 undefined on input line 902.
+
+
+LaTeX Warning: Reference `fig:sicc' on page 1 undefined on input line 906.
+
+
+LaTeX Warning: Reference `eq:gamma' on page 1 undefined on input line 906.
+
+
+LaTeX Warning: Reference `eq:F_star' on page 1 undefined on input line 906.
+
+
+LaTeX Warning: Reference `eq:opt_security' on page 1 undefined on input line 90
+7.
+
+
+LaTeX Warning: Reference `eq:F_star' on page 1 undefined on input line 910.
+
+
+LaTeX Warning: Reference `eq:tau' on page 1 undefined on input line 912.
+
+
+LaTeX Warning: Reference `eq:tau_0' on page 1 undefined on input line 912.
+
+
+LaTeX Warning: Reference `def:dynenc' on page 1 undefined on input line 913.
+
+
+LaTeX Warning: Reference `fig:sdtc' on page 1 undefined on input line 915.
+
+
+LaTeX Warning: Reference `eq:k_star' on page 1 undefined on input line 917.
+
+
+LaTeX Warning: Reference `tab:ct' on page 1 undefined on input line 922.
+
+
+LaTeX Warning: Reference `fig:ct' on page 1 undefined on input line 923.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.930 \begin{figure}[!t]
+                        
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.940 \begin{figure}[!t]
+                        
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.947 \begin{figure}[!t]
+                        
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.954 \begin{figure}[!t]
+                        
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.961 \begin{table*}[!t]
+                        
+
+LaTeX Warning: Reference `eq:est_mean' on page 1 undefined on input line 994.
+
+
+LaTeX Warning: Reference `eq:plant' on page 1 undefined on input line 999.
+
+
+LaTeX Warning: Reference `eq:system' on page 1 undefined on input line 999.
+
+
+LaTeX Warning: Reference `eq:plant' on page 1 undefined on input line 1000.
+
+
+LaTeX Warning: Reference `eq:system' on page 1 undefined on input line 1019.
+
+
+LaTeX Warning: Reference `eq:controller' on page 1 undefined on input line 1022
+.
+
+
+LaTeX Warning: Reference `eq:ctlr' on page 1 undefined on input line 1038.
+
+
+LaTeX Warning: Reference `eq:enc_ctlr' on page 1 undefined on input line 1045.
+
+
+LaTeX Warning: Reference `eq:error_bound' on page 1 undefined on input line 106
+1.
+
+
+LaTeX Warning: Reference `eq:enc_ctlr' on page 1 undefined on input line 1065.
+
+
+LaTeX Warning: Reference `eq:ctlr' on page 1 undefined on input line 1072.
+
+
+LaTeX Warning: Reference `eq:error_bound' on page 1 undefined on input line 107
+8.
+
+
+Underfull \hbox (badness 1960) in paragraph at lines 1083--1086
+[]\OT1/ptm/m/n/10 Let $\OML/cmm/m/it/10 k$ \OT1/ptm/m/n/10 be a key length of t
+he El-Ga-mal
+
+Underfull \hbox (badness 4805) in paragraph at lines 1083--1086
+\OT1/ptm/m/n/10 en-cryp-tion. Sup-pose $[]\OMS/cmsy/m/n/10 fk\OT1/cmr/m/n/10 ^^
+H\OMS/cmsy/m/n/10 k[]\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 k\OML/cmm/m/it/10 ^^X\
+OMS/cmsy/m/n/10 k[]g$ \OT1/ptm/m/n/10 ex-ists. Then,
+
+Underfull \hbox (badness 10000) in paragraph at lines 1083--1086
+\OT1/ptm/m/n/10 there ex-ist seis-i-tiv-i-ties $\OT1/cmr/m/n/10 ^^A[](\OML/cmm/
+m/it/10 k\OT1/cmr/m/n/10 )$ \OT1/ptm/m/n/10 and $\OT1/cmr/m/n/10 ^^A[](\OML/cmm
+/m/it/10 k\OT1/cmr/m/n/10 )$ \OT1/ptm/m/n/10 sat-is-fy-ing
+
+LaTeX Warning: Reference `eq:error_bound' on page 1 undefined on input line 109
+1.
+
+
+LaTeX Warning: Reference `prop:enc_cont_1' on page 1 undefined on input line 10
+98.
+
+
+LaTeX Warning: Reference `prop:enc_cont_2' on page 1 undefined on input line 10
+99.
+
+
+LaTeX Warning: Reference `eq:system' on page 1 undefined on input line 1101.
+
+
+LaTeX Warning: Reference `lem:gamma' on page 1 undefined on input line 1152.
+
+
+LaTeX Warning: Reference `def:adversary' on page 1 undefined on input line 1155
+.
+
+
+LaTeX Warning: Reference `lem:quadratic' on page 1 undefined on input line 1182
+.
+
+
+LaTeX Warning: Reference `eq:system' on page 1 undefined on input line 1186.
+
+
+LaTeX Warning: Reference `cor:est_error' on page 1 undefined on input line 1204
+.
+
+
+LaTeX Warning: Reference `cor:gamma' on page 1 undefined on input line 1224.
+
+
+LaTeX Warning: Reference `prop:correctness' on page 1 undefined on input line 1
+241.
+
+
+LaTeX Warning: Reference `prop:negligible' on page 1 undefined on input line 12
+64.
+
+
+LaTeX Warning: Reference `prop:IND-CPA' on page 1 undefined on input line 1282.
+
+
+
+LaTeX Warning: Reference `prop:IND-CPA' on page 1 undefined on input line 1305.
+
+
+
+LaTeX Warning: Reference `prop:negligible' on page 1 undefined on input line 13
+45.
+
+
+LaTeX Warning: Reference `lem:opt_input' on page 1 undefined on input line 1374
+.
+
+
+LaTeX Warning: Reference `eq:cost' on page 1 undefined on input line 1377.
+
+
+LaTeX Warning: Reference `lem:invertible' on page 1 undefined on input line 138
+0.
+
+
+LaTeX Warning: Reference `lem:invertible' on page 1 undefined on input line 138
+1.
+
+
+LaTeX Warning: Reference `prop:sum_tr_Wt' on page 1 undefined on input line 139
+5.
+
+
+LaTeX Warning: Reference `thm:design' on page 1 undefined on input line 1410.
+
+
+LaTeX Warning: Reference `eq:gamma_simple' on page 1 undefined on input line 14
+13.
+
+
+LaTeX Warning: Reference `eq:gramian' on page 1 undefined on input line 1413.
+
+
+LaTeX Warning: Reference `eq:T_star' on page 1 undefined on input line 1413.
+
+
+LaTeX Warning: Reference `eq:tau' on page 1 undefined on input line 1414.
+
+
+LaTeX Warning: Reference `eq:k_star' on page 1 undefined on input line 1414.
+
+(./manuscript.bbl) 
+
+! LaTeX Error: \begin{figure} on input line 166 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1449 \end{document}
+                     
+(./manuscript.aux)
+
+LaTeX Warning: There were undefined references.
+
+! You can't use `\end' in internal vertical mode.
+\enddocument ...cument/end}\deadcycles \z@ \@@end 
+                                                  
+l.1449 \end{document}
+                     
+
+! LaTeX Error: \begin{figure} on input line 166 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1449 \end{document}
+                     
+! Missing } inserted.
+<inserted text> 
+                }
+l.1449 \end{document}
+                     
+)
+! Emergency stop.
+<*> ...uirePackage{chklref}\input {manuscript.tex}
+                                                  
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on manuscript.log.
+************************************
+** Labels in starred environments **
+************************************
+-- manuscript.tex       line  973: remove label tab:ct 
+
+*******************
+** Unused Labels **
+*******************
+-- manuscript.tex       line  494: remove label fig:curve
+-- manuscript.tex       line  677: remove label lem:tau
+-- manuscript.tex       line  932: remove label fig:be_A11
+-- manuscript.tex       line  933: remove label fig:be_A12
+-- manuscript.tex       line  934: remove label fig:be_A21
+-- manuscript.tex       line  935: remove label fig:be_A22
+-- manuscript.tex       line  956: remove label fig:time
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

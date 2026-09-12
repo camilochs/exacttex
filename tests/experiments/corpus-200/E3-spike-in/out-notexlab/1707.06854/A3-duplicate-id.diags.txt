@@ -1,0 +1,3 @@
+planted=fig:1 sites=[('ws-acs.xtex', 125), ('ws-acs.xtex', 81)]
+xtex new=[('XT1001', 'fig:1', 'ws-acs.xtex', 125), ('XT1004', 'fig:1', 'ws-acs.xtex', 118), ('XT1020', 'fig:1', 'ws-acs.xtex', 118)]
+texlab new=[]

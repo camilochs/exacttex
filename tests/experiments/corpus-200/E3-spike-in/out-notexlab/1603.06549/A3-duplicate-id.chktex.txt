@@ -1,0 +1,371 @@
+exit=2
+lines=765
+unique_findings=250
+nseightensrt & 52 & 19 & 24 & 1.1 & \textbf{1.0} & 53\\  
+               ^
+Warning 1 in RunRoaringBitmap.tex line 1094: Command terminated with space.
+\Weather & 600 & 76 & 150 & \textbf{0.78} & 1.0 & 610\\  
+        ^
+Warning 1 in RunRoaringBitmap.tex line 1095: Command terminated with space.
+\Weathersrt & 90 & 35 & 42 & \textbf{0.91} & 1.0 & 98\\  
+           ^
+Warning 1 in RunRoaringBitmap.tex line 1096: Command terminated with space.
+\Wikileaks & 48 & 26 & 29 & 1.1 & \textbf{1.0} & 49\\  
+          ^
+Warning 1 in RunRoaringBitmap.tex line 1097: Command terminated with space.
+\Wikileakssrt & 14 & 9.4 & 9.8 & 1.3 & \textbf{1.0} & 15\\\bottomrule  
+             ^
+Warning 44 in RunRoaringBitmap.tex line 1103: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|ccccccc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 1 in RunRoaringBitmap.tex line 1105: Command terminated with space.
+\CensInc & 5.5 & 2.6 & 3.9 & \textbf{0.99} & 1.0 & 6.4\\  
+        ^
+Warning 1 in RunRoaringBitmap.tex line 1106: Command terminated with space.
+\CensIncsrt & 3.5 & 1.4 & 1.7 & 1.1 & \textbf{1.0} & 3.0\\  
+           ^
+Warning 1 in RunRoaringBitmap.tex line 1107: Command terminated with space.
+\Censeighten & 460 & 94 & 150 & \textbf{0.97} & 1.0 & 370\\  
+            ^
+Warning 1 in RunRoaringBitmap.tex line 1108: Command terminated with space.
+\Censeightensrt & 61 & 19 & 23 & 1.2 & \textbf{1.0} & 55\\  
+               ^
+Warning 1 in RunRoaringBitmap.tex line 1109: Command terminated with space.
+\Weather & 5.5 & 2.1 & 3.3 & \textbf{0.98} & 1.0 & 4.7\\  
+        ^
+Warning 1 in RunRoaringBitmap.tex line 1110: Command terminated with space.
+\Weathersrt & 5.7 & 2.4 & 2.6 & 1.4 & \textbf{1.0} & 5.1\\  
+           ^
+Warning 1 in RunRoaringBitmap.tex line 1111: Command terminated with space.
+\Wikileaks & 7.2 & 3.6 & 3.6 & \textbf{0.96} & 1.0 & 6.9\\  
+          ^
+Warning 1 in RunRoaringBitmap.tex line 1112: Command terminated with space.
+\Wikileakssrt & 9.1 & 5.9 & 5.9 & 1.5 & \textbf{1.0} & 8.5\\\bottomrule  
+             ^
+Warning 44 in RunRoaringBitmap.tex line 1117: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|ccccccc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 1 in RunRoaringBitmap.tex line 1119: Command terminated with space.
+\CensInc & 4.6 & 2.4 & 4.0 & \textbf{1.0} & \textbf{1.0} & 4.2\\  
+        ^
+Warning 1 in RunRoaringBitmap.tex line 1120: Command terminated with space.
+\CensIncsrt & 1.7 & 0.99 & 1.4 & \textbf{1.0} & \textbf{1.0} & 1.5\\  
+           ^
+Warning 1 in RunRoaringBitmap.tex line 1121: Command terminated with space.
+\Censeighten & 43 & 22 & 43 & \textbf{0.92} & 1.0 & 38\\  
+            ^
+Warning 1 in RunRoaringBitmap.tex line 1122: Command terminated with space.
+\Censeightensrt & 8.8 & 6.8 & 8.4 & 1.2 & \textbf{1.0} & 7.8\\  
+               ^
+Warning 1 in RunRoaringBitmap.tex line 1123: Command terminated with space.
+\Weather & 4.4 & 2.0 & 3.8 & \textbf{0.93} & 1.0 & 3.9\\  
+        ^
+Warning 1 in RunRoaringBitmap.tex line 1124: Command terminated with space.
+\Weathersrt & 3.4 & 2.5 & 3.1 & 2.1 & \textbf{1.0} & 3.0\\  
+           ^
+Warning 1 in RunRoaringBitmap.tex line 1125: Command terminated with space.
+\Wikileaks & 3.8 & 4.2 & 4.4 & 1.3 & \textbf{1.0} & 3.6\\  
+          ^
+Warning 1 in RunRoaringBitmap.tex line 1126: Command terminated with space.
+\Wikileakssrt & 2.3 & 2.6 & 2.9 & 1.6 & \textbf{1.0} & 2.3\\\bottomrule  
+             ^
+Warning 7 in RunRoaringBitmap.tex line 1130: Accent command `\"' needs use of `\i'.
+\subfloat[\label{tab:eu}Entire unions (na\"ive)]{\small  
+                                         ^^
+Warning 44 in RunRoaringBitmap.tex line 1131: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|ccccccc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 1 in RunRoaringBitmap.tex line 1133: Command terminated with space.
+\CensInc & 9.7 & 2.6 & 1.7 & 2.9 & \textbf{1.0} & 9.2\\  
+        ^
+Warning 1 in RunRoaringBitmap.tex line 1134: Command terminated with space.
+\CensIncsrt & 8.1 & 5.5 & 4.5 & 25 & \textbf{1.0} & 6.9\\  
+           ^
+Warning 1 in RunRoaringBitmap.tex line 1135: Command terminated with space.
+\Censeighten & 22 & 14 & 4.9 & \textbf{0.51} & 1.0 & 20\\  
+            ^
+Warning 1 in RunRoaringBitmap.tex line 1136: Command terminated with space.
+\Censeightensrt & 15 & 16 & 11 & \textbf{0.71} & 1.0 & 13\\  
+               ^
+Warning 1 in RunRoaringBitmap.tex line 1137: Command terminated with space.
+\Weather & 13 & 5.5 & 3.6 & \textbf{0.99} & 1.0 & 11\\  
+        ^
+Warning 1 in RunRoaringBitmap.tex line 1138: Command terminated with space.
+\Weathersrt & 3.4 & 3.1 & 2.4 & 2.0 & \textbf{1.0} & 3.0\\  
+           ^
+Warning 1 in RunRoaringBitmap.tex line 1139: Command terminated with space.
+\Wikileaks & 5.6 & 5.3 & 3.0 & \textbf{0.28} & 1.0 & 5.3\\  
+          ^
+Warning 1 in RunRoaringBitmap.tex line 1140: Command terminated with space.
+\Wikileakssrt & 11 & 11 & 8.7 & 1.2 & \textbf{1.0} & 9.5\\\bottomrule  
+             ^
+Warning 44 in RunRoaringBitmap.tex line 1145: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|ccccccccc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 7 in RunRoaringBitmap.tex line 1147: Accent command `\"' needs use of `\i'.
+&   & 64-bit  &   &  na\"ive & pq & +Run na\"i. &+Run pq &  \\\midrule  
+                       ^^
+Warning 7 in RunRoaringBitmap.tex line 1147: Accent command `\"' needs use of `\i'.
+&   & 64-bit  &   &  na\"ive & pq & +Run na\"i. &+Run pq &  \\\midrule  
+                                           ^^
+Warning 1 in RunRoaringBitmap.tex line 1148: Command terminated with space.
+\CensInc & 3.9 & 1.4 & 1.6 & 0.5 & 1.1 & \textbf{0.16} & 1.0 & 3.5\\  
+        ^
+Warning 1 in RunRoaringBitmap.tex line 1149: Command terminated with space.
+\CensIncsrt & 7.3 & 4.3 & 5.0 & 24 & 51 & \textbf{1.0} & \textbf{1.0} & 6.7\\  
+           ^
+Warning 1 in RunRoaringBitmap.tex line 1150: Command terminated with space.
+\Censeighten & 2.2 & 1.2 & 2.2 & \textbf{0.35} & 0.79 & 0.69 & 1.0 & 1.9\\  
+            ^
+Warning 1 in RunRoaringBitmap.tex line 1151: Command terminated with space.
+\Censeightensrt & 2.5 & 2.0 & 2.3 & 3.6 & 2.5 & 5.4 & \textbf{1.0} & 2.4\\  
+               ^
+Warning 1 in RunRoaringBitmap.tex line 1152: Command terminated with space.
+\Weather & 3.4 & 1.0 & 1.9 & \textbf{0.17} & 0.93 & \textbf{0.17} & 1.0 & 3.1\\  
+        ^
+Warning 1 in RunRoaringBitmap.tex line 1153: Command terminated with space.
+\Weathersrt & 1.8 & 4.2 & 4.5 & 12 & 45 & 5.8 & \textbf{1.0} & 1.8\\  
+           ^
+Warning 1 in RunRoaringBitmap.tex line 1154: Command terminated with space.
+\Wikileaks & 2.6 & 2.2 & 2.6 & \textbf{0.98} & 1.6 & 3.4 & 1.0 & 2.4\\  
+          ^
+Warning 1 in RunRoaringBitmap.tex line 1155: Command terminated with space.
+\Wikileakssrt & 2.7 & 2.5 & 2.6 & 3.1 & 3.4 & 2.5 & \textbf{1.0} & 2.4\\\bottomrule  
+             ^
+Warning 7 in RunRoaringBitmap.tex line 1189: Accent command `\"' needs use of `\i'.
+special approach marked by a star ($\star$) developed originally for the Druid engine. Unlike the na\"ive or priority-queue approaches, which always combine bitmaps two-by-two, this approach  
+                                                                                                    ^^
+Warning 7 in RunRoaringBitmap.tex line 1192: Accent command `\"' needs use of `\i'.
+replaced by the simpler na\"ive algorithm as the default for the Roaring library. For sorted data sources, the  
+                          ^^
+Warning 7 in RunRoaringBitmap.tex line 1197: Accent command `\"' needs use of `\i'.
+We can once again compare the na\"ive and priority-queue approaches for Roaring+Run, this time using the fact that both tables (Tables~\ref{tab:inmemmapeu} and~\ref{tab:inmemmapeupq}) present the same algorithm (Concise$\star$). Unsurprisingly, there is no clear winner. On sorted datasets, the priority queue is better,   
+                                ^^
+Warning 7 in RunRoaringBitmap.tex line 1200: Accent command `\"' needs use of `\i'.
+true for the other datasets. We do expect, however, the na\"ive approach to often have lower memory usage, and since it is particularly simple, it  
+                                                          ^^
+Warning 44 in RunRoaringBitmap.tex line 1210: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|ccccccc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 1 in RunRoaringBitmap.tex line 1212: Command terminated with space.
+\CensInc & 21 & 33 & \textbf{0.91} & 1.0\\  
+        ^
+Warning 1 in RunRoaringBitmap.tex line 1213: Command terminated with space.
+\CensIncsrt & 9.2 & 11 & \textbf{0.92} & 1.0\\  
+           ^
+Warning 1 in RunRoaringBitmap.tex line 1214: Command terminated with space.
+\Censeighten & 140 & 250 & \textbf{1.0} & \textbf{1.0}\\  
+            ^
+Warning 1 in RunRoaringBitmap.tex line 1215: Command terminated with space.
+\Censeightensrt & 13 & 16 & \textbf{0.97} & 1.0\\  
+               ^
+Warning 1 in RunRoaringBitmap.tex line 1216: Command terminated with space.
+\Weather & 94 & 170 & \textbf{0.96} & 1.0\\  
+        ^
+Warning 1 in RunRoaringBitmap.tex line 1217: Command terminated with space.
+\Weathersrt & 27 & 31 & \textbf{0.88} & 1.0\\  
+           ^
+Warning 1 in RunRoaringBitmap.tex line 1218: Command terminated with space.
+\Wikileaks & 20 & 20 & \textbf{0.93} & 1.0\\  
+          ^
+Warning 1 in RunRoaringBitmap.tex line 1219: Command terminated with space.
+\Wikileakssrt & 6.2 & 6.3 & \textbf{1.0} & \textbf{1.0}\\\bottomrule  
+             ^
+Warning 44 in RunRoaringBitmap.tex line 1225: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|cccccc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 1 in RunRoaringBitmap.tex line 1227: Command terminated with space.
+\CensInc & 17 & 2.3 & 3.6 & \textbf{1.0} & \textbf{1.0}\\  
+        ^
+Warning 1 in RunRoaringBitmap.tex line 1228: Command terminated with space.
+\CensIncsrt & 6.2 & 1.3 & 1.6 & 1.3 & \textbf{1.0}\\  
+           ^
+Warning 1 in RunRoaringBitmap.tex line 1229: Command terminated with space.
+\Censeighten & 140 & 79 & 140 & \textbf{0.98} & 1.0\\  
+            ^
+Warning 1 in RunRoaringBitmap.tex line 1230: Command terminated with space.
+\Censeightensrt & 19 & 12 & 15 & \textbf{1.0} & \textbf{1.0}\\  
+               ^
+Warning 1 in RunRoaringBitmap.tex line 1231: Command terminated with space.
+\Weather & 13 & 1.8 & 2.9 & \textbf{0.99} & 1.0\\  
+        ^
+Warning 1 in RunRoaringBitmap.tex line 1232: Command terminated with space.
+\Weathersrt & 6.4 & 2.2 & 2.4 & 1.6 & \textbf{1.0}\\  
+           ^
+Warning 1 in RunRoaringBitmap.tex line 1233: Command terminated with space.
+\Wikileaks & 5.8 & 3.3 & 3.4 & \textbf{0.83} & 1.0\\  
+          ^
+Warning 1 in RunRoaringBitmap.tex line 1234: Command terminated with space.
+\Wikileakssrt & 5.3 & 3.4 & 3.4 & 1.2 & \textbf{1.0}\\\bottomrule  
+             ^
+Warning 44 in RunRoaringBitmap.tex line 1239: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|cccccc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 1 in RunRoaringBitmap.tex line 1241: Command terminated with space.
+\CensInc & 28 & 2.5 & 4.1 & \textbf{1.0} & \textbf{1.0}\\  
+        ^
+Warning 1 in RunRoaringBitmap.tex line 1242: Command terminated with space.
+\CensIncsrt & 7.8 & 1.1 & 1.5 & \textbf{1.0} & \textbf{1.0}\\  
+           ^
+Warning 1 in RunRoaringBitmap.tex line 1243: Command terminated with space.
+\Censeighten & 210 & 21 & 38 & \textbf{0.9} & 1.0\\  
+            ^
+Warning 1 in RunRoaringBitmap.tex line 1244: Command terminated with space.
+\Censeightensrt & 22 & 3.7 & 4.3 & \textbf{1.0} & \textbf{1.0}\\  
+               ^
+Warning 1 in RunRoaringBitmap.tex line 1245: Command terminated with space.
+\Weather & 27 & 2.2 & 4.2 & \textbf{0.96} & 1.0\\  
+        ^
+Warning 1 in RunRoaringBitmap.tex line 1246: Command terminated with space.
+\Weathersrt & 15 & 2.5 & 3.1 & 1.6 & \textbf{1.0}\\  
+           ^
+Warning 1 in RunRoaringBitmap.tex line 1247: Command terminated with space.
+\Wikileaks & 15 & 3.7 & 3.9 & 1.5 & \textbf{1.0}\\  
+          ^
+Warning 1 in RunRoaringBitmap.tex line 1248: Command terminated with space.
+\Wikileakssrt & 8.5 & 1.8 & 2.1 & 1.3 & \textbf{1.0}\\\bottomrule  
+             ^
+Warning 7 in RunRoaringBitmap.tex line 1252: Accent command `\"' needs use of `\i'.
+\subfloat[\label{tab:inmemmapeu}Entire unions (na\"ive)]{\small  
+                                                 ^^
+Warning 44 in RunRoaringBitmap.tex line 1253: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|ccccccc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 1 in RunRoaringBitmap.tex line 1255: Command terminated with space.
+\CensInc & 16 & 110 & 1.7 & 2.8 & 2.3 & \textbf{1.0}\\  
+        ^
+Warning 1 in RunRoaringBitmap.tex line 1256: Command terminated with space.
+\CensIncsrt & 2.7 & 2.1 & \textbf{0.88} & 1.1 & 3.3 & 1.0\\  
+           ^
+Warning 1 in RunRoaringBitmap.tex line 1257: Command terminated with space.
+\Censeighten & 210 & 21 & 4.4 & 13 & \textbf{0.53} & 1.0\\  
+            ^
+Warning 1 in RunRoaringBitmap.tex line 1258: Command terminated with space.
+\Censeightensrt & 100 & 2.2 & 12 & 15 & \textbf{0.73} & 1.0\\  
+               ^
+Warning 1 in RunRoaringBitmap.tex line 1259: Command terminated with space.
+\Weather & 45 & 190 & 3.4 & 5.4 & \textbf{0.96} & 1.0\\  
+        ^
+Warning 1 in RunRoaringBitmap.tex line 1260: Command terminated with space.
+\Weathersrt & 14 & 1.4 & 2.6 & 3.3 & 1.7 & \textbf{1.0}\\  
+           ^
+Warning 1 in RunRoaringBitmap.tex line 1261: Command terminated with space.
+\Wikileaks & 34 & 1.7 & 3.0 & 5.4 & \textbf{0.28} & 1.0\\  
+          ^
+Warning 1 in RunRoaringBitmap.tex line 1262: Command terminated with space.
+\Wikileakssrt & 71 & 2.3 & 9.3 & 11 & 1.1 & \textbf{1.0}\\\bottomrule  
+             ^
+Warning 44 in RunRoaringBitmap.tex line 1267: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|ccccccccc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 7 in RunRoaringBitmap.tex line 1269: Accent command `\"' needs use of `\i'.
+& PQ & $\star$  & 64-bit  &   &  na\"ive & pq & +Run na\"i. &+Run pq  \\\midrule  
+                                   ^^
+Warning 7 in RunRoaringBitmap.tex line 1269: Accent command `\"' needs use of `\i'.
+& PQ & $\star$  & 64-bit  &   &  na\"ive & pq & +Run na\"i. &+Run pq  \\\midrule  
+                                                       ^^
+Warning 1 in RunRoaringBitmap.tex line 1270: Command terminated with space.
+\CensInc & 8.0 & 22 & 1.4 & 1.8 & 0.47 & 1.1 & \textbf{0.2} & 1.0\\  
+        ^
+Warning 1 in RunRoaringBitmap.tex line 1271: Command terminated with space.
+\CensIncsrt & 8.2 & 8.0 & 3.1 & 4.0 & 12 & 26 & 3.5 & \textbf{1.0}\\  
+           ^
+Warning 1 in RunRoaringBitmap.tex line 1272: Command terminated with space.
+\Censeighten & 12 & 14 & 1.2 & 2.1 & \textbf{0.34} & 0.68 & 0.65 & 1.0\\  
+            ^
+Warning 1 in RunRoaringBitmap.tex line 1273: Command terminated with space.
+\Censeightensrt & 9.8 & 10 & 1.9 & 1.9 & 3.3 & 1.9 & 4.8 & \textbf{1.0}\\  
+               ^
+Warning 1 in RunRoaringBitmap.tex line 1274: Command terminated with space.
+\Weather & 13 & 34 & 1.0 & 2.0 & \textbf{0.18} & 0.93 & \textbf{0.18} & 1.0\\  
+        ^
+Warning 1 in RunRoaringBitmap.tex line 1275: Command terminated with space.
+\Weathersrt & 4.1 & 4.0 & 2.9 & 3.3 & 5.2 & 12 & 3.0 & \textbf{1.0}\\  
+           ^
+Warning 1 in RunRoaringBitmap.tex line 1276: Command terminated with space.
+\Wikileaks & 12 & 5.7 & 2.3 & 2.6 & \textbf{0.96} & 1.5 & 3.4 & 1.0\\  
+          ^
+Warning 1 in RunRoaringBitmap.tex line 1277: Command terminated with space.
+\Wikileakssrt & 11 & 4.7 & 2.3 & 2.5 & 2.5 & 2.2 & 2.2 & \textbf{1.0}\\\bottomrule  
+             ^
+Warning 24 in RunRoaringBitmap.tex line 1291: Delete this space to maintain correct pagereferences.
+\label{sec:conclusion}  
+^
+Warning 1 in RunRoaringBitmap.tex line 1321: Command terminated with space.
+\ack The Roaring project benefited from so many contributions  
+    ^
+Warning 7 in RunRoaringBitmap.tex line 1324: Accent command `\'' needs use of `\i'.
+J.~Alvarado, S.~Chambi, W.~Glynn, R.~Graves, T. Gruben,  B.~Ivanov, T.~Maly, E.~Murphy,  S.~Pellegrino, B.~Potter, G.~Punt\'i, B.~Sperber. We are also grateful to the Druid developers   
+                                                                                                                          ^^
+Warning 24 in RunRoaringBitmap.tex line 1336: Delete this space to maintain correct pagereferences.
+\label{app:detailedstat}  
+^
+Warning 44 in RunRoaringBitmap.tex line 1349: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|cc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^
+Warning 36 in RunRoaringBitmap.tex line 1352: You should put a space in front of parenthesis.
+&(\SI{24.2}{\percent}) & (\SI{75.8}{\percent})\\  
+ ^
+Warning 44 in RunRoaringBitmap.tex line 1364: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|cc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in RunRoaringBitmap.tex line 1379: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|cc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in RunRoaringBitmap.tex line 1392: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|cc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in RunRoaringBitmap.tex line 1407: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|cc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in RunRoaringBitmap.tex line 1420: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|cc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in RunRoaringBitmap.tex line 1434: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|cc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in RunRoaringBitmap.tex line 1447: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|cc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in RunRoaringBitmap.tex line 1469: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|ccc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^^
+Warning 36 in RunRoaringBitmap.tex line 1472: You should put a space in front of parenthesis.
+&(\SI{23.4}{\percent})    & (\SI{72}{\percent}) & (\SI{4.6}{\percent}) \\  
+ ^
+Warning 36 in RunRoaringBitmap.tex line 1474: You should put a space in front of parenthesis.
+&(\SI{88.3}{\percent})  & (\SI{5.1}{\percent}) &  (\SI{6.6}{\percent})\\  
+ ^
+Warning 44 in RunRoaringBitmap.tex line 1484: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|ccc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^^
+Warning 36 in RunRoaringBitmap.tex line 1487: You should put a space in front of parenthesis.
+ & (\SI{0.4}{\percent})   & (\SI{40.1}{\percent})   &(\SI{59.5}{\percent}) \\  
+                                                     ^
+Warning 44 in RunRoaringBitmap.tex line 1499: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|ccc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^^
+Warning 36 in RunRoaringBitmap.tex line 1506: You should put a space in front of parenthesis.
+ &  (\SI{0}{\percent}) &  (\SI{99.7}{\percent}) &(\SI{0.3}{\percent})\\\bottomrule  
+                                                 ^
+Warning 44 in RunRoaringBitmap.tex line 1512: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|ccc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in RunRoaringBitmap.tex line 1527: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|ccc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in RunRoaringBitmap.tex line 1540: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|ccc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in RunRoaringBitmap.tex line 1554: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|ccc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in RunRoaringBitmap.tex line 1567: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|ccc}\toprule  
+^^^^^^^^^^^^^^^^^^^^^^
+Warning 17 in RunRoaringBitmap.tex line 1583: Number of `(' doesn't match the number of `)'!
+
+
+Warning 17 in RunRoaringBitmap.tex line 1583: Number of `[' doesn't match the number of `]'!
+
+

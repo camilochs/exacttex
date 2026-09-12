@@ -1,0 +1,168 @@
+{
+ "paper": "2212.12035",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 5781,
+   "chars_after": 5819,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "listings.tex",
+   "chars_before": 7706,
+   "chars_after": 7706,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "macros.tex",
+   "chars_before": 1185,
+   "chars_after": 1185,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "abstract.tex",
+   "chars_before": 4175,
+   "chars_after": 4175,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "acknowledgements.tex",
+   "chars_before": 3227,
+   "chars_after": 3227,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "declaration.tex",
+   "chars_before": 1000,
+   "chars_after": 1000,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "1-Introduction.tex",
+   "chars_before": 22801,
+   "chars_after": 22798,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "2-Background.tex",
+   "chars_before": 4852,
+   "chars_after": 4843,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "3-ImperativeCode.tex",
+   "chars_before": 12667,
+   "chars_after": 12664,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "4-ImageProcessing.tex",
+   "chars_before": 3023,
+   "chars_after": 3020,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "5-GuidedEqualitySaturation.tex",
+   "chars_before": 6196,
+   "chars_after": 6196,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "6-Discussion.tex",
+   "chars_before": 37190,
+   "chars_after": 37190,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "A-HarrisPrograms.tex",
+   "chars_before": 28857,
+   "chars_after": 28854,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "B-MatMulPrograms.tex",
+   "chars_before": 12687,
+   "chars_after": 12684,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "C-Sketches.tex",
+   "chars_before": 14864,
+   "chars_after": 14855,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 15,
+ "chars_before": 166211,
+ "chars_after": 166216,
+ "delta_pct": 0.0030082244857440243,
+ "unrepaired": {
+  "chars_after": 166216,
+  "chars_before": 166211,
+  "converted_files": 15,
+  "check_exit": 0,
+  "coverage": 0.004734,
+  "bibliography": {
+   "state": "complete",
+   "entries": 272
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": 0.0030082244857440243
+ },
+ "stats": {
+  "cite_cmds_live": 74,
+  "cite_keys_live": 93,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 14,
+  "other_cite_cmds": 6,
+  "labels_live": 17,
+  "labels_outside_grammar": 0,
+  "refs_live": 0,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 120,
+  "float_envs": 2,
+  "cite_cmds_annotated": 60,
+  "cite_keys_annotated": 60,
+  "ids_annotated": 17,
+  "refs_annotated": 0,
+  "inputs_root": 14,
+  "inputs_imported": 14,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 18,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.004734,
+ "bibliography": {
+  "state": "complete",
+  "entries": 272
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

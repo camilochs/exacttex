@@ -1,0 +1,134 @@
+{
+ "paper": "2301.01148",
+ "main": "main_submitted_20221228.tex",
+ "files": [
+  {
+   "file": "main_submitted_20221228.tex",
+   "chars_before": 5426,
+   "chars_after": 5498,
+   "emitted": true,
+   "identity": "import-ext-only",
+   "lines_differing": 9
+  },
+  {
+   "file": "content/manuscript/abstract.tex",
+   "chars_before": 1909,
+   "chars_after": 1909,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "content/manuscript/introduction.tex",
+   "chars_before": 11471,
+   "chars_after": 11468,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "content/manuscript/literature_review.tex",
+   "chars_before": 1573,
+   "chars_after": 1573,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "content/manuscript/framework.tex",
+   "chars_before": 3856,
+   "chars_after": 3850,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "content/manuscript/implementation.tex",
+   "chars_before": 33141,
+   "chars_after": 33069,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "content/manuscript/results.tex",
+   "chars_before": 25484,
+   "chars_after": 25415,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "content/manuscript/discussion.tex",
+   "chars_before": 8456,
+   "chars_after": 8453,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "content/manuscript/conclusion.tex",
+   "chars_before": 2832,
+   "chars_after": 2829,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "content/manuscript/appendix.tex",
+   "chars_before": 6355,
+   "chars_after": 6328,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 10,
+ "chars_before": 100503,
+ "chars_after": 100392,
+ "delta_pct": -0.11044446434434793,
+ "unrepaired": {
+  "chars_after": 100392,
+  "chars_before": 100503,
+  "converted_files": 10,
+  "check_exit": 0,
+  "coverage": 0.042672,
+  "bibliography": {
+   "state": "complete",
+   "entries": 60
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.11044446434434793
+ },
+ "stats": {
+  "cite_cmds_live": 56,
+  "cite_keys_live": 73,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 9,
+  "other_cite_cmds": 6,
+  "labels_live": 61,
+  "labels_outside_grammar": 0,
+  "refs_live": 0,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 74,
+  "float_envs": 45,
+  "cite_cmds_annotated": 47,
+  "cite_keys_annotated": 47,
+  "ids_annotated": 61,
+  "refs_annotated": 0,
+  "inputs_root": 9,
+  "inputs_imported": 9,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.042672,
+ "bibliography": {
+  "state": "complete",
+  "entries": 60
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

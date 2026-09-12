@@ -1,0 +1,3 @@
+planted=drake2010early__ghost sites=[('Preprint_Bonciolini_RSOS.xtex', 80)]
+xtex new=[]
+texlab new=[]

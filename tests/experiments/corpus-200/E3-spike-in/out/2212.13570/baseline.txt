@@ -1,0 +1,30 @@
+tectonic pdf bytes=1378624
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'elsarticle-template-num-names.tex', 155, 'Undefined reference'), ('ERROR', 'elsarticle-template-num.tex', 157, 'Undefined reference'), ('info', '03_challenges.tex', 10, 'Unused label'), ('info', '05_application.tex', 72, 'Unused label'), ('info', '06_demonstration.tex', 66, 'Unused label'), ('info', 'cas-refs.bib', 159, 'Unused entry'), ('info', 'cas-refs.bib', 453, 'Unused entry')]
+tectonic exit=0 warnings=[] secs=3
+: Trying to include PDF file with version (1.7), which is newer than current output PDF setting (1.5).
+warning: 06_demonstration:5: Underfull \hbox (badness 5022) in paragraph at lines 5--5
+warning: 06_demonstration:16: Underfull \vbox (badness 4341) has occurred while \output is active
+warning: 06_demonstration:42: Underfull \hbox (badness 2564) in paragraph at lines 42--42
+warning: 06_demonstration:97: Underfull \vbox (badness 4765) has occurred while \output is active
+warning: 07_discussion:218: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: main.bbl:44: Underfull \hbox (badness 2617) in paragraph at lines 36--44
+warning: main.bbl:139: Underfull \hbox (badness 1454) in paragraph at lines 134--139
+warning: main.bbl:327: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: main.bbl:373: Underfull \hbox (badness 1281) in paragraph at lines 363--373
+warning: main.bbl:505: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: _appendix:172: Overfull \vbox (22.56007pt too high) detected at line 172
+
+warning: _appendix:172: Overfull \hbox (1.52545pt too wide) in paragraph at lines 172--172
+warning: _appendix:172: Overfull \hbox (1.41345pt too wide) in paragraph at lines 172--172
+warning: _appendix:172: Overfull \vbox (3.41608pt too high) detected at line 172
+
+warning: _appendix:172: Overfull \vbox (60.08008pt too high) detected at line 172
+
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: Trying to include PDF file with version (1.7), which is newer than current output PDF setting (1.5).
+warning: PDF file is tagged... Ignoring tags.
+warning: Trying to include PDF file with version (1.7), which is newer than current output PDF setting (1.5).
+warning: PDF file is tagged... Ignoring tags.
+warning: Trying to include PDF file with version (1.7), which is newer than current output PDF setting (1.5).
+warning: PDF file is tagged... Ignoring tags.

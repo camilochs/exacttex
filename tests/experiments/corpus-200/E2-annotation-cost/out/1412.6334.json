@@ -1,0 +1,87 @@
+{
+ "paper": "1412.6334",
+ "main": "iclr2015.tex",
+ "files": [
+  {
+   "file": "iclr2015.tex",
+   "chars_before": 34933,
+   "chars_after": 34912,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 34933,
+ "chars_after": 34912,
+ "delta_pct": -0.06011507743394498,
+ "unrepaired": {
+  "chars_after": 34912,
+  "chars_before": 34933,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.050355,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`iclr2015.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.06011507743394498
+ },
+ "stats": {
+  "cite_cmds_live": 45,
+  "cite_keys_live": 52,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 7,
+  "labels_outside_grammar": 0,
+  "refs_live": 7,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 6,
+  "cite_cmds_annotated": 45,
+  "cite_keys_annotated": 52,
+  "ids_annotated": 7,
+  "refs_annotated": 7,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.050355,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`iclr2015.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "iclr2015.xtex",
+    "offset": 3262,
+    "length": 34,
+    "line": 85,
+    "column": 8
+   },
+   "message": "citation checking unavailable: `iclr2015.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

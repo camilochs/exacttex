@@ -1,0 +1,3 @@
+planted=Lions_etal_2001__ghost sites=[('mgrit_cg_selection.xtex', 100)]
+xtex new=[]
+texlab new=[]

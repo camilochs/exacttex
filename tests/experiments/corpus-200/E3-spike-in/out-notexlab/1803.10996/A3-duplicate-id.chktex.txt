@@ -1,0 +1,163 @@
+exit=2
+lines=1263
+unique_findings=307
+                     ^^^^^^
+Warning 8 in thesis_arxiv.tex line 917: Wrong length of dash may have been used.
+                KL divergence & -& - & -& 0.01348 &$\boldsymbol{0.005088}$\\ \hline  
+                                   ^
+Warning 44 in thesis_arxiv.tex line 917: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                KL divergence & -& - & -& 0.01348 &$\boldsymbol{0.005088}$\\ \hline  
+                                                                             ^^^^^^
+Warning 44 in thesis_arxiv.tex line 918: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                LL (generated)&-& -&-1.1773${}^\ast$& -$\boldsymbol{1.2327}$ &-1.2351\\ \hline  
+                                                                                        ^^^^^^
+Warning 8 in thesis_arxiv.tex line 919: Wrong length of dash may have been used.
+                CLL (generated) &- & - & - &-0.9232&-\\ \hline  
+                                     ^
+Warning 8 in thesis_arxiv.tex line 919: Wrong length of dash may have been used.
+                CLL (generated) &- & - & - &-0.9232&-\\ \hline  
+                                         ^
+Warning 44 in thesis_arxiv.tex line 919: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                CLL (generated) &- & - & - &-0.9232&-\\ \hline  
+                                                        ^^^^^^
+Warning 12 in thesis_arxiv.tex line 940: Interword spacing (`\ ') should perhaps be used.
+Black line: Regression model, Red line: Conditional GANs, Green line: AC-GANs, Blue line: Semi-supervised GANs. x-axis indicates number of iterations. }\label{fig:errors D with regression loss logit2}  
+                                                                                                               ^
+Warning 2 in thesis_arxiv.tex line 1006: Non-breaking space (`~') should have been used.
+        \caption{Table of real angles, estimated densities $p_{model}(x|Center=c,S=real)$ and predicted angle plots for some central amino acids for the fourth experiment. Plotted real angles are from the test set and predicted angles are predicted by sequences in the test set. Same 5 chosen amino acids are depicted as in figure \ref{fig:Amino acids plots without regression loss}.  
+                                                                                                                                                                                                                                                                                                                                          ^
+Warning 24 in thesis_arxiv.tex line 1007: Delete this space to maintain correct pagereferences.
+} \label{fig:Amino acids plots D with regression loss minibatch}  
+ ^
+Warning 24 in thesis_arxiv.tex line 1009: Delete this space to maintain correct pagereferences.
+\subsection{With regression loss, using predicted density by NCE, minibatch-wise loss in generators and predicted angles by regression model} \label{Reg D With regression loss minibatch}  
+                                                                                                                                             ^
+Warning 2 in thesis_arxiv.tex line 1010: Non-breaking space (`~') should have been used.
+We still got high MSE and MAE values in the generators of the previous experiment. As mentioned in \ref{Compare GAN}, we used predicted results by regression model as an additional inputs of the generators in this experiment in order to further reduce these errors. \\\\  
+                                                                                                  ^
+Warning 2 in thesis_arxiv.tex line 1011: Non-breaking space (`~') should have been used.
+In table \ref{table:Reg D with regression loss logit2}, MSE and MAE values of all generative models were further improved.  
+        ^
+Warning 2 in thesis_arxiv.tex line 1014: Non-breaking space (`~') should have been used.
+In figure \ref{fig:Ramachandran plot Reg D with regression loss logit2},  it seems shape of $\beta_S$ regions of the C-GAN got worse.  Figure \ref{fig:Ramachandran plot Reg D with regression loss logit2} (bottom left) shows the smoothening effect of AC-GAN was lessened. This is probably because the generator is more focus on reducing generative loss as it can easily reduce the regression loss by using predicted angle information. The shape of the $\beta_S$ and $\beta_P$ region in Semi-supervised GAN appears to be worse.\\\\  
+         ^
+Warning 2 in thesis_arxiv.tex line 1014: Non-breaking space (`~') should have been used.
+In figure \ref{fig:Ramachandran plot Reg D with regression loss logit2},  it seems shape of $\beta_S$ regions of the C-GAN got worse.  Figure \ref{fig:Ramachandran plot Reg D with regression loss logit2} (bottom left) shows the smoothening effect of AC-GAN was lessened. This is probably because the generator is more focus on reducing generative loss as it can easily reduce the regression loss by using predicted angle information. The shape of the $\beta_S$ and $\beta_P$ region in Semi-supervised GAN appears to be worse.\\\\  
+                                                                                                                                             ^
+Warning 2 in thesis_arxiv.tex line 1015: Non-breaking space (`~') should have been used.
+When we compared Ramachandran plots based on predicted angles for each central amino acids in the table of figures \ref{fig:Amino acids plots Reg D with regression loss minibatch}, all generative models generated samples in both $\alpha$ and $\alpha_L$ regions for central amino acid Glycine.\\\\  
+                                                                                                                  ^
+Warning 44 in thesis_arxiv.tex line 1017: User Regex: -2:Vertical rules in tables are ugly.
+        \begin{tabular}{ l | l | l | l | l | l }  
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in thesis_arxiv.tex line 1018: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+        \hline  
+        ^^^^^^
+Warning 44 in thesis_arxiv.tex line 1020: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                 {}  &Regression &NCE &C-GAN &AC-GAN &Semi-supervised GAN\\ \hline  
+                                                                            ^^^^^^
+Warning 8 in thesis_arxiv.tex line 1021: Wrong length of dash may have been used.
+                MSE & $\boldsymbol{0.3504}$ & - &0.3823&0.3701&0.3678\\ \hline  
+                                              ^
+Warning 44 in thesis_arxiv.tex line 1021: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                MSE & $\boldsymbol{0.3504}$ & - &0.3823&0.3701&0.3678\\ \hline  
+                                                                        ^^^^^^
+Warning 8 in thesis_arxiv.tex line 1022: Wrong length of dash may have been used.
+                Phi MAE & $\boldsymbol{26.6377}$ & - &28.6309&27.7239&27.5119\\ \hline  
+                                                   ^
+Warning 44 in thesis_arxiv.tex line 1022: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                Phi MAE & $\boldsymbol{26.6377}$ & - &28.6309&27.7239&27.5119\\ \hline  
+                                                                                ^^^^^^
+Warning 8 in thesis_arxiv.tex line 1023: Wrong length of dash may have been used.
+                Psi MAE & $\boldsymbol{51.4816}$ & - &53.6731&51.5171&51.6804\\ \hline  
+                                                   ^
+Warning 44 in thesis_arxiv.tex line 1023: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                Psi MAE & $\boldsymbol{51.4816}$ & - &53.6731&51.5171&51.6804\\ \hline  
+                                                                                ^^^^^^
+Warning 8 in thesis_arxiv.tex line 1024: Wrong length of dash may have been used.
+                LL & - & -$\boldsymbol{1.2095}$ & -0.9789${}^\ast$ &-1.2233&-1.2301\\ \hline  
+                     ^
+Warning 44 in thesis_arxiv.tex line 1024: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                LL & - & -$\boldsymbol{1.2095}$ & -0.9789${}^\ast$ &-1.2233&-1.2301\\ \hline  
+                                                                                      ^^^^^^
+Warning 8 in thesis_arxiv.tex line 1025: Wrong length of dash may have been used.
+                CLL &- & -$\boldsymbol{0.9107}$ & - &-0.9540&-1.0351\\ \hline  
+                                                  ^
+Warning 44 in thesis_arxiv.tex line 1025: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                CLL &- & -$\boldsymbol{0.9107}$ & - &-0.9540&-1.0351\\ \hline  
+                                                                       ^^^^^^
+Warning 8 in thesis_arxiv.tex line 1026: Wrong length of dash may have been used.
+                KL divergence & -& - & -& 0.01684 &$\boldsymbol{0.01157}$\\ \hline  
+                                   ^
+Warning 44 in thesis_arxiv.tex line 1026: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                KL divergence & -& - & -& 0.01684 &$\boldsymbol{0.01157}$\\ \hline  
+                                                                            ^^^^^^
+Warning 44 in thesis_arxiv.tex line 1027: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                LL (generated)&-& -&-1.0525${}^\ast$& -$\boldsymbol{1.2262}$ &-1.2448\\ \hline  
+                                                                                        ^^^^^^
+Warning 8 in thesis_arxiv.tex line 1028: Wrong length of dash may have been used.
+                CLL (generated) &- & - & - &-0.9140&-\\ \hline  
+                                     ^
+Warning 8 in thesis_arxiv.tex line 1028: Wrong length of dash may have been used.
+                CLL (generated) &- & - & - &-0.9140&-\\ \hline  
+                                         ^
+Warning 44 in thesis_arxiv.tex line 1028: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                CLL (generated) &- & - & - &-0.9140&-\\ \hline  
+                                                        ^^^^^^
+Warning 2 in thesis_arxiv.tex line 1116: Non-breaking space (`~') should have been used.
+as in figure \ref{fig:Amino acids plots without regression loss}.  
+            ^
+Warning 24 in thesis_arxiv.tex line 1117: Delete this space to maintain correct pagereferences.
+} \label{fig:Amino acids plots Reg D with regression loss minibatch}  
+ ^
+Warning 13 in thesis_arxiv.tex line 1133: Intersentence spacing (`\@') should perhaps be used.
+In this thesis, we investigated dihedral angle prediction using three conditional generative adversarial models: C-GAN, AC-GAN and Semi-supervised GAN. We compared their characteristics and examined possible improvements. \\\\  
+                                                                                                                                                      ^
+Warning 13 in thesis_arxiv.tex line 1134: Intersentence spacing (`\@') should perhaps be used.
+When we compare the distributions of predicted angles, C-GAN was poor at capturing details of the Ramachandran plot, AC-GAN suffered from generating angles composed of unusual clusters and Semi-supervised GAN generated angles similar to the Ramachandran plot even though it could not generate angles in the $\zeta$ and $\gamma'$ regions separately in some experiments. So, we advise using Semi-supervised GAN for conditional generation of samples. We found that adding predicted density estimation by NCE model as an additional input of the discriminators can stabilize GAN training and help generating realistic angles. Minibatch-wise generation loss was only helpful in the training of C-GAN and AC-GAN, but not Semi-supervised GAN. Adding regression loss to the generators and adding predicted angles by regression model as an additional input of the generator was helpful improving conditional generation performances in C-GAN and AC-GAN addition to the MSE, MAE values.\\\\  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
+Warning 24 in thesis_arxiv.tex line 1160: Delete this space to maintain correct pagereferences.
+\section{Generating samples using NCE-GAN when target distribution is given} \label{Appendix generate samples}  
+                                                                            ^
+Warning 2 in thesis_arxiv.tex line 1162: Non-breaking space (`~') should have been used.
+The discriminator of the NCE-GAN will only get generated samples $x_{fake}$ and noise samples $x_{noise}$ as input because we do not have data samples $x_{real}$. Then it outputs corresponding predicted labels for both generated samples and noise samples. It also minimizes the estimated Kullback-Leibler (KL) divergence between estimated target density of the discriminator and target distribution. Remember that we can estimate $p_{model}(x|C=target)$ by equation \eqref{eq:density by NCE}. KL divergence will be estimated using numerical integration methods. \\\\   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+Warning 2 in thesis_arxiv.tex line 1165: Non-breaking space (`~') should have been used.
+The following two examples \ref{Ring}, \ref{Sine} show NCE-GAN can generate target samples.\newpage  
+                          ^
+Warning 2 in thesis_arxiv.tex line 1165: Non-breaking space (`~') should have been used.
+The following two examples \ref{Ring}, \ref{Sine} show NCE-GAN can generate target samples.\newpage  
+                                      ^
+Warning 2 in thesis_arxiv.tex line 1189: Non-breaking space (`~') should have been used.
+    \caption{Generation of ring example \cite{metz2016unrolled} by described method. Note that black line in (e) indicates KL divergence between real target density and generated distribution. Blue line in (e) indicates estimated KL divergence between estimated target density and generated distribution. Minibatch-wise loss is used for training of the generator.}\label{Ring}  
+                                       ^
+Warning 24 in thesis_arxiv.tex line 1216: Delete this space to maintain correct pagereferences.
+\section{Experiment of minibatch discrimination for density estimation} \label{Appendix minibatch discrimination}  
+                                                                       ^
+Warning 3 in thesis_arxiv.tex line 1228: You should enclose the previous parenthesis with `{}'.
+    \caption{Contour plots of estimated density of dihedral angles after 50000 iterations of mini-batch gradient updating. Noise samples are uniformly drawn from $(-\pi , \pi)^2$. Note that we also used batch size $64$ to calculate density estimation in (b). In other words, batch size $64$ is used for both training and test phase for (b). Estimated density for (b) is close to zero across all regions. Square root were applied on the estimated densities of angles for better visualization.}\label{Appendix MB figure}  
+                                                                                                                                                                              ^
+Warning 44 in thesis_arxiv.tex line 1232: User Regex: -2:Vertical rules in tables are ugly.
+        \begin{tabular}{ | p{3.5cm} | p{3.5cm} | p{3.5cm} | p{3.5cm} |}  
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in thesis_arxiv.tex line 1233: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+        \hline  
+        ^^^^^^
+Warning 44 in thesis_arxiv.tex line 1234: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+        Discriminator & Estimated integration of estimated density function & LL for uniform (noise) samples & LL for test samples\\ \hline  
+                                                                                                                                     ^^^^^^
+Warning 44 in thesis_arxiv.tex line 1235: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+        Vanilla\newline discriminator & 0.9848 & -7.6532 & -1.2810\\ \hline  
+                                                                     ^^^^^^
+Warning 44 in thesis_arxiv.tex line 1236: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+        Suggested\newline minibatch\newline discriminator & 0.0001099 & -18.9252 & 9.3477\\ \hline  
+                                                                                            ^^^^^^
+Warning 2 in thesis_arxiv.tex line 1238: Non-breaking space (`~') should have been used.
+\caption{Monte Carlo integration method \cite{weinzierl2000introduction} was used to estimate the integration of the estimated density function. Remember that integration of probability density function should be 1. LL indicates mean log-likelihood.}\label{Appendix MB table}  
+                                       ^
+Warning 2 in thesis_arxiv.tex line 1240: Non-breaking space (`~') should have been used.
+From table \ref{Appendix MB table} we can notice that mean log-likelihood when minibatch discrimination is used (9.3477) is quite high compared to the result when the usual discriminator is used (-1.2810). However, if we consider other results like the small estimated integration of the estimated density function (0.0001099), small mean log-likelihood for noise samples (-18.9252) and poor estimated density plot in figure \ref{Appendix MB figure} (b), we can explain that high performance on log-likelihood was due to cheating, i.e., batch information is used to estimate the likelihood of the test samples.   
+          ^
+Warning 2 in thesis_arxiv.tex line 1240: Non-breaking space (`~') should have been used.
+From table \ref{Appendix MB table} we can notice that mean log-likelihood when minibatch discrimination is used (9.3477) is quite high compared to the result when the usual discriminator is used (-1.2810). However, if we consider other results like the small estimated integration of the estimated density function (0.0001099), small mean log-likelihood for noise samples (-18.9252) and poor estimated density plot in figure \ref{Appendix MB figure} (b), we can explain that high performance on log-likelihood was due to cheating, i.e., batch information is used to estimate the likelihood of the test samples.   
+                                                                                                                                                                                                                                                                                                                                                                                                                                        ^

@@ -1,0 +1,3 @@
+planted=altman2014categorizing__ghost sites=[('Introduction.xtex', 3)]
+xtex new=[('XT1005', 'altman2014categorizing__ghost', 'Introduction.xtex', 3)]
+texlab new=[]

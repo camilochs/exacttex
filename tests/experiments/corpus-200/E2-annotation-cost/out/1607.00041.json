@@ -1,0 +1,119 @@
+{
+ "paper": "1607.00041",
+ "main": "entprod.tex",
+ "files": [
+  {
+   "file": "entprod.tex",
+   "chars_before": 126420,
+   "chars_after": 126213,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 126420,
+ "chars_after": 126213,
+ "delta_pct": -0.16373991457047934,
+ "unrepaired": {
+  "chars_after": 126210,
+  "chars_before": 126420,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.035312,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`bibliography.bib` could not be read"
+  },
+  "errors": 1,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.16611295681063123
+ },
+ "stats": {
+  "cite_cmds_live": 97,
+  "cite_keys_live": 120,
+  "cite_with_optarg_or_star": 29,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 70,
+  "labels_outside_grammar": 0,
+  "refs_live": 55,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 61,
+  "float_envs": 3,
+  "cite_cmds_annotated": 68,
+  "cite_keys_annotated": 91,
+  "ids_annotated": 69,
+  "refs_annotated": 52,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 1,
+  "leaks_reverted": 3,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "entprod.tex",
+   "line": 983,
+   "token": "@ref(thm:CompBetaSpec)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Theorem \\ref{thm:CompBetaSpec}]"
+  },
+  {
+   "file": "entprod.tex",
+   "line": 1057,
+   "token": "@ref(thm:betaVsAlpha)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Theorem \\ref{thm:betaVsAlpha}]"
+  },
+  {
+   "file": "entprod.tex",
+   "line": 1474,
+   "token": "@id(thm:boundpsucc)",
+   "wrapper": "?",
+   "context": "\\begin{thm}[Bound on the success probability in terms of information radius\\label{thm:boundpsucc}]"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1003",
+   "name": "thm:boundpsucc",
+   "file": "entprod.xtex",
+   "line": 1557,
+   "message": "identifier `thm:boundpsucc` is not declared",
+   "classification": "compiler-unreachable: \\label{thm:boundpsucc} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.035153,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`bibliography.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "entprod.xtex",
+    "offset": 5075,
+    "length": 30,
+    "line": 182,
+    "column": 285
+   },
+   "message": "citation checking unavailable: `bibliography.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

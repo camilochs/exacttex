@@ -1,0 +1,70 @@
+{
+ "paper": "1711.10097",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 32450,
+   "chars_after": 32438,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 32450,
+ "chars_after": 32438,
+ "delta_pct": -0.03697996918335902,
+ "unrepaired": {
+  "chars_after": 32438,
+  "chars_before": 32450,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.029928,
+  "bibliography": {
+   "state": "complete",
+   "entries": 38
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.03697996918335902
+ },
+ "stats": {
+  "cite_cmds_live": 28,
+  "cite_keys_live": 53,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 3,
+  "other_cite_cmds": 0,
+  "labels_live": 4,
+  "labels_outside_grammar": 0,
+  "refs_live": 34,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 4,
+  "cite_cmds_annotated": 25,
+  "cite_keys_annotated": 39,
+  "ids_annotated": 4,
+  "refs_annotated": 34,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.029928,
+ "bibliography": {
+  "state": "complete",
+  "entries": 38
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

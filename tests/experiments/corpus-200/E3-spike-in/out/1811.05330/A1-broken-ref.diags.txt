@@ -1,0 +1,3 @@
+planted=obs__ghost sites=[('V889Her_arxiv.xtex', 150)]
+xtex new=[('XT1003', 'obs__ghost', 'V889Her_arxiv.xtex', 150)]
+texlab new=[]

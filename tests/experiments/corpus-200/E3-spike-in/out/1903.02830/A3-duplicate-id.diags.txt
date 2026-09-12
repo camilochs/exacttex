@@ -1,0 +1,3 @@
+planted=sec:intro sites=[('VersionIPSE.xtex', 71), ('VersionIPSE.xtex', 70)]
+xtex new=[('XT1001', 'sec:intro', 'VersionIPSE.xtex', 71)]
+texlab new=[('ERROR', 'VersionIPSE.tex', 70, 'Duplicate label')]

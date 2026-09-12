@@ -1,0 +1,205 @@
+{
+ "paper": "1803.00608",
+ "main": "CTR-Spectr-arXive.tex",
+ "files": [
+  {
+   "file": "CTR-Spectr-arXive.tex",
+   "chars_before": 204174,
+   "chars_after": 203909,
+   "emitted": true,
+   "identity": "import-ext-only",
+   "lines_differing": 1
+  },
+  {
+   "file": "reference-CTR.tex",
+   "chars_before": 7557,
+   "chars_after": 7557,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 2,
+ "chars_before": 211731,
+ "chars_after": 211466,
+ "delta_pct": -0.12515880999948048,
+ "unrepaired": {
+  "chars_after": 211466,
+  "chars_before": 211731,
+  "converted_files": 2,
+  "check_exit": 0,
+  "coverage": 0.026491,
+  "bibliography": {
+   "state": "complete",
+   "entries": 40
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.12515880999948048
+ },
+ "stats": {
+  "cite_cmds_live": 58,
+  "cite_keys_live": 66,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 6,
+  "other_cite_cmds": 0,
+  "labels_live": 107,
+  "labels_outside_grammar": 16,
+  "refs_live": 228,
+  "refs_outside_grammar": 44,
+  "other_ref_cmds": 0,
+  "float_envs": 60,
+  "cite_cmds_annotated": 49,
+  "cite_keys_annotated": 51,
+  "ids_annotated": 91,
+  "refs_annotated": 169,
+  "inputs_root": 1,
+  "inputs_imported": 1,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 18,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "CTR-Spectr-arXive.tex",
+   "line": 108,
+   "token": "@cite(roehrs-thesis)",
+   "wrapper": "?",
+   "context": "is $I_{\\rm max}=1.8$\\,kA in this measurement \\cite{roehrs-thesis}.}}"
+  },
+  {
+   "file": "CTR-Spectr-arXive.tex",
+   "line": 193,
+   "token": "@ref(rel-pointcharge)",
+   "wrapper": "?",
+   "context": "The spectral energy density of  transition radiation as a function of the scaled angle $\\gamma \\,\\theta$ according to the Ginzburg-Frank formula. The maximum oc"
+  },
+  {
+   "file": "CTR-Spectr-arXive.tex",
+   "line": 309,
+   "token": "@ref(farfield-cond)",
+   "wrapper": "?",
+   "context": "$\\gamma=100$, $r_{\\rm eff}=30\\,$mm, $D=4~$m. The far-field criterion   (\\ref{farfield-cond}) is satisfied:"
+  },
+  {
+   "file": "CTR-Spectr-arXive.tex",
+   "line": 311,
+   "token": "@ref(GF-farfield)",
+   "wrapper": "?",
+   "context": "$a \\ll r_{\\rm eff}$. Black curve: Ginzburg-Frank formula; blue curve: far-field computation using Eq.\\,(\\ref{GF-farfield}); red circles: numerical near-field co"
+  },
+  {
+   "file": "CTR-Spectr-arXive.tex",
+   "line": 311,
+   "token": "@ref(GF-nearfield)",
+   "wrapper": "?",
+   "context": "$a \\ll r_{\\rm eff}$. Black curve: Ginzburg-Frank formula; blue curve: far-field computation using Eq.\\,(\\ref{GF-farfield}); red circles: numerical near-field co"
+  },
+  {
+   "file": "CTR-Spectr-arXive.tex",
+   "line": 313,
+   "token": "@ref(GF-farfield)",
+   "wrapper": "?",
+   "context": "$\\gamma=100$, $r_{\\rm eff}=30\\,$mm, $D=0.2\\,$m.  The effective source-size criterion is satisfied but the far-field condition is strongly violated, $D \\ll \\gamm"
+  },
+  {
+   "file": "CTR-Spectr-arXive.tex",
+   "line": 313,
+   "token": "@ref(GF-nearfield)",
+   "wrapper": "?",
+   "context": "$\\gamma=100$, $r_{\\rm eff}=30\\,$mm, $D=0.2\\,$m.  The effective source-size criterion is satisfied but the far-field condition is strongly violated, $D \\ll \\gamm"
+  },
+  {
+   "file": "CTR-Spectr-arXive.tex",
+   "line": 1035,
+   "token": "@cite(Behrens)",
+   "wrapper": "?",
+   "context": "\\caption{\\small{Blue dots: First determination of the spectrometer response function, derived from the comprehensive {\\it THzTransport} simulation described in "
+  },
+  {
+   "file": "CTR-Spectr-arXive.tex",
+   "line": 1036,
+   "token": "@ref(blazed-grating)",
+   "wrapper": "?",
+   "context": "The  grating efficiency  was  taken from theory, see Fig.\\,\\ref{blazed-grating}b."
+  },
+  {
+   "file": "CTR-Spectr-arXive.tex",
+   "line": 1037,
+   "token": "@cite(Toke)",
+   "wrapper": "?",
+   "context": "Yellow dots: Improved response function after calibration of the completely assembled CRISP spectrometer  at the infrared free-electron laser FELIX  (for detail"
+  },
+  {
+   "file": "CTR-Spectr-arXive.tex",
+   "line": 1093,
+   "token": "@ref(FFav)",
+   "wrapper": "small",
+   "context": "\\caption[]{\\small{ Influence  of the electron beam radius on the rms transverse form factor\\,(\\ref{FFav})."
+  },
+  {
+   "file": "CTR-Spectr-arXive.tex",
+   "line": 1096,
+   "token": "@ref(GF-nearfield)",
+   "wrapper": "?",
+   "context": "$\\sigma_{\\rm ref}=100\\,\\mu$m. The continuous curves result from   computations based on the near-field formula (\\ref{GF-nearfield}) and an  aperture angle of 10"
+  },
+  {
+   "file": "CTR-Spectr-arXive.tex",
+   "line": 1096,
+   "token": "@ref(Fig-F2trans)",
+   "wrapper": "?",
+   "context": "$\\sigma_{\\rm ref}=100\\,\\mu$m. The continuous curves result from   computations based on the near-field formula (\\ref{GF-nearfield}) and an  aperture angle of 10"
+  },
+  {
+   "file": "CTR-Spectr-arXive.tex",
+   "line": 1231,
+   "token": "@ref(TDSstreak)",
+   "wrapper": "?",
+   "context": "\\caption{ \\small{Reconstructed shapes  of bunches  with a  steep rise and a roughly exponential decay. Parameters: electron energy $E_e=540\\,$MeV, bunch charge "
+  },
+  {
+   "file": "CTR-Spectr-arXive.tex",
+   "line": 1626,
+   "token": "@ref(aux-function)",
+   "wrapper": "small",
+   "context": "\\caption{\\small{ The closed integration path $\\Gamma$ for the auxiliary function (\\ref{aux-function}). The difference to Fig.\\,\\ref{Gamma-path} is the pole on t"
+  },
+  {
+   "file": "CTR-Spectr-arXive.tex",
+   "line": 1626,
+   "token": "@ref(Gamma-path)",
+   "wrapper": "?",
+   "context": "\\caption{\\small{ The closed integration path $\\Gamma$ for the auxiliary function (\\ref{aux-function}). The difference to Fig.\\,\\ref{Gamma-path} is the pole on t"
+  },
+  {
+   "file": "CTR-Spectr-arXive.tex",
+   "line": 1927,
+   "token": "@ref(reconstr-phase)",
+   "wrapper": "?",
+   "context": "\\newline {\\bf (b)} The  original charge distribution $\\rho(t)$ (red curve) and the  reconstruction (blue dots) using the reconstruction  phase Eq.\\,(\\ref{recons"
+  },
+  {
+   "file": "CTR-Spectr-arXive.tex",
+   "line": 2047,
+   "token": "@ref(KKphase-trunc)",
+   "wrapper": "?",
+   "context": "the form factor of a normal Gaussian  is also shown. {\\bf (b)} The integrand $I_{\\rm trunc}(\\omega)$ of the KK phase integral (\\ref{KKphase-trunc}) for  truncat"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.026491,
+ "bibliography": {
+  "state": "complete",
+  "entries": 40
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

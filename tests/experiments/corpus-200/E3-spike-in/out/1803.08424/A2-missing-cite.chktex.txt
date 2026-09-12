@@ -1,0 +1,343 @@
+exit=2
+lines=411
+unique_findings=98
+                       ^
+Warning 32 in tang.tex line 117: Use ` to begin quotation, not '.
+  colour = 'Species', label = TRUE, label.size = 3, frame = TRUE)  
+           ^
+Warning 36 in tang.tex line 120: You should put a space in front of parenthesis.
+  ggplot2::ggtitle("Principal Components Analysis") +  
+                  ^
+Warning 18 in tang.tex line 120: Use either `` or '' as an alternative to `"'.
+  ggplot2::ggtitle("Principal Components Analysis") +  
+                   ^
+Warning 18 in tang.tex line 120: Use either `` or '' as an alternative to `"'.
+  ggplot2::ggtitle("Principal Components Analysis") +  
+                                                 ^
+Warning 36 in tang.tex line 121: You should put a space in front of parenthesis.
+  ggplot2::labs(y = "Second Principal Components", x = "First Principal Components")  
+               ^
+Warning 18 in tang.tex line 121: Use either `` or '' as an alternative to `"'.
+  ggplot2::labs(y = "Second Principal Components", x = "First Principal Components")  
+                    ^
+Warning 18 in tang.tex line 121: Use either `` or '' as an alternative to `"'.
+  ggplot2::labs(y = "Second Principal Components", x = "First Principal Components")  
+                                                ^
+Warning 18 in tang.tex line 121: Use either `` or '' as an alternative to `"'.
+  ggplot2::labs(y = "Second Principal Components", x = "First Principal Components")  
+                                                       ^
+Warning 18 in tang.tex line 121: Use either `` or '' as an alternative to `"'.
+  ggplot2::labs(y = "Second Principal Components", x = "First Principal Components")  
+                                                                                  ^
+Warning 36 in tang.tex line 127: You should put a space in front of parenthesis.
+plot. When \code{`+` <- function(e1, e2)} operator is applied to a  
+                                ^
+Warning 36 in tang.tex line 129: You should put a space in front of parenthesis.
+\code{ggplot2::ggtitle(...)}, the \code{ggplot} object that we attached  
+                      ^
+Warning 11 in tang.tex line 129: You should use \ldots to achieve an ellipsis.
+\code{ggplot2::ggtitle(...)}, the \code{ggplot} object that we attached  
+                       ^^^
+Warning 36 in tang.tex line 130: You should put a space in front of parenthesis.
+to the output of \code{autoplotly()} earlier will be used as the first  
+                                 ^
+Warning 24 in tang.tex line 137: Delete this space to maintain correct pagereferences.
+  \label{figure:pca_plotly_annotation}  
+ ^
+Warning 36 in tang.tex line 141: You should put a space in front of parenthesis.
+\code{plotly} object from the output of \code{autoplotly()} \code{p}  
+                                                        ^
+Warning 2 in tang.tex line 144: Non-breaking space (`~') should have been used.
+shown in Figure \ref{figure:pca_plotly_annotation}:  
+               ^
+Warning 36 in tang.tex line 148: You should put a space in front of parenthesis.
+p <- autoplotly(prcomp(iris[c(1, 2, 3, 4)]), data = iris,  
+               ^
+Warning 36 in tang.tex line 148: You should put a space in front of parenthesis.
+p <- autoplotly(prcomp(iris[c(1, 2, 3, 4)]), data = iris,  
+                      ^
+Warning 36 in tang.tex line 148: You should put a space in front of parenthesis.
+p <- autoplotly(prcomp(iris[c(1, 2, 3, 4)]), data = iris,  
+                             ^
+Warning 32 in tang.tex line 149: Use ` to begin quotation, not '.
+  colour = 'Species', frame = TRUE)  
+           ^
+Warning 18 in tang.tex line 152: Use either `` or '' as an alternative to `"'.
+  text = "Example Text",  
+         ^
+Warning 18 in tang.tex line 152: Use either `` or '' as an alternative to `"'.
+  text = "Example Text",  
+                      ^
+Warning 36 in tang.tex line 153: You should put a space in front of parenthesis.
+  font = list(  
+             ^
+Warning 37 in tang.tex line 153: You should avoid spaces after parenthesis.
+  font = list(  
+              ^
+Warning 18 in tang.tex line 154: Use either `` or '' as an alternative to `"'.
+    family = "Courier New, monospace",  
+             ^
+Warning 18 in tang.tex line 154: Use either `` or '' as an alternative to `"'.
+    family = "Courier New, monospace",  
+                                    ^
+Warning 18 in tang.tex line 156: Use either `` or '' as an alternative to `"'.
+    color = "black"),  
+            ^
+Warning 18 in tang.tex line 156: Use either `` or '' as an alternative to `"'.
+    color = "black"),  
+                  ^
+Warning 10 in tang.tex line 159: Solo `)' found.
+  showarrow = TRUE))  
+                  ^
+Warning 10 in tang.tex line 159: Solo `)' found.
+  showarrow = TRUE))  
+                   ^
+Warning 36 in tang.tex line 163: You should put a space in front of parenthesis.
+\pkg{autoplotly} re-exports \code{plotly::subplot()} to enable users to  
+                                                 ^
+Warning 36 in tang.tex line 164: You should put a space in front of parenthesis.
+stack multiple interactive plots generated via \code{autoplotly()}  
+                                                               ^
+Warning 36 in tang.tex line 166: You should put a space in front of parenthesis.
+\code{lm()} fitted model objects, which are given extra attention and  
+        ^
+Warning 36 in tang.tex line 173: You should put a space in front of parenthesis.
+\code{autoplotly()} can be exported using a simple \code{export()}  
+                ^
+Warning 36 in tang.tex line 173: You should put a space in front of parenthesis.
+\code{autoplotly()} can be exported using a simple \code{export()}  
+                                                               ^
+Warning 12 in tang.tex line 174: Interword spacing (`\ ') should perhaps be used.
+function, e.g. \code{export(p, "/tmp/result.png")}. It builds on top of  
+              ^
+Warning 36 in tang.tex line 174: You should put a space in front of parenthesis.
+function, e.g. \code{export(p, "/tmp/result.png")}. It builds on top of  
+                           ^
+Warning 18 in tang.tex line 174: Use either `` or '' as an alternative to `"'.
+function, e.g. \code{export(p, "/tmp/result.png")}. It builds on top of  
+                               ^
+Warning 18 in tang.tex line 174: Use either `` or '' as an alternative to `"'.
+function, e.g. \code{export(p, "/tmp/result.png")}. It builds on top of  
+                                               ^
+Warning 36 in tang.tex line 182: You should put a space in front of parenthesis.
+\code{autoplotly()} function to work with objects of different classes  
+                ^
+Warning 36 in tang.tex line 189: You should put a space in front of parenthesis.
+The \code{autoplotly()} function works for the two essential classes of  
+                    ^
+Warning 36 in tang.tex line 195: You should put a space in front of parenthesis.
+autoplotly(prcomp(iris[c(1, 2, 3, 4)]), data = iris, frame = TRUE, colour = 'Species')  
+          ^
+Warning 36 in tang.tex line 195: You should put a space in front of parenthesis.
+autoplotly(prcomp(iris[c(1, 2, 3, 4)]), data = iris, frame = TRUE, colour = 'Species')  
+                 ^
+Warning 36 in tang.tex line 195: You should put a space in front of parenthesis.
+autoplotly(prcomp(iris[c(1, 2, 3, 4)]), data = iris, frame = TRUE, colour = 'Species')  
+                        ^
+Warning 32 in tang.tex line 195: Use ` to begin quotation, not '.
+autoplotly(prcomp(iris[c(1, 2, 3, 4)]), data = iris, frame = TRUE, colour = 'Species')  
+                                                                            ^
+Warning 24 in tang.tex line 203: Delete this space to maintain correct pagereferences.
+  \label{figure:iris_pca_full}  
+ ^
+Warning 12 in tang.tex line 207: Interword spacing (`\ ') should perhaps be used.
+package. \code{autoplotly()} accepts parameters such as \code{frame} to  
+        ^
+Warning 36 in tang.tex line 207: You should put a space in front of parenthesis.
+package. \code{autoplotly()} accepts parameters such as \code{frame} to  
+                         ^
+Warning 2 in tang.tex line 210: Non-breaking space (`~') should have been used.
+Figure \ref{figure:iris_pca_full}.  
+      ^
+Warning 2 in tang.tex line 215: Non-breaking space (`~') should have been used.
+\ref{figure:iris_pca_caption}.  
+^
+Warning 24 in tang.tex line 221: Delete this space to maintain correct pagereferences.
+  \label{figure:iris_pca_caption}  
+ ^
+Warning 2 in tang.tex line 225: Non-breaking space (`~') should have been used.
+to zoom in, as shown in Figure \ref{figure:iris_pca_zoom}, and zoom out  
+                              ^
+Warning 24 in tang.tex line 232: Delete this space to maintain correct pagereferences.
+  \label{figure:iris_pca_zoom}  
+ ^
+Warning 2 in tang.tex line 248: Non-breaking space (`~') should have been used.
+in Figure \ref{figure:changepoint_caption}.  
+         ^
+Warning 36 in tang.tex line 252: You should put a space in front of parenthesis.
+library(changepoint)  
+       ^
+Warning 36 in tang.tex line 253: You should put a space in front of parenthesis.
+autoplotly(cpt.meanvar(AirPassengers))  
+          ^
+Warning 36 in tang.tex line 253: You should put a space in front of parenthesis.
+autoplotly(cpt.meanvar(AirPassengers))  
+                      ^
+Warning 24 in tang.tex line 261: Delete this space to maintain correct pagereferences.
+  \label{figure:changepoint_caption}  
+ ^
+Warning 2 in tang.tex line 266: Non-breaking space (`~') should have been used.
+in Figure \ref{figure:dlm_caption}.  
+         ^
+Warning 36 in tang.tex line 270: You should put a space in front of parenthesis.
+library(dlm)  
+       ^
+Warning 36 in tang.tex line 271: You should put a space in front of parenthesis.
+form <- function(theta){  
+                ^
+Warning 36 in tang.tex line 272: You should put a space in front of parenthesis.
+  dlmModPoly(order = 1, dV = exp(theta[1]), dW = exp(theta[2]))  
+            ^
+Warning 36 in tang.tex line 272: You should put a space in front of parenthesis.
+  dlmModPoly(order = 1, dV = exp(theta[1]), dW = exp(theta[2]))  
+                                ^
+Warning 36 in tang.tex line 272: You should put a space in front of parenthesis.
+  dlmModPoly(order = 1, dV = exp(theta[1]), dW = exp(theta[2]))  
+                                                    ^
+Warning 36 in tang.tex line 274: You should put a space in front of parenthesis.
+model <- form(dlmMLE(Nile, parm = c(1, 1), form)$par)  
+             ^
+Warning 36 in tang.tex line 274: You should put a space in front of parenthesis.
+model <- form(dlmMLE(Nile, parm = c(1, 1), form)$par)  
+                    ^
+Warning 36 in tang.tex line 274: You should put a space in front of parenthesis.
+model <- form(dlmMLE(Nile, parm = c(1, 1), form)$par)  
+                                   ^
+Warning 25 in tang.tex line 282: You might wish to put this between a pair of `{}'
+  \includegraphics[width=145mm,scale=0.8]{images/dlm_caption.png}  
+                                                     ^^^^^^^
+Warning 2 in tang.tex line 288: Non-breaking space (`~') should have been used.
+Additionally, \pkg{autoplotly} plots the optimal break points where possible structural changes happen in the regression models built by the \code{strucchange::breakpoints}, shown in Figure \ref{figure:strucchange_caption}.  
+                                                                                                                                                                                             ^
+Warning 18 in tang.tex line 293: Use either `` or '' as an alternative to `"'.
+autoplotly(breakpoints(Nile ~ 1), ts.colour = "blue", ts.linetype = "dashed",  
+                                              ^
+Warning 18 in tang.tex line 293: Use either `` or '' as an alternative to `"'.
+autoplotly(breakpoints(Nile ~ 1), ts.colour = "blue", ts.linetype = "dashed",  
+                                                   ^
+Warning 18 in tang.tex line 293: Use either `` or '' as an alternative to `"'.
+autoplotly(breakpoints(Nile ~ 1), ts.colour = "blue", ts.linetype = "dashed",  
+                                                                    ^
+Warning 18 in tang.tex line 293: Use either `` or '' as an alternative to `"'.
+autoplotly(breakpoints(Nile ~ 1), ts.colour = "blue", ts.linetype = "dashed",  
+                                                                           ^
+Warning 18 in tang.tex line 294: Use either `` or '' as an alternative to `"'.
+           cpt.colour = "dodgerblue3", cpt.linetype = "solid")  
+                        ^
+Warning 18 in tang.tex line 294: Use either `` or '' as an alternative to `"'.
+           cpt.colour = "dodgerblue3", cpt.linetype = "solid")  
+                                    ^
+Warning 18 in tang.tex line 294: Use either `` or '' as an alternative to `"'.
+           cpt.colour = "dodgerblue3", cpt.linetype = "solid")  
+                                                      ^
+Warning 18 in tang.tex line 294: Use either `` or '' as an alternative to `"'.
+           cpt.colour = "dodgerblue3", cpt.linetype = "solid")  
+                                                            ^
+Warning 25 in tang.tex line 300: You might wish to put this between a pair of `{}'
+  \includegraphics[width=145mm,scale=0.8]{images/strucchange_caption.png}  
+                                                             ^^^^^^^
+Warning 2 in tang.tex line 308: Non-breaking space (`~') should have been used.
+The \pkg{autoplotly} package also supports various objects like \code{cluster::clara}, \code{cluster::fanny}, \code{cluster::pam}, \code{stats::kmeans}, and \code{lfda::lfda}, from the \CRANpkg{cluster} \citep{cluster} and \CRANpkg{lfda} \citep{lfdaarxiv} packages. It automatically infers the object type and generate interactive plots of the results from those packages with a single function call. Users can specify \code{frame = TRUE} to easily draw the clustering boundaries as seen in Figure \ref{figure:cluster_caption} and the following code:  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+Warning 18 in tang.tex line 314: Use either `` or '' as an alternative to `"'.
+autoplotly(fanny(iris[-5], 3), frame = TRUE, frame.type = "norm")  
+                                                          ^
+Warning 18 in tang.tex line 314: Use either `` or '' as an alternative to `"'.
+autoplotly(fanny(iris[-5], 3), frame = TRUE, frame.type = "norm")  
+                                                               ^
+Warning 25 in tang.tex line 320: You might wish to put this between a pair of `{}'
+  \includegraphics[width=145mm,scale=0.8]{images/cluster_caption.png}  
+                                                         ^^^^^^^
+Warning 2 in tang.tex line 330: Non-breaking space (`~') should have been used.
+The \code{autoplotly()} function can also automatically generate interactive plots for results producuced by \pkg{splines}, such as B-spline basis points visualization for natural cubic spline with boundary knots shown in Figure \ref{figure:splines_caption}.  
+                                                                                                                                                                                                                                    ^
+Warning 24 in tang.tex line 343: Delete this space to maintain correct pagereferences.
+  \label{figure:splines_caption}  
+ ^
+Warning 36 in tang.tex line 346: You should put a space in front of parenthesis.
+Users can also stack multiple plots generated from \code{autoplotly()}  
+                                                                   ^
+Warning 36 in tang.tex line 347: You should put a space in front of parenthesis.
+together in a single view using \code{subplot()}, two interactive  
+                                             ^
+Warning 2 in tang.tex line 350: Non-breaking space (`~') should have been used.
+\ref{figure:splines_subplot}:  
+^
+Warning 36 in tang.tex line 354: You should put a space in front of parenthesis.
+library(splines)  
+       ^
+Warning 36 in tang.tex line 355: You should put a space in front of parenthesis.
+subplot(  
+       ^
+Warning 37 in tang.tex line 355: You should avoid spaces after parenthesis.
+subplot(  
+        ^
+Warning 36 in tang.tex line 356: You should put a space in front of parenthesis.
+  autoplotly(ns(diamonds$price, df = 6)),  
+            ^
+Warning 36 in tang.tex line 356: You should put a space in front of parenthesis.
+  autoplotly(ns(diamonds$price, df = 6)),  
+               ^
+Warning 24 in tang.tex line 365: Delete this space to maintain correct pagereferences.
+  \label{figure:splines_subplot}  
+ ^
+Warning 36 in tang.tex line 370: You should put a space in front of parenthesis.
+each other. Additional options for \code{subplot()} are available to  
+                                                ^
+Warning 36 in tang.tex line 376: You should put a space in front of parenthesis.
+The \code{autoplotly()} function is able able to interpret \code{lm}  
+                    ^
+Warning 2 in tang.tex line 385: Non-breaking space (`~') should have been used.
+Figure \ref{figure:lm_caption} and the following code:  
+      ^
+Warning 36 in tang.tex line 389: You should put a space in front of parenthesis.
+autoplotly(  
+          ^
+Warning 37 in tang.tex line 389: You should avoid spaces after parenthesis.
+autoplotly(  
+           ^
+Warning 36 in tang.tex line 390: You should put a space in front of parenthesis.
+  lm(Petal.Width ~ Petal.Length, data = iris),  
+    ^
+Warning 39 in tang.tex line 390: Double space found.
+  lm(Petal.Width ~ Petal.Length, data = iris),  
+                ^
+Warning 36 in tang.tex line 391: You should put a space in front of parenthesis.
+  which = c(4, 6), colour = "dodgerblue3",  
+           ^
+Warning 18 in tang.tex line 391: Use either `` or '' as an alternative to `"'.
+  which = c(4, 6), colour = "dodgerblue3",  
+                            ^
+Warning 18 in tang.tex line 391: Use either `` or '' as an alternative to `"'.
+  which = c(4, 6), colour = "dodgerblue3",  
+                                        ^
+Warning 18 in tang.tex line 392: Use either `` or '' as an alternative to `"'.
+  smooth.colour = "black", smooth.linetype = "dashed",  
+                  ^
+Warning 18 in tang.tex line 392: Use either `` or '' as an alternative to `"'.
+  smooth.colour = "black", smooth.linetype = "dashed",  
+                        ^
+Warning 18 in tang.tex line 392: Use either `` or '' as an alternative to `"'.
+  smooth.colour = "black", smooth.linetype = "dashed",  
+                                             ^
+Warning 18 in tang.tex line 392: Use either `` or '' as an alternative to `"'.
+  smooth.colour = "black", smooth.linetype = "dashed",  
+                                                    ^
+Warning 18 in tang.tex line 393: Use either `` or '' as an alternative to `"'.
+  ad.colour = "blue", label.size = 3, label.n = 5,  
+              ^
+Warning 18 in tang.tex line 393: Use either `` or '' as an alternative to `"'.
+  ad.colour = "blue", label.size = 3, label.n = 5,  
+                   ^
+Warning 18 in tang.tex line 394: Use either `` or '' as an alternative to `"'.
+  label.colour = "blue")  
+                 ^
+Warning 18 in tang.tex line 394: Use either `` or '' as an alternative to `"'.
+  label.colour = "blue")  
+                      ^
+Warning 24 in tang.tex line 402: Delete this space to maintain correct pagereferences.
+  \label{figure:lm_caption}  
+ ^
+Warning 17 in RJwrapper.tex line 27: Number of `(' doesn't match the number of `)'!
+
+

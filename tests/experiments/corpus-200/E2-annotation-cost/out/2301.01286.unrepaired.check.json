@@ -1,0 +1,36 @@
+{
+ "coverage": 0.038722,
+ "bibliography": {
+  "state": "complete",
+  "entries": 54
+ },
+ "diagnostics": [
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:darts_norm",
+   "span": {
+    "file": "main.xtex",
+    "offset": 16261,
+    "length": 19,
+    "line": 157,
+    "column": 62
+   },
+   "message": "identifier `fig:darts_norm` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "main.xtex",
+      "offset": 11285,
+      "length": 19,
+      "line": 115,
+      "column": 68
+     }
+    }
+   ]
+  }
+ ]
+}

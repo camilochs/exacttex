@@ -1,0 +1,25 @@
+{
+ "coverage": 0.02294,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`spike-ref.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "spikequantum.xtex",
+    "offset": 2549,
+    "length": 15,
+    "line": 74,
+    "column": 125
+   },
+   "message": "citation checking unavailable: `spike-ref.bib` could not be read",
+   "related": []
+  }
+ ]
+}

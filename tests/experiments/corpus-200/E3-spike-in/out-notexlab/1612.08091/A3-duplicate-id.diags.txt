@@ -1,0 +1,3 @@
+planted=fig:hlcompiler sites=[('projectq.xtex', 130), ('projectq.xtex', 118)]
+xtex new=[('XT1001', 'fig:hlcompiler', 'projectq.xtex', 130), ('XT1004', 'fig:hlcompiler', 'projectq.xtex', 124), ('XT1020', 'fig:hlcompiler', 'projectq.xtex', 124)]
+texlab new=[]

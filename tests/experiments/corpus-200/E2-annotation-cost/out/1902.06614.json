@@ -1,0 +1,184 @@
+{
+ "paper": "1902.06614",
+ "main": "Overton_ApproximatingEvolutionaryDynamics.tex",
+ "files": [
+  {
+   "file": "Overton_ApproximatingEvolutionaryDynamics.tex",
+   "chars_before": 96531,
+   "chars_after": 96471,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 96531,
+ "chars_after": 96471,
+ "delta_pct": -0.0621561985268981,
+ "unrepaired": {
+  "chars_after": 96465,
+  "chars_before": 96531,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.03972,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`Overton_ApproximatingEvolutionaryDynamics_refs.bib` could not be read"
+  },
+  "errors": 11,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.0683718183795879
+ },
+ "stats": {
+  "cite_cmds_live": 62,
+  "cite_keys_live": 125,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 7,
+  "other_cite_cmds": 0,
+  "labels_live": 22,
+  "labels_outside_grammar": 0,
+  "refs_live": 87,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 2,
+  "float_envs": 5,
+  "cite_cmds_annotated": 55,
+  "cite_keys_annotated": 109,
+  "ids_annotated": 20,
+  "refs_annotated": 78,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 9,
+  "leaks_reverted": 2,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "Overton_ApproximatingEvolutionaryDynamics.tex",
+   "line": 512,
+   "token": "@id(Table:Results1)",
+   "wrapper": "?",
+   "context": "\\label{Table:Results1}"
+  },
+  {
+   "file": "Overton_ApproximatingEvolutionaryDynamics.tex",
+   "line": 541,
+   "token": "@id(Table:Results2)",
+   "wrapper": "?",
+   "context": "\\label{Table:Results2}"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1003",
+   "name": "Table:Results1",
+   "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+   "line": 468,
+   "message": "identifier `Table:Results1` is not declared",
+   "classification": "compiler-unreachable: \\label{Table:Results1} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "Table:Results1",
+   "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+   "line": 477,
+   "message": "identifier `Table:Results1` is not declared",
+   "classification": "compiler-unreachable: \\label{Table:Results1} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "Table:Results2",
+   "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+   "line": 477,
+   "message": "identifier `Table:Results2` is not declared",
+   "classification": "compiler-unreachable: \\label{Table:Results2} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "Table:Results1",
+   "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+   "line": 548,
+   "message": "identifier `Table:Results1` is not declared",
+   "classification": "compiler-unreachable: \\label{Table:Results1} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "Table:Results2",
+   "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+   "line": 548,
+   "message": "identifier `Table:Results2` is not declared",
+   "classification": "compiler-unreachable: \\label{Table:Results2} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "Table:Results1",
+   "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+   "line": 550,
+   "message": "identifier `Table:Results1` is not declared",
+   "classification": "compiler-unreachable: \\label{Table:Results1} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "Table:Results2",
+   "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+   "line": 550,
+   "message": "identifier `Table:Results2` is not declared",
+   "classification": "compiler-unreachable: \\label{Table:Results2} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "Table:Results1",
+   "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+   "line": 552,
+   "message": "identifier `Table:Results1` is not declared",
+   "classification": "compiler-unreachable: \\label{Table:Results1} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "Table:Results2",
+   "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+   "line": 552,
+   "message": "identifier `Table:Results2` is not declared",
+   "classification": "compiler-unreachable: \\label{Table:Results2} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.037437,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`Overton_ApproximatingEvolutionaryDynamics_refs.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+    "offset": 3755,
+    "length": 9,
+    "line": 57,
+    "column": 235
+   },
+   "message": "citation checking unavailable: `Overton_ApproximatingEvolutionaryDynamics_refs.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

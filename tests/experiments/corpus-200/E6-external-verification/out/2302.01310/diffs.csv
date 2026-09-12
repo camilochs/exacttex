@@ -1,0 +1,13 @@
+target,kind,verdict,field,severity,document,source
+2020SciPy-NMeth,bib-entry,partial,authors,high,"Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and
+            Haberland, Matt and Reddy, Tyler and Cournapeau, David and
+            Burovski, Evgeni and Peterson, Pearu and Weckesser, War",Pauli Virtanen and Ralf Gommers and Travis E. Oliphant and Matt Haberland and Tyler Reddy and David Cournapeau and Evgeni Burovski and Pearu Peterson and Warren Weckesser and Jonathan Bright and Stéfa
+allmendinger2015nonuniform,bib-entry,partial,year,medium,2015,2014
+allmendinger2021hetero,bib-entry,partial,year,medium,2021,2023
+azais2009levelsets,bib-entry,partial,year,medium,2009,2008
+braembussche2008turbomachinery,bib-entry,mismatch,authors,high,"{Van den Braembussche}, Ren\'e A.",Dominique Thévenin and Gábor Janiga
+braembussche2008turbomachinery,bib-entry,mismatch,title,medium,Numerical Optimization for Advanced Turbomachinery Design,Optimization and Computational Fluid Dynamics
+liao2008crash,bib-entry,partial,year,medium,2008,2007
+miettinen1999moo,bib-entry,partial,year,medium,1999,1998
+shahriari2016bayesopt,bib-entry,partial,year,medium,2016,2015
+tu2023r2optim,bib-entry,partial,year,medium,2024,2023

@@ -1,0 +1,219 @@
+exit=2
+lines=654
+unique_findings=167
+g space (`~') should have been used.
+Another interesting aspect comes from the fitting values of the re-scale factors.  For convenience, the boxplot of all the $c_{i}$s in Scheme I and II are shown in Figure \ref{fig:c_box}.\footnote{Here, we remove the parameter $N_{\p}$ and show the results of the $c_{i}$s (which are called re-scale factors in this work). } It is clear that, all the primary nuclei re-scale factors have values (which represent their relative element abundances) of $\sim (0.5 -  0.6)$. We know that in {\sc galprop}, the primary source (injection) isotopic abundances are taken first as the solar system abundances, which are iterated to achieve an agreement with the propagated abundances as provided by ACE at $\sim$ 200 MeV/nucleon \citep{Wiedenbeck2001,Wiedenbeck2008} assuming a propagation model. As a result, it is natural that the abundance of the CR species in the solar system (relatively low-rigidity CR particles) is different from that in outer spaces (relatively high-rigidity CR particles). This provides us an effective and independent way to study the isotopic abundance out of the solar system.  Considering the definition of the relative abundance in {\sc galprop}, the re-scale factors of the primary nuclei species which are systematically smaller than 1.0 could be interpreted as: (i) outer spaces have a higher proton abundance than solar system; (ii) outer spaces have a lower abundances of other primary nuclei species (He, C, N, and O) than solar system. All the element abundances we got in this work are listed in Table \ref{tab:abundances}.  
+                                                                                                                                                                          ^
+Warning 2 in ms.tex line 958: Non-breaking space (`~') should have been used.
+Another interesting aspect comes from the fitting values of the re-scale factors.  For convenience, the boxplot of all the $c_{i}$s in Scheme I and II are shown in Figure \ref{fig:c_box}.\footnote{Here, we remove the parameter $N_{\p}$ and show the results of the $c_{i}$s (which are called re-scale factors in this work). } It is clear that, all the primary nuclei re-scale factors have values (which represent their relative element abundances) of $\sim (0.5 -  0.6)$. We know that in {\sc galprop}, the primary source (injection) isotopic abundances are taken first as the solar system abundances, which are iterated to achieve an agreement with the propagated abundances as provided by ACE at $\sim$ 200 MeV/nucleon \citep{Wiedenbeck2001,Wiedenbeck2008} assuming a propagation model. As a result, it is natural that the abundance of the CR species in the solar system (relatively low-rigidity CR particles) is different from that in outer spaces (relatively high-rigidity CR particles). This provides us an effective and independent way to study the isotopic abundance out of the solar system.  Considering the definition of the relative abundance in {\sc galprop}, the re-scale factors of the primary nuclei species which are systematically smaller than 1.0 could be interpreted as: (i) outer spaces have a higher proton abundance than solar system; (ii) outer spaces have a lower abundances of other primary nuclei species (He, C, N, and O) than solar system. All the element abundances we got in this work are listed in Table \ref{tab:abundances}.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+Warning 24 in ms.tex line 965: Delete this space to maintain correct pagereferences.
+\label{fig:c_box}  
+^
+Warning 44 in ms.tex line 972: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{l|lll}  
+^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in ms.tex line 973: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+  \hline\hline  
+  ^^^^^^
+Warning 44 in ms.tex line 973: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+  \hline\hline  
+        ^^^^^^
+Warning 44 in ms.tex line 975: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 44 in ms.tex line 982: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline\hline  
+^^^^^^
+Warning 44 in ms.tex line 982: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline\hline  
+      ^^^^^^
+Warning 24 in ms.tex line 985: Delete this space to maintain correct pagereferences.
+\label{tab:abundances}  
+^
+Warning 2 in ms.tex line 989: Non-breaking space (`~') should have been used.
+ On the other hand, all the re-scale factors of the secondary nuclei species are larger than 1.0, some of them can reach up to $1.7 \sim 1.8$ ($\cpbar$ and $\cbe$). When we employed these $\csec$s, we expected them to describe the production cross section uncertainties and local inhomogeneity of the CR sources and propagation. Considering the fitting results of these $\csec$s, it seems that the contribution from the production cross section is small, this is because: (i) generally speaking, the production cross sections of these species are energy dependent. But in Figure \ref{fig:secondary_results}, all the CR secondary spectra are well fitted. It is unnatural that all these species have an energy independent correction on their production cross sections; (ii) It is also unnatural that we underestimate all the production cross section of these secondary species simultaneously. Consequently, the fitting results of the $\csec$s (which are systematically larger than 1.0) could be explained as: (i) the ISM density of the outer spaces is larger than that in lcoal environment. This could be regarded as an evidence of the Local Bubble, which the solar system locate in and has a lower ISM density compared with its surroundings  \citep{Lallement2003}; (ii) These secondary nuclei species can be produeced in the CR sources before propagation, which provide an additional flux (see, e.g., \citet{Berezhko2014,Mertsch2014}).   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+Warning 12 in ms.tex line 992: Interword spacing (`\ ') should perhaps be used.
+Taking off the systematic deviations, we could find that $\cpbar$ and $\cbe$ still have large deviations compared with other $\csec$s. This might be mainly ascribed to their production cross section uncertainties, which would lead to further studies on these cross sections on colliders and open a new door to study nuclear physics. \footnote{One such pioneering work can be found in \citet{Genolini2018}.}      
+                                                                                                                                                                                                                                                                                                                                            ^
+Warning 42 in ms.tex line 992: You should remove spaces in front of `\footnote'
+Taking off the systematic deviations, we could find that $\cpbar$ and $\cbe$ still have large deviations compared with other $\csec$s. This might be mainly ascribed to their production cross section uncertainties, which would lead to further studies on these cross sections on colliders and open a new door to study nuclear physics. \footnote{One such pioneering work can be found in \citet{Genolini2018}.}      
+                                                                                                                                                                                                                                                                                                                                            ^
+Warning 13 in ms.tex line 1007: Intersentence spacing (`\@') should perhaps be used.
+National Natural Science Foundation of China, and by the Key Research Program of Frontier Science, CAS.  
+                                                                                                      ^
+Warning 13 in ms.tex line 1008: Intersentence spacing (`\@') should perhaps be used.
+The calculation in this paper are supported by HPC Cluster of SKLTP/ITP-CAS.  
+                                                                           ^
+Warning 36 in ms.tex line 1024: You should put a space in front of parenthesis.
+\bibitem[{{Adriani} {et~al.}(2011){Adriani}, {Barbarino}, {Bazilevskaya},  
+                            ^
+Warning 36 in ms.tex line 1030: You should put a space in front of parenthesis.
+\bibitem[{{Aguilar} {et~al.}(2015{\natexlab{a}}){Aguilar}, {Aisa}, {Alpat},  
+                            ^
+Warning 36 in ms.tex line 1036: You should put a space in front of parenthesis.
+\bibitem[{{Aguilar} {et~al.}(2015{\natexlab{b}}){Aguilar}, {Aisa}, {Alpat},  
+                            ^
+Warning 36 in ms.tex line 1042: You should put a space in front of parenthesis.
+\bibitem[{{Aguilar} {et~al.}(2016){Aguilar}, {Ali Cavasonza}, {Alpat},  
+                            ^
+Warning 36 in ms.tex line 1048: You should put a space in front of parenthesis.
+\bibitem[{Aguilar {et~al.}(2017)Aguilar, Ali~Cavasonza, Alpat, Ambrosi, Arruda,  
+                          ^
+Warning 36 in ms.tex line 1053: You should put a space in front of parenthesis.
+\bibitem[{Aguilar {et~al.}(2018{\natexlab{a}})Aguilar, Ali~Cavasonza, Ambrosi,  
+                          ^
+Warning 36 in ms.tex line 1059: You should put a space in front of parenthesis.
+\bibitem[{Aguilar {et~al.}(2018{\natexlab{b}})Aguilar, Ali~Cavasonza, Alpat,  
+                          ^
+Warning 1 in ms.tex line 1061: Command terminated with space.
+  Barrin, Bartoloni, Basara, Ba\ifmmode \mbox{\c{s}}\else \c{s}\fi{}e\ifmmode  
+                                       ^
+Warning 1 in ms.tex line 1061: Command terminated with space.
+  Barrin, Bartoloni, Basara, Ba\ifmmode \mbox{\c{s}}\else \c{s}\fi{}e\ifmmode  
+                                                                             ^
+Warning 36 in ms.tex line 1091: You should put a space in front of parenthesis.
+\bibitem[{{Ahn} {et~al.}(2010){Ahn}, {Allison}, {Bagliesi}, {Beatty},  
+                        ^
+Warning 8 in ms.tex line 1097: Wrong length of dash may have been used.
+  \dodoi{10.1088/2041-8205/714/1/L89}  
+                     ^
+Warning 8 in ms.tex line 1101: Wrong length of dash may have been used.
+  \dodoi{10.1088/2041-8205/791/2/L22}  
+                     ^
+Warning 36 in ms.tex line 1103: You should put a space in front of parenthesis.
+\bibitem[{{Bernard} {et~al.}(2013){Bernard}, {Delahaye}, {Keum}, {Liu},  
+                            ^
+Warning 8 in ms.tex line 1106: Wrong length of dash may have been used.
+  \dodoi{10.1051/0004-6361/201321202}  
+                     ^
+Warning 8 in ms.tex line 1112: Wrong length of dash may have been used.
+{Blasi}, P. 2013, \aapr, 21, 70, \dodoi{10.1007/s00159-013-0070-7}  
+                                                      ^
+Warning 8 in ms.tex line 1112: Wrong length of dash may have been used.
+{Blasi}, P. 2013, \aapr, 21, 70, \dodoi{10.1007/s00159-013-0070-7}  
+                                                          ^
+Warning 8 in ms.tex line 1112: Wrong length of dash may have been used.
+{Blasi}, P. 2013, \aapr, 21, 70, \dodoi{10.1007/s00159-013-0070-7}  
+                                                               ^
+Warning 36 in ms.tex line 1118: You should put a space in front of parenthesis.
+\bibitem[{{Boschini} {et~al.}(2017{\natexlab{a}}){Boschini}, {Della Torre},  
+                             ^
+Warning 1 in ms.tex line 1122: Command terminated with space.
+\newblock \doarXiv{1704.03733}  
+         ^
+Warning 36 in ms.tex line 1124: You should put a space in front of parenthesis.
+\bibitem[{{Boschini} {et~al.}(2017{\natexlab{b}}){Boschini}, {Della Torre},  
+                             ^
+Warning 8 in ms.tex line 1129: Wrong length of dash may have been used.
+  2017{\natexlab{b}}, \apj, 840, 115, \dodoi{10.3847/1538-4357/aa6e4f}  
+                                                         ^
+Warning 36 in ms.tex line 1131: You should put a space in front of parenthesis.
+\bibitem[{{Chiappini} {et~al.}(2003){Chiappini}, {Romano}, \&  
+                              ^
+Warning 8 in ms.tex line 1134: Wrong length of dash may have been used.
+  \dodoi{10.1046/j.1365-8711.2003.06154.x}  
+                       ^
+Warning 36 in ms.tex line 1140: You should put a space in front of parenthesis.
+\bibitem[{Foreman-Mackey {et~al.}(2016)Foreman-Mackey, Vousden, Price-Whelan,  
+                                 ^
+Warning 1 in ms.tex line 1145: Command terminated with space.
+\newblock \url{https://doi.org/10.5281/zenodo.45906}  
+         ^
+Warning 36 in ms.tex line 1147: You should put a space in front of parenthesis.
+\bibitem[{{G{\'e}nolini} {et~al.}(2018){G{\'e}nolini}, {Maurin}, {Moskalenko},  
+                                 ^
+Warning 36 in ms.tex line 1152: You should put a space in front of parenthesis.
+\bibitem[{{G{\'e}nolini} {et~al.}(2017){G{\'e}nolini}, {Serpico}, {Boudaud},  
+                                 ^
+Warning 36 in ms.tex line 1162: You should put a space in front of parenthesis.
+\bibitem[{{Grenier} {et~al.}(2015){Grenier}, {Black}, \&  
+                            ^
+Warning 8 in ms.tex line 1165: Wrong length of dash may have been used.
+  \dodoi{10.1146/annurev-astro-082214-122457}  
+                                     ^
+Warning 36 in ms.tex line 1171: You should put a space in front of parenthesis.
+\bibitem[{{Henry} {et~al.}(2000){Henry}, {Edmunds}, \&  
+                          ^
+Warning 36 in ms.tex line 1176: You should put a space in front of parenthesis.
+\bibitem[{{J{\'o}hannesson} {et~al.}(2016){J{\'o}hannesson}, {Ruiz de Austri},  
+                                    ^
+Warning 8 in ms.tex line 1180: Wrong length of dash may have been used.
+  \apj, 824, 16, \dodoi{10.3847/0004-637X/824/1/16}  
+                                    ^
+Warning 36 in ms.tex line 1182: You should put a space in front of parenthesis.
+\bibitem[{{Kachelrie{\ss}} {et~al.}(2015){Kachelrie{\ss}}, {Neronov}, \&  
+                                   ^
+Warning 1 in ms.tex line 1193: Command terminated with space.
+\newblock \doarXiv{1607.06093}  
+         ^
+Warning 36 in ms.tex line 1195: You should put a space in front of parenthesis.
+\bibitem[{{Lallement} {et~al.}(2003){Lallement}, {Welsh}, {Vergely}, {Crifo},  
+                              ^
+Warning 8 in ms.tex line 1198: Wrong length of dash may have been used.
+  2003, \aap, 411, 447, \dodoi{10.1051/0004-6361:20031214}  
+                                           ^
+Warning 8 in ms.tex line 1202: Wrong length of dash may have been used.
+  \dodoi{10.1051/0004-6361/201321344}  
+                     ^
+Warning 36 in ms.tex line 1208: You should put a space in front of parenthesis.
+\bibitem[{{Moskalenko} {et~al.}(2017){Moskalenko}, {Johannesson}, {Orlando},  
+                               ^
+Warning 36 in ms.tex line 1213: You should put a space in front of parenthesis.
+\bibitem[{{Moskalenko} {et~al.}(2003){Moskalenko}, {Strong}, {Mashnik}, \&  
+                               ^
+Warning 36 in ms.tex line 1218: You should put a space in front of parenthesis.
+\bibitem[{{Moskalenko} {et~al.}(2002){Moskalenko}, {Strong}, {Ormes}, \&  
+                               ^
+Warning 36 in ms.tex line 1227: You should put a space in front of parenthesis.
+\bibitem[{{Niu} {et~al.}(2018){Niu}, {Li}, {Ding}, {Zhu}, {Xue}, \&  
+                        ^
+Warning 1 in ms.tex line 1234: Command terminated with space.
+\newblock \doarXiv{1712.09586}  
+         ^
+Warning 36 in ms.tex line 1236: You should put a space in front of parenthesis.
+\bibitem[{{Panov} {et~al.}(2006){Panov}, {Adams}, {Ahn}, {Bashindzhagyan},  
+                          ^
+Warning 36 in ms.tex line 1243: You should put a space in front of parenthesis.
+\bibitem[{{Ptuskin} {et~al.}(2006){Ptuskin}, {Moskalenko}, {Jones}, {Strong},  
+                            ^
+Warning 8 in ms.tex line 1254: Wrong length of dash may have been used.
+  \dodoi{10.1016/S0273-1177(01)00112-0}  
+                      ^
+Warning 8 in ms.tex line 1254: Wrong length of dash may have been used.
+  \dodoi{10.1016/S0273-1177(01)00112-0}  
+                                    ^
+Warning 36 in ms.tex line 1256: You should put a space in front of parenthesis.
+\bibitem[{{Strong} {et~al.}(2007){Strong}, {Moskalenko}, \&  
+                           ^
+Warning 8 in ms.tex line 1267: Wrong length of dash may have been used.
+{Tomassetti}, N. 2012, \apjl, 752, L13, \dodoi{10.1088/2041-8205/752/1/L13}  
+                                                           ^
+Warning 8 in ms.tex line 1270: Wrong length of dash may have been used.
+---. 2015{\natexlab{a}}, \apjl, 815, L1, \dodoi{10.1088/2041-8205/815/1/L1}  
+                                                            ^
+Warning 8 in ms.tex line 1277: Wrong length of dash may have been used.
+  \dodoi{10.1088/2041-8205/803/2/L15}  
+                     ^
+Warning 36 in ms.tex line 1279: You should put a space in front of parenthesis.
+\bibitem[{{Vladimirov} {et~al.}(2012){Vladimirov}, {J{\'o}hannesson},  
+                               ^
+Warning 8 in ms.tex line 1282: Wrong length of dash may have been used.
+  T.~A. 2012, \apj, 752, 68, \dodoi{10.1088/0004-637X/752/1/68}  
+                                                ^
+Warning 36 in ms.tex line 1284: You should put a space in front of parenthesis.
+\bibitem[{{Wiedenbeck} {et~al.}(2001){Wiedenbeck}, {Yanasak}, {Cummings},  
+                               ^
+Warning 36 in ms.tex line 1290: You should put a space in front of parenthesis.
+\bibitem[{{Wiedenbeck} {et~al.}(2008){Wiedenbeck}, {Binns}, {Cummings}, {de  
+                               ^
+Warning 1 in ms.tex line 1298: Command terminated with space.
+\newblock \doarXiv{1701.06149}  
+         ^
+Warning 1 in ms.tex line 1302: Command terminated with space.
+\newblock \doarXiv{1810.03141}  
+         ^
+Warning 8 in ms.tex line 1306: Wrong length of dash may have been used.
+  \dodoi{10.3847/1538-4357/aacff9}  
+                     ^

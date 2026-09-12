@@ -1,0 +1,251 @@
+exit=2
+lines=753
+unique_findings=205
+}=t_2$. Partition asymmetry accounts for how the size of a neuron tree varies within the neuron. We use a variant of caulescence, proposed in~\cite{brown2008quantifying}, as a measure of tree asymmetry. Caulescence at a bifurcation location is evaluated by way of $\alpha = \frac{|l-r|}{l+r}$, where $l$ is the size of the left tree and $r$ of the right tree of the bifurcation vertex. We define the size of a tree by the number of paths or equivalently the number of dendritic terminals. Note that the quantity $(l+r)+1$ is the concurrence value of the bifurcation vertex.      
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ^
+Warning 1 in NeuroP2P.tex line 649: Command terminated with space.
+\caption{This gallery of images captures the progressive evolution of paths from a Purkinje neuron to a granule one. The granule neuron ($426.5\mu m^3$ volume) is procured from the hippocampus (dentate gyrus) of a $5$ months old mouse, containing $6$ rooted paths. The Purkinje cell ($13094\mu m^3$ volume) is sampled from the cerebellar cortex of a $35$ day-old mouse, containing $304$ paths. The evolution is represented in multiple arrays such that the ODD rows are read in the left-to-right and the EVEN rows are read in the right-to-left fashion. In the first column, the top image is the granule cell and the bottom shows the pyramidal cell. Volume-wise, the Purkinje neuron is significantly larger than the granule neuron. However, they are scaled for visualization.}  
+                                                                                                                                                  ^
+Warning 1 in NeuroP2P.tex line 649: Command terminated with space.
+\caption{This gallery of images captures the progressive evolution of paths from a Purkinje neuron to a granule one. The granule neuron ($426.5\mu m^3$ volume) is procured from the hippocampus (dentate gyrus) of a $5$ months old mouse, containing $6$ rooted paths. The Purkinje cell ($13094\mu m^3$ volume) is sampled from the cerebellar cortex of a $35$ day-old mouse, containing $304$ paths. The evolution is represented in multiple arrays such that the ODD rows are read in the left-to-right and the EVEN rows are read in the right-to-left fashion. In the first column, the top image is the granule cell and the bottom shows the pyramidal cell. Volume-wise, the Purkinje neuron is significantly larger than the granule neuron. However, they are scaled for visualization.}  
+                                                                                                                                                                                                                                                                                                     ^
+Warning 36 in NeuroP2P.tex line 657: You should put a space in front of parenthesis.
+Let the combined distance vector containing the individual feature distances be $D^{fg} = [d(b^{fg})~d(C^{fg})~d(\lambda^{fg})~$ $d(\kappa^{fg})~d(\beta^{fg})~d(\alpha^{fg})]^T$.  
+                                                                                            ^
+Warning 36 in NeuroP2P.tex line 657: You should put a space in front of parenthesis.
+Let the combined distance vector containing the individual feature distances be $D^{fg} = [d(b^{fg})~d(C^{fg})~d(\lambda^{fg})~$ $d(\kappa^{fg})~d(\beta^{fg})~d(\alpha^{fg})]^T$.  
+                                                                                                      ^
+Warning 36 in NeuroP2P.tex line 657: You should put a space in front of parenthesis.
+Let the combined distance vector containing the individual feature distances be $D^{fg} = [d(b^{fg})~d(C^{fg})~d(\lambda^{fg})~$ $d(\kappa^{fg})~d(\beta^{fg})~d(\alpha^{fg})]^T$.  
+                                                                                                                ^
+Warning 36 in NeuroP2P.tex line 657: You should put a space in front of parenthesis.
+Let the combined distance vector containing the individual feature distances be $D^{fg} = [d(b^{fg})~d(C^{fg})~d(\lambda^{fg})~$ $d(\kappa^{fg})~d(\beta^{fg})~d(\alpha^{fg})]^T$.  
+                                                                                                                                   ^
+Warning 36 in NeuroP2P.tex line 657: You should put a space in front of parenthesis.
+Let the combined distance vector containing the individual feature distances be $D^{fg} = [d(b^{fg})~d(C^{fg})~d(\lambda^{fg})~$ $d(\kappa^{fg})~d(\beta^{fg})~d(\alpha^{fg})]^T$.  
+                                                                                                                                                  ^
+Warning 36 in NeuroP2P.tex line 657: You should put a space in front of parenthesis.
+Let the combined distance vector containing the individual feature distances be $D^{fg} = [d(b^{fg})~d(C^{fg})~d(\lambda^{fg})~$ $d(\kappa^{fg})~d(\beta^{fg})~d(\alpha^{fg})]^T$.  
+                                                                                                                                                                ^
+Warning 1 in NeuroP2P.tex line 658: Command terminated with space.
+The corresponding unknown weight vector is $\delta = [\delta_1,...\delta_6]$.  
+                                                  ^
+Warning 11 in NeuroP2P.tex line 658: You should use \ldots to achieve an ellipsis.
+The corresponding unknown weight vector is $\delta = [\delta_1,...\delta_6]$.  
+                                                               ^^^
+Warning 3 in NeuroP2P.tex line 667: You should enclose the previous parenthesis with `{}'.
+               i<j}}\sum_{k=1}^{N_i}\sum_{l=1}^{N_j}\sum_{z=1}^{M_{kl}}D^{z}(D^z)^T\Big)\delta \nonumber\\  
+                                                                                ^
+Warning 3 in NeuroP2P.tex line 668: You should enclose the previous parenthesis with `{}'.
+               && + \delta^T\Big(\sum_{i=1}^S\tau_i\sum^{N_i}_{\substack{k,l=1\\ k\neq l}}\sum_{z}^{M_{kl}}D^z(D^z)^T\Big)\delta \nonumber\\  
+                                                                                                                  ^
+Warning 35 in NeuroP2P.tex line 669: You should perhaps use `\log' instead.
+               && - \omega_1log\delta + \omega_2\big(\sum_{i=1}^6\delta_i - 1\big)  
+                            ^^^
+Warning 1 in NeuroP2P.tex line 671: Command terminated with space.
+The first term in the above equation encompasses all the distances between neurons from pairwise classes. The second term encodes the intraclass distances, implying the distances between neurons for each class. The third term enforces positivity of each weight $\delta_i$. This is a logarithmic barrier penalty term that restricts the evolution of $\delta$ at intermediate iterations to the region where $\delta > \bar{0}$. The last term accounts for the probabilistic interpretation of $\delta$. $S$ is the number of classes.   
+                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+Warning 35 in NeuroP2P.tex line 675: You should perhaps use `\log' instead.
+L(\delta) &=& -\frac{\delta^T\Pi\delta}{2} + \delta^T\sum_{i=1}^S\frac{\tau_i\Pi_i}{2}\delta-\omega_1log\delta+\omega_2\big(\delta\boldsymbol{1}-1\big)\nonumber\\  
+                                                                                                     ^^^
+Warning 11 in NeuroP2P.tex line 683: You should use \ldots to achieve an ellipsis.
+\KwData{$\Pi,\Pi_1, \Pi_2, ...,\Pi_S$ (for all classes)\;}  
+                           ^^^
+Warning 26 in NeuroP2P.tex line 683: You ought to remove spaces in front of punctuation.
+\KwData{$\Pi,\Pi_1, \Pi_2, ...,\Pi_S$ (for all classes)\;}  
+                          ^
+Warning 11 in NeuroP2P.tex line 684: You should use \ldots to achieve an ellipsis.
+Initialization: $\delta_{cur}, \delta_{tmp},\tau_1,\tau_2,...,\tau_S, \omega_1,\omega_2$, Iter, tol, $\eta$\;  
+                                                          ^^^
+Warning 36 in NeuroP2P.tex line 690: You should put a space in front of parenthesis.
+        $\delta_{curr}\longleftarrow\delta_{curr}/(\delta_{curr}\boldsymbol{1}$)\;  
+                                                  ^
+Warning 1 in NeuroP2P.tex line 691: Command terminated with space.
+        $\delta_{tmp}\longleftarrow\delta_{tmp}-\eta Der$\;  
+                                                    ^
+Warning 1 in NeuroP2P.tex line 694: Command terminated with space.
+    $iter\longleftarrow iter+1$\;  
+                       ^
+Warning 1 in NeuroP2P.tex line 697: Command terminated with space.
+    $\tau_i\longleftarrow1.1\tau_i\forall i\text{(more intraclass compaction)}$\;  
+                                         ^
+Warning 1 in NeuroP2P.tex line 708: Command terminated with space.
+\KwData{$\mathcal{D}, n_1,n_2~(n_1\leq n_2)$, Inf\;}  
+                                      ^
+Warning 1 in NeuroP2P.tex line 710: Command terminated with space.
+Initialization: $dstSum\longleftarrow 0$, $pairTmp\longleftarrow [1:n_2]^T$, $count\longleftarrow1$, $pairList\longleftarrow [~]$, $\mathcal{D}_c\longleftarrow\mathcal{D}$, $dstB\longleftarrow[~]$\;  
+                                     ^
+Warning 1 in NeuroP2P.tex line 710: Command terminated with space.
+Initialization: $dstSum\longleftarrow 0$, $pairTmp\longleftarrow [1:n_2]^T$, $count\longleftarrow1$, $pairList\longleftarrow [~]$, $\mathcal{D}_c\longleftarrow\mathcal{D}$, $dstB\longleftarrow[~]$\;  
+                                                                ^
+Warning 1 in NeuroP2P.tex line 710: Command terminated with space.
+Initialization: $dstSum\longleftarrow 0$, $pairTmp\longleftarrow [1:n_2]^T$, $count\longleftarrow1$, $pairList\longleftarrow [~]$, $\mathcal{D}_c\longleftarrow\mathcal{D}$, $dstB\longleftarrow[~]$\;  
+                                                                                                                            ^
+Warning 1 in NeuroP2P.tex line 713: Command terminated with space.
+    $\hat{\mathcal{D}}\longleftarrow \mathcal{D}$ (append rows with Inf)\;  
+                                    ^
+Warning 1 in NeuroP2P.tex line 714: Command terminated with space.
+    $pairL,dst \longleftarrow Munkres (\hat{\mathcal{D}})$\;  
+                             ^
+Warning 1 in NeuroP2P.tex line 715: Command terminated with space.
+    $dstSum\longleftarrow dstSum+dst$\;  
+                         ^
+Warning 1 in NeuroP2P.tex line 716: Command terminated with space.
+    $dstB\longleftarrow dstB\cup dst$\;  
+                       ^
+Warning 1 in NeuroP2P.tex line 716: Command terminated with space.
+    $dstB\longleftarrow dstB\cup dst$\;  
+                                ^
+Warning 1 in NeuroP2P.tex line 717: Command terminated with space.
+    $pairTmp\longleftarrow pairTmp\setminus pairL[1:n_1]$ ($(n_2-n_1)~\text{dummy}$)\;  
+                          ^
+Warning 1 in NeuroP2P.tex line 717: Command terminated with space.
+    $pairTmp\longleftarrow pairTmp\setminus pairL[1:n_1]$ ($(n_2-n_1)~\text{dummy}$)\;  
+                                           ^
+Warning 36 in NeuroP2P.tex line 717: You should put a space in front of parenthesis.
+    $pairTmp\longleftarrow pairTmp\setminus pairL[1:n_1]$ ($(n_2-n_1)~\text{dummy}$)\;  
+                                                            ^
+Warning 1 in NeuroP2P.tex line 718: Command terminated with space.
+    $pairList\longleftarrow pairList \cup pairTmp[pairL[1:n_1]]$\;  
+                           ^
+Warning 1 in NeuroP2P.tex line 718: Command terminated with space.
+    $pairList\longleftarrow pairList \cup pairTmp[pairL[1:n_1]]$\;  
+                                         ^
+Warning 1 in NeuroP2P.tex line 719: Command terminated with space.
+    $\mathcal{D}\longleftarrow \mathcal{D}[1:n_1,pairTmp]$\;  
+                              ^
+Warning 1 in NeuroP2P.tex line 720: Command terminated with space.
+    $count\longleftarrow count+1$\;  
+                        ^
+Warning 8 in NeuroP2P.tex line 722: Wrong length of dash may have been used.
+\textbf{Routine 2:} (Remaining $n_2 - \lfloor\frac{n2}{n1}\rfloor n_1$ paths)  
+                                    ^
+Warning 1 in NeuroP2P.tex line 722: Command terminated with space.
+\textbf{Routine 2:} (Remaining $n_2 - \lfloor\frac{n2}{n1}\rfloor n_1$ paths)  
+                                                                 ^
+Warning 1 in NeuroP2P.tex line 723: Command terminated with space.
+$T\longleftarrow n_2 - \lfloor\frac{n2}{n1}\rfloor n_1$\;  
+                ^
+Warning 8 in NeuroP2P.tex line 723: Wrong length of dash may have been used.
+$T\longleftarrow n_2 - \lfloor\frac{n2}{n1}\rfloor n_1$\;  
+                     ^
+Warning 1 in NeuroP2P.tex line 723: Command terminated with space.
+$T\longleftarrow n_2 - \lfloor\frac{n2}{n1}\rfloor n_1$\;  
+                                                  ^
+Warning 1 in NeuroP2P.tex line 725: Command terminated with space.
+$\hat{\mathcal{D}}\longleftarrow \mathcal{D}$ (append rows with Inf)\;  
+                                ^
+Warning 1 in NeuroP2P.tex line 726: Command terminated with space.
+$pairL,dst \longleftarrow Munkres (\hat{\mathcal{D}})$\;  
+                         ^
+Warning 1 in NeuroP2P.tex line 727: Command terminated with space.
+$dstSum\longleftarrow dstSum+dst$\;  
+                     ^
+Warning 1 in NeuroP2P.tex line 728: Command terminated with space.
+$dstB\longleftarrow dstB\cup dst$\;  
+                   ^
+Warning 1 in NeuroP2P.tex line 728: Command terminated with space.
+$dstB\longleftarrow dstB\cup dst$\;  
+                            ^
+Warning 1 in NeuroP2P.tex line 729: Command terminated with space.
+$pairList\longleftarrow pairList \cup pairTmp[pairL[1:T]]$\;  
+                       ^
+Warning 1 in NeuroP2P.tex line 729: Command terminated with space.
+$pairList\longleftarrow pairList \cup pairTmp[pairL[1:T]]$\;  
+                                     ^
+Warning 1 in NeuroP2P.tex line 732: Command terminated with space.
+$dg\longleftarrow Hist[pairList[:,1]]$  
+                 ^
+Warning 1 in NeuroP2P.tex line 733: Command terminated with space.
+$deg\longleftarrow Hist[pairList[:,2]]$ (second column)\;  
+                  ^
+Warning 1 in NeuroP2P.tex line 734: Command terminated with space.
+$md\longleftarrow Median[dstB],~sd\longleftarrow SD[dstB]$\;  
+                 ^
+Warning 1 in NeuroP2P.tex line 734: Command terminated with space.
+$md\longleftarrow Median[dstB],~sd\longleftarrow SD[dstB]$\;  
+                                                ^
+Warning 1 in NeuroP2P.tex line 735: Command terminated with space.
+$sk\longleftarrow Skewness[dstB]$\;  
+                 ^
+Warning 1 in NeuroP2P.tex line 737: Command terminated with space.
+    $IX\longleftarrow where[dstB > md+sd]$  
+                     ^
+Warning 1 in NeuroP2P.tex line 740: Command terminated with space.
+$listU \longleftarrow [~]$\;  
+                     ^
+Warning 1 in NeuroP2P.tex line 741: Command terminated with space.
+\For{$k\gets 1$ \KwTo $length[IX]$}{  
+            ^
+Warning 1 in NeuroP2P.tex line 742: Command terminated with space.
+    $pvt\longleftarrow pairList[k,1:2]$\;  
+                      ^
+Warning 1 in NeuroP2P.tex line 743: Command terminated with space.
+    $h1\longleftarrow H[pvt[1]]$,~$h2\longleftarrow H[pvt[2]]$(max hierarchy)\;  
+                     ^
+Warning 1 in NeuroP2P.tex line 743: Command terminated with space.
+    $h1\longleftarrow H[pvt[1]]$,~$h2\longleftarrow H[pvt[2]]$(max hierarchy)\;  
+                                                   ^
+Warning 35 in NeuroP2P.tex line 743: You should perhaps use `\max' instead.
+    $h1\longleftarrow H[pvt[1]]$,~$h2\longleftarrow H[pvt[2]]$(max hierarchy)\;  
+                                                               ^^^
+Warning 1 in NeuroP2P.tex line 746: Command terminated with space.
+            $misalign2\longleftarrow misalign2\cup pvt[2]$\;  
+                                    ^
+Warning 1 in NeuroP2P.tex line 746: Command terminated with space.
+            $misalign2\longleftarrow misalign2\cup pvt[2]$\;  
+                                                  ^
+Warning 1 in NeuroP2P.tex line 747: Command terminated with space.
+            $misalign1\longleftarrow misalign1\cup pvt[1]$\;  
+                                    ^
+Warning 1 in NeuroP2P.tex line 747: Command terminated with space.
+            $misalign1\longleftarrow misalign1\cup pvt[1]$\;  
+                                                  ^
+Warning 1 in NeuroP2P.tex line 748: Command terminated with space.
+            $dstSum\longleftarrow dstSum-dstB[k]$\;  
+                                 ^
+Warning 1 in NeuroP2P.tex line 749: Command terminated with space.
+            $listU\longleftarrow listU\cap pairList[k,:]$\;  
+                                ^
+Warning 1 in NeuroP2P.tex line 749: Command terminated with space.
+            $listU\longleftarrow listU\cap pairList[k,:]$\;  
+                                          ^
+Warning 1 in NeuroP2P.tex line 753: Command terminated with space.
+\uIf{$listU \neq [~]$}{  
+                ^
+Warning 1 in NeuroP2P.tex line 761: Command terminated with space.
+    $col\longleftarrow misalign2[k]$\;  
+                      ^
+Warning 1 in NeuroP2P.tex line 762: Command terminated with space.
+    $row\longleftarrow \argminC_{row}\mathcal{D}_c[:,col]$\;  
+                      ^
+Warning 1 in NeuroP2P.tex line 763: Command terminated with space.
+    $dstSum\longleftarrow dstSum+\mathcal{D}_c[row,col]$\;  
+                         ^
+Warning 1 in NeuroP2P.tex line 764: Command terminated with space.
+    $pairList\longleftarrow pairList\cup [row,col]$\;  
+                           ^
+Warning 1 in NeuroP2P.tex line 764: Command terminated with space.
+    $pairList\longleftarrow pairList\cup [row,col]$\;  
+                                        ^
+Warning 1 in NeuroP2P.tex line 768: Command terminated with space.
+        $row\longleftarrow misalign1[k]$\;  
+                          ^
+Warning 1 in NeuroP2P.tex line 769: Command terminated with space.
+        $col\longleftarrow \argminC_{col}\mathcal{D}_c[row,:]$\;  
+                          ^
+Warning 1 in NeuroP2P.tex line 770: Command terminated with space.
+        $dstSum\longleftarrow dstSum+\mathcal{D}_c[row,col]$\;  
+                             ^
+Warning 1 in NeuroP2P.tex line 771: Command terminated with space.
+        $pairList\longleftarrow pairList\cup [row,col]$\;  
+                               ^
+Warning 1 in NeuroP2P.tex line 771: Command terminated with space.
+        $pairList\longleftarrow pairList\cup [row,col]$\;  
+                                            ^
+Warning 16 in NeuroP2P.tex line 812: Mathmode still on at end of LaTeX file.
+
+
+Warning 17 in NeuroP2P.tex line 812: Number of `(' doesn't match the number of `)'!
+
+

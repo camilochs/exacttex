@@ -1,0 +1,36 @@
+{
+ "coverage": 0.020446,
+ "bibliography": {
+  "state": "complete",
+  "entries": 29
+ },
+ "diagnostics": [
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "t3",
+   "span": {
+    "file": "MaterialsandMethods.xtex",
+    "offset": 13265,
+    "length": 7,
+    "line": 227,
+    "column": 1
+   },
+   "message": "identifier `t3` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "ResultsandDiscussion.xtex",
+      "offset": 9287,
+      "length": 7,
+      "line": 94,
+      "column": 1
+     }
+    }
+   ]
+  }
+ ]
+}

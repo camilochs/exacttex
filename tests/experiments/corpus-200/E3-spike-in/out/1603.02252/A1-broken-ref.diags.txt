@@ -1,0 +1,3 @@
+planted=APO:sec:detectAF__ghost sites=[('apo.xtex', 143)]
+xtex new=[('XT1003', 'APO:sec:detectAF__ghost', 'apo.xtex', 143)]
+texlab new=[]

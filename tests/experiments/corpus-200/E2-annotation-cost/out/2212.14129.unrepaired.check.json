@@ -1,0 +1,241 @@
+{
+ "coverage": 0.018215,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "the document declares no bibliography"
+ },
+ "diagnostics": [
+  {
+   "code": "XT1004",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "section",
+   "name": "sec:host:c",
+   "span": {
+    "file": "host.xtex",
+    "offset": 2463,
+    "length": 10,
+    "line": 64,
+    "column": 9
+   },
+   "message": "reference `sec:host:c` requires section, but its target is equation",
+   "related": [
+    {
+     "message": "equation declared here",
+     "span": {
+      "file": "host.xtex",
+      "offset": 4076,
+      "length": 10,
+      "line": 113,
+      "column": 5
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1004",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "section",
+   "name": "sec:host:ml:element",
+   "span": {
+    "file": "host.xtex",
+    "offset": 2622,
+    "length": 19,
+    "line": 69,
+    "column": 9
+   },
+   "message": "reference `sec:host:ml:element` requires section, but its target is equation",
+   "related": [
+    {
+     "message": "equation declared here",
+     "span": {
+      "file": "host.xtex",
+      "offset": 13852,
+      "length": 19,
+      "line": 311,
+      "column": 5
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1004",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "section",
+   "name": "sec:host:ml:attr",
+   "span": {
+    "file": "host.xtex",
+    "offset": 2776,
+    "length": 16,
+    "line": 73,
+    "column": 9
+   },
+   "message": "reference `sec:host:ml:attr` requires section, but its target is equation",
+   "related": [
+    {
+     "message": "equation declared here",
+     "span": {
+      "file": "host.xtex",
+      "offset": 17447,
+      "length": 16,
+      "line": 390,
+      "column": 5
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1004",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "section",
+   "name": "sec:host:ml:section",
+   "span": {
+    "file": "host.xtex",
+    "offset": 2903,
+    "length": 19,
+    "line": 77,
+    "column": 9
+   },
+   "message": "reference `sec:host:ml:section` requires section, but its target is equation",
+   "related": [
+    {
+     "message": "equation declared here",
+     "span": {
+      "file": "host.xtex",
+      "offset": 19564,
+      "length": 19,
+      "line": 436,
+      "column": 5
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1004",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "section",
+   "name": "sec:host:uri",
+   "span": {
+    "file": "host.xtex",
+    "offset": 3050,
+    "length": 12,
+    "line": 82,
+    "column": 9
+   },
+   "message": "reference `sec:host:uri` requires section, but its target is equation",
+   "related": [
+    {
+     "message": "equation declared here",
+     "span": {
+      "file": "host.xtex",
+      "offset": 21868,
+      "length": 12,
+      "line": 484,
+      "column": 5
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1004",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "section",
+   "name": "sec:host:uri",
+   "span": {
+    "file": "host.xtex",
+    "offset": 3178,
+    "length": 12,
+    "line": 86,
+    "column": 9
+   },
+   "message": "reference `sec:host:uri` requires section, but its target is equation",
+   "related": [
+    {
+     "message": "equation declared here",
+     "span": {
+      "file": "host.xtex",
+      "offset": 21868,
+      "length": 12,
+      "line": 484,
+      "column": 5
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1004",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:unmatched-matchers",
+   "span": {
+    "file": "intro.xtex",
+    "offset": 9748,
+    "length": 22,
+    "line": 246,
+    "column": 12
+   },
+   "message": "reference `tab:unmatched-matchers` requires table, but its target is equation",
+   "related": [
+    {
+     "message": "equation declared here",
+     "span": {
+      "file": "intro.xtex",
+      "offset": 9022,
+      "length": 22,
+      "line": 228,
+      "column": 5
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1020",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:unmatched-matchers",
+   "span": {
+    "file": "intro.xtex",
+    "offset": 9737,
+    "length": 5,
+    "line": 246,
+    "column": 1
+   },
+   "message": "prose says `Table` but `tab:unmatched-matchers` is an equation",
+   "related": [
+    {
+     "message": "equation declared here",
+     "span": {
+      "file": "intro.xtex",
+      "offset": 9022,
+      "length": 22,
+      "line": 228,
+      "column": 5
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "rel.xtex",
+    "offset": 122,
+    "length": 18,
+    "line": 6,
+    "column": 30
+   },
+   "message": "citation checking unavailable: the document declares no bibliography",
+   "related": []
+  }
+ ]
+}

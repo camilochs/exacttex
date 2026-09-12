@@ -1,0 +1,4 @@
+1 claims: 0 fresh and carried over, 1 to verify
+https://github.com/samjbaugh/BayesianHeatContentCode · settled
+network: 1 requests (http 1) · 0 retries · 0 bytes down · 0 fetched, 0 carried over, 1 unanswered
+record: 1 claims → .xtexverified

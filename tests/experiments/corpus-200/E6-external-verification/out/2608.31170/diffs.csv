@@ -1,0 +1,5 @@
+target,kind,verdict,field,severity,document,source
+Jain2020ContextualRF,bib-entry,partial,authors,high,Mahaveer Jain and Gil Keren and Jay Mahadeokar and Yatharth Saraf,Mahaveer Jain and Gil Keren and Jay Mahadeokar and Geoffrey Zweig and Florian Metze and Yatharth Saraf
+delrio2021,bib-entry,partial,authors,high,"Del Rio, Miguel and Delworth, Natalie and Westerman, Ryan and Huang, Michelle and Bhandari, Nishchal and Palakapilly, Joseph and McNamara, Quinten and Dong, Joshua and {\.{Z}}elasko, Piotr and Jett{\'",Miguel Del Rio and Natalie Delworth and Ryan Westerman and Michelle Huang and Nishchal Bhandari and Joseph Palakapilly and Quinten McNamara and Joshua Dong and Piotr Żelasko and Migüel Jetté
+medicallessons2026,bib-entry,mismatch,authors,high,"Bain, Carlos and Bain, Max",carlos
+medicallessons2026,bib-entry,mismatch,title,medium,MedicalLessons Dataset,MedicalLessons

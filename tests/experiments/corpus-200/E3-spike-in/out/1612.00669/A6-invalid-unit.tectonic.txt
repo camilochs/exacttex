@@ -1,0 +1,4 @@
+warning: mathpartir.sty:3: 
+Invalid UTF-8 byte or sequence at line 3 replaced by U+FFFD.
+error: body:9: Illegal unit of measure (pt inserted)
+error: halted on potentially-recoverable error as specified

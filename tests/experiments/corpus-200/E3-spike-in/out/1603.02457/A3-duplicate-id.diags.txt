@@ -1,0 +1,3 @@
+planted=table:summary sites=[('CSP_Reoptimization.xtex', 107), ('CSP_Reoptimization.xtex', 54)]
+xtex new=[('XT1001', 'table:summary', 'CSP_Reoptimization.xtex', 107), ('XT1020', 'table:summary', 'CSP_Reoptimization.xtex', 86), ('XT1020', 'table:summary', 'CSP_Reoptimization.xtex', 110)]
+texlab new=[('ERROR', 'CSP_Reoptimization.tex', 54, 'Duplicate label'), ('ERROR', 'CSP_Reoptimization.tex', 107, 'Duplicate label')]

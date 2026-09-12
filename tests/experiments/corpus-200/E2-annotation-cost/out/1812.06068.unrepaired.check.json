@@ -1,0 +1,25 @@
+{
+ "coverage": 0.024786,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`references.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "songming1213.xtex",
+    "offset": 2869,
+    "length": 8,
+    "line": 43,
+    "column": 140
+   },
+   "message": "citation checking unavailable: `references.bib` could not be read",
+   "related": []
+  }
+ ]
+}

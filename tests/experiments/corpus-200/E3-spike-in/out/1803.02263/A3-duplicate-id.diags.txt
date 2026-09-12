@@ -1,0 +1,3 @@
+planted=sec:intro sites=[('luca171228-pt_and_qt.xtex', 804), ('luca171228-pt_and_qt.xtex', 803)]
+xtex new=[('XT1001', 'sec:intro', 'luca171228-pt_and_qt.xtex', 804)]
+texlab new=[('ERROR', 'luca171228-pt_and_qt.tex', 803, 'Duplicate label'), ('ERROR', 'luca171228-pt_and_qt.tex', 804, 'Duplicate label'), ('info', 'luca171228-pt_and_qt.tex', 803, 'Unused label')]

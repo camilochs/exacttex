@@ -1,0 +1,25 @@
+{
+ "coverage": 0.04156,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`IEEEabrv.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "dcnn_architectures.xtex",
+    "offset": 3951,
+    "length": 72,
+    "line": 88,
+    "column": 154
+   },
+   "message": "citation checking unavailable: `IEEEabrv.bib` could not be read",
+   "related": []
+  }
+ ]
+}

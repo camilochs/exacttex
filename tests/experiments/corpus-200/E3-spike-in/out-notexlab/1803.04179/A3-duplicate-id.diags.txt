@@ -1,0 +1,3 @@
+planted=intro sites=[('pyov_arxiv.xtex', 70), ('pyov_arxiv.xtex', 69)]
+xtex new=[('XT1001', 'intro', 'pyov_arxiv.xtex', 70)]
+texlab new=[]

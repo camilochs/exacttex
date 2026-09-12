@@ -1,0 +1,434 @@
+pdf=1
+exit=0
+lines=1480
+unique_findings=11
+\OML/cmm/m/it/10 ; s[]\OT1/cmr/m/n/10 )$\OT1/ptm/m/n/10 , $\OML/cmm/m/it/10 c[
+] \OT1/cmr/m/n/10 =
+[12]
+
+LaTeX Warning: Reference `prop:negligible' on page 13 undefined on input line 1
+263.
+
+
+LaTeX Warning: Citation `Teranishi20_5' on page 13 undefined on input line 1269
+.
+
+
+LaTeX Warning: Citation `Teranishi20_5' on page 13 undefined on input line 1270
+.
+
+
+LaTeX Warning: Reference `prop:IND-CPA' on page 13 undefined on input line 1281
+.
+
+
+LaTeX Warning: Citation `Shoup06' on page 13 undefined on input line 1283.
+
+
+LaTeX Warning: Reference `prop:IND-CPA' on page 13 undefined on input line 1304
+.
+
+
+LaTeX Warning: Reference `prop:negligible' on page 13 undefined on input line 1
+344.
+
+[13]
+
+LaTeX Warning: Reference `lem:opt_input' on page 14 undefined on input line 137
+3.
+
+
+LaTeX Warning: Reference `eq:cost' on page 14 undefined on input line 1376.
+
+
+LaTeX Warning: Citation `Kirk04' on page 14 undefined on input line 1376.
+
+
+LaTeX Warning: Reference `lem:invertible' on page 14 undefined on input line 13
+79.
+
+
+LaTeX Warning: Reference `lem:invertible' on page 14 undefined on input line 13
+80.
+
+
+Underfull \hbox (badness 1845) in paragraph at lines 1379--1382
+\OT1/cmr/m/n/10 0$ \OT1/ptm/m/n/10 for $\OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ^^T 
+\OML/cmm/m/it/10 i < T$\OT1/ptm/m/n/10 , then $\OML/cmm/m/it/10 P[] \OT1/cmr/m/
+n/10 = \OML/cmm/m/it/10 A[]\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 P[] \OMS/cmsy/m/n
+/10 ^^@
+
+LaTeX Warning: Reference `prop:sum_tr_Wt' on page 14 undefined on input line 13
+94.
+
+
+LaTeX Warning: Reference `thm:design' on page 14 undefined on input line 1409.
+
+
+LaTeX Warning: Reference `eq:gamma_simple' on page 14 undefined on input line 1
+412.
+
+
+LaTeX Warning: Reference `eq:gramian' on page 14 undefined on input line 1412.
+
+
+LaTeX Warning: Reference `eq:T_star' on page 14 undefined on input line 1412.
+
+
+LaTeX Warning: Reference `eq:tau' on page 14 undefined on input line 1413.
+
+
+LaTeX Warning: Reference `eq:k_star' on page 14 undefined on input line 1413.
+
+(./manuscript.bbl [14])
+Underfull \hbox (badness 2538) in paragraph at lines 1423--1429
+[][]\OT1/phv/b/n/8 Kaoru Teran-ishi [][][]\OT1/phv/m/n/8 re-ceived the B.S. de-
+gree
+
+Underfull \hbox (badness 4726) in paragraph at lines 1423--1429
+\OT1/phv/m/n/8 in elec-trome-chan-i-cal en-gi-neer-ing from Na-
+[15 <./fig/teranishi.pdf> <./fig/sadamoto.pdf> <./fig/aranya.pdf> <./fig/kogiso
+.pdf>] (./manuscript.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy6.pfb></o
+pt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbx8.pfb></opt/homebrew/Cellar/texlive/20260301/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texl
+ive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/h
+omebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi6.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/homebrew
+/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/c
+mmib8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Ce
+llar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+</opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmss10.pfb></opt/homebrew/Cellar/texlive/20260301/shar
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></opt/homebrew/Cellar/tex
+live/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></op
+t/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy5.pfb></opt/homebrew/Cellar/texlive/20260301/share/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></opt/homebrew/Cellar/texliv
+e/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/home
+brew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/symbols/msam10.pfb></opt/homebrew/Cellar/texlive/20260301/share/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></opt/homebrew/Cellar/t
+exlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+</opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/helveti
+c/uhvb8a.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type
+1/urw/helvetic/uhvbo8a.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-d
+ist/fonts/type1/urw/helvetic/uhvr8a.pfb></opt/homebrew/Cellar/texlive/20260301/
+share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></opt/homebrew/Cellar/tex
+live/20260301/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></opt/homebrew/
+Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></op
+t/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/times/utmr8
+a.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/t
+imes/utmri8a.pfb>
+Output written on manuscript.pdf (16 pages, 2016662 bytes).
+Transcript written on manuscript.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./manuscript.tex (./ieeecolor.cls
+
+LaTeX Warning: You have requested document class `ieeecolor',
+               but the document class provides `IEEEtran'.
+
+Document Class: IEEEtran 2002/11/18 revision V1.6b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- The source comments contain changelog notes.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/colo
+r.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/psnfss/ot1ptm
+.fd)
+-- This is a 10 point document.
+) (./generic.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/cite/cite.sty
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsma
+th.sty
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amste
+xt.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsge
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsbs
+y.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsop
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amss
+ymb.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amsf
+onts.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/textcomp
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/jknapltx/math
+rsfs.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/mathtools/mat
+htools.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/calc.st
+y)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/mathtools/mhs
+etup.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/bm.sty)
+ (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/url/url.sty)
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/fancybox/fanc
+ybox.sty
+Style option: `fancybox' v1.4 <2010/05/15> (tvz)
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/algorithms/al
+gorithm.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/float/float.s
+ty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ifthen.s
+ty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/algorithmicx/
+algorithmicx.sty
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/algorithmicx/
+algpseudocode.sty
+Document Style - pseudocode environments for use with the `algorithmicx' style
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/subfigure/sub
+figure.sty
+
+Package subfigure Warning: Your document class has a bad definition
+ of \endfigure, most likely
+ \let\endfigure=\end@float
+ which has now been changed to
+ \def\endfigure{\end@float}
+ because otherwise subsequent changes to \end@float
+ (like done by several packages changing float behaviour)
+ can't take effect on \endfigure.
+ Please complain to your document class author.
+
+
+Package subfigure Warning: Your document class has a bad definition
+ of \endtable, most likely
+ \let\endtable=\end@float
+ which has now been changed to
+ \def\endtable{\end@float}
+ because otherwise subsequent changes to \end@float
+ (like done by several packages changing float behaviour)
+ can't take effect on \endtable.
+ Please complain to your document class author.
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/subfigure/sub
+figure.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/multirow/mult
+irow.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def) (./manuscript.aux)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/psnfss/ts1ptm
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/jknapltx/ursf
+s.fd)
+Overfull \hbox (263.06998pt too wide) in paragraph at lines 106--112
+[]  [] 
+[0{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc
+/dvips/base/8r.enc}]
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/psnfss/ot1phv
+.fd)
+Underfull \hbox (badness 2547) in paragraph at lines 160--162
+[]\OT1/phv/b/sl/9 Index Terms\OT1/phv/b/n/9 ---[]Cyber-physical sys-tem, cyber-
+security,
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/psnfss/t1phv.
+fd)
+Overfull \hbox (259.0pt too wide) has occurred while \output is active
+[][] 
+
+Overfull \hbox (12.0pt too wide) has occurred while \output is active
+[] [] [] 
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+
+Overfull \vbox (18.674pt too high) has occurred while \output is active
+[1 <./LOGO-generic-web.pdf>] [2] [3
+
+pdfTeX warning: pdflatex: pop empty color page stack 0
+
+
+pdfTeX warning: pdflatex: pop empty color page stack 0
+ <./fig/attack_scenario_security_index_3.pdf>] [4]
+Underfull \hbox (badness 1418) in paragraph at lines 500--502
+\OT1/ptm/m/n/10 Then, the fol-low-ing corol-lary im-me-di-ately fol-lows from
+[5]
+Underfull \hbox (badness 2376) in paragraph at lines 604--605
+[]\OT1/ptm/m/n/10 Dynamic El-Ga-mal en-cryp-tion is a tu-ple
+[6 <./fig/sample_identifying_complexity_2.pdf> <./fig/sample_deciphering_time.p
+df>] [7]
+Underfull \hbox (badness 1377) in paragraph at lines 802--804
+[]\OT1/ptm/m/n/10 Although the com-pu-ta-tional com-plex-ity for com-put-ing
+[8]
+Underfull \hbox (badness 1377) in paragraph at lines 911--918
+[]\OT1/ptm/m/n/10 We next com-pute the sam-ple deciphering-time curves
+[9 <./fig/Bayesian_estimation_A11_2.pdf> <./fig/Bayesian_estimation_A12_2.pdf> 
+<./fig/Bayesian_estimation_A21_2.pdf> <./fig/Bayesian_estimation_A22_2.pdf>]
+[10 <./fig/sample_identifying_complexity_sim.pdf> <./fig/sample_deciphering_tim
+e_sim_2.pdf> <./fig/total_time.pdf>]
+Underfull \hbox (badness 5519) in paragraph at lines 1082--1085
+[]\OT1/ptm/m/n/10 Let $\OML/cmm/m/it/10 k$ \OT1/ptm/m/n/10 be a key length of t
+he El-
+
+Underfull \hbox (badness 2790) in paragraph at lines 1082--1085
+\OT1/ptm/m/n/10 Ga-mal en-cryp-tion. Sup-pose $[]\OMS/cmsy/m/n/10 fk\OT1/cmr/m/
+n/10 ^^H\OMS/cmsy/m/n/10 k[]\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 k\OML/cmm/m/it/
+10 ^^X\OMS/cmsy/m/n/10 k[]g$ \OT1/ptm/m/n/10 ex-ists.
+[11] [12]
+Underfull \hbox (badness 2326) in paragraph at lines 1242--1246
+ \OT1/ptm/m/it/10 Proof:  \OT1/ptm/m/n/10 Let $\OT1/cmr/m/n/10 ([][]\OML/cmm/m/
+it/10 ; [][]\OT1/cmr/m/n/10 ) = ((\OML/cmm/m/it/10 p; q; g; h[]\OT1/cmr/m/n/10 
+)\OML/cmm/m/it/10 ; s[]\OT1/cmr/m/n/10 )$\OT1/ptm/m/n/10 , $\OML/cmm/m/it/10 c[
+] \OT1/cmr/m/n/10 =
+[13]
+Underfull \hbox (badness 1845) in paragraph at lines 1379--1382
+\OT1/cmr/m/n/10 0$ \OT1/ptm/m/n/10 for $\OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ^^T 
+\OML/cmm/m/it/10 i < T$\OT1/ptm/m/n/10 , then $\OML/cmm/m/it/10 P[] \OT1/cmr/m/
+n/10 = \OML/cmm/m/it/10 A[]\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 P[] \OMS/cmsy/m/n
+/10 ^^@
+(./manuscript.bbl [14])
+Underfull \hbox (badness 2538) in paragraph at lines 1423--1429
+[][]\OT1/phv/b/n/8 Kaoru Teran-ishi [][][]\OT1/phv/m/n/8 re-ceived the B.S. de-
+gree
+
+Underfull \hbox (badness 4726) in paragraph at lines 1423--1429
+\OT1/phv/m/n/8 in elec-trome-chan-i-cal en-gi-neer-ing from Na-
+[15 <./fig/teranishi.pdf> <./fig/sadamoto.pdf> <./fig/aranya.pdf> <./fig/kogiso
+.pdf>] (./manuscript.aux) )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy6.pfb></o
+pt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbx8.pfb></opt/homebrew/Cellar/texlive/20260301/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texl
+ive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/h
+omebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi6.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/homebrew
+/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/c
+mmib8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Ce
+llar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+</opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmss10.pfb></opt/homebrew/Cellar/texlive/20260301/shar
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></opt/homebrew/Cellar/tex
+live/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></op
+t/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy5.pfb></opt/homebrew/Cellar/texlive/20260301/share/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></opt/homebrew/Cellar/texliv
+e/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/home
+brew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/symbols/msam10.pfb></opt/homebrew/Cellar/texlive/20260301/share/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></opt/homebrew/Cellar/t
+exlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+</opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/helveti
+c/uhvb8a.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type
+1/urw/helvetic/uhvbo8a.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-d
+ist/fonts/type1/urw/helvetic/uhvr8a.pfb></opt/homebrew/Cellar/texlive/20260301/
+share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></opt/homebrew/Cellar/tex
+live/20260301/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></opt/homebrew/
+Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></opt
+/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/times/utmri8
+a.pfb>
+Output written on manuscript.pdf (16 pages, 2012522 bytes).
+Transcript written on manuscript.log.
+************************************
+** Labels in starred environments **
+************************************
+-- manuscript.tex       line  972: remove label fig:planted_wrongclass 
+
+*******************
+** Unused Labels **
+*******************
+-- manuscript.tex       line  493: remove label fig:curve
+-- manuscript.tex       line  676: remove label lem:tau
+-- manuscript.tex       line  931: remove label fig:be_A11
+-- manuscript.tex       line  932: remove label fig:be_A12
+-- manuscript.tex       line  933: remove label fig:be_A21
+-- manuscript.tex       line  934: remove label fig:be_A22
+-- manuscript.tex       line  955: remove label fig:time
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

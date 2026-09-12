@@ -1,0 +1,25 @@
+{
+ "coverage": 0.021083,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`RSOS_cited_papers.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "Preprint_Bonciolini_RSOS.xtex",
+    "offset": 3891,
+    "length": 32,
+    "line": 80,
+    "column": 83
+   },
+   "message": "citation checking unavailable: `RSOS_cited_papers.bib` could not be read",
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,3 @@
+planted=APO:sec:intro sites=[('apo.xtex', 77), ('apo.xtex', 76)]
+xtex new=[('XT1001', 'APO:sec:intro', 'apo.xtex', 77)]
+texlab new=[('ERROR', 'apo.tex', 76, 'Duplicate label'), ('ERROR', 'apo.tex', 77, 'Duplicate label'), ('info', 'apo.tex', 76, 'Unused label')]

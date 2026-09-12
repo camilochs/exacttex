@@ -1,0 +1,461 @@
+pdf=1
+exit=0
+lines=894
+unique_findings=17
+c4' on page 10 undefined on input line 144.
+
+
+
+LaTeX Warning: Citation `leCessie1992' on page 10 undefined on input line 144.
+
+
+LaTeX Warning: Citation `HENRIQUES2021107900' on page 10 undefined on input lin
+e 144.
+
+
+LaTeX Warning: Reference `models_accuracy' on page 10 undefined on input line 1
+46.
+
+
+LaTeX Warning: Reference `FleBiC' on page 10 undefined on input line 156.
+
+
+LaTeX Warning: Reference `FleBiC' on page 10 undefined on input line 156.
+
+
+LaTeX Warning: Reference `FleBiC' on page 10 undefined on input line 156.
+
+
+LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 157.
+
+[10 <./Results/models.PNG>])
+
+LaTeX Warning: Reference `LastPage' on page 11 undefined on input line 299.
+
+[11 <./Results/All_flebics.PNG> <./Results/NUC_all_flebics.PNG>]
+(./bmc_article.bbl
+
+LaTeX Warning: Reference `aff1thanks' on page 12 undefined on input line 3.
+
+
+LaTeX Warning: Reference `aff2thanks' on page 12 undefined on input line 3.
+
+
+LaTeX Warning: Reference `aff3thanks' on page 12 undefined on input line 3.
+
+
+LaTeX Warning: Reference `aff4thanks' on page 12 undefined on input line 3.
+
+
+LaTeX Warning: Reference `LastPage' on page 12 undefined on input line 393.
+
+[12])
+
+LaTeX Warning: Reference `LastPage' on page 13 undefined on input line 425.
+
+[13] 
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(./bmc_article.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.0pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `bmc_article.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+
+Package lastpage Warning: Rerun to get the references right on input line 425.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew
+/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.
+pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20260301/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></opt/homebrew/Cellar/
+texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt
+/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></opt/homebrew/Cellar/texlive/202
+60301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></opt/homebrew
+/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17
+.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmss8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmss9.pfb></opt/homebrew/Cellar/texlive/20260301
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></opt/homebrew/Ce
+llar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.p
+fb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmssi8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20260301
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></opt/homebrew/Cella
+r/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></
+opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20260301/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></opt/homebrew/Cellar/texl
+ive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmtt8.pfb>
+Output written on bmc_article.pdf (13 pages, 690803 bytes).
+Transcript written on bmc_article.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./bmc_article.tex (./bmcart.cls
+Document Class: bmcart 2014/01/24BioMed Central class (VS)
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/article.
+cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/size10.c
+lo))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/xcolor/xcolor
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lastpage/last
+page.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lastpage/last
+page2e.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lastpage/last
+pagemodern.sty) 
+)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/inputenc
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/comment/comme
+nt.sty Excluding comment 'comment')
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/setspace/sets
+pace.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/subfigure/sub
+figure.sty
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/subfigure/sub
+figure.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/booktabs/book
+tabs.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/algorithm2e/a
+lgorithm2e.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ifthen.s
+ty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ifoddpage/ifo
+ddpage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/xspace.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/relsize/relsi
+ze.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/multirow/mult
+irow.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hype
+rref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iftex
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/kvdefinekey
+s/kvdefinekeys.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdfescape/p
+dfescape.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdftexcmds/
+pdftexcmds.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/infwarerr/i
+nfwarerr.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hycolor/hycol
+or.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/name
+ref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/refcount/refc
+ount.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/gettitlestr
+ing/gettitlestring.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/etoolbox/etoo
+lbox.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/stringenc/s
+tringenc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/pd1e
+nc.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/intcalc/int
+calc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/puen
+c.def)
+
+Package hyperref Warning: Option `pagecolor' is not available anymore.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/url/url.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bitset/bits
+et.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bigintcalc/
+bigintcalc.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hpdf
+tex.def
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/rerunfilechec
+k/rerunfilecheck.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/uniquecount
+er/uniquecounter.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def) (./bmc_article.aux
+
+LaTeX Warning: Label `equal_freq' multiply defined.
+
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg)) (./bmc_article.out) (./bmc_article.out)
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/n' in size <13> not available
+(Font)              size <12> substituted on input line 100.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <24> not available
+(Font)              size <24.88> substituted on input line 108.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 130.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 130.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 130.
+
+(./Introduction.tex) (./background.tex
+Overfull \hbox (1.0pt too wide) has occurred while \output is active
+ [] 
+[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}] [2 <./background/Equal-freq.pdf> <./background/equal-wiidth.pdf
+> <./background/k_means_example.pdf>] [3]) (./discussion.tex [4 <./background/b
+ordervalues.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]\OT1/cmss/m/n/7 Without
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]$[]$
+
+LaTeX Font Warning: Font shape `OML/cmss/m/n' undefined
+(Font)              using `OML/cmm/m/it' instead
+(Font)              for symbol `textless' on input line 39.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]\OT1/cmss/m/n/7 p-value
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]\OT1/cmss/m/n/7 D
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]$[]$
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]\OT1/cmss/m/n/7 p-value
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]\OT1/cmss/m/n/7 D
+
+Overfull \hbox (4.90651pt too wide) in paragraph at lines 43--43
+[]\OT1/cmss/bx/n/7 recipinvgauss| 
+[5] [6] [7 <./DA1.png> <./DA2.png> <./distribution_discretization.jpg>]
+Underfull \hbox (badness 8075) in paragraph at lines 84--84
+\OT1/cmr/m/n/9 Kolmogorov-Smirnov out-lier re-moval
+
+Underfull \hbox (badness 1910) in paragraph at lines 88--88
+\OT1/cmr/m/n/9 bu-tion af-ter DI2 sin-gle col-umn dis-
+
+Underfull \hbox (badness 1603) in paragraph at lines 88--88
+\OT1/cmr/m/n/9 re-moval and no bor-der val-ues (blue
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--118
+[]\OT1/cmss/m/n/7 Without
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--119
+[]$[]$
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--120
+[]\OT1/cmss/m/n/7 p-value
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
+[]\OT1/cmss/m/n/7 D
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--123
+[]$[]$
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--124
+[]\OT1/cmss/m/n/7 p-value
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--125
+[]\OT1/cmss/m/n/7 D
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
+[]\OT1/cmss/m/n/7 4.45
+
+Overfull \hbox (1.33737pt too wide) in paragraph at lines 130--130
+\OMS/cmsy/m/n/7 ^^B\OT1/cmr/m/n/7 10[]$| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
+[]\OT1/cmss/m/n/7 4.23
+
+Overfull \hbox (1.33737pt too wide) in paragraph at lines 130--130
+\OMS/cmsy/m/n/7 ^^B\OT1/cmr/m/n/7 10[]$| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--131
+[]\OT1/cmss/m/n/7 4.45
+
+Overfull \hbox (1.33737pt too wide) in paragraph at lines 131--131
+\OMS/cmsy/m/n/7 ^^B\OT1/cmr/m/n/7 10[]$| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--131
+[]\OT1/cmss/m/n/7 4.23
+
+Overfull \hbox (1.33737pt too wide) in paragraph at lines 131--131
+\OMS/cmsy/m/n/7 ^^B\OT1/cmr/m/n/7 10[]$| 
+
+Overfull \hbox (8.34238pt too wide) in paragraph at lines 134--134
+[]\OT1/cmss/bx/n/7 genhalflogistic| 
+
+Overfull \hbox (8.34238pt too wide) in paragraph at lines 134--134
+[]\OT1/cmss/bx/n/7 genhalflogistic| 
+
+Overfull \hbox (5.91975pt too wide) in paragraph at lines 116--137
+ [][] 
+[8 <./discussion2/pre-after-dist.png> <./discussion2/DI2_k_means.jpg> <./discus
+sion2/DI2_rest.jpg>] [9 <./discussion2/bordervvalues1.jpg> <./discussion2/borde
+rvvalues2.jpg>] [10 <./Results/models.PNG>]) [11 <./Results/All_flebics.PNG> <.
+/Results/NUC_all_flebics.PNG>] (./bmc_article.bbl [12])  [13]
+
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(./bmc_article.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.0pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/homebrew
+/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.
+pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr5.pfb></opt/homebrew/Cellar/texlive/20260301/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/t
+exlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/
+homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></opt/homebre
+w/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8
+.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmss9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmssbx10.pfb></opt/homebrew/Cellar/texlive/20260
+301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></opt/homebrew/
+Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.
+pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy5.pfb></opt/homebrew/Cellar/texlive/20260301
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/homebrew/Cella
+r/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></
+opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti8.pfb></opt/homebrew/Cellar/texlive/20260301/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></opt/homebrew/Cellar/texl
+ive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on bmc_article.pdf (13 pages, 686955 bytes).
+Transcript written on bmc_article.log.
+************************************
+** Labels in starred environments **
+************************************
+-- background.tex       line   34: consider using a STAR environment
+-- background.tex       line   40: consider using a STAR environment
+-- background.tex       line   46: consider using a STAR environment
+-- background.tex       line   62: consider using a STAR environment
+
+*******************
+** Unused Labels **
+*******************
+-- discussion.tex       line  100: remove label fig:mit_DI2_whole_with_nobordervalues
+-- discussion.tex       line  103: remove label fig:mit_DI2_whole_without_nobordervalues
+-- discussion.tex       line  106: remove label discretizations2
+-- discussion.tex       line   15: remove label fig:un_optimization
+-- discussion.tex       line  160: remove label fig:flebic
+-- discussion.tex       line  163: remove label fig:flebic_NUC
+-- discussion.tex       line   18: remove label fig:optimization
+-- discussion.tex       line   21: remove label fig:discretization
+-- discussion.tex       line   23: remove label discretizations
+-- discussion.tex       line   84: remove label fig:mit_DI2_single_with_nobordervalues
+-- discussion.tex       line   88: remove label fig:mit_DI2_single_without_nobordervalues
+-- discussion.tex       line   91: remove label fig:mit_DI2_single_with_bordervalues
+-- discussion.tex       line   94: remove label discretizations1
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

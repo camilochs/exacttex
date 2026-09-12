@@ -1,0 +1,3 @@
+planted=sec:intro sites=[('mgrit_cg_selection.xtex', 99), ('mgrit_cg_selection.xtex', 98)]
+xtex new=[('XT1001', 'sec:intro', 'mgrit_cg_selection.xtex', 99)]
+texlab new=[]

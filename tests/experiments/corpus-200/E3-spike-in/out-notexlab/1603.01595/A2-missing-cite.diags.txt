@@ -1,0 +1,3 @@
+planted=hu_mining_2004__ghost sites=[('absabook.xtex', 39)]
+xtex new=[]
+texlab new=[]

@@ -1,0 +1,25 @@
+{
+ "coverage": 0.018312,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`williamson-doubling.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "williamson-doubling.xtex",
+    "offset": 1455,
+    "length": 22,
+    "line": 49,
+    "column": 27
+   },
+   "message": "citation checking unavailable: `williamson-doubling.bib` could not be read",
+   "related": []
+  }
+ ]
+}

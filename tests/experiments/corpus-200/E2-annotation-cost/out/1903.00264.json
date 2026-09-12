@@ -1,0 +1,129 @@
+{
+ "paper": "1903.00264",
+ "main": "hetero-tangencial.tex",
+ "files": [
+  {
+   "file": "hetero-tangencial.tex",
+   "chars_before": 54368,
+   "chars_after": 54296,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 54368,
+ "chars_after": 54296,
+ "delta_pct": -0.13243084167157151,
+ "unrepaired": {
+  "chars_after": 54284,
+  "chars_before": 54368,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.015585,
+  "bibliography": {
+   "state": "complete",
+   "entries": 20
+  },
+  "errors": 4,
+  "advisories": 0,
+  "build_exit": 1,
+  "build_emitted": false,
+  "delta_pct": -0.15450264861683344
+ },
+ "stats": {
+  "cite_cmds_live": 21,
+  "cite_keys_live": 26,
+  "cite_with_optarg_or_star": 1,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 28,
+  "labels_outside_grammar": 0,
+  "refs_live": 31,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 11,
+  "float_envs": 5,
+  "cite_cmds_annotated": 20,
+  "cite_keys_annotated": 25,
+  "ids_annotated": 24,
+  "refs_annotated": 28,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 4,
+  "leaks_reverted": 3,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "hetero-tangencial.tex",
+   "line": 721,
+   "token": "@ref(prop1)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Proposition~\\ref{prop1}]"
+  },
+  {
+   "file": "hetero-tangencial.tex",
+   "line": 772,
+   "token": "@ref(lem1)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Lemma~\\ref{lem1}]"
+  },
+  {
+   "file": "hetero-tangencial.tex",
+   "line": 1058,
+   "token": "@ref(thmB)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Theorem~\\ref{thmB}]"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1001",
+   "name": "geometry",
+   "file": "hetero-tangencial.xtex",
+   "line": 279,
+   "message": "identifier `geometry` is already declared",
+   "classification": "real: \\label{geometry} appears 6x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "geometry",
+   "file": "hetero-tangencial.xtex",
+   "line": 382,
+   "message": "identifier `geometry` is already declared",
+   "classification": "real: \\label{geometry} appears 6x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "geometry",
+   "file": "hetero-tangencial.xtex",
+   "line": 458,
+   "message": "identifier `geometry` is already declared",
+   "classification": "real: \\label{geometry} appears 6x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "geometry",
+   "file": "hetero-tangencial.xtex",
+   "line": 502,
+   "message": "identifier `geometry` is already declared",
+   "classification": "real: \\label{geometry} appears 6x in the sources",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.014624,
+ "bibliography": {
+  "state": "complete",
+  "entries": 20
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

@@ -1,0 +1,6 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=[] secs=1
+error: main.tex:4: ! LaTeX Error: File `iopart.cls' not found.
+error: halted on potentially-recoverable error as specified

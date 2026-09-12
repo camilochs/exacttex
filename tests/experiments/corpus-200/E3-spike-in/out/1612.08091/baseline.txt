@@ -1,0 +1,9 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'images/plots/runtimes_tex', 95, 'Undefined reference'), ('ERROR', 'projectq.tex', 122, 'Undefined reference'), ('ERROR', 'projectq.tex', 124, 'Undefined reference'), ('ERROR', 'projectq.tex', 145, 'Undefined reference'), ('ERROR', 'projectq.tex', 148, 'Undefined reference'), ('ERROR', 'projectq.tex', 150, 'Undefined reference'), ('ERROR', 'projectq.tex', 167, 'Undefined reference'), ('ERROR', 'projectq.tex', 171, 'Undefined reference'), ('ERROR', 'projectq.tex', 186, 'Undefined reference'), ('ERROR', 'projectq.tex', 190, 'Undefined reference'), ('ERROR', 'projectq.tex', 217, 'Undefined reference'), ('ERROR', 'projectq.tex', 266, 'Undefined reference'), ('ERROR', 'projectq.tex', 303, 'Undefined reference'), ('ERROR', 'projectq.tex', 322, 'Undefined reference'), ('ERROR', 'projectq.tex', 383, 'Undefined reference'), ('ERROR', 'projectq.tex', 407, 'Undefined reference'), ('ERROR', 'projectq.tex', 413, 'Undefined reference'), ('ERROR', 'projectq.tex', 433, 'Undefined reference'), ('ERROR', 'projectq.tex', 454, 'Undefined reference'), ('ERROR', 'projectq.tex', 462, 'Undefined reference'), ('ERROR', 'projectq.tex', 464, 'Undefined reference'), ('ERROR', 'projectq.tex', 576, 'Undefined reference'), ('ERROR', 'projectq.tex', 612, 'Undefined reference'), ('info', 'projectq.tex', 252, 'Unused label')]
+tectonic exit=1 warnings=[] secs=2
+error: projectq.tex:84: Class quantumarticle Error: Please add \pdfoutput=1 within the first 5 lines of the preamble of your main LaTeX file as suggested by the arXiv (https://arxiv.org/help/submit_tex).
+
+See the quantumarticle class documentation for explanation.
+Type  H <return>  for immediate help
+error: halted on potentially-recoverable error as specified

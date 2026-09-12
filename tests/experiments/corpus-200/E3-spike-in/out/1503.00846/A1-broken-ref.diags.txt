@@ -1,0 +1,3 @@
+planted=fig:helispec1__ghost sites=[('paper20160222.xtex', 215)]
+xtex new=[('XT1003', 'fig:helispec1__ghost', 'paper20160222.xtex', 215)]
+texlab new=[('ERROR', 'paper20160222.tex', 215, 'Undefined reference')]

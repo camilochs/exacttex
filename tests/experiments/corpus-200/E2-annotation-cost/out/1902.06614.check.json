@@ -1,0 +1,25 @@
+{
+ "coverage": 0.037437,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`Overton_ApproximatingEvolutionaryDynamics_refs.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+    "offset": 3755,
+    "length": 9,
+    "line": 57,
+    "column": 235
+   },
+   "message": "citation checking unavailable: `Overton_ApproximatingEvolutionaryDynamics_refs.bib` could not be read",
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+target,kind,verdict,field,severity,document,source
+bouwman2007csf,bib-entry,partial,authors,high,"Bouwman, FH and Schoonenboom, SNM and van Der Flier, WM and Van Elk, EJ and Kok, A and Barkhof, F and Blankenstein, MA and Scheltens, Ph",F.H. Bouwman and S.N.M. Schoonenboom and W.M. van der Flier and E.J. van Elk and A. Kok and F. Barkhof and M.A. Blankenstein and Ph. Scheltens
+bozzali2002white,bib-entry,partial,authors,high,"Bozzali, M and Falini, A and Franceschi, M and Cercignani, M and Zuffi, M and Scotti, G and Comi, G and Filippi, M",M Bozzali
+cappa2001brain,bib-entry,partial,authors,high,"Cappa, Atonella and Calcagni, ML and Villa, Giampiero and Giordano, Alessandro and Marra, Camillo and De Rossi, Giuseppe and Puopolo, M and Gainotti, Guido",A Cappa
+caroli2010dynamics,bib-entry,partial,authors,high,"Caroli, A and Frisoni, GB and Alzheimer's Disease Neuroimaging Initiative",A. Caroli and G.B. Frisoni
+cheng2017multi,bib-entry,partial,authors,high,"Cheng, Bo and Liu, Mingxia and Shen, Dinggang and Li, Zuoyong and Zhang, Daoqiang and Alzheimer’s Disease Neuroimaging Initiative",Bo Cheng and Mingxia Liu and Dinggang Shen and Zuoyong Li and Daoqiang Zhang
+cheng2017multi,bib-entry,partial,year,medium,2017,2016
+cummings2004alzheimers,bib-entry,mismatch,title,medium,Alzheimers Disease,Alzheimer's Disease
+davies1976selective,bib-entry,partial,authors,high,"Davies, Peter and Maloney, AJF",P DAVIES
+derado2010modeling,bib-entry,partial,year,medium,2010,2009
+dickerson2009cortical,bib-entry,partial,year,medium,2009,2008
+dickerson2010dysexecutive,bib-entry,partial,authors,high,"Dickerson, Bradford C and Wolk, David A and Alzheimer's Disease Neuroimaging Initiative",B. C. Dickerson and D. A. Wolk
+duning2009pattern,bib-entry,partial,year,medium,2009,2008
+durrleman2013toward,bib-entry,partial,year,medium,2013,2012
+eshaghi2018progression,bib-entry,partial,year,medium,2018,2017
+frost2010prion,bib-entry,partial,year,medium,2010,2009
+furney2011genome,bib-entry,partial,year,medium,2011,2010
+galton2000atypical,bib-entry,partial,authors,high,"Galton, Clare J and Patterson, Karalyn and Xuereb, John H and Hodges, John R",C. J. Galton
+georgiou2008magnetic,bib-entry,partial,authors,high,"Georgiou-Karistianis, Nellie and Hannan, Anthony J and Egan, Gary F",India Bohanna and Nellie Georgiou-Karistianis and Anthony J. Hannan and Gary F. Egan
+gray2013random,bib-entry,partial,authors,high,"Gray, Katherine R and Aljabar, Paul and Heckemann, Rolf A and Hammers, Alexander and Rueckert, Daniel and Alzheimer's Disease Neuroimaging Initiative",Katherine R. Gray and Paul Aljabar and Rolf A. Heckemann and Alexander Hammers and Daniel Rueckert
+green1990progressive,bib-entry,partial,authors,high,"Green, J and Morris, John C and Sandson, J and McKeel, DW and Miller, JW",J. Green
+green1990progressive,bib-entry,partial,year,medium,1990,1995
+guerrero2016instantiated,bib-entry,partial,authors,high,"Guerrero, Ricardo and Schmidt-Richberg, Alexander and Ledig, Christian and Tong, Tong and Wolz, Robin and Rueckert, Daniel and ADNI",R. Guerrero and A. Schmidt-Richberg and C. Ledig and T. Tong and R. Wolz and D. Rueckert
+harutyunyan2017multitask,bib-entry,partial,authors,high,"Harutyunyan, Hrayr and Khachatrian, Hrant and Kale, David C and Galstyan, Aram",Hrayr Harutyunyan and Hrant Khachatrian and David C. Kale and Greg Ver Steeg and Aram Galstyan
+harutyunyan2017multitask,bib-entry,partial,year,medium,2017,2019
+hoffmann2010temporal,bib-entry,partial,year,medium,2010,2009
+hon2017towards,bib-entry,partial,year,medium,2017,2023
+hyun2016stgp,bib-entry,partial,authors,high,"Hyun, Jung Won and Li, Yimei and Huang, Chao and Styner, Martin and Lin, Weili and Zhu, Hongtu and {Alzheimer's} Disease Neuroimaging Initiative",Jung Won Hyun and Yimei Li and Chao Huang and Martin Styner and Weili Lin and Hongtu Zhu
+koval2017statistical,bib-entry,partial,authors,high,"Koval, Igor and Schiratti, J-B and Routier, Alexandre and Bacci, Michael and Colliot, Olivier and Allassonni{\`e}re, St{\'e}phanie and Durrleman, Stanley and Alzheimer’s Disease Neuroimaging Initiativ",I. Koval and J.-B. Schiratti and A. Routier and M. Bacci and O. Colliot and S. Allassonnière and S. Durrleman
+larner2006clinical,bib-entry,partial,year,medium,2006,2005
+leung2010automated,bib-entry,partial,authors,high,"Leung, Kelvin K and Barnes, Josephine and Ridgway, Gerard R and Bartlett, Jonathan W and Clarkson, Matthew J and Macdonald, Kate and Schuff, Norbert and Fox, Nick C and Ourselin, Sebastien and Alzheim",Kelvin K. Leung and Josephine Barnes and Gerard R. Ridgway and Jonathan W. Bartlett and Matthew J. Clarkson and Kate Macdonald and Norbert Schuff and Nick C. Fox and Sebastien Ourselin
+leung2010robust,bib-entry,partial,authors,high,"Leung, Kelvin K and Clarkson, Matthew J and Bartlett, Jonathan W and Clegg, Shona and Jack, Clifford R and Weiner, Michael W and Fox, Nick C and Ourselin, S{\'e}bastien and Alzheimer's Disease Neuroim",Kelvin K. Leung and Matthew J. Clarkson and Jonathan W. Bartlett and Shona Clegg and Clifford R. Jack and Michael W. Weiner and Nick C. Fox and Sébastien Ourselin
+levine1993visual,bib-entry,partial,authors,high,"Levine, David N and Lee, John M and Fisher, CM",D. N. Levine
+levine1993visual,bib-entry,partial,year,medium,1993,1995
+marinescu2017vertex,bib-entry,partial,authors,high,"Marinescu, R{\u{a}}zvan Valentin and Eshaghi, Arman and Lorenzi, Marco and Young, Alexandra L and Oxtoby, Neil P and Garbarino, Sara and Shakespeare, Timothy J and Crutch, Sebastian J and Alexander, D",Răzvan Valentin Marinescu and Arman Eshaghi and Marco Lorenzi and Alexandra L. Young and Neil P. Oxtoby and Sara Garbarino and Timothy J. Shakespeare and Sebastian J. Crutch and Daniel C. Alexander
+mckhann1984clinical,bib-entry,partial,year,medium,1984,2011
+modrego2004depression,bib-entry,partial,authors,high,"Modrego, Pedro J and Ferr{\'a}ndez, Jaime",J.C. Ballenger
+modrego2004depression,bib-entry,partial,year,medium,2004,2006
+nestor2003topography,bib-entry,partial,authors,high,"Nestor, PJ and Caine, D and Fryer, TD and Clarke, J and Hodges, JR",P J Nestor
+nir2013effectiveness,bib-entry,partial,authors,high,"Nir, Talia M and Jahanshad, Neda and Villalon-Reina, Julio E and Toga, Arthur W and Jack, Clifford R and Weiner, Michael W and Thompson, Paul M and ADNI",Talia M. Nir and Neda Jahanshad and Julio E. Villalon-Reina and Arthur W. Toga and Clifford R. Jack and Michael W. Weiner and Paul M. Thompson
+oxtoby2014learning,bib-entry,partial,authors,high,"Oxtoby, Neil P and Young, Alexandra L and Fox, Nick C and Daga, Pankaj and Cash, David M and Ourselin, Sebastien and Schott, Jonathan M and Alexander, Daniel C and Alzheimer’s Disease Neuroimaging Ini",Neil P. Oxtoby and Alexandra L. Young and Nick C. Fox and Pankaj Daga and David M. Cash and Sebastien Ourselin and Jonathan M. Schott and Daniel C. Alexander
+raj2015network,bib-entry,partial,authors,high,"Raj, Ashish and LoCastro, Eve and Kuceyeski, Amy and Tosun, Duygu and Relkin, Norman and Weiner, Michael and {Alzheimer's} Disease Neuroimaging Initiative",Ashish Raj and Eve LoCastro and Amy Kuceyeski and Duygu Tosun and Norman Relkin and Michael Weiner
+renner2004progressive,bib-entry,partial,authors,high,"Renner, JA and Burns, JM and Hou, CE and McKeel, DW and Storandt, M and Morris, JC",A. Verma
+renner2004progressive,bib-entry,partial,year,medium,2004,2006
+sabuncu2011dynamics,bib-entry,partial,authors,high,"Sabuncu, Mert R and Desikan, Rahul S and Sepulcre, Jorge and Yeo, Boon Thye T and Liu, Hesheng and Schmansky, Nicholas J and Reuter, Martin and Weiner, Michael W and Buckner, Randy L and Sperling, Rei",Mert R. Sabuncu
+schiratti2015mixed,bib-entry,partial,authors,high,"Schiratti, J-B and Allassonniere, St{\'e}phanie and Routier, Alexandre and Colliot, Olivier and Durrleman, Stanley and Alzheimers Disease Neuroimaging Initiative",J.-B. Schiratti and S. Allassonnière and A. Routier and O. Colliot and S. Durrleman
+schmidt2015multi,bib-entry,partial,authors,high,"Schmidt-Richberg, Alexander and Guerrero, Ricardo and Ledig, Christian and Molina-Abril, Helena and Frangi, Alejandro F and Rueckert, Daniel and Alzheimers Disease Neuroimaging Initiative",Alexander Schmidt-Richberg and Ricardo Guerrero and Christian Ledig and Helena Molina-Abril and Alejandro F. Frangi and Daniel Rueckert
+schmidtke2005posterior,bib-entry,partial,authors,high,"Schmidtke, Klaus and H{\""u}ll, PD Dr Michael and Talazko, Jochen",Klaus Schmidtke and Michael H�ll and Jochen Talazko
+schott2003assessing,bib-entry,partial,year,medium,2003,2002
+seshadri2010genome,bib-entry,partial,authors,high,"Seshadri, Sudha and Fitzpatrick, Annette L and Ikram, M Arfan and DeStefano, Anita L and Gudnason, Vilmundur and Boada, Merce and Bis, Joshua C and Smith, Albert V and Carrasquillo, Minerva M and Lamb",Sudha Seshadri
+tang2003coexistent,bib-entry,partial,authors,high,"Tang-Wai, DF and Josephs, KA and Boeve, Bradley F and Petersen, RC and Parisi, JE and Dickson, DW",D F Tang-Wai
+wakai1994unusual,bib-entry,partial,year,medium,1994,2009
+yang2010quantifying,bib-entry,partial,authors,high,"Yang, Eric and Farnum, Michael and Lobanov, Victor and Schultz, Tim and Verbeeck, R and Raghavan, N and Samtani, MN and Novak, G and Narayan, V and DiBernardo, A",Eric Yang and Michael Farnum and Victor Lobanov and Tim Schultz and Nandini Raghavan and Mahesh N. Samtani and Gerald Novak and Vaibhav Narayan and Allitia DiBernardo
+yang2010quantifying,bib-entry,partial,year,medium,2010,2011
+young2013accurate,bib-entry,partial,authors,high,"Young, Jonathan and Modat, Marc and Cardoso, Manuel J and Mendelson, Alex and Cash, Dave and Ourselin, Sebastien and Alzheimer's Disease Neuroimaging Initiative",Jonathan Young and Marc Modat and Manuel J. Cardoso and Alex Mendelson and Dave Cash and Sebastien Ourselin
+young2015simulation,bib-entry,partial,authors,high,"Young, Alexandra L and Oxtoby, Neil P and Ourselin, Sebastien and Schott, Jonathan M and Alexander, Daniel C and Alzheimer's Disease Neuroimaging Initiative",Alexandra L. Young and Neil P. Oxtoby and Sebastien Ourselin and Jonathan M. Schott and Daniel C. Alexander
+young2018uncovering,bib-entry,partial,year,medium,2018,2017
+zhang2011multimodal,bib-entry,partial,authors,high,"Zhang, Daoqiang and Wang, Yaping and Zhou, Luping and Yuan, Hong and Shen, Dinggang and ADNI",Daoqiang Zhang and Yaping Wang and Luping Zhou and Hong Yuan and Dinggang Shen

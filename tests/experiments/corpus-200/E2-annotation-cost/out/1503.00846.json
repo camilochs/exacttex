@@ -1,0 +1,97 @@
+{
+ "paper": "1503.00846",
+ "main": "paper20160222.tex",
+ "files": [
+  {
+   "file": "paper20160222.tex",
+   "chars_before": 49415,
+   "chars_after": 49361,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 49415,
+ "chars_after": 49361,
+ "delta_pct": -0.10927855914196094,
+ "unrepaired": {
+  "chars_after": 49358,
+  "chars_before": 49415,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.039908,
+  "bibliography": {
+   "state": "complete",
+   "entries": 54
+  },
+  "errors": 2,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.11534959020540322
+ },
+ "stats": {
+  "cite_cmds_live": 57,
+  "cite_keys_live": 79,
+  "cite_with_optarg_or_star": 5,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 19,
+  "labels_outside_grammar": 0,
+  "refs_live": 40,
+  "refs_outside_grammar": 1,
+  "other_ref_cmds": 0,
+  "float_envs": 17,
+  "cite_cmds_annotated": 52,
+  "cite_keys_annotated": 68,
+  "ids_annotated": 18,
+  "refs_annotated": 37,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 2,
+  "leaks_reverted": 1,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "paper20160222.tex",
+   "line": 595,
+   "token": "@id(Tsummary)",
+   "wrapper": "?",
+   "context": "\\hline\\label{Tsummary}\\end{tabular}}"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1003",
+   "name": "Tsummary",
+   "file": "paper20160222.xtex",
+   "line": 609,
+   "message": "identifier `Tsummary` is not declared",
+   "classification": "compiler-unreachable: \\label{Tsummary} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "Tsummary",
+   "file": "paper20160222.xtex",
+   "line": 780,
+   "message": "identifier `Tsummary` is not declared",
+   "classification": "compiler-unreachable: \\label{Tsummary} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.039338,
+ "bibliography": {
+  "state": "complete",
+  "entries": 54
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

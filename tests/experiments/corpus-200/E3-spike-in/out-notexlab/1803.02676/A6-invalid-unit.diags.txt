@@ -1,0 +1,3 @@
+planted=fig:planted_unit sites=[('Preprint_Bonciolini_RSOS.xtex', 80)]
+xtex new=[('XT1007', '', 'Preprint_Bonciolini_RSOS.xtex', 80)]
+texlab new=[]

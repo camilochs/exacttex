@@ -1,0 +1,3 @@
+planted=fig:pareto-front-convergence-example-3__ghost sites=[('paper.xtex', 456)]
+xtex new=[('XT1003', 'fig:pareto-front-convergence-example-3__ghost', 'paper.xtex', 456)]
+texlab new=[('ERROR', 'paper.tex', 456, 'Undefined reference'), ('info', 'paper.tex', 492, 'Unused label'), ('info', 'paper.tex', 546, 'Unused label')]

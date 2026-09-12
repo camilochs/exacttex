@@ -1,0 +1,3 @@
+planted=fig:planted_unit sites=[('MT_kinetochore_dynamics.xtex', 132)]
+xtex new=[('XT1007', '', 'MT_kinetochore_dynamics.xtex', 132)]
+texlab new=[]

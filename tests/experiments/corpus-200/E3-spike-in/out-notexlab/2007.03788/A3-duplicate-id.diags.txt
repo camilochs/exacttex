@@ -1,0 +1,3 @@
+planted=sec:background sites=[('clintraj.xtex', 93), ('clintraj.xtex', 92)]
+xtex new=[('XT1001', 'sec:background', 'clintraj.xtex', 93)]
+texlab new=[]

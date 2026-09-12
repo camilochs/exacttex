@@ -1,0 +1,3 @@
+planted=Par55__ghost sites=[('paper20160222.xtex', 62)]
+xtex new=[('XT1005', 'Par55__ghost', 'paper20160222.xtex', 62)]
+texlab new=[]

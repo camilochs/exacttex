@@ -1,0 +1,34 @@
+aph at lines 105--106
+warning: main.tex:112: Overfull \hbox (4.5201pt too wide) in paragraph at lines 107--112
+warning: main.tex:158: Underfull \hbox (badness 1975) in paragraph at lines 158--158
+warning: main.tex:201: Overfull \hbox (13.62857pt too wide) in paragraph at lines 199--201
+warning: main.tex:208: Overfull \hbox (16.93063pt too wide) in paragraph at lines 206--208
+warning: main.tex:248: Overfull \hbox (4.50131pt too wide) in paragraph at lines 245--248
+warning: main.tex:322: Overfull \hbox (5.7797pt too wide) in paragraph at lines 318--322
+warning: main.tex:322: Underfull \vbox (badness 6016) has occurred while \output is active
+warning: main.tex:350: Overfull \hbox (3.57724pt too wide) in paragraph at lines 346--350
+warning: main.tex:428: Overfull \hbox (4.14801pt too wide) in paragraph at lines 425--428
+warning: main.tex:442: Overfull \hbox (11.42947pt too wide) in paragraph at lines 441--442
+warning: main.tex:450: Overfull \hbox (11.42947pt too wide) in paragraph at lines 449--450
+warning: main.tex:458: Overfull \hbox (11.42947pt too wide) in paragraph at lines 457--458
+warning: main.tex:591: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: main.tex:593: Overfull \hbox (3.4235pt too wide) in paragraph at lines 591--593
+warning: main.tex:634: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: main.tex:103: Underfull \vbox (badness 1776) has occurred while \output is active
+warning: main.tex:106: Overfull \hbox (2.37947pt too wide) in paragraph at lines 105--106
+warning: main.tex:112: Overfull \hbox (4.5201pt too wide) in paragraph at lines 107--112
+warning: main.tex:158: Underfull \hbox (badness 1975) in paragraph at lines 158--158
+warning: main.tex:201: Overfull \hbox (13.62857pt too wide) in paragraph at lines 199--201
+warning: main.tex:208: Overfull \hbox (16.93063pt too wide) in paragraph at lines 206--208
+warning: main.tex:248: Overfull \hbox (4.50131pt too wide) in paragraph at lines 245--248
+warning: main.tex:322: Overfull \hbox (5.7797pt too wide) in paragraph at lines 318--322
+warning: main.tex:322: Underfull \vbox (badness 6016) has occurred while \output is active
+warning: main.tex:350: Overfull \hbox (3.57724pt too wide) in paragraph at lines 346--350
+warning: main.tex:428: Overfull \hbox (4.14801pt too wide) in paragraph at lines 425--428
+warning: main.tex:442: Overfull \hbox (11.42947pt too wide) in paragraph at lines 441--442
+warning: main.tex:450: Overfull \hbox (11.42947pt too wide) in paragraph at lines 449--450
+warning: main.tex:458: Overfull \hbox (11.42947pt too wide) in paragraph at lines 457--458
+warning: main.tex:591: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: main.tex:593: Overfull \hbox (3.4235pt too wide) in paragraph at lines 591--593
+warning: main.tex:634: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

@@ -1,0 +1,25 @@
+{
+ "coverage": 0.014231,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`thesis.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "thesis.xtex",
+    "offset": 14901,
+    "length": 15,
+    "line": 310,
+    "column": 91
+   },
+   "message": "citation checking unavailable: `thesis.bib` could not be read",
+   "related": []
+  }
+ ]
+}

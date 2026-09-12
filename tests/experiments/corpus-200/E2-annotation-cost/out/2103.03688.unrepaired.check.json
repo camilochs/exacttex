@@ -1,0 +1,25 @@
+{
+ "coverage": 0.031053,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`refs.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "DT_exact_plain.xtex",
+    "offset": 7803,
+    "length": 24,
+    "line": 153,
+    "column": 102
+   },
+   "message": "citation checking unavailable: `refs.bib` could not be read",
+   "related": []
+  }
+ ]
+}

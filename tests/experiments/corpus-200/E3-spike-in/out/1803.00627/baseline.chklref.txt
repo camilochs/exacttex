@@ -1,0 +1,377 @@
+pdf=1
+exit=0
+lines=3572
+unique_findings=86
+ellar/texlive/20260301/sha
+re/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></opt/homebrew/Cellar
+/texlive/20260301/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></opt/homeb
+rew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+
+Output written on Ph.D._Thesis_of_G._Tephnadze.pdf (166 pages, 673439 bytes).
+Transcript written on Ph.D._Thesis_of_G._Tephnadze.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./Ph.D._Thesis_of_G._Tephnadze.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2025/01/22 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/bk12.clo
+))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsma
+th.sty
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amste
+xt.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsge
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsbs
+y.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsop
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amss
+ymb.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amsf
+onts.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amscd
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/exscale.
+sty) (./calrsfs.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/psnfss/times.
+sty) (./multind.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/theorem
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/thp.sty
+))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/colo
+r.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx)) (./article.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pictex/pict
+ex.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pictex/prep
+ictex.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pictex/pict
+ex.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pictex/post
+pictex.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pictex/picm
+ore.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pictex/picc
+orr.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/epsf
+ig.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)))) (./article.def
+
+! LaTeX Error: Command \Ref already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 \nc{\Ref}[1]{\mbox{\rm (\ref{#1})}}
+                                                    % in Klammern
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/psnfss/ot1ptm
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def) (./Ph.D._Thesis_of_G._Tephnadze.aux
+
+LaTeX Warning: Label `theorem4.7fejer2' multiply defined.
+
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg)) [1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fon
+ts/map/pdftex/updmap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301/share/te
+xmf-dist/fonts/enc/dvips/base/8r.enc}] [2] (./Ph.D._Thesis_of_G._Tephnadze.toc
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/calrsfs/OMSrs
+fs.fd) [3]) [4]
+Overfull \hbox (11.59912pt too wide) in paragraph at lines 85--90
+\OT1/ptm/m/n/12 Weak-$\OML/cmm/m/it/12 L[]$ \OT1/ptm/m/n/12 spaces, mod-u-lus o
+f con-ti-nu-ity, Vilenkin-Fourier co-ef-fi-cients, par-tial sums of Vilenkin-
+
+Overfull \hbox (3.15768pt too wide) in paragraph at lines 85--90
+\OT1/ptm/m/n/12 N[]orlund log-a-rith-mic means, mar-tin-gales, mar-tin-gale Har
+dy spaces, max-i-mal op-er-a-tors, strong
+[5]
+Overfull \hbox (2.47362pt too wide) in paragraph at lines 127--133
+\OT1/ptm/m/n/12 co-ef-fi-cients and par-tial sums of Vilenkin-Fourier se-ries o
+n mar-tin-gale Hardy spaces, Vilenkin-
+[6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 154--156
+
+[8]
+Overfull \hbox (1.22536pt too wide) in paragraph at lines 230--232
+\OT1/ptm/m/n/12 search and for many fruit-ful dis-cus-sions. In par-tic-u-lar, 
+I thank Pro-fes-sor Ami-ran Gogatishvili,
+[9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23]
+[24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38]
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 2413--2416
+
+[40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54]
+[55] [56]
+Overfull \hbox (6.7683pt too wide) in paragraph at lines 3568--3568
+[][]\OT1/ptm/m/sc/12 Estimations of the Vilenkin-Fourier co-ef-fi-cients on mar
+-tin-gale Hardy
+[57] [58] [59]
+Overfull \hbox (13.60248pt too wide) in paragraph at lines 3785--3787
+[]\OT1/ptm/m/n/12 Next we note that for ev-ery $\OT1/cmr/m/n/12 0 \OML/cmm/m/it
+/12 < p < \OT1/cmr/m/n/12 1$ \OT1/ptm/m/n/12 there ex-ists an in-creas-ing se-q
+uence $[]$
+[60] [61] [62]
+Overfull \hbox (2.59274pt too wide) in paragraph at lines 3929--3929
+[][]\OT1/ptm/m/sc/12 Maximal op-er-a-tors of par-tial sums of Vilenkin-Fourier 
+se-ries on mar-
+[63] [64] [65] [66] [67] [68] [69] [70] [71]
+Overfull \hbox (0.16881pt too wide) in paragraph at lines 4587--4587
+[][]\OT1/ptm/m/sc/12 Norm con-ver-gence of par-tial sums of Vilenkin-Fourier se
+-ries on mar-
+[72] [73] [74] [75] [76] [77]
+Overfull \hbox (36.08743pt too wide) in paragraph at lines 4979--4982
+[]\OT1/ptm/m/n/12 Next, we note that un-der con-di-tion (2.31[]) there ex-ists 
+an in-creas-ing se-quence $[]$
+[78] [79]
+Overfull \hbox (14.43602pt too wide) in paragraph at lines 5105--5105
+[][]\OT1/ptm/m/sc/12 An ap-pli-ca-tion con-cern-ing es-ti-ma-tions of Vilenkin-
+Fourier co-ef-fi-cients 
+[80] [81] [82] [83] [84] [85] [86] [87]
+Overfull \hbox (17.4486pt too wide) in paragraph at lines 5567--5567
+[][]\OT1/ptm/m/sc/12 Maximal op-er-a-tors of Vilenkin-Fej[]er means on mar-tin-
+gale Hardy spaces 
+[88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101]
+[102] [103] [104]
+Overfull \hbox (15.02466pt too wide) in paragraph at lines 6728--6728
+[][]\OT1/ptm/m/sc/12 Norm con-ver-gence of Vilenkin-Fej[]er means on mar-tin-ga
+le Hardy spaces 
+[105]
+Overfull \hbox (29.31253pt too wide) in paragraph at lines 6784--6785
+[]\OT1/ptm/m/it/12 We note that the asymp-totic be-haviour of the se-quence of 
+se-quence $[]$
+[106] [107] [108] [109] [110] [111] [112] [113] [114] [115] [116] [117]
+[118] [119] [120]
+Overfull \hbox (3.28638pt too wide) in paragraph at lines 7761--7771
+[]\OT1/ptm/m/n/12 M[]oricz and Sid-diqi [[]] in-ves-ti-gate the ap-prox-i-ma-ti
+on prop-er-ties of some spe-cial N[]orlund
+[121]
+Overfull \hbox (12.66295pt too wide) in paragraph at lines 7807--7811
+[]\OT1/ptm/m/it/12 a) The max-i-mal op-er-a-tor $\OML/cmm/m/it/12 t[]$ \OT1/ptm
+/m/it/12 of  the summa-bil-ity method (1.2[]) with non-decreasing
+[122] [123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133]
+[134] [135] [136] [137] [138] [139] [140] [141] [142] [143] [144] [145]
+[146] [147] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157]
+[158] [159] [160] [161] [162] [163] [164]
+
+! LaTeX Error: Invalid UTF-8 byte "F6.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10806 Sci. Budapest. E�
+                         tv�s Sect. Math. 31 (1988), 243--260.
+
+! LaTeX Error: Invalid UTF-8 byte "F6.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10806 Sci. Budapest. E�tv�
+                            s Sect. Math. 31 (1988), 243--260.
+[165] [166]
+
+! LaTeX Error: Invalid UTF-8 byte sequence (�r.).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10938 ..., (Russian) Bull. Acad. Sci. URSS. S�r.
+                                                   Math. 11, (1947), 363--400.
+
+! LaTeX Error: Invalid UTF-8 byte sequence (�no).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10961 ...--367, Bolyai Soc. Math. Stud., 5, J�no
+                                                  s Bolyai Math.
+[167]  [168] (./Ph.D._Thesis_of_G._Tephnadze.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cme
+xtra/cmex8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20260301/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></opt/homebrew/Cellar/texl
+ive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/202
+60301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/C
+ellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy6.pfb></opt/homebrew/Cellar/texlive/20260301/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></opt/homebrew/Cellar/t
+exlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
+></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/ams
+fonts/symbols/msbm10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dis
+t/fonts/type1/public/rsfs/rsfs10.pfb></opt/homebrew/Cellar/texlive/20260301/sha
+re/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></opt/homebrew/Cellar
+/texlive/20260301/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></opt/homeb
+rew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+
+Output written on Ph.D._Thesis_of_G._Tephnadze.pdf (168 pages, 675725 bytes).
+Transcript written on Ph.D._Thesis_of_G._Tephnadze.log.
+************************************
+** Labels in starred environments **
+************************************
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 1026: remove label n1 
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 1859: consider using a STAR environment
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 3221: consider using a STAR environment
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 3269: consider using a STAR environment
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 5049: consider using a STAR environment
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 6653: consider using a STAR environment
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 7135: consider using a STAR environment
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 7248: consider using a STAR environment
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 7344: consider using a STAR environment
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 7653: consider using a STAR environment
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 8388: consider using a STAR environment
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 9423: consider using a STAR environment
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 9530: consider using a STAR environment
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 9876: consider using a STAR environment
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 9985: consider using a STAR environment
+
+*******************
+** Unused Labels **
+*******************
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 10005: remove label 18y
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 10006: remove label 18y
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 10018: remove label 19y
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 10019: remove label 19y
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 1026: remove label n1
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 1027: remove label n1
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 10536: remove label corollaryae1
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 10611: remove label corollaryae2
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 10637: remove label corollaryae22a
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 10651: remove label theoremae3
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 1144: remove label star3
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 1145: remove label star3
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 1743: remove label lemma5b
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 1848: remove label nor2
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 1849: remove label nor2
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 1942: remove label corollary3n9
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 2587: remove label lemma2.3.7
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 3000: remove label 2aa
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 3001: remove label 2aa
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 3290: remove label remark2.5.1
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 3849: remove label theorem3.3
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 4096: remove label corollary4.2a
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 4106: remove label corollary4.2aa
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 4249: remove label corollary4.3a
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 4259: remove label corollary4.3aa
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 4572: remove label corollary4.44
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 4580: remove label corollary4.45
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 4617: remove label fnmn1partial
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 4618: remove label fnmn1partial
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 4721: remove label theorem4.6
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 4749: remove label theorem4.7
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 4846: remove label theorem4.8
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 4922: remove label theorem4.10
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 5110: remove label corollary3.1
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 5821: remove label corollary3fejermax1
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 5846: remove label corollary3fejermax1.2
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 5856: remove label corollary3fejermax1.3
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 6112: remove label corollary3fejermax1.2.2
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 6122: remove label corollary3fejermax1.3.2
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 6715: remove label Corollary0fejermax1
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 6774: remove label theorem4.7afejer
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 7051: remove label 10q
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 7052: remove label 10q
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 7359: remove label 9aa
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 7360: remove label 9aa
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 7417: remove label 10aaa
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 7418: remove label 10aaa
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 7507: remove label corollary1fejerstrong12
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 7544: remove label corollary1fejerstrong1
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 7685: remove label corollary1fejerstrong2
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 7948: remove label Remark2nor
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 8049: remove label Remark3nor
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 8135: remove label theorem2norlunda
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 8187: remove label corollary2norlunda
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 8326: remove label cond24
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 8327: remove label cond24
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 8467: remove label theorem2norlund1000
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 8874: remove label remark1nor111
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 9008: remove label corollary3fejermax1.5
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 9033: remove label corollary3fejermax1.2.5
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 9043: remove label corollary3fejermax1.3.5
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 9056: remove label Theorem1norin
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 9333: remove label Remark4nor
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 9456: remove label theorem1fejerstronga
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 9567: remove label Theorem2nor
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 9666: remove label Theorem3nor
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 9800: remove label theorem1r
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 9889: remove label 122y
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 9890: remove label 122y
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 9971: remove label theorem2nl
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 9998: remove label 17y
+-- Ph.D._Thesis_of_G._Tephnadze.tex line 9999: remove label 17y
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

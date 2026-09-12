@@ -1,0 +1,3 @@
+planted=thm:betadef__ghost sites=[('main.xtex', 78)]
+xtex new=[('XT1003', 'thm:betadef__ghost', 'main.xtex', 78)]
+texlab new=[]

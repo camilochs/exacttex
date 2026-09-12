@@ -1,0 +1,111 @@
+exit=2
+lines=834
+unique_findings=206
+ould enclose the previous parenthesis with `{}'.
+These formulas can be explained by viewing the unitary group $SU(2)$ as $SO(4)\cap GL(2,\C)$, i.e. as the group of orthogonal transformations with respect to a real scalar product of signature $(4,0)$ commuting with an orthogonal complex structure. A choice of a scalar product and a complex structure on even elements $\G_3^0$ then defines an Hermitian inner product on this space by a standard construction and thus defines an isomorphism \eqref{SUSpin}. In our case, the scalar product is given  by $(\varphi,\psi)=[\tilde{\varphi}\psi]_0$ and the complex structure $J$  is defined by $J\psi=\psi i\sigma_3=\psi \sigma_{1}\sigma_2$. Indeed, for such a choice  the Hermitian product \eqref{productH} is constructed as  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^
+Warning 2 in QCC_arxiv.tex line 764: Non-breaking space (`~') should have been used.
+These formulas can be explained by viewing the unitary group $SU(2)$ as $SO(4)\cap GL(2,\C)$, i.e. as the group of orthogonal transformations with respect to a real scalar product of signature $(4,0)$ commuting with an orthogonal complex structure. A choice of a scalar product and a complex structure on even elements $\G_3^0$ then defines an Hermitian inner product on this space by a standard construction and thus defines an isomorphism \eqref{SUSpin}. In our case, the scalar product is given  by $(\varphi,\psi)=[\tilde{\varphi}\psi]_0$ and the complex structure $J$  is defined by $J\psi=\psi i\sigma_3=\psi \sigma_{1}\sigma_2$. Indeed, for such a choice  the Hermitian product \eqref{productH} is constructed as  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+Warning 2 in QCC_arxiv.tex line 768: Non-breaking space (`~') should have been used.
+The action of Pauli matrices in $\G_3^0$  given by \eqref{PauliH} keep the scalar product invariant and commutes with the complex structure and thus keeps this Hermitian product invariant.  
+                                                  ^
+Warning 2 in QCC_arxiv.tex line 774: Non-breaking space (`~') should have been used.
+This point of view also allows to see the freedom of quaternionic representation of qubits. Namely, choosing a different complex structure or modifying the scalar product on $\G_3^0$ would lead to an isomorphism \eqref{SUSpin} different from \eqref{iso} leading to representations of computational basis, Hermitian product and Pauli matrices different from \eqref{basisH}, \eqref{productH} and \eqref{PauliH}.  
+                                                                                                                                                                                                                   ^
+Warning 2 in QCC_arxiv.tex line 774: Non-breaking space (`~') should have been used.
+This point of view also allows to see the freedom of quaternionic representation of qubits. Namely, choosing a different complex structure or modifying the scalar product on $\G_3^0$ would lead to an isomorphism \eqref{SUSpin} different from \eqref{iso} leading to representations of computational basis, Hermitian product and Pauli matrices different from \eqref{basisH}, \eqref{productH} and \eqref{PauliH}.  
+                                                                                                                                                                                                                                                 ^
+Warning 2 in QCC_arxiv.tex line 774: Non-breaking space (`~') should have been used.
+This point of view also allows to see the freedom of quaternionic representation of qubits. Namely, choosing a different complex structure or modifying the scalar product on $\G_3^0$ would lead to an isomorphism \eqref{SUSpin} different from \eqref{iso} leading to representations of computational basis, Hermitian product and Pauli matrices different from \eqref{basisH}, \eqref{productH} and \eqref{PauliH}.  
+                                                                                                                                                                                                                                                                                                                                                                    ^
+Warning 2 in QCC_arxiv.tex line 774: Non-breaking space (`~') should have been used.
+This point of view also allows to see the freedom of quaternionic representation of qubits. Namely, choosing a different complex structure or modifying the scalar product on $\G_3^0$ would lead to an isomorphism \eqref{SUSpin} different from \eqref{iso} leading to representations of computational basis, Hermitian product and Pauli matrices different from \eqref{basisH}, \eqref{productH} and \eqref{PauliH}.  
+                                                                                                                                                                                                                                                                                                                                                                                    ^
+Warning 2 in QCC_arxiv.tex line 774: Non-breaking space (`~') should have been used.
+This point of view also allows to see the freedom of quaternionic representation of qubits. Namely, choosing a different complex structure or modifying the scalar product on $\G_3^0$ would lead to an isomorphism \eqref{SUSpin} different from \eqref{iso} leading to representations of computational basis, Hermitian product and Pauli matrices different from \eqref{basisH}, \eqref{productH} and \eqref{PauliH}.  
+                                                                                                                                                                                                                                                                                                                                                                                                         ^
+Warning 25 in QCC_arxiv.tex line 781: You might wish to put this between a pair of `{}'
+Indeed, this element satisfies $E_nJ_k=E_nJ_\ell$ for all $k,\ell = 1,\dots, n$ and thus it defines a quotient space $\G_3^+\otimes\cdots\otimes\G_3^+/E_n$ with a complex structure $J_n=E_nJ_k=E_ni\sigma_3^k$. Multivectors belonging to this space can be regarded as $n$-qubit states.   
+                                  ^^
+Warning 25 in QCC_arxiv.tex line 781: You might wish to put this between a pair of `{}'
+Indeed, this element satisfies $E_nJ_k=E_nJ_\ell$ for all $k,\ell = 1,\dots, n$ and thus it defines a quotient space $\G_3^+\otimes\cdots\otimes\G_3^+/E_n$ with a complex structure $J_n=E_nJ_k=E_ni\sigma_3^k$. Multivectors belonging to this space can be regarded as $n$-qubit states.   
+                                         ^^
+Warning 25 in QCC_arxiv.tex line 781: You might wish to put this between a pair of `{}'
+Indeed, this element satisfies $E_nJ_k=E_nJ_\ell$ for all $k,\ell = 1,\dots, n$ and thus it defines a quotient space $\G_3^+\otimes\cdots\otimes\G_3^+/E_n$ with a complex structure $J_n=E_nJ_k=E_ni\sigma_3^k$. Multivectors belonging to this space can be regarded as $n$-qubit states.   
+                                                                                                                                                                                            ^^
+Warning 25 in QCC_arxiv.tex line 781: You might wish to put this between a pair of `{}'
+Indeed, this element satisfies $E_nJ_k=E_nJ_\ell$ for all $k,\ell = 1,\dots, n$ and thus it defines a quotient space $\G_3^+\otimes\cdots\otimes\G_3^+/E_n$ with a complex structure $J_n=E_nJ_k=E_ni\sigma_3^k$. Multivectors belonging to this space can be regarded as $n$-qubit states.   
+                                                                                                                                                                                                   ^^
+Warning 2 in QCC_arxiv.tex line 784: Non-breaking space (`~') should have been used.
+Another way how to describe states of a qubit by a real algebra is to transfer its complex representation described in section \ref{qubit_section} via the accidental isomorphism of real algebras  
+                                                                                                                              ^
+Warning 40 in QCC_arxiv.tex line 808: You should put punctuation outside inner math mode.
+where $a^0,a^1,a^2,a^3\in\R.$  
+                           ^
+Warning 2 in QCC_arxiv.tex line 813: Non-breaking space (`~') should have been used.
+The Hermitian inner product on $\G_3$ is given by the transition of the Hermitian product on $\C_2$ given by \eqref{HP} via isomorphism \eqref{isoC2G3}. Looking at the prescription of the isomorphism we see that the Hermitian conjugation of basis elements is mapped to the reverse of the corresponding images in $\G_3.$ Hence we have a particularly simple formula for the Hermitian product in this case, namely for two qubits $\varphi,\psi\in\G_3$ we have  
+                                                                                                            ^
+Warning 2 in QCC_arxiv.tex line 813: Non-breaking space (`~') should have been used.
+The Hermitian inner product on $\G_3$ is given by the transition of the Hermitian product on $\C_2$ given by \eqref{HP} via isomorphism \eqref{isoC2G3}. Looking at the prescription of the isomorphism we see that the Hermitian conjugation of basis elements is mapped to the reverse of the corresponding images in $\G_3.$ Hence we have a particularly simple formula for the Hermitian product in this case, namely for two qubits $\varphi,\psi\in\G_3$ we have  
+                                                                                                                                       ^
+Warning 40 in QCC_arxiv.tex line 813: You should put punctuation outside inner math mode.
+The Hermitian inner product on $\G_3$ is given by the transition of the Hermitian product on $\C_2$ given by \eqref{HP} via isomorphism \eqref{isoC2G3}. Looking at the prescription of the isomorphism we see that the Hermitian conjugation of basis elements is mapped to the reverse of the corresponding images in $\G_3.$ Hence we have a particularly simple formula for the Hermitian product in this case, namely for two qubits $\varphi,\psi\in\G_3$ we have  
+                                                                                                                                                                                                                                                                                                                             ^
+Warning 3 in QCC_arxiv.tex line 815: You should enclose the previous parenthesis with `{}'.
+\braket{\varphi|\psi}=[\tilde{\varphi}\psi]_0.  
+                                          ^
+Warning 2 in QCC_arxiv.tex line 817: Non-breaking space (`~') should have been used.
+Our formula for isomorphism \eqref{isoC2G3} yields also a particularly simple formula for the representation of Pauli matrices, namely  
+                           ^
+Warning 2 in QCC_arxiv.tex line 822: Non-breaking space (`~') should have been used.
+Although this real representation of a qubit is quite elegant, the representation of multiple qubits is as complicated as in the case of the quaternionic qubit  described in \ref{H_qubit}. Due to its reality we need to use a correlator to identify the multiplication by complex unite in each slot of the tensor product $\G_3\otimes\cdots\otimes\G_3$. Since this is a common feature of all real description of qubits we believe that the right way is to use the complex GA as described in section \ref{QCinC} above.   
+                                                                                                                                                                             ^
+Warning 2 in QCC_arxiv.tex line 822: Non-breaking space (`~') should have been used.
+Although this real representation of a qubit is quite elegant, the representation of multiple qubits is as complicated as in the case of the quaternionic qubit  described in \ref{H_qubit}. Due to its reality we need to use a correlator to identify the multiplication by complex unite in each slot of the tensor product $\G_3\otimes\cdots\otimes\G_3$. Since this is a common feature of all real description of qubits we believe that the right way is to use the complex GA as described in section \ref{QCinC} above.   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+Warning 12 in QCC_arxiv.tex line 826: Interword spacing (`\ ') should perhaps be used.
+\bibitem{qba1}  Alves, R., Hildenbrand, D., Hrdina, J. et al.: \emph{An Online Calculator for Quantum Computing Operations Based on Geometric Algebra} Adv. Appl. Clifford Algebras 32, 4 (2022)   
+                                                             ^
+Warning 12 in QCC_arxiv.tex line 828: Interword spacing (`\ ') should perhaps be used.
+\bibitem{bss2} Brackx F., De Schepper H.,  Sommen, F.: \emph{ The Hermitean Clifford analysis   toolbox.} Adv. appl. Clifford alg. 18 (3-4) 451-487 (2008)  
+                                                                                                              ^
+Warning 8 in QCC_arxiv.tex line 828: Wrong length of dash may have been used.
+\bibitem{bss2} Brackx F., De Schepper H.,  Sommen, F.: \emph{ The Hermitean Clifford analysis   toolbox.} Adv. appl. Clifford alg. 18 (3-4) 451-487 (2008)  
+                                                                                                                                        ^
+Warning 8 in QCC_arxiv.tex line 828: Wrong length of dash may have been used.
+\bibitem{bss2} Brackx F., De Schepper H.,  Sommen, F.: \emph{ The Hermitean Clifford analysis   toolbox.} Adv. appl. Clifford alg. 18 (3-4) 451-487 (2008)  
+                                                                                                                                               ^
+Warning 8 in QCC_arxiv.tex line 830: Wrong length of dash may have been used.
+\bibitem{bss} Brackx, F., De Schepper, H. and Souček, V.: \emph{On the Structure of Complex Clifford Algebra.} Adv. Appl. Clifford Algebras 21, 477-492 (2011).   
+                                                                                                                                                    ^
+Warning 8 in QCC_arxiv.tex line 834: Wrong length of dash may have been used.
+\bibitem{cm} Cafaro, C., Mancini, S.: \emph{A Geometric Algebra Perspective on Quantum Computational Gates and Universality in Quantum Computing} Adv. Appl. Clifford Algebras 21, 493-519 (2011)  
+                                                                                                                                                                                      ^
+Warning 8 in QCC_arxiv.tex line 836: Wrong length of dash may have been used.
+\bibitem{stev} De Keninck S.: \emph{Non-parametric Realtime Rendering of Subspace Objects in Arbitrary Geometric Algebras} Lect. Notes. Comput. Sci. 11542, 549-555 (2019)  
+                                                                                                                                                               ^
+Warning 8 in QCC_arxiv.tex line 840: Wrong length of dash may have been used.
+\bibitem{fs} Ferreira, M., Sommen, F.: \emph{ Complex Boosts: A Hermitian Clifford Algebra Approach.} Adv. Appl. Clifford Algebras 23, 339-362 (2013)  
+                                                                                                                                          ^
+Warning 8 in QCC_arxiv.tex line 842: Wrong length of dash may have been used.
+\bibitem{dita} Hadfield H., Hildenbrand D., Arsenovic A. \emph{ Gajit: Symbolic Optimisation and JIT Compilation of Geometric Algebra in Python with GAALOP and Numba} Lect. Notes Comput. Sci. 11542 499-510 (2019)      
+                                                                                                                                                                                                         ^
+Warning 8 in QCC_arxiv.tex line 844: Wrong length of dash may have been used.
+\bibitem{joan} Hadfield H, Wei L, Lasenby J.: \emph{The Forward and Inverse Kinematics of a Delta Robot} Lect. Notes. Comput. Sci. 12221 447-458 (2020)           
+                                                                                                                                            ^
+Warning 8 in QCC_arxiv.tex line 848: Wrong length of dash may have been used.
+Havel, T. F.; Doran, Ch. J.: \emph{Geometric algebra in quantum information processing} in Quantum computation and information 81-100, Contemp. Math. 305, Amer. Math. Soc. (2000)  
+                                                                                                                                 ^
+Warning 13 in QCC_arxiv.tex line 853: Intersentence spacing (`\@') should perhaps be used.
+Hildenbrand D., Franchini S., Gentile A., Vassallo G., Vitabile S.: \emph{GAPPCO: An Easy to Configure Geometric Algebra Coprocessor Based on GAPP Programs} Adv Appl Clifford Algebras 27(3) 2115-2132 (2017)   
+                                                                                ^
+Warning 8 in QCC_arxiv.tex line 853: Wrong length of dash may have been used.
+Hildenbrand D., Franchini S., Gentile A., Vassallo G., Vitabile S.: \emph{GAPPCO: An Easy to Configure Geometric Algebra Coprocessor Based on GAPP Programs} Adv Appl Clifford Algebras 27(3) 2115-2132 (2017)   
+                                                                                                                                                                                                  ^
+Warning 12 in QCC_arxiv.tex line 860: Interword spacing (`\ ') should perhaps be used.
+\bibitem{Lasenby1} Lasenby A. et al.: \emph{2-Spinors, Twistors and Supersymmetry in the Spacetime Algebra} in Z. Oziewicz et al., eds., Spinors, Twistors, Clifford Algebras and Quantum Deformations, Kluwer Academic (1993)  
+                                    ^
+Warning 8 in QCC_arxiv.tex line 867: Wrong length of dash may have been used.
+Physics Letters A, Volume 240, Issues 1–2, 1-7 (1998)  
+                                              ^

@@ -1,0 +1,146 @@
+exit=2
+lines=480
+unique_findings=139
+bb{E}_n[\vect{f}]\) and \(\vect{\mu}_\infty = \mathbb{E}_\infty[\vect{f}]\) are continuous since Banach spaces are closed under taking conditional expectation (see e.g. Proposition 1.10 from \cite{pisier2016martingalesbanach}). In fact, we have shown that they are a martingale of the form in Theorems 1.14 and 1.30 in \cite{pisier2016martingalesbanach}, and so \(\vect{\mu}_n \to \vect{\mu}_\infty\) almost surely and in \(L^p\). This is a convergence in the function space \(\mathcal{C}(\mathcal{X}, \mathbb{R}^M)\) using the supremum norm, which is equivalent to saying that the convergence of the processes is uniform. That is, \(\vect{\mu}_n \to \vect{\mu}_\infty\) uniformly, both almost surely and in \(L^p\) for any \(1 \leq p < \infty\).  
+                                                                                                                                                                                                                                                                                                                                                                                       ^
+Warning 3 in appendix.tex line 473: You should enclose the previous parenthesis with `{}'.
+We may use the same argument on the sequence of second moments of \(\vect{f}\) in the Banach space \(\mathcal{C}(\mathcal{X} \times \mathcal{X},\, \mathbb{R}^{M \times M})\). Let \(\matr{M}_n^{(2)}(\vect{x}, \vect{x}') = \mathbb{E}_n[\vect{f}(\vect{x}) \vect{f}(\vect{x}')^T]\) denote the second moments of \(\vect{f}\). The process \(\matr{F}^{(2)} \in \mathcal{C}(\mathcal{X} \times \mathcal{X},\, \mathbb{R}^{M \times M})\) defined by \(\matr{F}^{(2)}(\vect{x}, \vect{x'}) = \vect{f}(\vect{x})\vect{f}(\vect{x}')^T\) is \(L^p\)-integrable for all \(1 \leq p < \infty\) since  
+                                                                                                                                                                                                                                                                               ^
+Warning 3 in appendix.tex line 473: You should enclose the previous parenthesis with `{}'.
+We may use the same argument on the sequence of second moments of \(\vect{f}\) in the Banach space \(\mathcal{C}(\mathcal{X} \times \mathcal{X},\, \mathbb{R}^{M \times M})\). Let \(\matr{M}_n^{(2)}(\vect{x}, \vect{x}') = \mathbb{E}_n[\vect{f}(\vect{x}) \vect{f}(\vect{x}')^T]\) denote the second moments of \(\vect{f}\). The process \(\matr{F}^{(2)} \in \mathcal{C}(\mathcal{X} \times \mathcal{X},\, \mathbb{R}^{M \times M})\) defined by \(\matr{F}^{(2)}(\vect{x}, \vect{x'}) = \vect{f}(\vect{x})\vect{f}(\vect{x}')^T\) is \(L^p\)-integrable for all \(1 \leq p < \infty\) since  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+Warning 3 in appendix.tex line 476: You should enclose the previous parenthesis with `{}'.
+    = \mathbb{E}\biggl[ \Bigl( \sup_{\substack{\vect{x}, \vect{x}' \in \mathcal{X} \\ m, m' \in [M]}} |f_m(\vect{x})f_{m'}(\vect{x}')| \Bigr)^p\, \biggr]^{1/p} \\  
+                                                                                                                                            ^
+Warning 3 in appendix.tex line 476: You should enclose the previous parenthesis with `{}'.
+    = \mathbb{E}\biggl[ \Bigl( \sup_{\substack{\vect{x}, \vect{x}' \in \mathcal{X} \\ m, m' \in [M]}} |f_m(\vect{x})f_{m'}(\vect{x}')| \Bigr)^p\, \biggr]^{1/p} \\  
+                                                                                                                                                        ^
+Warning 3 in appendix.tex line 477: You should enclose the previous parenthesis with `{}'.
+    = \mathbb{E}\biggl[ \Bigl( \sup_{\vect{x} \in \mathcal{X},\, m \in [M]} |f_m(\vect{x})| \Bigr)^{2p} \biggr]^{1/p}  
+                                                                                                 ^
+Warning 3 in appendix.tex line 477: You should enclose the previous parenthesis with `{}'.
+    = \mathbb{E}\biggl[ \Bigl( \sup_{\vect{x} \in \mathcal{X},\, m \in [M]} |f_m(\vect{x})| \Bigr)^{2p} \biggr]^{1/p}  
+                                                                                                              ^
+Warning 2 in appendix.tex line 481: Non-breaking space (`~') should have been used.
+Therefore, we may again apply martingale convergence Theorems 1.14 and 1.30 from \cite{pisier2016martingalesbanach} to conclude that \(\matr{M}_n^{(2)} \to \matr{M}_\infty^{(2)}\) almost surely and in \(L^p\), where we have written \(\matr{M}_\infty^{(2)}(\vect{x}, \vect{x}') = \mathbb{E}_\infty[\vect{f}(\vect{x}) \vect{f}(\vect{x}')^T]\).  
+                                                                                ^
+Warning 3 in appendix.tex line 481: You should enclose the previous parenthesis with `{}'.
+Therefore, we may again apply martingale convergence Theorems 1.14 and 1.30 from \cite{pisier2016martingalesbanach} to conclude that \(\matr{M}_n^{(2)} \to \matr{M}_\infty^{(2)}\) almost surely and in \(L^p\), where we have written \(\matr{M}_\infty^{(2)}(\vect{x}, \vect{x}') = \mathbb{E}_\infty[\vect{f}(\vect{x}) \vect{f}(\vect{x}')^T]\).  
+                                                                                                                                                                                                                                                                                                                                              ^
+Warning 3 in appendix.tex line 483: You should enclose the previous parenthesis with `{}'.
+\[\forall n \in \mathbb{N}\cup\{\infty\}\; \forall \vect{x}, \vect{x}' \in \mathcal{X} \quad \matr{K}_n(\vect{x}, \vect{x}') = \matr{M}_n^{(2)}(\vect{x}, \vect{x}') - \vect{\mu}_n(\vect{x})\vect{\mu}_n(\vect{x}')^T,\]  
+                                                                                                                                                                                                                   ^
+Warning 24 in appendix.tex line 491: Delete this space to maintain correct pagereferences.
+\begin{lemma} \label{thm:app-const-sample-paths-k}  
+             ^
+Warning 8 in appendix.tex line 528: Wrong length of dash may have been used.
+    almost surely -- something made significantly easier by noting that \(W_{n, \vect{u}}\) is a Gaussian variable.  
+                  ^^
+Warning 3 in appendix.tex line 543: You should enclose the previous parenthesis with `{}'.
+        \mathrm{Var}_n[W_{n, \vect{u}}] &= \frac{( \vect{\lambda} \cdot [\vect{k}_{n, :, m}(\vect{u}, \vect{x}) - \vect{k}_{n, :, m}(\vect{x}_{n, \vect{\lambda}}^*, \vect{x})])^2}{k_{n, m, m}(\vect{x}, \vect{x}) + \sigma_m^2}.  
+                                                                                                                                                                               ^
+Warning 12 in appendix.tex line 553: Interword spacing (`\ ') should perhaps be used.
+    Further, \(\vect{\mu}_\infty\) is continuous and \(\mathcal{X}\) is compact. Therefore, there exists a negative, random variable \(a\) (not depending on \(n\)) such that, for sufficiently large \(n\), \(\mathbb{E}_n[W_{n, \vect{u}}] = \vect{\lambda} \cdot (\vect{\mu}_n(\vect{u}) - \vect{\mu}_n(\vect{x}_{n, \vect{\lambda}}^*)) > a\) almost surely. For example. take any \(a < \min \vect{\lambda} \cdot \vect{\mu}_\infty - \max \vect{\lambda} \cdot \vect{\mu}_\infty\).  
+                                                                                                                                                                                                                                                                                                                                                                             ^
+Warning 3 in appendix.tex line 556: You should enclose the previous parenthesis with `{}'.
+    By Equation~\eqref{eq:app-w-converges-in prob}, there exists a (random) subsequence \((n_j)_{j=0}^\infty\) such that the probabilities \(\mathbb{P}_{n_j}(W_{n_j, \vect{u}} > \delta) \to 0\) as \(j \to \infty\).  
+                                                                                              ^
+Warning 3 in appendix.tex line 558: You should enclose the previous parenthesis with `{}'.
+    Since \((k_{n,m,m}(\vect{x}, \vect{x}))_{n=1}^\infty\) is a decreasing sequence, we must then have \(\vect{\lambda} \cdot (\vect{k}_{n_j, :, m}(\vect{u}, \vect{x}) - \vect{k}_{n_j, :, m}(\vect{x}_{n_j, \vect{\lambda}}^*, \vect{x})) \to 0\) almost surely.  
+                                          ^
+Warning 24 in appendix.tex line 583: Delete this space to maintain correct pagereferences.
+\begin{lemma} \label{thm:app-const-sample-paths-f}  
+             ^
+Warning 13 in appendix.tex line 606: Intersentence spacing (`\@') should perhaps be used.
+Having shown that \(\vect{\mu}_\infty\) approximates \(\vect{f}\) up to a constant, we may now strengthen \cref{thm:app-cmokg-r-unif-zero-liminf}. This is not necessary for the proof of \cref{thm:app-consistency}, but does improve our understanding of the behavior of the MOKG.  
+                                                                                                                                                                                                                                                                                    ^
+Warning 24 in appendix.tex line 607: Delete this space to maintain correct pagereferences.
+\begin{corollary} \label{thm:app-cmokg-r-unif-zero}  
+                 ^
+Warning 24 in appendix.tex line 664: Delete this space to maintain correct pagereferences.
+\label{sec:experiment-details}  
+^
+Warning 3 in appendix.tex line 668: You should enclose the previous parenthesis with `{}'.
+Two families of test problem are presented, \(\vect{f}^*: [0, 1]^2 \to \mathbb{R}^2\). They are generated by sampling a GP for each objective for an example). In the first family, the objectives differ in their length scale, while in the second family they differ in the presence of additive, Gaussian observation noise. \cref{tab:app-test-problems} shows the hyper-parameters used for both GPs. \cref{fig:test-problem-lengthscales} and \cref{fig:test-problem-observationnoise} below show examples of a test problem from the first and second families respectively.  
+                                                               ^
+Warning 10 in appendix.tex line 668: Solo `)' found.
+Two families of test problem are presented, \(\vect{f}^*: [0, 1]^2 \to \mathbb{R}^2\). They are generated by sampling a GP for each objective for an example). In the first family, the objectives differ in their length scale, while in the second family they differ in the presence of additive, Gaussian observation noise. \cref{tab:app-test-problems} shows the hyper-parameters used for both GPs. \cref{fig:test-problem-lengthscales} and \cref{fig:test-problem-observationnoise} below show examples of a test problem from the first and second families respectively.  
+                                                                                                                                                            ^
+Warning 12 in appendix.tex line 668: Interword spacing (`\ ') should perhaps be used.
+Two families of test problem are presented, \(\vect{f}^*: [0, 1]^2 \to \mathbb{R}^2\). They are generated by sampling a GP for each objective for an example). In the first family, the objectives differ in their length scale, while in the second family they differ in the presence of additive, Gaussian observation noise. \cref{tab:app-test-problems} shows the hyper-parameters used for both GPs. \cref{fig:test-problem-lengthscales} and \cref{fig:test-problem-observationnoise} below show examples of a test problem from the first and second families respectively.  
+                                                                                                                                                                                                                                                                                                                                ^
+Warning 12 in appendix.tex line 668: Interword spacing (`\ ') should perhaps be used.
+Two families of test problem are presented, \(\vect{f}^*: [0, 1]^2 \to \mathbb{R}^2\). They are generated by sampling a GP for each objective for an example). In the first family, the objectives differ in their length scale, while in the second family they differ in the presence of additive, Gaussian observation noise. \cref{tab:app-test-problems} shows the hyper-parameters used for both GPs. \cref{fig:test-problem-lengthscales} and \cref{fig:test-problem-observationnoise} below show examples of a test problem from the first and second families respectively.  
+                                                                                                                                                                                                                                                                                                                                                                                                           ^
+Warning 3 in appendix.tex line 670: You should enclose the previous parenthesis with `{}'.
+When we sample the GP, we do not know the future locations at which the BO algorithm will try to sample it. To get around this, we sample each GP at 100 points, distributed over \([0, 1]^2\) using a scrambled, 2-dimensional Sobol' sequence. We then use the posterior mean of the GP after conditioning on these points, as the test function.  
+                                                                                                                                                                                         ^
+Warning 24 in appendix.tex line 674: Delete this space to maintain correct pagereferences.
+    \label{tab:app-test-problems}  
+   ^
+Warning 8 in appendix.tex line 703: Wrong length of dash may have been used.
+        \includegraphics[width=\textwidth]{images/test-problem-contour--lengthscales.pdf}  
+                                                                      ^^
+Warning 24 in appendix.tex line 705: Delete this space to maintain correct pagereferences.
+        \label{fig:test-problem-lengthscales-contour}  
+       ^
+Warning 8 in appendix.tex line 709: Wrong length of dash may have been used.
+        \includegraphics[width=\textwidth]{images/test-problem-pfront--lengthscales.pdf}  
+                                                                     ^^
+Warning 24 in appendix.tex line 711: Delete this space to maintain correct pagereferences.
+        \label{fig:test-problem-lengthscales-pfront}  
+       ^
+Warning 13 in appendix.tex line 713: Intersentence spacing (`\@') should perhaps be used.
+    \caption{An example from the first set of test problems generated as samples of a GP. Panel~(\subref*{fig:test-problem-lengthscales-contour}) shows how the first objective is made harder to learn by giving the GP a shorter length scale.  
+                                                                                        ^
+Warning 24 in appendix.tex line 717: Delete this space to maintain correct pagereferences.
+    \label{fig:test-problem-lengthscales}  
+   ^
+Warning 8 in appendix.tex line 725: Wrong length of dash may have been used.
+        \includegraphics[width=\textwidth]{images/test-problem-contour--observationnoise.pdf}  
+                                                                      ^^
+Warning 24 in appendix.tex line 727: Delete this space to maintain correct pagereferences.
+        \label{fig:test-problem-observationnoise-contour}  
+       ^
+Warning 8 in appendix.tex line 731: Wrong length of dash may have been used.
+        \includegraphics[width=\textwidth]{images/test-problem-pfront--observationnoise.pdf}  
+                                                                     ^^
+Warning 24 in appendix.tex line 733: Delete this space to maintain correct pagereferences.
+        \label{fig:test-problem-observationnoise-pfront}  
+       ^
+Warning 13 in appendix.tex line 735: Intersentence spacing (`\@') should perhaps be used.
+    \caption{An example from the second set of test problems generated as samples of a GP. Panel~(\subref*{fig:test-problem-observationnoise-contour}) shows that both objectives have the same length scale. Instead, the first objective is made harder-to-learn by adding observation noise when sampling.  
+                                                                                         ^
+Warning 24 in appendix.tex line 738: Delete this space to maintain correct pagereferences.
+    \label{fig:test-problem-observationnoise}  
+   ^
+Warning 13 in appendix.tex line 745: Intersentence spacing (`\@') should perhaps be used.
+Before fitting the GP, the observations are standardized to have zero mean and unit variance. This is a common trick used for real-world problems where the prior distributions must be specified based on the data. The reverse transformation is applied when making predictions with the GP.  
+                                                                                                                                                                                                                                                                                              ^
+Warning 12 in appendix.tex line 760: Interword spacing (`\ ') should perhaps be used.
+As explained in the main text, information on which objective has the shorter length scale is included in the prior distributions used for the first family of test problems. Conversely, the priors on the length scales of the objectives in the second problem are identical. \cref{fig:app-lengthscale-priors--family-1,fig:app-lengthscale-priors--family-2} show the prior distributions on the length scales used to model the two families of test problems.  
+                                                                                                                                                                                                                                                                                ^
+Warning 8 in appendix.tex line 766: Wrong length of dash may have been used.
+    \includegraphics[width=0.7\textwidth]{images/lengthscale-priors--lengthscales.pdf}  
+                                                                   ^^
+Warning 24 in appendix.tex line 768: Delete this space to maintain correct pagereferences.
+    \label{fig:app-lengthscale-priors--family-1}  
+   ^
+Warning 8 in appendix.tex line 772: Wrong length of dash may have been used.
+    \includegraphics[width=0.7\textwidth]{images/lengthscale-priors--observationnoise.pdf}  
+                                                                   ^^
+Warning 24 in appendix.tex line 774: Delete this space to maintain correct pagereferences.
+    \label{fig:app-lengthscale-priors--family-2}  
+   ^
+Warning 24 in appendix.tex line 779: Delete this space to maintain correct pagereferences.
+    \label{tab:app-surrogate-hyperparameters--family-1}  
+   ^
+Warning 24 in appendix.tex line 803: Delete this space to maintain correct pagereferences.
+    \label{tab:app-surrogate-hyperparameters--family-2}  
+   ^
+Warning 17 in paper.tex line 586: Number of `(' doesn't match the number of `)'!
+
+
+Warning 17 in paper.tex line 586: Number of `[' doesn't match the number of `]'!
+
+

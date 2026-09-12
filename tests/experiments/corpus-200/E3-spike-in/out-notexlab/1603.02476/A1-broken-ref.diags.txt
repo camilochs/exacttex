@@ -1,0 +1,3 @@
+planted=testbed__ghost sites=[('EHFS.xtex', 152)]
+xtex new=[('XT1003', 'testbed__ghost', 'EHFS.xtex', 152)]
+texlab new=[]

@@ -1,0 +1,24 @@
+tectonic pdf bytes=89876
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=[] secs=2
+ness 10000) in paragraph at lines 79--82
+warning: uniquely_remotal_in_l_1.tex:85: Overfull \hbox (9.30573pt too wide) in paragraph at lines 84--85
+warning: uniquely_remotal_in_l_1.tex:85: Underfull \hbox (badness 10000) in paragraph at lines 84--85
+warning: uniquely_remotal_in_l_1.tex:132: Underfull \hbox (badness 10000) in paragraph at lines 131--132
+warning: uniquely_remotal_in_l_1.tex:134: Underfull \hbox (badness 10000) in paragraph at lines 133--134
+warning: uniquely_remotal_in_l_1.tex:142: Underfull \hbox (badness 10000) in paragraph at lines 141--142
+warning: uniquely_remotal_in_l_1.tex:144: Underfull \hbox (badness 10000) in paragraph at lines 143--144
+warning: uniquely_remotal_in_l_1.tex:146: Underfull \hbox (badness 10000) in paragraph at lines 145--146
+warning: uniquely_remotal_in_l_1.tex:148: Underfull \hbox (badness 10000) in paragraph at lines 147--148
+warning: uniquely_remotal_in_l_1.tex:150: Underfull \hbox (badness 10000) in paragraph at lines 149--150
+warning: uniquely_remotal_in_l_1.tex:152: Underfull \hbox (badness 10000) in paragraph at lines 151--152
+warning: uniquely_remotal_in_l_1.tex:161: Underfull \hbox (badness 10000) in paragraph at lines 160--161
+warning: uniquely_remotal_in_l_1.tex:163: Underfull \hbox (badness 10000) in paragraph at lines 162--163
+warning: uniquely_remotal_in_l_1.tex:165: Underfull \hbox (badness 10000) in paragraph at lines 164--165
+warning: uniquely_remotal_in_l_1.tex:169: Underfull \hbox (badness 10000) in paragraph at lines 168--169
+warning: uniquely_remotal_in_l_1.tex:222: Missing character: There is no ^^96 (U+0096) in font [lmroman10-regular]:mapping=tex-text;!
+warning: could not represent character "" (0x96) in font "[lmroman10-regular]:mapping=tex-text;"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

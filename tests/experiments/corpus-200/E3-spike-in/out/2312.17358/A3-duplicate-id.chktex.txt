@@ -1,0 +1,123 @@
+exit=2
+lines=381
+unique_findings=83
+either `` or '' as an alternative to `"'.
+\bibitem{model}Mehran Alidoost Nia, "A Model-Driven Approach to Runtime Verification of Self-Adaptive Systems," Presented as a Contributed Talk in the Scottish Programming Languages and Verification Summer School (SPLV 2020), 2020.  
+                                    ^
+Warning 18 in sample-sigplan.tex line 351: Use either `` or '' as an alternative to `"'.
+\bibitem{model}Mehran Alidoost Nia, "A Model-Driven Approach to Runtime Verification of Self-Adaptive Systems," Presented as a Contributed Talk in the Scottish Programming Languages and Verification Summer School (SPLV 2020), 2020.  
+                                                                                                              ^
+Warning 18 in sample-sigplan.tex line 353: Use either `` or '' as an alternative to `"'.
+\bibitem{rep2} Mehran Alidoost Nia, "A Random Walk-Based Pattern-Matching Simulator for Verification of Incomplete Markov Models," 2020.  
+                                    ^
+Warning 18 in sample-sigplan.tex line 353: Use either `` or '' as an alternative to `"'.
+\bibitem{rep2} Mehran Alidoost Nia, "A Random Walk-Based Pattern-Matching Simulator for Verification of Incomplete Markov Models," 2020.  
+                                                                                                                                 ^
+Warning 18 in sample-sigplan.tex line 355: Use either `` or '' as an alternative to `"'.
+\bibitem{newgen} Mehran Alidoost Nia, Behnam Bahrak, Mehdi Kargahi, and Benjamin Fabian, "Detecting new generations of threats using attribute-based attack graphs," IET Inf. Secur., 13: 293-303, 2019, https://doi.org/10.1049/iet-ifs.2018.5409  
+                                                                                         ^
+Warning 18 in sample-sigplan.tex line 355: Use either `` or '' as an alternative to `"'.
+\bibitem{newgen} Mehran Alidoost Nia, Behnam Bahrak, Mehdi Kargahi, and Benjamin Fabian, "Detecting new generations of threats using attribute-based attack graphs," IET Inf. Secur., 13: 293-303, 2019, https://doi.org/10.1049/iet-ifs.2018.5409  
+                                                                                                                                                                   ^
+Warning 8 in sample-sigplan.tex line 355: Wrong length of dash may have been used.
+\bibitem{newgen} Mehran Alidoost Nia, Behnam Bahrak, Mehdi Kargahi, and Benjamin Fabian, "Detecting new generations of threats using attribute-based attack graphs," IET Inf. Secur., 13: 293-303, 2019, https://doi.org/10.1049/iet-ifs.2018.5409  
+                                                                                                                                                                                             ^
+Warning 18 in sample-sigplan.tex line 357: Use either `` or '' as an alternative to `"'.
+\bibitem{secself} Mehran Alidoost Nia, "How to deal with security hazards in IoT? A self-adaptive solution to IoT applications," Am J Compt Sci Inform Technol, 2018.  
+                                       ^
+Warning 13 in sample-sigplan.tex line 357: Intersentence spacing (`\@') should perhaps be used.
+\bibitem{secself} Mehran Alidoost Nia, "How to deal with security hazards in IoT? A self-adaptive solution to IoT applications," Am J Compt Sci Inform Technol, 2018.  
+                                                                                ^
+Warning 18 in sample-sigplan.tex line 357: Use either `` or '' as an alternative to `"'.
+\bibitem{secself} Mehran Alidoost Nia, "How to deal with security hazards in IoT? A self-adaptive solution to IoT applications," Am J Compt Sci Inform Technol, 2018.  
+                                                                                                                               ^
+Warning 18 in sample-sigplan.tex line 359: Use either `` or '' as an alternative to `"'.
+\bibitem{similarity} Mehran Alidoost Nia, Reza Ebrahimi Atani, Benjamin Fabian, and Eduard Babulak, "On detecting unidentified network traffic using pattern-based random walk," Security Comm. Networks, 9: 3509–3526, 2016, doi: 10.1002/sec.1557.  
+                                                                                                    ^
+Warning 18 in sample-sigplan.tex line 359: Use either `` or '' as an alternative to `"'.
+\bibitem{similarity} Mehran Alidoost Nia, Reza Ebrahimi Atani, Benjamin Fabian, and Eduard Babulak, "On detecting unidentified network traffic using pattern-based random walk," Security Comm. Networks, 9: 3509–3526, 2016, doi: 10.1002/sec.1557.  
+                                                                                                                                                                               ^
+Warning 18 in sample-sigplan.tex line 361: Use either `` or '' as an alternative to `"'.
+\bibitem{runsec} Mehran Alidoost Nia, Seyed Kamyar Kiaei, Reza Ebrahimi Atani, and Benjamin Fabian, "A software solution for realtime malware detection in distributed systems," 2015 12th International Iranian Society of Cryptology Conference on Information Security and Cryptology (ISCISC), Rasht, Iran, 2015, pp. 144-149, doi: 10.1109/ISCISC.2015.7387913.  
+                                                                                                    ^
+Warning 18 in sample-sigplan.tex line 361: Use either `` or '' as an alternative to `"'.
+\bibitem{runsec} Mehran Alidoost Nia, Seyed Kamyar Kiaei, Reza Ebrahimi Atani, and Benjamin Fabian, "A software solution for realtime malware detection in distributed systems," 2015 12th International Iranian Society of Cryptology Conference on Information Security and Cryptology (ISCISC), Rasht, Iran, 2015, pp. 144-149, doi: 10.1109/ISCISC.2015.7387913.  
+                                                                                                                                                                               ^
+Warning 8 in sample-sigplan.tex line 361: Wrong length of dash may have been used.
+\bibitem{runsec} Mehran Alidoost Nia, Seyed Kamyar Kiaei, Reza Ebrahimi Atani, and Benjamin Fabian, "A software solution for realtime malware detection in distributed systems," 2015 12th International Iranian Society of Cryptology Conference on Information Security and Cryptology (ISCISC), Rasht, Iran, 2015, pp. 144-149, doi: 10.1109/ISCISC.2015.7387913.  
+                                                                                                                                                                                                                                                                                                                             ^
+Warning 18 in sample-sigplan.tex line 363: Use either `` or '' as an alternative to `"'.
+\bibitem{ML-sdlc2} R. Kapur and B. Sodhi, "Towards a Knowledge Warehouse and Expert System for the Automation of SDLC Tasks," 2019 IEEE/ACM International Conference on Software and System Processes (ICSSP), Montreal, QC, Canada, 2019, pp. 5-8, doi: 10.1109/ICSSP.2019.00011.  
+                                          ^
+Warning 18 in sample-sigplan.tex line 363: Use either `` or '' as an alternative to `"'.
+\bibitem{ML-sdlc2} R. Kapur and B. Sodhi, "Towards a Knowledge Warehouse and Expert System for the Automation of SDLC Tasks," 2019 IEEE/ACM International Conference on Software and System Processes (ICSSP), Montreal, QC, Canada, 2019, pp. 5-8, doi: 10.1109/ICSSP.2019.00011.  
+                                                                                                                            ^
+Warning 8 in sample-sigplan.tex line 363: Wrong length of dash may have been used.
+\bibitem{ML-sdlc2} R. Kapur and B. Sodhi, "Towards a Knowledge Warehouse and Expert System for the Automation of SDLC Tasks," 2019 IEEE/ACM International Conference on Software and System Processes (ICSSP), Montreal, QC, Canada, 2019, pp. 5-8, doi: 10.1109/ICSSP.2019.00011.  
+                                                                                                                                                                                                                                                ^
+Warning 18 in sample-sigplan.tex line 365: Use either `` or '' as an alternative to `"'.
+\bibitem{sec-sdlc5}R. A. Khan, S. U. Khan, H. U. Khan and M. Ilyas, "Systematic Mapping Study on Security Approaches in Secure Software Engineering," in IEEE Access, vol. 9, pp. 19139-19160, 2021, doi: 10.1109/ACCESS.2021.3052311.  
+                                                                    ^
+Warning 18 in sample-sigplan.tex line 365: Use either `` or '' as an alternative to `"'.
+\bibitem{sec-sdlc5}R. A. Khan, S. U. Khan, H. U. Khan and M. Ilyas, "Systematic Mapping Study on Security Approaches in Secure Software Engineering," in IEEE Access, vol. 9, pp. 19139-19160, 2021, doi: 10.1109/ACCESS.2021.3052311.  
+                                                                                                                                                    ^
+Warning 8 in sample-sigplan.tex line 365: Wrong length of dash may have been used.
+\bibitem{sec-sdlc5}R. A. Khan, S. U. Khan, H. U. Khan and M. Ilyas, "Systematic Mapping Study on Security Approaches in Secure Software Engineering," in IEEE Access, vol. 9, pp. 19139-19160, 2021, doi: 10.1109/ACCESS.2021.3052311.  
+                                                                                                                                                                                       ^
+Warning 18 in sample-sigplan.tex line 369: Use either `` or '' as an alternative to `"'.
+\bibitem{privacy}Mehran Alidoost Nia, Reza Ebrahimi Atani, and Antonio Ruiz-Martínez, "Privacy enhancement in anonymous network channels using multimodality injection," Security Comm. Networks, 8: 2917–2932, 2015, doi: 10.1002/sec.1219.  
+                                                                                       ^
+Warning 18 in sample-sigplan.tex line 369: Use either `` or '' as an alternative to `"'.
+\bibitem{privacy}Mehran Alidoost Nia, Reza Ebrahimi Atani, and Antonio Ruiz-Martínez, "Privacy enhancement in anonymous network channels using multimodality injection," Security Comm. Networks, 8: 2917–2932, 2015, doi: 10.1002/sec.1219.  
+                                                                                                                                                                        ^
+Warning 18 in sample-sigplan.tex line 371: Use either `` or '' as an alternative to `"'.
+\bibitem{analytical} Mehran Alidoost Nia, Eduard Babulak, Benjamin Fabian, and Reza Ebrahimi Atani, "An Analytical Perspective to Traffic Engineering in Anonymous Communication Systems," 2016 Progress in Computer Sciences and Information Technology International Conference (PROCSIT), At Langkawi Island, Kedah, Malaysia, 2016.  
+                                                                                                    ^
+Warning 18 in sample-sigplan.tex line 371: Use either `` or '' as an alternative to `"'.
+\bibitem{analytical} Mehran Alidoost Nia, Eduard Babulak, Benjamin Fabian, and Reza Ebrahimi Atani, "An Analytical Perspective to Traffic Engineering in Anonymous Communication Systems," 2016 Progress in Computer Sciences and Information Technology International Conference (PROCSIT), At Langkawi Island, Kedah, Malaysia, 2016.  
+                                                                                                                                                                                         ^
+Warning 18 in sample-sigplan.tex line 373: Use either `` or '' as an alternative to `"'.
+\bibitem{sdlc8} Singh, A., Kaur, P.J. (2019), "Analysis of Software Development Life Cycle Models," In: Nath, V., Mandal, J. (eds) Proceeding of the Second International Conference on Microelectronics, Computing \& Communication Systems (MCCS 2017). Lecture Notes in Electrical Engineering, vol 476. Springer, Singapore, 2019. https://doi.org/10.1007/978-981-10-8234-4\_55  
+                                              ^
+Warning 18 in sample-sigplan.tex line 373: Use either `` or '' as an alternative to `"'.
+\bibitem{sdlc8} Singh, A., Kaur, P.J. (2019), "Analysis of Software Development Life Cycle Models," In: Nath, V., Mandal, J. (eds) Proceeding of the Second International Conference on Microelectronics, Computing \& Communication Systems (MCCS 2017). Lecture Notes in Electrical Engineering, vol 476. Springer, Singapore, 2019. https://doi.org/10.1007/978-981-10-8234-4\_55  
+                                                                                                  ^
+Warning 12 in sample-sigplan.tex line 373: Interword spacing (`\ ') should perhaps be used.
+\bibitem{sdlc8} Singh, A., Kaur, P.J. (2019), "Analysis of Software Development Life Cycle Models," In: Nath, V., Mandal, J. (eds) Proceeding of the Second International Conference on Microelectronics, Computing \& Communication Systems (MCCS 2017). Lecture Notes in Electrical Engineering, vol 476. Springer, Singapore, 2019. https://doi.org/10.1007/978-981-10-8234-4\_55  
+                                                                                                                                                                                                                                                                                                                                      ^
+Warning 8 in sample-sigplan.tex line 373: Wrong length of dash may have been used.
+\bibitem{sdlc8} Singh, A., Kaur, P.J. (2019), "Analysis of Software Development Life Cycle Models," In: Nath, V., Mandal, J. (eds) Proceeding of the Second International Conference on Microelectronics, Computing \& Communication Systems (MCCS 2017). Lecture Notes in Electrical Engineering, vol 476. Springer, Singapore, 2019. https://doi.org/10.1007/978-981-10-8234-4\_55  
+                                                                                                                                                                                                                                                                                                                                                                  ^
+Warning 8 in sample-sigplan.tex line 373: Wrong length of dash may have been used.
+\bibitem{sdlc8} Singh, A., Kaur, P.J. (2019), "Analysis of Software Development Life Cycle Models," In: Nath, V., Mandal, J. (eds) Proceeding of the Second International Conference on Microelectronics, Computing \& Communication Systems (MCCS 2017). Lecture Notes in Electrical Engineering, vol 476. Springer, Singapore, 2019. https://doi.org/10.1007/978-981-10-8234-4\_55  
+                                                                                                                                                                                                                                                                                                                                                                      ^
+Warning 8 in sample-sigplan.tex line 373: Wrong length of dash may have been used.
+\bibitem{sdlc8} Singh, A., Kaur, P.J. (2019), "Analysis of Software Development Life Cycle Models," In: Nath, V., Mandal, J. (eds) Proceeding of the Second International Conference on Microelectronics, Computing \& Communication Systems (MCCS 2017). Lecture Notes in Electrical Engineering, vol 476. Springer, Singapore, 2019. https://doi.org/10.1007/978-981-10-8234-4\_55  
+                                                                                                                                                                                                                                                                                                                                                                         ^
+Warning 8 in sample-sigplan.tex line 373: Wrong length of dash may have been used.
+\bibitem{sdlc8} Singh, A., Kaur, P.J. (2019), "Analysis of Software Development Life Cycle Models," In: Nath, V., Mandal, J. (eds) Proceeding of the Second International Conference on Microelectronics, Computing \& Communication Systems (MCCS 2017). Lecture Notes in Electrical Engineering, vol 476. Springer, Singapore, 2019. https://doi.org/10.1007/978-981-10-8234-4\_55  
+                                                                                                                                                                                                                                                                                                                                                                              ^
+Warning 18 in sample-sigplan.tex line 375: Use either `` or '' as an alternative to `"'.
+\bibitem{sec-sdlc4} R. Fujdiak et al., "Managing the Secure Software Development," 2019 10th IFIP International Conference on New Technologies, Mobility and Security (NTMS), Canary Islands, Spain, 2019, pp. 1-4, doi: 10.1109/NTMS.2019.8763845.  
+                                       ^
+Warning 18 in sample-sigplan.tex line 375: Use either `` or '' as an alternative to `"'.
+\bibitem{sec-sdlc4} R. Fujdiak et al., "Managing the Secure Software Development," 2019 10th IFIP International Conference on New Technologies, Mobility and Security (NTMS), Canary Islands, Spain, 2019, pp. 1-4, doi: 10.1109/NTMS.2019.8763845.  
+                                                                                 ^
+Warning 8 in sample-sigplan.tex line 375: Wrong length of dash may have been used.
+\bibitem{sec-sdlc4} R. Fujdiak et al., "Managing the Secure Software Development," 2019 10th IFIP International Conference on New Technologies, Mobility and Security (NTMS), Canary Islands, Spain, 2019, pp. 1-4, doi: 10.1109/NTMS.2019.8763845.  
+                                                                                                                                                                                                                ^
+Warning 18 in sample-sigplan.tex line 377: Use either `` or '' as an alternative to `"'.
+\bibitem{sdlc10} T. Saravanan, S. Jha, G. Sabharwal and S. Narayan, "Comparative Analysis of Software Life Cycle Models," 2020 2nd International Conference on Advances in Computing, Communication Control and Networking (ICACCCN), Greater Noida, India, 2020, pp. 906-909, doi: 10.1109/ICACCCN51052.2020.9362931.  
+                                                                    ^
+Warning 18 in sample-sigplan.tex line 377: Use either `` or '' as an alternative to `"'.
+\bibitem{sdlc10} T. Saravanan, S. Jha, G. Sabharwal and S. Narayan, "Comparative Analysis of Software Life Cycle Models," 2020 2nd International Conference on Advances in Computing, Communication Control and Networking (ICACCCN), Greater Noida, India, 2020, pp. 906-909, doi: 10.1109/ICACCCN51052.2020.9362931.  
+                                                                                                                        ^
+Warning 8 in sample-sigplan.tex line 377: Wrong length of dash may have been used.
+\bibitem{sdlc10} T. Saravanan, S. Jha, G. Sabharwal and S. Narayan, "Comparative Analysis of Software Life Cycle Models," 2020 2nd International Conference on Advances in Computing, Communication Control and Networking (ICACCCN), Greater Noida, India, 2020, pp. 906-909, doi: 10.1109/ICACCCN51052.2020.9362931.  
+                                                                                                                                                                                                                                                                         ^
+Warning 24 in sample-sigplan.tex line 397: Delete this space to maintain correct pagereferences.
+\label{tab:metrics}  
+^
+Warning 17 in sample-sigplan.tex line 424: Number of `(' doesn't match the number of `)'!
+
+

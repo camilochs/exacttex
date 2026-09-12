@@ -1,0 +1,70 @@
+{
+ "paper": "1603.01192",
+ "main": "QIAW_ArXiv.tex",
+ "files": [
+  {
+   "file": "QIAW_ArXiv.tex",
+   "chars_before": 54980,
+   "chars_after": 54929,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 54980,
+ "chars_after": 54929,
+ "delta_pct": -0.09276100400145508,
+ "unrepaired": {
+  "chars_after": 54929,
+  "chars_before": 54980,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.020736,
+  "bibliography": {
+   "state": "complete",
+   "entries": 37
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.09276100400145508
+ },
+ "stats": {
+  "cite_cmds_live": 39,
+  "cite_keys_live": 50,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 3,
+  "other_cite_cmds": 0,
+  "labels_live": 17,
+  "labels_outside_grammar": 0,
+  "refs_live": 62,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 8,
+  "cite_cmds_annotated": 36,
+  "cite_keys_annotated": 44,
+  "ids_annotated": 17,
+  "refs_annotated": 62,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.020736,
+ "bibliography": {
+  "state": "complete",
+  "entries": 37
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

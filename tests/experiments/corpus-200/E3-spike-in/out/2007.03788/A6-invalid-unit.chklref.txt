@@ -1,0 +1,522 @@
+pdf=0
+exit=0
+lines=1871
+unique_findings=12
+rew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/gettitlestr
+ing/gettitlestring.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/stringenc/s
+tringenc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/pd1e
+nc.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/intcalc/int
+calc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/puen
+c.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bitset/bits
+et.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bigintcalc/
+bigintcalc.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hpdf
+tex.def
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/rerunfilechec
+k/rerunfilecheck.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/uniquecount
+er/uniquecounter.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/preprint/auth
+blk.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/footmisc/foot
+misc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/fancyhdr/fanc
+yhdr.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/alphalph/al
+phalph.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/abstract/abst
+ract.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/enumitem/enum
+item.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/quoting/quoti
+ng.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/sttools/stflo
+ats.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/booktabs/book
+tabs.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/tabular
+x.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/capti
+on.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/capti
+on3.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/natbib/natbib
+.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/siunitx/siuni
+tx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/translations/
+translations.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amste
+xt.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsge
+n.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/float/float.s
+ty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/merriweather/
+T1Merriwthr-OsF.fd) (./clintraj.aux)
+
+Package microtype Warning: Unable to apply patch `footnote' on input line 60.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(./clintraj.out) (./clintraj.out)
+
+LaTeX Font Warning: Font shape `T1/Merriwthr-OsF/m/up' undefined
+(Font)              using `T1/Merriwthr-OsF/m/n' instead on input line 60.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/ueur
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/microtype/mt-
+eur.cfg)
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 60.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/ueuf
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/microtype/mt-
+euf.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/ueus
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/microtype/mt-
+eus.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/ueue
+x.fd)
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <7.5> not available
+(Font)              size <7> substituted on input line 60.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/translations/
+translations-basic-dictionary-english.trsl)
+TextBlockOrigin set to 4pc+6.64pt x 4pc+6pt
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <13> not available
+(Font)              size <12> substituted on input line 72.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <13> not available
+(Font)              size <12> substituted on input line 72.
+
+
+Overfull \hbox (54.64pt too wide) in paragraph at lines 72--72
+[][][] 
+
+Overfull \hbox (54.64pt too wide) in paragraph at lines 72--72
+[][][] 
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/merriweather/
+TS1Merriwthr-OsF.fd)
+
+LaTeX Warning: Reference `mdf@pagelabel-1' on page 1 undefined on input line 81
+.
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   q
+l.93 ...s[width=3qm]{Diabetes_Analysis_lowres.png}
+                                                  \caption{Planted figure}\e...
+
+
+! Package calc Error: `q' invalid at this point.
+
+See the calc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.93 ...s[width=3qm]{Diabetes_Analysis_lowres.png}
+                                                  \caption{Planted figure}\e...
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   q
+l.93 ...s[width=3qm]{Diabetes_Analysis_lowres.png}
+                                                  \caption{Planted figure}\e...
+
+
+! Package calc Error: `q' invalid at this point.
+
+See the calc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.93 ...s[width=3qm]{Diabetes_Analysis_lowres.png}
+                                                  \caption{Planted figure}\e...
+
+
+Overfull \hbox (84.39188pt too wide) in paragraph at lines 93--93
+ []\T1/Merriwthr-OsF/m/n/7.5 (-20) m!m![] 
+! Extra }, or forgotten \endgroup.
+\@endfloatbox ...pagefalse \outer@nobreak \egroup 
+                                                  \color@endbox 
+l.93 ...s.png}\caption{Planted figure}\end{figure}
+                                                  
+! Extra }, or forgotten \endgroup.
+\color@endbox ->\color@endgroup \egroup 
+                                        
+l.93 ...s.png}\caption{Planted figure}\end{figure}
+                                                  
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lm/t1lmtt.fd)
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--115
+|\T1/Merriwthr-OsF/b/n/10 (+20) Data De-scrip-tion|
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--119
+|\T1/Merriwthr-OsF/b/n/8.5 (+20) Complications of my-ocar-dial in-farc-tion dat
+abase|
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.129 \begin{table*}[bt!]
+                         
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--195
+|\T1/Merriwthr-OsF/b/n/8.5 (+20) Diabetes read-mis-sion data set|
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--202
+|\T1/Merriwthr-OsF/b/n/10 (+20) Analyses|
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--204
+|\T1/Merriwthr-OsF/b/n/8.5 (+20) ClinTrajan pack-age for tra-jec-tory in-
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--204
+\T1/Merriwthr-OsF/b/n/8.5 (+20) fer-ence in large clin-i-cal datasets|
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--218
+|\T1/Merriwthr-OsF/b/n/8.5 (+20) Myocardial in-farc-tion com-pli-ca-tions case 
+study|
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--221
+\T1/Merriwthr-OsF/b/it/7.5 (+20) ues|
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--229
+|\T1/Merriwthr-OsF/b/it/7.5 (+20) Constructing elas-tic prin-ci-pal tree|
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.242 \begin{figure*}[bt!]
+                           %% preferably at bottom or top of column
+
+Underfull \hbox (badness 10000) in paragraph at lines 249--249
+|\T1/Merriwthr-OsF/b/it/7.5 (+20) Assigning data point classes|
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.257 \begin{figure}[bt!]
+                          %% preferably at bottom or top of column
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--267
+\T1/Merriwthr-OsF/b/it/7.5 (+20) ments|
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.273 \begin{figure*}[bt!]
+                           %% preferably at bottom or top of column
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
+|\T1/Merriwthr-OsF/b/it/7.5 (+20) Analysis of clin-i-cal tra-jec-to-ries and ps
+eu-do-time|
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.287 \begin{figure*}[p]
+                         %% preferably at bottom or top of column
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.299 \begin{figure*}[bt!]
+                          
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--306
+|\T1/Merriwthr-OsF/b/it/7.5 (+20) Predicting sur-vival and lethal risk fac-tors
+|
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.316 \begin{figure*}[bt!]
+                          
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--326
+|\T1/Merriwthr-OsF/b/n/8.5 (+20) Diabetes read-mis-sion case study|
+
+Underfull \hbox (badness 10000) in paragraph at lines 328--328
+|\T1/Merriwthr-OsF/b/it/7.5 (+20) Clinical tra-jec-to-ries in large-scale ob-se
+r-va-tional di-a-betes data|
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.349 \begin{figure*}[bt!]
+                          
+
+Underfull \hbox (badness 10000) in paragraph at lines 357--357
+|\T1/Merriwthr-OsF/b/it/7.5 (+20) Trajectory-based anal-y-sis of the re-la-tion
+ be-tween early read-
+
+Underfull \hbox (badness 10000) in paragraph at lines 357--357
+\T1/Merriwthr-OsF/b/it/7.5 (+20) mis-sion rate and the mea-sured gly-cated hemo
+globin HbA1c|
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.369 \begin{figure*}[bt!]
+                          
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--392
+|\T1/Merriwthr-OsF/b/n/10 (+20) Discussion|
+
+Underfull \hbox (badness 10000) in paragraph at lines 426--426
+|\T1/Merriwthr-OsF/b/n/10 (+20) Potential im-pli-ca-tions|
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--441
+|\T1/Merriwthr-OsF/b/n/10 (+20) Methods|
+
+Underfull \hbox (badness 10000) in paragraph at lines 443--443
+|\T1/Merriwthr-OsF/b/n/8.5 (+20) Implementation of the method-ol-ogy|
+
+Underfull \hbox (badness 10000) in paragraph at lines 449--449
+|\T1/Merriwthr-OsF/b/n/8.5 (+20) Quantification of mixed type datasets|
+
+Underfull \hbox (badness 10000) in paragraph at lines 471--471
+|\T1/Merriwthr-OsF/b/n/8.5 (+20) Imputing miss-ing val-ues in mixed type datase
+ts|
+
+Underfull \hbox (badness 10000) in paragraph at lines 477--477
+|\T1/Merriwthr-OsF/b/n/8.5 (+20) Method of Elas-tic Prin-ci-pal Graphs (ElPi-Gr
+aph)|
+
+Underfull \hbox (badness 10000) in paragraph at lines 479--479
+|\T1/Merriwthr-OsF/b/it/7.5 (+20) Computing the elas-tic prin-ci-pal graph|
+
+Underfull \hbox (badness 10000) in paragraph at lines 521--521
+|\T1/Merriwthr-OsF/b/it/7.5 (+20) Partitioning (clus-ter-ing) the data ac-
+
+Underfull \hbox (badness 10000) in paragraph at lines 521--521
+\T1/Merriwthr-OsF/b/it/7.5 (+20) cord-ing to the prin-ci-pal graph seg-ments|
+
+Underfull \hbox (badness 1742) in paragraph at lines 544--544
+|\T1/Merriwthr-OsF/b/it/7.5 (+20) Dimensionality re-duc-tion and data vi-su-al-
+iza-tion us-ing prin-ci-pal
+
+Underfull \hbox (badness 10000) in paragraph at lines 544--544
+\T1/Merriwthr-OsF/b/it/7.5 (+20) graphs|
+
+Underfull \hbox (badness 10000) in paragraph at lines 553--553
+|\T1/Merriwthr-OsF/b/it/7.5 (+20) Quantifying pseudo-time and ex-tract-
+
+Underfull \hbox (badness 10000) in paragraph at lines 553--553
+\T1/Merriwthr-OsF/b/it/7.5 (+20) ing tra-jec-to-ries us-ing prin-ci-pal trees|
+
+Overfull \hbox (19.71674pt too wide) detected at line 567
+[][]\T1/Merriwthr-OsF/m/it/7.5 Pt\T1/Merriwthr-OsF/m/n/7.5 (\T1/Merriwthr-OsF/m
+/it/7.5 x\T1/Merriwthr-OsF/m/n/7.5 ) = [][]
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--571
+|\T1/Merriwthr-OsF/b/n/8.5 (+20) Associating class la-bels and data vari-
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--571
+\T1/Merriwthr-OsF/b/n/8.5 (+20) ables and prin-ci-pal tree seg-ments|
+
+Underfull \hbox (badness 10000) in paragraph at lines 585--585
+|\T1/Merriwthr-OsF/b/n/8.5 (+20) Associating data vari-ables and tra-jec-to-rie
+s|
+
+Underfull \hbox (badness 10000) in paragraph at lines 597--597
+|\T1/Merriwthr-OsF/b/n/8.5 (+20) Pseudotime sur-vival anal-y-sis|
+
+Underfull \hbox (badness 10000) in paragraph at lines 628--628
+|\T1/Merriwthr-OsF/b/n/10 (+20) Supplementary Fig-ures|
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.632 \begin{figure*}[bt!]
+                          
+
+Underfull \hbox (badness 10000) in paragraph at lines 638--638
+|\T1/Merriwthr-OsF/b/n/10 (+20) Declarations|
+
+Underfull \hbox (badness 10000) in paragraph at lines 640--640
+|\T1/Merriwthr-OsF/b/n/8.5 (+20) List of ab-bre-vi-a-tions|
+
+Underfull \hbox (badness 10000) in paragraph at lines 642--642
+|\T1/Merriwthr-OsF/b/n/8.5 (+20) Consent for pub-li-ca-tion|
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--646
+|\T1/Merriwthr-OsF/b/n/8.5 (+20) Competing In-ter-ests|
+
+Underfull \hbox (badness 10000) in paragraph at lines 650--650
+|\T1/Merriwthr-OsF/b/n/8.5 (+20) Funding|
+
+Underfull \hbox (badness 10000) in paragraph at lines 654--654
+|\T1/Merriwthr-OsF/b/n/8.5 (+20) Author's Con-tri-bu-tions|
+(./clintraj.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+|\T1/Merriwthr-OsF/b/n/10 (+20) References|
+
+Underfull \hbox (badness 1127) in paragraph at lines 118--123
+\T1/Merriwthr-OsF/m/up/7.5 (+20) mars for data ap-prox-i-ma-tion.  Ap-plied Mat
+h-e-mat-ics Let-
+
+Underfull \hbox (badness 2809) in paragraph at lines 126--132
+[]\T1/Merriwthr-OsF/m/up/7.5 (+20) Gorban AN, Zi-novyev AY.  Prin-ci-pal Graphs
+ and Man-i-
+
+Underfull \hbox (badness 1484) in paragraph at lines 126--132
+\T1/Merriwthr-OsF/m/up/7.5 (+20) folds.  In: Hand-book of Re-search on Ma-chine
+ Learn-ing
+
+Underfull \hbox (badness 1194) in paragraph at lines 126--132
+\T1/Merriwthr-OsF/m/up/7.5 (+20) niques (ed. E.Olivas) In-for-ma-tion Sci-ence 
+Ref-er-ence, Her-
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--222
+[]\T1/Merriwthr-OsF/m/up/7.5 (+20) Long A, Us-ing Ma-chine Learn-ing to Pre-dic
+t Hos-
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--222
+\T1/Merriwthr-OsF/m/up/7.5 (+20) pi-tal Read-mis-sion for Pa-tients with Di-a-b
+etes with
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--222
+\T1/Merriwthr-OsF/m/up/7.5 (+20) Scikit-Learn; 2018.  [][]$\T1/lmtt/m/n/7.5 htt
+ps : / / towardsdatascience . com /
+
+Overfull \hbox (140.13339pt too wide) in paragraph at lines 218--222
+\T1/lmtt/m/n/7.5 predicting-[]hospital-[]readmission-[]for-[]patients-[]with-[]
+diabetes-[]using-[]scikit-[]learn-[]a2e359b15f0$[][]\T1/Merriwthr-OsF/m/up/7.5 
+(-20) . 
+
+Underfull \hbox (badness 6842) in paragraph at lines 297--302
+[]\T1/Merriwthr-OsF/m/up/7.5 (+20) Dergachev VA, Gor-ban AN, Rossiev AA, Ka-ri-
+mova LM,
+
+Overfull \hbox (0.68877pt too wide) in paragraph at lines 334--337
+\T1/Merriwthr-OsF/m/up/7.5 (-20) undirected graphs.  Information processing let
+ters 1989;31(1):7--
+) 
+
+! LaTeX Error: \begin{figure} on input line 93 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.662 \end{document}
+                    
+
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(./clintraj.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.0pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+! You can't use `\end' in internal vertical mode.
+\AP@enddocument ...ent/end}\deadcycles \z@ \@@end 
+                                                  
+l.662 \end{document}
+                    
+
+! LaTeX Error: \begin{figure} on input line 93 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.662 \end{document}
+                    
+! Missing } inserted.
+<inserted text> 
+                }
+l.662 \end{document}
+                    
+)
+! Emergency stop.
+<*> \RequirePackage{chklref}\input {clintraj.tex}
+                                                 
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on clintraj.log.
+************************************
+** Labels in starred environments **
+************************************
+-- clintraj.tex         line  130: remove label tab:infarctus_variable_names 
+-- clintraj.tex         line  457: consider using a STAR environment
+-- clintraj.tex         line  485: consider using a STAR environment
+-- clintraj.tex         line  491: consider using a STAR environment
+-- clintraj.tex         line  495: consider using a STAR environment
+-- clintraj.tex         line  499: consider using a STAR environment
+-- clintraj.tex         line  503: consider using a STAR environment
+-- clintraj.tex         line  589: consider using a STAR environment
+-- clintraj.tex         line  601: consider using a STAR environment
+
+*******************
+** Unused Labels **
+*******************
+-- clintraj.tex         line  477: remove label elpigraph_method
+-- clintraj.tex         line  635: remove label fig:SupplementaryFigure1
+-- clintraj.tex         line   94: remove label sec:background
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

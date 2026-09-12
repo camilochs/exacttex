@@ -1,0 +1,336 @@
+{
+ "paper": "1603.02252",
+ "main": "apo.tex",
+ "files": [
+  {
+   "file": "apo.tex",
+   "chars_before": 51917,
+   "chars_after": 51842,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 51917,
+ "chars_after": 51842,
+ "delta_pct": -0.14446135177302233,
+ "unrepaired": {
+  "chars_after": 51830,
+  "chars_before": 51917,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.040749,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`bib.bib` could not be read"
+  },
+  "errors": 1,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.1675751680567059
+ },
+ "stats": {
+  "cite_cmds_live": 61,
+  "cite_keys_live": 74,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 29,
+  "labels_outside_grammar": 0,
+  "refs_live": 47,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 2,
+  "float_envs": 15,
+  "cite_cmds_annotated": 37,
+  "cite_keys_annotated": 50,
+  "ids_annotated": 25,
+  "refs_annotated": 40,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 1,
+  "leaks_reverted": 34,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "apo.tex",
+   "line": 100,
+   "token": "@ref(APO:sec:computeOF)",
+   "wrapper": "?",
+   "context": "\\textbf{Step 1.} Computing Optical flow fields (Sec.~\\ref{APO:sec:computeOF})\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 105,
+   "token": "@ref(APO:sec:detectAF)",
+   "wrapper": "?",
+   "context": "\\textbf{Step 2.} Detect anchor frames and propagate the entire mesh to these frames (Sec.~\\ref{APO:sec:detectAF})\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 112,
+   "token": "@ref(APO:sec:labelOP)",
+   "wrapper": "?",
+   "context": "\\textbf{Step 3.} Label anchor patches on non-anchor frames (Sec.~\\ref{APO:sec:labelOP})\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 117,
+   "token": "@ref(APO:sec:meshTracking)",
+   "wrapper": "?",
+   "context": "\\textbf{Step 4.} Track remaining patches from anchor frames to non-anchor frames (Sec.~\\ref{APO:sec:meshTracking})\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 119,
+   "token": "@ref(APO:sec:trackingRtoA)",
+   "wrapper": "?",
+   "context": "\\textbf{4.1} Propagate patches from the reference to anchor frames (Sec.~\\ref{APO:sec:trackingRtoA})\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 127,
+   "token": "@ref(APO:sec:trackingAtoN)",
+   "wrapper": "?",
+   "context": "\\textbf{4.2} Propagate patches from anchor frames to non-anchor frames (Sec.~\\ref{APO:sec:trackingAtoN})\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 408,
+   "token": "@cite(BA)",
+   "wrapper": "?",
+   "context": "\\textbf{BA}~\\cite{BA}           & 6.14 & 8.03 & 11.02 & 7.79 & 10.56 & 5.18 & 17.57\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 410,
+   "token": "@cite(CLG-TV1)",
+   "wrapper": "?",
+   "context": "\\textbf{CLG-TV}~\\cite{CLG-TV1}  & 8.59 & 10.93 & 20.28 & 33.93 & 28.94 & 32.17 & 19.29\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 412,
+   "token": "@cite(HS)",
+   "wrapper": "?",
+   "context": "\\textbf{HS}~\\cite{HS}           & 29.16 & 30.44 & 29.74 & 29.43 & 27.69 & 37.90 & 31.27\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 414,
+   "token": "@cite(Brox_Large)",
+   "wrapper": "?",
+   "context": "\\textbf{LDOF}~\\cite{Brox_Large}       & 6.21 & 6.39 & 16.24 & 24.14 & 6.33 & 5.51 & 14.73\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 416,
+   "token": "@cite(Sun10)",
+   "wrapper": "?",
+   "context": "\\textbf{Classic+NL}~\\cite{Sun10}& 7.07 & 10.61 & 12.65 & 9.50 & 5.72 & 6.62 & 17.32\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 418,
+   "token": "@cite(ITV_L1)",
+   "wrapper": "?",
+   "context": "\\textbf{ITV-L1}~\\cite{ITV_L1}     & 5.73 & 8.25 & 17.29 & 14.49 & 5.34 & 7.11 & 17.91\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 422,
+   "token": "@id(APO:tab:avgRMS_1)",
+   "wrapper": "?",
+   "context": "\\label{APO:tab:avgRMS_1}"
+  },
+  {
+   "file": "apo.tex",
+   "line": 427,
+   "token": "@id(APO:tab:avgRMS_2)",
+   "wrapper": "?",
+   "context": "\\subfigure[Average \\emph{Endpoint Error} (AEE) comparison of Garg~\\emph{et al.} and Pizarro~\\emph{et al.} on the benchmark sequences (directly tracking from the"
+  },
+  {
+   "file": "apo.tex",
+   "line": 440,
+   "token": "@cite(Garg)",
+   "wrapper": "?",
+   "context": "Garg~\\emph{et al.}, PCA~\\cite{Garg} & 0.61 & 0.71 & 1.64 & 1.21 & N/A & N/A & N/A\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 441,
+   "token": "@cite(Garg)",
+   "wrapper": "?",
+   "context": "Garg~\\emph{et al.}, PCA~\\cite{Garg} +~\\textbf{\\emph{APO}} & 0.60 & $\\textbf{0.69}^{1}$ & 1.65 & 1.23 & N/A & N/A & N/A\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 442,
+   "token": "@cite(Garg)",
+   "wrapper": "?",
+   "context": "Garg~\\emph{et al.}, DCT~\\cite{Garg} & $\\textbf{0.59}^{1}$ & 0.74 & 1.86 & 1.54 & N/A & N/A & N/A\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 443,
+   "token": "@cite(Garg)",
+   "wrapper": "?",
+   "context": "Garg~\\emph{et al.}, DCT~\\cite{Garg} +~\\textbf{\\emph{APO}} & $\\textbf{0.59}^{1}$ & 0.73 & 1.85 & 1.53 & N/A & N/A & N/A\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 444,
+   "token": "@cite(Pizarro)",
+   "wrapper": "?",
+   "context": "Pizarro~\\emph{et al.}~\\cite{Pizarro} & 0.71 & 0.79 & 0.99 & 0.98 & N/A & N/A & N/A\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 445,
+   "token": "@cite(Pizarro)",
+   "wrapper": "?",
+   "context": "Pizarro~\\emph{et al.}~\\cite{Pizarro} +~\\textbf{\\emph{APO}} & 0.79 & 0.81 & $\\textbf{0.99}^{1}$ & $\\textbf{0.98}^{1}$ & N/A & N/A & N/A\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 472,
+   "token": "@cite(BA)",
+   "wrapper": "?",
+   "context": "\\textbf{BA}~\\cite{BA}           & 1.57&1.72&3.87&2.71&2.37&$1.56^3$&8.76\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 474,
+   "token": "@cite(CLG-TV1)",
+   "wrapper": "?",
+   "context": "\\textbf{CLG-TV}~\\cite{CLG-TV1}  & 2.40&2.60&6.71&8.77&8.10&5.54&8.60\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 476,
+   "token": "@cite(HS)",
+   "wrapper": "?",
+   "context": "\\textbf{HS}~\\cite{HS}           & 33.67&35.70&35.05&34.50&26.16&22.08&12.76\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 478,
+   "token": "@cite(Brox_Large)",
+   "wrapper": "?",
+   "context": "\\textbf{LDOF}~\\cite{Brox_Large}       & 2.38&2.37&3.96&4.03&3.90&2.52&8.51\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 480,
+   "token": "@cite(Sun10)",
+   "wrapper": "?",
+   "context": "\\textbf{Classic+NL}~\\cite{Sun10}& 1.63&1.76&$3.61^2$&$2.51^3$&2.18&1.75&8.77\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 482,
+   "token": "@cite(ITV_L1)",
+   "wrapper": "?",
+   "context": "\\textbf{ITV-L1}~\\cite{ITV_L1}     & 1.55&1.76&6.27&5.07&2.37&2.01&9.22\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 506,
+   "token": "@cite(BA)",
+   "wrapper": "?",
+   "context": "\\textbf{BA}~\\cite{BA}, \\textbf{No \\emph{APO}}   & 6.14 & 8.03 & 11.02 & 7.79 & 10.56 & 5.18 & 17.57\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 511,
+   "token": "@cite(CLG-TV1)",
+   "wrapper": "?",
+   "context": "\\textbf{CLG-TV}~\\cite{CLG-TV1}, \\textbf{No \\emph{APO}}  & 8.59 & 10.93 & 20.28 & 33.93 & 28.94 & 32.17 & 19.29\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 516,
+   "token": "@cite(HS)",
+   "wrapper": "?",
+   "context": "\\textbf{HS}~\\cite{HS}, \\textbf{No \\emph{APO}}           & 29.16 & 30.44 & 29.74 & 29.43 & 27.69 & 37.90 & 31.27\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 521,
+   "token": "@cite(Brox_Large)",
+   "wrapper": "?",
+   "context": "\\textbf{LDOF}~\\cite{Brox_Large}, \\textbf{No \\emph{APO}}       & 6.21 & 6.39 & 16.24 & 24.14 & 6.33 & 5.51 & 14.73\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 526,
+   "token": "@cite(Sun10)",
+   "wrapper": "?",
+   "context": "\\textbf{Classic+NL}~\\cite{Sun10}, \\textbf{No \\emph{APO}} & 7.07 & 10.61 & 12.65 & 9.50 & 5.72 & 6.62 & 17.32\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 531,
+   "token": "@cite(ITV_L1)",
+   "wrapper": "?",
+   "context": "\\textbf{ITV-L1}~\\cite{ITV_L1}, \\textbf{No \\emph{APO}}     & 5.73 & 8.25 & 17.29 & 14.49 & 5.34 & 7.11 & 17.91\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 550,
+   "token": "@id(APO:fig:visFigsFrank)",
+   "wrapper": "?",
+   "context": "\\label{APO:fig:visFigsFrank}}\\\\"
+  },
+  {
+   "file": "apo.tex",
+   "line": 554,
+   "token": "@id(APO:fig:visFigsVicon)",
+   "wrapper": "?",
+   "context": "\\label{APO:fig:visFigsVicon}}"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1003",
+   "name": "APO:tab:avgRMS_1",
+   "file": "apo.xtex",
+   "line": 456,
+   "message": "identifier `APO:tab:avgRMS_1` is not declared \u2014 did you mean `APO:tab:avgRMS`?",
+   "classification": "compiler-unreachable: \\label{APO:tab:avgRMS_1} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.040315,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`bib.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "apo.xtex",
+    "offset": 3330,
+    "length": 33,
+    "line": 79,
+    "column": 407
+   },
+   "message": "citation checking unavailable: `bib.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

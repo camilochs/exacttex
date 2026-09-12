@@ -1,0 +1,21 @@
+target,kind,verdict,field,severity,document,source
+Cohn94improvinggeneralization,bib-entry,partial,authors,high,David Cohn and Richard Ladner and Alex Waibel,David Cohn and Les Atlas and Richard Ladner
+Fabioetal2013,bib-entry,partial,authors,high,"Fabio, D. R. and Fabio, D. and Carlo, P.",Fabio Della Rossa and Fabio Dercole and Carlo Piccardi
+FabricioLiang2013,bib-entry,partial,authors,high,"Fabricio, B. and Liang, Z.",Fabricio Breve and Liang Zhao
+FabricioLiang2013,bib-entry,partial,year,medium,2013,2012
+Freund2004SelectiveSU,bib-entry,partial,year,medium,2004,1997
+Havensetal2013,bib-entry,partial,authors,high,"Havens, T. C. and Bezdek, J. C. and Leckie, C., Ramamohanarao, K. and Palaniswami, M.",Timothy C. Havens and James C. Bezdek and Christopher Leckie and Kotagiri Ramamohanarao and Marimuthu Palaniswami
+Kuester-Book,bib-entry,partial,authors,high,E. F. Kuester and D. C. Chang,Edward F. Kuester
+Kuester-Book,bib-entry,partial,year,medium,1998,2020
+Nagao1984AFO,bib-entry,partial,year,medium,1984,2003
+SobolevskyCampari2014,bib-entry,partial,authors,high,"Sobolevsky, S. and Campari, R.",Stanislav Sobolevsky and Riccardo Campari and Alexander Belyi and Carlo Ratti
+cohn1994active,bib-entry,partial,year,medium,1994,1995
+cripps06_PA,bib-entry,partial,year,medium,2006,2000
+et_overview,bib-entry,partial,authors,high,"Bumman, K. and Junghwan, M. and Ildu, K.",Bumman Kim and Moon Junghwan and Kim Ildu
+harmonic_load_pull,bib-entry,partial,year,medium,1979,2005
+kim_cout_nonlin,bib-entry,mismatch,title,medium,{Modeling and Design Methodology of High-Efficiency Class-F and Class- ${\hbox {F}}^{{\hbox {-}1}}$ Power Amplifiers},Modeling and Design Methodology of High-Efficiency Class-F and Class-${\hbox{F}}^{{\hbox{-}1}}$ Power Amplifiers
+kim_cout_nonlin,bib-entry,mismatch,year,medium,2011,2010
+miguel_conference,bib-entry,partial,authors,high,"Rodr\'iguez, M. and Roberg, M. and Pack, R. and Fernandez, P. and Popovi\'c, Z. and Alarcon E. and Maksimovi\'c, D.",Miguel Rodriguez and Michael Roberg and Riley Pack and Pablo Fernandez and Eduard Alarcon and Zoya Popovic and Dragan Maksimovic
+schmelzer07_classF80PAE,bib-entry,mismatch,title,medium,A {GaN HEMT class F} Amplifier at 2 {GHz} With greater than 80\% {PAE},"A GaN HEMT Class F Amplifier at 2 GHz With $>\,$80% PAE"
+slug_tuner,bib-entry,partial,authors,high,{FOCUS Microwaves},C. Tsironis and R. Meierer and B. Hosein and T. Beauchamp and R. Jallad
+woo06_finverse_JNL,bib-entry,partial,authors,high,"Young Yun Woo and Youngoo Yang and Bumman Kim,",Young Yun Woo and Youngoo Yang and Bumman Kim

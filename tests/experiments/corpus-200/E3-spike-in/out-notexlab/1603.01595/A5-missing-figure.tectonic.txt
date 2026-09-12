@@ -1,0 +1,2 @@
+error: absabook.tex:39: Unable to load picture or PDF file 'figures/planted_ghost.pdf'
+error: halted on potentially-recoverable error as specified

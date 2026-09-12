@@ -1,0 +1,6 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=[] secs=2
+error: main.tex:12: ! LaTeX Error: File `pstricks.sty' not found.
+error: halted on potentially-recoverable error as specified

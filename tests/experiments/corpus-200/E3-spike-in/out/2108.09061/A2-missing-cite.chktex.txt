@@ -1,0 +1,215 @@
+exit=2
+lines=255
+unique_findings=74
+ngNearTerm-2020} and \cite{saha-SynthVertexColGrover-2015} demonstrate a quantum algorithm solving the $k$-coloring problem on NISQ devices, comparing the efficiency of their algorithm against the reduction of 3-SAT to 3-coloring approach of Hu et. al.~\cite{hu-ReductionBasedProblemMapping-2019}.  
+                                                                                                                                                                                                                                                                                                                        ^
+Warning 24 in main.tex line 97: Delete this space to maintain correct pagereferences.
+\label{prop:subspaceGrover}  
+^
+Warning 2 in main.tex line 101: Non-breaking space (`~') should have been used.
+Additionally, we use an oracle design different from those in \cite{wang-TernaryGrover-2011,saha-CircuitDesignColoringNearTerm-2020}, and give a classical algorithm in Section 3 that can reduce the complexity of this oracle in several special cases (such as for the $3$-coloring or $4$-coloring problems). As a corollary of Proposition~\ref{prop:subspaceGrover}, our main theorem provides an algorithm for the list coloring problem.  
+                                                             ^
+Warning 24 in main.tex line 104: Delete this space to maintain correct pagereferences.
+\label{thm:qListColoring}  
+^
+Warning 24 in main.tex line 115: Delete this space to maintain correct pagereferences.
+\label{sec:groveralgo}  
+^
+Warning 3 in main.tex line 121: You should enclose the previous parenthesis with `{}'.
+When searching for a marked state among the full search space $S=\{0,1\}^n$, the initialization step of the algorithm creates a uniform superposition of all the possible states of an $n$-qubit system. This is achieved via appending Hadamard gates on each qubit:   
+                                                                      ^^
+Warning 25 in main.tex line 139: You might wish to put this between a pair of `{}'
+Measuring the state $G^rH^{\otimes n} \lvert 0\rangle_n$ ($r\ge 1$) gives one of the marked states with high probability, and this probability is maximum when $r = \lfloor\frac{\pi}{4}\sqrt{2^n/|S'|}\rfloor$.  
+                       ^^
+Warning 3 in main.tex line 158: You should enclose the previous parenthesis with `{}'.
+Let us now consider a search space $S\subsetneq \{0,1\}^n$. In this case, the algorithm is designed to only evolve over the states of $S$, and this is achieved via an initialization operator $A$ such that  
+                                                     ^^
+Warning 3 in main.tex line 166: You should enclose the previous parenthesis with `{}'.
+The usage of $ADA^{\dagger}$ instead of $H^{\otimes n}DH^{\otimes n}$ makes sure that the evolution of the quantum states remains in the subspace spanned by $S$ instead of the entire space $\{0,1\}^n$, and this leads to probability distribution of the measured outcomes being supported on the state $S$.  
+                                                                                                                                                                                                   ^^
+Warning 2 in main.tex line 170: Non-breaking space (`~') should have been used.
+We make a remark here that the graph coloring algorithm of \cite{saha-CircuitDesignColoringNearTerm-2020} uses the unrestricted formulation of Grover's algorithm, but modifies the oracle to discard states that represent invalid colorings. On the other hand, they do not modify their diffusion operator, leading to states outside the search space having positive probabilities of being measured.  
+                                                          ^
+Warning 24 in main.tex line 178: Delete this space to maintain correct pagereferences.
+\label{sec:qlistcoloring}  
+^
+Warning 2 in main.tex line 204: Non-breaking space (`~') should have been used.
+It can then be implemented with quantum gates using the results of \cite{li-UnitaryDecomposition-2013,mottonen-MultiqubitGates-2004,vartiainen-EfficientQuantumGates-2004} for example.  
+                                                                  ^
+Warning 44 in main.tex line 232: User Regex: -2:Vertical rules in tables are ugly.
+\[S = \left\{\lvert i_1\rangle_{j_u}\lvert i_2\rangle_{j_v}: \begin{array}{cc}0\le i_1< |L_u|, 0\le i_2<|L_v|,\\ L_u[i_1]\neq L_v[i_2]\end{array}\right\}.\]   
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in main.tex line 237: User Regex: -2:Vertical rules in tables are ugly.
+&O_{u,v}\left(\frac1{\sqrt{|L_u||L_v|}}\sum_{\scriptsize\begin{array}{c} 0\le i_1< |L_u|\\ 0\le i_2< |L_v|\end{array}}\lvert i_1\rangle \lvert i_2\rangle\lvert -\rangle\right) \\&=\frac1{\sqrt{|L_u||L_v|}} \left(\sum_{\lvert i_1\rangle\lvert i_2\rangle \in S}-\lvert i_1\rangle \lvert i_2\rangle + \sum_{\lvert i_1\rangle\lvert i_2\rangle \not\in S}\lvert i_1\rangle\lvert i_2\rangle\right)\lvert -\rangle  
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 39 in main.tex line 241: Double space found.
+Given a string $s$ of length $\ell$ and a subset $J=\{j_1,j_2,\ldots,j_r\}\subseteq \{1,2,\ldots,\ell\}$ we use $s_J$ to denote the substring $s_{j_1}s_{j_2}\ldots s_{j_r}$. $\bbF_2$ denotes the finite field of two elements. Our algorithm for implementing $O_{u,v}$ (Algorithm ~\ref{algo:oracle-uv}) makes use of a subroutine called \ref{func:oracleReduction} that can significantly simplify the complexity and the number of controlled not operations required in many cases.  
+                                                                                                                                                                                                                                                                                    ^
+Warning 2 in main.tex line 241: Non-breaking space (`~') should have been used.
+Given a string $s$ of length $\ell$ and a subset $J=\{j_1,j_2,\ldots,j_r\}\subseteq \{1,2,\ldots,\ell\}$ we use $s_J$ to denote the substring $s_{j_1}s_{j_2}\ldots s_{j_r}$. $\bbF_2$ denotes the finite field of two elements. Our algorithm for implementing $O_{u,v}$ (Algorithm ~\ref{algo:oracle-uv}) makes use of a subroutine called \ref{func:oracleReduction} that can significantly simplify the complexity and the number of controlled not operations required in many cases.  
+                                                                                                                                                                                                                                                                                                                                            ^
+Warning 1 in main.tex line 248: Command terminated with space.
+        \BlankLine  
+                  ^
+Warning 36 in main.tex line 261: You should put a space in front of parenthesis.
+        \caption{oracleReduction($L_u$, $L_v$)\label{func:oracleReduction}}  
+                                ^
+Warning 1 in main.tex line 262: Command terminated with space.
+        \BlankLine  
+                  ^
+Warning 18 in main.tex line 266: Use either `` or '' as an alternative to `"'.
+        Let $X=\{ab: a\in A, b\in B, L_u[a]\neq L_v[b]\}$, where ``$ab$" denotes concatenation\;  
+                                                                       ^
+Warning 1 in main.tex line 269: Command terminated with space.
+        \For{$k=1$ \KwTo $j_u+j_v$}{  
+                        ^
+Warning 2 in main.tex line 318: Non-breaking space (`~') should have been used.
+        Now we come to the second assertion of the theorem. Note that for each variable $x_J^s\in W$ with $x_J^s=1$, we require a $|J|$-controlled NOT operation onto the phase flip ancilla. This means that the cost of $C$ is exactly $\sum_{x_J^s\in W} {|J|}\cdot x_J^s$. As we have minimized this cost via a linear program in Step~\ref{algostep:linearprogram} of \ref{func:oracleReduction}, this proves the second claim.  
+                                                                                                                                                                                                                                                                                                                                                                          ^
+Warning 24 in main.tex line 323: Delete this space to maintain correct pagereferences.
+\label{rmk:cost-kCNOT}  
+^
+Warning 2 in main.tex line 324: Non-breaking space (`~') should have been used.
+Suppose that the actual cost of implementing $k$-controlled operations is $f(k)$. In the construction of \ref{func:oracleReduction}, we could use any $f(k)$ by modifying the objective function in the linear program of Step~\ref{algostep:linearprogram} to $\sum_{x_J^s\in W} f(|J|)\cdot x_J^s$.   
+                                                                                                        ^
+Warning 12 in main.tex line 326: Interword spacing (`\ ') should perhaps be used.
+It can be seen in Barenco et. al.~\cite{barenco1995elementary}, Corollary 7.4, for example, that $f(k)\le 48k-204$ for $k\ge 7$.  
+                             ^
+Warning 2 in main.tex line 328: Non-breaking space (`~') should have been used.
+Finding the best $f(k)$ is still an active area of research (see, for e.g., \cite{nakanishi2021quantum,krol2021efficient}).  
+                                                                           ^
+Warning 1 in main.tex line 339: Command terminated with space.
+\BlankLine  
+          ^
+Warning 24 in main.tex line 364: Delete this space to maintain correct pagereferences.
+\label{sec:results}  
+^
+Warning 40 in main.tex line 445: You should put punctuation outside inner math mode.
+It is seen that states in the set $A = \{\lvert 000110\rangle,$ $\lvert 001001\rangle,$ $\lvert 011000\rangle,$ $\lvert 011000\rangle,$ $\lvert 100001\rangle,$ $\lvert 100100\rangle\}$ are all massively amplified. Each state of $A$ represents a valid $3$-coloring of $K_3$. Let $B=\{\lvert 00\rangle,\lvert 01\rangle, \lvert 10\rangle\}^{\otimes3}$.  
+                                                             ^
+Warning 40 in main.tex line 445: You should put punctuation outside inner math mode.
+It is seen that states in the set $A = \{\lvert 000110\rangle,$ $\lvert 001001\rangle,$ $\lvert 011000\rangle,$ $\lvert 011000\rangle,$ $\lvert 100001\rangle,$ $\lvert 100100\rangle\}$ are all massively amplified. Each state of $A$ represents a valid $3$-coloring of $K_3$. Let $B=\{\lvert 00\rangle,\lvert 01\rangle, \lvert 10\rangle\}^{\otimes3}$.  
+                                                                                     ^
+Warning 40 in main.tex line 445: You should put punctuation outside inner math mode.
+It is seen that states in the set $A = \{\lvert 000110\rangle,$ $\lvert 001001\rangle,$ $\lvert 011000\rangle,$ $\lvert 011000\rangle,$ $\lvert 100001\rangle,$ $\lvert 100100\rangle\}$ are all massively amplified. Each state of $A$ represents a valid $3$-coloring of $K_3$. Let $B=\{\lvert 00\rangle,\lvert 01\rangle, \lvert 10\rangle\}^{\otimes3}$.  
+                                                                                                             ^
+Warning 40 in main.tex line 445: You should put punctuation outside inner math mode.
+It is seen that states in the set $A = \{\lvert 000110\rangle,$ $\lvert 001001\rangle,$ $\lvert 011000\rangle,$ $\lvert 011000\rangle,$ $\lvert 100001\rangle,$ $\lvert 100100\rangle\}$ are all massively amplified. Each state of $A$ represents a valid $3$-coloring of $K_3$. Let $B=\{\lvert 00\rangle,\lvert 01\rangle, \lvert 10\rangle\}^{\otimes3}$.  
+                                                                                                                                     ^
+Warning 40 in main.tex line 445: You should put punctuation outside inner math mode.
+It is seen that states in the set $A = \{\lvert 000110\rangle,$ $\lvert 001001\rangle,$ $\lvert 011000\rangle,$ $\lvert 011000\rangle,$ $\lvert 100001\rangle,$ $\lvert 100100\rangle\}$ are all massively amplified. Each state of $A$ represents a valid $3$-coloring of $K_3$. Let $B=\{\lvert 00\rangle,\lvert 01\rangle, \lvert 10\rangle\}^{\otimes3}$.  
+                                                                                                                                                             ^
+Warning 3 in main.tex line 445: You should enclose the previous parenthesis with `{}'.
+It is seen that states in the set $A = \{\lvert 000110\rangle,$ $\lvert 001001\rangle,$ $\lvert 011000\rangle,$ $\lvert 011000\rangle,$ $\lvert 100001\rangle,$ $\lvert 100100\rangle\}$ are all massively amplified. Each state of $A$ represents a valid $3$-coloring of $K_3$. Let $B=\{\lvert 00\rangle,\lvert 01\rangle, \lvert 10\rangle\}^{\otimes3}$.  
+                                                                                                                                                                                                                                                                                                                                              ^^
+Warning 44 in main.tex line 451: User Regex: -2:Vertical rules in tables are ugly.
+    \begin{tabular}{|c|c|c|}  
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in main.tex line 452: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \hline  
+    ^^^^^^
+Warning 44 in main.tex line 454: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \hline \hline  
+    ^^^^^^
+Warning 44 in main.tex line 454: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \hline \hline  
+           ^^^^^^
+Warning 44 in main.tex line 456: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \hline  
+    ^^^^^^
+Warning 44 in main.tex line 458: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \hline  
+    ^^^^^^
+Warning 3 in main.tex line 459: You should enclose the previous parenthesis with `{}'.
+    Invalid combinations & $\{\lvert 0\rangle, \lvert 1\rangle\}^{\otimes 6} \setminus B$ & 0\\  
+                                                              ^^
+Warning 44 in main.tex line 460: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \hline  
+    ^^^^^^
+Warning 24 in main.tex line 463: Delete this space to maintain correct pagereferences.
+    \label{tab:theoreticalProbK3}  
+   ^
+Warning 3 in main.tex line 488: You should enclose the previous parenthesis with `{}'.
+Here $A'$ denotes the set of all $4!=24$ marked states corresponding to valid colorings of $K_4$, and $B'=\{\lvert 0\rangle, \lvert 1\rangle\}^{\otimes 8}$ is the full state space.  
+                                                                                                                                            ^^
+Warning 44 in main.tex line 492: User Regex: -2:Vertical rules in tables are ugly.
+    \begin{tabular}{|c|c|c|}  
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in main.tex line 493: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \hline  
+    ^^^^^^
+Warning 44 in main.tex line 495: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \hline \hline  
+    ^^^^^^
+Warning 44 in main.tex line 495: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \hline \hline  
+           ^^^^^^
+Warning 44 in main.tex line 497: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \hline  
+    ^^^^^^
+Warning 44 in main.tex line 499: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \hline  
+    ^^^^^^
+Warning 24 in main.tex line 502: Delete this space to maintain correct pagereferences.
+    \label{tab:theoreticalProbK4}  
+   ^
+Warning 2 in main.tex line 511: Non-breaking space (`~') should have been used.
+    \caption{Observed probabilities for 2000 shots for $3$-coloring $K_3$ using the algorithm of \cite{saha-CircuitDesignColoringNearTerm-2020}.}  
+                                                                                                ^
+Warning 24 in main.tex line 512: Delete this space to maintain correct pagereferences.
+    \label{fig:sahaResultsK3}  
+   ^
+Warning 2 in main.tex line 515: Non-breaking space (`~') should have been used.
+We take \cite{saha-CircuitDesignColoringNearTerm-2020} as the state-of-the-art result for the $k$-coloring problem.  
+       ^
+Warning 44 in main.tex line 524: User Regex: -2:Vertical rules in tables are ugly.
+    \begin{tabular}{|c|c|c|}  
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in main.tex line 525: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \hline  
+    ^^^^^^
+Warning 12 in main.tex line 526: Interword spacing (`\ ') should perhaps be used.
+    Gates & Saha et. al.\cite{saha-CircuitDesignColoringNearTerm-2020} & Our Circuit\\  
+                    ^
+Warning 44 in main.tex line 527: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \hline \hline  
+    ^^^^^^
+Warning 44 in main.tex line 527: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \hline \hline  
+           ^^^^^^
+Warning 44 in main.tex line 528: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    $X$, $H$ & 58 & 66  \\ \hline  
+                           ^^^^^^
+Warning 44 in main.tex line 529: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    $R_y$, $R_z$ & 0 & 45 \\ \hline  
+                             ^^^^^^
+Warning 44 in main.tex line 530: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \texttt{cx} & 20 & 15 \\ \hline  
+                             ^^^^^^
+Warning 44 in main.tex line 531: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \texttt{ccx} & 24 & 12 \\ \hline  
+                              ^^^^^^
+Warning 44 in main.tex line 532: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \texttt{cccx} & 3 & 2 \\ \hline  
+                             ^^^^^^
+Warning 44 in main.tex line 533: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \texttt{ccccx} & 1 & 0 \\ \hline \hline  
+                              ^^^^^^
+Warning 44 in main.tex line 533: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \texttt{ccccx} & 1 & 0 \\ \hline \hline  
+                                     ^^^^^^
+Warning 44 in main.tex line 534: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    Total elementary gates & 686 & 429 \\ \hline  
+                                          ^^^^^^
+Warning 24 in main.tex line 537: Delete this space to maintain correct pagereferences.
+    \label{tab:gateCountsK3}  
+   ^
+Warning 24 in main.tex line 556: Delete this space to maintain correct pagereferences.
+\label{sec:conclusion}  
+^
+Warning 12 in main.tex line 573: Interword spacing (`\ ') should perhaps be used.
+Part of this work was completed during a summer internship at Elyah Co. in 2020. The author is grateful to Sydney Andrews, Ry\=utar\=o Nagai and Goutham Rajendran for several helpful discussions and comments; Y\=uichir\=o Minato and Salman Al Jimeely for encouragement and support; and the anonymous reviewers whose insightful comments and suggestions helped drastically improve the quality of the manuscript.  
+                                                                       ^
+Warning 1 in main.tex line 577: Command terminated with space.
+\EOD  
+    ^

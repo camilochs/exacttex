@@ -1,0 +1,9 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=[] secs=2
+error: sigma18-019.tex:57: LaTeX3 Error: Backend request inconsistent with engine: using 'xetex'
+(LaTeX3)        backend.
+
+For immediate help type H <return>
+error: halted on potentially-recoverable error as specified

@@ -1,0 +1,450 @@
+pdf=1
+exit=0
+lines=1429
+unique_findings=12
+nt Class: article 2025/01/22 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/size10.c
+lo))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/inputenc
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fontenc.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/ifpdf
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iftex
+.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/microtype/mic
+rotype.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/etoolbox/etoo
+lbox.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/microtype/mic
+rotype-pdftex.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/microtype/mic
+rotype.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/euler/euler.s
+ty
+Package: `euler' v2.5 <1995/03/05> (FJ and FMi)
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/merriweather/
+merriweather.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/ifxet
+ex.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iflua
+tex.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/textcomp
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/xkeyval/xkeyv
+al.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/xkeyval/xke
+yval.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/xkeyval/xkv
+utils.tex)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fontenc.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/fontaxes/font
+axes.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/figureversion
+s/figureversions.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/mathastext/ma
+thastext.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/relsize/relsi
+ze.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ragged2e/ragg
+ed2e.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/xcolor/xcolor
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/colortbl/colo
+rtbl.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/array.s
+ty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/xpatch/xpatch
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3kernel/expl
+3.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3packages/xp
+arse/xparse.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/environ/envir
+on.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/trimspaces/tr
+imspaces.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lastpage/last
+page.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lastpage/last
+page2e.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lastpage/last
+pagemodern.sty) 
+))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/rota
+ting.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ifthen.s
+ty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/lsca
+pe.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/afterpa
+ge.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/textpos/textp
+os.sty
+Grid set 16 x 16 = 37.34424pt x 52.81541pt
+TextBlockOrigin set to 0pt x 0pt
+) (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/url/url.sty
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/newfloat/newf
+loat.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/mdframed/mdfr
+amed.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/zref/zref-abs
+page.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/zref/zref-bas
+e.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/infwarerr/i
+nfwarerr.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/kvdefinekey
+s/kvdefinekeys.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdftexcmds/
+pdftexcmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/etexcmds/et
+excmds.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/needspace/nee
+dspace.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/mdframed/md-f
+rame-0.mdf))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/titlesec/titl
+esec.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/koma-script/s
+crextend.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/koma-script/s
+crkbase.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/koma-script/s
+crbase.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/koma-script/s
+crlfile.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/koma-script/s
+crlfile-hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/koma-script/s
+crlogo.sty))))))
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 65.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/calc.st
+y)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/geometry/geom
+etry.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/ifvte
+x.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hype
+rref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdfescape/p
+dfescape.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hycolor/hycol
+or.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/name
+ref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/refcount/refc
+ount.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/gettitlestr
+ing/gettitlestring.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/stringenc/s
+tringenc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/pd1e
+nc.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/intcalc/int
+calc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/puen
+c.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bitset/bits
+et.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bigintcalc/
+bigintcalc.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hpdf
+tex.def
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/rerunfilechec
+k/rerunfilecheck.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/uniquecount
+er/uniquecounter.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/preprint/auth
+blk.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/footmisc/foot
+misc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/fancyhdr/fanc
+yhdr.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/alphalph/al
+phalph.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/abstract/abst
+ract.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/enumitem/enum
+item.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/quoting/quoti
+ng.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/sttools/stflo
+ats.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/booktabs/book
+tabs.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/tabular
+x.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/capti
+on.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/capti
+on3.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/natbib/natbib
+.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/siunitx/siuni
+tx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/translations/
+translations.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amste
+xt.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsge
+n.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/float/float.s
+ty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/merriweather/
+T1Merriwthr-OsF.fd) (./clintraj.aux)
+
+Package microtype Warning: Unable to apply patch `footnote' on input line 60.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(./clintraj.out) (./clintraj.out)
+
+LaTeX Font Warning: Font shape `T1/Merriwthr-OsF/m/up' undefined
+(Font)              using `T1/Merriwthr-OsF/m/n' instead on input line 60.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/ueur
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/microtype/mt-
+eur.cfg)
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 60.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/ueuf
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/microtype/mt-
+euf.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/ueus
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/microtype/mt-
+eus.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/ueue
+x.fd)
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <7.5> not available
+(Font)              size <7> substituted on input line 60.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/translations/
+translations-basic-dictionary-english.trsl)
+TextBlockOrigin set to 4pc+6.64pt x 4pc+6pt
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <13> not available
+(Font)              size <12> substituted on input line 72.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <13> not available
+(Font)              size <12> substituted on input line 72.
+
+
+Overfull \hbox (54.64pt too wide) in paragraph at lines 72--72
+[][][] 
+
+Overfull \hbox (54.64pt too wide) in paragraph at lines 72--72
+[][][] 
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/merriweather/
+TS1Merriwthr-OsF.fd)
+Underfull \hbox (badness 1038) in paragraph at lines 95--96
+\T1/Merriwthr-OsF/m/n/7.5 (+20) Large ob-ser-va-tional datasets are be-com-ing 
+in-creas-ingly avail-
+
+Package natbib Warning: Citation `Jensen2014__ghost' on page 1 undefined on inp
+ut line 97.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lm/t1lmtt.fd)
+
+Underfull \vbox (badness 4403) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active [1{/opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.
+map}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/mer
+riweather/merriwthr_posqbl.enc}{/opt/homebrew/Cellar/texlive/20260301/share/tex
+mf-dist/fonts/enc/dvips/lm/lm-ec.enc}]
+Underfull \vbox (badness 10000) has occurred while \output is active [2{/opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/merriweather/me
+rriwthr_owzwzj.enc}]
+Underfull \hbox (badness 1303) in paragraph at lines 199--200
+\T1/Merriwthr-OsF/m/up/7.5 (+20) at 130 US hos-pi-tals and in-te-grated de-liv-
+ery net-works. It in-
+
+Underfull \hbox (badness 1087) in paragraph at lines 199--200
+\T1/Merriwthr-OsF/m/up/7.5 (+20) comes. The dataset can be down-loaded from UCI
+ repos-i-tory
+
+Underfull \hbox (badness 8132) in paragraph at lines 199--200
+\T1/Merriwthr-OsF/m/up/7.5 (+20) at [][]$\T1/lmtt/m/n/7.5 https : / / archive .
+ ics . uci . edu / ml / datasets / diabetes + 130-[]us +
+
+Underfull \hbox (badness 2717) in paragraph at lines 199--200
+\T1/lmtt/m/n/7.5 kaggle . com / brandao / diabetes$[][]\T1/Merriwthr-OsF/m/up/7
+.5 (+20) . The data con-tains more than
+[3]
+Underfull \hbox (badness 1810) in paragraph at lines 235--238
+\T1/Merriwthr-OsF/m/up/7.5 (+20) at [][]$\T1/lmtt/m/n/7.5 https : / / github . 
+com / auranic / ClinTrajan$[][] \T1/Merriwthr-OsF/m/up/7.5 (+20) and in the Sec
+-tion
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active [4]
+Underfull \vbox (badness 2735) has occurred while \output is active
+Underfull \vbox (badness 1152) has occurred while \output is active [5 <./Infar
+ctus_PT_lowres.png (PNG copy)>] [6 <./InfarctusMyocardisComplicationClasses.png
+ (PNG copy)>]
+Underfull \vbox (badness 1062) has occurred while \output is active
+Underfull \vbox (badness 1509) has occurred while \output is active [7 <./Infar
+ctus_Branch_associations_lowres.png (PNG copy)>] [8 <./Infarctus_Trajectory_Pse
+udoTime.png (PNG copy)>]
+Underfull \vbox (badness 4024) has occurred while \output is active [9 <./Infar
+ctus_Trajectory_Bifurcation.png (PNG copy)>]
+Underfull \vbox (badness 1565) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active [10 <./Inf
+arctus_Survival_analysis.png (PNG copy)>]
+Underfull \vbox (badness 10000) has occurred while \output is active [11 <./Dia
+betes_Analysis_lowres.png (PNG copy)>] [12 <./Diabetes_Readmission_lowres.png (
+PNG copy)>] [13] [14]
+Underfull \vbox (badness 10000) has occurred while \output is active [15]
+Underfull \hbox (badness 1742) in paragraph at lines 543--543
+|\T1/Merriwthr-OsF/b/it/7.5 (+20) Dimensionality re-duc-tion and data vi-su-al-
+iza-tion us-ing prin-ci-pal
+
+Overfull \hbox (19.71674pt too wide) detected at line 566
+[][]\T1/Merriwthr-OsF/m/it/7.5 Pt\T1/Merriwthr-OsF/m/n/7.5 (\T1/Merriwthr-OsF/m
+/it/7.5 x\T1/Merriwthr-OsF/m/n/7.5 ) = [][]
+[16 <./GraphSegments.png (PNG copy)>] (./clintraj.bbl [17]
+Underfull \hbox (badness 1127) in paragraph at lines 118--123
+\T1/Merriwthr-OsF/m/up/7.5 (+20) mars for data ap-prox-i-ma-tion.  Ap-plied Mat
+h-e-mat-ics Let-
+
+Underfull \hbox (badness 2809) in paragraph at lines 126--132
+[]\T1/Merriwthr-OsF/m/up/7.5 (+20) Gorban AN, Zi-novyev AY.  Prin-ci-pal Graphs
+ and Man-i-
+
+Underfull \hbox (badness 1484) in paragraph at lines 126--132
+\T1/Merriwthr-OsF/m/up/7.5 (+20) folds.  In: Hand-book of Re-search on Ma-chine
+ Learn-ing
+
+Underfull \hbox (badness 1194) in paragraph at lines 126--132
+\T1/Merriwthr-OsF/m/up/7.5 (+20) niques (ed. E.Olivas) In-for-ma-tion Sci-ence 
+Ref-er-ence, Her-
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \hbox (badness 10000) in paragraph at lines 218--222
+[]\T1/Merriwthr-OsF/m/up/7.5 (+20) Long A, Us-ing Ma-chine Learn-ing to Pre-dic
+t Hos-
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--222
+\T1/Merriwthr-OsF/m/up/7.5 (+20) pi-tal Read-mis-sion for Pa-tients with Di-a-b
+etes with
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--222
+\T1/Merriwthr-OsF/m/up/7.5 (+20) Scikit-Learn; 2018.  [][]$\T1/lmtt/m/n/7.5 htt
+ps : / / towardsdatascience . com /
+
+Overfull \hbox (140.13339pt too wide) in paragraph at lines 218--222
+\T1/lmtt/m/n/7.5 predicting-[]hospital-[]readmission-[]for-[]patients-[]with-[]
+diabetes-[]using-[]scikit-[]learn-[]a2e359b15f0$[][]\T1/Merriwthr-OsF/m/up/7.5 
+(-20) . 
+
+Underfull \vbox (badness 10000) has occurred while \output is active [18 <./Sup
+plementary_Figure1.png (PNG copy)>]
+Underfull \hbox (badness 6842) in paragraph at lines 297--302
+[]\T1/Merriwthr-OsF/m/up/7.5 (+20) Dergachev VA, Gor-ban AN, Rossiev AA, Ka-ri-
+mova LM,
+
+Overfull \hbox (0.68877pt too wide) in paragraph at lines 334--337
+\T1/Merriwthr-OsF/m/up/7.5 (-20) undirected graphs.  Information processing let
+ters 1989;31(1):7--
+) 
+
+Package natbib Warning: There were undefined citations.
+
+[19] 
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(./clintraj.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.0pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/sorkin/merriweather/Merriwthr-Bold.pfb
+></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/sorkin/mer
+riweather/Merriwthr-BoldItalic.pfb></opt/homebrew/Cellar/texlive/20260301/share
+/texmf-dist/fonts/type1/sorkin/merriweather/Merriwthr-Italic.pfb></opt/homebrew
+/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/sorkin/merriweather/Merri
+wthr-Regular.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/20260301/shar
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></opt/homebrew/Cellar/tex
+live/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/h
+omebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/eu
+ler/euex7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/typ
+e1/public/amsfonts/euler/euex8.pfb></opt/homebrew/Cellar/texlive/20260301/share
+/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></opt/homebrew/Cellar/t
+exlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></
+opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmt
+t8.pfb>
+Output written on clintraj.pdf (19 pages, 10433558 bytes).
+Transcript written on clintraj.log.
+************************************
+** Labels in starred environments **
+************************************
+-- clintraj.tex         line  129: remove label tab:infarctus_variable_names 
+-- clintraj.tex         line  456: consider using a STAR environment
+-- clintraj.tex         line  484: consider using a STAR environment
+-- clintraj.tex         line  490: consider using a STAR environment
+-- clintraj.tex         line  494: consider using a STAR environment
+-- clintraj.tex         line  498: consider using a STAR environment
+-- clintraj.tex         line  502: consider using a STAR environment
+-- clintraj.tex         line  588: consider using a STAR environment
+-- clintraj.tex         line  600: consider using a STAR environment
+
+*******************
+** Unused Labels **
+*******************
+-- clintraj.tex         line  476: remove label elpigraph_method
+-- clintraj.tex         line  634: remove label fig:SupplementaryFigure1
+-- clintraj.tex         line   93: remove label sec:background
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

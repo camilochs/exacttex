@@ -1,0 +1,47 @@
+44 claims: 0 fresh and carried over, 44 to verify
+https://github.com/Potla1995/Grover-ListColoring · settled
+Khadiev-StringProblems-2019 · settled
+Shukla-TrajectoryQuantumOpt-2019 · settled
+aaronson-Counting-2020 · settled
+ambainis-DPQuantumSpeedup-2019 · settled
+barenco1995elementary · settled
+bodlaender-PolyMemGraphCol-2006 · settled
+boyer-TightQuantumSearchingBounds-1998 · settled
+brassard-QAAandEstimation-2002 · settled
+bravyi-HybridApproximateColoring-2020 · settled
+cleve-QuantumAlgorithmsRevisited-1998 · settled
+cygan-ProblemsCNFSAT-2016 · settled
+durr-hoyer-QuantumMin-1996 · settled
+eppstein-MISGraphCol-2001 · settled
+frankl-InvitationToIntersectionProblems-2016 · settled
+frankl-ShiftingSurvey-1987 · settled
+gilliam-GroverAdaptiveSearch-2021 · settled
+grover-DatabaseSearch-1996 · settled
+hoffman-TSP-2013 · settled
+hu-ReductionBasedProblemMapping-2019 · settled
+hua-DPSetCover-2010 · settled
+jeffery-BooleanMatrixMultGraphCollision-2016 · settled
+koivisto-InclExclGraphCol-2006 · settled
+kravchenko-SubtractionGames2019 · settled
+krol2021efficient · settled
+kudo-ConstrainedAnnealing-2018 · settled
+lee-TriangleDetectionAssociativityTesting-2017 · settled
+li-UnitaryDecomposition-2013 · settled
+little-TSP-1963 · settled
+molmerSorensenIonQGates1999 · settled
+mosca-quantumCounting-1998 · settled
+mottonen-MultiqubitGates-2004 · settled
+nakanishi2021quantum · settled
+pursell-gramSchmidtGaussElim-1991 · settled
+ronagh-DPQuantum-2019 · settled
+saha-CircuitDesignColoringNearTerm-2020 · settled
+saha-SynthVertexColGrover-2015 · settled
+shimizu-ExpTimeQuantAlgoGraphColoring-2021 · settled
+shimizu-QuantumGraphColoring-2021 · settled
+titiloye-AnnealingColoring-2011 · settled
+titiloye-HybridAnnealingColoring-2011 · settled
+vartiainen-EfficientQuantumGates-2004 · settled
+wang-ListColoringWirelessAllocation-2005 · settled
+wang-TernaryGrover-2011 · settled
+network: 39 requests (crossref 37, http 1, openalex 1) · 0 retries · 334222 bytes down · 35 fetched, 0 carried over, 9 unanswered
+record: 44 claims → .xtexverified

@@ -1,0 +1,26 @@
+tectonic pdf bytes=649420
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=[] secs=9
+nal_version.tex:809: Underfull \hbox (badness 10000) in paragraph at lines 809--809
+warning: draft_final_version.tex:814: Underfull \hbox (badness 10000) in paragraph at lines 814--814
+warning: draft_final_version.tex:819: Underfull \hbox (badness 3514) in paragraph at lines 819--819
+warning: draft_final_version.tex:819: Underfull \hbox (badness 10000) in paragraph at lines 819--819
+warning: draft_final_version.tex:1686: Overfull \hbox (41.32224pt too wide) in paragraph at lines 1671--1686
+warning: draft_final_version.tex:1744: Overfull \hbox (31.07123pt too wide) in paragraph at lines 1729--1744
+warning: draft_final_version.tex:1821: Underfull \hbox (badness 2150) in paragraph at lines 1821--1821
+warning: draft_final_version.tex:1826: Underfull \hbox (badness 2626) in paragraph at lines 1826--1826
+warning: lineno.sty:296: Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: algorithmic.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: draft_final_version.tex:809: Underfull \hbox (badness 10000) in paragraph at lines 809--809
+warning: draft_final_version.tex:814: Underfull \hbox (badness 10000) in paragraph at lines 814--814
+warning: draft_final_version.tex:819: Underfull \hbox (badness 3514) in paragraph at lines 819--819
+warning: draft_final_version.tex:819: Underfull \hbox (badness 10000) in paragraph at lines 819--819
+warning: draft_final_version.tex:1686: Overfull \hbox (41.32224pt too wide) in paragraph at lines 1671--1686
+warning: draft_final_version.tex:1744: Overfull \hbox (31.07123pt too wide) in paragraph at lines 1729--1744
+warning: draft_final_version.tex:1821: Underfull \hbox (badness 2150) in paragraph at lines 1821--1821
+warning: draft_final_version.tex:1826: Underfull \hbox (badness 2626) in paragraph at lines 1826--1826
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

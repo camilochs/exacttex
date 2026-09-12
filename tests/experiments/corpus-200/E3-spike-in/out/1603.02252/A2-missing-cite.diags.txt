@@ -1,0 +1,3 @@
+planted=DeCarlo__ghost sites=[('apo.xtex', 79)]
+xtex new=[]
+texlab new=[]

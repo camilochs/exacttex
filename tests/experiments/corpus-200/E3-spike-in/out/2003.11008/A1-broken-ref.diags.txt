@@ -1,0 +1,3 @@
+planted=fig:acc__ghost sites=[('nilab_malformation.xtex', 260)]
+xtex new=[('XT1003', 'fig:acc__ghost', 'nilab_malformation.xtex', 260)]
+texlab new=[('ERROR', 'nilab_malformation.tex', 260, 'Undefined reference')]

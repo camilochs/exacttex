@@ -1,0 +1,9 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=[] secs=2
+error: projectq.tex:84: Class quantumarticle Error: Please add \pdfoutput=1 within the first 5 lines of the preamble of your main LaTeX file as suggested by the arXiv (https://arxiv.org/help/submit_tex).
+
+See the quantumarticle class documentation for explanation.
+Type  H <return>  for immediate help
+error: halted on potentially-recoverable error as specified

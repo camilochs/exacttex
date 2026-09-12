@@ -1,0 +1,36 @@
+{
+ "coverage": 0.022838,
+ "bibliography": {
+  "state": "complete",
+  "entries": 62
+ },
+ "diagnostics": [
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "equation",
+   "name": "eq.LASSO.beta.j",
+   "span": {
+    "file": "main.xtex",
+    "offset": 102261,
+    "length": 20,
+    "line": 629,
+    "column": 5
+   },
+   "message": "identifier `eq.LASSO.beta.j` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "main.xtex",
+      "offset": 46845,
+      "length": 20,
+      "line": 409,
+      "column": 5
+     }
+    }
+   ]
+  }
+ ]
+}

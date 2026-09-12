@@ -1,0 +1,189 @@
+exit=2
+lines=237
+unique_findings=65
+l_in_l_1.tex line 72: Non-breaking space (`~') should have been used.
+ to \cite{aliansari}, \cite{baronti}, \cite{narang} and \cite{sk} for some related work on uniquely remotal sets.\\  
+                                     ^
+Warning 2 in uniquely_remotal_in_l_1.tex line 72: Non-breaking space (`~') should have been used.
+ to \cite{aliansari}, \cite{baronti}, \cite{narang} and \cite{sk} for some related work on uniquely remotal sets.\\  
+                                                       ^
+Warning 2 in uniquely_remotal_in_l_1.tex line 75: Non-breaking space (`~') should have been used.
+Centers of sets have played a major role in the study of uniquely remotal sets, see \cite{aliansari}, \cite{aliansari2} and \cite{baronti}. Recall that a center  
+                                                                                   ^
+Warning 2 in uniquely_remotal_in_l_1.tex line 75: Non-breaking space (`~') should have been used.
+Centers of sets have played a major role in the study of uniquely remotal sets, see \cite{aliansari}, \cite{aliansari2} and \cite{baronti}. Recall that a center  
+                                                                                                     ^
+Warning 2 in uniquely_remotal_in_l_1.tex line 75: Non-breaking space (`~') should have been used.
+Centers of sets have played a major role in the study of uniquely remotal sets, see \cite{aliansari}, \cite{aliansari2} and \cite{baronti}. Recall that a center  
+                                                                                                                           ^
+Warning 45 in uniquely_remotal_in_l_1.tex line 76: Use \[ ... \] instead of $$ ... $$.
+ $c$ of a subset $E$ of a normed space $X$ is an element $c\in X$ such that  $$D(c,E)=\inf_{x\in X} D(x,E).$$ Whether a set has a center or not is another question. However, in inner  
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 2 in uniquely_remotal_in_l_1.tex line 77: Non-breaking space (`~') should have been used.
+  product spaces, any closed bounded set does have a center \cite{aliansari}.\\  
+                                                           ^
+Warning 2 in uniquely_remotal_in_l_1.tex line 79: Non-breaking space (`~') should have been used.
+In \cite{niknam} it was proved that if $E$ is a uniquely remotal subset of a normed space, admitting a center $c$, and if $F$, restricted to the line segment  
+  ^
+Warning 2 in uniquely_remotal_in_l_1.tex line 80: Non-breaking space (`~') should have been used.
+$[c,F(c)]$ is continuous at $c$, then $E$ is a singleton. Then recently, a generalization has been obtained in \cite{syk}, where the authors proved the singletoness of uniquely remotal sets if the farthest point mapping $F$ restricted to $[c,F(c)]$ is partially continuous at $c$. Furthermore, a generalization of Klee's result in \cite{klee}, "If a compact subset $E$, with a center $c$, is uniquely remotal in a normed space $X$, then $E$ must be a  
+                                                                                                              ^
+Warning 2 in uniquely_remotal_in_l_1.tex line 80: Non-breaking space (`~') should have been used.
+$[c,F(c)]$ is continuous at $c$, then $E$ is a singleton. Then recently, a generalization has been obtained in \cite{syk}, where the authors proved the singletoness of uniquely remotal sets if the farthest point mapping $F$ restricted to $[c,F(c)]$ is partially continuous at $c$. Furthermore, a generalization of Klee's result in \cite{klee}, "If a compact subset $E$, with a center $c$, is uniquely remotal in a normed space $X$, then $E$ must be a  
+                                                                                                                                                                                                                                                                                                                                          ^
+Warning 18 in uniquely_remotal_in_l_1.tex line 80: Use either `` or '' as an alternative to `"'.
+$[c,F(c)]$ is continuous at $c$, then $E$ is a singleton. Then recently, a generalization has been obtained in \cite{syk}, where the authors proved the singletoness of uniquely remotal sets if the farthest point mapping $F$ restricted to $[c,F(c)]$ is partially continuous at $c$. Furthermore, a generalization of Klee's result in \cite{klee}, "If a compact subset $E$, with a center $c$, is uniquely remotal in a normed space $X$, then $E$ must be a  
+                                                                                                                                                                                                                                                                                                                                                        ^
+Warning 18 in uniquely_remotal_in_l_1.tex line 81: Use either `` or '' as an alternative to `"'.
+singleton", was also obtained in \cite{syk}.\\  
+         ^
+Warning 2 in uniquely_remotal_in_l_1.tex line 81: Non-breaking space (`~') should have been used.
+singleton", was also obtained in \cite{syk}.\\  
+                                ^
+Warning 24 in uniquely_remotal_in_l_1.tex line 92: Delete this space to maintain correct pagereferences.
+\label{prop1}  
+^
+Warning 40 in uniquely_remotal_in_l_1.tex line 97: You should put punctuation outside inner math mode.
+Suppose that $F(x)\neq y$. Since $E$ is uniquely remotal, then there exists $w\in E$ such that $F(x)=w$. Further, there exists $\epsilon>0$ such that $||x-w||>||x-y||+\epsilon.$ Also, there exists $n_0\in \mathbb{N}$ such that $||x_n-x||<\frac{\epsilon}{2}$ for all $n\geq n_0$. Therefore, for $m\geq n_0$  
+                                                                                                                                                                               ^
+Warning 24 in uniquely_remotal_in_l_1.tex line 108: Delete this space to maintain correct pagereferences.
+\label{prop2}  
+^
+Warning 45 in uniquely_remotal_in_l_1.tex line 109: Use \[ ... \] instead of $$ ... $$.
+Let $K$ be a compact subset of a Banach space $X$ and $E$ be uniquely remotal in $X$. Then there exist $x\in K$ and $e\in E$ such that $$D(E,K)=\sup\{||y-\theta||:y\in K,~\theta\in E\}=||e-x||.$$  
+                                                                                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 45 in uniquely_remotal_in_l_1.tex line 114: Use \[ ... \] instead of $$ ... $$.
+From the definition of $D(E,K)$, there exist two sequences $(e_n)$ and $(x_n)$ in $E$ and $K$ respectively such that $$D(E,K)=\lim_{n\rightarrow \infty} ||e_n-x_n||.$$  
+                                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 45 in uniquely_remotal_in_l_1.tex line 115: Use \[ ... \] instead of $$ ... $$.
+Since $K$ is compact, then there exists a subsequence $(x_{n_k})$ of $(x_n)$ such that $(x_{n_k})$ converges to $x$ in $K$. So, $$D(E,K)=\lim_{k\rightarrow \infty} ||e_{n_k}-x_{n_k}||.$$  
+                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 45 in uniquely_remotal_in_l_1.tex line 117: Use \[ ... \] instead of $$ ... $$.
+The definition of $D(E,K)$ implies that $D(E,K)\geq ||e'-x'||$ for all $e'\in E$ and $x'\in K$. Therefore, $$\displaystyle \lim_{k\rightarrow \infty}||e_{n_k}-x_{n_k}||\geq ||x-F(x)||.$$ But $$||e_{n_k}-x_{n_k}||\leq ||e_{n_k}-x||+||x-x_{n_k}||\leq ||x_{n_k}-x||+||x-F(x)||.$$  
+                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 45 in uniquely_remotal_in_l_1.tex line 117: Use \[ ... \] instead of $$ ... $$.
+The definition of $D(E,K)$ implies that $D(E,K)\geq ||e'-x'||$ for all $e'\in E$ and $x'\in K$. Therefore, $$\displaystyle \lim_{k\rightarrow \infty}||e_{n_k}-x_{n_k}||\geq ||x-F(x)||.$$ But $$||e_{n_k}-x_{n_k}||\leq ||e_{n_k}-x||+||x-x_{n_k}||\leq ||x_{n_k}-x||+||x-F(x)||.$$  
+                                                                                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 45 in uniquely_remotal_in_l_1.tex line 119: Use \[ ... \] instead of $$ ... $$.
+$$\lim_{k\rightarrow \infty}||x_{n_k}-y_{n_k}||\leq ||x-F(x)||.$$  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 45 in uniquely_remotal_in_l_1.tex line 131: Use \[ ... \] instead of $$ ... $$.
+Let $E$ be a uniquely remotal subset of a Banach space $X$. Let $x_0$ be an element in $X$ and $e_0\in E$ be the unique farthest point from $x_0$, i.e $F(x_0)=e_0$. Consider the closed ball $$B[x_0,||x_0-e_0||]=B[x_0,D(x_0,E)].$$ Then clearly $e_0$ lies on the boundary of $B[x_0,D(x_0,E)]$.\\  
+                                                                                                                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 40 in uniquely_remotal_in_l_1.tex line 133: You should put punctuation outside inner math mode.
+Let $J=\{B[y,||y-e_0||:F(y)=e_0\},$ and define the relation $"\leq"$ on $J$ as follows: $$B_1\leq B_2~~if~~B_2\subseteq B_1.$$ It is easy to see that the relation $"\leq"$ is a partial order.\\  
+                                 ^
+Warning 18 in uniquely_remotal_in_l_1.tex line 133: Use either `` or '' as an alternative to `"'.
+Let $J=\{B[y,||y-e_0||:F(y)=e_0\},$ and define the relation $"\leq"$ on $J$ as follows: $$B_1\leq B_2~~if~~B_2\subseteq B_1.$$ It is easy to see that the relation $"\leq"$ is a partial order.\\  
+                                                             ^
+Warning 18 in uniquely_remotal_in_l_1.tex line 133: Use either `` or '' as an alternative to `"'.
+Let $J=\{B[y,||y-e_0||:F(y)=e_0\},$ and define the relation $"\leq"$ on $J$ as follows: $$B_1\leq B_2~~if~~B_2\subseteq B_1.$$ It is easy to see that the relation $"\leq"$ is a partial order.\\  
+                                                                  ^
+Warning 45 in uniquely_remotal_in_l_1.tex line 133: Use \[ ... \] instead of $$ ... $$.
+Let $J=\{B[y,||y-e_0||:F(y)=e_0\},$ and define the relation $"\leq"$ on $J$ as follows: $$B_1\leq B_2~~if~~B_2\subseteq B_1.$$ It is easy to see that the relation $"\leq"$ is a partial order.\\  
+                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 18 in uniquely_remotal_in_l_1.tex line 133: Use either `` or '' as an alternative to `"'.
+Let $J=\{B[y,||y-e_0||:F(y)=e_0\},$ and define the relation $"\leq"$ on $J$ as follows: $$B_1\leq B_2~~if~~B_2\subseteq B_1.$$ It is easy to see that the relation $"\leq"$ is a partial order.\\  
+                                                                                                                                                                    ^
+Warning 18 in uniquely_remotal_in_l_1.tex line 133: Use either `` or '' as an alternative to `"'.
+Let $J=\{B[y,||y-e_0||:F(y)=e_0\},$ and define the relation $"\leq"$ on $J$ as follows: $$B_1\leq B_2~~if~~B_2\subseteq B_1.$$ It is easy to see that the relation $"\leq"$ is a partial order.\\  
+                                                                                                                                                                         ^
+Warning 24 in uniquely_remotal_in_l_1.tex line 137: Delete this space to maintain correct pagereferences.
+\label{thm1}  
+^
+Warning 40 in uniquely_remotal_in_l_1.tex line 145: You should put punctuation outside inner math mode.
+Since $\displaystyle \lim_{n\rightarrow \infty}||y_n-e_0||=r$, then there exists $n_0\in \mathbb{N}$ such that $||y_n-e_0||<r+\frac{\epsilon}{2}$ for all $n\geq n_0$. But $||y_{n_0}-y_{{n_0}+1}||>\epsilon$, so $B_{n_0}\subseteq B_{{n_0}+1}$. Farther, $r\leq ||y_{n_0}-e_0||$ and $||y_{{n_0}+1}-e_0||<r+\frac{\epsilon}{2}.$  Without loss of generality, we can assume, for simplicity, that $y_{n_0}=0$. Then the element $v=(1+\frac{r}{||y_{{n_0}+1}||}y_{{n_0}+1})\in B_{{n_0}+1}$. \\  
+                                                                                                                                                                                                                                                                                                                                ^
+Warning 2 in uniquely_remotal_in_l_1.tex line 147: Non-breaking space (`~') should have been used.
+Now, $||v-0||=||v||=||y_{{n_0}+1}||+r>r+\epsilon$. Thus, $v\not\in B_{n_0}$ which contradicts the fact that $B_{n_0+1}\subseteq B_{n_0}$. Hence, there is a subsequence $(y_{n_k})$ that converges to some element, say $y$. By assumption $F(y_{n_k})=e_0$ for all $n_k$, which implies by Proposition \ref{prop1__ghost} that $F(y)=e_0$. Thus, $B[y,||y-e_0||]\in J$. \\  
+                                                                                                                                                                                                                                                                                                       ^
+Warning 2 in uniquely_remotal_in_l_1.tex line 160: Non-breaking space (`~') should have been used.
+Let $E$ be a uniquely remotal set in $\ell^1$, and let $\hat{e}$ be the unique farthest point in $E$ from $0$, i.e. $F(0)=\hat{e}$. By Theorem \ref{thm1}, $J=\{B[y,||y-\hat{e}||]:F(y)=\hat{e}\}$ has a maximal element say $B[\hat{v},||\hat{v}-\hat{e}||]$. \\  
+                                                                                                                                              ^
+Warning 45 in uniquely_remotal_in_l_1.tex line 179: Use \[ ... \] instead of $$ ... $$.
+$$  
+^^^^^^
+Warning 2 in uniquely_remotal_in_l_1.tex line 182: Non-breaking space (`~') should have been used.
+ By Proposition \ref{prop2}, $D(P,E)=||b_1\delta_1-e'||$ for some $e'\in E$. So, $$1+b_1\leq b_1+||e'||\leq 1+b_1,$$ which implies that $||e'||=1$. Therefore, $e'$ is another farthest point in E from $0$, i.e. $F(0)=\{e', \hat{e}\}$, which contradicts the unique remotality of $E$. Hence, $E$ must be a singleton.  
+               ^
+Warning 45 in uniquely_remotal_in_l_1.tex line 182: Use \[ ... \] instead of $$ ... $$.
+ By Proposition \ref{prop2}, $D(P,E)=||b_1\delta_1-e'||$ for some $e'\in E$. So, $$1+b_1\leq b_1+||e'||\leq 1+b_1,$$ which implies that $||e'||=1$. Therefore, $e'$ is another farthest point in E from $0$, i.e. $F(0)=\{e', \hat{e}\}$, which contradicts the unique remotality of $E$. Hence, $E$ must be a singleton.  
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 1 in uniquely_remotal_in_l_1.tex line 189: Command terminated with space.
+A. Astaneh, \newblock On Uniquely Remotal Subsets of Hilbert Spaces,  
+                     ^
+Warning 1 in uniquely_remotal_in_l_1.tex line 190: Command terminated with space.
+ \newblock Indian Journal Of Pure and Applied Mathematics. 14(10) (1983) 1311--1317.  
+          ^
+Warning 1 in uniquely_remotal_in_l_1.tex line 193: Command terminated with space.
+A. Astaneh,  \newblock On Singletoness of Uniquely Remotal Sets,  
+                      ^
+Warning 1 in uniquely_remotal_in_l_1.tex line 194: Command terminated with space.
+ \newblock Indian Journal Of Pure and Applied Mathematics 17(9)(1986) 1137--1139.  
+          ^
+Warning 36 in uniquely_remotal_in_l_1.tex line 194: You should put a space in front of parenthesis.
+ \newblock Indian Journal Of Pure and Applied Mathematics 17(9)(1986) 1137--1139.  
+                                                               ^
+Warning 1 in uniquely_remotal_in_l_1.tex line 197: Command terminated with space.
+ M. Baronti,  \newblock A note on remotal sets in Banach spaces,  
+                       ^
+Warning 1 in uniquely_remotal_in_l_1.tex line 198: Command terminated with space.
+ \newblock Publications de L'institute mathematique 53(67) (1993) 95--98.  
+          ^
+Warning 1 in uniquely_remotal_in_l_1.tex line 202: Command terminated with space.
+\newblock Convexity of Chebychev sets,  
+         ^
+Warning 1 in uniquely_remotal_in_l_1.tex line 203: Command terminated with space.
+\newblock Math. Ann. 142 (1961) 292--304.  
+         ^
+Warning 1 in uniquely_remotal_in_l_1.tex line 205: Command terminated with space.
+\bibitem{rao} M. Martin, T.S.S.R.K Rao, \newblock On Remotality for Convex Sets in Banach Spaces,  
+                                                 ^
+Warning 1 in uniquely_remotal_in_l_1.tex line 206: Command terminated with space.
+ \newblock Journal of Approximation Theory. 162(2)(2010)  392--396.  
+          ^
+Warning 36 in uniquely_remotal_in_l_1.tex line 206: You should put a space in front of parenthesis.
+ \newblock Journal of Approximation Theory. 162(2)(2010)  392--396.  
+                                                  ^
+Warning 1 in uniquely_remotal_in_l_1.tex line 208: Command terminated with space.
+ \bibitem{narang} T. D. Narang, \newblock On  
+                                         ^
+Warning 26 in uniquely_remotal_in_l_1.tex line 209: You ought to remove spaces in front of punctuation.
+singletoness of uniquely remotal sets , \newblock Periodica  
+                                     ^
+Warning 1 in uniquely_remotal_in_l_1.tex line 209: Command terminated with space.
+singletoness of uniquely remotal sets , \newblock Periodica  
+                                                 ^
+Warning 1 in uniquely_remotal_in_l_1.tex line 213: Command terminated with space.
+\bibitem{niknam} A. Niknam,  \newblock On Uniquely Remotal Sets,  
+                                      ^
+Warning 1 in uniquely_remotal_in_l_1.tex line 214: Command terminated with space.
+ \newblock Indian Journal Of Pure and Applied Mathematics 15(10) (1984)  1079--1083.  
+          ^
+Warning 1 in uniquely_remotal_in_l_1.tex line 217: Command terminated with space.
+\bibitem{sk} M. Sababheh, R. Khalil,  \newblock A study of Uniquely Remotal Sets,  
+                                               ^
+Warning 1 in uniquely_remotal_in_l_1.tex line 218: Command terminated with space.
+ \newblock Journal of Computational Analysis and  Applications 13(7)(2010) 1233--1239.  
+          ^
+Warning 36 in uniquely_remotal_in_l_1.tex line 218: You should put a space in front of parenthesis.
+ \newblock Journal of Computational Analysis and  Applications 13(7)(2010) 1233--1239.  
+                                                                    ^
+Warning 1 in uniquely_remotal_in_l_1.tex line 221: Command terminated with space.
+\bibitem{syk}  M. Sababheh, A. Yousef and R. Khalil,  \newblock Uniquely Remotal Sets in Banach Spaces,  
+                                                               ^
+Warning 1 in uniquely_remotal_in_l_1.tex line 222: Command terminated with space.
+ \newblock Filomat 31:9 (2017), 2773�-2777.  
+          ^
+Warning 15 in uniquely_remotal_in_l_1.tex line 185: No match found for `{'.
+{\small  
+^
+Warning 15 in uniquely_remotal_in_l_1.tex line 133: No match found for `['.
+Let $J=\{B[y,||y-e_0||:F(y)=e_0\},$ and define the relation $"\leq"$ on $J$ as follows: $$B_1\leq B_2~~if~~B_2\subseteq B_1.$$ It is easy to see that the relation $"\leq"$ is a partial order.\\  
+          ^
+Warning 17 in uniquely_remotal_in_l_1.tex line 228: Number of `[' doesn't match the number of `]'!
+
+
+Warning 17 in uniquely_remotal_in_l_1.tex line 228: Number of `{' doesn't match the number of `}'!
+
+

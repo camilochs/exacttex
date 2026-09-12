@@ -1,0 +1,27 @@
+tectonic pdf bytes=967602
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=[] secs=6
+ning: tang:231: Overfull \hbox (14.22287pt too wide) in paragraph at lines 230--231
+warning: tang:260: Overfull \hbox (14.2309pt too wide) in paragraph at lines 259--260
+warning: tang:283: Overfull \hbox (14.22746pt too wide) in paragraph at lines 282--283
+warning: tang:301: Overfull \hbox (14.22598pt too wide) in paragraph at lines 300--301
+warning: tang:309: Overfull \hbox (20.86128pt too wide) in paragraph at lines 308--309
+warning: tang:321: Overfull \hbox (14.24374pt too wide) in paragraph at lines 320--321
+warning: tang:342: Overfull \hbox (14.22517pt too wide) in paragraph at lines 341--342
+warning: tang:364: Overfull \hbox (14.23409pt too wide) in paragraph at lines 363--364
+warning: tang:401: Overfull \hbox (14.22676pt too wide) in paragraph at lines 400--401
+warning: tang:132: Overfull \hbox (37.28757pt too wide) in paragraph at lines 126--132
+warning: tang:136: Overfull \hbox (14.23729pt too wide) in paragraph at lines 135--136
+warning: tang:202: Overfull \hbox (14.2336pt too wide) in paragraph at lines 201--202
+warning: tang:220: Overfull \hbox (14.2309pt too wide) in paragraph at lines 219--220
+warning: tang:231: Overfull \hbox (14.22287pt too wide) in paragraph at lines 230--231
+warning: tang:260: Overfull \hbox (14.2309pt too wide) in paragraph at lines 259--260
+warning: tang:283: Overfull \hbox (14.22746pt too wide) in paragraph at lines 282--283
+warning: tang:301: Overfull \hbox (14.22598pt too wide) in paragraph at lines 300--301
+warning: tang:309: Overfull \hbox (20.86128pt too wide) in paragraph at lines 308--309
+warning: tang:321: Overfull \hbox (14.24374pt too wide) in paragraph at lines 320--321
+warning: tang:342: Overfull \hbox (14.22517pt too wide) in paragraph at lines 341--342
+warning: tang:364: Overfull \hbox (14.23409pt too wide) in paragraph at lines 363--364
+warning: tang:401: Overfull \hbox (14.22676pt too wide) in paragraph at lines 400--401
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

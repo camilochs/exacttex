@@ -1,0 +1,25 @@
+{
+ "coverage": 0.115117,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`ML_analyticCont.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "ML_AC_v19_arixv.xtex",
+    "offset": 3786,
+    "length": 49,
+    "line": 113,
+    "column": 7
+   },
+   "message": "citation checking unavailable: `ML_analyticCont.bib` could not be read",
+   "related": []
+  }
+ ]
+}

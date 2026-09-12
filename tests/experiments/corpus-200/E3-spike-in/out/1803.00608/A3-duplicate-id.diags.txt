@@ -1,0 +1,3 @@
+planted=intro sites=[('CTR-Spectr-arXive.xtex', 77), ('CTR-Spectr-arXive.xtex', 76)]
+xtex new=[('XT1001', 'intro', 'CTR-Spectr-arXive.xtex', 77)]
+texlab new=[('ERROR', 'CTR-Spectr-arXive.tex', 76, 'Duplicate label'), ('ERROR', 'CTR-Spectr-arXive.tex', 77, 'Duplicate label'), ('info', 'CTR-Spectr-arXive.tex', 76, 'Unused label')]

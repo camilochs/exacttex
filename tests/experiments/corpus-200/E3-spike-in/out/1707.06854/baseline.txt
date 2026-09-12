@@ -1,0 +1,23 @@
+tectonic pdf bytes=251663
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'ws-acs.cls', 270, 'Undefined reference'), ('ERROR', 'ws-acs.tex', 83, 'Undefined reference'), ('ERROR', 'ws-acs.tex', 86, 'Undefined reference'), ('ERROR', 'ws-acs.tex', 87, 'Undefined reference'), ('ERROR', 'ws-acs.tex', 94, 'Undefined reference'), ('ERROR', 'ws-acs.tex', 96, 'Undefined reference'), ('ERROR', 'ws-acs.tex', 318, 'Undefined reference'), ('ERROR', 'ws-acs.tex', 432, 'Undefined reference'), ('ERROR', 'ws-acs.tex', 434, 'Undefined reference'), ('ERROR', 'ws-acs.tex', 440, 'Undefined reference'), ('info', 'ws-acs.tex', 175, 'Unused label'), ('info', 'ws-acs.tex', 182, 'Unused label'), ('info', 'ws-acs.tex', 293, 'Unused label'), ('info', 'ws-acs.tex', 407, 'Unused label')]
+tectonic exit=0 warnings=['altru1', 'altru11', 'altru16', 'altru18', 'altru19', 'altru20', 'altru22', 'altru4', 'altru6', 'altru9', 'altru_gen1', 'altru_gen2', 'altru_gen3', 'altru_gen4', 'bottle1', 'bottle2', 'extra1', 'extra2', 'games1', 'games12', 'games15', 'games5', 'gen_alg_2', 'gen_alg_3', 'incl1', 'k-sel', 'org', 'radical', 'recip1', 'recip2', 'stasis'] secs=2
+ PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).

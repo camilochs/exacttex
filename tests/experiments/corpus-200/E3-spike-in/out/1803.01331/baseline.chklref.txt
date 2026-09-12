@@ -1,0 +1,109 @@
+pdf=0
+exit=0
+lines=105
+unique_findings=0
+Running pdflatex  -interaction nonstopmode   "Manuscript1.tex" to collect labels references and environment declarations
+
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./Manuscript1.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+LaTeX Info: Writing file `./example.eps'.
+
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fix-cm.s
+ty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ts1enc.d
+ef)) (./svjour3.cls
+Document Class: svjour3 2010/11/25 v3.3 
+LaTeX document class for Springer journals
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fleqn.cl
+o) (./svepjc3.clo
+SVJour Class option: svepjc3.clo for EPJC journal
+)
+
+! LaTeX Error: File `svglov3.clo' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: clo)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.131 \input{svglov3.clo}
+                         ^^M
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on Manuscript1.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./Manuscript1.tex
+
+LaTeX Info: File `example.eps' already exists on the system.
+            Not generating it from this source.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fix-cm.s
+ty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ts1enc.d
+ef)) (./svjour3.cls
+Document Class: svjour3 2010/11/25 v3.3 
+LaTeX document class for Springer journals
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fleqn.cl
+o) (./svepjc3.clo
+SVJour Class option: svepjc3.clo for EPJC journal
+)
+
+! LaTeX Error: File `svglov3.clo' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: clo)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.131 \input{svglov3.clo}
+                         ^^M
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on Manuscript1.log.
+************************************
+** Labels in starred environments **
+************************************
+
+*******************
+** Unused Labels **
+*******************
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

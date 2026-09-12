@@ -1,0 +1,10 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=[] secs=2
+error: article.def:80: LaTeX Error: Command \Ref already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+error: halted on potentially-recoverable error as specified

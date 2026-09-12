@@ -1,0 +1,24 @@
+tectonic pdf bytes=2399239
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=['LastBibItem', 'fig:Band_structure', 'fig:QO', 'fig:pockets'] secs=6
+warning: 221_v2.tex:41: Underfull \hbox (badness 1259) in paragraph at lines 40--41
+warning: 221_v2.tex:46: Underfull \hbox (badness 2600) in paragraph at lines 45--46
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: 221_v2.bbl:325: Underfull \hbox (badness 1715) in paragraph at lines 314--325
+warning: errors were issued by BibTeX, but were ignored; use --print and/or --keep-logs for details.
+warning: 221_v2.tex:41: Underfull \hbox (badness 1259) in paragraph at lines 40--41
+warning: 221_v2.tex:46: Underfull \hbox (badness 2600) in paragraph at lines 45--46
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: 221_v2.tex:41: Underfull \hbox (badness 1259) in paragraph at lines 40--41
+warning: 221_v2.tex:46: Underfull \hbox (badness 2600) in paragraph at lines 45--46
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).

@@ -1,0 +1,10 @@
+target,kind,verdict,field,severity,document,source
+bravyi-HybridApproximateColoring-2020,bib-entry,partial,year,medium,2020,2022
+cygan-ProblemsCNFSAT-2016,bib-entry,partial,year,medium,2016,2012
+eppstein-MISGraphCol-2001,bib-entry,partial,year,medium,2001,2006
+jeffery-BooleanMatrixMultGraphCollision-2016,bib-entry,partial,year,medium,2016,2015
+krol2021efficient,bib-entry,partial,year,medium,2021,2022
+lee-TriangleDetectionAssociativityTesting-2017,bib-entry,partial,year,medium,2017,2015
+shimizu-ExpTimeQuantAlgoGraphColoring-2021,bib-entry,partial,year,medium,2021,2022
+shimizu-QuantumGraphColoring-2021,bib-entry,partial,year,medium,2021,2022
+wang-ListColoringWirelessAllocation-2005,bib-entry,partial,year,medium,2005,2006

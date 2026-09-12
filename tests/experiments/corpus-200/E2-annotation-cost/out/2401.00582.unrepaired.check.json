@@ -1,0 +1,36 @@
+{
+ "coverage": 0.011399,
+ "bibliography": {
+  "state": "complete",
+  "entries": 12
+ },
+ "diagnostics": [
+  {
+   "code": "XT1020",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "tab:Carbon",
+   "span": {
+    "file": "templateArxiv.xtex",
+    "offset": 36671,
+    "length": 6,
+    "line": 235,
+    "column": 458
+   },
+   "message": "prose says `Figure` but `tab:Carbon` is a table",
+   "related": [
+    {
+     "message": "table declared here",
+     "span": {
+      "file": "templateArxiv.xtex",
+      "offset": 37365,
+      "length": 10,
+      "line": 246,
+      "column": 5
+     }
+    }
+   ]
+  }
+ ]
+}

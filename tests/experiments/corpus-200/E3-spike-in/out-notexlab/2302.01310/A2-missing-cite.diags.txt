@@ -1,0 +1,3 @@
+planted=couckuyt2022bayesian__ghost sites=[('paper.xtex', 88)]
+xtex new=[('XT1005', 'couckuyt2022bayesian__ghost', 'paper.xtex', 88)]
+texlab new=[]

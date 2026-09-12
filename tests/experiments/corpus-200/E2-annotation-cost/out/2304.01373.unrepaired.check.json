@@ -1,0 +1,36 @@
+{
+ "coverage": 0.03451,
+ "bibliography": {
+  "state": "complete",
+  "entries": 156
+ },
+ "diagnostics": [
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "table:hardware",
+   "span": {
+    "file": "main.xtex",
+    "offset": 68363,
+    "length": 19,
+    "line": 583,
+    "column": 2
+   },
+   "message": "identifier `table:hardware` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "main.xtex",
+      "offset": 23923,
+      "length": 19,
+      "line": 252,
+      "column": 2
+     }
+    }
+   ]
+  }
+ ]
+}

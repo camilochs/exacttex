@@ -1,0 +1,128 @@
+{
+ "paper": "2211.05100",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 178926,
+   "chars_after": 178832,
+   "emitted": true,
+   "identity": "import-ext-only",
+   "lines_differing": 5
+  },
+  {
+   "file": "tables/linguistic_makeup_table.tex",
+   "chars_before": 6166,
+   "chars_after": 6163,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "tables/MT-WMT-current.tex",
+   "chars_before": 976,
+   "chars_after": 973,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "tables/MT-diabla-current.tex",
+   "chars_before": 1253,
+   "chars_after": 1250,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "tables/MT-flores-current.tex",
+   "chars_before": 4125,
+   "chars_after": 4110,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "tables/embeddings.tex",
+   "chars_before": 2565,
+   "chars_after": 2562,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "tables/probing_results.tex",
+   "chars_before": 3982,
+   "chars_after": 3979,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 7,
+ "chars_before": 197993,
+ "chars_after": 197869,
+ "delta_pct": -0.06262847676433005,
+ "unrepaired": {
+  "chars_after": 197869,
+  "chars_before": 197993,
+  "converted_files": 7,
+  "check_exit": 0,
+  "coverage": 0.044382,
+  "bibliography": {
+   "state": "complete",
+   "entries": 188
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.06262847676433005
+ },
+ "stats": {
+  "cite_cmds_live": 235,
+  "cite_keys_live": 294,
+  "cite_with_optarg_or_star": 2,
+  "cite_keys_outside_grammar": 6,
+  "other_cite_cmds": 11,
+  "labels_live": 56,
+  "labels_outside_grammar": 0,
+  "refs_live": 30,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 35,
+  "float_envs": 29,
+  "cite_cmds_annotated": 225,
+  "cite_keys_annotated": 271,
+  "ids_annotated": 56,
+  "refs_annotated": 30,
+  "inputs_root": 6,
+  "inputs_imported": 6,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 2,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "tables/embeddings.tex",
+   "line": 9,
+   "token": "@citep(fitzgerald2022massive)",
+   "wrapper": "emph",
+   "context": "\\multicolumn{8}{c}{\\emph{Embedding classification performance on MASSIVE~\\citep{fitzgerald2022massive} scored using accuracy}} \\\\"
+  },
+  {
+   "file": "tables/embeddings.tex",
+   "line": 27,
+   "token": "@citep(madabushi2022semeval)",
+   "wrapper": "emph",
+   "context": "\\multicolumn{8}{c}{\\emph{Semantic textual similarity on STS22~\\citep{madabushi2022semeval} scored using spearman correlation of cosine similarities}} \\\\"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.044382,
+ "bibliography": {
+  "state": "complete",
+  "entries": 188
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

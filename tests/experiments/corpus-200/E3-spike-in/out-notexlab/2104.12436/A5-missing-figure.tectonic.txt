@@ -1,0 +1,5 @@
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: manuscript.tex:112: Overfull \hbox (263.56985pt too wide) in paragraph at lines 106--112
+error: manuscript.tex:166: Unable to load picture or PDF file 'figures/planted_ghost.pdf'
+error: halted on potentially-recoverable error as specified

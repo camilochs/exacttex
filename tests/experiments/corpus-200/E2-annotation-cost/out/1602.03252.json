@@ -1,0 +1,144 @@
+{
+ "paper": "1602.03252",
+ "main": "221_v2.tex",
+ "files": [
+  {
+   "file": "221_v2.tex",
+   "chars_before": 31827,
+   "chars_after": 31803,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 31827,
+ "chars_after": 31803,
+ "delta_pct": -0.07540767273070034,
+ "unrepaired": {
+  "chars_after": 31779,
+  "chars_before": 31827,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.022838,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`bib.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.15081534546140068
+ },
+ "stats": {
+  "cite_cmds_live": 28,
+  "cite_keys_live": 49,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 8,
+  "other_cite_cmds": 0,
+  "labels_live": 16,
+  "labels_outside_grammar": 0,
+  "refs_live": 16,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 8,
+  "cite_cmds_annotated": 20,
+  "cite_keys_annotated": 26,
+  "ids_annotated": 8,
+  "refs_annotated": 16,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 8,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "221_v2.tex",
+   "line": 135,
+   "token": "@id(fig:Zr_FS)",
+   "wrapper": "?",
+   "context": "\\label{fig:Zr_FS}"
+  },
+  {
+   "file": "221_v2.tex",
+   "line": 139,
+   "token": "@id(fig:Hf_FS)",
+   "wrapper": "?",
+   "context": "\\label{fig:Hf_FS}"
+  },
+  {
+   "file": "221_v2.tex",
+   "line": 152,
+   "token": "@id(fig:Zr_spin)",
+   "wrapper": "?",
+   "context": "\\label{fig:Zr_spin}"
+  },
+  {
+   "file": "221_v2.tex",
+   "line": 156,
+   "token": "@id(fig:Zr_ls)",
+   "wrapper": "?",
+   "context": "\\label{fig:Zr_ls}"
+  },
+  {
+   "file": "221_v2.tex",
+   "line": 161,
+   "token": "@id(fig:Hf_spin)",
+   "wrapper": "?",
+   "context": "\\label{fig:Hf_spin}"
+  },
+  {
+   "file": "221_v2.tex",
+   "line": 165,
+   "token": "@id(fig:Hf_ls)",
+   "wrapper": "?",
+   "context": "\\label{fig:Hf_ls}"
+  },
+  {
+   "file": "221_v2.tex",
+   "line": 178,
+   "token": "@id(fig:Hf_spin)",
+   "wrapper": "?",
+   "context": "\\label{fig:Hf_spin}"
+  },
+  {
+   "file": "221_v2.tex",
+   "line": 182,
+   "token": "@id(fig:Hf_ls)",
+   "wrapper": "?",
+   "context": "\\label{fig:Hf_ls}"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.022821,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`bib.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "221_v2.xtex",
+    "offset": 3585,
+    "length": 11,
+    "line": 38,
+    "column": 1029
+   },
+   "message": "citation checking unavailable: `bib.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

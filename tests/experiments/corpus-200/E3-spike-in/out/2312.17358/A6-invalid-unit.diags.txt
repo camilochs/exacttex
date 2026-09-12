@@ -1,0 +1,3 @@
+planted=fig:planted_unit sites=[('sample-sigplan.xtex', 49)]
+xtex new=[('XT1007', '', 'sample-sigplan.xtex', 49)]
+texlab new=[]

@@ -1,0 +1,397 @@
+pdf=1
+exit=0
+lines=393
+unique_findings=3
+Running pdflatex  -interaction nonstopmode   "absabook.tex" to collect labels references and environment declarations
+
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./absabook.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(./llncs.cls
+Document Class: llncs 2002/01/28 v2.13 
+ LaTeX document class for Lecture Notes in Computer Science
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/article.
+cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/size10.c
+lo))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/multico
+l.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/epsf/epsf.s
+ty
+This is `epsf.tex' v2.7.4 <14 February 2011>
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/cite/cite.sty
+) (./ps-fig.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/infwarerr/i
+nfwarerr.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/grfext/grfext
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/kvdefinekey
+s/kvdefinekeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdftexcmds/
+pdftexcmds.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iftex
+.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/colo
+r.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/inputenc
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ucs/utf8x.def
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/utf8.def
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/omsenc.d
+fu)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ot1enc.d
+fu)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/t1enc.df
+u)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ts1enc.d
+fu))))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/textcomp
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fontenc.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/fancybox/fanc
+ybox.sty
+Style option: `fancybox' v1.4 <2010/05/15> (tvz)
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def)
+No file absabook.aux.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+
+LaTeX Warning: Citation `hu_mining_2004__ghost' on page 1 undefined on input li
+ne 39.
+
+[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc
+/dvips/cm-super/cm-super-t1.enc}]
+
+LaTeX Warning: Citation `urieli_apport_2013' on page 2 undefined on input line 
+69.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--168
+[]\T1/cmr/m/n/7 <[]Opinion[] []tar-get=[]"ensemble" []cat-e-gory=[]"presentatio
+n" []po-lar-ity=[]"negative" []po-lar-i-
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--168
+[]\T1/cmr/m/n/7 <[]Opinion[] []tar-get=[]"historiens" []cat-e-gory=[]"methodolo
+gy" []po-lar-ity=[]"positive" []po-lar-i-
+
+Overfull \hbox (7.77455pt too wide) in paragraph at lines 83--169
+[] 
+
+Overfull \hbox (7.77455pt too wide) in paragraph at lines 83--169
+[] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--169
+
+[2]
+Underfull \vbox (badness 10000) has occurred while \output is active [3]
+[4]
+
+LaTeX Warning: Citation `rosenthal_semeval-2015_2015' on page 5 undefined on in
+put line 262.
+
+[5]
+
+LaTeX Warning: Citation `hamdan_impact_2014' on page 6 undefined on input line 
+295.
+
+[6]
+
+LaTeX Warning: Citation `rosenthal_semeval-2015_2015' on page 7 undefined on in
+put line 303.
+
+
+LaTeX Warning: Citation `hu_mining_2004' on page 7 undefined on input line 337.
+
+
+
+LaTeX Warning: Citation `agrawal_fast_1994' on page 7 undefined on input line 3
+37.
+
+[7]
+
+LaTeX Warning: Citation `moghaddam_opinion_2010' on page 8 undefined on input l
+ine 339.
+
+
+LaTeX Warning: Citation `jin_novel_2009' on page 8 undefined on input line 341.
+
+
+
+LaTeX Warning: Citation `jakob_extracting_2010' on page 8 undefined on input li
+ne 343.
+
+
+LaTeX Warning: Citation `hamdan_supervised_2014' on page 8 undefined on input l
+ine 343.
+
+
+LaTeX Warning: Citation `hamdan_lsislif2015-1' on page 8 undefined on input lin
+e 343.
+
+
+LaTeX Warning: Citation `brody_unsupervised_2010' on page 8 undefined on input 
+line 345.
+
+
+LaTeX Warning: Citation `hatzivassiloglou_predicting_1997' on page 8 undefined 
+on input line 345.
+
+
+LaTeX Warning: Citation `lin_weakly_2012' on page 8 undefined on input line 347
+.
+
+
+LaTeX Warning: Citation `wei_sentiment_2010' on page 8 undefined on input line 
+349.
+
+
+LaTeX Warning: Citation `kim_hierarchical_2013' on page 8 undefined on input li
+ne 349.
+
+(./absabook.bbl [8]
+Underfull \hbox (badness 1242) in paragraph at lines 40--46
+[]\T1/cmr/m/n/9 Hatzivassiloglou, V. and McK-e-own, K. R.
+[9]) [10] (./absabook.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></opt/hom
+ebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm-super/sfbx
+1000.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/pu
+blic/cm-super/sfbx1200.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-d
+ist/fonts/type1/public/cm-super/sfbx1440.pfb></opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></opt/homebrew/C
+ellar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pf
+b></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm
+-super/sfrm0900.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1000.pfb></opt/homebrew/Cellar/texlive/20260301/sh
+are/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb></opt/homebrew/Cellar/t
+exlive/20260301/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></opt
+/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm-super/
+sftt1000.pfb>
+Output written on absabook.pdf (10 pages, 269853 bytes).
+Transcript written on absabook.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./absabook.tex (./llncs.cls
+Document Class: llncs 2002/01/28 v2.13 
+ LaTeX document class for Lecture Notes in Computer Science
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/article.
+cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/size10.c
+lo))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/multico
+l.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/epsf/epsf.s
+ty
+This is `epsf.tex' v2.7.4 <14 February 2011>
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/cite/cite.sty
+) (./ps-fig.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/infwarerr/i
+nfwarerr.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/grfext/grfext
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/kvdefinekey
+s/kvdefinekeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdftexcmds/
+pdftexcmds.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iftex
+.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/colo
+r.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/inputenc
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ucs/utf8x.def
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/utf8.def
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/omsenc.d
+fu)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ot1enc.d
+fu)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/t1enc.df
+u)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ts1enc.d
+fu))))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/textcomp
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fontenc.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/fancybox/fanc
+ybox.sty
+Style option: `fancybox' v1.4 <2010/05/15> (tvz)
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def) (./absabook.aux)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+
+LaTeX Warning: Citation `hu_mining_2004__ghost' on page 1 undefined on input li
+ne 39.
+
+[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc
+/dvips/cm-super/cm-super-t1.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 168--168
+[]\T1/cmr/m/n/7 <[]Opinion[] []tar-get=[]"ensemble" []cat-e-gory=[]"presentatio
+n" []po-lar-ity=[]"negative" []po-lar-i-
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--168
+[]\T1/cmr/m/n/7 <[]Opinion[] []tar-get=[]"historiens" []cat-e-gory=[]"methodolo
+gy" []po-lar-ity=[]"positive" []po-lar-i-
+
+Overfull \hbox (7.77455pt too wide) in paragraph at lines 83--169
+[] 
+
+Overfull \hbox (7.77455pt too wide) in paragraph at lines 83--169
+[] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--169
+
+[2]
+Underfull \vbox (badness 10000) has occurred while \output is active [3]
+[4] [5] [6] [7] [8] (./absabook.bbl
+Underfull \hbox (badness 1242) in paragraph at lines 40--46
+[]\T1/cmr/m/n/9 Hatzivassiloglou, V. and McK-e-own, K. R.
+[9])  [10] (./absabook.aux)
+
+LaTeX Warning: There were undefined references.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></opt/hom
+ebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm-super/sfbx
+1000.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/pu
+blic/cm-super/sfbx1200.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-d
+ist/fonts/type1/public/cm-super/sfbx1440.pfb></opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></opt/homebrew/C
+ellar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pf
+b></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm
+-super/sfrm0900.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1000.pfb></opt/homebrew/Cellar/texlive/20260301/sh
+are/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb></opt/homebrew/Cellar/t
+exlive/20260301/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></opt
+/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm-super/
+sftt1000.pfb>
+Output written on absabook.pdf (10 pages, 270396 bytes).
+Transcript written on absabook.log.
+************************************
+** Labels in starred environments **
+************************************
+-- absabook.tex         line  173: consider using a STAR environment
+-- absabook.tex         line  263: consider using a STAR environment
+-- absabook.tex         line  305: consider using a STAR environment
+
+*******************
+** Unused Labels **
+*******************
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

@@ -1,0 +1,109 @@
+{
+ "paper": "2301.00126",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 2672,
+   "chars_after": 2704,
+   "emitted": true,
+   "identity": "import-ext-only",
+   "lines_differing": 4
+  },
+  {
+   "file": "introduction.tex",
+   "chars_before": 4957,
+   "chars_after": 4954,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "MaterialsandMethods.tex",
+   "chars_before": 13824,
+   "chars_after": 13812,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "ResultsandDiscussion.tex",
+   "chars_before": 11677,
+   "chars_after": 11653,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "conclusions.tex",
+   "chars_before": 1098,
+   "chars_after": 1095,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 5,
+ "chars_before": 34228,
+ "chars_after": 34218,
+ "delta_pct": -0.029215846675236648,
+ "unrepaired": {
+  "chars_after": 34215,
+  "chars_before": 34228,
+  "converted_files": 5,
+  "check_exit": 1,
+  "coverage": 0.020446,
+  "bibliography": {
+   "state": "complete",
+   "entries": 29
+  },
+  "errors": 1,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.03798060067780764
+ },
+ "stats": {
+  "cite_cmds_live": 16,
+  "cite_keys_live": 30,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 15,
+  "labels_outside_grammar": 0,
+  "refs_live": 7,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 11,
+  "cite_cmds_annotated": 16,
+  "cite_keys_annotated": 30,
+  "ids_annotated": 14,
+  "refs_annotated": 7,
+  "inputs_root": 4,
+  "inputs_imported": 4,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 1,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [
+  {
+   "code": "XT1001",
+   "name": "t3",
+   "file": "MaterialsandMethods.xtex",
+   "line": 227,
+   "message": "identifier `t3` is already declared",
+   "classification": "real: \\label{t3} appears 2x in the sources",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.020239,
+ "bibliography": {
+  "state": "complete",
+  "entries": 29
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

@@ -1,0 +1,505 @@
+pdf=1
+exit=0
+lines=978
+unique_findings=14
+f> <./img/trackAtoN.pdf
+
+pdfTeX warning: pdflatex (file ./img/trackAtoN.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+>]
+
+LaTeX Warning: Reference `APO:tab:avgRMS' on page 7 undefined on input line 391
+.
+
+
+Package natbib Warning: Citation `BA' on page 7 undefined on input line 424.
+
+
+Package natbib Warning: Citation `CLG-TV1' on page 7 undefined on input line 42
+4.
+
+
+Package natbib Warning: Citation `HS' on page 7 undefined on input line 424.
+
+
+Package natbib Warning: Citation `Brox_Large' on page 7 undefined on input line
+ 424.
+
+
+Package natbib Warning: Citation `Sun10' on page 7 undefined on input line 424.
+
+
+
+Package natbib Warning: Citation `ITV_L1' on page 7 undefined on input line 424
+.
+
+
+Package natbib Warning: Citation `Garg' on page 7 undefined on input line 449.
+
+
+Package natbib Warning: Citation `Garg' on page 7 undefined on input line 449.
+
+
+Package natbib Warning: Citation `Garg' on page 7 undefined on input line 449.
+
+
+Package natbib Warning: Citation `Garg' on page 7 undefined on input line 449.
+
+
+Package natbib Warning: Citation `Pizarro' on page 7 undefined on input line 44
+9.
+
+
+Package natbib Warning: Citation `Pizarro' on page 7 undefined on input line 44
+9.
+
+
+LaTeX Warning: Reference `APO:tab:avgRMS' on page 7 undefined on input line 454
+.
+
+
+Package natbib Warning: Citation `Garg' on page 7 undefined on input line 454.
+
+
+Package natbib Warning: Citation `Pizarro' on page 7 undefined on input line 45
+4.
+
+
+LaTeX Warning: Reference `APO:tab:avgRMS' on page 7 undefined on input line 454
+.
+
+
+Package natbib Warning: Citation `Garg13' on page 7 undefined on input line 454
+.
+
+
+LaTeX Warning: Reference `APO:tab:avgRMS' on page 7 undefined on input line 454
+.
+
+
+Package natbib Warning: Citation `Garg' on page 7 undefined on input line 454.
+
+
+Package natbib Warning: Citation `Pizarro' on page 7 undefined on input line 45
+4.
+
+
+LaTeX Warning: Reference `APO:tab:avgRMS' on page 7 undefined on input line 454
+.
+
+
+LaTeX Warning: Reference `APO:tab:avg30RMS' on page 7 undefined on input line 4
+56.
+
+
+LaTeX Warning: Reference `APO:tab:avgRMS_1' on page 7 undefined on input line 4
+56.
+
+[7 <./img/QM_dataset.pdf>]
+
+Package natbib Warning: Citation `BA' on page 8 undefined on input line 486.
+
+
+Package natbib Warning: Citation `CLG-TV1' on page 8 undefined on input line 48
+6.
+
+
+Package natbib Warning: Citation `HS' on page 8 undefined on input line 486.
+
+
+Package natbib Warning: Citation `Brox_Large' on page 8 undefined on input line
+ 486.
+
+
+Package natbib Warning: Citation `Sun10' on page 8 undefined on input line 486.
+
+
+
+Package natbib Warning: Citation `ITV_L1' on page 8 undefined on input line 486
+.
+
+
+Package natbib Warning: Citation `BA' on page 8 undefined on input line 537.
+
+
+Package natbib Warning: Citation `CLG-TV1' on page 8 undefined on input line 53
+7.
+
+
+Package natbib Warning: Citation `HS' on page 8 undefined on input line 537.
+
+
+Package natbib Warning: Citation `Brox_Large' on page 8 undefined on input line
+ 537.
+
+
+Package natbib Warning: Citation `Sun10' on page 8 undefined on input line 537.
+
+
+
+Package natbib Warning: Citation `ITV_L1' on page 8 undefined on input line 537
+.
+
+
+LaTeX Warning: Reference `APO:tab:infoSeqs' on page 8 undefined on input line 5
+42.
+
+
+LaTeX Warning: Reference `APO:tab:percSiftRMS' on page 8 undefined on input lin
+e 542.
+
+
+Package natbib Warning: Citation `Beeler' on page 8 undefined on input line 542
+.
+
+
+LaTeX Warning: Reference `APO:fig:visFigs' on page 8 undefined on input line 54
+4.
+
+
+Package natbib Warning: Citation `GPU_SIFT' on page 8 undefined on input line 5
+46.
+
+
+Overfull \hbox (5.54778pt too wide) in paragraph at lines 546--547
+\T1/ptm/m/n/10 heav-ily re-lies on the sup-ple-men-tary op-ti-cal flow method,
+[8]
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active [9]
+Overfull \hbox (2.97786pt too wide) in paragraph at lines 566--567
+\T1/ptm/m/n/10 through long im-age se-quences. Our op-ti-mi-sa-tion frame-
+
+Underfull \hbox (badness 1038) in paragraph at lines 572--573
+\T1/ptm/m/n/10 EP/L016540/1 and CAM-ERA EP/M023281/1; and
+(./apo.bbl
+Underfull \hbox (badness 2057) in paragraph at lines 10--16
+[]\T1/ptm/m/n/8 Simon Baker, Daniel Scharstein, J. Lewis, Ste-fan Roth,
+
+Underfull \hbox (badness 5637) in paragraph at lines 34--38
+[]\T1/ptm/m/n/8 G. Bor-shukov, D. Piponi, O. Larsen, JP Lewis, and
+
+Underfull \vbox (badness 10000) has occurred while \output is active [10]
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active [11 <./img
+/visFigsFrank_3.pdf> <./img/visFigsVicon_2.pdf
+
+pdfTeX warning: pdflatex (file ./img/visFigsVicon_2.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+>])
+
+Package natbib Warning: There were undefined citations.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active [12]
+(./apo.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi6.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/homebrew
+/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
+pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20260301/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/te
+xlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt
+/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy6.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy7.pfb></opt/homebrew/Cellar/texlive/20260301/share/tex
+mf-dist/fonts/type1/urw/times/utmb8a.pfb></opt/homebrew/Cellar/texlive/20260301
+/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></opt/homebrew/Ce
+llar/texlive/20260301/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on apo.pdf (13 pages, 6721343 bytes).
+Transcript written on apo.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./apo.tex (./iosart2c.cls
+Document Class: iosart2c 2009/03/30 v1.0, IOS Press
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fleqn.cl
+o)
+Ten point
+(./flushend.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/epsf
+ig.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def))))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/comment/comme
+nt.sty Excluding comment 'comment')
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/booktabs/book
+tabs.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsma
+th.sty
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amste
+xt.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsge
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsbs
+y.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsop
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amss
+ymb.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amsf
+onts.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amscls/amsthm
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsxt
+ra.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/fancyhdr/fanc
+yhdr.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/algorithms/al
+gorithm.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/float/float.s
+ty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ifthen.s
+ty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/algorithms/al
+gorithmic.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/subfigure/sub
+figure.sty
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/subfigure/sub
+figure.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fontenc.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/psnfss/times.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/natbib/natbib
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fontenc.
+sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/psnfss/t1ptm.
+fd))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/url/url.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/dcolumn
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/array.s
+ty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def) (./apo.aux
+
+LaTeX Warning: Label `APO:sec:intro' multiply defined.
+
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/psnfss/ts1ptm
+.fd) [0{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex
+/updmap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/font
+s/enc/dvips/base/8r.enc} <./img/firstImg_3.pdf>] [1]
+Underfull \hbox (badness 1810) in paragraph at lines 196--197
+[]\T1/ptm/m/n/10 After ob-tain-ing our op-ti-cal flow fields, an-chor
+
+Underfull \hbox (badness 1448) in paragraph at lines 196--197
+\T1/ptm/m/n/10 frames are then de-tected in a sim-i-lar man-ner to
+
+Underfull \hbox (badness 812) in paragraph at lines 210--211
+\T1/ptm/m/n/10 of the \T1/ptm/m/it/10 SIFT \T1/ptm/m/n/10 fea-ture set $\OML/cm
+m/m/it/10 S[]$ \T1/ptm/m/n/10 be-tween the ref-
+
+Underfull \hbox (badness 812) in paragraph at lines 210--211
+\T1/ptm/m/n/10 er-ence frame $\OML/cmm/m/it/10 I[]$ \T1/ptm/m/n/10 and the tar-
+get frame $\OML/cmm/m/it/10 I[]$ \T1/ptm/m/n/10 are
+
+Underfull \vbox (badness 2564) has occurred while \output is active [2 <./img/s
+tep_1.pdf>]
+Overfull \hbox (15.1584pt too wide) in paragraph at lines 239--240
+[]\T1/ptm/m/n/10 The mo-ti-va-tion of the orig-i-nal \T1/ptm/m/it/10 An-chor Fr
+ame \T1/ptm/m/n/10 method [[]]
+[3 <./img/step_2.pdf> <./img/anchorFrame.pdf
+
+pdfTeX warning: pdflatex (file ./img/anchorFrame.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+>]
+Underfull \hbox (badness 991) in paragraph at lines 284--285
+\T1/ptm/m/n/10 er-ror equa-tion []. Us-ing this er-ror, we se-lect fi-
+[4 <./img/step_3.pdf> <./img/triLocate.pdf
+
+pdfTeX warning: pdflatex (file ./img/triLocate.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+>]
+Underfull \hbox (badness 816) in paragraph at lines 309--310
+[]\T1/ptm/b/n/10 Matching se-lec-tion. \T1/ptm/m/n/10 We prop-a-gate the whole
+
+Underfull \hbox (badness 1527) in paragraph at lines 309--310
+\T1/ptm/m/n/10 mesh $\OML/cmm/m/it/10 M[]$ \T1/ptm/m/n/10 from the ref-er-ence 
+to the an-chor
+
+Underfull \hbox (badness 1275) in paragraph at lines 309--310
+\T1/ptm/m/n/10 frames. For ev-ery ver-tex in $\OML/cmm/m/it/10 M[]$\T1/ptm/m/n/
+10 , \T1/ptm/m/it/10 high er-ror
+[5]
+Underfull \hbox (badness 1237) in paragraph at lines 376--377
+\T1/ptm/m/n/10 with-out our op-ti-mi-sa-tion frame-work -- on 7 long
+[6 <./img/step_4.pdf> <./img/trackAtoN.pdf
+
+pdfTeX warning: pdflatex (file ./img/trackAtoN.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+>] [7 <./img/QM_dataset.pdf>]
+Underfull \hbox (badness 870) in paragraph at lines 456--457
+\T1/ptm/m/n/10 meth-ods in all cases even given degra-da-tion (e.g.
+[8]
+
+LaTeX Warning: Text page 9 contains only floats.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+
+LaTeX Warning: Text page 9 contains only floats.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active [9]
+Overfull \hbox (5.54778pt too wide) in paragraph at lines 546--547
+\T1/ptm/m/n/10 heav-ily re-lies on the sup-ple-men-tary op-ti-cal flow method,
+
+Overfull \hbox (2.97786pt too wide) in paragraph at lines 566--567
+\T1/ptm/m/n/10 through long im-age se-quences. Our op-ti-mi-sa-tion frame-
+
+Underfull \hbox (badness 1038) in paragraph at lines 572--573
+\T1/ptm/m/n/10 EP/L016540/1 and CAM-ERA EP/M023281/1; and
+(./apo.bbl
+Underfull \hbox (badness 2057) in paragraph at lines 10--16
+[]\T1/ptm/m/n/8 Simon Baker, Daniel Scharstein, J. Lewis, Ste-fan Roth,
+
+Underfull \hbox (badness 5637) in paragraph at lines 34--38
+[]\T1/ptm/m/n/8 G. Bor-shukov, D. Piponi, O. Larsen, JP Lewis, and
+
+Underfull \vbox (badness 10000) has occurred while \output is active [10]
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active [11 <./img
+/visFigsFrank_3.pdf> <./img/visFigsVicon_2.pdf
+
+pdfTeX warning: pdflatex (file ./img/visFigsVicon_2.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+>]) 
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active [12]
+(./apo.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi6.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/homebrew
+/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
+pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20260301/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/te
+xlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt
+/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy6.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy7.pfb></opt/homebrew/Cellar/texlive/20260301/share/tex
+mf-dist/fonts/type1/urw/times/utmb8a.pfb></opt/homebrew/Cellar/texlive/20260301
+/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></opt/homebrew/Ce
+llar/texlive/20260301/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on apo.pdf (13 pages, 6721528 bytes).
+Transcript written on apo.log.
+************************************
+** Labels in starred environments **
+************************************
+-- apo.tex              line  140: remove label APO:tab:apProcess 
+-- apo.tex              line  372: remove label APO:tab:infoSeqs 
+-- apo.tex              line  451: remove label APO:tab:avgRMS 
+-- apo.tex              line  488: remove label APO:tab:avg30RMS 
+-- apo.tex              line  539: remove label APO:tab:percSiftRMS 
+
+*******************
+** Unused Labels **
+*******************
+-- apo.tex              line  227: remove label APO:fig:step_C
+-- apo.tex              line  277: remove label APO:eq:triLoc
+-- apo.tex              line  449: remove label APO:tab:avgRMS_2
+-- apo.tex              line  449: remove label APO:tab:avgRMS_2
+-- apo.tex              line  550: remove label APO:fig:visFigsFrank
+-- apo.tex              line  555: remove label APO:fig:visFigsVicon
+-- apo.tex              line  563: remove label APO:sec:APO_con
+-- apo.tex              line   76: remove label APO:sec:intro
+-- apo.tex              line   77: remove label APO:sec:intro
+-- apo.tex              line   87: remove label APO:fig:firstFig
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

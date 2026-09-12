@@ -1,0 +1,25 @@
+{
+ "coverage": 0.015944,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`ivanko_refs.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "ws-acs.xtex",
+    "offset": 3250,
+    "length": 7,
+    "line": 83,
+    "column": 702
+   },
+   "message": "citation checking unavailable: `ivanko_refs.bib` could not be read",
+   "related": []
+  }
+ ]
+}

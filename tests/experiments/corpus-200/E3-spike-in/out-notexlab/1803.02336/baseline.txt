@@ -1,0 +1,4 @@
+tectonic pdf bytes=110393
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=[] secs=2

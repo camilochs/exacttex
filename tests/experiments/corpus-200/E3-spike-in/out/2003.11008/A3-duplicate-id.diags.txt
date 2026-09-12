@@ -1,0 +1,3 @@
+planted=sec:introduction sites=[('nilab_malformation.xtex', 116), ('nilab_malformation.xtex', 115)]
+xtex new=[('XT1001', 'sec:introduction', 'nilab_malformation.xtex', 116)]
+texlab new=[('ERROR', 'nilab_malformation.tex', 115, 'Duplicate label'), ('ERROR', 'nilab_malformation.tex', 116, 'Duplicate label'), ('info', 'nilab_malformation.tex', 115, 'Unused label')]

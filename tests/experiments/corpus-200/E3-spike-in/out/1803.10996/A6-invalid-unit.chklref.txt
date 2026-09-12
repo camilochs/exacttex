@@ -1,0 +1,496 @@
+pdf=0
+exit=0
+lines=1472
+unique_findings=0
+                         }{entry} {\listcsxadd {blx...
+l.93     \endentry
+                  
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.93     \endentry
+                  
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.95       \name
+                {author}{1}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.119     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.119     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.121       \true
+                 {moreauthor}
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.193     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.193     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.195       \name
+                 {author}{1}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.253     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.253     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.255       \name
+                 {author}{3}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.290     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.290     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.292       \name
+                 {author}{2}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.321     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.321     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.323       \name
+                 {author}{2}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.353     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.353     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.355       \name
+                 {author}{8}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.415     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.415     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.417       \name
+                 {author}{1}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.442     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.442     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.444       \field
+                  {sortinit}{3}
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.452     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.452     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.454       \name
+                 {author}{1}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.475     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.475     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.477       \name
+                 {author}{2}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.505     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.505     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.507       \name
+                 {author}{2}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.530     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.530     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.532       \name
+                 {author}{2}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.568     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.568     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.570       \name
+                 {author}{3}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.602     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.602     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.604       \name
+                 {author}{4}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.644     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.644     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.646       \name
+                 {author}{4}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.685     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.685     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.687       \name
+                 {author}{2}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.742     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.742     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.744       \name
+                 {author}{2}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.772     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.772     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.774       \name
+                 {author}{2}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.810     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.810     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.812       \name
+                 {author}{7}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.860     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.860     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.862       \name
+                 {author}{4}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.906     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.906     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.908       \name
+                 {author}{5}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.959     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.959     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.961       \name
+                 {author}{2}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.991     \endentry
+                   
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.991     \endentry
+                   
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.993       \name
+                 {author}{7}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.1048     \endentry
+                    
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.1048     \endentry
+                    
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.1050       \name
+                  {author}{4}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.1090     \endentry
+                    
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.1090     \endentry
+                    
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.1092       \name
+                  {author}{2}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.1122     \endentry
+                    
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.1122     \endentry
+                    
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.1124       \name
+                  {author}{4}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.1172     \endentry
+                    
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.1172     \endentry
+                    
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.1174       \name
+                  {author}{4}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.1219     \endentry
+                    
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.1219     \endentry
+                    
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.1221       \name
+                  {author}{8}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.1286     \endentry
+                    
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.1286     \endentry
+                    
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.1288       \name
+                  {author}{9}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.1353     \endentry
+                    
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.1353     \endentry
+                    
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.1355       \name
+                  {author}{4}{}{%
+! Undefined control sequence.
+\endentry ...requal \expandafter {\blx@dlist@type 
+                                                  }{entry} {\listcsxadd {blx...
+l.1395     \endentry
+                    
+! Undefined control sequence.
+<argument> ...equal \expandafter {\blx@dlist@type 
+                                                  }{list} {\blx@bbl@labelfie...
+l.1395     \endentry
+                    
+! Undefined control sequence.
+\entry ...ata@\the \c@refsection @\blx@dlist@name 
+                                                  @\abx@field@entrykey }\blx...
+l.1397       \name
+                  {author}{4}{}{%
+(That makes 100 errors; please try again.)
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on thesis_arxiv.log.
+************************************
+** Labels in starred environments **
+************************************
+
+*******************
+** Unused Labels **
+*******************
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

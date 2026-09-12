@@ -1,0 +1,8 @@
+153 claims: 148 fresh and carried over, 5 to verify
+contact@eleuther.ai · settled
+https://bulkdata.uspto.gov/ · settled
+https://exporter.nih.gov/ · settled
+www.fanfiction.net · settled
+www.https://archiveofourown.org/ · settled
+network: 6 requests (http 6) · 1 retries · 0 bytes down · 0 fetched, 148 carried over, 5 unanswered
+record: 153 claims → .xtexverified

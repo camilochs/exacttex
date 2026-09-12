@@ -1,0 +1,3 @@
+planted=1__ghost sites=[('pyov_arxiv.xtex', 74)]
+xtex new=[('XT1005', '1__ghost', 'pyov_arxiv.xtex', 74)]
+texlab new=[]

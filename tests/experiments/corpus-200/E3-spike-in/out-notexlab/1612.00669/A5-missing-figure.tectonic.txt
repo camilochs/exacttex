@@ -1,0 +1,4 @@
+warning: mathpartir.sty:3: 
+Invalid UTF-8 byte or sequence at line 3 replaced by U+FFFD.
+error: body:9: Unable to load picture or PDF file 'figures/planted_ghost.pdf'
+error: halted on potentially-recoverable error as specified

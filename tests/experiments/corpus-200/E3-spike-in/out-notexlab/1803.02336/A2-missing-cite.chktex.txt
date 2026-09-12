@@ -1,0 +1,303 @@
+exit=2
+lines=300
+unique_findings=88
+Warning 24 in main.tex line 71: Delete this space to maintain correct pagereferences.
+\label{sec:main}  
+^
+Warning 2 in main.tex line 74: Non-breaking space (`~') should have been used.
+order arithmetic \cite[Chapter VIII]{sosoa}.  As in \cite[Chapter  
+                ^
+Warning 2 in main.tex line 74: Non-breaking space (`~') should have been used.
+order arithmetic \cite[Chapter VIII]{sosoa}.  As in \cite[Chapter  
+                                                   ^
+Warning 2 in main.tex line 78: Non-breaking space (`~') should have been used.
+\ref{thm:betadef} and \ref{thm:betadef2} below are an interesting  
+^
+Warning 2 in main.tex line 78: Non-breaking space (`~') should have been used.
+\ref{thm:betadef} and \ref{thm:betadef2} below are an interesting  
+                     ^
+Warning 2 in main.tex line 80: Non-breaking space (`~') should have been used.
+in Simpson \cite[\S\S VII.2 and VIII.6]{sosoa}.  
+          ^
+Warning 2 in main.tex line 166: Non-breaking space (`~') should have been used.
+  Theorem \ref{thm:betadef} has been announced without proof by  
+         ^
+Warning 2 in main.tex line 168: Non-breaking space (`~') should have been used.
+  proof of Theorem \ref{thm:betadef} has not been available.  
+                  ^
+Warning 2 in main.tex line 171: Non-breaking space (`~') should have been used.
+We now improve Theorem \ref{thm:betadef} as follows.  
+                      ^
+Warning 2 in main.tex line 187: Non-breaking space (`~') should have been used.
+\ref{thm:betadef2} is the same as for Theorem \ref{thm:betadef},  
+^
+Warning 2 in main.tex line 187: Non-breaking space (`~') should have been used.
+\ref{thm:betadef2} is the same as for Theorem \ref{thm:betadef},  
+                                             ^
+Warning 2 in main.tex line 190: Non-breaking space (`~') should have been used.
+first relativize the proof of Theorem \ref{thm:betadef}, as follows.  
+                                     ^
+Warning 2 in main.tex line 207: Non-breaking space (`~') should have been used.
+  of the proof of Theorem \ref{thm:betadef}.  
+                         ^
+Warning 2 in main.tex line 210: Non-breaking space (`~') should have been used.
+Consequently, in order to prove Theorem \ref{thm:betadef2}, it  
+                                       ^
+Warning 2 in main.tex line 248: Non-breaking space (`~') should have been used.
+The proof of Theorem \ref{thm:betadef2} is immediate from Lemmas  
+                    ^
+Warning 2 in main.tex line 249: Non-breaking space (`~') should have been used.
+\ref{lem:betadef} and \ref{lem:gen2}.  
+^
+Warning 2 in main.tex line 249: Non-breaking space (`~') should have been used.
+\ref{lem:betadef} and \ref{lem:gen2}.  
+                     ^
+Warning 24 in main.tex line 252: Delete this space to maintain correct pagereferences.
+\label{sec:cons}  
+^
+Warning 2 in main.tex line 256: Non-breaking space (`~') should have been used.
+results involving the scheme $(*)$ of Theorem \ref{thm:betadef2}.  
+                                             ^
+Warning 2 in main.tex line 261: Non-breaking space (`~') should have been used.
+background, see Simpson \cite{sosoa__ghost}.  It is known \cite[\S  
+                       ^
+Warning 2 in main.tex line 261: Non-breaking space (`~') should have been used.
+background, see Simpson \cite{sosoa__ghost}.  It is known \cite[\S  
+                                                         ^
+Warning 2 in main.tex line 301: Non-breaking space (`~') should have been used.
+  $\Pi^1_2$ sentence, it follows by Lemma \ref{lem:pres} that  
+                                         ^
+Warning 2 in main.tex line 302: Non-breaking space (`~') should have been used.
+  $(N,\mathcal{S}')\models\ATRo$.  Lemma \ref{lem:pres} also implies  
+                                        ^
+Warning 2 in main.tex line 321: Non-breaking space (`~') should have been used.
+  by Lemmas \ref{lem:star} and \ref{lem:pres} that  
+           ^
+Warning 2 in main.tex line 321: Non-breaking space (`~') should have been used.
+  by Lemmas \ref{lem:star} and \ref{lem:pres} that  
+                              ^
+Warning 2 in main.tex line 335: Non-breaking space (`~') should have been used.
+  Recall from \cite[\S\S VIII.3 and VIII.6]{sosoa} that all of the  
+             ^
+Warning 2 in main.tex line 337: Non-breaking space (`~') should have been used.
+  In particular, by \cite[Theorem VIII.6.7]{sosoa}, the  
+                   ^
+Warning 2 in main.tex line 353: Non-breaking space (`~') should have been used.
+  An alternative proof of Lemma \ref{lem:ordrec} is to note that  
+                               ^
+Warning 2 in main.tex line 357: Non-breaking space (`~') should have been used.
+  $O$ denotes the complete $\Pi^1_1$ set of integers.  See \cite[\S  
+                                                          ^
+Warning 2 in main.tex line 367: Non-breaking space (`~') should have been used.
+  By Lemma \ref{lem:ordrec} it suffices to prove: if  
+          ^
+Warning 25 in main.tex line 377: You might wish to put this between a pair of `{}'
+  $A$''.  For each $n<_ea$ we have $p\forces\lnot\,\varphi(n)$, but  
+                       ^^
+Warning 2 in main.tex line 385: Non-breaking space (`~') should have been used.
+  Theorems \ref{thm:atrstar} and \ref{thm:tistar} are best possible,  
+          ^
+Warning 2 in main.tex line 385: Non-breaking space (`~') should have been used.
+  Theorems \ref{thm:atrstar} and \ref{thm:tistar} are best possible,  
+                                ^
+Warning 24 in main.tex line 392: Delete this space to maintain correct pagereferences.
+\label{sec:wkl}  
+^
+Warning 2 in main.tex line 394: Non-breaking space (`~') should have been used.
+The results of \S\S\ref{sec:main} and \ref{sec:cons} are in the realm  
+                                     ^
+Warning 2 in main.tex line 397: Non-breaking space (`~') should have been used.
+background on this topic, see Simpson \cite[\S\S VIII.2 and  
+                                     ^
+Warning 2 in main.tex line 405: Non-breaking space (`~') should have been used.
+analog of Theorem \ref{thm:betadef} is:  
+                 ^
+Warning 2 in main.tex line 416: Non-breaking space (`~') should have been used.
+  \ref{thm:betadef}, replacing $\Sigma^1_1$ sets by $\Pi^0_1$ subsets  
+ ^
+Warning 2 in main.tex line 421: Non-breaking space (`~') should have been used.
+  Theorem \ref{thm:wkldef} is originally due to Friedman \cite[Theorem  
+         ^
+Warning 2 in main.tex line 421: Non-breaking space (`~') should have been used.
+  Theorem \ref{thm:wkldef} is originally due to Friedman \cite[Theorem  
+                                                        ^
+Warning 2 in main.tex line 422: Non-breaking space (`~') should have been used.
+  1.10, unpublished]{f-sosoa} (see also \cite[Theorem 1.6]{f-icm}).  
+                                       ^
+Warning 2 in main.tex line 424: Non-breaking space (`~') should have been used.
+  (see also Simp\-son/Ta\-na\-ka/Ya\-ma\-zaki \cite{sty}).  All three  
+                                             ^
+Warning 2 in main.tex line 425: Non-breaking space (`~') should have been used.
+  proofs of Theorem \ref{thm:wkldef} are different from one another.  
+                   ^
+Warning 25 in main.tex line 428: You might wish to put this between a pair of `{}'
+Let $\le_T$ denote Turing reducibility, i.e., $X\le_TY$ if and only if  
+                                                    ^^
+Warning 2 in main.tex line 430: Non-breaking space (`~') should have been used.
+analog of Theorem \ref{thm:betadef2} is:  
+                 ^
+Warning 25 in main.tex line 436: You might wish to put this between a pair of `{}'
+    $Y$, then $X\le_TY)$.  
+                    ^^
+Warning 2 in main.tex line 442: Non-breaking space (`~') should have been used.
+  \ref{thm:betadef2}, replacing $\Sigma^1_1$ sets by $\Pi^0_1$ subsets  
+ ^
+Warning 2 in main.tex line 446: Non-breaking space (`~') should have been used.
+The recursion-theoretic analog of Theorems \ref{thm:atrstar} and  
+                                          ^
+Warning 2 in main.tex line 447: Non-breaking space (`~') should have been used.
+\ref{thm:tistar} is:  
+^
+Warning 2 in main.tex line 458: Non-breaking space (`~') should have been used.
+  Theorems \ref{thm:wkldef2} and \ref{thm:wklstar} are originally due  
+          ^
+Warning 2 in main.tex line 458: Non-breaking space (`~') should have been used.
+  Theorems \ref{thm:wkldef2} and \ref{thm:wklstar} are originally due  
+                                ^
+Warning 2 in main.tex line 459: Non-breaking space (`~') should have been used.
+  to Simpson \cite{pizowkl}.  The proofs given here are different from  
+            ^
+Warning 2 in main.tex line 460: Non-breaking space (`~') should have been used.
+  the proofs that were given in \cite{pizowkl}.  
+                               ^
+Warning 24 in main.tex line 464: Delete this space to maintain correct pagereferences.
+\label{sec:friedman}  
+^
+Warning 2 in main.tex line 478: Non-breaking space (`~') should have been used.
+  Theorem within $\ATRo$.  See Simpson \cite[\S\S V.4 and  
+                                      ^
+Warning 2 in main.tex line 479: Non-breaking space (`~') should have been used.
+  VIII.3]{sosoa}.  See also Sacks \cite[\S III.6]{sacks-hrt}.  
+                                 ^
+Warning 2 in main.tex line 506: Non-breaking space (`~') should have been used.
+  Lemma \ref{lem:s12p} follows easily from Lemma \ref{lem:s11p}.  
+       ^
+Warning 2 in main.tex line 506: Non-breaking space (`~') should have been used.
+  Lemma \ref{lem:s12p} follows easily from Lemma \ref{lem:s11p}.  
+                                                ^
+Warning 2 in main.tex line 518: Non-breaking space (`~') should have been used.
+  From Friedman \cite{f-bi} or Simpson \cite[\S VII.2]{sosoa}, we have  
+               ^
+Warning 2 in main.tex line 518: Non-breaking space (`~') should have been used.
+  From Friedman \cite{f-bi} or Simpson \cite[\S VII.2]{sosoa}, we have  
+                                      ^
+Warning 2 in main.tex line 522: Non-breaking space (`~') should have been used.
+  conclusion follows from Lemma \ref{lem:s12p}.  In case (2), we have  
+                               ^
+Warning 2 in main.tex line 524: Non-breaking space (`~') should have been used.
+  Lemma \ref{lem:s12p} within $M$ gives  
+       ^
+Warning 2 in main.tex line 528: Non-breaking space (`~') should have been used.
+  \ref{lem:s11p} to $\varphi_\alpha(X)$ to obtain the desired  
+ ^
+Warning 3 in main.tex line 536: You should enclose the previous parenthesis with `{}'.
+  n\,(X\ne(Y)_n))$.  
+            ^
+Warning 2 in main.tex line 540: Non-breaking space (`~') should have been used.
+  This follows easily from Theorem \ref{thm:s12p}.  
+                                  ^
+Warning 2 in main.tex line 551: Non-breaking space (`~') should have been used.
+  \ref{thm:s12p}.  In both cases it suffices to show that, for all  
+ ^
+Warning 2 in main.tex line 554: Non-breaking space (`~') should have been used.
+  $\varphi_\alpha(X))$.  This follows from Lemma \ref{lem:s11p}  
+                                                ^
+Warning 2 in main.tex line 559: Non-breaking space (`~') should have been used.
+  Theorems \ref{thm:s12p} and \ref{thm:s12} appear to be new.  
+          ^
+Warning 2 in main.tex line 559: Non-breaking space (`~') should have been used.
+  Theorems \ref{thm:s12p} and \ref{thm:s12} appear to be new.  
+                             ^
+Warning 2 in main.tex line 560: Non-breaking space (`~') should have been used.
+  Corollary \ref{cor:s12p} has been stated without proof by Friedman  
+           ^
+Warning 2 in main.tex line 561: Non-breaking space (`~') should have been used.
+  \cite[Theorems 3.4 and 4.4]{f-icm}.  A recursion-theoretic analog of  
+ ^
+Warning 2 in main.tex line 562: Non-breaking space (`~') should have been used.
+  Corollary \ref{cor:s12p} has been stated without proof by Friedman  
+           ^
+Warning 2 in main.tex line 563: Non-breaking space (`~') should have been used.
+  \cite[Theorem 1.7]{f-icm}, but this statement of Friedman is known  
+ ^
+Warning 2 in main.tex line 564: Non-breaking space (`~') should have been used.
+  to be false, in view of Simpson \cite{pizowkl}.  A  
+                                 ^
+Warning 2 in main.tex line 565: Non-breaking space (`~') should have been used.
+  recursion-theoretic analog of Theorem \ref{thm:s12} has been proved  
+                                       ^
+Warning 2 in main.tex line 566: Non-breaking space (`~') should have been used.
+  by Simpson/Tanaka/Yamazaki \cite{sty}.  
+                            ^
+Warning 2 in main.tex line 575: Non-breaking space (`~') should have been used.
+  asked by Friedman \cite[unpublished]{f-sosoa}.  
+                   ^
+Warning 2 in main.tex line 583: Non-breaking space (`~') should have been used.
+  the answer is yes, by Simp\-son/Ta\-naka/Yama\-zaki \cite{sty}.  
+                                                     ^
+Warning 1 in main.tex line 594: Command terminated with space.
+\newblock Bar induction and {$\Pi^1_1$-$\mathsf{CA}$}.  
+         ^
+Warning 1 in main.tex line 595: Command terminated with space.
+\newblock {\em Journal of Symbolic Logic}, 34:353--362, 1969.  
+         ^
+Warning 1 in main.tex line 599: Command terminated with space.
+\newblock Subsystems of second order arithmetic and their use in the  
+         ^
+Warning 1 in main.tex line 601: Command terminated with space.
+\newblock 19 pages, unpublished, March 1974.  
+         ^
+Warning 1 in main.tex line 605: Command terminated with space.
+\newblock Some systems of second order arithmetic and their use.  
+         ^
+Warning 1 in main.tex line 606: Command terminated with space.
+\newblock In {\em {\rm\cite{icm74}}}, pages 235--242, 1975.  
+         ^
+Warning 1 in main.tex line 610: Command terminated with space.
+\newblock {\em Proceedings of the {I}nternational {C}ongress of  
+         ^
+Warning 1 in main.tex line 612: Command terminated with space.
+\newblock Canadian Mathematical Congress, 1975.  
+         ^
+Warning 1 in main.tex line 613: Command terminated with space.
+\newblock XLIX + 552 pages.  
+         ^
+Warning 1 in main.tex line 617: Command terminated with space.
+\newblock {\em Higher {R}ecursion {T}heory}.  
+         ^
+Warning 1 in main.tex line 618: Command terminated with space.
+\newblock Perspectives in {M}athematical {L}ogic. Springer-Verlag, 1990.  
+         ^
+Warning 1 in main.tex line 619: Command terminated with space.
+\newblock XV + 344 pages.  
+         ^
+Warning 1 in main.tex line 623: Command terminated with space.
+\newblock {\em Reverse {M}athematics 2001}.  
+         ^
+Warning 1 in main.tex line 624: Command terminated with space.
+\newblock Number~21 in Lecture {N}otes in {L}ogic. Association for Symbolic  
+         ^
+Warning 1 in main.tex line 626: Command terminated with space.
+\newblock X + 401 pages.  
+         ^
+Warning 1 in main.tex line 630: Command terminated with space.
+\newblock {\em Subsystems of {S}econd {O}rder {A}rithmetic}.  
+         ^
+Warning 1 in main.tex line 631: Command terminated with space.
+\newblock Perspectives in Mathematical Logic. Springer-Verlag, 1999.  
+         ^
+Warning 1 in main.tex line 632: Command terminated with space.
+\newblock XIV + 445 pages; Second Edition, Perspectives in Logic, Association  
+         ^
+Warning 1 in main.tex line 637: Command terminated with space.
+\newblock {$\Pi^0_1$} sets and models of {$\mathsf{WKL}_0$}.  
+         ^
+Warning 1 in main.tex line 638: Command terminated with space.
+\newblock In {\em {\rm\cite{rm2001}}}, pages 352--378, 2005.  
+         ^
+Warning 1 in main.tex line 642: Command terminated with space.
+\newblock Some conservation results on weak {K\"o}nig's lemma.  
+         ^
+Warning 1 in main.tex line 643: Command terminated with space.
+\newblock {\em Annals of Pure and Applied Logic}, 118:87--114, 2002.  
+         ^

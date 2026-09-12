@@ -1,0 +1,33 @@
+target,kind,verdict,field,severity,document,source
+chung2022flan2,bib-entry,partial,authors,high,"Hyung Won Chung and
+                  Le Hou and
+                  Shayne Longpre and
+                  Barret Zoph and
+                  Yi Tay and
+                  William Fedus and
+               ",Hyung Won Chung and Le Hou and Shayne Longpre and Barret Zoph and Yi Tay and William Fedus and Eric Li and Xuezhi Wang and Mostafa Dehghani and Siddhartha Brahma and Albert Webson and Shixiang Gu and 
+du2021glm,bib-entry,partial,year,medium,2021,2022
+kenton2019bert,bib-entry,partial,authors,high,"Kenton, Jacob Devlin Ming-Wei Chang and Toutanova, Lee Kristina",Jacob Devlin and Ming-Wei Chang and Kenton Lee and Kristina Toutanova
+landeghem2023dude,bib-entry,partial,authors,high,"Jordy Van Landeghem and
+                  Rub{\`{e}}n Tito and
+                  Lukasz Borchmann and
+                  Michal Pietruszka and
+                  Pawel J{\'{o}}ziak and
+                 ",Jordy Van Landeghem and Rubèn Tito and Łukasz Borchmann and Michał Pietruszka and Paweł Józiak and Rafał Powalski and Dawid Jurkiewicz and Mickaël Coustaty and Bertrand Ackaert and Ernest Valveny and 
+su2023roformer,bib-entry,partial,authors,high,Jianlin Su and Yu Lu and Shengfeng Pan and Ahmed Murtadha and Bo Wen and Yunfeng Liu,Jianlin Su and Murtadha Ahmed and Yu Lu and Shengfeng Pan and Wen Bo and Yunfeng Liu
+su2023roformer,bib-entry,partial,year,medium,2023,2024
+vaswani2017attention,bib-entry,partial,year,medium,2017,2025
+ye2023mplugdocowl,bib-entry,partial,authors,high,"Jiabo Ye and
+                  Anwen Hu and
+                  Haiyang Xu and
+                  Qinghao Ye and
+                  Ming Yan and
+                  Yuhao Dan and
+                  Chenlin Z",Jiabo Ye and Anwen Hu and Haiyang Xu and Qinghao Ye and Ming Yan and Yuhao Dan and Chenlin Zhao and Guohai Xu and Chenliang Li and Junfeng Tian and Qi Qian and Ji Zhang and Fei Huang
+ye2023mplugowl,bib-entry,partial,authors,high,"Qinghao Ye and
+                  Haiyang Xu and
+                  Guohai Xu and
+                  Jiabo Ye and
+                  Ming Yan and
+                  Yiyang Zhou and
+                  Junyan",Qinghao Ye and Haiyang Xu and Guohai Xu and Jiabo Ye and Ming Yan and Yiyang Zhou and Junyang Wang and Anwen Hu and Pengcheng Shi and Yaya Shi and Chenliang Li and Yuanhong Xu and Hehong Chen and Junf

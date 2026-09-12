@@ -1,0 +1,3 @@
+planted=figone__ghost sites=[('main_elife.xtex', 46)]
+xtex new=[('XT1003', 'figone__ghost', 'main_elife.xtex', 46)]
+texlab new=[]

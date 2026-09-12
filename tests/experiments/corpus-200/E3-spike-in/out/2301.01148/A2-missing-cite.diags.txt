@@ -1,0 +1,3 @@
+planted=eia-mer-00352211__ghost sites=[('content/manuscript/introduction.xtex', 2)]
+xtex new=[('XT1005', 'eia-mer-00352211__ghost', 'content/manuscript/introduction.xtex', 2)]
+texlab new=[('ERROR', 'content/manuscript/introduction.tex', 2, 'Undefined reference'), ('info', 'references.bib', 594, 'Unused entry')]

@@ -1,0 +1,138 @@
+exit=2
+lines=2019
+unique_findings=549
+.
+\label{networksection}  
+^
+Warning 3 in spikequantum.tex line 1748: You should enclose the previous parenthesis with `{}'.
+In this paper, we have used the language of tensor networks to perform some of the estimates.  In this section, we explore the relation to tensor networks further.  Let us consider the simplest task of detection so that the spectral algorithms need only to estimate the largest eigenvalue of $H(\Tspike)$.  In this case, it suffices to evaluate ${\rm tr}(H(\Tspike)^m)$ to sufficiently large power $m$.  
+                                                                                                                                                                                                                                                                                                                                                                            ^
+Warning 2 in spikequantum.tex line 1756: Non-breaking space (`~') should have been used.
+Suppose instead that we insert $G$ or $\overline G$ for every tensor in the network.  It is possible that $\expec[\Val(N)]$ is zero and it is possible that it is nonzero.  However, let us compute $\expec[|\Val(N(G))|^2]$.  This expectation value can be evaluated using the method of appendix \ref{CTN}.  Note that $\Val(N(G))|^2$ is equal to the evaluation of some tensor network with $2N_T$ tensors; this network is given by two copies of $N$, with all the tensors complex conjugated in one of the two copies.  We refer to the two copies as the first and second copy.  We evaluate this network with $2N_T$ tensors by summing over pairings.  Consider just the pairing in which we pair each tensor in the first copy with the corresponding tensor in the second copy.  
+                                                                                                                                                                                                                                                                                                   ^
+Warning 3 in spikequantum.tex line 1759: You should enclose the previous parenthesis with `{}'.
+$\expec[|\Val(N)|^2]^{1/2} \geq N^{N_E/2}$.  
+                   ^
+Warning 3 in spikequantum.tex line 1762: You should enclose the previous parenthesis with `{}'.
+$\expec[|\Val(N(G))|^2]^{1/2} \gg  \Val(N(\lambda \vsig^{\otimes p}))$ for   
+                      ^
+Warning 3 in spikequantum.tex line 1765: You should enclose the previous parenthesis with `{}'.
+$\expec[|\Val(N(G))|^2]^{1/2} \gg  \expec[\Val(N(\Tspike))]$,  
+                      ^
+Warning 18 in spikequantum.tex line 1782: Use either `` or '' as an alternative to `"'.
+Indeed, the way that we were led to develop the spectral algorithm in this paper is by thinking about different tensor network contractions that might encode useful information for solving inference problems.  After all, a large class of algorithms can be expressed as evaluating in some way a tensor network, and there are many circumstances in which a quantum computer may have some advantage for evaluating a tensor network (given a large number of caveats, for example acting on some vector encoded as a quantum state by a tensor encoded as a quantum operator may be a non-unitary operation which may require some post-selection to implement).  Then, a natural class of tensor networks (in a sense, the ``most symmetric") are those describing the Hamiltonians considered here.  By considering other tensor networks, it may be possible to apply these methods to other inference problems.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+Warning 24 in spikequantum.tex line 1788: Delete this space to maintain correct pagereferences.
+\label{discussionsection}  
+^
+Warning 2 in spikequantum.tex line 1794: Non-breaking space (`~') should have been used.
+This enables us to prove correctness of the algorithm for odd $p$.  Also, for $\nbos=p-1$, the spectrum for $q=2(p-1)$ is given by random matrix theory, removing a logarithmic factor present for odd $p$ in some previous work.  See corollary \ref{rmtcorr}.  
+                                                                                                                                                                                                                                                ^
+Warning 18 in spikequantum.tex line 1797: Use either `` or '' as an alternative to `"'.
+We have used entries of $G$ chosen from a complex Gaussian distribution in the case of odd $p$ to simplify the proof of the bounds on the spectrum for odd $p$.  We conjecture however that a modification discussed above to cancel certain ``pairing terms" would work for real entries of $G$.  
+                                                                                                                                                                                                                                                            ^
+Warning 24 in spikequantum.tex line 1804: Delete this space to maintain correct pagereferences.
+\label{CTN}  
+^
+Warning 1 in spikequantum.tex line 1818: Command terminated with space.
+\be  
+   ^
+Warning 1 in spikequantum.tex line 1820: Command terminated with space.
+\ee  
+   ^
+Warning 3 in spikequantum.tex line 1821: You should enclose the previous parenthesis with `{}'.
+where the sum is over choices of indices, the product is over vertices $v$, and $(T^{v})_{\rm edges}$ denotes the entry of a tensor corresponding to the given vertex $v$ determined by the indices on edges attached to that vertex.  
+                                                                                       ^
+Warning 6 in spikequantum.tex line 1826: No italic correction (`\/') found.
+Let us first consider the case in which the tensors are {\it not} symmetrized.  
+                                                                ^
+Warning 40 in spikequantum.tex line 1827: You should put punctuation outside inner math mode.
+By Wick's theorem, this is computed by a sum over pairings.  Each pairing is either (if all tensors are chosen from a real Gaussian distribution) a way of partitioning the set of tensors into distinct pairs or (if tensors are chosen from the complex distribution) a way of pairing the set into distinct pairs such that we only pair $G$ with $\overline G$.  If there are $m$ tensors in the network, then in the real case there are $m!!$ pairings and in the complex case there are $(m/2)!$ pairings assuming that there are $m/2$ tensors $G$ and $m/2$ tensors $\overline G$ (if not, the expectation value vanishes).  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+Warning 40 in spikequantum.tex line 1827: You should put punctuation outside inner math mode.
+By Wick's theorem, this is computed by a sum over pairings.  Each pairing is either (if all tensors are chosen from a real Gaussian distribution) a way of partitioning the set of tensors into distinct pairs or (if tensors are chosen from the complex distribution) a way of pairing the set into distinct pairs such that we only pair $G$ with $\overline G$.  If there are $m$ tensors in the network, then in the real case there are $m!!$ pairings and in the complex case there are $(m/2)!$ pairings assuming that there are $m/2$ tensors $G$ and $m/2$ tensors $\overline G$ (if not, the expectation value vanishes).  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^
+Warning 18 in spikequantum.tex line 1834: Use either `` or '' as an alternative to `"'.
+``cut" those two tensors out of the network, leaving $2p$ open edges in the network (the edges that were attached to those tensors).  Then, attach those edges to each other, attaching each of the $p$ edges that were attached to the first tensor to the corresponding one that was attached to the second tensor.  
+     ^
+Warning 40 in spikequantum.tex line 1837: You should put punctuation outside inner math mode.
+If the tensors are symmetrized, for each pair we must sum over $p!$ different ways of attaching the edges that were attached to the first tensor to those that were attached to the second tensor.  
+                                                                 ^
+Warning 24 in spikequantum.tex line 1842: Delete this space to maintain correct pagereferences.
+\label{ccr}  
+^
+Warning 18 in spikequantum.tex line 1844: Use either `` or '' as an alternative to `"'.
+$|n_1,n_2,\ldots,n_N\rangle$, where each of the $n_\mu$ for $\mu\in \{1,\ldots,N\}$ is a non-negative integer, called an ``occupation number".  We may think of this as labelling possible states of the tensor product of $N$ different harmonic oscillators, i.e., each $n_\mu$ labels a basis state for the $\mu$-th harmonic oscillator, sometimes called the $\mu$-th ``mode".  
+                                                                                                                                            ^
+Warning 18 in spikequantum.tex line 1844: Use either `` or '' as an alternative to `"'.
+$|n_1,n_2,\ldots,n_N\rangle$, where each of the $n_\mu$ for $\mu\in \{1,\ldots,N\}$ is a non-negative integer, called an ``occupation number".  We may think of this as labelling possible states of the tensor product of $N$ different harmonic oscillators, i.e., each $n_\mu$ labels a basis state for the $\mu$-th harmonic oscillator, sometimes called the $\mu$-th ``mode".  
+                                                                                                                                                                                                                                                                                                                                                                                 ^
+Warning 45 in spikequantum.tex line 1847: Use \[ ... \] instead of $$ ... $$.
+$$a^\dagger_\mu |n_1,\ldots,n_N\rangle=\sqrt{n_{\mu}+1} |n_1,\ldots,n_{\mu-1},n_{\mu}+1,n_{\mu+1},\ldots,n_N\rangle,$$  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 45 in spikequantum.tex line 1850: Use \[ ... \] instead of $$ ... $$.
+$$a^\dagger_{\mu} a_{\mu}  |n_1,\ldots,n_N\rangle = n_{\mu}  |n_1,\ldots,n_N\rangle.$$  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 45 in spikequantum.tex line 1856: Use \[ ... \] instead of $$ ... $$.
+$$(\rho_1)_{\mu \nu}=\frac{1}{\nbos} \rhoone.  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 3 in spikequantum.tex line 1856: You should enclose the previous parenthesis with `{}'.
+$$(\rho_1)_{\mu \nu}=\frac{1}{\nbos} \rhoone.  
+         ^
+Warning 11 in spikequantum.tex line 1859: You should use \cdots to achieve an ellipsis.
+The remarkable property of the second-quantized notation is how it describes behavior in the symmetric subspace of the full Hilbert space.  Any Hamiltonian such as Eq.~(\ref{firstquantized}) which is symmetric under permutation (that is, permuting basis vectors by replacing $|\mu_1\rangle \otimes \ldots \otimes |\mu_{\nbos}\rangle$ with $|\mu_{\pi(1)}\rangle \otimes \ldots \otimes |\mu_{\pi(\nbos)}\rangle$ where $\pi$ is an arbitrary permutation on $\nbos$ elements), will preserve the symmetric subspace, i.e., the subspace which is invariant under permutation.  An othonormal basis for this symmetric subspace can be given by symmetrizing the basis vectors $|\mu_1\rangle \otimes \ldots \otimes |\mu_{\nbos}\rangle$ for $\mu_1\leq \mu_2\leq \ldots \leq \mu_n$; we impose this (arbitrary) ordering on the $\mu$ to avoid redundancies.  The symmetrization of this basis vector is then equal to (using the notation of this appendix) a basis vector of the form $|n_1,n_2,\ldots,n_N\rangle$ where for each $\mu\in {1,\ldots,N}$, the number $n_{\mu}$ is equal to the number of $a\in {1,\ldots,\nbos}$ such that $\mu_a=\mu$.  This basis is also equal to (up to normalization constant) the basis $a^\dagger_{\mu_1} \ldots a^\dagger_{\mu_{\nbos}} |0\rangle$ used in the text.  Then, the single particle density matrix that we have defined above using creation and annihilation operators is equal to (using the formalism of the full Hilbert space) the reduced density matrix (i.e., the marginal) on the first tensor factor in the full Hilbert space (indeed, by symmetry, it is also equal to the marginal on any of the $\nbos$ tensor factors).  Similarly, a symmetric Hamiltonian such as Eq.~(\ref{firstquantized}) can be expressed compactly using creation and annihilation operators as in Eq.~(\ref{sqeven}).  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^^^^^^
+Warning 15 in spikequantum.tex line 1723: No match found for `('.
+$${\rm poly}(N,\nbos,1/(E_0-\emax,\log(\dn/\epsilon)) \exp(O(\nbos)) \log(N)^{4\nbos} (\frac{N^{-p/4}}{\lambda})^{\nbos/p}  
+            ^
+Warning 15 in spikequantum.tex line 1714: No match found for `('.
+$${\rm poly}(N,\nbos,1/(E_0-\emax,\log(\dn/\epsilon)) \exp(O(\nbos)) \log(N)^{4\nbos} (\frac{N^{-p/4}}{\lambda})^{\nbos/p}  
+            ^
+Warning 15 in spikequantum.tex line 1711: No match found for `('.
+for $E_0\geq E_{max}\cdot (1+O(1/\log(N))$,  
+                          ^
+Warning 15 in spikequantum.tex line 1568: No match found for `('.
+Hence, with probability at least $1/2$, we have that $\log(|p(z)|) \geq A-2\nbos \cdot (\log((a+b)/(a-b))-O(\nbos)$.  
+                                                                                       ^
+Warning 15 in spikequantum.tex line 1409: No match found for `('.
+This in turn is $\geq (E_0\cdot (1-o(1/m))^m |\lambda^{\nbos/p} \vsig^{\otimes \nbos}|^2$, since $\langle \Psisig | H(\Tspike) | \Psisig \rangle\geq E_0\cdot (1-o(1/m))$  
+                      ^
+Warning 15 in spikequantum.tex line 1369: No match found for `('.
+The main assumption we will make is that $\lambda_1 = E_0 \cdot (1+o(1/\log(N))$; we expect that that assumption can be proven to hold with high probability.  
+                                                                ^
+Warning 15 in spikequantum.tex line 1216: No match found for `('.
+Using the simplest phase estimation algorithm of Ref.~\cite{kitaev2002classical}, the number of bits that we need to phase estimate is $s=O(\log(\Vert H(\Tspike) \Vert / (E_0-\emax))$.  
+                                                                                                                                           ^
+Warning 15 in spikequantum.tex line 1118: No match found for `('.
+$\langle y | C | x \rangle$, for some fixed basis states $x,y$ from the basis above (in our application $x=y$, where $C$ is a ``circuit" of some depth $d$ (for example $C=2m+1$ for the numerator above and $C=m$ for the denominator above).  
+                                                                                    ^
+Warning 15 in spikequantum.tex line 1058: No match found for `['.
+We have that $Z(\sqrt{2N} \tau,2(p-1),N,p-1)=\expec_G[\exp(\sqrt{2N} \tau H(G)]$, but the Hamiltonian $H(G)$ is a random  
+                                                     ^
+Warning 15 in spikequantum.tex line 1035: No match found for `('.
+Let $\tau=\nbos^{1-p/2} N^{-p/2} \sqrt{\log(N)}/\sqrt{J}$.  For $\nbos=o(N^{(p/2-1/3)/(1+p/2)} \log(N)^{1/(2+p)}$, the condition  
+                                                                        ^
+Warning 15 in spikequantum.tex line 757: No match found for `('.
+ $${\rm tr}\Bigl(\exp(H) O^\dagger O\Bigr)+O\leftrightarrow O^\dagger \geq {\rm tr}\Bigl(\exp((1-s_1)H) O^\dagger \exp(s_1 H) O\Bigr) + O\leftrightarrow O^\dagger,$$ where $O\leftrightarrow O^\dagger$ indicates the previous term with $O,O^\dagger$ interchanged.  Proof of claim: work in an eigenbasis of $H$.  It suffices to consider the case that $O=|b\rangle\langle a|$ where $|a\rangle,|b\rangle$ are eigenvectors of $H$ with eigenvalues $E_a,E_b$.  Then the the right-hand side is equal to $\exp(s_1 E_a+(1-s_1) E_b)+\exp(s_1 E_b+(1-s_1) E_a)=2\exp((E_a+E_b)/2) \cosh((s_1-1/2)(E_b-E_a)$.  The cosh function is maximized on the interval $[0,1]$ at $s_1=0,1$ when the right-hand side becomes equal to the left-hand side.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+Warning 15 in spikequantum.tex line 685: No match found for `('.
+Hence, $\langle \Psi | H(\lambda \vsig^{\otimes p} |\Psi\rangle\geq (c-o(1)) \emax$.  
+                        ^
+Warning 15 in spikequantum.tex line 680: No match found for `('.
+$\langle \Psi | H(\lambda \vsig^{\otimes p} |\Psi\rangle+ \langle \Psi| H(G) |\Psi\rangle \geq (1+c-o(1)) \emax$ where the  
+                 ^
+Warning 15 in spikequantum.tex line 610: No match found for `('.
+this equation are negligible as they are $o(\Bigl(\frac{\sqrt{J} \nbos^{p/2-1} N^{p/2}}{\sqrt{\log(N)}}\Bigr)$.  
+                                           ^
+Warning 15 in spikequantum.tex line 539: No match found for `('.
+$\langle \Psi | H(\lambda \vsig^{\otimes p} |\Psi\rangle+ \langle \Psi| H(G) |\Psi\rangle \geq (1+c) \emax$.  
+                 ^
+Warning 15 in spikequantum.tex line 230: No match found for `('.
+So, for any $\lambda\omega(N^{(1-p)/2}$, if $\corr(u,\vsig)=\Omega(1)$, we have $\corr(x,\vsig)=1-o(1)$.  
+                          ^
+Warning 17 in spikequantum.tex line 1860: Number of `(' doesn't match the number of `)'!
+
+
+Warning 17 in spikequantum.tex line 1860: Number of `[' doesn't match the number of `]'!
+
+

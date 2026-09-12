@@ -1,0 +1,199 @@
+exit=2
+lines=1344
+unique_findings=393
+                         ^
+Warning 3 in thesis.tex line 2755: You should enclose the previous parenthesis with `{}'.
+  showing that $\nabla_{\Sigma_{X,X}} F: (\SSS^{d \times d})^m  \rightarrow \RR^{m \times d}$  
+                                                           ^
+Warning 3 in thesis.tex line 2757: You should enclose the previous parenthesis with `{}'.
+  We then want to show that the linear map $\nabla_{\Sigma_{X,X}} F: (\SSS^{d \times d})^m  \rightarrow \RR^{m \times d}$ is surjective.  
+                                                                                       ^
+Warning 3 in thesis.tex line 2760: You should enclose the previous parenthesis with `{}'.
+  Let $C \in \RR^{m \times d}$. We want to construct a $D \in \left(\SSS^{d \times d}\right)^m$ such that  
+                                                                                           ^
+Warning 45 in thesis.tex line 2761: Use \[ ... \] instead of $$ ... $$.
+  $$ C^{e'}_l = \sum_{i, j, e} \delta_{e,e'} \left(\delta_{l,i} x_j + \delta_{l,j} x_i\right) D^e_{i,j}. $$  
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 3 in thesis.tex line 2765: You should enclose the previous parenthesis with `{}'.
+      = (D^{e'} x)_l + (x D^{e'})_l  
+                 ^
+Warning 3 in thesis.tex line 2765: You should enclose the previous parenthesis with `{}'.
+      = (D^{e'} x)_l + (x D^{e'})_l  
+                                ^
+Warning 3 in thesis.tex line 2767: You should enclose the previous parenthesis with `{}'.
+  If $D^{e'}$ is symmetric, this equals $(2 D^e x)_l$. Therefore, we only need to show that for any vector $C^e \in \RR^d$, there is a symmetric matrix  
+                                                 ^
+Warning 3 in thesis.tex line 2771: You should enclose the previous parenthesis with `{}'.
+  $C^e = O^T E^e O x$. By transposing, $O^T E^e O$ is symmetric, showing that $\nabla_{\Sigma_{X,X}} F: (\SSS^{d \times d})^m  \rightarrow \RR^{m \times d}$  
+                                                                                                                          ^
+Warning 3 in thesis.tex line 2772: You should enclose the previous parenthesis with `{}'.
+  is surjective, and thus that $W$ and $\text{LR}(m, d, k)$ are transversal for almost any $\left(\Sigma_{X,X}^e\right)_{e \in \Etrain}$.  
+                                                                                                                      ^
+Warning 2 in thesis.tex line 2775: Non-breaking space (`~') should have been used.
+  By a dimensional argument (see \cite{lee2003introduction}, example 5.30), it follows that   
+                                ^
+Warning 24 in thesis.tex line 2805: Delete this space to maintain correct pagereferences.
+\label{app:ada}  
+^
+Warning 2 in thesis.tex line 2807: Non-breaking space (`~') should have been used.
+Domain adaptation \cite{bendavid-domain} considers labeled data from a source environment $e_\train$ and unlabeled data from a target environment $e_\test$ with the goal of training a classifier that works well on $e_\test$.  
+                 ^
+Warning 2 in thesis.tex line 2818: Non-breaking space (`~') should have been used.
+Following on this example, we could think of applying conditional domain adaptation techniques \cite[C-ADA]{Li_2018_ECCV}.  
+                                                                                              ^
+Warning 13 in thesis.tex line 2821: Intersentence spacing (`\@') should perhaps be used.
+However, there are general problems where the invariant predictor cannot be identified by C-ADA.  
+                                                                                               ^
+Warning 2 in thesis.tex line 2837: Non-breaking space (`~') should have been used.
+As a general remark, domain adaptation is often justified using the bound \cite{bendavid-domain}:  
+                                                                         ^
+Warning 24 in thesis.tex line 2847: Delete this space to maintain correct pagereferences.
+\label{app:meta}  
+^
+Warning 2 in thesis.tex line 2849: Non-breaking space (`~') should have been used.
+Meta-learning is at the moment of writing an umbrella term encompassing many things: using data to learn an optimizer \cite{andry-ea-meta} or architectures \cite{zoph-ea-nas}  
+                                                                                                                     ^
+Warning 2 in thesis.tex line 2849: Non-breaking space (`~') should have been used.
+Meta-learning is at the moment of writing an umbrella term encompassing many things: using data to learn an optimizer \cite{andry-ea-meta} or architectures \cite{zoph-ea-nas}  
+                                                                                                                                                           ^
+Warning 2 in thesis.tex line 2851: Non-breaking space (`~') should have been used.
+generalizing to new classes other than those seen during training \cite{snell-ea-meta}, self-modifying code \cite{schmidhuber-ea-self},  
+                                                                 ^
+Warning 2 in thesis.tex line 2851: Non-breaking space (`~') should have been used.
+generalizing to new classes other than those seen during training \cite{snell-ea-meta}, self-modifying code \cite{schmidhuber-ea-self},  
+                                                                                                           ^
+Warning 2 in thesis.tex line 2852: Non-breaking space (`~') should have been used.
+increasing speed of adaptation to a new dataset from the same task \cite{finn-ea-maml}, and many other topics \cite{thrun-ea-ltol}.  
+                                                                  ^
+Warning 2 in thesis.tex line 2852: Non-breaking space (`~') should have been used.
+increasing speed of adaptation to a new dataset from the same task \cite{finn-ea-maml}, and many other topics \cite{thrun-ea-ltol}.  
+                                                                                                             ^
+Warning 12 in thesis.tex line 2854: Interword spacing (`\ ') should perhaps be used.
+The philosophy generally attached to meta-learning is particularly appealing: phrasing the above OOD problems as variants of assuming that the training and test distributions come from a meta-distribution, and try to reuse as much as possible the technical machinery that works so well in i.i.d. problems \cite{silver-principles, finn-ea-maml}. Furthermore, in the last few  
+                                                                                                                                                                                                                                                                                                       ^
+Warning 2 in thesis.tex line 2854: Non-breaking space (`~') should have been used.
+The philosophy generally attached to meta-learning is particularly appealing: phrasing the above OOD problems as variants of assuming that the training and test distributions come from a meta-distribution, and try to reuse as much as possible the technical machinery that works so well in i.i.d. problems \cite{silver-principles, finn-ea-maml}. Furthermore, in the last few  
+                                                                                                                                                                                                                                                                                                                ^
+Warning 12 in thesis.tex line 2857: Interword spacing (`\ ') should perhaps be used.
+bias about the distributions at hand not only make things easier by reusing the i.i.d. machinery, but ultimately increase performance?  
+                                                                                      ^
+Warning 2 in thesis.tex line 2874: Non-breaking space (`~') should have been used.
+We utilize the notation and setup of \cite{finn-ea-maml} slightly rewritten, which for completeness we now detail.  
+                                    ^
+Warning 2 in thesis.tex line 2875: Non-breaking space (`~') should have been used.
+An important assumption that we'll be dealing with, following from that of \cite{finn-ea-maml}, is that the different training and test environments  
+                                                                          ^
+Warning 2 in thesis.tex line 2887: Non-breaking space (`~') should have been used.
+Following \cite{finn-ea-maml} we assume access to datasets $\{S^j\}_{j=1, \cdots, |\Etrain|}$, and potentially empty sample sets from the test distribution $S^\test$. Here,  
+         ^
+Warning 3 in thesis.tex line 2887: You should enclose the previous parenthesis with `{}'.
+Following \cite{finn-ea-maml} we assume access to datasets $\{S^j\}_{j=1, \cdots, |\Etrain|}$, and potentially empty sample sets from the test distribution $S^\test$. Here,  
+                                                                 ^^
+Warning 11 in thesis.tex line 2887: You should use \ldots to achieve an ellipsis.
+Following \cite{finn-ea-maml} we assume access to datasets $\{S^j\}_{j=1, \cdots, |\Etrain|}$, and potentially empty sample sets from the test distribution $S^\test$. Here,  
+                                                                          ^^^^^^
+Warning 3 in thesis.tex line 2888: You should enclose the previous parenthesis with `{}'.
+$S^j = \{x^{(i), j}, y^{(i), j}\}_{i=1}^{n_j}$ are sampled i.i.d. from $P(x, y | e_j)$, the data distribution for environment $e_j$.  
+                               ^^
+Warning 12 in thesis.tex line 2888: Interword spacing (`\ ') should perhaps be used.
+$S^j = \{x^{(i), j}, y^{(i), j}\}_{i=1}^{n_j}$ are sampled i.i.d. from $P(x, y | e_j)$, the data distribution for environment $e_j$.  
+                                                                 ^
+Warning 13 in thesis.tex line 2890: Intersentence spacing (`\@') should perhaps be used.
+The expectation of this distribution is the Bayes-optimal prediction for losses such as cross-entropy or MSE.   
+                                                                                                            ^
+Warning 2 in thesis.tex line 2900: Non-breaking space (`~') should have been used.
+$P(y^* | x^*, \theta)$, just running the forward pass once we know the parameters of the test environment. The difficulty of calculating \eqref{eq:bopt} lies  
+                                                                                                                                        ^
+Warning 12 in thesis.tex line 2901: Interword spacing (`\ ') should perhaps be used.
+in sampling or estimating $P(e^\test | S^{1}, \dots, S^{{|\Etrain|}}, S^\test)$, i.e. what the likely forward pass is for the test samples given the previous environments'  
+                                                                                     ^
+Warning 9 in thesis.tex line 2913: `}' expected, found `)'.
+By Bayes rule, this can be written as $P(e^\test | \fancyp, S^\test) = \frac{P(S^\test | e^\test) \fancyp(e^\test))}{P(S^\test | \fancyp)}$.   
+                                                                                                                  ^
+Warning 12 in thesis.tex line 2918: Interword spacing (`\ ') should perhaps be used.
+and is essentially a standard i.i.d. problem, we will focus on the term that's more relevant to us: estimating $P(\fancyp | S^{1}, \dots, S^{{|\Etrain|}}, S^\test)$.  
+                                    ^
+Warning 13 in thesis.tex line 2932: Intersentence spacing (`\@') should perhaps be used.
+probability, and as briefly mentioned in the previous paragraph, enable OOD.  
+                                                                           ^
+Warning 2 in thesis.tex line 2942: Non-breaking space (`~') should have been used.
+Thus, we have arrived to \eqref{eq:plike} which is the addition of three terms: a constant, the meta-prior over $\fancyp$, and the likelihood of the data under $\fancyp$.  
+                        ^
+Warning 2 in thesis.tex line 2943: Non-breaking space (`~') should have been used.
+If the inequality \eqref{eq:vbound} was an equality, we would have obtained a guarantee that MAP estimation for $\fancyp$ (the left hand side) is equivalent to maximizing the likelihood of the data under $\fancyp$ and its meta-prior probability.  
+                 ^
+Warning 12 in thesis.tex line 2944: Interword spacing (`\ ') should perhaps be used.
+This is almost identical to the result on the i.i.d. case, in which MAP estimation over conditional distributions is equivalent to maximizing log-likelihood and a prior.  
+                                                    ^
+Warning 12 in thesis.tex line 2945: Interword spacing (`\ ') should perhaps be used.
+Since using a flat prior and optimizing likelihood (i.e. empirical risk minimization) can work so well in the i.i.d. setup, we might wonder whether we can do the same in \eqref{eq:plike}.  
+                                                        ^
+Warning 12 in thesis.tex line 2945: Interword spacing (`\ ') should perhaps be used.
+Since using a flat prior and optimizing likelihood (i.e. empirical risk minimization) can work so well in the i.i.d. setup, we might wonder whether we can do the same in \eqref{eq:plike}.  
+                                                                                                                    ^
+Warning 2 in thesis.tex line 2945: Non-breaking space (`~') should have been used.
+Since using a flat prior and optimizing likelihood (i.e. empirical risk minimization) can work so well in the i.i.d. setup, we might wonder whether we can do the same in \eqref{eq:plike}.  
+                                                                                                                                                                         ^
+Warning 12 in thesis.tex line 2946: Interword spacing (`\ ') should perhaps be used.
+There are however a few differences from the i.i.d. setup, which will show why reussing the i.i.d. machinnery and just optimizing the likelihood term of \eqref{eq:plike}  
+                                                   ^
+Warning 12 in thesis.tex line 2946: Interword spacing (`\ ') should perhaps be used.
+There are however a few differences from the i.i.d. setup, which will show why reussing the i.i.d. machinnery and just optimizing the likelihood term of \eqref{eq:plike}  
+                                                                                                  ^
+Warning 2 in thesis.tex line 2946: Non-breaking space (`~') should have been used.
+There are however a few differences from the i.i.d. setup, which will show why reussing the i.i.d. machinnery and just optimizing the likelihood term of \eqref{eq:plike}  
+                                                                                                                                                        ^
+Warning 12 in thesis.tex line 2949: Interword spacing (`\ ') should perhaps be used.
+The first difference in this meta-i.i.d. derivation is the variational bound in equation \eqref{eq:vbound}, which is due to Jensen's inequality.  
+                                        ^
+Warning 2 in thesis.tex line 2949: Non-breaking space (`~') should have been used.
+The first difference in this meta-i.i.d. derivation is the variational bound in equation \eqref{eq:vbound}, which is due to Jensen's inequality.  
+                                                                                        ^
+Warning 12 in thesis.tex line 2953: Interword spacing (`\ ') should perhaps be used.
+is different than in the i.i.d. setting). However, it is a good exercise that we leave for the reader to prove that this bound becomes an equality after normalizing and letting  
+                               ^
+Warning 12 in thesis.tex line 2956: Interword spacing (`\ ') should perhaps be used.
+could be the difference with the i.i.d. setup where just optimizing likelihood can yield such good results? The answer lies in the meta-prior.  
+                                       ^
+Warning 12 in thesis.tex line 2958: Interword spacing (`\ ') should perhaps be used.
+In the typical i.i.d. setting we have  
+                     ^
+Warning 12 in thesis.tex line 2963: Interword spacing (`\ ') should perhaps be used.
+classification often require three simple things: carefully restricting the architecture (i.e. the structure of $P(S | \theta)$), using SGD and clever initialization schemes,  
+                                                                                              ^
+Warning 2 in thesis.tex line 2965: Non-breaking space (`~') should have been used.
+priors $P(\theta)$ \cite{goodfellow-ea-dl, chaudhari2018stochastic}. The combination of these priors and optimizing the likelihood leads to good in-distribution generalization  
+                  ^
+Warning 2 in thesis.tex line 2968: Non-breaking space (`~') should have been used.
+Restricting the architecture and optimizers in the case of equation \eqref{eq:plike} would mean having $P(\fancyp)$ supported on those  
+                                                                   ^
+Warning 12 in thesis.tex line 2982: Interword spacing (`\ ') should perhaps be used.
+These differences in possible meta-priors wouldn't matter given sufficient number of environments (at least for the meta-i.i.d. case we are assuming in this chapter), since  
+                                                                                                                               ^
+Warning 12 in thesis.tex line 2985: Interword spacing (`\ ') should perhaps be used.
+As seen in \autoref{chap:CIG}, we are sometimes able to generalize with two environments. This is in contrast to the typical i.i.d. case where we have millions  
+                                                                                                                                   ^
+Warning 12 in thesis.tex line 2986: Interword spacing (`\ ') should perhaps be used.
+of samples. We have a lot less meta-samples in the meta-i.i.d. setup than we have samples in traditional i.i.d. problems. Luckily in most tasks, and in particular in  
+                                                              ^
+Warning 12 in thesis.tex line 2986: Interword spacing (`\ ') should perhaps be used.
+of samples. We have a lot less meta-samples in the meta-i.i.d. setup than we have samples in traditional i.i.d. problems. Luckily in most tasks, and in particular in  
+                                                                                                               ^
+Warning 2 in thesis.tex line 2991: Non-breaking space (`~') should have been used.
+MAML \cite{finn-ea-maml} goes one step forward of simply restricting the family of possible $P(Y | X, e)$. In addition to this, it implicitly has a meta-prior  
+    ^
+Warning 2 in thesis.tex line 3000: Non-breaking space (`~') should have been used.
+A final work that deserves mention in this chapter is that of \cite{bengio2019meta}. There, the authors show that speed of adaptation from one  
+                                                             ^
+Warning 15 in thesis.tex line 2626: No match found for `{'.
+  &= \frac{\left((A^1_\Phi + p_Z^e (A^2_\Phi - A^1_\Phi) + A^3_\Phi \right) (v \odot P_H^e)}{\left((A^1_\Phi + p_Z^e (A^2_\Phi - A^1_\Phi) + A^3_\Phi \right) (\matr{1}_d \odot P_H^e)} \label{eq:rhsinvmn}  
+          ^
+Warning 15 in thesis.tex line 2625: No match found for `('.
+  &= \frac{1}{P(\hat{H}^e = \hat h)}\left((A^1_\Phi + p_Z^e (A^2_\Phi - A^1_\Phi) + A^3_\Phi \right) (v \odot P_H^e) \nonumber\\  
+                                         ^
+Warning 17 in thesis.tex line 3012: Number of `(' doesn't match the number of `)'!
+
+
+Warning 17 in thesis.tex line 3012: Number of `[' doesn't match the number of `]'!
+
+

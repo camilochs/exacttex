@@ -1,0 +1,3 @@
+planted=Pexman2008SemanticRichnessNOF__ghost sites=[('ParetiWebSci15.xtex', 67)]
+xtex new=[]
+texlab new=[]

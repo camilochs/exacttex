@@ -1,0 +1,113 @@
+{
+ "paper": "2601.00882",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 7499,
+   "chars_after": 7547,
+   "emitted": true,
+   "identity": "import-ext-only",
+   "lines_differing": 6
+  },
+  {
+   "file": "content/0.abstract.tex",
+   "chars_before": 989,
+   "chars_after": 989,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "content/1.context.tex",
+   "chars_before": 4618,
+   "chars_after": 4618,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "content/2.motivating-system-and-state-of-art.tex",
+   "chars_before": 4474,
+   "chars_after": 4474,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "content/3.method.tex",
+   "chars_before": 10172,
+   "chars_after": 10157,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "content/4.evaluation.tex",
+   "chars_before": 3918,
+   "chars_after": 3918,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "content/5.conclusion.tex",
+   "chars_before": 916,
+   "chars_after": 916,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 7,
+ "chars_before": 32586,
+ "chars_after": 32619,
+ "delta_pct": 0.10127048425704291,
+ "unrepaired": {
+  "chars_after": 32619,
+  "chars_before": 32586,
+  "converted_files": 7,
+  "check_exit": 0,
+  "coverage": 0.023669,
+  "bibliography": {
+   "state": "complete",
+   "entries": 19
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": 0.10127048425704291
+ },
+ "stats": {
+  "cite_cmds_live": 10,
+  "cite_keys_live": 21,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 3,
+  "other_cite_cmds": 0,
+  "labels_live": 5,
+  "labels_outside_grammar": 0,
+  "refs_live": 5,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 2,
+  "float_envs": 1,
+  "cite_cmds_annotated": 7,
+  "cite_keys_annotated": 14,
+  "ids_annotated": 5,
+  "refs_annotated": 5,
+  "inputs_root": 6,
+  "inputs_imported": 6,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.023669,
+ "bibliography": {
+  "state": "complete",
+  "entries": 19
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

@@ -1,0 +1,315 @@
+exit=2
+lines=312
+unique_findings=83
+Warning 12 in nilab_malformation.tex line 105: Interword spacing (`\ ') should perhaps be used.
+  pipelines and a deep learning model, i.e. a 3D U-Net trained on  
+                                           ^
+Warning 24 in nilab_malformation.tex line 117: Delete this space to maintain correct pagereferences.
+\label{sec:introduction}  
+^
+Warning 2 in nilab_malformation.tex line 132: Non-breaking space (`~') should have been used.
+automated tools, such as FSL \cite{jenkinson_fsl_2012}, SPM  
+                            ^
+Warning 2 in nilab_malformation.tex line 133: Non-breaking space (`~') should have been used.
+\cite{ashburner_voxel-based_2000}, FreeSurfer  
+^
+Warning 2 in nilab_malformation.tex line 134: Non-breaking space (`~') should have been used.
+\cite{dale_cortical_1999} and ANTs  
+^
+Warning 2 in nilab_malformation.tex line 135: Non-breaking space (`~') should have been used.
+\cite{tustison_large-scale_2014}. Typically, these tools obtain  
+^
+Warning 2 in nilab_malformation.tex line 142: Non-breaking space (`~') should have been used.
+\cite{moeskops_automatic_2016,rajchl_neuronet_2018,spalletta_convolutional_2018,yogananda_deep_2019},  
+^
+Warning 12 in nilab_malformation.tex line 150: Interword spacing (`\ ') should perhaps be used.
+Especially in children, many congenital (e.g. malformations, huge  
+                                             ^
+Warning 12 in nilab_malformation.tex line 151: Interword spacing (`\ ') should perhaps be used.
+arachnoid cysts) or acquired (e.g. severe hydrocephalus,  
+                                  ^
+Warning 2 in nilab_malformation.tex line 174: Non-breaking space (`~') should have been used.
+\cite{ourselin_3d_2016,ronneberger_u-net:_2015}, trained on over 800  
+^
+Warning 24 in nilab_malformation.tex line 203: Delete this space to maintain correct pagereferences.
+\label{sec:materials}  
+^
+Warning 24 in nilab_malformation.tex line 219: Delete this space to maintain correct pagereferences.
+\label{sec:healthy}  
+^
+Warning 29 in nilab_malformation.tex line 227: $\times$ may look prettier here.
+    FOV=256x224x160, voxel spacing=1x1x1 mm$^3$).  
+           ^
+Warning 29 in nilab_malformation.tex line 227: $\times$ may look prettier here.
+    FOV=256x224x160, voxel spacing=1x1x1 mm$^3$).  
+               ^
+Warning 29 in nilab_malformation.tex line 227: $\times$ may look prettier here.
+    FOV=256x224x160, voxel spacing=1x1x1 mm$^3$).  
+                                    ^
+Warning 29 in nilab_malformation.tex line 227: $\times$ may look prettier here.
+    FOV=256x224x160, voxel spacing=1x1x1 mm$^3$).  
+                                      ^
+Warning 2 in nilab_malformation.tex line 230: Non-breaking space (`~') should have been used.
+    Archive \cite{evans_nih_2006}, MRI 1.5T scanner with two different  
+           ^
+Warning 29 in nilab_malformation.tex line 236: $\times$ may look prettier here.
+      160$-$180x256x256, voxel spacing=1x1x1 mm$^3$)  
+               ^
+Warning 29 in nilab_malformation.tex line 236: $\times$ may look prettier here.
+      160$-$180x256x256, voxel spacing=1x1x1 mm$^3$)  
+                   ^
+Warning 29 in nilab_malformation.tex line 236: $\times$ may look prettier here.
+      160$-$180x256x256, voxel spacing=1x1x1 mm$^3$)  
+                                        ^
+Warning 29 in nilab_malformation.tex line 236: $\times$ may look prettier here.
+      160$-$180x256x256, voxel spacing=1x1x1 mm$^3$)  
+                                          ^
+Warning 29 in nilab_malformation.tex line 239: $\times$ may look prettier here.
+      Field of view = 192x256x66, voxel spacing=1x1x3 mm$^3$)  
+                         ^
+Warning 29 in nilab_malformation.tex line 239: $\times$ may look prettier here.
+      Field of view = 192x256x66, voxel spacing=1x1x3 mm$^3$)  
+                             ^
+Warning 29 in nilab_malformation.tex line 239: $\times$ may look prettier here.
+      Field of view = 192x256x66, voxel spacing=1x1x3 mm$^3$)  
+                                                 ^
+Warning 29 in nilab_malformation.tex line 239: $\times$ may look prettier here.
+      Field of view = 192x256x66, voxel spacing=1x1x3 mm$^3$)  
+                                                   ^
+Warning 29 in nilab_malformation.tex line 245: $\times$ may look prettier here.
+  sequence (TR=8000ms, TE=4ms, Flip angle=8$^o$, FOV=256x256x170,  
+                                                        ^
+Warning 29 in nilab_malformation.tex line 245: $\times$ may look prettier here.
+  sequence (TR=8000ms, TE=4ms, Flip angle=8$^o$, FOV=256x256x170,  
+                                                            ^
+Warning 29 in nilab_malformation.tex line 246: $\times$ may look prettier here.
+  voxel spacing=1x1x1 mm$^3$).  
+                 ^
+Warning 29 in nilab_malformation.tex line 246: $\times$ may look prettier here.
+  voxel spacing=1x1x1 mm$^3$).  
+                   ^
+Warning 24 in nilab_malformation.tex line 251: Delete this space to maintain correct pagereferences.
+\label{sec:distorted}  
+^
+Warning 2 in nilab_malformation.tex line 261: Non-breaking space (`~') should have been used.
+  ventricle. See some cases in Figure \ref{fig:acc}.  
+                                     ^
+Warning 2 in nilab_malformation.tex line 266: Non-breaking space (`~') should have been used.
+  case). See some cases in Figure \ref{fig:complex}.  
+                                 ^
+Warning 24 in nilab_malformation.tex line 270: Delete this space to maintain correct pagereferences.
+\label{sec:preprocessing}  
+^
+Warning 2 in nilab_malformation.tex line 275: Non-breaking space (`~') should have been used.
+\cite{tustison_large-scale_2014} with the PTBP (pediatric) prior  
+^
+Warning 2 in nilab_malformation.tex line 276: Non-breaking space (`~') should have been used.
+\cite{avants_pediatric_2015}, resulting in a 3D mask with 7 labels (6  
+^
+Warning 24 in nilab_malformation.tex line 284: Delete this space to maintain correct pagereferences.
+\label{sec:methods}  
+^
+Warning 2 in nilab_malformation.tex line 289: Non-breaking space (`~') should have been used.
+\cite{ourselin_3d_2016,ronneberger_u-net:_2015} was implemented to  
+^
+Warning 29 in nilab_malformation.tex line 293: $\times$ may look prettier here.
+the output layer are for 256x256x256 isotropic 3D images, resolution  
+                            ^
+Warning 29 in nilab_malformation.tex line 293: $\times$ may look prettier here.
+the output layer are for 256x256x256 isotropic 3D images, resolution  
+                                ^
+Warning 2 in nilab_malformation.tex line 297: Non-breaking space (`~') should have been used.
+during the experiments reported in Section \ref{sec:experiments}.  
+                                          ^
+Warning 29 in nilab_malformation.tex line 301: $\times$ may look prettier here.
+layers (3x3x3 kernel followed by ReLU) followed by MaxPooling (2x2x2  
+         ^
+Warning 29 in nilab_malformation.tex line 301: $\times$ may look prettier here.
+layers (3x3x3 kernel followed by ReLU) followed by MaxPooling (2x2x2  
+           ^
+Warning 29 in nilab_malformation.tex line 301: $\times$ may look prettier here.
+layers (3x3x3 kernel followed by ReLU) followed by MaxPooling (2x2x2  
+                                                                ^
+Warning 29 in nilab_malformation.tex line 301: $\times$ may look prettier here.
+layers (3x3x3 kernel followed by ReLU) followed by MaxPooling (2x2x2  
+                                                                  ^
+Warning 29 in nilab_malformation.tex line 302: $\times$ may look prettier here.
+filter, stride 2x2x2) for downsampling. The size of the downsampling  
+                ^
+Warning 29 in nilab_malformation.tex line 302: $\times$ may look prettier here.
+filter, stride 2x2x2) for downsampling. The size of the downsampling  
+                  ^
+Warning 29 in nilab_malformation.tex line 308: $\times$ may look prettier here.
+consists of 2 convolutional layers both of 192 filters (3x3x3 kernel  
+                                                         ^
+Warning 29 in nilab_malformation.tex line 308: $\times$ may look prettier here.
+consists of 2 convolutional layers both of 192 filters (3x3x3 kernel  
+                                                           ^
+Warning 12 in nilab_malformation.tex line 315: Interword spacing (`\ ') should perhaps be used.
+downsampling, i.e. from $16$ to $256$.  All convolutional layers have  
+                  ^
+Warning 29 in nilab_malformation.tex line 316: $\times$ may look prettier here.
+3x3x3 kernel then ReLU, that produce a decreasing number of feature  
+ ^
+Warning 29 in nilab_malformation.tex line 316: $\times$ may look prettier here.
+3x3x3 kernel then ReLU, that produce a decreasing number of feature  
+   ^
+Warning 29 in nilab_malformation.tex line 320: $\times$ may look prettier here.
+a last layer of convolution with 7 1x1x1 filters, followed by a softmax   
+                                    ^
+Warning 29 in nilab_malformation.tex line 320: $\times$ may look prettier here.
+a last layer of convolution with 7 1x1x1 filters, followed by a softmax   
+                                      ^
+Warning 24 in nilab_malformation.tex line 324: Delete this space to maintain correct pagereferences.
+\label{sec:experiments}  
+^
+Warning 2 in nilab_malformation.tex line 330: Non-breaking space (`~') should have been used.
+\ref{sec:distorted}. Different pipelines produced different sets of  
+^
+Warning 13 in nilab_malformation.tex line 336: Intersentence spacing (`\@') should perhaps be used.
+GM. The technical details of each pipeline are the following:  
+  ^
+Warning 2 in nilab_malformation.tex line 338: Non-breaking space (`~') should have been used.
+\item \textbf{FSL v6} \cite{jenkinson_fsl_2012}: we used  
+                     ^
+Warning 2 in nilab_malformation.tex line 341: Non-breaking space (`~') should have been used.
+\item \textbf{FreeSurfer v6} \cite{dale_cortical_1999}: we used  
+                            ^
+Warning 2 in nilab_malformation.tex line 344: Non-breaking space (`~') should have been used.
+\item \textbf{SPM12} \cite{ashburner_voxel-based_2000}: we used default  
+                    ^
+Warning 2 in nilab_malformation.tex line 346: Non-breaking space (`~') should have been used.
+\item \textbf{ANTs v2.2.0} \cite{tustison_large-scale_2014}: we used  
+                          ^
+Warning 2 in nilab_malformation.tex line 348: Non-breaking space (`~') should have been used.
+  the PTBP (pediatric) prior \cite{avants_pediatric_2015}. We  
+                            ^
+Warning 2 in nilab_malformation.tex line 351: Non-breaking space (`~') should have been used.
+  1.8.0 \cite{martin_abadi_tensorflow_2015} trained on T1-weighted  
+       ^
+Warning 2 in nilab_malformation.tex line 353: Non-breaking space (`~') should have been used.
+  described in Section \ref{sec:materials}. We kept apart 90 randomly  
+                      ^
+Warning 36 in nilab_malformation.tex line 362: You should put a space in front of parenthesis.
+processor Intel(R) Xeon(R) CPU E5-1650 v4 3.60GHz, 128Gb RAM, GPU:  
+               ^
+Warning 36 in nilab_malformation.tex line 362: You should put a space in front of parenthesis.
+processor Intel(R) Xeon(R) CPU E5-1650 v4 3.60GHz, 128Gb RAM, GPU:  
+                       ^
+Warning 8 in nilab_malformation.tex line 362: Wrong length of dash may have been used.
+processor Intel(R) Xeon(R) CPU E5-1650 v4 3.60GHz, 128Gb RAM, GPU:  
+                                 ^
+Warning 13 in nilab_malformation.tex line 362: Intersentence spacing (`\@') should perhaps be used.
+processor Intel(R) Xeon(R) CPU E5-1650 v4 3.60GHz, 128Gb RAM, GPU:  
+                                                                 ^
+Warning 13 in nilab_malformation.tex line 363: Intersentence spacing (`\@') should perhaps be used.
+NVIDIA GeForce GTX 1080TI 11Gb RAM.  
+                                  ^
+Warning 24 in nilab_malformation.tex line 367: Delete this space to maintain correct pagereferences.
+\label{sec:results}  
+^
+Warning 13 in nilab_malformation.tex line 380: Intersentence spacing (`\@') should perhaps be used.
+the uninteresting results of FreeSurfer and SPM.  
+                                               ^
+Warning 2 in nilab_malformation.tex line 382: Non-breaking space (`~') should have been used.
+In Figure \ref{fig:acc}, we show a paradigmatic set of axial slices  
+         ^
+Warning 12 in nilab_malformation.tex line 384: Interword spacing (`\ ') should perhaps be used.
+i.e. from 4 of the 12 subjects described in Section  
+    ^
+Warning 2 in nilab_malformation.tex line 385: Non-breaking space (`~') should have been used.
+\ref{sec:distorted}. Similarly, in Figure \ref{fig:complex}, we report  
+^
+Warning 2 in nilab_malformation.tex line 385: Non-breaking space (`~') should have been used.
+\ref{sec:distorted}. Similarly, in Figure \ref{fig:complex}, we report  
+                                         ^
+Warning 2 in nilab_malformation.tex line 393: Non-breaking space (`~') should have been used.
+Section \ref{sec:discussion}.  
+       ^
+Warning 2 in nilab_malformation.tex line 395: Non-breaking space (`~') should have been used.
+Finally, in Table \ref{tab:results_healthy}, we report the results of  
+                 ^
+Warning 12 in nilab_malformation.tex line 396: Interword spacing (`\ ') should perhaps be used.
+the sanity check, i.e. that the training process of the 3D U-Net on  
+                      ^
+Warning 2 in nilab_malformation.tex line 400: Non-breaking space (`~') should have been used.
+brains described in Section \ref{sec:preprocessing}. These results are  
+                           ^
+Warning 2 in nilab_malformation.tex line 402: Non-breaking space (`~') should have been used.
+\cite{spalletta_convolutional_2018,yogananda_deep_2019}.  
+^
+Warning 44 in nilab_malformation.tex line 408: User Regex: -2:Vertical rules in tables are ugly.
+  \begin{tabular}{p{1.0cm} | p{1.4cm} | p{1.43cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{1.4cm} | p{2cm}}  
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in nilab_malformation.tex line 411: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \hline  
+    ^^^^^^
+Warning 44 in nilab_malformation.tex line 413: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \hline  
+    ^^^^^^
+Warning 24 in nilab_malformation.tex line 418: Delete this space to maintain correct pagereferences.
+  \label{tab:results_healthy}  
+ ^
+Warning 2 in nilab_malformation.tex line 432: Non-breaking space (`~') should have been used.
+    discussed in Section \ref{sec:discussion}.}  
+                        ^
+Warning 24 in nilab_malformation.tex line 433: Delete this space to maintain correct pagereferences.
+  \label{fig:acc}  
+ ^
+Warning 2 in nilab_malformation.tex line 446: Non-breaking space (`~') should have been used.
+    discussed in Section \ref{sec:discussion}.}  
+                        ^
+Warning 24 in nilab_malformation.tex line 447: Delete this space to maintain correct pagereferences.
+  \label{fig:complex}  
+ ^
+Warning 24 in nilab_malformation.tex line 452: Delete this space to maintain correct pagereferences.
+\label{sec:discussion}  
+^
+Warning 2 in nilab_malformation.tex line 454: Non-breaking space (`~') should have been used.
+Figure \ref{fig:acc} shows that FSL fails to segment GM and WM in  
+      ^
+Warning 13 in nilab_malformation.tex line 457: Intersentence spacing (`\@') should perhaps be used.
+misses identifying the thalami as (deep) GM. ANTs performs better in  
+                                           ^
+Warning 13 in nilab_malformation.tex line 465: Intersentence spacing (`\@') should perhaps be used.
+to the head of the caudate is misclassified as WM. Finally in D,  
+                                                 ^
+Warning 13 in nilab_malformation.tex line 467: Intersentence spacing (`\@') should perhaps be used.
+medial ventricular wall, are labelled as GM. In contrast, the 3D U-Net  
+                                           ^
+Warning 13 in nilab_malformation.tex line 468: Intersentence spacing (`\@') should perhaps be used.
+performs well in segmenting ACC. The most relevant error in these  
+                               ^
+Warning 13 in nilab_malformation.tex line 469: Intersentence spacing (`\@') should perhaps be used.
+cases is at the interface between ventricles and WM: the 3D U-Net  
+                                                   ^
+Warning 2 in nilab_malformation.tex line 473: Non-breaking space (`~') should have been used.
+Figure \ref{fig:complex} shows that, in case of complex malformations  
+      ^
+Warning 13 in nilab_malformation.tex line 478: Intersentence spacing (`\@') should perhaps be used.
+wrongly labelled as CSF. In case F, the CSF collection that replaces  
+                       ^
+Warning 12 in nilab_malformation.tex line 480: Interword spacing (`\ ') should perhaps be used.
+properly segment the pachygyric (i.e. with a reduced number of gyri)  
+                                     ^
+Warning 10 in nilab_malformation.tex line 488: Solo `)' found.
+main issues are: i) the mislabeling of signal inhomogeneities in the  
+                  ^
+Warning 24 in nilab_malformation.tex line 496: Delete this space to maintain correct pagereferences.
+\label{sec:conclusions}  
+^
+Warning 24 in nilab_malformation.tex line 511: Delete this space to maintain correct pagereferences.
+\label{sec:acknowledgment}  
+^
+Warning 13 in nilab_malformation.tex line 525: Intersentence spacing (`\@') should perhaps be used.
+opinions or views of the NIH.  
+                            ^
+Warning 12 in nilab_malformation.tex line 539: Interword spacing (`\ ') should perhaps be used.
+This is an extension of Figure 1, i.e. paradigmatic segmentations of  
+                                      ^
+Warning 12 in nilab_malformation.tex line 552: Interword spacing (`\ ') should perhaps be used.
+This is an extension of Figure 2, i.e. paradigmatic segmentations of  
+                                      ^
+Warning 17 in nilab_malformation.tex line 565: Number of `(' doesn't match the number of `)'!
+
+

@@ -1,0 +1,33 @@
+tectonic pdf bytes=6583267
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=[] secs=3
+ at line 11 replaced by U+FFFD.
+warning: apo.tex:197: Underfull \hbox (badness 1810) in paragraph at lines 196--197
+warning: apo.tex:197: Underfull \hbox (badness 1448) in paragraph at lines 196--197
+warning: apo.tex:211: Underfull \hbox (badness 812) in paragraph at lines 210--211
+warning: apo.tex:211: Underfull \hbox (badness 812) in paragraph at lines 210--211
+warning: apo.tex:240: Overfull \hbox (11.82845pt too wide) in paragraph at lines 239--240
+warning: apo.tex:285: Underfull \hbox (badness 991) in paragraph at lines 284--285
+warning: apo.tex:310: Underfull \hbox (badness 816) in paragraph at lines 309--310
+warning: apo.tex:310: Underfull \hbox (badness 1527) in paragraph at lines 309--310
+warning: apo.tex:310: Underfull \hbox (badness 1275) in paragraph at lines 309--310
+warning: apo.tex:377: Underfull \hbox (badness 1237) in paragraph at lines 376--377
+warning: apo.tex:457: Underfull \hbox (badness 870) in paragraph at lines 456--457
+warning: apo.tex:547: Overfull \hbox (5.54778pt too wide) in paragraph at lines 546--547
+warning: apo.tex:547: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: apo.tex:547: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: apo.tex:567: Overfull \hbox (2.97786pt too wide) in paragraph at lines 566--567
+warning: apo.tex:573: Underfull \hbox (badness 1038) in paragraph at lines 572--573
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.

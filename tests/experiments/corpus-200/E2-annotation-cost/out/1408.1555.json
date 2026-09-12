@@ -1,0 +1,78 @@
+{
+ "paper": "1408.1555",
+ "main": "sigma16-026.tex",
+ "files": [
+  {
+   "file": "sigma16-026.tex",
+   "chars_before": 76792,
+   "chars_after": 76720,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 76792,
+ "chars_after": 76720,
+ "delta_pct": -0.09375976664235858,
+ "unrepaired": {
+  "chars_after": 76720,
+  "chars_before": 76792,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.017375,
+  "bibliography": {
+   "state": "complete",
+   "entries": 30
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.09375976664235858
+ },
+ "stats": {
+  "cite_cmds_live": 50,
+  "cite_keys_live": 52,
+  "cite_with_optarg_or_star": 11,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 41,
+  "labels_outside_grammar": 17,
+  "refs_live": 38,
+  "refs_outside_grammar": 10,
+  "other_ref_cmds": 4,
+  "float_envs": 0,
+  "cite_cmds_annotated": 39,
+  "cite_keys_annotated": 41,
+  "ids_annotated": 24,
+  "refs_annotated": 27,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 1,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "sigma16-026.tex",
+   "line": 1388,
+   "token": "@ref(t:main)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Theorem \\ref{t:main}]"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.017375,
+ "bibliography": {
+  "state": "complete",
+  "entries": 30
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

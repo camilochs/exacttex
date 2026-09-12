@@ -1,0 +1,206 @@
+exit=2
+lines=243
+unique_findings=64
+
+                                                  ^
+Warning 36 in main.tex line 63: You should put a space in front of parenthesis.
+Conversely, if not, they should be included in Eq.(\ref{SMLag}) or Eq.(\ref{DarkLag}),  
+                                                                      ^
+Warning 36 in main.tex line 65: You should put a space in front of parenthesis.
+In the former case, Lagrangians in Eq.(\ref{SMLag}) and Eq.(\ref{DarkLag}) contain all possible contributions to DM annihilation and DM scattering cross sections.  
+                                      ^
+Warning 36 in main.tex line 65: You should put a space in front of parenthesis.
+In the former case, Lagrangians in Eq.(\ref{SMLag}) and Eq.(\ref{DarkLag}) contain all possible contributions to DM annihilation and DM scattering cross sections.  
+                                                           ^
+Warning 24 in main.tex line 83: Delete this space to maintain correct pagereferences.
+\label{Diagram}  
+^
+Warning 44 in main.tex line 90: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline\hline  
+^^^^^^
+Warning 44 in main.tex line 90: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline\hline  
+      ^^^^^^
+Warning 44 in main.tex line 91: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+${\rm channel}$    & $a$ & $b$   \\  \hline  
+                                     ^^^^^^
+Warning 44 in main.tex line 97: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline \hline  
+^^^^^^
+Warning 44 in main.tex line 97: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline \hline  
+       ^^^^^^
+Warning 36 in main.tex line 105: You should put a space in front of parenthesis.
+According to the effective Lagrangian in Eq.(\ref{Lag}),   
+                                            ^
+Warning 2 in main.tex line 110: Non-breaking space (`~') should have been used.
+Although Feynman diagrams similar to Fig.\ref{Diagram} have already been discussed in more complicated context such as neutralino DM \cite{9207234},   
+                                                                                                                                    ^
+Warning 3 in main.tex line 147: You should enclose the previous parenthesis with `{}'.
+b_{zh}&=&\frac{c_{z}^2r_{\chi zh}}{768 \pi \upsilon_{\text{EW}}^2 m_{\chi}^2 m_{Z}^2 (m_{Z}^2-4 m_{\chi}^2)^{2}}  \left[(4 m_{Z}^6 (5 m_{h}^2 + 59 m_{\chi}^2)-2 m_{Z}^4 (5 m_{h}^4 + 74 m_{h}^2 m_{\chi}^2 + 344 m_{\chi}^4) \nonumber \right.\\  
+                                                                                                          ^
+Warning 3 in main.tex line 149: You should enclose the previous parenthesis with `{}'.
+ &+&\frac{c_{h}c_{z}^2 r_{\chi zh}}{12\pi \upsilon_{\text{EW}}m_{\chi} m^{2}_{Z}(4 m_{\chi}^2 - m_{Z}^2) (m_{h}^2 - 4 m_{\chi}^2 + m_{Z}^2)^2}\left[(2 m_{Z}^6 (m_{h}^2 -9 m_{\chi}^2) - 2 m_{\chi}^2 (m_{h}^2 - 4 m_{\chi}^2)^3 \nonumber\right.\\  
+                                                                                                                                          ^
+Warning 3 in main.tex line 149: You should enclose the previous parenthesis with `{}'.
+ &+&\frac{c_{h}c_{z}^2 r_{\chi zh}}{12\pi \upsilon_{\text{EW}}m_{\chi} m^{2}_{Z}(4 m_{\chi}^2 - m_{Z}^2) (m_{h}^2 - 4 m_{\chi}^2 + m_{Z}^2)^2}\left[(2 m_{Z}^6 (m_{h}^2 -9 m_{\chi}^2) - 2 m_{\chi}^2 (m_{h}^2 - 4 m_{\chi}^2)^3 \nonumber\right.\\  
+                                                                                                                                                                                                                             ^
+Warning 3 in main.tex line 151: You should enclose the previous parenthesis with `{}'.
+ &+&\frac{c_{h}^2c_{z}^2 r_{\chi zh}}{768 \pi m_{\chi}^2 m_{Z}^2 (m_{h}^2 - 4 m_{\chi}^2 + m_{Z}^2)^4} \left[m_{Z}^{10}+2 m_{Z}^6 (3 m_{h}^4 + 16 m_{\chi}^4) +4 m_{Z}^8 (m_{\chi}^2 - m_{h}^2)\nonumber\right.\\  
+                                                                                                  ^
+Warning 3 in main.tex line 152: You should enclose the previous parenthesis with `{}'.
+ &-& \left.\ 4m_{Z}^4 (m_{h}^2 - 4 m_{\chi}^2)^2 (m_{h}^2 + 10 m_{\chi}^2) + 4 m_{\chi}^2 (m_{h}^2 - 4 m_{\chi}^2)^4 \nonumber\right.\\  
+                                             ^
+Warning 3 in main.tex line 152: You should enclose the previous parenthesis with `{}'.
+ &-& \left.\ 4m_{Z}^4 (m_{h}^2 - 4 m_{\chi}^2)^2 (m_{h}^2 + 10 m_{\chi}^2) + 4 m_{\chi}^2 (m_{h}^2 - 4 m_{\chi}^2)^4 \nonumber\right.\\  
+                                                                                                                 ^
+Warning 3 in main.tex line 153: You should enclose the previous parenthesis with `{}'.
+ &+& \left.\  m_{Z}^2 (m_{h}^2 - 4 m_{\chi}^2)^2 (m_{h}^4 + 8 m_{h}^2 m_{\chi}^2 + 80 m_{\chi}^4) \right]  
+                                             ^
+Warning 3 in main.tex line 160: You should enclose the previous parenthesis with `{}'.
+r_{\chi ij}&=&\sqrt{m_i^4-2 m_i^2 (m_j^2+4 m_{\chi}^2 )+(m_j^2-4 m_{\chi}^2)^2}/m_{\chi}^{2} \nonumber  
+                                                                           ^
+Warning 36 in main.tex line 165: You should put a space in front of parenthesis.
+At first, in the case $c_{h}\rightarrow 0$, both $a_{ff}$ and $a_{zz}$ in Eq.(\ref{aff})- Eq.(\ref{azz}) coincide with results of $Z$ portal \cite{1708.00890,1506.06767},  
+                                                                             ^
+Warning 36 in main.tex line 165: You should put a space in front of parenthesis.
+At first, in the case $c_{h}\rightarrow 0$, both $a_{ff}$ and $a_{zz}$ in Eq.(\ref{aff})- Eq.(\ref{azz}) coincide with results of $Z$ portal \cite{1708.00890,1506.06767},  
+                                                                                             ^
+Warning 2 in main.tex line 165: Non-breaking space (`~') should have been used.
+At first, in the case $c_{h}\rightarrow 0$, both $a_{ff}$ and $a_{zz}$ in Eq.(\ref{aff})- Eq.(\ref{azz}) coincide with results of $Z$ portal \cite{1708.00890,1506.06767},  
+                                                                                                                                            ^
+Warning 2 in main.tex line 166: Non-breaking space (`~') should have been used.
+but $b_{ff}$ and $b_{zz}$ in \cite{1708.00890} are both two times of that in Eq.(\ref{bff}) and Eq.(\ref{bzz}), respectively.  
+                            ^
+Warning 36 in main.tex line 166: You should put a space in front of parenthesis.
+but $b_{ff}$ and $b_{zz}$ in \cite{1708.00890} are both two times of that in Eq.(\ref{bff}) and Eq.(\ref{bzz}), respectively.  
+                                                                                ^
+Warning 36 in main.tex line 166: You should put a space in front of parenthesis.
+but $b_{ff}$ and $b_{zz}$ in \cite{1708.00890} are both two times of that in Eq.(\ref{bff}) and Eq.(\ref{bzz}), respectively.  
+                                                                                                   ^
+Warning 36 in main.tex line 167: You should put a space in front of parenthesis.
+Secondly, in the case $c_{z}\rightarrow 0$ all $a$s in Eq.(\ref{aff})- Eq.(\ref{azh}) disappear as the same as in the Higgs portal,   
+                                                          ^
+Warning 36 in main.tex line 167: You should put a space in front of parenthesis.
+Secondly, in the case $c_{z}\rightarrow 0$ all $a$s in Eq.(\ref{aff})- Eq.(\ref{azh}) disappear as the same as in the Higgs portal,   
+                                                                          ^
+Warning 36 in main.tex line 168: You should put a space in front of parenthesis.
+and our $b_{ff}$ in Eq.(\ref{bff}) and $b_{zz}$ and $b_{hh}$ (the $c^{2}_{h}$-term) is in agreement with the results of \cite{1203.2064} and \cite{0611069}, respectively.  
+                       ^
+Warning 2 in main.tex line 168: Non-breaking space (`~') should have been used.
+and our $b_{ff}$ in Eq.(\ref{bff}) and $b_{zz}$ and $b_{hh}$ (the $c^{2}_{h}$-term) is in agreement with the results of \cite{1203.2064} and \cite{0611069}, respectively.  
+                                                                                                                       ^
+Warning 2 in main.tex line 168: Non-breaking space (`~') should have been used.
+and our $b_{ff}$ in Eq.(\ref{bff}) and $b_{zz}$ and $b_{hh}$ (the $c^{2}_{h}$-term) is in agreement with the results of \cite{1203.2064} and \cite{0611069}, respectively.  
+                                                                                                                                            ^
+Warning 36 in main.tex line 173: You should put a space in front of parenthesis.
+Finally, we have also included the SM Higgs self interaction contribution to $b_{hh}$ in Eq.(\ref{bhh}).  
+                                                                                            ^
+Warning 2 in main.tex line 174: Non-breaking space (`~') should have been used.
+We verified that our results agree with the numerical calculation in terms of code MicrOMEGAs \cite{1407.6129},   
+                                                                                             ^
+Warning 36 in main.tex line 179: You should put a space in front of parenthesis.
+The interactions in Eq.(\ref{DarkLag}) yield both spin-dependent (SD) and spin-independent (SI) effective couplings between DM and SM nucleons.  
+                       ^
+Warning 2 in main.tex line 181: Non-breaking space (`~') should have been used.
+which are given by \cite{Jungman:1995df,1605.08442},  
+                  ^
+Warning 2 in main.tex line 187: Non-breaking space (`~') should have been used.
+Here nuclear form factors have been chosen as in \cite{0309149}.   
+                                                ^
+Warning 2 in main.tex line 196: Non-breaking space (`~') should have been used.
+subject to the latest PandaX-II \cite{1708.06917} (green), Xenon-1T \cite{1705.06655} (red), and LUX 2016 \cite{1608.07648} (blue) limit.  
+                               ^
+Warning 2 in main.tex line 196: Non-breaking space (`~') should have been used.
+subject to the latest PandaX-II \cite{1708.06917} (green), Xenon-1T \cite{1705.06655} (red), and LUX 2016 \cite{1608.07648} (blue) limit.  
+                                                                   ^
+Warning 2 in main.tex line 196: Non-breaking space (`~') should have been used.
+subject to the latest PandaX-II \cite{1708.06917} (green), Xenon-1T \cite{1705.06655} (red), and LUX 2016 \cite{1608.07648} (blue) limit.  
+                                                                                                         ^
+Warning 24 in main.tex line 199: Delete this space to maintain correct pagereferences.
+\label{ps}  
+^
+Warning 2 in main.tex line 204: Non-breaking space (`~') should have been used.
+In Fig.\ref{ps} we show the parameter space of DM relic density $ \Omega_{\text{DM}}h^{2}=0.1199\pm 0.0027$  \cite{1303.5076}   
+                                                                                                            ^
+Warning 2 in main.tex line 206: Non-breaking space (`~') should have been used.
+We also draw contours of the latest PandaX-II \cite{1708.06917}, Xenon-1T \cite{1705.06655} and LUX 2016 \cite{1608.07648} limit simultaneously.  
+                                             ^
+Warning 2 in main.tex line 206: Non-breaking space (`~') should have been used.
+We also draw contours of the latest PandaX-II \cite{1708.06917}, Xenon-1T \cite{1705.06655} and LUX 2016 \cite{1608.07648} limit simultaneously.  
+                                                                         ^
+Warning 2 in main.tex line 206: Non-breaking space (`~') should have been used.
+We also draw contours of the latest PandaX-II \cite{1708.06917}, Xenon-1T \cite{1705.06655} and LUX 2016 \cite{1608.07648} limit simultaneously.  
+                                                                                                        ^
+Warning 36 in main.tex line 216: You should put a space in front of parenthesis.
+either new particle(s) is required to appear at the weak scale or simplified Majorana DM models are disfavored.  
+                   ^
+Warning 36 in main.tex line 220: You should put a space in front of parenthesis.
+The parameter space of coupling $c_z$ and $c_h$ (alternatively DM mass range) as given by Eq.(\ref{parameter}) is not affected by other constraints such as mono-jet limit \cite{monojet,1408.3583,1604.07773} at LHC or the constraint on DM annihilation cross section $\sigma(\chi\chi\rightarrow \gamma\gamma)$ at Fermi-LAT \cite{1305.5597,1506.00013,1503.02641}.  
+                                                                                             ^
+Warning 2 in main.tex line 220: Non-breaking space (`~') should have been used.
+The parameter space of coupling $c_z$ and $c_h$ (alternatively DM mass range) as given by Eq.(\ref{parameter}) is not affected by other constraints such as mono-jet limit \cite{monojet,1408.3583,1604.07773} at LHC or the constraint on DM annihilation cross section $\sigma(\chi\chi\rightarrow \gamma\gamma)$ at Fermi-LAT \cite{1305.5597,1506.00013,1503.02641}.  
+                                                                                                                                                                          ^
+Warning 2 in main.tex line 220: Non-breaking space (`~') should have been used.
+The parameter space of coupling $c_z$ and $c_h$ (alternatively DM mass range) as given by Eq.(\ref{parameter}) is not affected by other constraints such as mono-jet limit \cite{monojet,1408.3583,1604.07773} at LHC or the constraint on DM annihilation cross section $\sigma(\chi\chi\rightarrow \gamma\gamma)$ at Fermi-LAT \cite{1305.5597,1506.00013,1503.02641}.  
+                                                                                                                                                                                                                                                                                                                                ^
+Warning 12 in main.tex line 222: Interword spacing (`\ ') should perhaps be used.
+which excludes DM mass below $\sim 50$ GeV for $c_{z}=1.0$, see, e.g. \cite{1604.07773}.  
+                                                                     ^
+Warning 2 in main.tex line 222: Non-breaking space (`~') should have been used.
+which excludes DM mass below $\sim 50$ GeV for $c_{z}=1.0$, see, e.g. \cite{1604.07773}.  
+                                                                     ^
+Warning 36 in main.tex line 223: You should put a space in front of parenthesis.
+It implies that the surviving DM mass range referring to Eq.(\ref{parameter}) is not sensitive to present mono-jet limit.   
+                                                            ^
+Warning 36 in main.tex line 225: You should put a space in front of parenthesis.
+where the Feynman diagram for $\sigma(\chi\chi\rightarrow h/Z \rightarrow\gamma\gamma)$  is dominated by top, bottom fermion loop and $W$ boson loop.  As expected, there is a peak in the $\gamma$ spectrum that appears at DM mass close to a half of the mediator mass, i.e, $M_{h}/2$ or $M_{Z}/2$ in our case. When the DM mass such as what corresponds to Eq.(\ref{parameter}) obviously deviates from the pole masses above,   
+                                                                                                                                                                                                                                                                                                                                                                    ^
+Warning 3 in main.tex line 231: You should enclose the previous parenthesis with `{}'.
+This model contains two fermion doublets $L'=(l'^{0},l^{-})^{T}$, $L=(l^{+}, l^{0})^{T}$ and a fermion singlet $\psi_{s}$.   
+                                                          ^
+Warning 3 in main.tex line 231: You should enclose the previous parenthesis with `{}'.
+This model contains two fermion doublets $L'=(l'^{0},l^{-})^{T}$, $L=(l^{+}, l^{0})^{T}$ and a fermion singlet $\psi_{s}$.   
+                                                                                  ^
+Warning 2 in main.tex line 232: Non-breaking space (`~') should have been used.
+The dark sector Lagrangian $\mathcal{L_{\text{dark}}}$ reads as \cite{0510064, 0705.4493, 0706.0918},  
+                                                               ^
+Warning 24 in main.tex line 259: Delete this space to maintain correct pagereferences.
+\label{sd}  
+^
+Warning 2 in main.tex line 267: Non-breaking space (`~') should have been used.
+Under this limit, the effective coupling $c_{h\bar{\chi}\chi}$ and $c_{z\bar{\chi}\chi}$ reduces to, respectively \cite{1505.03867} ,  
+                                                                                                                 ^
+Warning 26 in main.tex line 267: You ought to remove spaces in front of punctuation.
+Under this limit, the effective coupling $c_{h\bar{\chi}\chi}$ and $c_{z\bar{\chi}\chi}$ reduces to, respectively \cite{1505.03867} ,  
+                                                                                                                                   ^
+Warning 36 in main.tex line 273: You should put a space in front of parenthesis.
+Since the parameter ranges in Eq.(\ref{parameter}) favor larger value of $\mid c_{h} \mid$ relative to $\mid c_{z}\mid$,  
+                                 ^
+Warning 36 in main.tex line 274: You should put a space in front of parenthesis.
+it implies that the product $y_{1}y_{2}$ in Eq.(\ref{sdm}) should be at most of order $m_{\chi}/m_{D}$.  
+                                               ^
+Warning 2 in main.tex line 302: Non-breaking space (`~') should have been used.
+leads to a wino-like DM with mass $m_{\chi^{0}_{1}}\simeq M_{2}$ and reduced effective coupling coefficient $c_{h}$ and $c_{z}$ \cite{0505142,1512.02472, 1506.07177},  
+                                                                                                                               ^
+Warning 42 in main.tex line 317: You should remove spaces in front of `\footnote'
+\footnote{Although kinetically allowed, the ratio between s-wave contribution to DM annihilation due to $W^{+}W^{-}$ and top quark final states is of order $\sim m^{4}_{Z}/m^{2}_{\chi}m^{2}_{t}$, where $m_{t}$ is the top quark mass.  
+
+Warning 2 in main.tex line 320: Non-breaking space (`~') should have been used.
+apart from a large contribution due to co-annihilation which occurs in DM mass range above $\sim 1$ TeV \cite{0610249}.  
+                                                                                                       ^
+Warning 36 in main.tex line 321: You should put a space in front of parenthesis.
+Under the decoupling limit, $\mid c_{z} \mid < 1.0\times 10^{-3}$ in Eq.(\ref{cz1})-Eq.(\ref{cz2}),  
+                                                                        ^
+Warning 36 in main.tex line 321: You should put a space in front of parenthesis.
+Under the decoupling limit, $\mid c_{z} \mid < 1.0\times 10^{-3}$ in Eq.(\ref{cz1})-Eq.(\ref{cz2}),  
+                                                                                       ^
+Warning 13 in main.tex line 340: Intersentence spacing (`\@') should perhaps be used.
+we recovered exclusion limits on neutralino DM mass such as wino-like DM.  
+                                                                        ^
+Warning 38 in main.tex line 366: You should not use punctuation in front of quotes.
+``Supersymmetric dark matter,''  
+                            ^
+Warning 8 in main.tex line 545: Wrong length of dash may have been used.
+CMS-PAS-EXO-12-048.  
+              ^

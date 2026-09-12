@@ -1,0 +1,169 @@
+{
+ "coverage": 0.024456,
+ "bibliography": {
+  "state": "complete",
+  "entries": 14
+ },
+ "diagnostics": [
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "lst:example-program",
+   "span": {
+    "file": "paper.xtex",
+    "offset": 21281,
+    "length": 19,
+    "line": 477,
+    "column": 42
+   },
+   "message": "identifier `lst:example-program` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "lst:math-abs",
+   "span": {
+    "file": "paper.xtex",
+    "offset": 21520,
+    "length": 12,
+    "line": 480,
+    "column": 52
+   },
+   "message": "identifier `lst:math-abs` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "lst:math-max",
+   "span": {
+    "file": "paper.xtex",
+    "offset": 22145,
+    "length": 12,
+    "line": 497,
+    "column": 23
+   },
+   "message": "identifier `lst:math-max` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "lst:example-program",
+   "span": {
+    "file": "paper.xtex",
+    "offset": 27211,
+    "length": 19,
+    "line": 614,
+    "column": 36
+   },
+   "message": "identifier `lst:example-program` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "lst:test-example-program",
+   "span": {
+    "file": "paper.xtex",
+    "offset": 28307,
+    "length": 24,
+    "line": 644,
+    "column": 50
+   },
+   "message": "identifier `lst:test-example-program` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "lst:goal-mapping",
+   "span": {
+    "file": "paper.xtex",
+    "offset": 32700,
+    "length": 16,
+    "line": 749,
+    "column": 47
+   },
+   "message": "identifier `lst:goal-mapping` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "lst:additional-test-case",
+   "span": {
+    "file": "paper.xtex",
+    "offset": 43513,
+    "length": 24,
+    "line": 1026,
+    "column": 33
+   },
+   "message": "identifier `lst:additional-test-case` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "lst:bytecode-instrumentation",
+   "span": {
+    "file": "paper.xtex",
+    "offset": 46131,
+    "length": 28,
+    "line": 1092,
+    "column": 14
+   },
+   "message": "identifier `lst:bytecode-instrumentation` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "lst:record-coverage-goal",
+   "span": {
+    "file": "paper.xtex",
+    "offset": 48597,
+    "length": 24,
+    "line": 1154,
+    "column": 26
+   },
+   "message": "identifier `lst:record-coverage-goal` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "lst:inmem-db-to-disk",
+   "span": {
+    "file": "paper.xtex",
+    "offset": 51016,
+    "length": 20,
+    "line": 1206,
+    "column": 45
+   },
+   "message": "identifier `lst:inmem-db-to-disk` is not declared",
+   "related": []
+  }
+ ]
+}

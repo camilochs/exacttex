@@ -1,0 +1,3 @@
+planted=fig:gap sites=[('paper.xtex', 154), ('paper.xtex', 93)]
+xtex new=[('XT1001', 'fig:gap', 'paper.xtex', 154), ('XT1004', 'fig:gap', 'paper.xtex', 157), ('XT1004', 'fig:gap', 'paper.xtex', 164), ('XT1020', 'fig:gap', 'paper.xtex', 157), ('XT1020', 'fig:gap', 'paper.xtex', 164)]
+texlab new=[('ERROR', 'paper.tex', 93, 'Duplicate label'), ('ERROR', 'paper.tex', 154, 'Duplicate label')]

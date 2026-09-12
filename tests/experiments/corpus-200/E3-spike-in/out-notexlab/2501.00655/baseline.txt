@@ -1,0 +1,11 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=[] secs=2
+error: fairmeta.cls:25: Package microtype Error: Disabling ligatures of a font is only possible
+(microtype)                with pdftex version 1.30 or newer.
+(microtype)                Ignoring \DisableLigatures.
+
+See the microtype package documentation for explanation.
+Type  H <return>  for immediate help
+error: halted on potentially-recoverable error as specified

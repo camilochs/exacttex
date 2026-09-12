@@ -1,0 +1,54 @@
+target,kind,verdict,field,severity,document,source
+2020arXiv201201455O,bib-entry,partial,year,medium,2020,2022
+Barton2017,bib-entry,partial,year,medium,2017,2016
+Bernabe2016,bib-entry,partial,authors,high,"Bernabe-Rubio, M. and et. al.",Miguel Bernabé-Rubio and Germán Andrés and Javier Casares-Arias and Jaime Fernández-Barrera and Laura Rangel and Natalia Reglero-Real and David C. Gershlick and José J. Fernández and Jaime Millán and 
+Brickman2017,bib-entry,partial,year,medium,2017,2016
+Cavanaugh2020,bib-entry,partial,year,medium,2020,2019
+Chenn2003,bib-entry,partial,authors,high,"Chenn, A. and Walsh, C. A.",A. Chenn
+Chremos2014,bib-entry,mismatch,title,medium,"{Flory-Huggins parameter $\chi$, from binary mixtures of Lennard-Jones particles to block copolymer melts}","Flory-Huggins parameter χ, from binary mixtures of Lennard-Jones particles to block copolymer melts"
+Dahmann2011,bib-entry,partial,year,medium,2011,2010
+Eres2019,bib-entry,partial,year,medium,2019,2018
+Foty2005,bib-entry,partial,year,medium,2005,2004
+Katava2022,bib-entry,partial,year,medium,2022,2021
+Kim2021,bib-entry,partial,year,medium,2021,2020
+Lancaster2021,bib-entry,partial,authors,high,Silvia Benito-Kwiecinski and Stefano L. Giandomenico and Magdalena Sutcliffe and Erlend S. Riis and Paula Freire-Pritchett and Iva Kelava and Stephanie Wunderlich and Ulrich Martin and Gregory A. Wray,Silvia Benito-Kwiecinski and Stefano L. Giandomenico and Magdalena Sutcliffe and Erlend S. Riis and Paula Freire-Pritchett and Iva Kelava and Stephanie Wunderlich and Ulrich Martin and Greg Wray and M
+Lancaster2021,bib-entry,partial,year,medium,2021,2020
+Lomakin2020,bib-entry,partial,authors,high,"Lomakin, AJ and Cattin, CJ and Cuvelier, Damien and Alraies, Zahraa and Molina, Marc and Nader, GPF and Srivastava, Nishit and S{\'a}ez, PJ and Garcia-Arcos, JM and Zhitnyak, IY and others",A.J. Lomakin and C.J. Cattin and D. Cuvelier and Z. Alraies and M. Molina and G. Nader and N. Srivastava and J.M. Garcia-Arcos and I.Y. Zhitnyak and A. Bhargava and M.K. Driscoll and E.S. Welf and R. 
+Lomakin2020,bib-entry,partial,year,medium,2020,2019
+Marchal2022,bib-entry,partial,year,medium,2022,2021
+Nonaka2013,bib-entry,partial,authors,high,"Nonaka-Kinoshita, M. and et. al.",Miki Nonaka‐Kinoshita and Isabel Reillo and Benedetta Artegiani and Maria Ángeles Martínez‐Martínez and Mark Nelson and Víctor Borrell and Federico Calegari
+Okuda2013,bib-entry,partial,year,medium,2013,2012
+Parker2020,bib-entry,partial,year,medium,2020,2025
+Ramani2017,bib-entry,partial,authors,high,"Ramani, Vijay and Deng, Xinxian and Qiu, Ruolan and Gunderson, Kevin L and Steemers, Frank J and Disteche, Christine M and Noble, William S and Duan, Zhijun and Shendure, Jay",Vijay Ramani and Xinxian Deng and Kevin L Gunderson and Frank J Steemers and Christine M Disteche and William S Noble and Zhijun Duan and Jay Shendure
+Ramani2017,bib-entry,partial,year,medium,2017,2016
+Sato2009,bib-entry,partial,authors,high,"Sato, Toshiro and Vries, Robert G and Snippert, Hugo J and Van De Wetering, Marc and Barker, Nick and Stange, Daniel E and Van Es, Johan H and Abo, Arie and Kujala, Pekka and Peters, Peter J and other",Toshiro Sato and Robert G. Vries and Hugo J. Snippert and Marc van de Wetering and Nick Barker and Daniel E. Stange and Johan H. van Es and Arie Abo and Pekka Kujala and Peter J. Peters and Hans Cleve
+Shi2018,bib-entry,partial,year,medium,2018,2017
+Shi2021,bib-entry,partial,year,medium,2021,2020
+Stahl2013,bib-entry,partial,authors,high,"Stahl, R. and et. al.",Ronny Stahl and Tessa Walcher and Camino De Juan Romero and Gregor Alexander Pilz and Silvia Cappello and Martin Irmler and José Miguel Sanz-Aquela and Johannes Beckers and Robert Blum and Víctor Borr
+Unbekandt2010,bib-entry,partial,year,medium,2010,2009
+Vandewalle2005,bib-entry,partial,authors,high,"Vandewalle, Cindy and Comijn, Joke and De Craene, Bram and Vermassen, Petra and Bruyneel, Erik and Andersen, Henriette and Tulchinsky, Eugene and Van Roy, Frans and Berx, Geert",C. Vandewalle
+Xu2010,bib-entry,partial,authors,high,"Xu, G. and Knutsen, A. K. and Dikranian, K. Kroenke, C. D. and Bayly, P. V. and Taber L. A.",Gang Xu and Andrew K. Knutsen and Krikor Dikranian and Christopher D. Kroenke and Philip V. Bayly and Larry A. Taber
+banigan19,bib-entry,partial,year,medium,2019,2018
+barth20,bib-entry,partial,year,medium,2020,2019
+brau2011,bib-entry,partial,year,medium,2011,2010
+bronshtein15,bib-entry,partial,authors,high,"Bronshtein, I. and et al.",Maria Chiara Lionetti and Silvia Bonfanti and Maria Rita Fumagalli and Francesc Font-Clos and Giulio Costantini and Oleksandr Chepizhko and Stefano Zapperi and Caterina La Porta
+bronshtein15,bib-entry,partial,year,medium,2015,2021
+chu17,bib-entry,partial,year,medium,2017,2018
+felsenfeld03,bib-entry,partial,authors,high,"Felsenfled, G. and Groudine, M.",Gary Felsenfeld and Mark Groudine
+fernandez_2006,bib-entry,partial,authors,high,"Fernandez, P and Pullarkar, P A and Ott, A",Pablo Fernández and Pramod A. Pullarkat and Albrecht Ott
+fudenberg17a,bib-entry,partial,year,medium,2017,2016
+fudenberg17b,bib-entry,partial,year,medium,2017,2018
+hannezo_2017,bib-entry,partial,authors,high,"Hannezo, E and Scheele, C L G J and Moad, M and Drogo, N and Heer, R and Sampongna, R V and van Rheenen, J and Simons, B D",Edouard Hannezo and Colinda L.G.J. Scheele and Mohammad Moad and Nicholas Drogo and Rakesh Heer and Rosemary V. Sampogna and Jacco van Rheenen and Benjamin D. Simons
+hayashi2014nonlinear,bib-entry,partial,year,medium,2014,1986
+keren08,bib-entry,partial,authors,high,"Keren, K. and Pincus, Z. and Allen, G. M. and Barnhart, E. L. and Marriott, G. and Mogilner, A.and Theriot, J. A.",Kinneret Keren and Zachary Pincus and Greg M. Allen and Erin L. Barnhart and Gerard Marriott and Alex Mogilner and Julie A. Theriot
+leto2016consensus,bib-entry,partial,year,medium,2016,2015
+nayfeh2008,bib-entry,partial,year,medium,2008,1995
+nayfeh2008nonlinear,bib-entry,partial,year,medium,2008,1995
+nuclearblebs,bib-entry,partial,year,medium,2018,2017
+paoluzzi16,bib-entry,partial,authors,high,"Paoluzzi, M. and Di Leonardo R. and Marchetti, M. C. and Angelini, L.",Matteo Paoluzzi and Roberto Di Leonardo and M. Cristina Marchetti and Luca Angelani
+peng92,bib-entry,partial,authors,high,"Peng, C. K. and Buldyrev, S. V. and Goldberger, A. L. and Havlin, S. and Sciortino, F. and Simons, M. and Stanley H. E.",C.-K. Peng and S. V. Buldyrev and A. L. Goldberger and S. Havlin and F. Sciortino and M. Simons and H. E. Stanley
+sanborn15,bib-entry,partial,year,medium,2015,2016
+sazer18,bib-entry,partial,year,medium,2018,2017
+shaban18,bib-entry,partial,year,medium,2018,2017
+shaban20,bib-entry,partial,year,medium,2020,2018
+stephens18,bib-entry,partial,year,medium,2018,2017

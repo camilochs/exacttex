@@ -1,0 +1,25 @@
+{
+ "coverage": 0.037609,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`IEEEabrv.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "bare_conf.xtex",
+    "offset": 3453,
+    "length": 75,
+    "line": 79,
+    "column": 7
+   },
+   "message": "citation checking unavailable: `IEEEabrv.bib` could not be read",
+   "related": []
+  }
+ ]
+}

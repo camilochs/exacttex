@@ -1,0 +1,538 @@
+pdf=1
+exit=0
+lines=585
+unique_findings=0
+ebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/latexsym
+.sty)
+
+LaTeX Warning: Command `\thepart' already defined -- not changed on input line 
+986.
+
+
+LaTeX Warning: Command `\thesection' already defined -- not changed on input li
+ne 987.
+
+
+LaTeX Warning: Command `\thesubsection' already defined -- not changed on input
+ line 988.
+
+Using 'Abbrev' bibliography style
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fontenc.
+sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hype
+rref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iftex
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/kvdefinekey
+s/kvdefinekeys.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdfescape/p
+dfescape.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdftexcmds/
+pdftexcmds.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/infwarerr/i
+nfwarerr.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hycolor/hycol
+or.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/name
+ref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/refcount/refc
+ount.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/gettitlestr
+ing/gettitlestring.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/etoolbox/etoo
+lbox.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/stringenc/s
+tringenc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/pd1e
+nc.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/intcalc/int
+calc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/puen
+c.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/url/url.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bitset/bits
+et.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bigintcalc/
+bigintcalc.sty))
+
+Package hyperref Warning: Option `pdfpagelabels' is turned off
+(hyperref)                because \thepage is undefined.
+
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hpdf
+tex.def
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/rerunfilechec
+k/rerunfilecheck.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/uniquecount
+er/uniquecounter.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/floatrow/floa
+trow.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/capti
+on3.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ae/t1aer.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def)
+No file ParetiWebSci15.aux.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+
+Package hyperref Warning: Height of page (\paperheight) is invalid (0.0pt),
+(hyperref)                using 11in.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/colo
+r.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ulasy.fd
+)
+Overfull \hbox (5.45853pt too wide) in paragraph at lines 56--56
+ [][]| 
+
+LaTeX Warning: File `figures/planted_ghost.pdf' not found on input line 66.
+
+
+! Package pdftex.def Error: File `figures/planted_ghost.pdf' not found: using d
+raft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 ...=0.5\linewidth]{figures/planted_ghost.pdf}
+                                                  \caption{Planted figure}\e...
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ae/t1aett.fd)
+
+
+LaTeX Warning: Citation `Pexman2008SemanticRichnessNOF' on page \thepage  undef
+ined on input line 68.
+
+
+LaTeX Warning: Citation `Bizer2009LinkedDataSoFar' on page \thepage  undefined 
+on input line 69.
+
+
+LaTeX Warning: Citation `Halpin2010owlSameAsNotTheSame' on page \thepage  undef
+ined on input line 70.
+
+
+LaTeX Warning: Reference `problem_definition' on page \thepage  undefined on in
+put line 73.
+
+
+LaTeX Warning: Reference `background' on page \thepage  undefined on input line
+ 73.
+
+
+LaTeX Warning: Reference `semantic_measure' on page \thepage  undefined on inpu
+t line 73.
+
+
+LaTeX Warning: Reference `experiments' on page \thepage  undefined on input lin
+e 73.
+
+
+LaTeX Warning: Reference `methodology' on page \thepage  undefined on input lin
+e 73.
+
+
+LaTeX Warning: Citation `Auer2007DBpedia' on page \thepage  undefined on input 
+line 77.
+
+[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc
+/dvips/base/8r.enc}]
+
+LaTeX Warning: Reference `experiments' on page \thepage  undefined on input lin
+e 86.
+
+
+LaTeX Warning: Citation `Resnik1995InformationContent' on page \thepage  undefi
+ned on input line 90.
+
+
+LaTeX Warning: Citation `Meymandpour2013LinkedDataInformativeness' on page \the
+page  undefined on input line 90.
+
+
+LaTeX Warning: Citation `Pexman2008SemanticRichnessNOF' on page \thepage  undef
+ined on input line 91.
+
+
+LaTeX Warning: Citation `Amato2010InductiveLearning' on page \thepage  undefine
+d on input line 93.
+
+
+LaTeX Warning: Citation `Lorenz2013KnowledgeEnrichment' on page \thepage  undef
+ined on input line 95.
+
+
+LaTeX Warning: Citation `Kontokostas2014LinkedDataQalityTests' on page \thepage
+  undefined on input line 95.
+
+
+LaTeX Warning: Citation `Moreau2010WebProvenance' on page \thepage  undefined o
+n input line 97.
+
+
+LaTeX Warning: Citation `harispe2013semanticMeasures' on page \thepage  undefin
+ed on input line 101.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.103 \begin{equation}
+                       [2]
+
+LaTeX Warning: Reference `expected_value_of_facts' on page \thepage  undefined 
+on input line 107.
+
+
+LaTeX Warning: Reference `goal_pre' on page \thepage  undefined on input line 1
+18.
+
+
+LaTeX Warning: Reference `goal' on page \thepage  undefined on input line 118.
+
+
+LaTeX Warning: Reference `goal' on page \thepage  undefined on input line 131.
+
+
+LaTeX Warning: Reference `diminishing_semantics' on page \thepage  undefined on
+ input line 140.
+
+
+LaTeX Warning: Reference `goal' on page \thepage  undefined on input line 140.
+
+
+LaTeX Warning: Reference `diminishing_semantics' on page \thepage  undefined on
+ input line 140.
+
+
+LaTeX Warning: Reference `diminishing_semantics_proof_goal' on page \thepage  u
+ndefined on input line 150.
+
+
+LaTeX Warning: Reference `diminishing_semantics_proof_goal_3' on page \thepage 
+ undefined on input line 158.
+
+
+LaTeX Warning: Reference `diminishing_semantics_proof_goal_3' on page \thepage 
+ undefined on input line 158.
+
+
+LaTeX Warning: Reference `diminishing_semantics_proof_goal_3' on page \thepage 
+ undefined on input line 159.
+
+
+LaTeX Warning: Reference `diminishing_semantics_proof_goal_3' on page \thepage 
+ undefined on input line 168.
+
+
+LaTeX Warning: Reference `diminishing_semantics_proof_goal_3' on page \thepage 
+ undefined on input line 176.
+
+
+LaTeX Warning: Reference `diminishing_semantics_proof_goal' on page \thepage  u
+ndefined on input line 184.
+
+
+LaTeX Warning: Reference `diminishing_semantics' on page \thepage  undefined on
+ input line 184.
+
+
+LaTeX Warning: Reference `eq:hypothesis' on page \thepage  undefined on input l
+ine 184.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.185 
+       [3]
+
+LaTeX Warning: Reference `goal' on page \thepage  undefined on input line 200.
+
+
+LaTeX Warning: Reference `fig:increase_of_G' on page \thepage  undefined on inp
+ut line 203.
+
+
+LaTeX Warning: Reference `tab:sources' on page \thepage  undefined on input lin
+e 208.
+
+
+LaTeX Warning: Reference `fig:decay_of_G' on page \thepage  undefined on input 
+line 209.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.244 \par
+           This typicality measure is scalable and easily verifiable because...
+[4 <./g_decrease.png> <./g_decay.png>] (./ParetiWebSci15.bbl)
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.253 \end{document}
+                     [5]
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.253 \end{document}
+                     [6] (./ParetiWebSci15.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `ParetiWebSci15.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></opt/hom
+ebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbxti10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1
+/public/amsfonts/cmextra/cmex9.pfb></opt/homebrew/Cellar/texlive/20260301/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></opt/homebrew/Cellar/texl
+ive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/texlive/20260
+301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></opt/homebrew/Cel
+lar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
+</opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy6.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy9.pfb></opt/homebrew/Cellar/texlive/20260301/shar
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></opt/homebrew/Cellar/tex
+live/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></opt/h
+omebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8
+a.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/h
+elvetic/uhvr8a.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/font
+s/type1/urw/times/utmb8a.pfb>
+Output written on ParetiWebSci15.pdf (6 pages, 653804 bytes).
+Transcript written on ParetiWebSci15.log.
+sh: line 1:  7199 Filesize limit exceeded: 25   pdflatex -interaction nonstopmode --jobname "ParetiWebSci15" '\RequirePackage{chklref}\input' "{ParetiWebSci15.tex}" 2>&1
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./ParetiWebSci15.tex (./sig-alternate.cls
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/epsf
+ig.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def))))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amss
+ymb.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amsf
+onts.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsma
+th.sty
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amste
+xt.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsge
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsbs
+y.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsop
+n.sty))
+Document Class 'sig-alternate' <23rd. May '12>. Modified by G.K.M. Tobin/Gerry 
+Murray
+Based in part upon document Style `acmconf' <22 May 89>. Hacked 4/91 by
+shivers@cs.cmu.edu, 4/93 by theobald@cs.mcgill.ca
+Excerpts were taken from (Journal Style) 'esub2acm.cls'.
+****** Bugs/comments/suggestions/technicalities to Gerry Murray -- murray@hq.ac
+m.org ******
+Questions on the style, SIGS policies, etc. to Adrienne Griscti griscti@acm.org
+
+Document Class: sig-alternate 2012/05/23 - V2.5 - based on acmproc.cls V1.3 <No
+v. 30 '99>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/latexsym
+.sty)
+
+LaTeX Warning: Command `\thepart' already defined -- not changed on input line 
+986.
+
+
+LaTeX Warning: Command `\thesection' already defined -- not changed on input li
+ne 987.
+
+
+LaTeX Warning: Command `\thesubsection' already defined -- not changed on input
+ line 988.
+
+Using 'Abbrev' bibliography style
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fontenc.
+sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hype
+rref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iftex
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/kvdefinekey
+s/kvdefinekeys.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdfescape/p
+dfescape.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdftexcmds/
+pdftexcmds.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/infwarerr/i
+nfwarerr.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hycolor/hycol
+or.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/name
+ref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/refcount/refc
+ount.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/gettitlestr
+ing/gettitlestring.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/etoolbox/etoo
+lbox.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/stringenc/s
+tringenc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/pd1e
+nc.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/intcalc/int
+calc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/puen
+c.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/url/url.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bitset/bits
+et.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bigintcalc/
+bigintcalc.sty))
+
+Package hyperref Warning: Option `pdfpagelabels' is turned off
+(hyperref)                because \thepage is undefined.
+
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hpdf
+tex.def
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/rerunfilechec
+k/rerunfilecheck.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/uniquecount
+er/uniquecounter.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/floatrow/floa
+trow.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/capti
+on3.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ae/t1aer.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def) (./ParetiWebSci15.aux)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+
+Package hyperref Warning: Height of page (\paperheight) is invalid (0.0pt),
+(hyperref)                using 11in.
+
+(./ParetiWebSci15.out) (./ParetiWebSci15.out)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/colo
+r.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ulasy.fd
+)
+Overfull \hbox (5.45853pt too wide) in paragraph at lines 56--56
+ [][]| 
+
+LaTeX Warning: File `figures/planted_ghost.pdf' not found on input line 66.
+
+
+! Package pdftex.def Error: File `figures/planted_ghost.pdf' not found: using d
+raft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 ...=0.5\linewidth]{figures/planted_ghost.pdf}
+                                                  \caption{Planted figure}\e...
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ae/t1aett.fd)
+************************************
+** Labels in starred environments **
+************************************
+
+*******************
+** Unused Labels **
+*******************
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

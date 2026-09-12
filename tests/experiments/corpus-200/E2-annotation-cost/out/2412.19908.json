@@ -1,0 +1,256 @@
+{
+ "paper": "2412.19908",
+ "main": "paper.tex",
+ "files": [
+  {
+   "file": "paper.tex",
+   "chars_before": 93836,
+   "chars_after": 93778,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "pre.tex",
+   "chars_before": 1366,
+   "chars_after": 1366,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "groupconfig.tex",
+   "chars_before": 1731,
+   "chars_after": 1731,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 3,
+ "chars_before": 96933,
+ "chars_after": 96875,
+ "delta_pct": -0.05983514386225537,
+ "unrepaired": {
+  "chars_after": 101948,
+  "chars_before": 102002,
+  "converted_files": 4,
+  "check_exit": 0,
+  "coverage": 0.015173,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`p4.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.05294013842865826
+ },
+ "stats": {
+  "cite_cmds_live": 51,
+  "cite_keys_live": 51,
+  "cite_with_optarg_or_star": 5,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 22,
+  "labels_outside_grammar": 0,
+  "refs_live": 35,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 1,
+  "float_envs": 5,
+  "cite_cmds_annotated": 25,
+  "cite_keys_annotated": 25,
+  "ids_annotated": 22,
+  "refs_annotated": 35,
+  "inputs_root": 3,
+  "inputs_imported": 2,
+  "inputs_left": 1,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 22,
+  "revert_rounds": 1,
+  "import_leaks": 1
+ },
+ "leaks": [
+  {
+   "file": "paper.tex",
+   "line": 145,
+   "token": "@import(\"paths.xtex\")",
+   "wrapper": "?",
+   "context": "\\scalebox{0.7}{\\input{paths.tex}}"
+  },
+  {
+   "file": "paper.tex",
+   "line": 413,
+   "token": "@cite(psa-arch)",
+   "wrapper": "?",
+   "context": "& \\cite{psa-arch} & \\cite{pna-arch} & \\cite{p416} & \\cite{v1model} & \\cite{DPDK16} & & \\\\     \\hline"
+  },
+  {
+   "file": "paper.tex",
+   "line": 413,
+   "token": "@cite(pna-arch)",
+   "wrapper": "?",
+   "context": "& \\cite{psa-arch} & \\cite{pna-arch} & \\cite{p416} & \\cite{v1model} & \\cite{DPDK16} & & \\\\     \\hline"
+  },
+  {
+   "file": "paper.tex",
+   "line": 413,
+   "token": "@cite(p416)",
+   "wrapper": "?",
+   "context": "& \\cite{psa-arch} & \\cite{pna-arch} & \\cite{p416} & \\cite{v1model} & \\cite{DPDK16} & & \\\\     \\hline"
+  },
+  {
+   "file": "paper.tex",
+   "line": 413,
+   "token": "@cite(v1model)",
+   "wrapper": "?",
+   "context": "& \\cite{psa-arch} & \\cite{pna-arch} & \\cite{p416} & \\cite{v1model} & \\cite{DPDK16} & & \\\\     \\hline"
+  },
+  {
+   "file": "paper.tex",
+   "line": 413,
+   "token": "@cite(DPDK16)",
+   "wrapper": "?",
+   "context": "& \\cite{psa-arch} & \\cite{pna-arch} & \\cite{p416} & \\cite{v1model} & \\cite{DPDK16} & & \\\\     \\hline"
+  },
+  {
+   "file": "paper.tex",
+   "line": 414,
+   "token": "@cite(hypertester)",
+   "wrapper": "?",
+   "context": "\\textbf{\\begin{tabular}[c]{@{}c@{}}Replication\\\\(Multicast)\\end{tabular}}             & Yes                  & Yes                  & Yes                  & Yes"
+  },
+  {
+   "file": "paper.tex",
+   "line": 414,
+   "token": "@cite(lucid)",
+   "wrapper": "?",
+   "context": "\\textbf{\\begin{tabular}[c]{@{}c@{}}Replication\\\\(Multicast)\\end{tabular}}             & Yes                  & Yes                  & Yes                  & Yes"
+  },
+  {
+   "file": "paper.tex",
+   "line": 415,
+   "token": "@cite(smartcookie)",
+   "wrapper": "?",
+   "context": "\\multirow{2}{*}{\\textbf{Recirculation}}                                                & \\multirow{2}{*}{Yes} & \\multirow{2}{*}{Yes} & \\multirow{2}{*}{Yes} & \\m"
+  },
+  {
+   "file": "paper.tex",
+   "line": 415,
+   "token": "@cite(dejavu)",
+   "wrapper": "?",
+   "context": "\\multirow{2}{*}{\\textbf{Recirculation}}                                                & \\multirow{2}{*}{Yes} & \\multirow{2}{*}{Yes} & \\multirow{2}{*}{Yes} & \\m"
+  },
+  {
+   "file": "paper.tex",
+   "line": 416,
+   "token": "@cite(ahab)",
+   "wrapper": "?",
+   "context": "&                      &                      &                      &                      &                      & \\begin{tabular}[c]{@{}l@{}}Extra stateful \\"
+  },
+  {
+   "file": "paper.tex",
+   "line": 416,
+   "token": "@cite(dart)",
+   "wrapper": "?",
+   "context": "&                      &                      &                      &                      &                      & \\begin{tabular}[c]{@{}l@{}}Extra stateful \\"
+  },
+  {
+   "file": "paper.tex",
+   "line": 417,
+   "token": "@cite(bedrock)",
+   "wrapper": "?",
+   "context": "\\multirow{2}{*}{\\textbf{Mirroring}}                                                    & \\multirow{2}{*}{Yes} & \\multirow{2}{*}{Yes} & \\multirow{2}{*}{Yes} & \\m"
+  },
+  {
+   "file": "paper.tex",
+   "line": 417,
+   "token": "@cite(spidermon)",
+   "wrapper": "?",
+   "context": "\\multirow{2}{*}{\\textbf{Mirroring}}                                                    & \\multirow{2}{*}{Yes} & \\multirow{2}{*}{Yes} & \\multirow{2}{*}{Yes} & \\m"
+  },
+  {
+   "file": "paper.tex",
+   "line": 418,
+   "token": "@cite(flymon)",
+   "wrapper": "?",
+   "context": "&                      &                      &                      &                      &                      & \\begin{tabular}[c]{@{}l@{}}Extra time withi"
+  },
+  {
+   "file": "paper.tex",
+   "line": 418,
+   "token": "@cite(redplane)",
+   "wrapper": "?",
+   "context": "&                      &                      &                      &                      &                      & \\begin{tabular}[c]{@{}l@{}}Extra time withi"
+  },
+  {
+   "file": "paper.tex",
+   "line": 419,
+   "token": "@cite(dejavu)",
+   "wrapper": "?",
+   "context": "\\textbf{Resubmission}                                                                  & Yes                  & Yes                  & Yes                  & Ye"
+  },
+  {
+   "file": "paper.tex",
+   "line": 419,
+   "token": "@cite(blink)",
+   "wrapper": "?",
+   "context": "\\textbf{Resubmission}                                                                  & Yes                  & Yes                  & Yes                  & Ye"
+  },
+  {
+   "file": "paper.tex",
+   "line": 420,
+   "token": "@cite(lucid)",
+   "wrapper": "?",
+   "context": "\\multirow{2}{*}{\\textbf{\\begin{tabular}[c]{@{}c@{}}Packet\\\\Generator\\end{tabular}}} & \\multirow{2}{*}{No}  & \\multirow{2}{*}{No}  & \\multirow{2}{*}{Yes} & \\mult"
+  },
+  {
+   "file": "paper.tex",
+   "line": 420,
+   "token": "@cite(ripple)",
+   "wrapper": "?",
+   "context": "\\multirow{2}{*}{\\textbf{\\begin{tabular}[c]{@{}c@{}}Packet\\\\Generator\\end{tabular}}} & \\multirow{2}{*}{No}  & \\multirow{2}{*}{No}  & \\multirow{2}{*}{Yes} & \\mult"
+  },
+  {
+   "file": "paper.tex",
+   "line": 421,
+   "token": "@cite(slog)",
+   "wrapper": "?",
+   "context": "&                      &                      &                      &                      &                      & \\begin{tabular}[c]{@{}l@{}}Fast workload \\\\"
+  },
+  {
+   "file": "paper.tex",
+   "line": 421,
+   "token": "@cite(siconinp4)",
+   "wrapper": "?",
+   "context": "&                      &                      &                      &                      &                      & \\begin{tabular}[c]{@{}l@{}}Fast workload \\\\"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.015174,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`p4.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "paper.xtex",
+    "offset": 8919,
+    "length": 9,
+    "line": 205,
+    "column": 17
+   },
+   "message": "citation checking unavailable: `p4.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

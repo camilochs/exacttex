@@ -1,0 +1,17 @@
+target,kind,verdict,field,severity,document,source
+10.1145/1143844.1143891,bib-entry,mismatch,title,medium,Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks,Connectionist temporal classification
+adverserialASRlow,bib-entry,partial,authors,high,"C S, Anoop and A P, Prathosh and Ramakrishnan, A G",C. S. Anoop and Prathosh AP and A. G. Ramakrishnan
+bell2020adaptation,bib-entry,partial,year,medium,2021,2020
+bert,bib-entry,partial,year,medium,2018,2019
+deena2018recurrent,bib-entry,partial,year,medium,2018,2019
+european_corpus,bib-entry,partial,authors,high,"Gollan, Christian and Bisani, Maximilian and Kanthak, Stephan and Schï, Ralf and Ney, Hermann",Chr. Gollan and M. Bisani and Stephan Kanthak and Ralf Schlüter and Hermann Ney
+european_corpus,bib-entry,partial,year,medium,1998,2006
+ganin2016domain,bib-entry,partial,year,medium,2016,2017
+image_nst,bib-entry,partial,year,medium,2019,2020
+jegou2010product,bib-entry,partial,year,medium,2010,2011
+panayotov2015librispeech,bib-entry,partial,authors,high,Vassil Panayotov,Vassil Panayotov and Guoguo Chen and Daniel Povey and Sanjeev Khudanpur
+selftrainASRDUST,bib-entry,partial,year,medium,2020,2021
+selftrainASRLMfilter,bib-entry,partial,year,medium,2022,2023
+selftrainSoft2,bib-entry,partial,authors,high,Bhuvana Ramabhadran and Brian Farris and Isabel Leal and Manasa Prasad and Neeraj Gaur and Parisa Haghani and Pedro Jose Moreno Mengibar and Yun Zhu,Isabel Leal and Neeraj Gaur and Parisa Haghani and Brian Farris and Pedro J. Moreno and Manasa Prasad and Bhuvana Ramabhadran and Yun Zhu
+sleftrainSoft3,bib-entry,partial,year,medium,2022,2023
+zhu2022boosting,bib-entry,partial,year,medium,2022,2024

@@ -1,0 +1,3 @@
+planted=continuous__ghost sites=[('DT_exact_plain.xtex', 157)]
+xtex new=[('XT1003', 'continuous__ghost', 'DT_exact_plain.xtex', 157)]
+texlab new=[]

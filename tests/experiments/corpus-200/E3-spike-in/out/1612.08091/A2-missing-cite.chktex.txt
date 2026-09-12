@@ -1,0 +1,152 @@
+exit=2
+lines=240
+unique_findings=67
+gram implementing a random number generator, a more pythonic and better designed version is shown in code example \ref{code:first_program}.  
+                                                                                                                                                                                                                                                                                                                       ^
+Warning 44 in projectq.tex line 219: User Regex: 1:Capitalize before references.
+\noindent Line 1 imports the \texttt{MainEngine} class, which is the front end of the quantum compiler as shown in Fig.~\ref{fig:compilercomponents}. Every quantum program needs to create one \texttt{MainEngine}, which contains all compiler components (engines) as well as the back-end (see line 4). In section~\ref{sec:compiler} we show how to select compiler engines and the back-ends. If a \texttt{MainEngine} is created without any arguments as done here, the default compiler engines are used with a simulator back-end.  
+                                                                                                                                                                                                                                                                                                              ^^^^^^^^^^^^^
+Warning 24 in projectq.tex line 251: Delete this space to maintain correct pagereferences.
+\label{sec:high_level_language}  
+^
+Warning 36 in projectq.tex line 255: You should put a space in front of parenthesis.
+To acquire an instance of an $n$-qubit quantum register, the function \texttt{allocate\_qureg(n)} of the \texttt{MainEngine} has to be invoked with the number of qubits as a parameter, as in the following code snippet:  
+                                                                                             ^
+Warning 36 in projectq.tex line 262: You should put a space in front of parenthesis.
+The function \texttt{allocate\_qubit()} returns a quantum register of length one, which is a single qubit. Qubits can be allocated at any point in the program, which  keeps the user from having to specify a-priori the maximum number of qubits needed in any part of the code.  
+                                    ^
+Warning 11 in projectq.tex line 305: You should use \ldots to achieve an ellipsis.
+Most generally, the quantum input to any gate is a tuple of quantum types (qubit, qureg, quint,...), which allows the following intuitive syntax for a \texttt{Multiply} instruction:  
+                                                                                               ^^^
+Warning 36 in projectq.tex line 321: You should put a space in front of parenthesis.
+        \item \texttt{Control(eng, control\_qubits)}: Condition an entire code block on one or several qubits being in state $\Ket 1$.  
+                             ^
+Warning 36 in projectq.tex line 322: You should put a space in front of parenthesis.
+        \item \texttt{Compute(eng)/CustomUncompute(eng)}: Annotate compute / uncompute sections as depicted in Fig.~\ref{fig:compuncomp}. This allows to optimize the conditional execution of such sections as discussed in Ref.~\cite{haener2016}. For an automatic uncompute, simply run the \texttt{Uncompute(eng)} function.  
+                             ^
+Warning 36 in projectq.tex line 322: You should put a space in front of parenthesis.
+        \item \texttt{Compute(eng)/CustomUncompute(eng)}: Annotate compute / uncompute sections as depicted in Fig.~\ref{fig:compuncomp}. This allows to optimize the conditional execution of such sections as discussed in Ref.~\cite{haener2016}. For an automatic uncompute, simply run the \texttt{Uncompute(eng)} function.  
+                                                  ^
+Warning 36 in projectq.tex line 322: You should put a space in front of parenthesis.
+        \item \texttt{Compute(eng)/CustomUncompute(eng)}: Annotate compute / uncompute sections as depicted in Fig.~\ref{fig:compuncomp}. This allows to optimize the conditional execution of such sections as discussed in Ref.~\cite{haener2016}. For an automatic uncompute, simply run the \texttt{Uncompute(eng)} function.  
+                                                                                                                                                                                                                                                                                                                 ^
+Warning 36 in projectq.tex line 323: You should put a space in front of parenthesis.
+        \item \texttt{Dagger(eng)}: Invert an entire unitary code block (hence the name: $U^\dagger U=\mathbbm 1$).  
+                            ^
+Warning 36 in projectq.tex line 325: You should put a space in front of parenthesis.
+        \item \texttt{Loop(eng, num\_iterations)}: Run a code block \texttt{num\_iterations} times. Back-ends natively supporting loop instructions will receive the loop body only once, whereas the loop is unrolled otherwise. Some hardware platforms exploit this by re-using the generated waveforms.  
+                          ^
+Warning 24 in projectq.tex line 331: Delete this space to maintain correct pagereferences.
+        \label{fig:compuncomp}  
+       ^
+Warning 24 in projectq.tex line 343: Delete this space to maintain correct pagereferences.
+\label{sec:compiler}  
+^
+Warning 2 in projectq.tex line 346: Non-breaking space (`~') should have been used.
+and consists of a chain of compiler engines, each carrying out one specific task. This chain can be customized by the user. The most trivial compiler consists of one translation engine called \texttt{AutoReplacer}, which decomposes a quantum circuit into the native gate set of the back-end using the registered decomposition rules (see section \ref{sec:high_level_language}). Such a compiler can be instantiated as follows:  
+                                                                                                                                                                                                                                                                                                                                                        ^
+Warning 10 in projectq.tex line 390: Solo `)' found.
+The compiler replaces the \texttt{Entangle} gate by a Hadamard gate on the first qubit, followed by CNOT gates on all others conditioned on the first qubit (see Fig.~\ref{fig:ibmcompilation}~a)). The compiler then automatically flips CNOT gates where necessary (using $4$ Hadamard gates), to make the code compatible with the connectivity of the IBM quantum chip (see Fig.~\ref{fig:ibmcompilation}~b)). In Fig.~\ref{fig:ibmcompilation}~c), the circuit is optimized before the final mapping to physical qubits is performed in Fig.~\ref{fig:ibmcompilation}~d). Running this circuit yields the outcomes with their respective probabilities in Fig.~\ref{fig:ibmentanglehist}.   
+                                                                                                                                                                                                 ^
+Warning 10 in projectq.tex line 390: Solo `)' found.
+The compiler replaces the \texttt{Entangle} gate by a Hadamard gate on the first qubit, followed by CNOT gates on all others conditioned on the first qubit (see Fig.~\ref{fig:ibmcompilation}~a)). The compiler then automatically flips CNOT gates where necessary (using $4$ Hadamard gates), to make the code compatible with the connectivity of the IBM quantum chip (see Fig.~\ref{fig:ibmcompilation}~b)). In Fig.~\ref{fig:ibmcompilation}~c), the circuit is optimized before the final mapping to physical qubits is performed in Fig.~\ref{fig:ibmcompilation}~d). Running this circuit yields the outcomes with their respective probabilities in Fig.~\ref{fig:ibmentanglehist}.   
+                                                                                                                                                                                                                                                                                                                                                                                                                ^
+Warning 10 in projectq.tex line 390: Solo `)' found.
+The compiler replaces the \texttt{Entangle} gate by a Hadamard gate on the first qubit, followed by CNOT gates on all others conditioned on the first qubit (see Fig.~\ref{fig:ibmcompilation}~a)). The compiler then automatically flips CNOT gates where necessary (using $4$ Hadamard gates), to make the code compatible with the connectivity of the IBM quantum chip (see Fig.~\ref{fig:ibmcompilation}~b)). In Fig.~\ref{fig:ibmcompilation}~c), the circuit is optimized before the final mapping to physical qubits is performed in Fig.~\ref{fig:ibmcompilation}~d). Running this circuit yields the outcomes with their respective probabilities in Fig.~\ref{fig:ibmentanglehist}.   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^
+Warning 10 in projectq.tex line 390: Solo `)' found.
+The compiler replaces the \texttt{Entangle} gate by a Hadamard gate on the first qubit, followed by CNOT gates on all others conditioned on the first qubit (see Fig.~\ref{fig:ibmcompilation}~a)). The compiler then automatically flips CNOT gates where necessary (using $4$ Hadamard gates), to make the code compatible with the connectivity of the IBM quantum chip (see Fig.~\ref{fig:ibmcompilation}~b)). In Fig.~\ref{fig:ibmcompilation}~c), the circuit is optimized before the final mapping to physical qubits is performed in Fig.~\ref{fig:ibmcompilation}~d). Running this circuit yields the outcomes with their respective probabilities in Fig.~\ref{fig:ibmentanglehist}.   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+Warning 24 in projectq.tex line 396: Delete this space to maintain correct pagereferences.
+\label{fig:ibmcompilation}  
+^
+Warning 32 in images/plots/ibm_hist_tex line 9: Use ` to begin quotation, not '.
+    }{Either use 'blacktext' in gnuplot or load the package  
+                 ^
+Warning 1 in images/plots/ibm_hist_tex line 22: Command terminated with space.
+    \newif\ifGPcolor  
+                    ^
+Warning 1 in images/plots/ibm_hist_tex line 23: Command terminated with space.
+    \GPcolortrue  
+                ^
+Warning 1 in images/plots/ibm_hist_tex line 26: Command terminated with space.
+    \newif\ifGPblacktext  
+                        ^
+Warning 1 in images/plots/ibm_hist_tex line 27: Command terminated with space.
+    \GPblacktexttrue  
+                    ^
+Warning 1 in images/plots/ibm_hist_tex line 30: Command terminated with space.
+  \let\gplgaddtomacro\g@addto@macro  
+                                   ^
+Warning 1 in images/plots/ibm_hist_tex line 35: Command terminated with space.
+  \ifGPblacktext  
+                ^
+Warning 1 in images/plots/ibm_hist_tex line 41: Command terminated with space.
+    \ifGPcolor  
+              ^
+Warning 24 in projectq.tex line 402: Delete this space to maintain correct pagereferences.
+        \label{fig:ibmentanglehist}  
+       ^
+Warning 32 in images/plots/runtimes_tex line 9: Use ` to begin quotation, not '.
+    }{Either use 'blacktext' in gnuplot or load the package  
+                 ^
+Warning 1 in images/plots/runtimes_tex line 22: Command terminated with space.
+    \newif\ifGPcolor  
+                    ^
+Warning 1 in images/plots/runtimes_tex line 23: Command terminated with space.
+    \GPcolortrue  
+                ^
+Warning 1 in images/plots/runtimes_tex line 26: Command terminated with space.
+    \newif\ifGPblacktext  
+                        ^
+Warning 1 in images/plots/runtimes_tex line 27: Command terminated with space.
+    \GPblacktexttrue  
+                    ^
+Warning 1 in images/plots/runtimes_tex line 30: Command terminated with space.
+  \let\gplgaddtomacro\g@addto@macro  
+                                   ^
+Warning 1 in images/plots/runtimes_tex line 35: Command terminated with space.
+  \ifGPblacktext  
+                ^
+Warning 1 in images/plots/runtimes_tex line 41: Command terminated with space.
+    \ifGPcolor  
+              ^
+Warning 8 in projectq.tex line 413: Wrong length of dash may have been used.
+        \caption{Runtime comparison of the simulator from~\cite{haenerSC2016} to the simulator in ProjectQ. The timed circuit consists a Hadamard-transform, a chain of controlled z-rotations, and a final Hadamard transform. The lazy evaluation of gates in combination with intrinsics instructions allows the ProjectQ simulator to execute this circuit between 3 and 5 times faster. Both simulators were run on both cores of an Intel\textregistered{} Core\texttrademark{} i7-5600U CPU.}  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ^
+Warning 24 in projectq.tex line 414: Delete this space to maintain correct pagereferences.
+        \label{fig:simcomparison}  
+       ^
+Warning 24 in projectq.tex line 443: Delete this space to maintain correct pagereferences.
+        \label{fig:teleportcirc}  
+       ^
+Warning 36 in projectq.tex line 446: You should put a space in front of parenthesis.
+Last but not least, all quantum programs can be drawn as circuit diagrams for publication in, e.g., an algorithmic paper. The \texttt{CircuitDrawer} back-end saves the circuit and, upon invocation of the \texttt{get\_latex()} member function, returns TikZ-\LaTeX code ready to be published. See Fig.~\ref{fig:teleportcirc} for an example output depicting quantum teleportation (including the initial creation of a Bell-pair). Just like the simulator or resource counter, this back-end can also be used as an intermediate compiler engine in order to draw the circuit at various levels of abstraction (which was done to create Fig.~\ref{fig:ibmcompilation}). This back-end will also be extended with further features in future versions of ProjectQ, giving the user yet more power over the mapping \& drawing process.  
+                                                                                                                                                                                                                              ^
+Warning 1 in projectq.tex line 446: Command terminated with space.
+Last but not least, all quantum programs can be drawn as circuit diagrams for publication in, e.g., an algorithmic paper. The \texttt{CircuitDrawer} back-end saves the circuit and, upon invocation of the \texttt{get\_latex()} member function, returns TikZ-\LaTeX code ready to be published. See Fig.~\ref{fig:teleportcirc} for an example output depicting quantum teleportation (including the initial creation of a Bell-pair). Just like the simulator or resource counter, this back-end can also be used as an intermediate compiler engine in order to draw the circuit at various levels of abstraction (which was done to create Fig.~\ref{fig:ibmcompilation}). This back-end will also be extended with further features in future versions of ProjectQ, giving the user yet more power over the mapping \& drawing process.  
+                                                                                                                                                                                                                                                                      ^
+Warning 2 in projectq.tex line 454: Non-breaking space (`~') should have been used.
+\noindent\emph{fermilib}. Solving problems involving strongly interacting fermions is one of the most promising applications for near-term quantum devices. With external collaborators we are implementing \texttt{fermilib} \cite{fermilib}, a library for designing quantum simulation algorithms to treat fermionic systems. \texttt{fermilib} will include integration with open source electronic structure packages to enable the computation of arbitrary molecular Hamiltonians. A well-engineered Python interface will allow for efficient manipulation of fermionic data structures with routines enabling normal ordering, fast orbital transformations, mapping qubit algebras, and more. In addition, it will provide tools to study fermionic systems beyond chemistry, including models for superconductivity such as the Hubbard model.  
+                                                                                                                                                                                                                             ^
+Warning 2 in projectq.tex line 462: Non-breaking space (`~') should have been used.
+We are working on adding support for further hardware back-ends. Among others, we aim to have an interface to J. Home's ion trap devices \cite{de2016parallel} in the near future. More hardware back-ends will follow soon. Hardware groups interested in interfacing to ProjectQ are highly encouraged to contact us~\cite{projectqwebsite}.  
+                                                                                                                                        ^
+Warning 2 in projectq.tex line 464: Non-breaking space (`~') should have been used.
+Also, we will keep extending and improving our classical back-ends. We are currently working on including our distributed massively parallel quantum simulator \cite{haener2017}, which allows to simulate up to 45 qubits on one of the world's largest supercomputers.  
+                                                                                                                                                              ^
+Warning 1 in projectq.tex line 470: Command terminated with space.
+\acknowledgments  
+                ^
+Warning 13 in projectq.tex line 509: Intersentence spacing (`\@') should perhaps be used.
+from Google Quantum AI;  
+                      ^
+Warning 13 in projectq.tex line 528: Intersentence spacing (`\@') should perhaps be used.
+We acknowledge support by the Swiss National Science Foundation and the Swiss National Competence Center for Research, QSIT.  
+                                                                                                                           ^
+Warning 11 in projectq.tex line 590: You should use \cdots or \ldots to achieve an ellipsis.
+An example implementation of this algorithm with $e=1010...101_2$ (the binary representation of the solution is alternating) is available in the examples folder of the ProjectQ framework. The loop performing the two reflections looks as follows:  
+                                                        ^^^
+Warning 17 in projectq.tex line 678: Number of `(' doesn't match the number of `)'!
+
+

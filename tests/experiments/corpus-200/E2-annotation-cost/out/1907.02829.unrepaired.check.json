@@ -1,0 +1,25 @@
+{
+ "coverage": 0.044838,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`mybib.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "brentnallcuzick-arXiv.xtex",
+    "offset": 2752,
+    "length": 10,
+    "line": 55,
+    "column": 374
+   },
+   "message": "citation checking unavailable: `mybib.bib` could not be read",
+   "related": []
+  }
+ ]
+}

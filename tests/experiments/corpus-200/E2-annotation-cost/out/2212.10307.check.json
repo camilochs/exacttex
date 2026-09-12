@@ -1,0 +1,25 @@
+{
+ "coverage": 0.027412,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`ref.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "related.xtex",
+    "offset": 203,
+    "length": 8,
+    "line": 5,
+    "column": 16
+   },
+   "message": "citation checking unavailable: `ref.bib` could not be read",
+   "related": []
+  }
+ ]
+}

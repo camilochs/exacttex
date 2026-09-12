@@ -1,0 +1,25 @@
+{
+ "coverage": 0.023976,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`biblio.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "wiki16v1.xtex",
+    "offset": 4025,
+    "length": 10,
+    "line": 104,
+    "column": 54
+   },
+   "message": "citation checking unavailable: `biblio.bib` could not be read",
+   "related": []
+  }
+ ]
+}

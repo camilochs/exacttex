@@ -1,0 +1,41 @@
+{
+ "coverage": 0.035312,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`bibliography.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "thm:boundpsucc",
+   "span": {
+    "file": "entprod.xtex",
+    "offset": 87928,
+    "length": 14,
+    "line": 1557,
+    "column": 18
+   },
+   "message": "identifier `thm:boundpsucc` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "entprod.xtex",
+    "offset": 5075,
+    "length": 30,
+    "line": 182,
+    "column": 285
+   },
+   "message": "citation checking unavailable: `bibliography.bib` could not be read",
+   "related": []
+  }
+ ]
+}

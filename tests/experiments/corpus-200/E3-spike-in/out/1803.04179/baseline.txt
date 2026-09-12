@@ -1,0 +1,30 @@
+tectonic pdf bytes=930909
+xtex exit=0 errors=[]
+texlab=[('info', 'pyov_arxiv.tex', 70, 'Unused label'), ('info', 'pyov_arxiv.tex', 360, 'Unused label'), ('info', 'pyov_arxiv.tex', 1174, 'Unused label'), ('info', 'pyov_arxiv.tex', 1195, 'Unused label'), ('info', 'pyov_arxiv.tex', 1208, 'Unused label')]
+tectonic exit=0 warnings=[] secs=2
+rning: pyov_arxiv.tex:302: Missing character: There is no ��� ("2212) in font cmr10!
+warning: could not represent character "−" (0x2212) in font "cmr10"
+warning: pyov_arxiv.tex:614: 
+Missing character: There is no �� (U+03BC) in font [lmroman10-regular]:mapping=tex-text;!
+warning: could not represent character "μ" (0x3bc) in font "[lmroman10-regular]:mapping=tex-text;"
+warning: pyov_arxiv.tex:638: Missing character: There is no �� (U+03BC) in font [lmroman10-regular]:mapping=tex-text;!
+warning: could not represent character "μ" (0x3bc) in font "[lmroman10-regular]:mapping=tex-text;"
+warning: pyov_arxiv.tex:667: Missing character: There is no �� (U+03BC) in font [lmroman10-regular]:mapping=tex-text;!
+warning: could not represent character "μ" (0x3bc) in font "[lmroman10-regular]:mapping=tex-text;"
+warning: pyov_arxiv.tex:907: Underfull \hbox (badness 2591) in paragraph at lines 904--907
+warning: pyov_arxiv.tex:942: Underfull \hbox (badness 1715) in paragraph at lines 939--942
+warning: pyov_arxiv.tex:1087: Underfull \hbox (badness 1102) in paragraph at lines 1084--1087
+warning: pyov_arxiv.tex:1194: 
+Missing character: There is no �� (U+03BC) in font [lmroman9-regular]:mapping=tex-text;!
+warning: could not represent character "μ" (0x3bc) in font "[lmroman9-regular]:mapping=tex-text;"
+warning: pyov_arxiv.tex:1194: Missing character: There is no �� (U+03BC) in font [lmroman9-regular]:mapping=tex-text;!
+warning: could not represent character "μ" (0x3bc) in font "[lmroman9-regular]:mapping=tex-text;"
+warning: pyov_arxiv.tex:1266: Underfull \hbox (badness 10000) in paragraph at lines 1262--1266
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: Object @page.1 already defined.
+warning: Object @page.2 already defined.
+warning: Object @figure.1 already defined.
+warning: Object @page.3 already defined.
+warning: Object @figure.2 already defined.
+warning: Object @figure.3 already defined.
+warning: Object @page.4 already defined.

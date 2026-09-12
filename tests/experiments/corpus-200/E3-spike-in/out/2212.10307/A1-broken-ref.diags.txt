@@ -1,0 +1,3 @@
+planted=sec:overview__ghost sites=[('intro.xtex', 48)]
+xtex new=[('XT1003', 'sec:overview__ghost', 'intro.xtex', 48)]
+texlab new=[('ERROR', 'intro.tex', 48, 'Undefined reference'), ('info', 'overview.tex', 16, 'Unused label')]

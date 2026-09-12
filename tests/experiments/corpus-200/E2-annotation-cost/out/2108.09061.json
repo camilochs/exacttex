@@ -1,0 +1,113 @@
+{
+ "paper": "2108.09061",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 42853,
+   "chars_after": 42790,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 42853,
+ "chars_after": 42790,
+ "delta_pct": -0.14701421137376613,
+ "unrepaired": {
+  "chars_after": 42787,
+  "chars_before": 42853,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.070769,
+  "bibliography": {
+   "state": "complete",
+   "entries": 43
+  },
+  "errors": 3,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.15401488810585023
+ },
+ "stats": {
+  "cite_cmds_live": 33,
+  "cite_keys_live": 53,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 22,
+  "labels_outside_grammar": 0,
+  "refs_live": 33,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 8,
+  "cite_cmds_annotated": 33,
+  "cite_keys_annotated": 53,
+  "ids_annotated": 21,
+  "refs_annotated": 29,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 3,
+  "leaks_reverted": 2,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "main.tex",
+   "line": 246,
+   "token": "@ref(eq:oracleReq)",
+   "wrapper": "?",
+   "context": "\\Output{A $j_u+j_v+1$-qubit quantum circuit $O_{u,v}$ satisfying (\\ref{eq:oracleReq}).}"
+  },
+  {
+   "file": "main.tex",
+   "line": 287,
+   "token": "@id(algostep:linearprogram)",
+   "wrapper": "?",
+   "context": "Solve the linear program minimizing $\\sum_{x_J^s\\in W} |J|\\cdot x_J^s$ subject to $\\mathcal L$\\;\\label{algostep:linearprogram}"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1003",
+   "name": "algostep:linearprogram",
+   "file": "main.xtex",
+   "line": 318,
+   "message": "identifier `algostep:linearprogram` is not declared",
+   "classification": "compiler-unreachable: \\label{algostep:linearprogram} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "algostep:linearprogram",
+   "file": "main.xtex",
+   "line": 324,
+   "message": "identifier `algostep:linearprogram` is not declared",
+   "classification": "compiler-unreachable: \\label{algostep:linearprogram} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "algostep:linearprogram",
+   "file": "main.xtex",
+   "line": 327,
+   "message": "identifier `algostep:linearprogram` is not declared",
+   "classification": "compiler-unreachable: \\label{algostep:linearprogram} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.068801,
+ "bibliography": {
+  "state": "complete",
+  "entries": 43
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

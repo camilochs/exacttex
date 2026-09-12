@@ -1,0 +1,533 @@
+pdf=1
+exit=0
+lines=1197
+unique_findings=28
+ning: Reference `fig:gamma' on page 10 undefined on input line 602.
+
+
+LaTeX Warning: Reference `adapmodel' on page 10 undefined on input line 605.
+
+
+LaTeX Warning: Reference `eq:def' on page 10 undefined on input line 608.
+
+
+LaTeX Warning: Reference `eq:fppa2' on page 10 undefined on input line 608.
+
+
+LaTeX Warning: Reference `fig:num-results' on page 10 undefined on input line 6
+09.
+
+
+LaTeX Warning: Reference `fig:TurnOver-compTh' on page 10 undefined on input li
+ne 611.
+
+[10 <./Gonium_fig10.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 615.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 615.
+
+
+Class revtex4-2 Warning: Deferred float stuck during \clearpage processing.
+
+
+LaTeX Warning: Reference `fig:num-results' on page 11 undefined on input line 6
+15.
+
+
+LaTeX Warning: Reference `eq:solode' on page 11 undefined on input line 617.
+
+
+LaTeX Warning: Reference `sec:Swimming' on page 11 undefined on input line 619.
+
+
+
+LaTeX Warning: Reference `eq:solode' on page 11 undefined on input line 622.
+
+
+LaTeX Warning: Reference `fig:GpSwimming' on page 11 undefined on input line 62
+5.
+
+
+LaTeX Warning: Reference `fig:num-results' on page 11 undefined on input line 6
+26.
+
+
+Package natbib Warning: Citation `drescher2010fidelity' on page 11 undefined on
+ input line 657.
+
+
+Package natbib Warning: Citation `leptos2018adaptive' on page 11 undefined on i
+nput line 657.
+
+
+Package natbib Warning: Citation `jekely2009evolution' on page 11 undefined on 
+input line 666.
+
+[11 <./Gonium_fig11.pdf>]
+
+LaTeX Warning: Reference `fig:exp_setup' on page 12 undefined on input line 699
+.
+
+
+Package natbib Warning: Citation `hubbard1958action' on page 12 undefined on in
+put line 701.
+
+
+Package natbib Warning: Citation `foster1980light' on page 12 undefined on inpu
+t line 702.
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 693--703
+[]\OT1/cmr/m/n/10 Chambers were pre-pared us-ing two glass slides,
+
+LaTeX Warning: Reference `fig:exp_setup' on page 12 undefined on input line 713
+.
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 711--723
+\OT1/cmr/m/n/10 through which fluid was gen-tly as-pi-rated via a $10$
+
+LaTeX Warning: Reference `fig:GoniumPic' on page 12 undefined on input line 768
+.
+
+
+LaTeX Warning: Reference `eq:lv' on page 12 undefined on input line 775.
+
+[12]
+
+LaTeX Warning: Reference `eq:def' on page 13 undefined on input line 787.
+
+
+LaTeX Warning: Reference `eq:lp0' on page 13 undefined on input line 794.
+
+
+LaTeX Warning: Reference `eq:def' on page 13 undefined on input line 802.
+
+
+LaTeX Warning: Reference `eq:lvu' on page 13 undefined on input line 804.
+
+
+LaTeX Warning: Reference `eq:th0' on page 13 undefined on input line 836.
+
+
+LaTeX Warning: Reference `eq:chist' on page 13 undefined on input line 871.
+
+
+LaTeX Warning: Reference `eq:th0' on page 13 undefined on input line 880.
+
+
+LaTeX Warning: Reference `eq:th0' on page 13 undefined on input line 880.
+
+
+LaTeX Warning: Reference `fig:geometry' on page 13 undefined on input line 884.
+
+
+
+LaTeX Warning: Reference `vel_bem' on page 13 undefined on input line 905.
+
+
+Package natbib Warning: Citation `Itoh2019' on page 13 undefined on input line 
+912.
+
+
+LaTeX Warning: Reference `vel_bem' on page 13 undefined on input line 912.
+
+[13]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 913.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 913.
+
+
+Class revtex4-2 Warning: Deferred float stuck during \clearpage processing.
+
+
+LaTeX Warning: Reference `eq:def' on page 14 undefined on input line 915.
+
+
+LaTeX Warning: Reference `fig:app-num' on page 14 undefined on input line 916.
+
+
+LaTeX Warning: Reference `eq:th0' on page 14 undefined on input line 918.
+
+
+LaTeX Warning: Reference `fig:GpSwimming' on page 14 undefined on input line 92
+0.
+
+
+LaTeX Warning: Reference `eq:pt' on page 14 undefined on input line 926.
+
+
+LaTeX Warning: Reference `fig:stepresponse' on page 14 undefined on input line 
+938.
+
+
+LaTeX Warning: Reference `adapmodel' on page 14 undefined on input line 939.
+
+
+LaTeX Warning: Reference `max_amp' on page 14 undefined on input line 946.
+
+
+LaTeX Warning: Reference `max_amp' on page 14 undefined on input line 946.
+
+
+LaTeX Warning: Reference `eq:lp0' on page 14 undefined on input line 953.
+
+
+LaTeX Warning: Reference `eq:fppa2' on page 14 undefined on input line 954.
+
+
+LaTeX Warning: Reference `eq:rt' on page 14 undefined on input line 956.
+
+
+LaTeX Warning: Reference `eq:pt2' on page 14 undefined on input line 967.
+
+[14 <./Gonium_fig12.pdf> <./Gonium_fig13.pdf>]
+
+LaTeX Warning: Reference `eq:lp0' on page 15 undefined on input line 984.
+
+
+LaTeX Warning: Reference `eq:fppa2' on page 15 undefined on input line 984.
+
+
+LaTeX Warning: Reference `eq:pa4' on page 15 undefined on input line 988.
+
+
+LaTeX Warning: Reference `eq:ode' on page 15 undefined on input line 998.
+
+(./Gonium.bbl
+
+LaTeX Warning: Reference `LastBibItem' on page 15 undefined on input line 9.
+
+[15]
+Underfull \hbox (badness 1789) in paragraph at lines 350--354
+ []\OT1/cmr/m/n/9 K. R. Symon, \OT1/cmr/m/it/9 Me-chan-ics\OT1/cmr/m/n/9 , 3rd 
+ed. (Read-ing, MA,
+) [16] (./Gonium.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right .
+
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbx9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></opt/homebrew/Cellar/texlive
+/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/home
+brew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/C
+ellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pf
+b></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/texlive/20260301/sha
+re/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/tex
+live/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></opt/homebrew/Cellar/texlive/202
+60301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></opt/homebrew/
+Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
+fb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20260301/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></opt/homebrew/Cellar
+/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on Gonium.pdf (16 pages, 6590657 bytes).
+Transcript written on Gonium.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./Gonium.tex (./revtex4-2.cls
+Document Class: revtex4-2 2019/01/18/14:29:48 4.2c (https://journals.aps.org/re
+vtex/ for documentation)
+ltxutil[2019/01/18/14:29:48 4.2c utilities package (portions licensed from W. E
+. Baxter web at superscript.com)]
+ltxfront[2019/01/18/14:29:48 4.2c frontmatter package (AO,DPC,MD)]
+ltxgrid[2019/01/18/14:29:48 4.2c page grid package (portions licensed from W. E
+. Baxter web at superscript.com)]
+
+Class revtex4-2 Warning: Failed to recognize \@vspace, \@vspacer, \@no@pgbk, \@
+newline, and \\; no patches applied. Please get a more up-to-date class, .
+
+(./aps4-2.rtx)
+
+Class revtex4-2 Warning: No journal specified, using default pra.
+
+(./aps10pt4-2.rtx)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/textcase/text
+case.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amss
+ymb.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amsf
+onts.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsma
+th.sty
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amste
+xt.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsge
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsbs
+y.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsop
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/url/url.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/natbib/natbib
+.sty) (./revsymb4-2.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/dcolumn
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/array.s
+ty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/bm.sty)
+
+! Extra \endgroup.
+\document ->\endgroup 
+                      \document@inithook \true@sw {}\UseOneTimeHook {begindo...
+l.58 \begin{document}
+                     
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 \begin{document}
+                     
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def) (./Gonium.aux)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+
+LaTeX Warning: File `figures/planted_ghost.pdf' not found on input line 120.
+
+
+! Package pdftex.def Error: File `figures/planted_ghost.pdf' not found: using d
+raft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.120 ...0.5\linewidth]{figures/planted_ghost.pdf}
+                                                  \caption{Planted figure}\e...
+
+[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}] [2 <./Gonium_fig1.pdf>] [3 <./Gonium_fig2.pdf>] [4 <./Gonium_fi
+g3.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 363.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 363.
+
+
+Class revtex4-2 Warning: Deferred float stuck during \clearpage processing.
+
+[5 <./Gonium_fig4.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 421.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 421.
+
+
+Class revtex4-2 Warning: Deferred float stuck during \clearpage processing.
+
+[6 <./Gonium_fig5.pdf>] [7 <./Gonium_fig6.pdf> <./Gonium_fig7.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 493--496
+[]\OT1/cmr/m/n/10 Here we re-late the drop-and-recovery re-sponse of
+[8 <./Gonium_fig8.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 503.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 503.
+
+
+Class revtex4-2 Warning: Deferred float stuck during \clearpage processing.
+
+[9 <./Gonium_fig9.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 549.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 549.
+
+
+Class revtex4-2 Warning: Deferred float stuck during \clearpage processing.
+
+[10 <./Gonium_fig10.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 615.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 615.
+
+
+Class revtex4-2 Warning: Deferred float stuck during \clearpage processing.
+
+[11 <./Gonium_fig11.pdf>]
+Underfull \hbox (badness 2334) in paragraph at lines 693--703
+[]\OT1/cmr/m/n/10 Chambers were pre-pared us-ing two glass slides,
+
+Underfull \hbox (badness 1072) in paragraph at lines 711--723
+\OT1/cmr/m/n/10 through which fluid was gen-tly as-pi-rated via a $10$
+[12] [13]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 913.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 913.
+
+
+Class revtex4-2 Warning: Deferred float stuck during \clearpage processing.
+
+[14 <./Gonium_fig12.pdf> <./Gonium_fig13.pdf>] (./Gonium.bbl [15]
+Underfull \hbox (badness 1946) in paragraph at lines 350--354
+ []\OT1/cmr/m/n/9 K. R. Symon, \OT1/cmr/m/it/9 Me-chan-ics\OT1/cmr/m/n/9 , 3rd 
+ed. (Read-ing, MA,
+) [16]
+! Argument of \CHK@@input has an extra }.
+<inserted text> 
+                \par 
+l.1060 \end{document}
+                     
+Runaway argument?
+\jobname .aux\relax \@dofilelist \@ifdim {\font@submax >\fontsubfuzz \ETC.
+! Paragraph ended before \CHK@@input was complete.
+<to be read again> 
+                   \par 
+l.1060 \end{document}
+                     
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbx9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></opt/homebrew/Cellar/texlive
+/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/home
+brew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/C
+ellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pf
+b></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/texlive/20260301/sha
+re/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/tex
+live/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></opt/homebrew/Cellar/texlive/202
+60301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></opt/homebrew/
+Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
+fb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20260301/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></opt/homebrew/Cellar
+/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on Gonium.pdf (16 pages, 6589754 bytes).
+Transcript written on Gonium.log.
+************************************
+** Labels in starred environments **
+************************************
+-- Gonium.tex           line  299: consider using a STAR environment
+-- Gonium.tex           line  333: consider using a STAR environment
+-- Gonium.tex           line  505: consider using a STAR environment
+-- Gonium.tex           line  741: consider using a STAR environment
+-- Gonium.tex           line  748: consider using a STAR environment
+-- Gonium.tex           line  756: consider using a STAR environment
+-- Gonium.tex           line  788: consider using a STAR environment
+-- Gonium.tex           line  795: consider using a STAR environment
+-- Gonium.tex           line  808: consider using a STAR environment
+-- Gonium.tex           line  813: consider using a STAR environment
+-- Gonium.tex           line  824: consider using a STAR environment
+-- Gonium.tex           line  829: consider using a STAR environment
+-- Gonium.tex           line  837: consider using a STAR environment
+-- Gonium.tex           line  853: consider using a STAR environment
+-- Gonium.tex           line  862: consider using a STAR environment
+-- Gonium.tex           line  868: consider using a STAR environment
+-- Gonium.tex           line  978: consider using a STAR environment
+-- Gonium.tex           line  985: consider using a STAR environment
+-- Gonium.tex           line  989: consider using a STAR environment
+-- Gonium.tex           line  993: consider using a STAR environment
+
+*******************
+** Unused Labels **
+*******************
+-- Gonium.tex           line  115: remove label FirstPage
+-- Gonium.tex           line  119: remove label sec:Intro
+-- Gonium.tex           line  270: remove label sec:Kin
+-- Gonium.tex           line  449: remove label sec:reaction
+-- Gonium.tex           line  564: remove label eq:lpzre
+-- Gonium.tex           line  565: remove label eq:lpzre
+-- Gonium.tex           line  929: remove label eq:pt1
+-- Gonium.tex           line  930: remove label eq:pt1
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

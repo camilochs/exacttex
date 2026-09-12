@@ -1,0 +1,6 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=[] secs=1
+error: Gonium.tex:58: Extra \endgroup
+error: halted on potentially-recoverable error as specified

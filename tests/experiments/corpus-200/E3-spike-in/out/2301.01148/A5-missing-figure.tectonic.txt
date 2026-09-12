@@ -1,0 +1,7 @@
+warning: algorithm2e.sty:284: 
+Invalid UTF-8 byte or sequence at line 284 replaced by U+FFFD.
+warning: algorithm2e.sty:299: Invalid UTF-8 byte or sequence at line 299 replaced by U+FFFD.
+warning: algorithm2e.sty:550: Invalid UTF-8 byte or sequence at line 550 replaced by U+FFFD.
+warning: main_submitted_20221228.tex:145: Overfull \hbox (123.62721pt too wide) detected at line 145
+error: content/manuscript/introduction:2: Unable to load picture or PDF file 'figures/planted_ghost.pdf'
+error: halted on potentially-recoverable error as specified

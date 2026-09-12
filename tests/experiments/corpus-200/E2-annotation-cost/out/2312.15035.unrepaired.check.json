@@ -1,0 +1,25 @@
+{
+ "coverage": 0.011015,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`bibliography.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "hardcaml.xtex",
+    "offset": 4549,
+    "length": 11,
+    "line": 152,
+    "column": 69
+   },
+   "message": "citation checking unavailable: `bibliography.bib` could not be read",
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,3 @@
+planted=sec_typing_proteus__ghost sites=[('main_arXiv2.xtex', 546)]
+xtex new=[('XT1003', 'sec_typing_proteus__ghost', 'main_arXiv2.xtex', 546)]
+texlab new=[('ERROR', 'main_arXiv2.tex', 546, 'Undefined reference')]

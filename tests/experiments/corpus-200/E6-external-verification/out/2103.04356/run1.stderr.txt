@@ -1,0 +1,33 @@
+30 claims: 0 fresh and carried over, 30 to verify
+https://github.com/JupitersMight/DI2 · settled
+Breiman2001 · settled
+HENRIQUES2021107900 · settled
+John1995 · settled
+altman2014categorizing · settled
+asuncion2007uci · settled
+bennette2012against · settled
+chen2016xgboost · settled
+chmielewski1994global · settled
+dodge2006oxford · settled
+garcia2012survey · settled
+gonzalez1977efficient · settled
+henriques2014bicpam · settled
+horton1996probabilistic · settled
+jossinet1996variability · settled
+leCessie1992 · settled
+liao2002appropriate · settled
+lowry2014concepts · settled
+okada2007exhaustive · settled
+platt1998sequential · settled
+quinlan2014c4 · settled
+salem2018fast · settled
+tou1974pattern · settled
+ushakovrecovering · settled
+virtanen2020scipy · settled
+wang2017multi · settled
+wang2018multi · settled
+wilk1968probability · settled
+yang2009discretization · settled
+zhang2017hierarchical · settled
+network: 30 requests (crossref 28, http 1, openalex 1) · 0 retries · 291043 bytes down · 16 fetched, 0 carried over, 14 unanswered
+record: 30 claims → .xtexverified

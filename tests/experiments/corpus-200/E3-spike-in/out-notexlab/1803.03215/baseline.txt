@@ -1,0 +1,24 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=[] secs=2
+ctive
+warning: 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex:956: Overfull \hbox (46.34764pt too wide) in paragraph at lines 925--956
+warning: 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex:1177: Underfull \hbox (badness 1715) in paragraph at lines 1174--1177
+warning: 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex:1177: Underfull \hbox (badness 3118) in paragraph at lines 1174--1177
+warning: 2018_Feb8_ANN_Nuclear_Physics_camera_ready.bbl:93: Underfull \hbox (badness 1377) in paragraph at lines 88--93
+warning: 2018_Feb8_ANN_Nuclear_Physics_camera_ready.bbl:93: Underfull \hbox (badness 1484) in paragraph at lines 88--93
+warning: 2018_Feb8_ANN_Nuclear_Physics_camera_ready.bbl:102: Underfull \hbox (badness 1565) in paragraph at lines 95--102
+warning: 2018_Feb8_ANN_Nuclear_Physics_camera_ready.bbl:155: Underfull \hbox (badness 2521) in paragraph at lines 150--155
+warning: 2018_Feb8_ANN_Nuclear_Physics_camera_ready.bbl:246: Underfull \hbox (badness 4156) in paragraph at lines 243--246
+warning: 2018_Feb8_ANN_Nuclear_Physics_camera_ready.bbl:246: Underfull \hbox (badness 2142) in paragraph at lines 243--246
+warning: errors were issued by BibTeX, but were ignored; use --print and/or --keep-logs for details.
+warning: 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex:846: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex:956: Overfull \hbox (46.34764pt too wide) in paragraph at lines 925--956
+warning: 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex:1177: Underfull \hbox (badness 1715) in paragraph at lines 1174--1177
+warning: 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex:1177: Underfull \hbox (badness 3118) in paragraph at lines 1174--1177
+error: 2018_Feb8_ANN_Nuclear_Physics_camera_ready.bbl:24: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+error: halted on potentially-recoverable error as specified

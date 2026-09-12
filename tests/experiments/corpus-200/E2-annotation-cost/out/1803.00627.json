@@ -1,0 +1,4950 @@
+{
+ "paper": "1803.00627",
+ "main": "Ph.D._Thesis_of_G._Tephnadze.tex",
+ "files": [
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "chars_before": 409030,
+   "chars_after": 409030,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 409030,
+ "chars_after": 409030,
+ "delta_pct": 0.0,
+ "unrepaired": {
+  "chars_after": 408649,
+  "chars_before": 409030,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.0,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "the document declares no bibliography"
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.09314720191672983
+ },
+ "stats": {
+  "cite_cmds_live": 155,
+  "cite_keys_live": 161,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 2,
+  "other_cite_cmds": 0,
+  "labels_live": 127,
+  "labels_outside_grammar": 0,
+  "refs_live": 686,
+  "refs_outside_grammar": 269,
+  "other_ref_cmds": 0,
+  "float_envs": 0,
+  "cite_cmds_annotated": 0,
+  "cite_keys_annotated": 0,
+  "ids_annotated": 0,
+  "refs_annotated": 0,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 697,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 432,
+   "token": "@cite(luko)",
+   "wrapper": "?",
+   "context": "functions $v$ and $v^{\\ast }$ by (for details see Lukomskii \\cite{luko})"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 487,
+   "token": "@cite(Vi)",
+   "wrapper": "?",
+   "context": "$ (see e.g. Vilenkin\\textit{\\ }\\cite{Vi})."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 556,
+   "token": "@cite(moo)",
+   "wrapper": "?",
+   "context": "Concerning this fact and related basic results, we refer to \\cite{moo}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 559,
+   "token": "@cite(ptw2)",
+   "wrapper": "?",
+   "context": "Tephnadze and Wall \\cite{ptw2}:"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 562,
+   "token": "@id(theorem1n)",
+   "wrapper": "?",
+   "context": "\\label{theorem1n}a) Let the sequence $\\{q_{k}:k\\in \\mathbb{N}\\}$ be"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 646,
+   "token": "@cite(13)",
+   "wrapper": "?",
+   "context": "It is well-known that (see e.g. Zygmund \\cite{13})%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 869,
+   "token": "@ref(dn1)",
+   "wrapper": "?",
+   "context": "\\ref{dn1} and \\ref{dn2.1}, Corollaries \\ref{dn2.2} and \\ref{dn2.3}) will be"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 869,
+   "token": "@ref(dn2.1)",
+   "wrapper": "?",
+   "context": "\\ref{dn1} and \\ref{dn2.1}, Corollaries \\ref{dn2.2} and \\ref{dn2.3}) will be"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 869,
+   "token": "@ref(dn2.2)",
+   "wrapper": "?",
+   "context": "\\ref{dn1} and \\ref{dn2.1}, Corollaries \\ref{dn2.2} and \\ref{dn2.3}) will be"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 869,
+   "token": "@ref(dn2.3)",
+   "wrapper": "?",
+   "context": "\\ref{dn1} and \\ref{dn2.1}, Corollaries \\ref{dn2.2} and \\ref{dn2.3}) will be"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 871,
+   "token": "@cite(Vi)",
+   "wrapper": "?",
+   "context": "found in Vilenkin \\cite{Vi} and the second identity in G\\`{a}t and\\textit{\\ }%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 872,
+   "token": "@cite(Ga2)",
+   "wrapper": "?",
+   "context": "Goginava \\cite{Ga2}:"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 875,
+   "token": "@id(dn1)",
+   "wrapper": "?",
+   "context": "\\label{dn1}Let $n\\in"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 893,
+   "token": "@id(dn2.1)",
+   "wrapper": "?",
+   "context": "\\label{dn2.1}Let $n\\in \\mathbb{N}$ and $1\\leq s_{n}\\leq m_{n}-1.$ Then \\"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 907,
+   "token": "@id(dn2.2)",
+   "wrapper": "?",
+   "context": "\\label{dn2.2}Let $n\\in \\mathbb{N}.$ Then%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 914,
+   "token": "@id(dn2.3)",
+   "wrapper": "?",
+   "context": "\\label{dn2.3}Let $n\\in \\mathbb{N}.$ Then%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 925,
+   "token": "@cite(tep6)",
+   "wrapper": "?",
+   "context": "We also need the following estimate (see Tephnadze \\cite{tep6}):"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 928,
+   "token": "@id(dn2.6)",
+   "wrapper": "?",
+   "context": "\\label{dn2.6}\\bigskip Let $x\\in I_{s}\\backslash I_{s+1},$ $s=0,...,N-1.$ Then%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 937,
+   "token": "@ref(dn2.1)",
+   "wrapper": "?",
+   "context": "By combining (\\ref{2dn}) in Lemma \\ref{dn2.1} and Corollary \\ref{dn2.3} we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 937,
+   "token": "@ref(dn2.3)",
+   "wrapper": "?",
+   "context": "By combining (\\ref{2dn}) in Lemma \\ref{dn2.1} and Corollary \\ref{dn2.3} we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 965,
+   "token": "@id(rad4)",
+   "wrapper": "?",
+   "context": "\\label{rad4}Let $n\\in \\mathbb{N}$, and $x_{n}=1.$ Then"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1001,
+   "token": "@cite(tep6)",
+   "wrapper": "?",
+   "context": "The next Lemma can be found in Tephnadze \\cite{tep6}:"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1004,
+   "token": "@id(dn2.6.2)",
+   "wrapper": "?",
+   "context": "\\label{dn2.6.2}\\bigskip Let $n\\in \\mathbb{N}$, $\\left\\vert n\\right\\vert \\neq"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1028,
+   "token": "@ref(rad4)",
+   "wrapper": "?",
+   "context": "if we apply Lemma \\ref{rad4}, Corollary \\ref{dn2.3} and (\\ref{2dn}) in Lemma %"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1028,
+   "token": "@ref(dn2.3)",
+   "wrapper": "?",
+   "context": "if we apply Lemma \\ref{rad4}, Corollary \\ref{dn2.3} and (\\ref{2dn}) in Lemma %"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1029,
+   "token": "@ref(dn2.1)",
+   "wrapper": "?",
+   "context": "\\ref{dn2.1} we can conclude that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1064,
+   "token": "@cite(luko)",
+   "wrapper": "?",
+   "context": "The next Lemma can be found in Lukomskii \\cite{luko}:"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1067,
+   "token": "@id(theorem1)",
+   "wrapper": "?",
+   "context": "\\label{theorem1}Let $n=\\sum_{i=1}^{\\infty }n_{i}M_{i}$. Then"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1076,
+   "token": "@cite(sws)",
+   "wrapper": "?",
+   "context": "The next result for the Walsh system can be found in the book \\cite{sws} and for"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1077,
+   "token": "@cite(AVD)",
+   "wrapper": "?",
+   "context": "bounded Vilenkin systems in the book \\cite{AVD}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1080,
+   "token": "@id(dn5)",
+   "wrapper": "?",
+   "context": "\\label{dn5}\\bigskip\\ Let $q_{n_{k}}$\\bigskip $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1090,
+   "token": "@ref(theorem1)",
+   "wrapper": "?",
+   "context": "The proof readily follows by just using Theorem \\ref{theorem1} and the following identity"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1111,
+   "token": "@cite(gat)",
+   "wrapper": "?",
+   "context": "t\\textit{\\ }\\cite{gat}:"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1114,
+   "token": "@id(lemma2)",
+   "wrapper": "?",
+   "context": "\\label{lemma2} Let $n>t,$ $t,n\\in \\mathbb{N}.$ Then%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1126,
+   "token": "@cite(AVD)",
+   "wrapper": "?",
+   "context": "The proof of the next lemma can easily be done by using last lemma (c.f. also the book \\cite{AVD} and Tephnadze \\cite%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1131,
+   "token": "@id(lemma222)",
+   "wrapper": "?",
+   "context": "\\label{lemma222} Let $n\\in \\mathbb{N}$ and $x\\in I_{N}^{k,l},$ where $k<l.$"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1152,
+   "token": "@id(lemma6kn)",
+   "wrapper": "?",
+   "context": "\\label{lemma6kn}Let $t,s_{n},n\\in \\mathbb{N},$ and $1\\leq s_{n}\\leq m_{n}-1$%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1172,
+   "token": "@cite(bt1)",
+   "wrapper": "?",
+   "context": "This result was proved by Blahota and Tephnadze \\cite{bt1}, but here we will give a completely"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1187,
+   "token": "@ref(dn1)",
+   "wrapper": "?",
+   "context": "Let $0\\leq k<M_{n}$. Then, by using (\\ref{9dn}) in Lemma \\ref{dn1} we have"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1201,
+   "token": "@ref(skn)",
+   "wrapper": "?",
+   "context": "According to (\\ref{skn}) we readily get that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1222,
+   "token": "@ref(dn2.3)",
+   "wrapper": "?",
+   "context": "x-x_{t}e_{t}\\notin I_{n}$, then by combining Corollary \\ref{dn2.3} and Lemma %"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1223,
+   "token": "@ref(lemma2)",
+   "wrapper": "?",
+   "context": "\\ref{lemma2} we obtain that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1228,
+   "token": "@ref(lemma2)",
+   "wrapper": "?",
+   "context": "Let $x\\in I_{n+1}\\left( e_{n-1}+e_{n}\\right) .$ By Lemma \\ref{lemma2} we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1235,
+   "token": "@ref(rad4)",
+   "wrapper": "?",
+   "context": "By combining Lemmas \\ref{rad4} and \\ref{lemma2} and the first part of Lemma %"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1235,
+   "token": "@ref(lemma2)",
+   "wrapper": "?",
+   "context": "By combining Lemmas \\ref{rad4} and \\ref{lemma2} and the first part of Lemma %"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1236,
+   "token": "@ref(lemma6kn)",
+   "wrapper": "?",
+   "context": "\\ref{lemma6kn} we immediately get that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1250,
+   "token": "@ref(star4)",
+   "wrapper": "?",
+   "context": "{lemma6kn}, with identities (\\ref{star4}) we immediately get that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1258,
+   "token": "@cite(bt1)",
+   "wrapper": "?",
+   "context": "\\bigskip In the same paper Blahota and Tephnadze \\cite{bt1} also proved the"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1262,
+   "token": "@id(lemma4)",
+   "wrapper": "?",
+   "context": "\\label{lemma4}Let $n=\\sum_{i=1}^{r}s_{n_{i}}M_{n_{i}}$, where $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1274,
+   "token": "@ref(dn21)",
+   "wrapper": "?",
+   "context": "Let $k,n\\in \\mathbb{N},\\ 0\\leq k<M_{n}$. If we use the identity (\\ref{dn21})"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1275,
+   "token": "@ref(dn1)",
+   "wrapper": "?",
+   "context": "in Lemma \\ref{dn1} we readily get that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1319,
+   "token": "@id(lemma7kn)",
+   "wrapper": "?",
+   "context": "\\bigskip \\label{lemma7kn}Let $n\\in \\mathbb{N}.$ Then%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1335,
+   "token": "@ref(lemma7kn)",
+   "wrapper": "?",
+   "context": "Corollary \\ref{lemma7kn} is known (see the book \\textit{\\ }\\cite{AVD}), but it is also a simple consequence of"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1335,
+   "token": "@cite(AVD)",
+   "wrapper": "?",
+   "context": "Corollary \\ref{lemma7kn} is known (see the book \\textit{\\ }\\cite{AVD}), but it is also a simple consequence of"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1336,
+   "token": "@ref(lemma222)",
+   "wrapper": "?",
+   "context": "Lemmas  \\ref{lemma222} and \\ref{lemma4}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1336,
+   "token": "@ref(lemma4)",
+   "wrapper": "?",
+   "context": "Lemmas  \\ref{lemma222} and \\ref{lemma4}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1339,
+   "token": "@cite(pt2)",
+   "wrapper": "?",
+   "context": "The next lemma can be found as a part of a more general result by Persson and Tephnadze \\cite{pt2}:"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1343,
+   "token": "@id(lemma8ccc)",
+   "wrapper": "?",
+   "context": "\\label{lemma8ccc}Let $n\\in \\mathbb{N}$, $\\left\\langle n\\right\\rangle \\neq"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1370,
+   "token": "@ref(dn2.3)",
+   "wrapper": "?",
+   "context": "if we combine (\\ref{9dn}), (\\ref{100kn1}) and invoke Corollary \\ref{dn2.3}, Lemmas \\ref{lemma2} and \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1370,
+   "token": "@ref(lemma2)",
+   "wrapper": "?",
+   "context": "if we combine (\\ref{9dn}), (\\ref{100kn1}) and invoke Corollary \\ref{dn2.3}, Lemmas \\ref{lemma2} and \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1405,
+   "token": "@cite(BGG2)",
+   "wrapper": "?",
+   "context": "{BGG} and \\cite{BGG2}, (see also Tephnadze \\cite{tep5}):"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1405,
+   "token": "@cite(tep5)",
+   "wrapper": "?",
+   "context": "{BGG} and \\cite{BGG2}, (see also Tephnadze \\cite{tep5}):"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1408,
+   "token": "@id(lemma3)",
+   "wrapper": "?",
+   "context": "\\label{lemma3} Let $2<n\\in \\mathbb{N}_{+},$ $k\\leq s<n$ and $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1423,
+   "token": "@cite(bt1)",
+   "wrapper": "?",
+   "context": "The next lemma can be found in Blahota and Tephnadze \\cite{bt1} (see also"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1424,
+   "token": "@cite(tep2)",
+   "wrapper": "?",
+   "context": "Tephnadze \\cite{tep2} and \\cite{tep3}):"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1424,
+   "token": "@cite(tep3)",
+   "wrapper": "?",
+   "context": "Tephnadze \\cite{tep2} and \\cite{tep3}):"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1427,
+   "token": "@id(lemma5)",
+   "wrapper": "?",
+   "context": "\\label{lemma5}\\ Let $x\\in I_{N}^{k,l},$ $k=0,\\dots ,N-2,$ $l=k+1,\\dots ,N-1.$"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1444,
+   "token": "@ref(lemma2)",
+   "wrapper": "?",
+   "context": "x-t\\in $ $I_{N}^{k,l}$ and $n\\geq M_{N},$ by combining Lemma \\ref{lemma2}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1445,
+   "token": "@ref(fn5)",
+   "wrapper": "?",
+   "context": "and (\\ref{fn5}) in Corollary \\ref{lemma7kn} we obtain that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1445,
+   "token": "@ref(lemma7kn)",
+   "wrapper": "?",
+   "context": "and (\\ref{fn5}) in Corollary \\ref{lemma7kn} we obtain that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1460,
+   "token": "@ref(lemma2)",
+   "wrapper": "?",
+   "context": "Let $x\\in I_{N}^{k,N}$. Then by applying Lemma \\ref{lemma2} and (\\ref{fn5})"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1460,
+   "token": "@ref(fn5)",
+   "wrapper": "?",
+   "context": "Let $x\\in I_{N}^{k,N}$. Then by applying Lemma \\ref{lemma2} and (\\ref{fn5})"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1461,
+   "token": "@ref(lemma7kn)",
+   "wrapper": "?",
+   "context": "in Corollary \\ref{lemma7kn}, we have that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1483,
+   "token": "@ref(lemma2)",
+   "wrapper": "?",
+   "context": "By using Lemmas \\ref{lemma2} and \\ref{lemma222} in (\\ref{999}) it is easy to"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1483,
+   "token": "@ref(lemma222)",
+   "wrapper": "?",
+   "context": "By using Lemmas \\ref{lemma2} and \\ref{lemma222} in (\\ref{999}) it is easy to"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1507,
+   "token": "@ref(lemma2)",
+   "wrapper": "?",
+   "context": "If we apply again Lemmas \\ref{lemma2} and \\ref{lemma222} in (\\ref{999}) we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1507,
+   "token": "@ref(lemma222)",
+   "wrapper": "?",
+   "context": "If we apply again Lemmas \\ref{lemma2} and \\ref{lemma222} in (\\ref{999}) we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1521,
+   "token": "@ref(lemma5)",
+   "wrapper": "?",
+   "context": "is also a simple consequence of Lemma \\ref{lemma5}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1524,
+   "token": "@id(lemma5aa)",
+   "wrapper": "?",
+   "context": "\\label{lemma5aa}\\ Let $x\\in I_{N}^{k,l},$ $k=0,\\dots ,N-1,$ $l=k+1,\\dots ,N.$"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1534,
+   "token": "@ref(lemma5)",
+   "wrapper": "?",
+   "context": "Since $n\\geq M_{N}$ if we apply Lemma \\ref{lemma5} we immediately get a proof"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1553,
+   "token": "@ref(lemma0nn)",
+   "wrapper": "?",
+   "context": "systems. The next results (Lemmas \\ref{lemma0nn}-\\ref{lemma5aaa}) are due to"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1553,
+   "token": "@ref(lemma5aaa)",
+   "wrapper": "?",
+   "context": "systems. The next results (Lemmas \\ref{lemma0nn}-\\ref{lemma5aaa}) are due to"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1554,
+   "token": "@cite(ptw2)",
+   "wrapper": "?",
+   "context": "Persson, Tephnadze and Wall \\cite{ptw2}:"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1557,
+   "token": "@id(lemma0nn)",
+   "wrapper": "?",
+   "context": "\\label{lemma0nn}Let $\\{q_{k}:k\\in \\mathbb{N}\\}$ be a sequence of"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1585,
+   "token": "@ref(fn01)",
+   "wrapper": "?",
+   "context": "\\ref{fn01}), we get that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1596,
+   "token": "@ref(fn01)",
+   "wrapper": "?",
+   "context": "Under condition (\\ref{fn01}) if we apply (\\ref{fn5}) in Corollary \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1596,
+   "token": "@ref(fn5)",
+   "wrapper": "?",
+   "context": "Under condition (\\ref{fn01}) if we apply (\\ref{fn5}) in Corollary \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1620,
+   "token": "@id(Corollary3nn)",
+   "wrapper": "?",
+   "context": "\\label{Corollary3nn} Let $\\{q_{k}:k\\in \\mathbb{N}\\}$ be a sequence of"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1629,
+   "token": "@ref(fn4)",
+   "wrapper": "?",
+   "context": "If we apply (\\ref{fn4}) in Corollary \\ref{lemma7kn} and invoke the"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1629,
+   "token": "@ref(lemma7kn)",
+   "wrapper": "?",
+   "context": "If we apply (\\ref{fn4}) in Corollary \\ref{lemma7kn} and invoke the"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1635,
+   "token": "@id(lemma00nn)",
+   "wrapper": "?",
+   "context": "\\label{lemma00nn} Let $n\\geq M_{N}$ and $\\{q_{k}:k\\in \\mathbb{N}\\}$ be a"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1646,
+   "token": "@ref(fn5)",
+   "wrapper": "?",
+   "context": "Let $M_{N}\\leq j\\leq n.$ By using (\\ref{fn5}) in Corollary \\ref{lemma7kn} we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1646,
+   "token": "@ref(lemma7kn)",
+   "wrapper": "?",
+   "context": "Let $M_{N}\\leq j\\leq n.$ By using (\\ref{fn5}) in Corollary \\ref{lemma7kn} we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1688,
+   "token": "@id(lemma5a)",
+   "wrapper": "?",
+   "context": "\\label{lemma5a}\\ Let $x\\in I_{N}^{k,l},$ $k=0,\\dots ,N-2,$ $l=k+1,\\dots ,N-1$"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1690,
+   "token": "@ref(fn01)",
+   "wrapper": "?",
+   "context": "satisfying condition (\\ref{fn01}). Then%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1705,
+   "token": "@ref(star1)",
+   "wrapper": "?",
+   "context": "{lemma0nn} and invoke (\\ref{star1}) and (\\ref{star2}) in Lemma \\ref{lemma222}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1705,
+   "token": "@ref(star2)",
+   "wrapper": "?",
+   "context": "{lemma0nn} and invoke (\\ref{star1}) and (\\ref{star2}) in Lemma \\ref{lemma222}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1705,
+   "token": "@ref(lemma222)",
+   "wrapper": "?",
+   "context": "{lemma0nn} and invoke (\\ref{star1}) and (\\ref{star2}) in Lemma \\ref{lemma222}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1723,
+   "token": "@ref(lemma2)",
+   "wrapper": "?",
+   "context": "combining Lemmas \\ref{lemma2} and \\ref{lemma0nn} with (\\ref{star1}) and (\\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1723,
+   "token": "@ref(lemma0nn)",
+   "wrapper": "?",
+   "context": "combining Lemmas \\ref{lemma2} and \\ref{lemma0nn} with (\\ref{star1}) and (\\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1723,
+   "token": "@ref(star1)",
+   "wrapper": "?",
+   "context": "combining Lemmas \\ref{lemma2} and \\ref{lemma0nn} with (\\ref{star1}) and (\\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1724,
+   "token": "@ref(lemma222)",
+   "wrapper": "?",
+   "context": "{star2}) in \\ref{lemma222}, we have that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1743,
+   "token": "@id(lemma5b)",
+   "wrapper": "?",
+   "context": "\\label{lemma5b}\\ Let $n\\geq M_{N},$ $\\ x\\in I_{N}^{k,l},$ $k=0,\\dots ,N-1,$ $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1745,
+   "token": "@ref(fn01)",
+   "wrapper": "?",
+   "context": "non-decreasing sequence, satisfying condition (\\ref{fn01}). Then%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1754,
+   "token": "@ref(lemma5a)",
+   "wrapper": "?",
+   "context": "Since $n\\geq M_{N}$ if we apply Lemma \\ref{lemma5a} we immediately get the  proof."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1758,
+   "token": "@ref(fn01)",
+   "wrapper": "?",
+   "context": "\\ref{fn01}):"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1761,
+   "token": "@id(lemma5aaa)",
+   "wrapper": "?",
+   "context": "\\label{lemma5aaa}\\ Let $x\\in I_{N}^{k,l},$ $k=0,\\dots ,N-1,$ $l=k+1,\\dots ,N$"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1774,
+   "token": "@ref(lemma2)",
+   "wrapper": "?",
+   "context": "x-t\\in $ $I_{N}^{k,l}$ and $n\\geq M_{N},$ if we combine Lemmas \\ref{lemma2} and %"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1775,
+   "token": "@ref(lemma00nn)",
+   "wrapper": "?",
+   "context": "\\ref{lemma00nn} and invoke (\\ref{star1}) and (\\ref{star2}) in Lemma \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1775,
+   "token": "@ref(star1)",
+   "wrapper": "?",
+   "context": "\\ref{lemma00nn} and invoke (\\ref{star1}) and (\\ref{star2}) in Lemma \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1775,
+   "token": "@ref(star2)",
+   "wrapper": "?",
+   "context": "\\ref{lemma00nn} and invoke (\\ref{star1}) and (\\ref{star2}) in Lemma \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1793,
+   "token": "@ref(lemma2)",
+   "wrapper": "?",
+   "context": "we apply again Lemmas \\ref{lemma2}, \\ref{lemma0nn} and (\\ref{star1}) and (%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1793,
+   "token": "@ref(lemma0nn)",
+   "wrapper": "?",
+   "context": "we apply again Lemmas \\ref{lemma2}, \\ref{lemma0nn} and (\\ref{star1}) and (%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1793,
+   "token": "@ref(star1)",
+   "wrapper": "?",
+   "context": "we apply again Lemmas \\ref{lemma2}, \\ref{lemma0nn} and (\\ref{star1}) and (%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1794,
+   "token": "@ref(star2)",
+   "wrapper": "?",
+   "context": "\\ref{star2}) in Lemma \\ref{lemma222} we can conclude that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1794,
+   "token": "@ref(lemma222)",
+   "wrapper": "?",
+   "context": "\\ref{star2}) in Lemma \\ref{lemma222} we can conclude that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1813,
+   "token": "@ref(lemma1n)",
+   "wrapper": "?",
+   "context": "The next results (Lemmas \\ref{lemma1n}-\\ref{lemma3n}) are due to"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1813,
+   "token": "@ref(lemma3n)",
+   "wrapper": "?",
+   "context": "The next results (Lemmas \\ref{lemma1n}-\\ref{lemma3n}) are due to"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1814,
+   "token": "@cite(bpt1)",
+   "wrapper": "?",
+   "context": "Blahota, Persson and Tephnadze \\cite{bpt1}:"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1817,
+   "token": "@id(lemma1n)",
+   "wrapper": "?",
+   "context": "\\label{lemma1n}Let $s_{n}M_{n}<r\\leq \\left( s_{n}+1\\right) M_{n},$ where $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1831,
+   "token": "@ref(lemma1n)",
+   "wrapper": "?",
+   "context": "We note that Lemma \\ref{lemma1n} is true for every N\\\"orlund mean, without"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1844,
+   "token": "@ref(dn22)",
+   "wrapper": "?",
+   "context": "We apply (\\ref{dn22}) in Lemma \\ref{dn1} and invoke Abel transformation to"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1844,
+   "token": "@ref(dn1)",
+   "wrapper": "?",
+   "context": "We apply (\\ref{dn22}) in Lemma \\ref{dn1} and invoke Abel transformation to"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1871,
+   "token": "@ref(dn21)",
+   "wrapper": "?",
+   "context": "By using (\\ref{dn21}) in Lemma \\ref{dn1} we can rewrite $II$ as"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1871,
+   "token": "@ref(dn1)",
+   "wrapper": "?",
+   "context": "By using (\\ref{dn21}) in Lemma \\ref{dn1} we can rewrite $II$ as"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1881,
+   "token": "@ref(nor1)",
+   "wrapper": "?",
+   "context": "The proof is complete by just combining (\\ref{nor1}-\\ref{nor3})."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1881,
+   "token": "@ref(nor3)",
+   "wrapper": "?",
+   "context": "The proof is complete by just combining (\\ref{nor1}-\\ref{nor3})."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1885,
+   "token": "@id(lemma0nn1)",
+   "wrapper": "?",
+   "context": "\\label{lemma0nn1}Let $\\{q_{k}:k\\in \\mathbb{N}\\}$ be a sequence of"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1902,
+   "token": "@ref(fn0)",
+   "wrapper": "?",
+   "context": "condition (\\ref{fn0}). Then"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1915,
+   "token": "@ref(fn5)",
+   "wrapper": "?",
+   "context": "If we apply (\\ref{fn5}) in Corollary \\ref{lemma7kn} and invoke equalities (%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1915,
+   "token": "@ref(lemma7kn)",
+   "wrapper": "?",
+   "context": "If we apply (\\ref{fn5}) in Corollary \\ref{lemma7kn} and invoke equalities (%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1942,
+   "token": "@id(corollary3n9)",
+   "wrapper": "?",
+   "context": "\\label{corollary3n9} Let $\\{q_{k}:k\\in \\mathbb{N}\\}$ be a sequence of"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1943,
+   "token": "@ref(fn0)",
+   "wrapper": "?",
+   "context": "non-increasing numbers satisfying condition (\\ref{fn0}). Then%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1952,
+   "token": "@ref(lemma0nn1)",
+   "wrapper": "?",
+   "context": "By applying Lemma \\ref{lemma0nn1} we readily get the proof. So,"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1957,
+   "token": "@id(lemma2n)",
+   "wrapper": "?",
+   "context": "\\label{lemma2n}Let $\\{q_{k}:k\\in \\mathbb{N}\\}$ be a sequence of"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1987,
+   "token": "@ref(monotone0)",
+   "wrapper": "?",
+   "context": "In the first case we obtain that (\\ref{monotone0}) and (\\ref{monotone1}) are"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1987,
+   "token": "@ref(monotone1)",
+   "wrapper": "?",
+   "context": "In the first case we obtain that (\\ref{monotone0}) and (\\ref{monotone1}) are"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 1992,
+   "token": "@ref(lemma0nn)",
+   "wrapper": "?",
+   "context": "have already been considered in Lemma \\ref{lemma0nn}, we can exclude it."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2034,
+   "token": "@ref(a1)",
+   "wrapper": "?",
+   "context": "By combining (\\ref{a1}), (\\ref{a2}) and Lemma \\ref{lemma1n} we have that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2034,
+   "token": "@ref(a2)",
+   "wrapper": "?",
+   "context": "By combining (\\ref{a1}), (\\ref{a2}) and Lemma \\ref{lemma1n} we have that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2034,
+   "token": "@ref(lemma1n)",
+   "wrapper": "?",
+   "context": "By combining (\\ref{a1}), (\\ref{a2}) and Lemma \\ref{lemma1n} we have that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2065,
+   "token": "@ref(dn2.3)",
+   "wrapper": "?",
+   "context": "We\\ combine Corollary \\ref{dn2.3} and Lemma \\ref{lemma2} and invoke (\\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2065,
+   "token": "@ref(lemma2)",
+   "wrapper": "?",
+   "context": "We\\ combine Corollary \\ref{dn2.3} and Lemma \\ref{lemma2} and invoke (\\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2066,
+   "token": "@ref(dn2.1)",
+   "wrapper": "?",
+   "context": "{9dn}) in Lemma \\ref{dn2.1} to obtain that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2177,
+   "token": "@id(corollary3n)",
+   "wrapper": "?",
+   "context": "\\label{corollary3n}Let $0<\\alpha \\leq 1$ and $\\{q_{k}:k\\in \\mathbb{N}\\}$ be"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2188,
+   "token": "@ref(lemma2n)",
+   "wrapper": "?",
+   "context": "If we use Lemma \\ref{lemma2n} we readily get the proof. Thus, we leave out the details."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2192,
+   "token": "@id(lemma3n)",
+   "wrapper": "?",
+   "context": "\\label{lemma3n}Let $0<\\alpha \\leq 1$ and $\\{q_{k}:k\\in \\mathbb{N}\\}$ be a"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2212,
+   "token": "@ref(star1)",
+   "wrapper": "?",
+   "context": "{lemma2n} with (\\ref{star1}) and (\\ref{star2}) in Lemma \\ref{lemma222} we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2212,
+   "token": "@ref(star2)",
+   "wrapper": "?",
+   "context": "{lemma2n} with (\\ref{star1}) and (\\ref{star2}) in Lemma \\ref{lemma222} we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2212,
+   "token": "@ref(lemma222)",
+   "wrapper": "?",
+   "context": "{lemma2n} with (\\ref{star1}) and (\\ref{star2}) in Lemma \\ref{lemma222} we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2247,
+   "token": "@ref(star10)",
+   "wrapper": "?",
+   "context": "{lemma2} and estimate (\\ref{star10}) we get that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2260,
+   "token": "@ref(lemma2)",
+   "wrapper": "?",
+   "context": "-1}.$ By again applying Lemma \\ref{lemma2} and estimate (\\ref{star10}) we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2260,
+   "token": "@ref(star10)",
+   "wrapper": "?",
+   "context": "-1}.$ By again applying Lemma \\ref{lemma2} and estimate (\\ref{star10}) we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2273,
+   "token": "@id(corollary3na)",
+   "wrapper": "?",
+   "context": "\\label{corollary3na}Let $0<\\alpha <1,$ $m\\geq M_{N}$ and $\\{q_{k}:k\\in"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2286,
+   "token": "@ref(lemma3n)",
+   "wrapper": "?",
+   "context": "The proof readily follows Lemma \\ref{lemma3n}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2315,
+   "token": "@cite(We1)",
+   "wrapper": "?",
+   "context": "\\right) $ if (for details see e.g. Weisz \\cite{We1})"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2339,
+   "token": "@cite(W)",
+   "wrapper": "?",
+   "context": "(see \\cite{W}). The converse of the latest statement holds also if $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2340,
+   "token": "@cite(W)",
+   "wrapper": "?",
+   "context": "1<p\\leq \\infty $ (see \\cite{W}): for an arbitrary $L_{p}$-bounded martingale"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2345,
+   "token": "@cite(W)",
+   "wrapper": "?",
+   "context": "integrable (see \\cite{W}), namely, if"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2405,
+   "token": "@cite(We3)",
+   "wrapper": "?",
+   "context": "The next Lemma can be found in \\cite{We3} (see also book \\cite{sws}):"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2405,
+   "token": "@cite(sws)",
+   "wrapper": "?",
+   "context": "The next Lemma can be found in \\cite{We3} (see also book \\cite{sws}):"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2408,
+   "token": "@id(lemma2.3.4)",
+   "wrapper": "?",
+   "context": "\\label{lemma2.3.4}If $f\\in L_{1},$ then the sequence $F:=\\left("
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2433,
+   "token": "@cite(We1,We3)",
+   "wrapper": "?",
+   "context": "for $0<p\\leq 1$ have atomic characterizations (see e.g. Weisz \\cite{We1,We3}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2437,
+   "token": "@id(lemma2.1)",
+   "wrapper": "?",
+   "context": "\\label{lemma2.1} A martingale $f=\\left( f^{\\left( n\\right) }:n\\in \\mathbb{N}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2456,
+   "token": "@ref(condmart)",
+   "wrapper": "?",
+   "context": "n\\right) }:n\\in \\mathbb{N}\\right) $ of the form (\\ref{condmart})."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2460,
+   "token": "@cite(We3)",
+   "wrapper": "?",
+   "context": "Lemmas hold (see e.g. Weisz \\cite{We3}):"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2463,
+   "token": "@id(lemma2.2)",
+   "wrapper": "?",
+   "context": "\\label{lemma2.2} Suppose that an operator $T$ is sub-linear and for some $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2484,
+   "token": "@id(lemma2.3)",
+   "wrapper": "?",
+   "context": "\\label{lemma2.3} Suppose that an operator $T$ is sub-linear and for some $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2516,
+   "token": "@id(lemma2.3.6)",
+   "wrapper": "?",
+   "context": "\\label{lemma2.3.6} Let $0<p\\leq 1.$ Since"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2567,
+   "token": "@cite(wat)",
+   "wrapper": "?",
+   "context": "Watari \\cite{wat} showed that there are strong connections between"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2587,
+   "token": "@id(lemma2.3.7)",
+   "wrapper": "?",
+   "context": "\\label{lemma2.3.7}Since"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2591,
+   "token": "@ref(eqvi)",
+   "wrapper": "?",
+   "context": "when $p>1$, by applying (\\ref{eqvi}), we obtain that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2610,
+   "token": "@cite(BGG)",
+   "wrapper": "?",
+   "context": "The next two Examples can be found in the papers \\cite{BGG} and \\cite{BGG2}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2610,
+   "token": "@cite(BGG2)",
+   "wrapper": "?",
+   "context": "The next two Examples can be found in the papers \\cite{BGG} and \\cite{BGG2}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2614,
+   "token": "@id(example2.1)",
+   "wrapper": "?",
+   "context": "\\label{example2.1}Let $0<p\\leq 1$ and $\\lambda =\\sup_{n}m_{n}.$ Then the"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2629,
+   "token": "@cite(tep2)",
+   "wrapper": "?",
+   "context": "Here we present the proof from Tephnadze\\textit{\\ }\\cite{tep2}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2630,
+   "token": "@cite(tep3)",
+   "wrapper": "?",
+   "context": "and \\cite{tep3}. Since"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2663,
+   "token": "@ref(lemma2.3.4)",
+   "wrapper": "?",
+   "context": "If we invoke Lemma \\ref{lemma2.3.4} we obtain that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2693,
+   "token": "@id(example2.2)",
+   "wrapper": "?",
+   "context": "\\label{example2.2}Let $0<p\\leq 1$ and"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2730,
+   "token": "@cite(pt1)",
+   "wrapper": "?",
+   "context": "it can be found in Persson and Tephnadze \\cite{pt1}:"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2733,
+   "token": "@id(example002)",
+   "wrapper": "?",
+   "context": "\\label{example002}Let $M_{k}\\leq n<M_{k+1}$ and $S_{n}f$ be the n-th partial sum"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2767,
+   "token": "@id(example003)",
+   "wrapper": "?",
+   "context": "\\label{example003}Let $M_{k}\\leq n<M_{k+1}$ and $\\sigma _{n}f$ be n-th Fej\\'er"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2787,
+   "token": "@ref(example002)",
+   "wrapper": "?",
+   "context": "and if we follow analogous steps as in Example \\ref{example002} we readily can"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2792,
+   "token": "@cite(tep1)",
+   "wrapper": "?",
+   "context": "sharpness of our main results (c.f. the papers \\cite{tep1}, \\cite{tep4},"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2792,
+   "token": "@cite(tep4)",
+   "wrapper": "?",
+   "context": "sharpness of our main results (c.f. the papers \\cite{tep1}, \\cite{tep4},"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2793,
+   "token": "@cite(tep6)",
+   "wrapper": "?",
+   "context": "\\cite{tep6}, \\cite{tep7}, \\cite{tep9} by Tephnadze)."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2793,
+   "token": "@cite(tep7)",
+   "wrapper": "?",
+   "context": "\\cite{tep6}, \\cite{tep7}, \\cite{tep9} by Tephnadze)."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2793,
+   "token": "@cite(tep9)",
+   "wrapper": "?",
+   "context": "\\cite{tep6}, \\cite{tep7}, \\cite{tep9} by Tephnadze)."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2796,
+   "token": "@id(example2.5)",
+   "wrapper": "?",
+   "context": "\\label{example2.5}Let $0<p\\leq 1,$ $\\lambda =\\sup_{n}m_{n},$ $\\left\\{"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2871,
+   "token": "@ref(lemma2.1)",
+   "wrapper": "?",
+   "context": "by applying Lemma \\ref{lemma2.1} and (\\ref{2AA}) we can conclude that $f\\in"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2872,
+   "token": "@ref(g100)",
+   "wrapper": "?",
+   "context": "H_{p}.$ Furthermore, in view of (\\ref{g100}) in Remark \\ref{lemma2.3.6}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2872,
+   "token": "@ref(lemma2.3.6)",
+   "wrapper": "?",
+   "context": "H_{p}.$ Furthermore, in view of (\\ref{g100}) in Remark \\ref{lemma2.3.6}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2933,
+   "token": "@ref(dn21)",
+   "wrapper": "?",
+   "context": "and invoke (\\ref{dn21}) in Lemma \\ref{dn1} to obtain that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2933,
+   "token": "@ref(dn1)",
+   "wrapper": "?",
+   "context": "and invoke (\\ref{dn21}) in Lemma \\ref{dn1} to obtain that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2963,
+   "token": "@ref(g100)",
+   "wrapper": "?",
+   "context": "By using (\\ref{g100}) we get that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2981,
+   "token": "@ref(lemma2.1)",
+   "wrapper": "?",
+   "context": "According to Lemma \\ref{lemma2.1} we conclude that (\\ref{g1001}) is an"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2981,
+   "token": "@ref(g1001)",
+   "wrapper": "?",
+   "context": "According to Lemma \\ref{lemma2.1} we conclude that (\\ref{g1001}) is an"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 2995,
+   "token": "@id(example2.6)",
+   "wrapper": "?",
+   "context": "\\label{example2.6}Let $0<p\\leq 1,$ $\\lambda =\\sup_{n\\in \\mathbb{N}}m_{n},$ $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3070,
+   "token": "@ref(example2.5)",
+   "wrapper": "?",
+   "context": "The proof is quite analogously to the proof of Example \\ref{example2.5}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3083,
+   "token": "@id(example2.5.1)",
+   "wrapper": "?",
+   "context": "\\label{example2.5.1}\\bigskip Let $0<p\\leq q\\leq 1,$ $\\lambda =\\sup_{n\\in"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3173,
+   "token": "@ref(fc1)",
+   "wrapper": "?",
+   "context": "according to (\\ref{fc1}) and (\\ref{fc2}), we find that Fourier coefficients"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3173,
+   "token": "@ref(fc2)",
+   "wrapper": "?",
+   "context": "according to (\\ref{fc1}) and (\\ref{fc2}), we find that Fourier coefficients"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3193,
+   "token": "@ref(dn21)",
+   "wrapper": "?",
+   "context": "apply (\\ref{1t6}) again and invoke (\\ref{dn21}) in Lemma \\ref{1t6} to obtain"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3255,
+   "token": "@ref(sn99)",
+   "wrapper": "?",
+   "context": "Estimates (\\ref{sn99}) and (\\ref{sn100}) insure us that (\\ref{sn101}) is"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3255,
+   "token": "@ref(sn100)",
+   "wrapper": "?",
+   "context": "Estimates (\\ref{sn99}) and (\\ref{sn100}) insure us that (\\ref{sn101}) is"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3255,
+   "token": "@ref(sn101)",
+   "wrapper": "?",
+   "context": "Estimates (\\ref{sn99}) and (\\ref{sn100}) insure us that (\\ref{sn101}) is"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3259,
+   "token": "@ref(sn100)",
+   "wrapper": "?",
+   "context": "\\ref{sn100}) obtained by taking $\\ j=M_{2\\alpha _{k}}$we see that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3290,
+   "token": "@id(remark2.5.1)",
+   "wrapper": "?",
+   "context": "\\label{remark2.5.1}It is obvious that if we cancel condition (\\ref{1t4}) in"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3291,
+   "token": "@ref(example2.5.1)",
+   "wrapper": "?",
+   "context": "Example \\ref{example2.5.1} we still get that $\\,f=\\left( f^{\\left( n\\right)"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3293,
+   "token": "@ref(sn101)",
+   "wrapper": "?",
+   "context": "\\ref{sn101}) is valid. Moreover, \\ (\\ref{1t8})-(\\ref{sn100}) are still"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3293,
+   "token": "@ref(sn100)",
+   "wrapper": "?",
+   "context": "\\ref{sn101}) is valid. Moreover, \\ (\\ref{1t8})-(\\ref{sn100}) are still"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3301,
+   "token": "@id(example2.5.2)",
+   "wrapper": "?",
+   "context": "\\label{example2.5.2}Let $0<p\\leq 1$, \\ $\\lambda =\\sup_{n\\in \\mathbb{N}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3310,
+   "token": "@ref(psin)",
+   "wrapper": "?",
+   "context": "which satisfies condition (\\ref{psin}) we define a martingale $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3339,
+   "token": "@ref(example2.5)",
+   "wrapper": "?",
+   "context": "The proof is quite analogously to the proof of Example \\ref{example2.5}. Hence, we leave out the details."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3348,
+   "token": "@id(example2.6.1)",
+   "wrapper": "?",
+   "context": "\\label{example2.6.1}Let $0<p\\leq 1,$ $\\lambda =\\sup_{n\\in \\mathbb{N}}m_{n}\\ $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3384,
+   "token": "@ref(example2.5)",
+   "wrapper": "?",
+   "context": "This example is a simple consequence of Example \\ref{example2.5} if we take $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3423,
+   "token": "@cite(sws)",
+   "wrapper": "?",
+   "context": "According to the  Riemann-Lebesgue lemma (for details see e.g. the book \\cite{sws}) we obtain that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3437,
+   "token": "@cite(AVD)",
+   "wrapper": "?",
+   "context": "It is well-known (see e.g. the books \\ \\cite{AVD}\\textit{ }and \\cite{sws}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3437,
+   "token": "@cite(sws)",
+   "wrapper": "?",
+   "context": "It is well-known (see e.g. the books \\ \\cite{AVD}\\textit{ }and \\cite{sws}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3460,
+   "token": "@cite(hl)",
+   "wrapper": "?",
+   "context": "Littlewood \\cite{hl} (see also the book \\cite{cw}) and for the"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3460,
+   "token": "@cite(cw)",
+   "wrapper": "?",
+   "context": "Littlewood \\cite{hl} (see also the book \\cite{cw}) and for the"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3461,
+   "token": "@cite(sws)",
+   "wrapper": "?",
+   "context": "Walsh system it was proved in the book \\cite{sws}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3463,
+   "token": "@cite(We4,We1)",
+   "wrapper": "?",
+   "context": "Weisz \\cite{We4,We1} generalized this result for the bounded Vilenkin systems and proved"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3471,
+   "token": "@cite(11)",
+   "wrapper": "?",
+   "context": "Paley \\cite{11} proved that the Walsh-Fourier coefficients of a function $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3480,
+   "token": "@cite(cw)",
+   "wrapper": "?",
+   "context": "H_{1}$ (see e.g the book \\cite{cw})$.$"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3483,
+   "token": "@cite(we5)",
+   "wrapper": "?",
+   "context": "following inequality was proved by Simon and Weisz \\cite{we5}:"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3497,
+   "token": "@cite(sws)",
+   "wrapper": "?",
+   "context": "\\ \\cite{sws})"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3502,
+   "token": "@cite(sws)",
+   "wrapper": "?",
+   "context": "but it can be proved also a more stronger result (see e.g. the book \\ \\cite{sws}):%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3509,
+   "token": "@cite(gog1)",
+   "wrapper": "?",
+   "context": "partial sums in $L_{1}$ norms was investigated by Goginava \\cite{gog1} (see"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3510,
+   "token": "@cite(gog2)",
+   "wrapper": "?",
+   "context": "also \\cite{gog2}), Shneider \\cite{sn} and Avdispahi\\'c and Memi\\'c \\cite{am}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3510,
+   "token": "@cite(sn)",
+   "wrapper": "?",
+   "context": "also \\cite{gog2}), Shneider \\cite{sn} and Avdispahi\\'c and Memi\\'c \\cite{am}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3510,
+   "token": "@cite(am)",
+   "wrapper": "?",
+   "context": "also \\cite{gog2}), Shneider \\cite{sn} and Avdispahi\\'c and Memi\\'c \\cite{am}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3511,
+   "token": "@cite(fi)",
+   "wrapper": "?",
+   "context": "Fine \\cite{fi} derived sufficient conditions for the uniform convergence,"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3513,
+   "token": "@cite(9)",
+   "wrapper": "?",
+   "context": "\\cite{9} estimated the rate of uniform convergence of a Walsh-Fourier series"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3516,
+   "token": "@cite(gt)",
+   "wrapper": "?",
+   "context": "Tkebuchava \\cite{gt}. This corresponding problem was considered for Vilenkin"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3517,
+   "token": "@cite(4)",
+   "wrapper": "?",
+   "context": "groups $G_{m}$ by Fridli \\cite{4} and G\\'at \\cite{5}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3517,
+   "token": "@cite(5)",
+   "wrapper": "?",
+   "context": "groups $G_{m}$ by Fridli \\cite{4} and G\\'at \\cite{5}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3519,
+   "token": "@cite(sws)",
+   "wrapper": "?",
+   "context": "It is known (for details see e.g. the books \\ \\cite{sws}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3520,
+   "token": "@cite(We4,We1)",
+   "wrapper": "?",
+   "context": "and \\cite{We4,We1}) that the subsequence $S_{M_{n}}$ of the partial"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3522,
+   "token": "@cite(tep7)",
+   "wrapper": "?",
+   "context": "space $L_{p},$ for all $p>0.$ However, (see Tephnadze \\cite{tep7}) there"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3530,
+   "token": "@cite(tep6)",
+   "wrapper": "?",
+   "context": "Tephnadze \\cite{tep6}). However, Simon \\cite{si1} proved that there exists"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3530,
+   "token": "@cite(si1)",
+   "wrapper": "?",
+   "context": "Tephnadze \\cite{tep6}). However, Simon \\cite{si1} proved that there exists"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3542,
+   "token": "@cite(Ga1)",
+   "wrapper": "?",
+   "context": "However, in G\\'{a}t \\cite{Ga1} the following strong convergence result was"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3550,
+   "token": "@cite(sm)",
+   "wrapper": "?",
+   "context": "For the trigonometric analogue see Smith \\cite{sm} and for the Walsh-Paley"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3551,
+   "token": "@cite(Si3)",
+   "wrapper": "?",
+   "context": "system see Simon \\cite{Si3}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3576,
+   "token": "@cite(tep6)",
+   "wrapper": "?",
+   "context": "The next theorem can be found in Tephnadze \\cite{tep6}:"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3579,
+   "token": "@id(theorem3.1)",
+   "wrapper": "?",
+   "context": "\\label{theorem3.1}a)Let $0<p<1$ and $f\\in H_{p}.$ Then there exists an"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3605,
+   "token": "@ref(lemma2.1)",
+   "wrapper": "?",
+   "context": "by applying Lemma \\ref{lemma2.1} we obtain that the proof of part a) will"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3655,
+   "token": "@ref(example2.5)",
+   "wrapper": "?",
+   "context": "Example \\ref{example2.5}, where"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3660,
+   "token": "@ref(example2.5)",
+   "wrapper": "?",
+   "context": "In view of (\\ref{3.4}) we conclude that (\\ref{2AA}) is satisfied and by using Example \\ref{example2.5} we obtain that\\ $f\\in H_{p}.$"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3662,
+   "token": "@ref(sn100)",
+   "wrapper": "?",
+   "context": "By now using (\\ref{sn100}) with $\\lambda _{k}$ defined by (\\ref{3.5.0})"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3702,
+   "token": "@ref(theorem3.1)",
+   "wrapper": "?",
+   "context": "By using Theorem \\ref{theorem3.1} we prove Hardy type inequality (\\ref{3.1})"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3703,
+   "token": "@cite(tep4)",
+   "wrapper": "?",
+   "context": "for $0<p\\leq 1$. Moreover, we also show (see Tephnadze \\cite{tep4}) that the"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3708,
+   "token": "@id(theorem3.2)",
+   "wrapper": "?",
+   "context": "\\label{theorem3.2}a)Let $0<p\\leq 1$ and $f\\in H_{p}.$ Then there exists an"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3729,
+   "token": "@ref(lemma2.1)",
+   "wrapper": "?",
+   "context": "By applying Lemma \\ref{lemma2.1} we obtain that the proof of the part a)"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3741,
+   "token": "@ref(theorem3.1)",
+   "wrapper": "?",
+   "context": "\\ref{theorem3.1} we readily get that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3797,
+   "token": "@ref(example2.5.2)",
+   "wrapper": "?",
+   "context": "Example \\ref{example2.5.2}. According to (\\ref{3.6}) we conclude that $f\\in"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3800,
+   "token": "@ref(example2.5.2)",
+   "wrapper": "?",
+   "context": "Moreover, by using (\\ref{3.7}) from Example \\ref{example2.5.2} and obvious estimates we find"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3843,
+   "token": "@ref(theorem3.1)",
+   "wrapper": "?",
+   "context": "By using Theorem \\ref{theorem3.1} we can also prove a Paley type inequality (%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3844,
+   "token": "@cite(tep4)",
+   "wrapper": "?",
+   "context": "\\ref{3.2}) for $0<p\\leq 1$. Moreover, we show (see Tephnadze \\cite{tep4}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3849,
+   "token": "@id(theorem3.3)",
+   "wrapper": "?",
+   "context": "\\label{theorem3.3}a)Let $0<p\\leq 1$ and $f\\in H_{p}.$ Then there exists an"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3870,
+   "token": "@ref(lemma2.1)",
+   "wrapper": "?",
+   "context": "First, we consider case $0<p<1.$ By applying Lemma \\ref{lemma2.1} for the"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3879,
+   "token": "@ref(theorem3.1)",
+   "wrapper": "?",
+   "context": "According to (\\ref{3.3}) in Theorem \\ref{theorem3.1} we readily get that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3904,
+   "token": "@ref(example2.5.2)",
+   "wrapper": "?",
+   "context": "from Example \\ref{example2.5.2} (see also part b) of Theorem \\ref{theorem3.2}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3904,
+   "token": "@ref(theorem3.2)",
+   "wrapper": "?",
+   "context": "from Example \\ref{example2.5.2} (see also part b) of Theorem \\ref{theorem3.2}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3905,
+   "token": "@ref(example2.5.2)",
+   "wrapper": "?",
+   "context": "). According to (\\ref{3.7}) in Example \\ref{example2.5.2} we get that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3936,
+   "token": "@cite(tep7)",
+   "wrapper": "?",
+   "context": "The next theorem can be found in Tephnadze \\cite{tep7}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3939,
+   "token": "@id(theorem4.1)",
+   "wrapper": "?",
+   "context": "\\label{theorem4.1}a) Let $0<p<1.$ Then the \\bigskip maximal operator"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3962,
+   "token": "@ref(lemma2.2)",
+   "wrapper": "?",
+   "context": "from $L_{\\infty }$ to $L_{\\infty }$ by Lemma \\ref{lemma2.2} we obtain that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 3989,
+   "token": "@ref(dn2.6)",
+   "wrapper": "?",
+   "context": "Let $0<p<1$ and $x\\in I_{s}\\backslash I_{s+1}.$ From Lemma \\ref{dn2.6} we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4033,
+   "token": "@ref(example2.2)",
+   "wrapper": "?",
+   "context": "To prove part b) we will apply the $p$-atoms from Example \\ref{example2.2}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4073,
+   "token": "@id(corollary4.2)",
+   "wrapper": "?",
+   "context": "\\label{corollary4.2} Let $0<p<1$ and $f\\in H_{p}.$ Then there exists an"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4082,
+   "token": "@ref(theorem4.1)",
+   "wrapper": "?",
+   "context": "According to part a) of Theorem \\ref{theorem4.1} we conclude that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4094,
+   "token": "@ref(theorem4.1)",
+   "wrapper": "?",
+   "context": "We also mention the following consequences of Theorem \\ref{theorem4.1}:"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4096,
+   "token": "@id(corollary4.2a)",
+   "wrapper": "?",
+   "context": "\\label{corollary4.2a} Let $0<p<1$ and $\\left\\{ \\Phi _{n}:n\\in \\mathbb{N}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4106,
+   "token": "@id(corollary4.2aa)",
+   "wrapper": "?",
+   "context": "\\label{corollary4.2aa} Let $0<p<1$ and $\\left\\{ \\Phi _{n}:n\\in \\mathbb{N}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4116,
+   "token": "@cite(tep7)",
+   "wrapper": "?",
+   "context": "The next result can be found in Tephnadze \\cite{tep7}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4119,
+   "token": "@id(theorem4.2)",
+   "wrapper": "?",
+   "context": "\\label{theorem4.2} a) Let $f\\in H_{1}.$ Then the \\bigskip maximal operator"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4141,
+   "token": "@ref(lemma2.2)",
+   "wrapper": "?",
+   "context": "to $L_{\\infty },$ according Lemma \\ref{lemma2.2} it is sufficies to show that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4156,
+   "token": "@ref(dn2.6)",
+   "wrapper": "?",
+   "context": "Let $x\\in I_{s}\\backslash I_{s+1}.$ From Lemma \\ref{dn2.6} we get that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4192,
+   "token": "@ref(bb)",
+   "wrapper": "?",
+   "context": "Next, we note that under condition (\\ref{bb}) there exists $\\left\\{"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4199,
+   "token": "@ref(example2.2)",
+   "wrapper": "?",
+   "context": "Let $f_{k}$ be 1-atom from Example \\ref{example2.2}. By applying"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4200,
+   "token": "@ref(dn5)",
+   "wrapper": "?",
+   "context": "Corollary \\ref{dn5} with (\\ref{15l}) we have that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4225,
+   "token": "@id(corollary4.3)",
+   "wrapper": "?",
+   "context": "\\label{corollary4.3} Let $f\\in H_{1}.$ Then there exists an absolute"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4234,
+   "token": "@ref(theorem4.2)",
+   "wrapper": "?",
+   "context": "According to part a) of Theorem \\ref{theorem4.2} we readily conclude that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4246,
+   "token": "@ref(theorem4.2)",
+   "wrapper": "?",
+   "context": "We also point out two more consequences of Theorem \\ref{theorem4.2}:"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4249,
+   "token": "@id(corollary4.3a)",
+   "wrapper": "?",
+   "context": "\\label{corollary4.3a} Let $\\left\\{ \\Phi _{n}:n\\in \\mathbb{N}\\right\\} $ be"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4250,
+   "token": "@ref(bb)",
+   "wrapper": "?",
+   "context": "any non-decreasing sequence, satisfying the condition (\\ref{bb}). Then there"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4259,
+   "token": "@id(corollary4.3aa)",
+   "wrapper": "?",
+   "context": "\\label{corollary4.3aa} Let $0<p<1$ and $\\left\\{ \\Phi _{n}:n\\in \\mathbb{N}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4260,
+   "token": "@ref(bb)",
+   "wrapper": "?",
+   "context": "\\right\\} $ be any non-decreasing sequence, satisfying the condition (\\ref{bb}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4274,
+   "token": "@id(theorem4.4)",
+   "wrapper": "?",
+   "context": "\\label{theorem4.4}a) Let $0<p\\leq 1$ and $\\alpha _{k}$ be a subsequence of"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4299,
+   "token": "@ref(dn2.1)",
+   "wrapper": "?",
+   "context": "By using (\\ref{2dn}) in Lemma \\ref{dn2.1} and Corollary \\ref{dn2.3} we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4299,
+   "token": "@ref(dn2.3)",
+   "wrapper": "?",
+   "context": "By using (\\ref{2dn}) in Lemma \\ref{dn2.1} and Corollary \\ref{dn2.3} we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4300,
+   "token": "@ref(ak0)",
+   "wrapper": "?",
+   "context": "easily conclude that if condition (\\ref{ak0}) holds, then"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4313,
+   "token": "@ref(lemma2.2)",
+   "wrapper": "?",
+   "context": "L_{\\infty }$ to $L_{\\infty }.$ By Lemma \\ref{lemma2.2} we obtain that the"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4336,
+   "token": "@ref(dn2.6)",
+   "wrapper": "?",
+   "context": "that $\\left\\Vert a\\right\\Vert _{\\infty }\\leq M_{N}$ and Lemma \\ref{dn2.6} we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4349,
+   "token": "@ref(dnsn0)",
+   "wrapper": "?",
+   "context": "Then, in view of (\\ref{dnsn0}) and (\\ref{dnsn}) we can conclude that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4349,
+   "token": "@ref(dnsn)",
+   "wrapper": "?",
+   "context": "Then, in view of (\\ref{dnsn0}) and (\\ref{dnsn}) we can conclude that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4382,
+   "token": "@ref(dnsnM0)",
+   "wrapper": "?",
+   "context": "Let $p=1.$ We combine (\\ref{dnsnM0})-(\\ref{dnsnM1}) and invoke identity (\\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4382,
+   "token": "@ref(dnsnM1)",
+   "wrapper": "?",
+   "context": "Let $p=1.$ We combine (\\ref{dnsnM0})-(\\ref{dnsnM1}) and invoke identity (\\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4406,
+   "token": "@ref(dnsnM0)",
+   "wrapper": "?",
+   "context": "Let $0<p<1.$ According to (\\ref{1.1}) by using (\\ref{dnsnM0}), (\\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4407,
+   "token": "@ref(dnsnM2)",
+   "wrapper": "?",
+   "context": "{dnsnM}) and (\\ref{dnsnM2}) we obtain that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4428,
+   "token": "@ref(ak)",
+   "wrapper": "?",
+   "context": "Under condition (\\ref{ak}) we readily get that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4450,
+   "token": "@ref(example2.6)",
+   "wrapper": "?",
+   "context": "\\ref{example2.6}, where"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4457,
+   "token": "@ref(charpsn2)",
+   "wrapper": "?",
+   "context": "Under condition (\\ref{charpsn2}) we can conclude that $f\\in H_{p}.$"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4459,
+   "token": "@ref(charpsn3)",
+   "wrapper": "?",
+   "context": "By now using (\\ref{10AA}) with $\\lambda _{k}$ defined by (\\ref{charpsn3})"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4482,
+   "token": "@ref(charpsn3)",
+   "wrapper": "?",
+   "context": "expression (\\ref{charpsn3}) we immediately get that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4493,
+   "token": "@ref(theorem4.4)",
+   "wrapper": "?",
+   "context": "According to part a) of Theorem \\ref{theorem4.4} for $I$ we have that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4500,
+   "token": "@ref(ak)",
+   "wrapper": "?",
+   "context": "Under condition (\\ref{ak}) we can conclude that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4510,
+   "token": "@ref(dn2.6.2)",
+   "wrapper": "?",
+   "context": "\\alpha _{k}\\right\\rangle +1}.$ By using Lemma \\ref{dn2.6.2} we obtain that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4564,
+   "token": "@id(corollary4.43)",
+   "wrapper": "?",
+   "context": "\\label{corollary4.43} Let $p>0$ and $f\\in H_{p}$. Then the maximal operator"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4572,
+   "token": "@id(corollary4.44)",
+   "wrapper": "?",
+   "context": "\\label{corollary4.44} Let $p>0$ and $f\\in H_{p}$. Then the maximal operator"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4580,
+   "token": "@id(corollary4.45)",
+   "wrapper": "?",
+   "context": "\\label{corollary4.45} Let $p>0$ and $f\\in H_{p}$. Then the maximal operator"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4589,
+   "token": "@ref(corollary4.2)",
+   "wrapper": "?",
+   "context": "By applying Corollaries \\ref{corollary4.2} and \\ref{corollary4.3} we find"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4589,
+   "token": "@ref(corollary4.3)",
+   "wrapper": "?",
+   "context": "By applying Corollaries \\ref{corollary4.2} and \\ref{corollary4.3} we find"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4594,
+   "token": "@cite(tep7)",
+   "wrapper": "?",
+   "context": "\\cite{tep7}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4597,
+   "token": "@id(theorem4.7bfejera)",
+   "wrapper": "?",
+   "context": "\\label{theorem4.7bfejera}Let $0<p<1$ and $f\\in H_{p}.$ Then there exists an"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4607,
+   "token": "@ref(theorem4.7bfejera)",
+   "wrapper": "?",
+   "context": "We note that the asymptotic behaviour of the sequence $\\left\\{ n^{1/p-1}:n\\in \\mathbb{N}\\right\\} $ in Theorem  \\ref{theorem4.7bfejera} can not be improved (c.f."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4607,
+   "token": "@ref(theorem4.1)",
+   "wrapper": "?",
+   "context": "We note that the asymptotic behaviour of the sequence $\\left\\{ n^{1/p-1}:n\\in \\mathbb{N}\\right\\} $ in Theorem  \\ref{theorem4.7bfejera} can not be improved (c.f."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4612,
+   "token": "@ref(corollary4.2)",
+   "wrapper": "?",
+   "context": "According to Corollaries \\ref{corollary4.2} \\ and  \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4613,
+   "token": "@ref(example002)",
+   "wrapper": "?",
+   "context": "{corollary4.43} if we invoke Example \\ref{example002} we can conclude"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4631,
+   "token": "@id(theorem4.7afejera)",
+   "wrapper": "?",
+   "context": "\\label{theorem4.7afejera}Let $f\\in H_{1}.$ Then there exists an absolute"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4641,
+   "token": "@ref(theorem4.7afejera)",
+   "wrapper": "?",
+   "context": "We note that the asymptotic behaviour of the sequence $\\left\\{ \\log n:n\\in \\mathbb{N}\\right\\} $ in Theorem  \\ref{theorem4.7afejera} can not be improved (c.f. pa"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4641,
+   "token": "@ref(theorem4.2)",
+   "wrapper": "?",
+   "context": "We note that the asymptotic behaviour of the sequence $\\left\\{ \\log n:n\\in \\mathbb{N}\\right\\} $ in Theorem  \\ref{theorem4.7afejera} can not be improved (c.f. pa"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4646,
+   "token": "@ref(corollary4.3)",
+   "wrapper": "?",
+   "context": "According to Corollaries \\ref{corollary4.3} and \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4647,
+   "token": "@ref(example002)",
+   "wrapper": "?",
+   "context": "{corollary4.43} if we invoke Example \\ref{example002} we can write that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4664,
+   "token": "@id(theorem4.7fejer2)",
+   "wrapper": "?",
+   "context": "\\label{theorem4.7fejer2}Let $p>0$ and $f\\in H_{p}$. Then there exists an"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4673,
+   "token": "@ref(corollary4.43)",
+   "wrapper": "?",
+   "context": "In the view of Corollary \\ref{corollary4.43} and Example \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4685,
+   "token": "@id(theorem4.5)",
+   "wrapper": "?",
+   "context": "\\label{theorem4.5}Let $0<p<1,$ $f\\in H_{p}$ and $M_{k}<n\\leq M_{k+1}$. Then"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4694,
+   "token": "@ref(corollary4.2)",
+   "wrapper": "?",
+   "context": "Let $0<p<1$ and $M_{k}<n\\leq M_{k+1}.$ By using Corollary \\ref{corollary4.2}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4721,
+   "token": "@id(theorem4.6)",
+   "wrapper": "?",
+   "context": "\\label{theorem4.6}Let $f\\in H_{1}$ and $M_{k}<n\\leq M_{k+1}$. Then there is"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4730,
+   "token": "@ref(corollary4.3)",
+   "wrapper": "?",
+   "context": "Let $M_{k}<n\\leq M_{k+1}.$ Then, by using Corollary \\ref{corollary4.3},\\ we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4749,
+   "token": "@id(theorem4.7)",
+   "wrapper": "?",
+   "context": "\\label{theorem4.7}a) Let $0<p<1,$ $f\\in H_{p}$ and%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4778,
+   "token": "@ref(theorem4.5)",
+   "wrapper": "?",
+   "context": "By using Theorem \\ref{theorem4.5} we immediately get that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4786,
+   "token": "@ref(example2.5)",
+   "wrapper": "?",
+   "context": "Let $f=\\left( f^{\\left( n\\right) }:\\text{ }n\\in \\mathbb{N}\\right) $ be the martingale defined in Example \\ref{example2.5}, where"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4808,
+   "token": "@ref(charpsn3.1)",
+   "wrapper": "?",
+   "context": "By now using (\\ref{5AA}) with $\\lambda _{k}$ defined by (\\ref{charpsn3.1})"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4822,
+   "token": "@ref(dn2.3)",
+   "wrapper": "?",
+   "context": "According to (\\ref{29f}) and Corollary \\ref{dn2.3} we can establish"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4846,
+   "token": "@id(theorem4.8)",
+   "wrapper": "?",
+   "context": "\\label{theorem4.8} a) Let $f\\in H_{1}\\ $and"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4876,
+   "token": "@ref(corollary4.3)",
+   "wrapper": "?",
+   "context": "By using Corollary \\ref{corollary4.3} we immediately get that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4890,
+   "token": "@ref(dn5)",
+   "wrapper": "?",
+   "context": "By combining (\\ref{13}) and (\\ref{13s}) with Corollaries \\ref{dn5} and \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4916,
+   "token": "@cite(si1)",
+   "wrapper": "?",
+   "context": "Vilenkin systems. This result was first proved by Simon \\cite{si1}. Here we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4918,
+   "token": "@cite(tep7)",
+   "wrapper": "?",
+   "context": "Tephnadze \\cite{tep7}. We also show sharpness of this result in the special"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4919,
+   "token": "@cite(tep4)",
+   "wrapper": "?",
+   "context": "sense (see Tephnadze \\cite{tep4})."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4922,
+   "token": "@id(theorem4.10)",
+   "wrapper": "?",
+   "context": "\\label{theorem4.10}(Simon \\cite{si1}) a) Let $0<p<1\\ $and $f\\in H_{p}.$ Then"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4922,
+   "token": "@cite(si1)",
+   "wrapper": "?",
+   "context": "\\label{theorem4.10}(Simon \\cite{si1}) a) Let $0<p<1\\ $and $f\\in H_{p}.$ Then"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 4988,
+   "token": "@ref(example2.5.2)",
+   "wrapper": "?",
+   "context": "\\ref{example2.5.2}. By using (\\ref{36.1}) we conclude that the martingale $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5028,
+   "token": "@ref(dn2.6.2)",
+   "wrapper": "?",
+   "context": "I_{1}.$ According to Lemma \\ref{dn2.6.2} we find that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5110,
+   "token": "@id(corollary3.1)",
+   "wrapper": "?",
+   "context": "\\label{corollary3.1} Let $0<p<1$ and $f\\in H_{p}.$ Then there exists an"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5130,
+   "token": "@cite(tep9)",
+   "wrapper": "?",
+   "context": "The first inequality was first proved by Tephnadze \\cite{tep9}, the second"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5131,
+   "token": "@cite(We4,We1)",
+   "wrapper": "?",
+   "context": "by Weisz \\cite{We4,We1} and the third also by Weisz \\cite{we5}. The proofs"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5131,
+   "token": "@cite(we5)",
+   "wrapper": "?",
+   "context": "by Weisz \\cite{We4,We1} and the third also by Weisz \\cite{we5}. The proofs"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5151,
+   "token": "@ref(theorem4.1)",
+   "wrapper": "?",
+   "context": "By using part a) of Theorem \\ref{theorem4.1} we can write that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5171,
+   "token": "@ref(appl)",
+   "wrapper": "?",
+   "context": "To prove the second inequality we use (\\ref{appl}) again. We find that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5181,
+   "token": "@ref(appl3)",
+   "wrapper": "?",
+   "context": "By combining (\\ref{appl3}) and Theorem \\ref{theorem4.1} we get that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5181,
+   "token": "@ref(theorem4.1)",
+   "wrapper": "?",
+   "context": "By combining (\\ref{appl3}) and Theorem \\ref{theorem4.1} we get that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5216,
+   "token": "@cite(Yano)",
+   "wrapper": "?",
+   "context": "In the one-dimensional case Yano \\cite{Yano} proved that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5234,
+   "token": "@cite(FR)",
+   "wrapper": "?",
+   "context": "Fridli \\cite{FR} used dyadic modulus of continuity to characterize the set"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5236,
+   "token": "@cite(AVD)",
+   "wrapper": "?",
+   "context": "at a given rate. It is also known that (see e.g books \\cite{AVD} and"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5237,
+   "token": "@cite(sws)",
+   "wrapper": "?",
+   "context": "\\cite{sws})%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5264,
+   "token": "@cite(We2)",
+   "wrapper": "?",
+   "context": "Weisz \\cite{We2} considered the norm convergence of Fej\\'er means of"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5278,
+   "token": "@ref(f100)",
+   "wrapper": "?",
+   "context": "If (\\ref{f100}) hold for $0<p\\leq 1/2,$ then we would have that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5286,
+   "token": "@cite(tep1)",
+   "wrapper": "?",
+   "context": "However, in Tephnadze \\cite{tep1} it was shown that the assumption $p>1/2$ in (\\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5293,
+   "token": "@cite(tep5)",
+   "wrapper": "?",
+   "context": "For Vilenkin systems in \\cite{tep5} it was proved that (\\ref{2cc}) holds,"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5294,
+   "token": "@ref(f100)",
+   "wrapper": "?",
+   "context": "though inequality (\\ref{f100}) is not true for $0<p\\leq 1/2.$"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5302,
+   "token": "@cite(13)",
+   "wrapper": "?",
+   "context": "can be found in Zygmund \\cite{13} for the trigonometric series, in Schipp"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5303,
+   "token": "@cite(Sc)",
+   "wrapper": "?",
+   "context": "\\cite{Sc} for Walsh series and in P\\'al, Simon \\cite{PS} for bounded Vilenkin"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5303,
+   "token": "@cite(PS)",
+   "wrapper": "?",
+   "context": "\\cite{Sc} for Walsh series and in P\\'al, Simon \\cite{PS} for bounded Vilenkin"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5304,
+   "token": "@cite(Fu)",
+   "wrapper": "?",
+   "context": "series. Fujji \\cite{Fu} and Simon \\cite{Si2} verified that $\\sigma ^{\\ast }$"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5304,
+   "token": "@cite(Si2)",
+   "wrapper": "?",
+   "context": "series. Fujji \\cite{Fu} and Simon \\cite{Si2} verified that $\\sigma ^{\\ast }$"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5305,
+   "token": "@cite(We2)",
+   "wrapper": "?",
+   "context": "is bounded from $H_{1}$ to $L_{1}$. Weisz \\cite{We2} generalized this result"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5307,
+   "token": "@cite(Si1)",
+   "wrapper": "?",
+   "context": "H_{p}$ to the Lebesgue space $L_{p}$ for $p>1/2$. Simon \\cite{Si1} gave a"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5309,
+   "token": "@cite(GoAMH)",
+   "wrapper": "?",
+   "context": "The counterexample for $p=1/2$ due to Goginava \\cite{GoAMH}, (see also \\cite%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5310,
+   "token": "@cite(BGG2)",
+   "wrapper": "?",
+   "context": "{BGG} and \\cite{BGG2}). Weisz \\cite{we4} proved that $\\sigma ^{\\ast }$ is"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5310,
+   "token": "@cite(we4)",
+   "wrapper": "?",
+   "context": "{BGG} and \\cite{BGG2}). Weisz \\cite{we4} proved that $\\sigma ^{\\ast }$ is"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5312,
+   "token": "@cite(tep3)",
+   "wrapper": "?",
+   "context": "{tep2} and \\cite{tep3} (for Walsh system see \\cite{GoSzeged}) it was proved"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5312,
+   "token": "@cite(GoSzeged)",
+   "wrapper": "?",
+   "context": "{tep2} and \\cite{tep3} (for Walsh system see \\cite{GoSzeged}) it was proved"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5330,
+   "token": "@cite(GNCz)",
+   "wrapper": "?",
+   "context": "For Walsh-Kaczmarz system analogical theorems were proved in \\cite{GNCz} and"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5331,
+   "token": "@cite(tep4)",
+   "wrapper": "?",
+   "context": "\\cite{tep4}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5333,
+   "token": "@cite(We2)",
+   "wrapper": "?",
+   "context": "For the one-dimensional Vilenkin-Fourier series Weisz \\cite{We2} proved that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5339,
+   "token": "@cite(gog1)",
+   "wrapper": "?",
+   "context": "p>0.$ For the Walsh-Fourier series Goginava \\cite{gog1} proved that the"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5346,
+   "token": "@id(theorem4fejer)",
+   "wrapper": "?",
+   "context": "\\label{theorem4fejer}a)There exist a martingale $f\\in H_{1/2}$ such that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5359,
+   "token": "@cite(tep1)",
+   "wrapper": "?",
+   "context": "This result for $p=1/2$ can be found in Tephnadze \\cite{tep1}. By"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5368,
+   "token": "@ref(example2.5.1)",
+   "wrapper": "?",
+   "context": "\\ref{example2.5.1} in the case when $p=q=1/2.$ We can write that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5378,
+   "token": "@ref(sn101)",
+   "wrapper": "?",
+   "context": "According to (\\ref{sn101}) in Example \\ref{example2.5.1} we can"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5378,
+   "token": "@ref(example2.5.1)",
+   "wrapper": "?",
+   "context": "According to (\\ref{sn101}) in Example \\ref{example2.5.1} we can"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5402,
+   "token": "@ref(sn101)",
+   "wrapper": "?",
+   "context": "According to (\\ref{sn101}) for $j=M_{2\\alpha _{k}}$ and $p=1/2$  we find that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5430,
+   "token": "@ref(lemma3)",
+   "wrapper": "?",
+   "context": "By applying Lemma \\ref{lemma3} we have that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5509,
+   "token": "@ref(example2.5.1)",
+   "wrapper": "?",
+   "context": "0<p<1/2.$ Let $f=\\left( f^{\\left( n\\right) }:n\\in \\mathbb{N}\\right) $ be the martingale defined in Example \\ref{example2.5.1} in the case when $0<p<q=1/2.$ We c"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5522,
+   "token": "@ref(sn101)",
+   "wrapper": "?",
+   "context": "We combine (\\ref{sn101}) and (\\ref{sn102}) and invoke (\\ref{1t4}) in the"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5522,
+   "token": "@ref(sn102)",
+   "wrapper": "?",
+   "context": "We combine (\\ref{sn101}) and (\\ref{sn102}) and invoke (\\ref{1t4}) in the"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5574,
+   "token": "@ref(theorem4fejer)",
+   "wrapper": "?",
+   "context": "First we note the following consequence of Theorem \\ref{theorem4fejer}:"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5587,
+   "token": "@cite(tep3)",
+   "wrapper": "?",
+   "context": "The next theorem can be found in Tephnadze \\cite{tep3}, but here we will"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5591,
+   "token": "@id(theorem3fejermax2)",
+   "wrapper": "?",
+   "context": "\\label{theorem3fejermax2}a) Let $0<p<1/2.$ Then the \\bigskip maximal operator%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5614,
+   "token": "@ref(fn4)",
+   "wrapper": "?",
+   "context": "to $L_{\\infty }$ (see (\\ref{fn4}) in Corollary \\ref{lemma7kn}). Hence, by"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5614,
+   "token": "@ref(lemma7kn)",
+   "wrapper": "?",
+   "context": "to $L_{\\infty }$ (see (\\ref{fn4}) in Corollary \\ref{lemma7kn}). Hence, by"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5615,
+   "token": "@ref(lemma2.2)",
+   "wrapper": "?",
+   "context": "Lemma \\ref{lemma2.2} the proof of Theorem \\ref{theorem3fejermax2} will be"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5615,
+   "token": "@ref(theorem3fejermax2)",
+   "wrapper": "?",
+   "context": "Lemma \\ref{lemma2.2} the proof of Theorem \\ref{theorem3fejermax2} will be"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5649,
+   "token": "@ref(lemma5aa)",
+   "wrapper": "?",
+   "context": "Let $x\\in I_{N}^{k,l},\\,0\\leq k<l\\leq N.$ From Corollary \\ref{lemma5aa} we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5727,
+   "token": "@ref(cond2)",
+   "wrapper": "?",
+   "context": "Let $0<p<1/2.$ Under condition (\\ref{cond2}) there exists an increasing"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5759,
+   "token": "@ref(example2.2)",
+   "wrapper": "?",
+   "context": "and $f_{k}$ be the atom defined in Example \\ref{example2.2}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5761,
+   "token": "@ref(example2.2)",
+   "wrapper": "?",
+   "context": "By combining (\\ref{13l}) and (\\ref{14l}) in Example \\ref{example2.2} we find"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5800,
+   "token": "@ref(example2.2)",
+   "wrapper": "?",
+   "context": "Therefore, by using (\\ref{15l}) in Example \\ref{example2.2} we get that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5818,
+   "token": "@ref(theorem3fejermax2)",
+   "wrapper": "?",
+   "context": "We also point out the following consequence of Theorem \\ref{theorem3fejermax2}, which we need later on."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5821,
+   "token": "@id(corollary3fejermax1)",
+   "wrapper": "?",
+   "context": "\\label{corollary3fejermax1} a) Let $0<p<1/2$ and $f\\in H_{p}.$ Then there"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5830,
+   "token": "@ref(theorem3fejermax2)",
+   "wrapper": "?",
+   "context": "According to part a) of Theorem \\ref{theorem3fejermax2} we conclude that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5846,
+   "token": "@id(corollary3fejermax1.2)",
+   "wrapper": "?",
+   "context": "\\label{corollary3fejermax1.2}Let $\\left\\{ \\Phi _{n}:n\\in \\mathbb{N}\\right\\} $"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5847,
+   "token": "@ref(cond2)",
+   "wrapper": "?",
+   "context": "be any non-decreasing sequence satisfying the condition (\\ref{cond2}). Then"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5856,
+   "token": "@id(corollary3fejermax1.3)",
+   "wrapper": "?",
+   "context": "\\label{corollary3fejermax1.3}Let $\\left\\{ \\Phi _{n}:n\\in \\mathbb{N}\\right\\} $"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5857,
+   "token": "@ref(cond2)",
+   "wrapper": "?",
+   "context": "be any non-decreasing sequence satisfying the condition (\\ref{cond2}). Then the following maximal operator%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5865,
+   "token": "@cite(tep2)",
+   "wrapper": "?",
+   "context": "The next theorem can be found in Tephnadze \\cite{tep2}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5868,
+   "token": "@id(theorem2fejermax)",
+   "wrapper": "?",
+   "context": "\\label{theorem2fejermax}a) The maximal operator%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5892,
+   "token": "@ref(fn4)",
+   "wrapper": "?",
+   "context": "}$ (see (\\ref{fn4}) in Corollary \\ref{lemma7kn}). Hence, according to Lemma %"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5892,
+   "token": "@ref(lemma7kn)",
+   "wrapper": "?",
+   "context": "}$ (see (\\ref{fn4}) in Corollary \\ref{lemma7kn}). Hence, according to Lemma %"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5893,
+   "token": "@ref(lemma2.2)",
+   "wrapper": "?",
+   "context": "\\ref{lemma2.2}, to prove part a) it suffices to show that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 5926,
+   "token": "@ref(lemma5aa)",
+   "wrapper": "?",
+   "context": "Let $x\\in I_{N}^{k,l},\\,0\\leq k<l\\leq N.$ Then, from Corollary \\ref{lemma5aa}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6003,
+   "token": "@ref(example2.2)",
+   "wrapper": "?",
+   "context": "and let $f_{k}$ be the atom defined in Example \\ref{example2.2}. We combine (\\ref{13l}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6004,
+   "token": "@ref(example2.2)",
+   "wrapper": "?",
+   "context": ") and (\\ref{14l}) in Example \\ref{example2.2} and invoke (\\ref{dn21}) in"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6004,
+   "token": "@ref(dn21)",
+   "wrapper": "?",
+   "context": ") and (\\ref{14l}) in Example \\ref{example2.2} and invoke (\\ref{dn21}) in"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6005,
+   "token": "@ref(dn1)",
+   "wrapper": "?",
+   "context": "Lemma \\ref{dn1} to obtain that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6035,
+   "token": "@ref(lemma3)",
+   "wrapper": "?",
+   "context": "Let $x\\in $ $I_{_{2n_{k}}}^{2s,2l}$. Then, in view of Lemma \\ref{lemma3}, we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6066,
+   "token": "@ref(example2.2)",
+   "wrapper": "?",
+   "context": "From (\\ref{15l}) in Example \\ref{example2.2} we have that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6084,
+   "token": "@ref(theorem2fejermax)",
+   "wrapper": "?",
+   "context": "We also point out the following consequence of Theorem \\ref{theorem2fejermax}, which we need later on."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6087,
+   "token": "@id(corollary2fejermax)",
+   "wrapper": "?",
+   "context": "\\label{corollary2fejermax} Let $f\\in H_{1/2}.$ Then there exists an absolute"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6096,
+   "token": "@ref(theorem2fejermax)",
+   "wrapper": "?",
+   "context": "According to part a) of Theorem \\ref{theorem2fejermax} we readily conclude"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6112,
+   "token": "@id(corollary3fejermax1.2.2)",
+   "wrapper": "?",
+   "context": "\\label{corollary3fejermax1.2.2}Let $\\left\\{ \\Phi _{n}:n\\in \\mathbb{N}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6122,
+   "token": "@id(corollary3fejermax1.3.2)",
+   "wrapper": "?",
+   "context": "\\label{corollary3fejermax1.3.2}Let $\\left\\{ \\Phi _{n}:n\\in \\mathbb{N}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6132,
+   "token": "@cite(pt2)",
+   "wrapper": "?",
+   "context": "The next results was proved by Tephnadze \\cite{pt2}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6135,
+   "token": "@id(theorem0fejermax)",
+   "wrapper": "?",
+   "context": "\\label{theorem0fejermax}a) Let $0<p\\leq 1/2$ and $\\left\\{ n_{k}:k\\in \\mathbb{%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6161,
+   "token": "@ref(lemma2.2)",
+   "wrapper": "?",
+   "context": "}$ to $L_{\\infty },$ by using Lemma \\ref{lemma2.2}, we obtain that the proof"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6169,
+   "token": "@ref(theorem2fejermax)",
+   "wrapper": "?",
+   "context": "=M_{N}^{-1}.$ Analogously to Theorem \\ref{theorem2fejermax} we may assume that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6188,
+   "token": "@ref(lemma2)",
+   "wrapper": "?",
+   "context": "x-t\\in I_{N}^{i,j}$ for $t\\in I_{N}\\ \\ $and, according to Lemma \\ref{lemma2}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6196,
+   "token": "@ref(fn5)",
+   "wrapper": "?",
+   "context": "By applying (\\ref{400z}) and (\\ref{fn5}) in Lemma \\ref{lemma7kn} we get"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6196,
+   "token": "@ref(lemma7kn)",
+   "wrapper": "?",
+   "context": "By applying (\\ref{400z}) and (\\ref{fn5}) in Lemma \\ref{lemma7kn} we get"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6208,
+   "token": "@ref(lemma5aa)",
+   "wrapper": "?",
+   "context": "N. $ Then, in view of Corollary \\ref{lemma5aa}, we have that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6236,
+   "token": "@ref(dnsnM1)",
+   "wrapper": "?",
+   "context": "Analogously to (\\ref{dnsnM1}) we can conclude that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6337,
+   "token": "@ref(fenk1)",
+   "wrapper": "?",
+   "context": "numbers satisfying condition (\\ref{fenk1}). Then"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6353,
+   "token": "@ref(example2.6)",
+   "wrapper": "?",
+   "context": "the martingae defined in Example \\ref{example2.6}, where"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6360,
+   "token": "@ref(lemma2.1)",
+   "wrapper": "?",
+   "context": "By applying (\\ref{lemma2.1}) we can conclude that $f\\in H_{p}.$"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6415,
+   "token": "@ref(corollary4.43)",
+   "wrapper": "?",
+   "context": "In view of Corollary \\ref{corollary4.43} for $II_{1}$ we find that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6428,
+   "token": "@ref(theorem0fejermax)",
+   "wrapper": "?",
+   "context": "By using part a) of Theorem \\ref{theorem0fejermax} for $I$ we obtain that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6438,
+   "token": "@ref(fenk1)",
+   "wrapper": "?",
+   "context": "Under condition (\\ref{fenk1}) we can conclude that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6446,
+   "token": "@ref(lemma8ccc)",
+   "wrapper": "?",
+   "context": "According to Lemma \\ref{lemma8ccc} we get that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6514,
+   "token": "@ref(theorem0fejermax)",
+   "wrapper": "?",
+   "context": "From the part a) of Theorem \\ref{theorem0fejermax}  follows immediately the"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6515,
+   "token": "@cite(We2)",
+   "wrapper": "?",
+   "context": "following well-known results of Weisz \\protect\\cite{We2}:"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6518,
+   "token": "@id(Corollary0fejermax)",
+   "wrapper": "?",
+   "context": "\\label{Corollary0fejermax}Let $p>0.$ Then the maximal operator"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6540,
+   "token": "@ref(fenk)",
+   "wrapper": "?",
+   "context": "It follows that condition (\\ref{fenk}) is satisfied and the proof is"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6541,
+   "token": "@ref(theorem0fejermax)",
+   "wrapper": "?",
+   "context": "complete by just applying part a) of Theorem \\ref{theorem0fejermax}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6547,
+   "token": "@id(Theorem1fejermax)",
+   "wrapper": "?",
+   "context": "\\label{Theorem1fejermax}Let $0<p\\leq 1.$ Then the operator $\\left\\vert"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6553,
+   "token": "@cite(gog1)",
+   "wrapper": "?",
+   "context": "This result for the Walsh system can be found in Goginava \\cite{gog1} and for bounded Vilenkin systems in the paper of Persson and Tephnadze \\cite{pt1}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6553,
+   "token": "@cite(pt1)",
+   "wrapper": "?",
+   "context": "This result for the Walsh system can be found in Goginava \\cite{gog1} and for bounded Vilenkin systems in the paper of Persson and Tephnadze \\cite{pt1}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6557,
+   "token": "@ref(example2.2)",
+   "wrapper": "?",
+   "context": "Let $f_{k}$ be the martingale from Example \\ref{example2.2}. By combining (%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6558,
+   "token": "@ref(dn21)",
+   "wrapper": "?",
+   "context": "\\ref{dn21}) in Lemma \\ref{dn1} and (\\ref{13l}), (\\ref{14l}) in Example \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6558,
+   "token": "@ref(dn1)",
+   "wrapper": "?",
+   "context": "\\ref{dn21}) in Lemma \\ref{dn1} and (\\ref{13l}), (\\ref{14l}) in Example \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6633,
+   "token": "@ref(dn2.3)",
+   "wrapper": "?",
+   "context": "Corollary \\ref{dn2.3} it follows that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6639,
+   "token": "@ref(lemma2.3.4)",
+   "wrapper": "?",
+   "context": "According to Lemma \\ref{lemma2.3.4} for every $0<p\\leq 1$ it yields that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6692,
+   "token": "@id(Corollary0fejermax2)",
+   "wrapper": "?",
+   "context": "\\label{Corollary0fejermax2}Let $p>0.$ Then the maximal operator"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6710,
+   "token": "@ref(Corollary0fejermax)",
+   "wrapper": "?",
+   "context": "this result follows immediately from Corollary \\ref{Corollary0fejermax} and"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6711,
+   "token": "@ref(Theorem1fejermax)",
+   "wrapper": "?",
+   "context": "Theorem \\ref{Theorem1fejermax} so the proof is complete."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6715,
+   "token": "@id(Corollary0fejermax1)",
+   "wrapper": "?",
+   "context": "\\label{Corollary0fejermax1}Let $p>0.$ Then the operator $\\left\\vert"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6722,
+   "token": "@ref(modsup)",
+   "wrapper": "?",
+   "context": "By using (\\ref{modsup}) this result immediately follows Corollary \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6723,
+   "token": "@ref(Theorem1fejermax)",
+   "wrapper": "?",
+   "context": "{Corollary0fejermax} and Theorem \\ref{Theorem1fejermax}, so the proof is"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6735,
+   "token": "@ref(theorem4.7bfejer)",
+   "wrapper": "?",
+   "context": "Theorems \\ref{theorem4.7bfejer}-\\ref{theorem4.7fejer2} can be found in"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6735,
+   "token": "@ref(theorem4.7fejer2)",
+   "wrapper": "?",
+   "context": "Theorems \\ref{theorem4.7bfejer}-\\ref{theorem4.7fejer2} can be found in"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6736,
+   "token": "@cite(pt1)",
+   "wrapper": "?",
+   "context": "Persson and Tephnadze \\cite{pt1} and Theorem \\ref{theorem9fejer}-\\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6736,
+   "token": "@ref(theorem9fejer)",
+   "wrapper": "?",
+   "context": "Persson and Tephnadze \\cite{pt1} and Theorem \\ref{theorem9fejer}-\\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6737,
+   "token": "@cite(tep6)",
+   "wrapper": "?",
+   "context": "{theorem9fejer1} are proved in Tephnadze \\cite{tep6}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6740,
+   "token": "@id(theorem4.7bfejer)",
+   "wrapper": "?",
+   "context": "\\label{theorem4.7bfejer}Let $0<p<1/2$ and $f\\in H_{p}.$ Then there exists an"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6750,
+   "token": "@ref(theorem4.7bfejer)",
+   "wrapper": "?",
+   "context": "We note that the asymptotic behaviour of the sequence $\\left\\{ n^{1/p-2}:n\\in \\mathbb{N}\\right\\} $ in Theorem  \\ref{theorem4.7bfejer} can not be improved (c.f. "
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6750,
+   "token": "@ref(theorem3fejermax2)",
+   "wrapper": "?",
+   "context": "We note that the asymptotic behaviour of the sequence $\\left\\{ n^{1/p-2}:n\\in \\mathbb{N}\\right\\} $ in Theorem  \\ref{theorem4.7bfejer} can not be improved (c.f. "
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6755,
+   "token": "@ref(theorem4.7bfejer)",
+   "wrapper": "?",
+   "context": "According to Theorem \\ref{theorem4.7bfejer} \\ and Corollary \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6756,
+   "token": "@ref(example003)",
+   "wrapper": "?",
+   "context": "{corollary2fejermax} if we invoke Example \\ref{example003} we can conclude"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6774,
+   "token": "@id(theorem4.7afejer)",
+   "wrapper": "?",
+   "context": "\\label{theorem4.7afejer}Let $f\\in H_{1/2}.$ Then there exists an absolute"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6784,
+   "token": "@ref(theorem4.7bfejer)",
+   "wrapper": "?",
+   "context": "We note that the asymptotic behaviour of the sequence of sequence $\\left\\{ \\log ^{2}n:n\\in \\mathbb{N}\\right\\} $ in Theorem  \\ref{theorem4.7bfejer} can not be im"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6784,
+   "token": "@ref(theorem2fejermax)",
+   "wrapper": "?",
+   "context": "We note that the asymptotic behaviour of the sequence of sequence $\\left\\{ \\log ^{2}n:n\\in \\mathbb{N}\\right\\} $ in Theorem  \\ref{theorem4.7bfejer} can not be im"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6789,
+   "token": "@ref(theorem4.7bfejer)",
+   "wrapper": "?",
+   "context": "According to Theorem \\ref{theorem4.7bfejer} \\ and Corollary \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6790,
+   "token": "@ref(example003)",
+   "wrapper": "?",
+   "context": "{corollary2fejermax} if we invoke Example \\ref{example003} we can write that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6807,
+   "token": "@id(theorem4.7fejer2)",
+   "wrapper": "?",
+   "context": "\\label{theorem4.7fejer2}Let $0<p<1$ and $f\\in H_{p}$. Then there exists an"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6816,
+   "token": "@ref(Corollary0fejermax2)",
+   "wrapper": "?",
+   "context": "In the view of Corollary \\ref{Corollary0fejermax2} and Example \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6828,
+   "token": "@id(theorem9fejer)",
+   "wrapper": "?",
+   "context": "\\label{theorem9fejer}a) Let $0<p<1/2,$ $f\\in H_{p}$ and"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6899,
+   "token": "@ref(corollary4.43)",
+   "wrapper": "?",
+   "context": "Let $p>0$ and $\\ f\\in H_{p}.$ According to Corollary \\ref{corollary4.43}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6900,
+   "token": "@ref(theorem4.7fejer2)",
+   "wrapper": "?",
+   "context": "and Theorem \\ref{theorem4.7fejer2} we get that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6927,
+   "token": "@ref(modcond)",
+   "wrapper": "?",
+   "context": "It follows that under condition (\\ref{modcond}) we have that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6935,
+   "token": "@ref(example2.5)",
+   "wrapper": "?",
+   "context": "\\right) $ be the martingale defined in Lemma \\ref{example2.5}, where"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 6940,
+   "token": "@ref(example2.5)",
+   "wrapper": "?",
+   "context": "By combining (\\ref{2AA}) and (\\ref{4AA}) in Lemma \\ref{example2.5} we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7004,
+   "token": "@id(theorem9fejer1)",
+   "wrapper": "?",
+   "context": "\\label{theorem9fejer1}a) Let $f\\in H_{1/2}$ and"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7027,
+   "token": "@ref(knsn1)",
+   "wrapper": "?",
+   "context": "Let $f\\in H_{1/2}$ and $M_{N}<n\\leq M_{N+1}.$ By using identity (\\ref{knsn1}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7048,
+   "token": "@ref(sncon)",
+   "wrapper": "?",
+   "context": "Let $p>0$ and $f\\in H_{p}.$ By combining (\\ref{sncon}), (\\ref{fecon}) and"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7048,
+   "token": "@ref(fecon)",
+   "wrapper": "?",
+   "context": "Let $p>0$ and $f\\in H_{p}.$ By combining (\\ref{sncon}), (\\ref{fecon}) and"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7049,
+   "token": "@ref(knsn1)",
+   "wrapper": "?",
+   "context": "equality (\\ref{knsn1}) we have that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7060,
+   "token": "@ref(fecon2)",
+   "wrapper": "?",
+   "context": "It follows that under condition (\\ref{fecon2}) we obtain that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7072,
+   "token": "@ref(example2.6.1)",
+   "wrapper": "?",
+   "context": "\\right) $ be a martingale from the Lemma \\ref{example2.6.1} where $p=1/2$."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7103,
+   "token": "@ref(nn)",
+   "wrapper": "?",
+   "context": "By using (\\ref{nn}) we get that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7124,
+   "token": "@ref(lemma3)",
+   "wrapper": "?",
+   "context": "By applying Lemma \\ref{lemma3} we find that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7146,
+   "token": "@ref(a11)",
+   "wrapper": "?",
+   "context": "By combining (\\ref{a11}) and (\\ref{33}) we obtain that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7158,
+   "token": "@cite(bt1)",
+   "wrapper": "?",
+   "context": "The first result in this section is due to Blahota and Tephnadze \\cite{bt1}:"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7161,
+   "token": "@id(theorem2fejerstrong)",
+   "wrapper": "?",
+   "context": "\\label{theorem2fejerstrong}a) Let $0<p<1/2$ and $f\\in H_{p}.$ Then there"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7184,
+   "token": "@ref(lemma2.1)",
+   "wrapper": "?",
+   "context": "According to Lemma \\ref{lemma2.1} it suffices to show that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7193,
+   "token": "@ref(fn4)",
+   "wrapper": "?",
+   "context": "L_{\\infty }$ (see (\\ref{fn4}) in Corollary \\ref{lemma7kn}) and $\\left\\Vert"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7193,
+   "token": "@ref(lemma7kn)",
+   "wrapper": "?",
+   "context": "L_{\\infty }$ (see (\\ref{fn4}) in Corollary \\ref{lemma7kn}) and $\\left\\Vert"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7225,
+   "token": "@ref(lemma5aa)",
+   "wrapper": "?",
+   "context": "Let $x\\in I_{N}^{k,l},\\,0\\leq k<l\\leq N.$ Then, from Corollary \\ref{lemma5aa}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7233,
+   "token": "@ref(nec4)",
+   "wrapper": "?",
+   "context": "{nec3}) and (\\ref{nec4}) we obtain that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7277,
+   "token": "@ref(cond000)",
+   "wrapper": "?",
+   "context": "Under condition (\\ref{cond000}) there exists an increasing numbers $\\left\\{"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7302,
+   "token": "@ref(example2.6)",
+   "wrapper": "?",
+   "context": "Let $f$ be the martingale defined in Example \\ref{example2.6} in the case when"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7404,
+   "token": "@ref(dn2.3)",
+   "wrapper": "?",
+   "context": "combining Corollary \\ref{dn2.3}, Lemma \\ref{lemma2} and (\\ref{mag}) in Lemma %"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7404,
+   "token": "@ref(lemma2)",
+   "wrapper": "?",
+   "context": "combining Corollary \\ref{dn2.3}, Lemma \\ref{lemma2} and (\\ref{mag}) in Lemma %"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7404,
+   "token": "@ref(mag)",
+   "wrapper": "?",
+   "context": "combining Corollary \\ref{dn2.3}, Lemma \\ref{lemma2} and (\\ref{mag}) in Lemma %"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7405,
+   "token": "@ref(lemma6kn)",
+   "wrapper": "?",
+   "context": "\\ref{lemma6kn} we have that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7507,
+   "token": "@id(corollary1fejerstrong12)",
+   "wrapper": "?",
+   "context": "\\label{corollary1fejerstrong12}Let $0<p<1/2$ and $f\\in H_{p}.$ Then there"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7518,
+   "token": "@ref(fnmn1)",
+   "wrapper": "?",
+   "context": "By combining (\\ref{fnmn1}) and Theorem \\ref{theorem2fejerstrong} we have that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7518,
+   "token": "@ref(theorem2fejerstrong)",
+   "wrapper": "?",
+   "context": "By combining (\\ref{fnmn1}) and Theorem \\ref{theorem2fejerstrong} we have that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7544,
+   "token": "@id(corollary1fejerstrong1)",
+   "wrapper": "?",
+   "context": "\\label{corollary1fejerstrong1}Let $0<p<1/2$ and $f\\in H_{p}.$ Then there"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7565,
+   "token": "@cite(bt1)",
+   "wrapper": "?",
+   "context": "In Blahota and Tephnadze \\cite{bt1} also the endpoint case $p=1/2$ was considered and"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7569,
+   "token": "@id(theorem1fejerstrong)",
+   "wrapper": "?",
+   "context": "\\label{theorem1fejerstrong}Let $f\\in H_{1/2}.$ Then there exists an absolute"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7580,
+   "token": "@ref(lemma2.1)",
+   "wrapper": "?",
+   "context": "In view of Lemma \\ref{lemma2.1} it suffices to show that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7590,
+   "token": "@ref(fn4)",
+   "wrapper": "?",
+   "context": "L_{\\infty }$ (see (\\ref{fn4}) in Corollary \\ref{lemma7kn}) and $\\left\\Vert"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7590,
+   "token": "@ref(lemma7kn)",
+   "wrapper": "?",
+   "context": "L_{\\infty }$ (see (\\ref{fn4}) in Corollary \\ref{lemma7kn}) and $\\left\\Vert"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7624,
+   "token": "@ref(lemma5)",
+   "wrapper": "?",
+   "context": "Let $x\\in I_{N}^{k,l},\\,0\\leq k<l<N.$ Then, from Lemma \\ref{lemma5} it"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7631,
+   "token": "@ref(lemma5)",
+   "wrapper": "?",
+   "context": "Let $x\\in I_{N}^{k,N},\\,0\\leq k<N.$ Then, according to Lemma \\ref{lemma5},"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7685,
+   "token": "@id(corollary1fejerstrong2)",
+   "wrapper": "?",
+   "context": "\\label{corollary1fejerstrong2}Let $f\\in H_{1/2}.$ Then"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7705,
+   "token": "@ref(theorem1fejerstrong)",
+   "wrapper": "?",
+   "context": "According to Theorem \\ref{theorem1fejerstrong} we have that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7747,
+   "token": "@cite(tep4)",
+   "wrapper": "?",
+   "context": "In \\cite{tep4} it was proved that there exists a martingale $f\\in H_{p},$ $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7751,
+   "token": "@cite(Sz)",
+   "wrapper": "?",
+   "context": "mention, for instance, the paper by Szasz \\cite{Sz} and Yabuta \\cite{Ya}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7751,
+   "token": "@cite(Ya)",
+   "wrapper": "?",
+   "context": "mention, for instance, the paper by Szasz \\cite{Sz} and Yabuta \\cite{Ya}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7753,
+   "token": "@cite(Si1)",
+   "wrapper": "?",
+   "context": "by Simon \\cite{Si1} and G\\`{a}t \\cite{Ga1}. Blahota and G\\'at \\cite{bg}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7753,
+   "token": "@cite(Ga1)",
+   "wrapper": "?",
+   "context": "by Simon \\cite{Si1} and G\\`{a}t \\cite{Ga1}. Blahota and G\\'at \\cite{bg}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7753,
+   "token": "@cite(bg)",
+   "wrapper": "?",
+   "context": "by Simon \\cite{Si1} and G\\`{a}t \\cite{Ga1}. Blahota and G\\'at \\cite{bg}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7756,
+   "token": "@cite(tep10)",
+   "wrapper": "?",
+   "context": "unbounded Vilenkin groups than the Fej\\'er means. Moreover, in \\cite{tep10}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7761,
+   "token": "@cite(Mor)",
+   "wrapper": "?",
+   "context": "M\\'oricz and Siddiqi \\cite{Mor} investigate the approximation properties of"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7765,
+   "token": "@cite(Ga2)",
+   "wrapper": "?",
+   "context": "rlund logarithmic means. In \\cite{Ga2} G\\'{a}t and Goginava proved some"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7769,
+   "token": "@cite(Mor)",
+   "wrapper": "?",
+   "context": "and Siddiqi \\cite{Mor}. G\\'{a}t and Goginava \\cite{Ga3} proved that for each"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7769,
+   "token": "@cite(Ga3)",
+   "wrapper": "?",
+   "context": "and Siddiqi \\cite{Mor}. G\\'{a}t and Goginava \\cite{Ga3} proved that for each"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7782,
+   "token": "@cite(FMS)",
+   "wrapper": "?",
+   "context": "Fridli, Manchanda and Siddiqi \\cite{FMS} improved and extended results of M\\'oricz and Siddiqi \\cite{Mor} to dyadic homogeneous Banach spaces and Martingale Har"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7782,
+   "token": "@cite(Mor)",
+   "wrapper": "?",
+   "context": "Fridli, Manchanda and Siddiqi \\cite{FMS} improved and extended results of M\\'oricz and Siddiqi \\cite{Mor} to dyadic homogeneous Banach spaces and Martingale Har"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7784,
+   "token": "@cite(gog8)",
+   "wrapper": "?",
+   "context": "In \\cite{gog8} Goginava investigated the behavior of Ces\\`aro means of"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7786,
+   "token": "@cite(na)",
+   "wrapper": "?",
+   "context": "properties of N\\\"orlund and Ces\\`aro means were considered by Nagy (see \\cite{na}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7787,
+   "token": "@cite(n)",
+   "wrapper": "?",
+   "context": ", \\cite{n} and \\cite{nagy}). The maximal operator $\\sigma ^{\\alpha ,\\ast }$ $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7787,
+   "token": "@cite(nagy)",
+   "wrapper": "?",
+   "context": ", \\cite{n} and \\cite{nagy}). The maximal operator $\\sigma ^{\\alpha ,\\ast }$ $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7789,
+   "token": "@cite(we6)",
+   "wrapper": "?",
+   "context": "Vilenkin systems was investigated by Weisz \\cite{we6}. In this paper Weisz"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7792,
+   "token": "@cite(gog4)",
+   "wrapper": "?",
+   "context": "\\cite{gog4} gave a counterexample which shows that boundedness does not"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7793,
+   "token": "@cite(sw)",
+   "wrapper": "?",
+   "context": "hold for $0<p\\leq 1/\\left( 1+\\alpha \\right) .$ Weisz and Simon \\cite{sw}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7804,
+   "token": "@cite(ptw)",
+   "wrapper": "?",
+   "context": "Tephnadze and Wall \\cite{ptw}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7807,
+   "token": "@id(theorem1norlund)",
+   "wrapper": "?",
+   "context": "\\label{theorem1norlund}a) The maximal operator $t^{\\ast }$ of \\ the"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7862,
+   "token": "@ref(example2.5.1)",
+   "wrapper": "?",
+   "context": "\\right) $ be the martingale defined in Example \\ref{example2.5.1} in the case when $0<p<q=1/2$%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7873,
+   "token": "@ref(sn101)",
+   "wrapper": "?",
+   "context": "According to (\\ref{sn101}) in Example \\ref{example2.5.1} we can conclude"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7873,
+   "token": "@ref(example2.5.1)",
+   "wrapper": "?",
+   "context": "According to (\\ref{sn101}) in Example \\ref{example2.5.1} we can conclude"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7889,
+   "token": "@ref(sn102)",
+   "wrapper": "?",
+   "context": "If we now apply (\\ref{sn102}) for $II$ we find that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7896,
+   "token": "@ref(cond1nor)",
+   "wrapper": "?",
+   "context": "Without lost the generality we may assume that $c=1$ in (\\ref{cond1nor}). By"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7934,
+   "token": "@ref(theorem3fejermax2a)",
+   "wrapper": "?",
+   "context": "The next Theorems (Theorems \\ref{theorem3fejermax2a}-\\ref{theorem2fejermaxaa}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7934,
+   "token": "@ref(theorem2fejermaxaa)",
+   "wrapper": "?",
+   "context": "The next Theorems (Theorems \\ref{theorem3fejermax2a}-\\ref{theorem2fejermaxaa}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7935,
+   "token": "@cite(ptw2)",
+   "wrapper": "?",
+   "context": ") are due to Persson, Tephnadze and Wall \\cite{ptw2}:"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7938,
+   "token": "@id(theorem3fejermax2a)",
+   "wrapper": "?",
+   "context": "\\label{theorem3fejermax2a}a) Let $0<p<1/2$ and the sequence $\\left\\{ q_{k}:k\\in"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7948,
+   "token": "@id(Remark2nor)",
+   "wrapper": "?",
+   "context": "\\label{Remark2nor}Since the Fej\\'er means are examples of N\\\"orlund means with"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7950,
+   "token": "@ref(theorem3fejermax2)",
+   "wrapper": "?",
+   "context": "immediately obtain from part b) of Theorem \\ref{theorem3fejermax2} that the"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7955,
+   "token": "@ref(theorem3fejermax2a)",
+   "wrapper": "?",
+   "context": "in N\\\"orlund means in Theorem \\ref{theorem3fejermax2a} can not be improved."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7959,
+   "token": "@ref(theorem3fejermax2)",
+   "wrapper": "?",
+   "context": "The idea of proof is similar to that of part a) of Theorem \\ref{theorem3fejermax2}, but in more general situation so we give the details."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7962,
+   "token": "@ref(Corollary3nn)",
+   "wrapper": "?",
+   "context": "(see Corollary \\ref{Corollary3nn}). Let $a$ be an arbitrary p-atom, with"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 7993,
+   "token": "@ref(lemma5aaa)",
+   "wrapper": "?",
+   "context": "Let $x\\in I_{N}^{k,l},\\,0\\leq k<l\\leq N.$ From Lemma \\ref{lemma5aaa} we can"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8034,
+   "token": "@ref(lemma2.2)",
+   "wrapper": "?",
+   "context": "The proof is complete by using this estimate and Lemma \\ref{lemma2.2}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8038,
+   "token": "@id(theorem2fejermaxaa)",
+   "wrapper": "?",
+   "context": "\\label{theorem2fejermaxaa} Let the sequence $\\left\\{ q_{k}:k\\in \\mathbb{N}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8049,
+   "token": "@id(Remark3nor)",
+   "wrapper": "?",
+   "context": "\\label{Remark3nor}Since the Fej\\'er means are examples of N\\\"orlund means with"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8051,
+   "token": "@ref(theorem2fejermax)",
+   "wrapper": "?",
+   "context": "immediately obtain from part b) of Theorem \\ref{theorem2fejermax} that the"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8056,
+   "token": "@ref(theorem2fejermaxaa)",
+   "wrapper": "?",
+   "context": "in N\\\"orlund means in Theorem \\ref{theorem2fejermaxaa} can not be improved."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8059,
+   "token": "@ref(theorem2fejermax)",
+   "wrapper": "?",
+   "context": "{\\bf Proof}: The idea of proof is similar as that of part a) of Theorem \\ref{theorem2fejermax}, but since this case is more general we give the details."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8061,
+   "token": "@ref(theorem3fejermax2a)",
+   "wrapper": "?",
+   "context": "Analogously to Theorem \\ref{theorem3fejermax2a} we may assume that $n>M_{N}$"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8063,
+   "token": "@ref(nom)",
+   "wrapper": "?",
+   "context": "_{\\infty }\\leq M_{N}^{2}$ if we apply (\\ref{nom}) we obtain that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8079,
+   "token": "@ref(lemma5aaa)",
+   "wrapper": "?",
+   "context": "Let $x\\in I_{N}^{k,l},\\,0\\leq k<l\\leq N.$ Then, from Lemma \\ref{lemma5aaa}"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8132,
+   "token": "@cite(ptw)",
+   "wrapper": "?",
+   "context": "in Persson, Tephnade and Wall \\cite{ptw}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8135,
+   "token": "@id(theorem2norlunda)",
+   "wrapper": "?",
+   "context": "\\label{theorem2norlunda}Let $0<p<1/2.$ Then, for all N\\\"orlund means with"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8149,
+   "token": "@ref(example2.5.1)",
+   "wrapper": "?",
+   "context": "For the proof we use the martingale defined in Example \\ref{example2.5.1} (see"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8150,
+   "token": "@ref(theorem1norlund)",
+   "wrapper": "?",
+   "context": "also the part b) of Theorem \\ref{theorem1norlund})."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8187,
+   "token": "@id(corollary2norlunda)",
+   "wrapper": "?",
+   "context": "\\label{corollary2norlunda}Let $0<p<1/2\\ \\ $and $t_{n}$ be N\\\"orlund means with"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8209,
+   "token": "@cite(ptw)",
+   "wrapper": "?",
+   "context": "Wall \\cite{ptw}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8212,
+   "token": "@id(theorem2norlund)",
+   "wrapper": "?",
+   "context": "\\label{theorem2norlund} a) Let $0<p<1/\\left(1+\\alpha \\right),$ $0<\\alpha"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8254,
+   "token": "@ref(cond4)",
+   "wrapper": "?",
+   "context": "Under condition (\\ref{cond4}) there exists an\\ increasing sequence $\\left\\{"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8283,
+   "token": "@ref(cond4)",
+   "wrapper": "?",
+   "context": "Without lost the generality we may assume that $c=1$ in (\\ref{cond4}). By"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8309,
+   "token": "@ref(cond444)",
+   "wrapper": "?",
+   "context": "Which means that \\ref{cond444} holds and part (a) is proved."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8312,
+   "token": "@ref(cond22)",
+   "wrapper": "?",
+   "context": "\\ref{cond22}) there exists an increasing sequence $\\left\\{ \\alpha _{k}:k\\in"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8336,
+   "token": "@ref(example2.5)",
+   "wrapper": "?",
+   "context": "Let the martingale defined in the Example \\ref{example2.5}, where $\\lambda _{k}$"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8347,
+   "token": "@ref(cond23)",
+   "wrapper": "?",
+   "context": "\\right\\} $ satisfies conditions (\\ref{cond23})-(\\ref{cond25}) and $a_{k}$"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8347,
+   "token": "@ref(cond25)",
+   "wrapper": "?",
+   "context": "\\right\\} $ satisfies conditions (\\ref{cond23})-(\\ref{cond25}) and $a_{k}$"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8349,
+   "token": "@ref(cond23)",
+   "wrapper": "?",
+   "context": "\\ref{cond23}) analogously we can conclude that $\\,f\\in H_{1/\\left( 1+\\alpha"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8463,
+   "token": "@ref(cond445)",
+   "wrapper": "?",
+   "context": "Which means that \\ref{cond445} holds and the proof is complete."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8467,
+   "token": "@id(theorem2norlund1000)",
+   "wrapper": "?",
+   "context": "\\label{theorem2norlund1000} Let $0<p<1/\\left( 1+\\alpha \\right) ,$ $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8469,
+   "token": "@ref(cond4)",
+   "wrapper": "?",
+   "context": "sequence satisfying the condition (\\ref{cond4}). Then there exists a"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8482,
+   "token": "@ref(cond22)",
+   "wrapper": "?",
+   "context": "\\}$ be a non-increasing sequence satisfying the condition (\\ref{cond22})."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8494,
+   "token": "@id(Theorem3normax)",
+   "wrapper": "?",
+   "context": "\\label{Theorem3normax}a) The maximal operator $t^{\\ast }$ of the N\\\"orlund"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8535,
+   "token": "@cite(ptw)",
+   "wrapper": "?",
+   "context": "Part a) of this result can be found in \\cite{ptw}, but below we give a"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8540,
+   "token": "@ref(lemma2.3)",
+   "wrapper": "?",
+   "context": "By Lemma \\ref{lemma2.3} the proof of part a) is complete if we show"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8553,
+   "token": "@ref(corollary3n)",
+   "wrapper": "?",
+   "context": "} $ (the boundedness follows from Corollary \\ref{corollary3n}) and $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8577,
+   "token": "@ref(saa11)",
+   "wrapper": "?",
+   "context": "The expression on the right-hand side of (\\ref{saa11}) does not depend on $m.$ Hence,"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8583,
+   "token": "@ref(saa110)",
+   "wrapper": "?",
+   "context": "Let $n\\geq N.$ According to (\\ref{saa110}) we conclude that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8626,
+   "token": "@ref(saa110)",
+   "wrapper": "?",
+   "context": "By combining (\\ref{1.1}) and (\\ref{saa110}) we obtain that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8655,
+   "token": "@ref(cond29)",
+   "wrapper": "?",
+   "context": "Under condition (\\ref{cond29}) there exists an\\ increasing sequence $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8662,
+   "token": "@ref(theorem2norlund)",
+   "wrapper": "?",
+   "context": "Theorem \\ref{theorem2norlund} we use the martingale defined in Example \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8695,
+   "token": "@ref(sn101)",
+   "wrapper": "?",
+   "context": "According to (\\ref{sn101}) we can conclude that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8735,
+   "token": "@ref(sn101)",
+   "wrapper": "?",
+   "context": "By using again (\\ref{sn101}) we get that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8748,
+   "token": "@ref(cond32.1)",
+   "wrapper": "?",
+   "context": "_{k}.$ Then, according to (\\ref{cond32.1}) we find that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8766,
+   "token": "@ref(cond30)",
+   "wrapper": "?",
+   "context": "We invoke Abel transformation and apply (\\ref{cond30}) to get that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8843,
+   "token": "@id(Theorem1nor)",
+   "wrapper": "?",
+   "context": "\\label{Theorem1nor}Let $f\\in H_{p},$ where $0$\\thinspace $<p\\,<1/\\left( )"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8863,
+   "token": "@ref(cond29)",
+   "wrapper": "?",
+   "context": "\\mathbb{N}\\}$ satisfying the conditions (\\ref{cond29}) and (\\ref{cond30})  such"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8863,
+   "token": "@ref(cond30)",
+   "wrapper": "?",
+   "context": "\\mathbb{N}\\}$ satisfying the conditions (\\ref{cond29}) and (\\ref{cond30})  such"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8874,
+   "token": "@id(remark1nor111)",
+   "wrapper": "?",
+   "context": "\\label{remark1nor111}Part a) can be found in the paper Blahota and Tephnadze \\cite%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8880,
+   "token": "@ref(corollary3n)",
+   "wrapper": "?",
+   "context": "(the boundedness follows from Corollary \\ref{corollary3n}), according to"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8881,
+   "token": "@ref(lemma2.2)",
+   "wrapper": "?",
+   "context": "Lemma \\ref{lemma2.2} it actually suffices to show that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8905,
+   "token": "@ref(lemma3n)",
+   "wrapper": "?",
+   "context": "Let $x\\in I_{N}^{k,l},\\,0\\leq k<l<N.$ Then, from Lemma \\ref{lemma3n} we get"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8912,
+   "token": "@ref(lemma3n)",
+   "wrapper": "?",
+   "context": "Let $x\\in I_{N}^{k,N},\\,0\\leq k<N.$ Then, according to Lemma \\ref{lemma3n},"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 8968,
+   "token": "@ref(example2.2)",
+   "wrapper": "?",
+   "context": "To prove part b) we apply the $p$-atoms defined in Example \\ref{example2.2}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9008,
+   "token": "@id(corollary3fejermax1.5)",
+   "wrapper": "?",
+   "context": "\\label{corollary3fejermax1.5}  Let $0<p<1/\\left( 1+\\alpha \\right) $ and $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9019,
+   "token": "@ref(Theorem1nor)",
+   "wrapper": "?",
+   "context": "According to part a) of Theorem \\ref{Theorem1nor} we conclude that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9033,
+   "token": "@id(corollary3fejermax1.2.5)",
+   "wrapper": "?",
+   "context": "\\label{corollary3fejermax1.2.5}Let $\\left\\{ \\Phi _{n}:n\\in \\mathbb{N}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9043,
+   "token": "@id(corollary3fejermax1.3.5)",
+   "wrapper": "?",
+   "context": "\\label{corollary3fejermax1.3.5}Let $\\left\\{ \\Phi _{n}:n\\in \\mathbb{N}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9056,
+   "token": "@id(Theorem1norin)",
+   "wrapper": "?",
+   "context": "\\label{Theorem1norin}Let $f\\in H_{1/(1+\\alpha )},$ where $0<\\alpha \\leq 1$"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9075,
+   "token": "@ref(cond29)",
+   "wrapper": "?",
+   "context": "\\mathbb{N}\\}$ satisfying the conditions (\\ref{cond29}) and (\\ref{cond30}) such"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9075,
+   "token": "@ref(cond30)",
+   "wrapper": "?",
+   "context": "\\mathbb{N}\\}$ satisfying the conditions (\\ref{cond29}) and (\\ref{cond30}) such"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9090,
+   "token": "@ref(lemma2.2)",
+   "wrapper": "?",
+   "context": "According to Lemma \\ref{lemma2.2} the proof of part a) will be complete if"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9103,
+   "token": "@ref(corollary3n)",
+   "wrapper": "?",
+   "context": "} $ (the boundedness follows from Corollary \\ref{corollary3n}) and $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9121,
+   "token": "@ref(lemma3n)",
+   "wrapper": "?",
+   "context": "Let $x\\in I_{N}^{k,l},\\,0\\leq k<l<N.$ From Lemma \\ref{lemma3n} we get that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9127,
+   "token": "@ref(lemma3n)",
+   "wrapper": "?",
+   "context": "Let $x\\in I_{N}^{k,N},\\,0\\leq k<N.$ In the view of Lemma \\ref{lemma3n} we"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9141,
+   "token": "@ref(saaaM)",
+   "wrapper": "?",
+   "context": "The expression on the right-hand side of (\\ref{saaaM}) does not depend on $n.$ Hence,"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9148,
+   "token": "@ref(saaaMA)",
+   "wrapper": "?",
+   "context": "According to (\\ref{1.1}) and (\\ref{saaaMA}) we obtain that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9185,
+   "token": "@ref(nom1)",
+   "wrapper": "?",
+   "context": "Under condition (\\ref{nom1}) there exists a positive integers $m_{k}^{,}$"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9204,
+   "token": "@ref(example2.2)",
+   "wrapper": "?",
+   "context": "Example \\ref{example2.2}. If we apply (\\ref{dn21}) in Lemma \\ref{dn1} with (%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9204,
+   "token": "@ref(dn21)",
+   "wrapper": "?",
+   "context": "Example \\ref{example2.2}. If we apply (\\ref{dn21}) in Lemma \\ref{dn1} with (%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9204,
+   "token": "@ref(dn1)",
+   "wrapper": "?",
+   "context": "Example \\ref{example2.2}. If we apply (\\ref{dn21}) in Lemma \\ref{dn1} with (%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9228,
+   "token": "@ref(cond29)",
+   "wrapper": "?",
+   "context": "again use abel transformation, then under the conditions (\\ref{cond29}) and (%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9229,
+   "token": "@ref(cond30)",
+   "wrapper": "?",
+   "context": "\\ref{cond30}) we find that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9307,
+   "token": "@ref(nom1)",
+   "wrapper": "?",
+   "context": "sequence satisfying the condition (\\ref{nom1}). Then the following maximal operator%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9319,
+   "token": "@cite(ptw2)",
+   "wrapper": "?",
+   "context": "\\cite{ptw2}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9322,
+   "token": "@id(theorem2fejerstronga)",
+   "wrapper": "?",
+   "context": "\\label{theorem2fejerstronga} Let $0<p<1/2$, $f\\in H_{p}$ and the sequence $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9333,
+   "token": "@id(Remark4nor)",
+   "wrapper": "?",
+   "context": "\\label{Remark4nor}Since the Fej\\'er means are examples of N\\\"orlund means with"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9335,
+   "token": "@ref(theorem2fejerstrong)",
+   "wrapper": "?",
+   "context": "immediately obtain from part b) of Theorem \\ref{theorem2fejerstrong} that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9340,
+   "token": "@ref(theorem2fejerstronga)",
+   "wrapper": "?",
+   "context": "in N\\\"orlund means in Theorem \\ref{theorem2fejerstronga} can not be improved."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9344,
+   "token": "@ref(theorem2fejerstrong)",
+   "wrapper": "?",
+   "context": "The proof is similar to that of part a) of Theorem \\ref{theorem2fejerstrong}, but since this case is more general we give the details."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9346,
+   "token": "@ref(lemma2.1)",
+   "wrapper": "?",
+   "context": "By Lemma \\ref{lemma2.1} the proof is complete if we show that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9358,
+   "token": "@ref(Corollary3nn)",
+   "wrapper": "?",
+   "context": "L_{\\infty }$ (the boundedness follows from Corollary \\ref{Corollary3nn}) and"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9453,
+   "token": "@cite(ptw2)",
+   "wrapper": "?",
+   "context": "Also the next theorem is proved in Persson, Tephnadze and Wall \\cite{ptw2}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9456,
+   "token": "@id(theorem1fejerstronga)",
+   "wrapper": "?",
+   "context": "\\label{theorem1fejerstronga}Let $f\\in H_{1/2}$ and the sequence $\\left\\{"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9467,
+   "token": "@ref(theorem1fejerstrong)",
+   "wrapper": "?",
+   "context": "The proof is similar to that of part a) of Theorem \\ref{theorem1fejerstrong}, but since this case is more general we present the details."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9469,
+   "token": "@ref(lemma2.1)",
+   "wrapper": "?",
+   "context": "According to Lemma \\ref{lemma2.1} it suffices to show that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9480,
+   "token": "@ref(Corollary3nn)",
+   "wrapper": "?",
+   "context": "} $ (the boundedness follows from Corollary \\ref{Corollary3nn}) and $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9519,
+   "token": "@ref(lemma5a)",
+   "wrapper": "?",
+   "context": "Let $x\\in I_{N}^{k,N}.$ Then, according to Lemma \\ref{lemma5a}, we find that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9564,
+   "token": "@cite(bt2)",
+   "wrapper": "?",
+   "context": "paper of Blahota and Tephnadze \\cite{bt2}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9567,
+   "token": "@id(Theorem2nor)",
+   "wrapper": "?",
+   "context": "\\label{Theorem2nor} Let $f\\in H_{p},$ where $0$\\thinspace $<p\\,<1/\\left("
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9580,
+   "token": "@ref(lemma2.1)",
+   "wrapper": "?",
+   "context": "By Lemma \\ref{lemma2.1} the it suffices to show that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9590,
+   "token": "@ref(corollary3n)",
+   "wrapper": "?",
+   "context": "} $ (the boundedness follows from Corollary \\ref{corollary3n}) and $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9663,
+   "token": "@cite(bpt1)",
+   "wrapper": "?",
+   "context": "Tephnadze \\cite{bpt1}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9666,
+   "token": "@id(Theorem3nor)",
+   "wrapper": "?",
+   "context": "\\label{Theorem3nor}Let $f\\in H_{1/(1+\\alpha )}$ where $0<\\alpha \\leq 1$ and"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9679,
+   "token": "@ref(lemma2.1)",
+   "wrapper": "?",
+   "context": "\\textbf{\\ }By Lemma \\ref{lemma2.1} the proof is complete if we show"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9692,
+   "token": "@ref(corollary3n)",
+   "wrapper": "?",
+   "context": "} $ (the boundedness follows from Corollary \\ref{corollary3n}) and $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9712,
+   "token": "@ref(saa)",
+   "wrapper": "?",
+   "context": "According to (\\ref{1.1}) together with (\\ref{saa})-(\\ref{saaa}) we can conclude that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9712,
+   "token": "@ref(saaa)",
+   "wrapper": "?",
+   "context": "According to (\\ref{1.1}) together with (\\ref{saa})-(\\ref{saaa}) we can conclude that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9797,
+   "token": "@cite(tep11)",
+   "wrapper": "?",
+   "context": "section are due to Tephnadze \\cite{tep11}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9800,
+   "token": "@id(theorem1r)",
+   "wrapper": "?",
+   "context": "\\label{theorem1r}a)\\bigskip\\ The maximal operator$\\ $of Riesz logarithmic"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9834,
+   "token": "@ref(example2.5.1)",
+   "wrapper": "?",
+   "context": "\\right) $ be martingale defined in Example \\ref{example2.5.1}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9848,
+   "token": "@ref(sn101)",
+   "wrapper": "?",
+   "context": "According to (\\ref{sn101}) we have that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9885,
+   "token": "@ref(sn101)",
+   "wrapper": "?",
+   "context": "In view of (\\ref{sn101}) we find that%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9971,
+   "token": "@id(theorem2nl)",
+   "wrapper": "?",
+   "context": "\\label{theorem2nl}Let $0<p\\leq 1$. Then there exists a martingale $f\\in"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 9992,
+   "token": "@ref(sn101)",
+   "wrapper": "?",
+   "context": "In the view of (\\ref{sn101}) for $III$ we get the following estimate:%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10014,
+   "token": "@ref(sn101)",
+   "wrapper": "?",
+   "context": "By now applying (\\ref{sn101}) again we have that"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10119,
+   "token": "@ref(cond2)",
+   "wrapper": "?",
+   "context": "non-decreasing function satisfying the condition (\\ref{cond2}). Then the following"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10137,
+   "token": "@ref(cond1)",
+   "wrapper": "?",
+   "context": "non-decreasing function satisfying the condition (\\ref{cond1}). Then the following"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10209,
+   "token": "@ref(cond2)",
+   "wrapper": "?",
+   "context": "non-decreasing function satisfying the condition (\\ref{cond2}). Then the following"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10232,
+   "token": "@ref(cond1)",
+   "wrapper": "?",
+   "context": "nondecreasing function satisfying the condition (\\ref{cond1}). Then the following"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10362,
+   "token": "@ref(nom1)",
+   "wrapper": "?",
+   "context": "1,\\infty )$ be a nondecreasing function satisfying the condition (\\ref{nom1}%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10416,
+   "token": "@cite(gol)",
+   "wrapper": "?",
+   "context": "G_{m}\\right) .$ In particular, the following result play an important role for studying this type of questions (see e.g. the books \\cite{gol}, \\cite{sws} and"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10416,
+   "token": "@cite(sws)",
+   "wrapper": "?",
+   "context": "G_{m}\\right) .$ In particular, the following result play an important role for studying this type of questions (see e.g. the books \\cite{gol}, \\cite{sws} and"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10417,
+   "token": "@cite(13)",
+   "wrapper": "?",
+   "context": "\\cite{13})."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10420,
+   "token": "@id(lemmaae)",
+   "wrapper": "?",
+   "context": "\\label{lemmaae} Let $f\\in L_{1}$ and $T_{n}:L_{1}\\rightarrow L_{1}$ be some"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10450,
+   "token": "@id(remarkae)",
+   "wrapper": "?",
+   "context": "\\label{remarkae}Since the Vilenkin function $\\psi _{m}$ is constant on $%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10462,
+   "token": "@ref(dn2.3)",
+   "wrapper": "?",
+   "context": "On the other hand, notice that, by Corollary \\ref{dn2.3} (Paley lemma), it"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10477,
+   "token": "@ref(lemmaae)",
+   "wrapper": "?",
+   "context": "By using Lemma \\ref{lemmaae}, remarks \\ref{remarkae} and the results in our previous sections we in particular obtain the"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10477,
+   "token": "@ref(remarkae)",
+   "wrapper": "?",
+   "context": "By using Lemma \\ref{lemmaae}, remarks \\ref{remarkae} and the results in our previous sections we in particular obtain the"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10481,
+   "token": "@id(theoremae1)",
+   "wrapper": "?",
+   "context": "\\label{theoremae1}Let $f\\in L_{1}$ and $t_{n}$ be the regular N\\\"orlund means"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10511,
+   "token": "@ref(lemma2.3)",
+   "wrapper": "?",
+   "context": "On the other hand, by combining Lemma \\ref{lemma2.3} and Theorem \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10518,
+   "token": "@ref(fn0)",
+   "wrapper": "?",
+   "context": "\\}$ satisfying conditions (\\ref{fn0}) is bounded from the space $L_{1}$ to"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10526,
+   "token": "@ref(lemmaae)",
+   "wrapper": "?",
+   "context": "According to Lemma \\ref{lemmaae} we obtain that under condition (\\ref{fn0})"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10526,
+   "token": "@ref(fn0)",
+   "wrapper": "?",
+   "context": "According to Lemma \\ref{lemmaae} we obtain that under condition (\\ref{fn0})"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10536,
+   "token": "@id(corollaryae1)",
+   "wrapper": "?",
+   "context": "\\label{corollaryae1}Let $f\\in L_{1}$. Then%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10555,
+   "token": "@ref(monotone1)",
+   "wrapper": "?",
+   "context": "\\}$ (see (\\ref{monotone1}) and (\\ref{node00})) the proof is complete by"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10555,
+   "token": "@ref(node00)",
+   "wrapper": "?",
+   "context": "\\}$ (see (\\ref{monotone1}) and (\\ref{node00})) the proof is complete by"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10556,
+   "token": "@ref(theoremae1)",
+   "wrapper": "?",
+   "context": "just using Theorem \\ref{theoremae1}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10560,
+   "token": "@id(theoremae2)",
+   "wrapper": "?",
+   "context": "\\label{theoremae2}Let $f\\in L_{1}$ and $t_{n}$ be N\\\"orlund means with"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10573,
+   "token": "@ref(theorem1n)",
+   "wrapper": "?",
+   "context": "By using part b) of Theorem \\ref{theorem1n} we get that every N\\\"orlund mean,"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10584,
+   "token": "@ref(remarkae)",
+   "wrapper": "?",
+   "context": "P\\in \\mathcal{P}$ is dense in the space $L_{1}$ (see Remark \\ref{remarkae})$%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10587,
+   "token": "@ref(lemma2.3)",
+   "wrapper": "?",
+   "context": "On the other hand, by combining Lemma \\ref{lemma2.3} and part a) of Theorem %"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10588,
+   "token": "@ref(Theorem3normax)",
+   "wrapper": "?",
+   "context": "\\ref{Theorem3normax} we obtain that the maximal operator of N\\\"orlund means with non-increasing sequence $\\{q_{k}:k\\in"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10601,
+   "token": "@ref(lemmaae)",
+   "wrapper": "?",
+   "context": "According to Lemma \\ref{lemmaae} we obtain that under conditions (\\ref{6a})"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10611,
+   "token": "@id(corollaryae2)",
+   "wrapper": "?",
+   "context": "\\label{corollaryae2}Let $f\\in L_{1}$. Then%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10624,
+   "token": "@ref(node0)",
+   "wrapper": "?",
+   "context": "By combining (\\ref{node0})-(\\ref{node01}) with (\\ref{node1})-(\\ref{node2})"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10624,
+   "token": "@ref(node01)",
+   "wrapper": "?",
+   "context": "By combining (\\ref{node0})-(\\ref{node01}) with (\\ref{node1})-(\\ref{node2})"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10624,
+   "token": "@ref(node1)",
+   "wrapper": "?",
+   "context": "By combining (\\ref{node0})-(\\ref{node01}) with (\\ref{node1})-(\\ref{node2})"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10624,
+   "token": "@ref(node2)",
+   "wrapper": "?",
+   "context": "By combining (\\ref{node0})-(\\ref{node01}) with (\\ref{node1})-(\\ref{node2})"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10633,
+   "token": "@ref(theoremae2)",
+   "wrapper": "?",
+   "context": "Hence, the proof is complete by just using Theorem \\ref{theoremae2}."
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10637,
+   "token": "@id(corollaryae22a)",
+   "wrapper": "?",
+   "context": "\\label{corollaryae22a}Let $f\\in L_{1}$ and $t_{n}$ be N\\\"orlund means with"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10646,
+   "token": "@ref(theoremae1)",
+   "wrapper": "?",
+   "context": "The proof is analogously to the proofs of Theorems \\ref{theoremae1} and \\ref%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10651,
+   "token": "@id(theoremae3)",
+   "wrapper": "?",
+   "context": "\\label{theoremae3}Let $f\\in L_{1}$. Then%"
+  },
+  {
+   "file": "Ph.D._Thesis_of_G._Tephnadze.tex",
+   "line": 10659,
+   "token": "@ref(theoremae1)",
+   "wrapper": "?",
+   "context": "The proof is analogously to the proofs of Theorems \\ref{theoremae1} and \\ref%"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.0,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "the document declares no bibliography"
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

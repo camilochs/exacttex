@@ -1,0 +1,300 @@
+exit=2
+lines=297
+unique_findings=95
+Warning 1 in FG_align.tex line 54: Command terminated with space.
+\let\hat\widehat  
+                ^
+Warning 13 in FG_align.tex line 102: Intersentence spacing (`\@') should perhaps be used.
+\newcommand{\sukhdeep}[1]{{\textcolor{magenta}{SS: #1}}}  
+                                                 ^
+Warning 13 in FG_align.tex line 103: Intersentence spacing (`\@') should perhaps be used.
+\newcommand{\peter}[1]{{\textcolor{green}{PM: #1}}}  
+                                            ^
+Warning 13 in FG_align.tex line 104: Intersentence spacing (`\@') should perhaps be used.
+\newcommand{\rachel}[1]{{\textcolor{cyan}{RM: #1}}}  
+                                            ^
+Warning 13 in FG_align.tex line 105: Intersentence spacing (`\@') should perhaps be used.
+\newcommand{\jab}[1]{{\textcolor{red}{JAB: #1}}}  
+                                         ^
+Warning 13 in FG_align.tex line 106: Intersentence spacing (`\@') should perhaps be used.
+\newcommand{\YC}[1]{{\textcolor{blue}{YC: #1}}}  
+                                        ^
+Warning 1 in FG_align.tex line 135: Command terminated with space.
+Rachel Mandelbaum,$^{3,4}$\newauthor  
+                                    ^
+Warning 24 in FG_align.tex line 156: Delete this space to maintain correct pagereferences.
+\label{firstpage}  
+^
+Warning 6 in FG_align.tex line 219: No italic correction (`\/') found.
+In this work, rather than investigate galaxy {\em spin} alignments with filaments, we focus on  
+                                                      ^
+Warning 6 in FG_align.tex line 220: No italic correction (`\/') found.
+galaxy {\em shape} alignments with filaments.  The primary motivation behind considering shape alignments  
+                 ^
+Warning 2 in FG_align.tex line 383: Non-breaking space (`~') should have been used.
+                        To get the shapes of BOSS galaxies, we use the same shape catalog as was used in \cite{Singh2015}. The galaxy shapes were   
+                                                                                                        ^
+Warning 2 in FG_align.tex line 387: Non-breaking space (`~') should have been used.
+                        the observed galaxy shapes. We refer the reader to \cite{Singh2015} and \cite{Reyes2012}   
+                                                                          ^
+Warning 2 in FG_align.tex line 387: Non-breaking space (`~') should have been used.
+                        the observed galaxy shapes. We refer the reader to \cite{Singh2015} and \cite{Reyes2012}   
+                                                                                               ^
+Warning 2 in FG_align.tex line 397: Non-breaking space (`~') should have been used.
+                age based on the Flexible Stellar Population Synthesis code of \cite{2009ApJ...699..486C}, in order to test the impact of these properties on galaxy alignments.  
+                                                                              ^
+Warning 24 in FG_align.tex line 400: Delete this space to maintain correct pagereferences.
+        \subsection{Filament Catalogue} \label{sec::methods}  
+                                       ^
+Warning 2 in FG_align.tex line 426: Non-breaking space (`~') should have been used.
+        reference rule described in \cite{2015MNRAS.454.1140C}.  
+                                   ^
+Warning 3 in FG_align.tex line 438: You should enclose the previous parenthesis with `{}'.
+        \approx\left(\frac{\pi}{60}\right)^3 \approx 10^{-3}=0.1\%$.   
+                                         ^
+Warning 26 in FG_align.tex line 441: You ought to remove spaces in front of punctuation.
+        The ridges are identified using the hessian of the density field ({tidal tensor}) ,  
+                                                                                         ^
+Warning 3 in FG_align.tex line 446: You should enclose the previous parenthesis with `{}'.
+        R = \left\{x: v_2(x)^T \nabla p(x) =0, \lambda_2<0\right\},  
+                           ^
+Warning 2 in FG_align.tex line 470: Non-breaking space (`~') should have been used.
+            it may be slightly different from the actual orientation; the details of the approximation is in \cite{2016MNRAS.461.3896C}.   
+                                                                                                            ^
+Warning 8 in FG_align.tex line 474: Wrong length of dash may have been used.
+        (around 10-20 Mpc; see  
+                  ^
+Warning 24 in FG_align.tex line 489: Delete this space to maintain correct pagereferences.
+                \label{eq::ex01}  
+               ^
+Warning 8 in FG_align.tex line 493: Wrong length of dash may have been used.
+                \includegraphics[height=3.3in]{figures/030-50-1}  
+                                                          ^
+Warning 8 in FG_align.tex line 493: Wrong length of dash may have been used.
+                \includegraphics[height=3.3in]{figures/030-50-1}  
+                                                             ^
+Warning 24 in FG_align.tex line 509: Delete this space to maintain correct pagereferences.
+            \label{eq::ex02}  
+           ^
+Warning 24 in FG_align.tex line 569: Delete this space to maintain correct pagereferences.
+\subsection{Filament effect on galaxy-cluster alignment}        \label{sec::GC}  
+                                                               ^
+Warning 35 in FG_align.tex line 584: You should perhaps use `\arccos' instead.
+|\phi_C-\phi_{\sf Major}| ={\sf arccos}(|\eta_C\cdot \eta_{\sf Major}|).  
+                                ^^^^^^
+Warning 8 in FG_align.tex line 615: Wrong length of dash may have been used.
+\includegraphics[height=1.8in]{figures/011-4_C_Fbin_slope}  
+                                          ^
+Warning 8 in FG_align.tex line 616: Wrong length of dash may have been used.
+\includegraphics[height=1.8in]{figures/011-4_C_Cbin_slope}  
+                                          ^
+Warning 35 in FG_align.tex line 618: You should perhaps use `\arccos' instead.
+The galaxy alignment signal toward clusters $\langle|\phi_C-\phi_{\sf Major}|\rangle=\langle{\sf arccos}|\eta_C\cdot \eta_{\sf Major}|\rangle$   
+                                                                                                 ^^^^^^
+Warning 24 in FG_align.tex line 643: Delete this space to maintain correct pagereferences.
+\label{fig::align_dFdC_C2}  
+^
+Warning 12 in FG_align.tex line 647: Interword spacing (`\ ') should perhaps be used.
+in two cases. (i): we fix $d_F$ and study how $\langle|\phi_C-\phi_{\sf Major}|\rangle$ changes as $d_C$ changes;   
+             ^
+Warning 24 in FG_align.tex line 703: Delete this space to maintain correct pagereferences.
+\label{sec::GF}  
+^
+Warning 1 in FG_align.tex line 707: Command terminated with space.
+\center  
+       ^
+Warning 8 in FG_align.tex line 708: Wrong length of dash may have been used.
+\includegraphics[height=2.4in]{figures/015-2_dot01c_all}  
+                                          ^
+Warning 24 in FG_align.tex line 718: Delete this space to maintain correct pagereferences.
+\label{fig::align}  
+^
+Warning 35 in FG_align.tex line 730: You should perhaps use `\arccos' instead.
+\langle|\phi_F-\phi_{\sf Major}|\rangle = {\sf arccos}(|\phi_F-\phi_{\sf Major}|).  
+                                               ^^^^^^
+Warning 8 in FG_align.tex line 761: Wrong length of dash may have been used.
+The cut with $d_C>50$ Mpc is particularly relevant because at this distance, the galaxy--cluster alignment becomes negligible (see \autoref{fig::align_dFdC_C2}).  
+                                                                                       ^^
+Warning 24 in FG_align.tex line 811: Delete this space to maintain correct pagereferences.
+\label{sec::effect_radius}  
+^
+Warning 1 in FG_align.tex line 814: Command terminated with space.
+\center  
+       ^
+Warning 24 in FG_align.tex line 826: Delete this space to maintain correct pagereferences.
+\label{fig::NP1}  
+^
+Warning 1 in FG_align.tex line 861: Command terminated with space.
+\center  
+       ^
+Warning 24 in FG_align.tex line 875: Delete this space to maintain correct pagereferences.
+\label{fig::align_cosine}  
+^
+Warning 12 in FG_align.tex line 884: Interword spacing (`\ ') should perhaps be used.
+We only use galaxies within 40\,Mpc, i.e. those that are within the range of the effect, with  
+                                         ^
+Warning 24 in FG_align.tex line 920: Delete this space to maintain correct pagereferences.
+\label{sec::property}  
+^
+Warning 24 in FG_align.tex line 942: Delete this space to maintain correct pagereferences.
+\label{fig::property}  
+^
+Warning 24 in FG_align.tex line 977: Delete this space to maintain correct pagereferences.
+\label{fig::align_cosine_lum}  
+^
+Warning 44 in FG_align.tex line 984: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+  \hline  
+  ^^^^^^
+Warning 44 in FG_align.tex line 986: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+  \hline  
+  ^^^^^^
+Warning 44 in FG_align.tex line 993: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+   \hline  
+   ^^^^^^
+Warning 24 in FG_align.tex line 1004: Delete this space to maintain correct pagereferences.
+\label{tab::test1}  
+^
+Warning 11 in FG_align.tex line 1046: You should use \ldots to achieve an ellipsis.
+Let $B_1,\cdots,B_8$ be the first $8$ bins of $d_F$ in  
+         ^^^^^^
+Warning 3 in FG_align.tex line 1054: You should enclose the previous parenthesis with `{}'.
+\chi^2 = \sum_{\ell=1}^8 \frac{\left(\langle|\phi_F-\phi_{\sf Major}|\rangle_{\sf high,\ell}-\langle|\phi_F-\phi_{\sf Major}|\rangle_{\sf low,\ell}\right)^2}{\sigma^2_{\sf high,\ell}+\sigma^2_{\sf low,\ell}},  
+                                                                                                                                                         ^
+Warning 8 in FG_align.tex line 1068: Wrong length of dash may have been used.
+In the top row, we split galaxies on absolute magnitude and observe a separation between the two groups of galaxies, with bright galaxies more aligned along nearby filaments compared to faint galaxies. The $\chi^2$ test shown in \autoref{tab::test1} confirms this pattern -- the two samples have a difference with p-values ranging  
+                                                                                                                                                                                                                                                                                ^^
+Warning 24 in FG_align.tex line 1175: Delete this space to maintain correct pagereferences.
+\section{Conclusion}    \label{sec::conc}  
+                       ^
+Warning 2 in FG_align.tex line 1226: Non-breaking space (`~') should have been used.
+findings of \cite{2009ApJ...706..747Z} and \cite{2015MNRAS.454.3341C}.  
+           ^
+Warning 2 in FG_align.tex line 1226: Non-breaking space (`~') should have been used.
+findings of \cite{2009ApJ...706..747Z} and \cite{2015MNRAS.454.3341C}.  
+                                          ^
+Warning 8 in FG_align.tex line 1245: Wrong length of dash may have been used.
+SH is supported by NASA ROSES grant 12-EUCLID12-0004 and NASA ROSES grant 15-WFIRST15-0008 and NSF-AST 1517593.   
+                                               ^
+Warning 8 in FG_align.tex line 1245: Wrong length of dash may have been used.
+SH is supported by NASA ROSES grant 12-EUCLID12-0004 and NASA ROSES grant 15-WFIRST15-0008 and NSF-AST 1517593.   
+                                                                                     ^
+Warning 24 in FG_align.tex line 1261: Delete this space to maintain correct pagereferences.
+\section{Effect from filament uncertainty}      \label{sec::smooth}  
+                                               ^
+Warning 1 in FG_align.tex line 1264: Command terminated with space.
+\center  
+       ^
+Warning 24 in FG_align.tex line 1277: Delete this space to maintain correct pagereferences.
+\label{fig::smooth}  
+^
+Warning 45 in FG_align.tex line 1283: Use \[ ... \] instead of $$ ... $$.
+$$  
+^^^^^^
+Warning 2 in FG_align.tex line 1289: Non-breaking space (`~') should have been used.
+The threshold $3.5$ Mpc is from the study in simulations in \cite{2015MNRAS.454.3341C}.  
+                                                           ^
+Warning 45 in FG_align.tex line 1293: Use \[ ... \] instead of $$ ... $$.
+$$  
+^^^^^^
+Warning 40 in FG_align.tex line 1299: You should put punctuation outside inner math mode.
+with variance $\sigma^2.$  
+                       ^
+Warning 2 in FG_align.tex line 1303: Non-breaking space (`~') should have been used.
+\cite{2016MNRAS.461.3896C}, model predictions with $\sigma=10$ and $20$ Mpc provide a rough idea for  
+^
+Warning 24 in FG_align.tex line 1317: Delete this space to maintain correct pagereferences.
+\section{Checking for the systematics}  \label{sec::system}  
+                                       ^
+Warning 1 in FG_align.tex line 1413: Command terminated with space.
+\center  
+       ^
+Warning 8 in FG_align.tex line 1423: Wrong length of dash may have been used.
+This may be caused by the boundary bias of the filament finder -- ridgelines are constructed  
+                                                               ^^
+Warning 24 in FG_align.tex line 1441: Delete this space to maintain correct pagereferences.
+\label{fig::check2}  
+^
+Warning 1 in FG_align.tex line 1447: Command terminated with space.
+\center  
+       ^
+Warning 24 in FG_align.tex line 1465: Delete this space to maintain correct pagereferences.
+\label{fig::check3}  
+^
+Warning 1 in FG_align.tex line 1469: Command terminated with space.
+\center  
+       ^
+Warning 8 in FG_align.tex line 1470: Wrong length of dash may have been used.
+\includegraphics[height=2in]{figures/015-3_dot01c_all_1}  
+                                        ^
+Warning 8 in FG_align.tex line 1471: Wrong length of dash may have been used.
+\includegraphics[height=2in]{figures/015-3_dot01c_all_2}  
+                                        ^
+Warning 24 in FG_align.tex line 1481: Delete this space to maintain correct pagereferences.
+\label{fig::check4}  
+^
+Warning 24 in FG_align.tex line 1485: Delete this space to maintain correct pagereferences.
+\section{Checking for the anti-alignment}       \label{sec::anti}  
+                                               ^
+Warning 1 in FG_align.tex line 1519: Command terminated with space.
+\center  
+       ^
+Warning 24 in FG_align.tex line 1529: Delete this space to maintain correct pagereferences.
+\label{fig::check}  
+^
+Warning 24 in FG_align.tex line 1536: Delete this space to maintain correct pagereferences.
+\section{P-values from other tests}     \label{sec::other}  
+                                       ^
+Warning 44 in FG_align.tex line 1563: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+  \hline  
+  ^^^^^^
+Warning 44 in FG_align.tex line 1565: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+  \hline  
+  ^^^^^^
+Warning 44 in FG_align.tex line 1572: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+   \hline  
+   ^^^^^^
+Warning 44 in FG_align.tex line 1575: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+  \hline  
+  ^^^^^^
+Warning 44 in FG_align.tex line 1577: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+  \hline  
+  ^^^^^^
+Warning 44 in FG_align.tex line 1584: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+   \hline  
+   ^^^^^^
+Warning 44 in FG_align.tex line 1587: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+  \hline  
+  ^^^^^^
+Warning 44 in FG_align.tex line 1589: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+  \hline  
+  ^^^^^^
+Warning 44 in FG_align.tex line 1599: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+   \hline  
+   ^^^^^^
+Warning 24 in FG_align.tex line 1607: Delete this space to maintain correct pagereferences.
+\label{tab::test_many}  
+^
+Warning 1 in FG_align.tex line 1612: Command terminated with space.
+\bsp  
+    ^
+Warning 24 in FG_align.tex line 1614: Delete this space to maintain correct pagereferences.
+\label{lastpage}  
+^
+Warning 15 in FG_align.tex line 1310: No match found for `{'.
+{{Moreover, the magnitude reflects how the alignment effect was damped by the uncertainty.  
+^
+Warning 15 in FG_align.tex line 1292: No match found for `{'.
+{{  
+^
+Warning 15 in FG_align.tex line 1171: No match found for `{'.
+{{Note that in \autoref{sec::other}, we apply the KS test and AD test (Anderson-Darling test)  
+^
+Warning 15 in FG_align.tex line 1044: No match found for `{'.
+{{In what follows we describe the details of the $\chi^2$ test we are using but essentially,   
+^
+Warning 15 in FG_align.tex line 898: No match found for `{'.
+{{Note that one may notice the anti-alignment at large $d_F$ (blue curve went over  
+^
+Warning 17 in FG_align.tex line 1616: Number of `{' doesn't match the number of `}'!
+
+

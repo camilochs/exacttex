@@ -1,0 +1,25 @@
+{
+ "coverage": 0.039798,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`speex.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "aes120.xtex",
+    "offset": 2106,
+    "length": 13,
+    "line": 45,
+    "column": 54
+   },
+   "message": "citation checking unavailable: `speex.bib` could not be read",
+   "related": []
+  }
+ ]
+}

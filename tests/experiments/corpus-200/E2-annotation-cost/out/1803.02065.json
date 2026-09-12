@@ -1,0 +1,70 @@
+{
+ "paper": "1803.02065",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 62486,
+   "chars_after": 62486,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 62486,
+ "chars_after": 62486,
+ "delta_pct": 0.0,
+ "unrepaired": {
+  "chars_after": 62486,
+  "chars_before": 62486,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.0,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`what-users-really-want.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": 0.0
+ },
+ "stats": {
+  "cite_cmds_live": 0,
+  "cite_keys_live": 0,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 0,
+  "labels_outside_grammar": 0,
+  "refs_live": 0,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 0,
+  "cite_cmds_annotated": 0,
+  "cite_keys_annotated": 0,
+  "ids_annotated": 0,
+  "refs_annotated": 0,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.0,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`what-users-really-want.bib` could not be read"
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

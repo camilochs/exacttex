@@ -1,0 +1,3 @@
+planted=problem_definition sites=[('ParetiWebSci15.xtex', 75), ('ParetiWebSci15.xtex', 65)]
+xtex new=[('XT1001', 'problem_definition', 'ParetiWebSci15.xtex', 75)]
+texlab new=[('ERROR', 'ParetiWebSci15.tex', 65, 'Duplicate label'), ('ERROR', 'ParetiWebSci15.tex', 75, 'Duplicate label')]

@@ -1,0 +1,57 @@
+{
+ "coverage": 0.070769,
+ "bibliography": {
+  "state": "complete",
+  "entries": 43
+ },
+ "diagnostics": [
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "algostep:linearprogram",
+   "span": {
+    "file": "main.xtex",
+    "offset": 26044,
+    "length": 22,
+    "line": 318,
+    "column": 330
+   },
+   "message": "identifier `algostep:linearprogram` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "algostep:linearprogram",
+   "span": {
+    "file": "main.xtex",
+    "offset": 26404,
+    "length": 22,
+    "line": 324,
+    "column": 229
+   },
+   "message": "identifier `algostep:linearprogram` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "algostep:linearprogram",
+   "span": {
+    "file": "main.xtex",
+    "offset": 26859,
+    "length": 22,
+    "line": 327,
+    "column": 143
+   },
+   "message": "identifier `algostep:linearprogram` is not declared",
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,3 @@
+planted=hadi2008Iterative__ghost sites=[('elsarticle-template-harv.xtex', 126)]
+xtex new=[('XT1005', 'hadi2008Iterative__ghost', 'elsarticle-template-harv.xtex', 126)]
+texlab new=[('ERROR', 'elsarticle-template-harv.tex', 126, 'Undefined reference'), ('info', 'references.bib', 23, 'Unused entry')]

@@ -1,0 +1,3 @@
+planted=fig:04_summary__ghost sites=[('Preprint_Bonciolini_RSOS.xtex', 104)]
+xtex new=[('XT1003', 'fig:04_summary__ghost', 'Preprint_Bonciolini_RSOS.xtex', 104)]
+texlab new=[]

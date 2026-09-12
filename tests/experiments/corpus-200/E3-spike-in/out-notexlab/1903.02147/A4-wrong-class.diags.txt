@@ -1,0 +1,3 @@
+planted=fig:planted_wrongclass sites=[('NeuroP2P.xtex', 398)]
+xtex new=[('XT1004', 'fig:planted_wrongclass', 'NeuroP2P.xtex', 396), ('XT1004', 'fig:planted_wrongclass', 'NeuroP2P.xtex', 483)]
+texlab new=[]

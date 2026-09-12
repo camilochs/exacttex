@@ -1,0 +1,26 @@
+tectonic pdf bytes=3309989
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=['ashburner_voxel-based_2000', 'avants_pediatric_2015', 'dale_cortical_1999', 'evans_nih_2006', 'jenkinson_fsl_2012', 'martin_abadi_tensorflow_2015', 'moeskops_automatic_2016', 'ourselin_3d_2016', 'rajchl_neuronet_2018', 'ronneberger_u-net:_2015', 'spalletta_convolutional_2018', 'tustison_large-scale_2014', 'yogananda_deep_2019'] secs=3
+0
+warning: errors were issued by BibTeX, but were ignored; use --print and/or --keep-logs for details.
+warning: nilab_malformation.tex:111: Overfull \hbox (10.27707pt too wide) in paragraph at lines 95--111
+warning: nilab_malformation.tex:227: Overfull \hbox (15.9837pt too wide) in paragraph at lines 222--227
+warning: nilab_malformation.tex:416: Overfull \hbox (3.29019pt too wide) in paragraph at lines 407--416
+warning: nilab_malformation.tex:431: Overfull \hbox (22.76228pt too wide) in paragraph at lines 423--431
+warning: nilab_malformation.tex:445: Overfull \hbox (22.76228pt too wide) in paragraph at lines 437--445
+warning: nilab_malformation.tex:537: Overfull \hbox (5.69046pt too wide) in paragraph at lines 536--537
+warning: nilab_malformation.tex:550: Overfull \hbox (5.69046pt too wide) in paragraph at lines 549--550
+warning: nilab_malformation.tex:550: Underfull \vbox (badness 6204) has occurred while \output is active
+warning: nilab_malformation.tex:111: Overfull \hbox (10.27707pt too wide) in paragraph at lines 95--111
+warning: nilab_malformation.tex:227: Overfull \hbox (15.9837pt too wide) in paragraph at lines 222--227
+warning: nilab_malformation.tex:416: Overfull \hbox (3.29019pt too wide) in paragraph at lines 407--416
+warning: nilab_malformation.tex:431: Overfull \hbox (22.76228pt too wide) in paragraph at lines 423--431
+warning: nilab_malformation.tex:445: Overfull \hbox (22.76228pt too wide) in paragraph at lines 437--445
+warning: nilab_malformation.tex:537: Overfull \hbox (5.69046pt too wide) in paragraph at lines 536--537
+warning: nilab_malformation.tex:550: Overfull \hbox (5.69046pt too wide) in paragraph at lines 549--550
+warning: nilab_malformation.tex:550: Underfull \vbox (badness 6204) has occurred while \output is active
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: Object @table.1.1 already defined.
+warning: Object @figure.1.1 already defined.
+warning: Object @figure.1.2 already defined.

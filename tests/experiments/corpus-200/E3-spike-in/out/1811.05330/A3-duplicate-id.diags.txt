@@ -1,0 +1,3 @@
+planted=SOFINreduction sites=[('V889Her_arxiv.xtex', 187), ('V889Her_arxiv.xtex', 116)]
+xtex new=[('XT1001', 'SOFINreduction', 'V889Her_arxiv.xtex', 187)]
+texlab new=[('ERROR', 'V889Her_arxiv.tex', 116, 'Duplicate label'), ('ERROR', 'V889Her_arxiv.tex', 187, 'Duplicate label')]

@@ -1,0 +1,3 @@
+planted=tab:infarctus_variable_names__ghost sites=[('clintraj.xtex', 126)]
+xtex new=[('XT1003', 'tab:infarctus_variable_names__ghost', 'clintraj.xtex', 126)]
+texlab new=[('info', 'clintraj.tex', 129, 'Unused label')]

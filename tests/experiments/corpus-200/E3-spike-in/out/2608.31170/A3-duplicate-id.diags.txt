@@ -1,0 +1,3 @@
+planted=tab:earnings_results sites=[('main.xtex', 261), ('main.xtex', 103)]
+xtex new=[('XT1001', 'tab:earnings_results', 'main.xtex', 261), ('XT1004', 'tab:earnings_results', 'main.xtex', 275), ('XT1020', 'tab:earnings_results', 'main.xtex', 275)]
+texlab new=[('ERROR', 'main.tex', 103, 'Duplicate label'), ('ERROR', 'main.tex', 261, 'Duplicate label')]

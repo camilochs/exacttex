@@ -1,0 +1,3 @@
+planted=Haase1997__ghost sites=[('preprint.xtex', 50)]
+xtex new=[('XT1005', 'Haase1997__ghost', 'preprint.xtex', 50)]
+texlab new=[('ERROR', 'preprint.tex', 50, 'Undefined reference'), ('info', 'preprint.tex', 511, 'Unused entry')]

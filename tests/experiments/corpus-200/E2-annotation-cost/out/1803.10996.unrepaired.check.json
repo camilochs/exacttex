@@ -1,0 +1,25 @@
+{
+ "coverage": 0.021626,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`thesis_bib.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "thesis_arxiv.xtex",
+    "offset": 6123,
+    "length": 43,
+    "line": 110,
+    "column": 174
+   },
+   "message": "citation checking unavailable: `thesis_bib.bib` could not be read",
+   "related": []
+  }
+ ]
+}

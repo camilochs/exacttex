@@ -1,0 +1,341 @@
+exit=2
+lines=789
+unique_findings=218
+arvard.edu/abs/2011ApJS..192....1C} {192, 1}   
+                                              ^^^
+Warning 11 in msf.tex line 705: You should use \ldots to achieve an ellipsis.
+  {http://adsabs.harvard.edu/abs/2011ApJS..192....1C} {192, 1}   
+                                               ^^^
+Warning 1 in msf.tex line 708: Command terminated with space.
+{Crawford} D.~F.,  1987a, Australian Journal of Physics, \href   
+                                                              ^
+Warning 1 in msf.tex line 712: Command terminated with space.
+{Crawford} D.~F.,  1987b, Australian Journal of Physics, \href   
+                                                              ^
+Warning 1 in msf.tex line 716: Command terminated with space.
+{Crawford} D.~F.,  1991, \mn@doi [\apj] {10.1086/170330}, \href   
+                                ^
+Warning 1 in msf.tex line 716: Command terminated with space.
+{Crawford} D.~F.,  1991, \mn@doi [\apj] {10.1086/170330}, \href   
+                                                               ^
+Warning 11 in msf.tex line 717: You should use \ldots to achieve an ellipsis.
+  {http://adsabs.harvard.edu/abs/1991ApJ...377....1C} {377, 1}   
+                                        ^^^
+Warning 11 in msf.tex line 717: You should use \ldots to achieve an ellipsis.
+  {http://adsabs.harvard.edu/abs/1991ApJ...377....1C} {377, 1}   
+                                              ^^^
+Warning 11 in msf.tex line 717: You should use \ldots to achieve an ellipsis.
+  {http://adsabs.harvard.edu/abs/1991ApJ...377....1C} {377, 1}   
+                                               ^^^
+Warning 1 in msf.tex line 720: Command terminated with space.
+{Crawford} D.~F.,  1993, \mn@doi [\apj] {10.1086/172765}, \href   
+                                ^
+Warning 1 in msf.tex line 720: Command terminated with space.
+{Crawford} D.~F.,  1993, \mn@doi [\apj] {10.1086/172765}, \href   
+                                                               ^
+Warning 11 in msf.tex line 721: You should use \ldots to achieve an ellipsis.
+  {http://adsabs.harvard.edu/abs/1993ApJ...410..488C} {410, 488}   
+                                        ^^^
+Warning 1 in msf.tex line 724: Command terminated with space.
+{Crawford} D.~F.,  1995a, \mn@doi [\apj] {10.1086/175288}, \href   
+                                 ^
+Warning 1 in msf.tex line 724: Command terminated with space.
+{Crawford} D.~F.,  1995a, \mn@doi [\apj] {10.1086/175288}, \href   
+                                                                ^
+Warning 11 in msf.tex line 725: You should use \ldots to achieve an ellipsis.
+  {http://adsabs.harvard.edu/abs/1995ApJ...440..466C} {440, 466}   
+                                        ^^^
+Warning 1 in msf.tex line 728: Command terminated with space.
+{Crawford} D.~F.,  1995b, \mn@doi [\apj] {10.1086/175375}, \href   
+                                 ^
+Warning 1 in msf.tex line 728: Command terminated with space.
+{Crawford} D.~F.,  1995b, \mn@doi [\apj] {10.1086/175375}, \href   
+                                                                ^
+Warning 11 in msf.tex line 729: You should use \ldots to achieve an ellipsis.
+  {http://adsabs.harvard.edu/abs/1995ApJ...441..488C} {441, 488}   
+                                        ^^^
+Warning 1 in msf.tex line 732: Command terminated with space.
+{Crawford} D.~F.,  1999, Australian Journal of Physics, \href   
+                                                             ^
+Warning 1 in msf.tex line 740: Command terminated with space.
+{Crawford} D.~F.,  2009a, preprint, \href   
+                                         ^
+Warning 12 in msf.tex line 741: Interword spacing (`\ ') should perhaps be used.
+  {https://ui.adsabs.harvard.edu/#abs/2009arXiv0901.4169C} {p. arXiv:0901.4169}   
+                                                              ^
+Warning 1 in msf.tex line 742: Command terminated with space.
+  (\mn@eprint {arXiv} {0901.4169})   
+             ^
+Warning 1 in msf.tex line 745: Command terminated with space.
+{Crawford} D.~F.,  2009b, preprint, \href   
+                                         ^
+Warning 12 in msf.tex line 746: Interword spacing (`\ ') should perhaps be used.
+  {https://ui.adsabs.harvard.edu/#abs/2009arXiv0901.4172C} {p. arXiv:0901.4172}   
+                                                              ^
+Warning 1 in msf.tex line 747: Command terminated with space.
+  (\mn@eprint {arXiv} {0901.4172})   
+             ^
+Warning 1 in msf.tex line 750: Command terminated with space.
+{Crawford} D.~F.,  2010, preprint, \href   
+                                        ^
+Warning 12 in msf.tex line 751: Interword spacing (`\ ') should perhaps be used.
+  {https://ui.adsabs.harvard.edu/#abs/2009arXiv0901.4169C} {p. arXiv:1009:0953}   
+                                                              ^
+Warning 1 in msf.tex line 752: Command terminated with space.
+  (\mn@eprint {arXiv} {1009:0953})   
+             ^
+Warning 1 in msf.tex line 755: Command terminated with space.
+{Crawford} D.~F.,  2017, \mn@doi [Open Astronomy] {10.1515/astro-2017-0013},   
+                                ^
+Warning 8 in msf.tex line 755: Wrong length of dash may have been used.
+{Crawford} D.~F.,  2017, \mn@doi [Open Astronomy] {10.1515/astro-2017-0013},   
+                                                                     ^
+Warning 1 in msf.tex line 756: Command terminated with space.
+  \href {http://adsabs.harvard.edu/abs/2017OAst...26..111C} {26, 111}   
+       ^
+Warning 1 in msf.tex line 759: Command terminated with space.
+{Dicke} R.~H.,  1964, \mn@doi [\nat] {10.1038/202432a0}, \href   
+                             ^
+Warning 1 in msf.tex line 759: Command terminated with space.
+{Dicke} R.~H.,  1964, \mn@doi [\nat] {10.1038/202432a0}, \href   
+                                                              ^
+Warning 1 in msf.tex line 765: Command terminated with space.
+  \mn@doi [\apj] {10.1086/183683}, \href   
+         ^
+Warning 1 in msf.tex line 765: Command terminated with space.
+  \mn@doi [\apj] {10.1086/183683}, \href   
+                                        ^
+Warning 11 in msf.tex line 766: You should use \ldots to achieve an ellipsis.
+  {https://ui.adsabs.harvard.edu/#abs/1981ApJ...251L..13E} {251, L13}   
+                                             ^^^
+Warning 1 in msf.tex line 769: Command terminated with space.
+{Ellis} G.~F.~R.,  1984, \mn@doi [Annual Review of Astronomy and Astrophysics]   
+                                ^
+Warning 1 in msf.tex line 770: Command terminated with space.
+  {10.1146/annurev.aa.22.090184.001105}, \href   
+                                              ^
+Warning 1 in msf.tex line 775: Command terminated with space.
+{E{\"o}tv{\"o}s} R.~V.,  {Pek{\'a}r} D.,   {Fekete} E.,  1922, \mn@doi [Annalen   
+                                                                      ^
+Warning 1 in msf.tex line 776: Command terminated with space.
+  der Physik] {10.1002/andp.19223730903}, \href   
+                                               ^
+Warning 11 in msf.tex line 777: You should use \ldots to achieve an ellipsis.
+  {https://ui.adsabs.harvard.edu/#abs/1922AnP...373...11E} {373, 11}   
+                                             ^^^
+Warning 11 in msf.tex line 777: You should use \ldots to achieve an ellipsis.
+  {https://ui.adsabs.harvard.edu/#abs/1922AnP...373...11E} {373, 11}   
+                                                   ^^^
+Warning 1 in msf.tex line 781: Command terminated with space.
+{Foley} R.~J.,  et~al., 2018, \mn@doi [\mnras] {10.1093/mnras/stx3136}, \href   
+                                     ^
+Warning 1 in msf.tex line 781: Command terminated with space.
+{Foley} R.~J.,  et~al., 2018, \mn@doi [\mnras] {10.1093/mnras/stx3136}, \href   
+                                                                             ^
+Warning 1 in msf.tex line 786: Command terminated with space.
+{Giacconi} R.,  {Gursky} H.,  {Paolini} F.~R.,   {Rossi} B.~B.,  1962, \mn@doi   
+                                                                              ^
+Warning 1 in msf.tex line 787: Command terminated with space.
+  [\prl] {10.1103/PhysRevLett.9.439}, \href   
+                                           ^
+Warning 11 in msf.tex line 788: You should use \ldots to achieve an ellipsis.
+  {https://ui.adsabs.harvard.edu/#abs/1962PhRvL...9..439G} {9, 439}   
+                                               ^^^
+Warning 1 in msf.tex line 792: Command terminated with space.
+{Goldhaber} G.,  et~al., 2001, \mn@doi [\apj] {10.1086/322460}, \href   
+                                      ^
+Warning 1 in msf.tex line 792: Command terminated with space.
+{Goldhaber} G.,  et~al., 2001, \mn@doi [\apj] {10.1086/322460}, \href   
+                                                                     ^
+Warning 11 in msf.tex line 793: You should use \ldots to achieve an ellipsis.
+  {https://ui.adsabs.harvard.edu/#abs/2001ApJ...558..359G} {558, 359}   
+                                             ^^^
+Warning 1 in msf.tex line 798: Command terminated with space.
+  \mn@doi [\aap] {10.1051/0004-6361:20011398}, \href   
+         ^
+Warning 8 in msf.tex line 798: Wrong length of dash may have been used.
+  \mn@doi [\aap] {10.1051/0004-6361:20011398}, \href   
+                              ^
+Warning 1 in msf.tex line 798: Command terminated with space.
+  \mn@doi [\aap] {10.1051/0004-6361:20011398}, \href   
+                                                    ^
+Warning 1 in msf.tex line 803: Command terminated with space.
+{Goobar} A.,  {Leibundgut} B.,  2011, \mn@doi [Annual Review of Nuclear and   
+                                             ^
+Warning 8 in msf.tex line 804: Wrong length of dash may have been used.
+  Particle Science] {10.1146/annurev-nucl-102010-130434}, \href   
+                                                ^
+Warning 1 in msf.tex line 804: Command terminated with space.
+  Particle Science] {10.1146/annurev-nucl-102010-130434}, \href   
+                                                               ^
+Warning 1 in msf.tex line 808: Command terminated with space.
+{Guy} J.,  et~al., 2007, \mn@doi [\aap] {10.1051/0004-6361:20066930}, \href   
+                                ^
+Warning 8 in msf.tex line 808: Wrong length of dash may have been used.
+{Guy} J.,  et~al., 2007, \mn@doi [\aap] {10.1051/0004-6361:20066930}, \href   
+                                                     ^
+Warning 1 in msf.tex line 808: Command terminated with space.
+{Guy} J.,  et~al., 2007, \mn@doi [\aap] {10.1051/0004-6361:20066930}, \href   
+                                                                           ^
+Warning 1 in msf.tex line 812: Command terminated with space.
+{Guy} J.,  et~al., 2010, \mn@doi [\aap] {10.1051/0004-6361/201014468}, \href   
+                                ^
+Warning 8 in msf.tex line 812: Wrong length of dash may have been used.
+{Guy} J.,  et~al., 2010, \mn@doi [\aap] {10.1051/0004-6361/201014468}, \href   
+                                                     ^
+Warning 1 in msf.tex line 812: Command terminated with space.
+{Guy} J.,  et~al., 2010, \mn@doi [\aap] {10.1051/0004-6361/201014468}, \href   
+                                                                            ^
+Warning 1 in msf.tex line 816: Command terminated with space.
+{Hogg} D.~W.,  1999, ArXiv Astrophysics e-prints, \href   
+                                                       ^
+Warning 1 in msf.tex line 821: Command terminated with space.
+{Holtzman} J.~A.,  et~al., 2008, \mn@doi [\aj] {10.1088/0004-6256/136/6/2306},   
+                                        ^
+Warning 8 in msf.tex line 821: Wrong length of dash may have been used.
+{Holtzman} J.~A.,  et~al., 2008, \mn@doi [\aj] {10.1088/0004-6256/136/6/2306},   
+                                                            ^
+Warning 1 in msf.tex line 822: Command terminated with space.
+  \href {http://adsabs.harvard.edu/abs/2008AJ....136.2306H} {136, 2306}   
+       ^
+Warning 1 in msf.tex line 826: Command terminated with space.
+{Jones} D.~O.,  et~al., 2013, \mn@doi [\apj] {10.1088/0004-637X/768/2/166},   
+                                     ^
+Warning 8 in msf.tex line 826: Wrong length of dash may have been used.
+{Jones} D.~O.,  et~al., 2013, \mn@doi [\apj] {10.1088/0004-637X/768/2/166},   
+                                                          ^
+Warning 1 in msf.tex line 827: Command terminated with space.
+  \href {http://adsabs.harvard.edu/abs/2013ApJ...768..166J} {768, 166}   
+       ^
+Warning 12 in msf.tex line 832: Interword spacing (`\ ') should perhaps be used.
+  \#231. p. 308.06   
+        ^
+Warning 13 in msf.tex line 836: Intersentence spacing (`\@') should perhaps be used.
+{Kaiser} N.,  et~al., 2010, in Ground-based and Airborne Telescopes III. p.   
+                                                                       ^
+Warning 1 in msf.tex line 841: Command terminated with space.
+{Kessler} R.,  et~al., 2009, \mn@doi [\apjs] {10.1088/0067-0049/185/1/32},   
+                                    ^
+Warning 8 in msf.tex line 841: Wrong length of dash may have been used.
+{Kessler} R.,  et~al., 2009, \mn@doi [\apjs] {10.1088/0067-0049/185/1/32},   
+                                                          ^
+Warning 1 in msf.tex line 842: Command terminated with space.
+  \href {http://adsabs.harvard.edu/abs/2009ApJS..185...32K} {185, 32}   
+       ^
+Warning 1 in msf.tex line 845: Command terminated with space.
+{Lien} A.,  et~al., 2016, \mn@doi [\apj] {10.3847/0004-637X/829/1/7}, \href   
+                                 ^
+Warning 8 in msf.tex line 845: Wrong length of dash may have been used.
+{Lien} A.,  et~al., 2016, \mn@doi [\apj] {10.3847/0004-637X/829/1/7}, \href   
+                                                      ^
+Warning 1 in msf.tex line 845: Command terminated with space.
+{Lien} A.,  et~al., 2016, \mn@doi [\apj] {10.3847/0004-637X/829/1/7}, \href   
+                                                                           ^
+Warning 11 in msf.tex line 846: You should use \ldots to achieve an ellipsis.
+  {http://adsabs.harvard.edu/abs/2016ApJ...829....7L} {829, 7}   
+                                        ^^^
+Warning 11 in msf.tex line 846: You should use \ldots to achieve an ellipsis.
+  {http://adsabs.harvard.edu/abs/2016ApJ...829....7L} {829, 7}   
+                                              ^^^
+Warning 11 in msf.tex line 846: You should use \ldots to achieve an ellipsis.
+  {http://adsabs.harvard.edu/abs/2016ApJ...829....7L} {829, 7}   
+                                               ^^^
+Warning 1 in msf.tex line 850: Command terminated with space.
+{Mather} J.~C.,  et~al., 1990, \mn@doi [\apj] {10.1086/185717}, \href   
+                                      ^
+Warning 1 in msf.tex line 850: Command terminated with space.
+{Mather} J.~C.,  et~al., 1990, \mn@doi [\apj] {10.1086/185717}, \href   
+                                                                     ^
+Warning 11 in msf.tex line 851: You should use \ldots to achieve an ellipsis.
+  {https://ui.adsabs.harvard.edu/#abs/1990ApJ...354L..37M} {354, L37}   
+                                             ^^^
+Warning 1 in msf.tex line 856: Command terminated with space.
+  Italiana, \href {https://ui.adsabs.harvard.edu/#abs/2000MmSAI..71..299M} {71,   
+                 ^
+Warning 1 in msf.tex line 865: Command terminated with space.
+{Riess} A.~G.,  et~al., 2007, \mn@doi [\apj] {10.1086/510378}, \href   
+                                     ^
+Warning 1 in msf.tex line 865: Command terminated with space.
+{Riess} A.~G.,  et~al., 2007, \mn@doi [\apj] {10.1086/510378}, \href   
+                                                                    ^
+Warning 11 in msf.tex line 866: You should use \ldots to achieve an ellipsis.
+  {http://adsabs.harvard.edu/abs/2007ApJ...659...98R} {659, 98}   
+                                        ^^^
+Warning 11 in msf.tex line 866: You should use \ldots to achieve an ellipsis.
+  {http://adsabs.harvard.edu/abs/2007ApJ...659...98R} {659, 98}   
+                                              ^^^
+Warning 1 in msf.tex line 870: Command terminated with space.
+{Scolnic} D.~M.,  et~al., 2017, preprint, \href   
+                                               ^
+Warning 1 in msf.tex line 871: Command terminated with space.
+  {http://adsabs.harvard.edu/abs/2017arXiv171000845S} {} (\mn@eprint {arXiv}   
+                                                                    ^
+Warning 1 in msf.tex line 876: Command terminated with space.
+{Scolnic} D.~M.,  et~al., 2018, \mn@doi [\apj] {10.3847/1538-4357/aab9bb},   
+                                       ^
+Warning 8 in msf.tex line 876: Wrong length of dash may have been used.
+{Scolnic} D.~M.,  et~al., 2018, \mn@doi [\apj] {10.3847/1538-4357/aab9bb},   
+                                                            ^
+Warning 1 in msf.tex line 877: Command terminated with space.
+  \href {https://ui.adsabs.harvard.edu/#abs/2018ApJ...859..101S} {859, 101}   
+       ^
+Warning 1 in msf.tex line 881: Command terminated with space.
+{Sullivan} M.,  et~al., 2011, \mn@doi [\apj] {10.1088/0004-637X/737/2/102},   
+                                     ^
+Warning 8 in msf.tex line 881: Wrong length of dash may have been used.
+{Sullivan} M.,  et~al., 2011, \mn@doi [\apj] {10.1088/0004-637X/737/2/102},   
+                                                          ^
+Warning 1 in msf.tex line 882: Command terminated with space.
+  \href {http://adsabs.harvard.edu/abs/2011ApJ...737..102S} {737, 102}   
+       ^
+Warning 1 in msf.tex line 889: Command terminated with space.
+{Zhang} F.-W.,  {Fan} Y.-Z.,  {Shao} L.,   {Wei} D.-M.,  2013, \mn@doi [\apjl]   
+                                                                      ^
+Warning 8 in msf.tex line 890: Wrong length of dash may have been used.
+  {10.1088/2041-8205/778/1/L11}, \href   
+               ^
+Warning 1 in msf.tex line 890: Command terminated with space.
+  {10.1088/2041-8205/778/1/L11}, \href   
+                                      ^
+Warning 11 in msf.tex line 891: You should use \ldots to achieve an ellipsis.
+  {http://adsabs.harvard.edu/abs/2013ApJ...778L..11Z} {778, L11}   
+                                        ^^^
+Warning 1 in msf.tex line 894: Command terminated with space.
+{Zwicky} F.,  1937, \mn@doi [\apj] {10.1086/143864}, \href   
+                           ^
+Warning 1 in msf.tex line 894: Command terminated with space.
+{Zwicky} F.,  1937, \mn@doi [\apj] {10.1086/143864}, \href   
+                                                          ^
+Warning 11 in msf.tex line 895: You should use \ldots to achieve an ellipsis.
+  {https://ui.adsabs.harvard.edu/#abs/1937ApJ....86..217Z} {86, 217}   
+                                             ^^^
+Warning 11 in msf.tex line 895: You should use \ldots to achieve an ellipsis.
+  {https://ui.adsabs.harvard.edu/#abs/1937ApJ....86..217Z} {86, 217}   
+                                              ^^^
+Warning 15 in msf.tex line 813: No match found for `{'.
+  {http://adsabs.harvard.edu/abs/2010A%26A...523A...7G} {523, A7}   
+  ^
+Warning 15 in msf.tex line 809: No match found for `{'.
+  {http://adsabs.harvard.edu/abs/2007A%26A...466...11G} {466, 11}   
+  ^
+Warning 15 in msf.tex line 799: No match found for `{'.
+  {http://adsabs.harvard.edu/abs/2001A%26A...380....6G} {380, 6}   
+  ^
+Warning 15 in msf.tex line 690: No match found for `{'.
+  \href {http://adsabs.harvard.edu/abs/2014A%26A...568A..22B} {568, A22}   
+        ^
+Warning 15 in msf.tex line 661: No match found for `{'.
+\def\mn@doi{\begingroup\mn@urlcharsother \@ifnextchar [ {\mn@doi@}   
+           ^
+Warning 15 in msf.tex line 529: No match found for `('.
+\item The CMBR radiation has temperature of $3.18$ K (Section~\ref{s8.5}.   
+                                                     ^
+Warning 17 in msf.tex line 900: Number of `(' doesn't match the number of `)'!
+
+
+Warning 17 in msf.tex line 900: Number of `[' doesn't match the number of `]'!
+
+
+Warning 17 in msf.tex line 900: Number of `{' doesn't match the number of `}'!
+
+

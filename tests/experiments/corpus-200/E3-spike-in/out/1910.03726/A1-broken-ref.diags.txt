@@ -1,0 +1,3 @@
+planted=sec:prelims__ghost sites=[('mgrit_cg_selection.xtex', 133)]
+xtex new=[('XT1003', 'sec:prelims__ghost', 'mgrit_cg_selection.xtex', 133)]
+texlab new=[('ERROR', 'mgrit_cg_selection.tex', 133, 'Undefined reference'), ('info', 'mgrit_cg_selection.tex', 139, 'Unused label')]

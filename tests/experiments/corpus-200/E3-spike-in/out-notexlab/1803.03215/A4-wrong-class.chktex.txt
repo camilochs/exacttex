@@ -1,0 +1,125 @@
+exit=2
+lines=522
+unique_findings=96
+nd from the Extrapolation B (Extrap B) method \cite{ExtrapolationMethods:2009} at $N_{\rm max} \leq 10$ are provided. Similar to the ANN prediction, the Extrap B result arises when using all available results through $N_{\rm max}=10$. The ANN prediction for the gs energy is below the best upper bound, found at $N_{\rm max}=18$, which is about 85 $KeV$ lower than the Extrap B result.  
+                                                                                                                                                                                                                                                                                                                                                                                   ^^^
+Warning 35 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 913: You should perhaps use `\max' instead.
+Table~\ref{tab:results} presents the nearly converged ANN predicted results for the gs energy and the gs point proton rms radius of $^6\mathrm{Li}$. As a comparison, the gs energy results from the current best theoretical upper bounds at $N_{\rm max} = 10$ and $N_{\rm max} = 18$ and from the Extrapolation B (Extrap B) method \cite{ExtrapolationMethods:2009} at $N_{\rm max} \leq 10$ are provided. Similar to the ANN prediction, the Extrap B result arises when using all available results through $N_{\rm max}=10$. The ANN prediction for the gs energy is below the best upper bound, found at $N_{\rm max}=18$, which is about 85 $KeV$ lower than the Extrap B result.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^^^
+Warning 35 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 913: You should perhaps use `\max' instead.
+Table~\ref{tab:results} presents the nearly converged ANN predicted results for the gs energy and the gs point proton rms radius of $^6\mathrm{Li}$. As a comparison, the gs energy results from the current best theoretical upper bounds at $N_{\rm max} = 10$ and $N_{\rm max} = 18$ and from the Extrapolation B (Extrap B) method \cite{ExtrapolationMethods:2009} at $N_{\rm max} \leq 10$ are provided. Similar to the ANN prediction, the Extrap B result arises when using all available results through $N_{\rm max}=10$. The ANN prediction for the gs energy is below the best upper bound, found at $N_{\rm max}=18$, which is about 85 $KeV$ lower than the Extrap B result.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ^^^
+Warning 2 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 915: Non-breaking space (`~') should have been used.
+There is no extrapolation available for the rms radius, but we quote in Table~\ref{tab:results} the estimated result by the \textit{crossover-point} method \cite{BOGNER:200821} to be $\sim2.40$ $fm$. The \textit{crossover-point} method takes the value at $\hbar\Omega$ in the table of rms radii results through $N_{\rm max}=10$, which produces an rms radius result that is roughly independent of $N_{\rm max}$.  
+                                                                                                                                                           ^
+Warning 35 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 915: You should perhaps use `\max' instead.
+There is no extrapolation available for the rms radius, but we quote in Table~\ref{tab:results} the estimated result by the \textit{crossover-point} method \cite{BOGNER:200821} to be $\sim2.40$ $fm$. The \textit{crossover-point} method takes the value at $\hbar\Omega$ in the table of rms radii results through $N_{\rm max}=10$, which produces an rms radius result that is roughly independent of $N_{\rm max}$.  
+                                                                                                                                                                                                                                                                                                                               ^^^
+Warning 35 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 915: You should perhaps use `\max' instead.
+There is no extrapolation available for the rms radius, but we quote in Table~\ref{tab:results} the estimated result by the \textit{crossover-point} method \cite{BOGNER:200821} to be $\sim2.40$ $fm$. The \textit{crossover-point} method takes the value at $\hbar\Omega$ in the table of rms radii results through $N_{\rm max}=10$, which produces an rms radius result that is roughly independent of $N_{\rm max}$.  
+                                                                                                                                                                                                                                                                                                                                                                                                                    ^^^
+Warning 24 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 924: Delete this space to maintain correct pagereferences.
+  \label{tab:results}  
+ ^
+Warning 44 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 928: User Regex: -2:Vertical rules in tables are ugly.
+    \begin{tabular}{c|c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between  
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 35 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 931: You should perhaps use `\max' instead.
+      & $N_{\rm max}=10$ & $N_{\rm max}=18$ & $N_{\rm max} \leq 10$ & $N_{\rm max} \leq 10$ \\  
+                ^^^
+Warning 35 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 931: You should perhaps use `\max' instead.
+      & $N_{\rm max}=10$ & $N_{\rm max}=18$ & $N_{\rm max} \leq 10$ & $N_{\rm max} \leq 10$ \\  
+                                   ^^^
+Warning 35 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 931: You should perhaps use `\max' instead.
+      & $N_{\rm max}=10$ & $N_{\rm max}=18$ & $N_{\rm max} \leq 10$ & $N_{\rm max} \leq 10$ \\  
+                                                      ^^^
+Warning 35 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 931: You should perhaps use `\max' instead.
+      & $N_{\rm max}=10$ & $N_{\rm max}=18$ & $N_{\rm max} \leq 10$ & $N_{\rm max} \leq 10$ \\  
+                                                                              ^^^
+Warning 44 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 932: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+      \hline  
+      ^^^^^^
+Warning 44 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 934: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+       \hline  
+       ^^^^^^
+Warning 8 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 935: Wrong length of dash may have been used.
+      gs rms radius ($fm$) & -- & -- & 2.40 & 2.49 \\  
+                             ^^
+Warning 8 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 935: Wrong length of dash may have been used.
+      gs rms radius ($fm$) & -- & -- & 2.40 & 2.49 \\  
+                                  ^^
+Warning 44 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 936: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+      \hline  
+      ^^^^^^
+Warning 2 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 950: Non-breaking space (`~') should have been used.
+         \item [a] The Extrap B method \cite{ExtrapolationMethods:2009} for the gs energy and the crossover-point method \cite{BOGNER:200821} for\\ the gs point proton rms radius  
+                                      ^
+Warning 2 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 950: Non-breaking space (`~') should have been used.
+         \item [a] The Extrap B method \cite{ExtrapolationMethods:2009} for the gs energy and the crossover-point method \cite{BOGNER:200821} for\\ the gs point proton rms radius  
+                                                                                                                        ^
+Warning 35 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 959: You should perhaps use `\max' instead.
+It is clearly seen from Figures~\ref{fig:Li6_gs_energy_cp} and~\ref{fig:Li6_gs_radius_cp} above that the ANN method results are consistent with the NCSM calculation results using the Daejeon16 NN interaction at $N_{\rm max} = 12, 14, 16,$ and $18$. Table~\ref{tab:results} also shows that ANN's results are consistent with the best available upper bound in the case of the gs energy. The ANN's prediction for the converged rms radius is slightly larger than the result from the \textit{crossover-point} method and more consistent with the trends visible in Figure~\ref{fig:Li6_gs_radius_cp} at the higher $N_{\rm max}$ values.  
+                                                                                                                                                                                                                           ^^^
+Warning 40 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 959: You should put punctuation outside inner math mode.
+It is clearly seen from Figures~\ref{fig:Li6_gs_energy_cp} and~\ref{fig:Li6_gs_radius_cp} above that the ANN method results are consistent with the NCSM calculation results using the Daejeon16 NN interaction at $N_{\rm max} = 12, 14, 16,$ and $18$. Table~\ref{tab:results} also shows that ANN's results are consistent with the best available upper bound in the case of the gs energy. The ANN's prediction for the converged rms radius is slightly larger than the result from the \textit{crossover-point} method and more consistent with the trends visible in Figure~\ref{fig:Li6_gs_radius_cp} at the higher $N_{\rm max}$ values.  
+                                                                                                                                                                                                                                            ^
+Warning 35 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 959: You should perhaps use `\max' instead.
+It is clearly seen from Figures~\ref{fig:Li6_gs_energy_cp} and~\ref{fig:Li6_gs_radius_cp} above that the ANN method results are consistent with the NCSM calculation results using the Daejeon16 NN interaction at $N_{\rm max} = 12, 14, 16,$ and $18$. Table~\ref{tab:results} also shows that ANN's results are consistent with the best available upper bound in the case of the gs energy. The ANN's prediction for the converged rms radius is slightly larger than the result from the \textit{crossover-point} method and more consistent with the trends visible in Figure~\ref{fig:Li6_gs_radius_cp} at the higher $N_{\rm max}$ values.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^^^
+Warning 35 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 961: You should perhaps use `\max' instead.
+To measure the performance of ANNs, MSE for the training subsets up through $N_{\rm max} = 10$, as well as on the second test set for data at $N_{\rm max} = 12, 14, 16,$ and $18$, are provided in Table~\ref{fig:planted_wrongclass}.  
+                                                                                    ^^^
+Warning 35 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 961: You should perhaps use `\max' instead.
+To measure the performance of ANNs, MSE for the training subsets up through $N_{\rm max} = 10$, as well as on the second test set for data at $N_{\rm max} = 12, 14, 16,$ and $18$, are provided in Table~\ref{fig:planted_wrongclass}.  
+                                                                                                                                                      ^^^
+Warning 40 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 961: You should put punctuation outside inner math mode.
+To measure the performance of ANNs, MSE for the training subsets up through $N_{\rm max} = 10$, as well as on the second test set for data at $N_{\rm max} = 12, 14, 16,$ and $18$, are provided in Table~\ref{fig:planted_wrongclass}.  
+                                                                                                                                                                       ^
+Warning 35 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 965: You should perhaps use `\max' instead.
+  \caption{The MSE performance function values on the training and testing data sets and on the $N_{\rm max} = 12, 14, 16,$ and $18$ data set.}  
+                                                                                                        ^^^
+Warning 40 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 965: You should put punctuation outside inner math mode.
+  \caption{The MSE performance function values on the training and testing data sets and on the $N_{\rm max} = 12, 14, 16,$ and $18$ data set.}  
+                                                                                                                         ^
+Warning 24 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 966: Delete this space to maintain correct pagereferences.
+  \label{fig:planted_wrongclass}  
+ ^
+Warning 44 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 969: User Regex: -2:Vertical rules in tables are ugly.
+    \begin{tabular}{c|c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between  
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 35 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 972: You should perhaps use `\max' instead.
+                    & $N_{\rm max}\leq10$ & $N_{\rm max}\leq10$ & $N_{\rm max}\leq10$ & $N_{\rm max}=12-18$ \\  
+                              ^^^
+Warning 35 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 972: You should perhaps use `\max' instead.
+                    & $N_{\rm max}\leq10$ & $N_{\rm max}\leq10$ & $N_{\rm max}\leq10$ & $N_{\rm max}=12-18$ \\  
+                                                    ^^^
+Warning 35 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 972: You should perhaps use `\max' instead.
+                    & $N_{\rm max}\leq10$ & $N_{\rm max}\leq10$ & $N_{\rm max}\leq10$ & $N_{\rm max}=12-18$ \\  
+                                                                          ^^^
+Warning 35 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 972: You should perhaps use `\max' instead.
+                    & $N_{\rm max}\leq10$ & $N_{\rm max}\leq10$ & $N_{\rm max}\leq10$ & $N_{\rm max}=12-18$ \\  
+                                                                                                ^^^
+Warning 44 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 973: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+      \hline  
+      ^^^^^^
+Warning 44 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 976: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+       \hline  
+       ^^^^^^
+Warning 35 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 1156: You should perhaps use `\max' instead.
+The data set from the ab initio NCSM calculations using the Daejeon16 NN interaction and basis spaces up through $N_{\rm max} = 10$ was divided into two subsets: 85\% for the training set and 15\% for the testing set. Bayesian regularization was used for training and doesn't require a validation set.  
+                                                                                                                         ^^^
+Warning 13 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 1158: Intersentence spacing (`\@') should perhaps be used.
+The designed ANNs were sufficient to produce results for these two very different observables in $^6\mathrm{Li}$ from the ab initio NCSM. The gs energy and the gs point proton rms radius showed good convergence patterns and satisfy the theoretical physics condition, independence of basis space parameters in the limit of extremely large matrices. Comparisons of the results from ANNs with established methods of estimating the results in the infinite matrix limit are also provided.  
+                                                                                                                                        ^
+Warning 8 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 1174: Wrong length of dash may have been used.
+This work was supported by the Department of Energy under Grant Nos. DE-FG02-87ER40371   
+                                                                            ^
+Warning 8 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 1175: Wrong length of dash may have been used.
+and DESC000018223 (SciDAC-4/NUCLEI). The work of A.M.S. was supported by the Russian Science Foundation under Project No. 16-12-10048. Computational resources were provided by the National Energy Research Scientific Computing Center (NERSC), which is supported by the Office of Science of the U.S. DOE under Contract No. DE-AC02-05CH11231.  
+                                                                                                                            ^
+Warning 8 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 1175: Wrong length of dash may have been used.
+and DESC000018223 (SciDAC-4/NUCLEI). The work of A.M.S. was supported by the Russian Science Foundation under Project No. 16-12-10048. Computational resources were provided by the National Energy Research Scientific Computing Center (NERSC), which is supported by the Office of Science of the U.S. DOE under Contract No. DE-AC02-05CH11231.  
+                                                                                                                               ^
+Warning 8 in 2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex line 1175: Wrong length of dash may have been used.
+and DESC000018223 (SciDAC-4/NUCLEI). The work of A.M.S. was supported by the Russian Science Foundation under Project No. 16-12-10048. Computational resources were provided by the National Energy Research Scientific Computing Center (NERSC), which is supported by the Office of Science of the U.S. DOE under Contract No. DE-AC02-05CH11231.  
+                                                                                                                                                                                                                                                                                                                                        ^

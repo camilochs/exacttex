@@ -1,0 +1,25 @@
+tectonic pdf bytes=2541430
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=['eq.work', 'eq:Omega', 'rho_dynamics'] secs=6
+hbox (badness 10000) in paragraph at lines 347--349
+warning: Main_SI_combined.tex:406: Underfull \hbox (badness 10000) in paragraph at lines 403--406
+warning: Main_SI_combined.tex:414: Overfull \hbox (115.58624pt too wide) in alignment at lines 414--414
+warning: Main_SI_combined.tex:435: Overfull \vbox (11.58829pt too high) has occurred while \output is active
+warning: Main_SI_combined.tex:468: Underfull \hbox (badness 10000) in paragraph at lines 466--468
+warning: Main_SI_combined.tex:127: Overfull \hbox (11.01813pt too wide) in alignment at lines 125--127
+warning: Main_SI_combined.tex:172: Underfull \hbox (badness 1371) in paragraph at lines 171--172
+warning: Main_SI_combined.tex:174: Underfull \hbox (badness 1242) in paragraph at lines 173--174
+warning: Main_SI_combined.tex:183: Underfull \hbox (badness 1028) in paragraph at lines 182--183
+warning: Main_SI_combined.tex:187: Underfull \hbox (badness 1824) in paragraph at lines 186--187
+warning: Main_SI_combined.tex:187: Underfull \hbox (badness 1478) in paragraph at lines 186--187
+warning: Main_SI_combined.tex:187: Underfull \hbox (badness 10000) in paragraph at lines 186--187
+warning: Main_SI_combined.tex:206: Overfull \hbox (4.08115pt too wide) in alignment at lines 202--206
+warning: Main_SI_combined.tex:212: Overfull \hbox (13.46309pt too wide) in alignment at lines 210--212
+warning: Main_SI_combined.tex:349: Underfull \hbox (badness 10000) in paragraph at lines 347--349
+warning: Main_SI_combined.tex:406: Underfull \hbox (badness 10000) in paragraph at lines 403--406
+warning: Main_SI_combined.tex:414: Overfull \hbox (115.58624pt too wide) in alignment at lines 414--414
+warning: Main_SI_combined.tex:435: Overfull \vbox (11.58829pt too high) has occurred while \output is active
+warning: Main_SI_combined.tex:468: Underfull \hbox (badness 10000) in paragraph at lines 466--468
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: Object @equation.B.13 already defined.

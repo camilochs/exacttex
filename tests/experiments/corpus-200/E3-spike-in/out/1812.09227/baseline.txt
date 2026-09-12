@@ -1,0 +1,28 @@
+tectonic pdf bytes=3179505
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'main.tex', 69, 'Duplicate label'), ('ERROR', 'main.tex', 77, 'Duplicate label'), ('info', 'aastex6.cls', 5013, 'Unused label'), ('info', 'main.tex', 51, 'Unused label'), ('info', 'main.tex', 69, 'Unused label'), ('info', 'main.tex', 77, 'Unused label'), ('info', 'main.tex', 314, 'Unused label'), ('info', 'main.tex', 502, 'Unused label'), ('info', 'main.tex', 518, 'Unused label'), ('info', 'main.tex', 532, 'Unused label'), ('info', 'main.tex', 544, 'Unused label'), ('info', 'main.tex', 668, 'Unused entry'), ('info', 'main.tex', 672, 'Unused entry')]
+tectonic exit=0 warnings=['eqn:CalcAmp'] secs=3
+: Overfull \hbox (11.21132pt too wide) in alignment at lines 448--448
+warning: main.tex:448: Overfull \hbox (11.21132pt too wide) in alignment at lines 448--448
+warning: main.tex:448: Overfull \hbox (11.21132pt too wide) in alignment at lines 448--448
+warning: main.tex:448: Overfull \hbox (11.21132pt too wide) in alignment at lines 448--448
+warning: main.tex:449: Underfull \hbox (badness 10000) detected at line 449
+warning: main.tex:450: Underfull \hbox (badness 10000) detected at line 450
+warning: main.tex:451: Underfull \hbox (badness 10000) detected at line 451
+warning: main.tex:452: Underfull \hbox (badness 10000) detected at line 452
+warning: main.tex:453: Underfull \hbox (badness 10000) detected at line 453
+warning: main.tex:454: Overfull \hbox (40.60341pt too wide) detected at line 454
+warning: main.tex:469: Overfull \hbox (10.26453pt too wide) in paragraph at lines 468--469
+warning: main.tex:478: Overfull \hbox (10.26453pt too wide) in paragraph at lines 477--478
+warning: main.tex:494: Overfull \hbox (10.26453pt too wide) in paragraph at lines 493--494
+warning: main.tex:507: Overfull \hbox (9.16383pt too wide) in paragraph at lines 506--507
+warning: main.tex:513: Underfull \hbox (badness 1270) in paragraph at lines 512--513
+warning: main.tex:523: Overfull \hbox (9.16383pt too wide) in paragraph at lines 522--523
+warning: main.tex:540: Overfull \hbox (9.16383pt too wide) in paragraph at lines 539--540
+warning: main.tex:606: Underfull \hbox (badness 10000) detected at line 606
+warning: main.tex:607: Underfull \hbox (badness 10000) detected at line 607
+warning: main.tex:608: Underfull \hbox (badness 10000) detected at line 608
+warning: main.tex:609: Underfull \hbox (badness 10000) detected at line 609
+warning: main.tex:624: Underfull \hbox (badness 10000) in paragraph at lines 623--624
+warning: main.tex:624: Underfull \hbox (badness 4886) in paragraph at lines 623--624
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

@@ -1,0 +1,183 @@
+{
+ "paper": "2312.17127",
+ "main": "popl24.tex",
+ "files": [
+  {
+   "file": "popl24.tex",
+   "chars_before": 14542,
+   "chars_after": 14574,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "introduction.tex",
+   "chars_before": 19916,
+   "chars_after": 19880,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "programming_with_graphs.tex",
+   "chars_before": 42212,
+   "chars_after": 42146,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "equations_to_graphons.tex",
+   "chars_before": 12913,
+   "chars_after": 12895,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "graphons_to_equations_syntactic.tex",
+   "chars_before": 12685,
+   "chars_after": 12655,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "random_free.tex",
+   "chars_before": 7717,
+   "chars_after": 7696,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "rado_nominal_sets.tex",
+   "chars_before": 12313,
+   "chars_after": 12289,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "graphons_to_equations.tex",
+   "chars_before": 18046,
+   "chars_after": 18004,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "related_work.tex",
+   "chars_before": 5030,
+   "chars_after": 5027,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 9,
+ "chars_before": 145374,
+ "chars_after": 145166,
+ "delta_pct": -0.14307923012368098,
+ "unrepaired": {
+  "chars_after": 145166,
+  "chars_before": 145374,
+  "converted_files": 9,
+  "check_exit": 0,
+  "coverage": 0.054597,
+  "bibliography": {
+   "state": "complete",
+   "entries": 125
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.14307923012368098
+ },
+ "stats": {
+  "cite_cmds_live": 99,
+  "cite_keys_live": 141,
+  "cite_with_optarg_or_star": 21,
+  "cite_keys_outside_grammar": 1,
+  "other_cite_cmds": 0,
+  "labels_live": 80,
+  "labels_outside_grammar": 0,
+  "refs_live": 163,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 43,
+  "float_envs": 1,
+  "cite_cmds_annotated": 70,
+  "cite_keys_annotated": 109,
+  "ids_annotated": 80,
+  "refs_annotated": 162,
+  "inputs_root": 8,
+  "inputs_imported": 8,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 8,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "introduction.tex",
+   "line": 303,
+   "token": "@ref(sec:relatedwork)",
+   "wrapper": "?",
+   "context": "well explored -- see Section~\\ref{sec:relatedwork} for further discussion."
+  },
+  {
+   "file": "programming_with_graphs.tex",
+   "line": 235,
+   "token": "@cite(dario-thesis)",
+   "wrapper": "?",
+   "context": "\\begin{proposition}[e.g.~\\cite{dario-thesis}, \\S7.1]"
+  },
+  {
+   "file": "programming_with_graphs.tex",
+   "line": 306,
+   "token": "@cite(kock-comm,jacobs-weakening,lindner-affine)",
+   "wrapper": "?",
+   "context": "\\begin{definition}[\\hspace{1sp}\\cite{kock-comm,jacobs-weakening,lindner-affine}]\\label{def:affine-monad}"
+  },
+  {
+   "file": "programming_with_graphs.tex",
+   "line": 347,
+   "token": "@cite(jacobs-coalgebra)",
+   "wrapper": "?",
+   "context": "\\begin{definition}[e.g.~\\cite{jacobs-coalgebra}, \\S4.1]\\label{def:distribution-monad} The distribution monad $\\DistM$ on $\\Set$ is defined as follows:"
+  },
+  {
+   "file": "programming_with_graphs.tex",
+   "line": 469,
+   "token": "@cite(giry)",
+   "wrapper": "?",
+   "context": "\\begin{definition}[\\hspace{1sp}\\cite{giry}]\\label{def:giry}"
+  },
+  {
+   "file": "equations_to_graphons.tex",
+   "line": 53,
+   "token": "@cite(MR3012035)",
+   "wrapper": "?",
+   "context": "\\begin{definition}[e.g.~\\cite{MR3012035}]"
+  },
+  {
+   "file": "equations_to_graphons.tex",
+   "line": 71,
+   "token": "@cite(lovasz-2006)",
+   "wrapper": "?",
+   "context": "\\begin{proposition}[\\hspace{1sp}\\cite{lovasz-2006}, {\\cite[\\S11.2]{MR3012035}}]%[Exchangeable consistent local"
+  },
+  {
+   "file": "rado_nominal_sets.tex",
+   "line": 58,
+   "token": "@cite(pitts-nom-book)",
+   "wrapper": "?",
+   "context": "\\begin{proposition}[\\hspace{1sp}\\cite{pitts-nom-book}]"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.054597,
+ "bibliography": {
+  "state": "complete",
+  "entries": 125
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

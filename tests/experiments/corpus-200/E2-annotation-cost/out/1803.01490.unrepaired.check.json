@@ -1,0 +1,25 @@
+{
+ "coverage": 0.019448,
+ "bibliography": {
+  "state": "complete",
+  "entries": 42
+ },
+ "diagnostics": [
+  {
+   "code": "XT1005",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "citation",
+   "name": "Forster",
+   "span": {
+    "file": "ManuscriptSpinSR_Feb16Arxiv.xtex",
+    "offset": 18756,
+    "length": 7,
+    "line": 187,
+    "column": 121
+   },
+   "message": "citation key `Forster` is not in the bibliography",
+   "related": []
+  }
+ ]
+}

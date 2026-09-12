@@ -1,0 +1,3 @@
+planted=prop1 sites=[('uniquely_remotal_in_l_1.xtex', 92), ('uniquely_remotal_in_l_1.xtex', 61)]
+xtex new=[('XT1001', 'prop1', 'uniquely_remotal_in_l_1.xtex', 92)]
+texlab new=[('ERROR', 'uniquely_remotal_in_l_1.tex', 61, 'Duplicate label'), ('ERROR', 'uniquely_remotal_in_l_1.tex', 92, 'Duplicate label')]

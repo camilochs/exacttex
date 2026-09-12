@@ -1,0 +1,25 @@
+{
+ "coverage": 0.015174,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`p4.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "paper.xtex",
+    "offset": 8919,
+    "length": 9,
+    "line": 205,
+    "column": 17
+   },
+   "message": "citation checking unavailable: `p4.bib` could not be read",
+   "related": []
+  }
+ ]
+}

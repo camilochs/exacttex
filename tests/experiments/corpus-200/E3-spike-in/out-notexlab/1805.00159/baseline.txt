@@ -1,0 +1,12 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=[] secs=2
+warning: fontenc.sty:112: 
+Requested font "ec-lmr9" at 9.0pt
+warning: fontenc.sty:112:  -> ec-lmr9
+error: amssymb.sty:261: LaTeX Error: Command `\Bbbk' already defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+error: halted on potentially-recoverable error as specified

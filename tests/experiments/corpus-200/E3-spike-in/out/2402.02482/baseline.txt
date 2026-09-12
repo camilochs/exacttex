@@ -1,0 +1,12 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'main.tex', 409, 'Duplicate label'), ('ERROR', 'main.tex', 629, 'Duplicate label'), ('info', 'main.tex', 409, 'Unused label'), ('info', 'main.tex', 424, 'Unused label'), ('info', 'main.tex', 556, 'Unused label'), ('info', 'main.tex', 560, 'Unused label'), ('info', 'main.tex', 568, 'Unused label'), ('info', 'main.tex', 629, 'Unused label'), ('info', 'main.tex', 634, 'Unused label'), ('info', 'main.tex', 659, 'Unused label'), ('info', 'main.tex', 777, 'Unused label'), ('info', 'main.tex', 1047, 'Unused label'), ('info', 'main.tex', 1058, 'Unused label'), ('info', 'references.bib', 47, 'Unused entry'), ('info', 'references.bib', 77, 'Unused entry'), ('info', 'references.bib', 108, 'Unused entry'), ('info', 'references.bib', 119, 'Unused entry'), ('info', 'references.bib', 129, 'Unused entry'), ('info', 'references.bib', 157, 'Unused entry'), ('info', 'references.bib', 167, 'Unused entry'), ('info', 'references.bib', 177, 'Unused entry'), ('info', 'references.bib', 191, 'Unused entry'), ('info', 'references.bib', 210, 'Unused entry'), ('info', 'references.bib', 220, 'Unused entry'), ('info', 'references.bib', 265, 'Unused entry'), ('info', 'references.bib', 290, 'Unused entry'), ('info', 'references.bib', 320, 'Unused entry'), ('info', 'references.bib', 360, 'Unused entry'), ('info', 'references.bib', 400, 'Unused entry'), ('info', 'references.bib', 408, 'Unused entry'), ('info', 'references.bib', 462, 'Unused entry'), ('info', 'references.bib', 521, 'Unused entry'), ('info', 'references.bib', 531, 'Unused entry'), ('info', 'references.bib', 553, 'Unused entry'), ('info', 'references.bib', 573, 'Unused entry')]
+tectonic exit=1 warnings=[] secs=2
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+error: hyperref.sty:4018: Package hyperref Error: Wrong driver option `pdftex',
+(hyperref)                because pdfTeX in PDF mode is not detected.
+
+See the hyperref package documentation for explanation.
+Type  H <return>  for immediate help
+error: halted on potentially-recoverable error as specified

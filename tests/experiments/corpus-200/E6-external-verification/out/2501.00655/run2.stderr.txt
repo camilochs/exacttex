@@ -1,0 +1,3 @@
+128 claims: 128 fresh and carried over, 0 to verify
+network: 0 requests () · 0 retries · 0 bytes down · 0 fetched, 128 carried over, 0 unanswered
+record: 128 claims → .xtexverified

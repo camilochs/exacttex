@@ -1,0 +1,25 @@
+{
+ "coverage": 0.06646,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`bibfile.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "ancientCurveShortening.xtex",
+    "offset": 3814,
+    "length": 27,
+    "line": 77,
+    "column": 317
+   },
+   "message": "citation checking unavailable: `bibfile.bib` could not be read",
+   "related": []
+  }
+ ]
+}

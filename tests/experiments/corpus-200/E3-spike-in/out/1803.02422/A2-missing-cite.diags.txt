@@ -1,0 +1,3 @@
+planted=Macskassy2007__ghost sites=[('main.xtex', 96)]
+xtex new=[]
+texlab new=[('ERROR', 'main.tex', 96, 'Undefined reference')]

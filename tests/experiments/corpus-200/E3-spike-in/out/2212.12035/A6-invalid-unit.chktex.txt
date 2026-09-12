@@ -1,0 +1,273 @@
+exit=2
+lines=7098
+unique_findings=1774
+ex line 243: No match found for `('.
+      t8 += (float4)(1.0f) * vload4(0, &t3[3*n1*get_global_id(0) + 4*((2+i2) % 3) + 12*get_global_id(0) + n1*((2+i2) % 3)]);  
+                                   ^
+Warning 15 in A-HarrisPrograms.tex line 237: No match found for `('.
+      t5 += (float4)(1.0f) * vload4(0, &t3[3*n1*get_global_id(0) + 4*((2+i2) % 3) + 12*get_global_id(0) + n1*((2+i2) % 3)]);  
+                                                                     ^
+Warning 15 in A-HarrisPrograms.tex line 237: No match found for `['.
+      t5 += (float4)(1.0f) * vload4(0, &t3[3*n1*get_global_id(0) + 4*((2+i2) % 3) + 12*get_global_id(0) + n1*((2+i2) % 3)]);  
+                                          ^
+Warning 15 in A-HarrisPrograms.tex line 237: No match found for `('.
+      t5 += (float4)(1.0f) * vload4(0, &t3[3*n1*get_global_id(0) + 4*((2+i2) % 3) + 12*get_global_id(0) + n1*((2+i2) % 3)]);  
+                                   ^
+Warning 15 in A-HarrisPrograms.tex line 229: No match found for `['.
+        vstore4(t4, 0, &t3[3*n1*get_global_id(0) + 4*i3 + 4*((2 + i2) % 3) + 12*get_global_id(0) + n1*((2 + i2) % 3)]);  
+                          ^
+Warning 15 in A-HarrisPrograms.tex line 229: No match found for `('.
+        vstore4(t4, 0, &t3[3*n1*get_global_id(0) + 4*i3 + 4*((2 + i2) % 3) + 12*get_global_id(0) + n1*((2 + i2) % 3)]);  
+               ^
+Warning 15 in A-HarrisPrograms.tex line 224: No match found for `{'.
+      for (int i3 = 0;(i3 < (n1 / 4));i3 = (1 + i3)) {  
+                                                     ^
+Warning 15 in A-HarrisPrograms.tex line 223: No match found for `{'.
+    for (int i2 = 0;(i2 < 2);i2 = (1 + i2)) {  
+                                            ^
+Warning 15 in A-HarrisPrograms.tex line 212: No match found for `{'.
+  for (int gid = get_global_id(0);(gid < (n0 / 32));gid = (gid + get_global_size(0))) {  
+                                                                                      ^
+Warning 15 in A-HarrisPrograms.tex line 211: No match found for `{'.
+            global float* restrict t1, global float* restrict t2, global float* restrict t3){  
+                                                                                            ^
+Warning 15 in A-HarrisPrograms.tex line 151: No match found for `['.
+        t9[5].a = vload4(0, &t2[4 + 3*n1*get_global_id(0) + 4*i8 + 4*((2+i5) % 3) + 12*get_global_id(0) + n1*((2+i5) % 3)]);  
+                               ^
+Warning 15 in A-HarrisPrograms.tex line 151: No match found for `('.
+        t9[5].a = vload4(0, &t2[4 + 3*n1*get_global_id(0) + 4*i8 + 4*((2+i5) % 3) + 12*get_global_id(0) + n1*((2+i5) % 3)]);  
+                        ^
+Warning 15 in A-HarrisPrograms.tex line 150: No match found for `('.
+        t9[4].b = vload4(0, &t1[3*n1*get_global_id(0) + 4*i8 + 4*((2+i5) % 3) + 12*get_global_id(0) + n1*((2+i5) % 3)]);  
+                                                                 ^
+Warning 15 in A-HarrisPrograms.tex line 150: No match found for `['.
+        t9[4].b = vload4(0, &t1[3*n1*get_global_id(0) + 4*i8 + 4*((2+i5) % 3) + 12*get_global_id(0) + n1*((2+i5) % 3)]);  
+                               ^
+Warning 15 in A-HarrisPrograms.tex line 150: No match found for `('.
+        t9[4].b = vload4(0, &t1[3*n1*get_global_id(0) + 4*i8 + 4*((2+i5) % 3) + 12*get_global_id(0) + n1*((2+i5) % 3)]);  
+                        ^
+Warning 15 in A-HarrisPrograms.tex line 149: No match found for `('.
+        t9[4].a = vload4(0, &t2[3*n1*get_global_id(0) + 4*i8 + 4*((2+i5) % 3) + 12*get_global_id(0) + n1*((2+i5) % 3)]);  
+                                                                 ^
+Warning 15 in A-HarrisPrograms.tex line 149: No match found for `['.
+        t9[4].a = vload4(0, &t2[3*n1*get_global_id(0) + 4*i8 + 4*((2+i5) % 3) + 12*get_global_id(0) + n1*((2+i5) % 3)]);  
+                               ^
+Warning 15 in A-HarrisPrograms.tex line 149: No match found for `('.
+        t9[4].a = vload4(0, &t2[3*n1*get_global_id(0) + 4*i8 + 4*((2+i5) % 3) + 12*get_global_id(0) + n1*((2+i5) % 3)]);  
+                        ^
+Warning 15 in A-HarrisPrograms.tex line 148: No match found for `('.
+        t9[3].b = vload4(0, &t1[4 + 3*n1*get_global_id(0) + 4*i8 + 4*((1+i5) % 3) + 12*get_global_id(0) + n1*((1+i5) % 3)]);  
+                                                                     ^
+Warning 15 in A-HarrisPrograms.tex line 148: No match found for `['.
+        t9[3].b = vload4(0, &t1[4 + 3*n1*get_global_id(0) + 4*i8 + 4*((1+i5) % 3) + 12*get_global_id(0) + n1*((1+i5) % 3)]);  
+                               ^
+Warning 15 in A-HarrisPrograms.tex line 148: No match found for `('.
+        t9[3].b = vload4(0, &t1[4 + 3*n1*get_global_id(0) + 4*i8 + 4*((1+i5) % 3) + 12*get_global_id(0) + n1*((1+i5) % 3)]);  
+                        ^
+Warning 15 in A-HarrisPrograms.tex line 147: No match found for `('.
+        t9[3].a = vload4(0, &t2[4 + 3*n1*get_global_id(0) + 4*i8 + 4*((1+i5) % 3) + 12*get_global_id(0) + n1*((1+i5) % 3)]);  
+                                                                     ^
+Warning 15 in A-HarrisPrograms.tex line 147: No match found for `['.
+        t9[3].a = vload4(0, &t2[4 + 3*n1*get_global_id(0) + 4*i8 + 4*((1+i5) % 3) + 12*get_global_id(0) + n1*((1+i5) % 3)]);  
+                               ^
+Warning 15 in A-HarrisPrograms.tex line 147: No match found for `('.
+        t9[3].a = vload4(0, &t2[4 + 3*n1*get_global_id(0) + 4*i8 + 4*((1+i5) % 3) + 12*get_global_id(0) + n1*((1+i5) % 3)]);  
+                        ^
+Warning 15 in A-HarrisPrograms.tex line 146: No match found for `('.
+        t9[2].b = vload4(0, &t1[3*n1*get_global_id(0) + 4*i8 + 4*((1+i5) % 3) + 12*get_global_id(0) + n1*((1+i5) % 3)]);  
+                                                                 ^
+Warning 15 in A-HarrisPrograms.tex line 146: No match found for `['.
+        t9[2].b = vload4(0, &t1[3*n1*get_global_id(0) + 4*i8 + 4*((1+i5) % 3) + 12*get_global_id(0) + n1*((1+i5) % 3)]);  
+                               ^
+Warning 15 in A-HarrisPrograms.tex line 146: No match found for `('.
+        t9[2].b = vload4(0, &t1[3*n1*get_global_id(0) + 4*i8 + 4*((1+i5) % 3) + 12*get_global_id(0) + n1*((1+i5) % 3)]);  
+                        ^
+Warning 15 in A-HarrisPrograms.tex line 145: No match found for `('.
+        t9[2].a = vload4(0, &t2[3*n1*get_global_id(0) + 4*i8 + 4*((1+i5) % 3) + 12*get_global_id(0) + n1*((1+i5) % 3)]);  
+                                                                 ^
+Warning 15 in A-HarrisPrograms.tex line 145: No match found for `['.
+        t9[2].a = vload4(0, &t2[3*n1*get_global_id(0) + 4*i8 + 4*((1+i5) % 3) + 12*get_global_id(0) + n1*((1+i5) % 3)]);  
+                               ^
+Warning 15 in A-HarrisPrograms.tex line 145: No match found for `('.
+        t9[2].a = vload4(0, &t2[3*n1*get_global_id(0) + 4*i8 + 4*((1+i5) % 3) + 12*get_global_id(0) + n1*((1+i5) % 3)]);  
+                        ^
+Warning 15 in A-HarrisPrograms.tex line 144: No match found for `('.
+        t9[1].b = vload4(0, &t1[4 + 3*n1*get_global_id(0) + 4*i8 + 4*(i5 % 3) + 12*get_global_id(0) + n1*(i5 % 3)]);  
+                                                                     ^
+Warning 15 in A-HarrisPrograms.tex line 144: No match found for `['.
+        t9[1].b = vload4(0, &t1[4 + 3*n1*get_global_id(0) + 4*i8 + 4*(i5 % 3) + 12*get_global_id(0) + n1*(i5 % 3)]);  
+                               ^
+Warning 15 in A-HarrisPrograms.tex line 144: No match found for `('.
+        t9[1].b = vload4(0, &t1[4 + 3*n1*get_global_id(0) + 4*i8 + 4*(i5 % 3) + 12*get_global_id(0) + n1*(i5 % 3)]);  
+                        ^
+Warning 15 in A-HarrisPrograms.tex line 143: No match found for `('.
+        t9[1].a = vload4(0, &t2[4 + 3*n1*get_global_id(0) + 4*i8 + 4*(i5 % 3) + 12*get_global_id(0) + n1*(i5 % 3)]);  
+                                                                     ^
+Warning 15 in A-HarrisPrograms.tex line 143: No match found for `['.
+        t9[1].a = vload4(0, &t2[4 + 3*n1*get_global_id(0) + 4*i8 + 4*(i5 % 3) + 12*get_global_id(0) + n1*(i5 % 3)]);  
+                               ^
+Warning 15 in A-HarrisPrograms.tex line 143: No match found for `('.
+        t9[1].a = vload4(0, &t2[4 + 3*n1*get_global_id(0) + 4*i8 + 4*(i5 % 3) + 12*get_global_id(0) + n1*(i5 % 3)]);  
+                        ^
+Warning 15 in A-HarrisPrograms.tex line 142: No match found for `('.
+        t9[0].b = vload4(0, &t1[3*n1*get_global_id(0) + 4*i8 + 4*(i5 % 3) + 12*get_global_id(0) + n1*(i5 % 3)]);  
+                                                                 ^
+Warning 15 in A-HarrisPrograms.tex line 142: No match found for `['.
+        t9[0].b = vload4(0, &t1[3*n1*get_global_id(0) + 4*i8 + 4*(i5 % 3) + 12*get_global_id(0) + n1*(i5 % 3)]);  
+                               ^
+Warning 15 in A-HarrisPrograms.tex line 142: No match found for `('.
+        t9[0].b = vload4(0, &t1[3*n1*get_global_id(0) + 4*i8 + 4*(i5 % 3) + 12*get_global_id(0) + n1*(i5 % 3)]);  
+                        ^
+Warning 15 in A-HarrisPrograms.tex line 141: No match found for `('.
+        t9[0].a = vload4(0, &t2[3*n1*get_global_id(0) + 4*i8 + 4*(i5 % 3) + 12*get_global_id(0) + n1*(i5 % 3)]);  
+                                                                 ^
+Warning 15 in A-HarrisPrograms.tex line 141: No match found for `['.
+        t9[0].a = vload4(0, &t2[3*n1*get_global_id(0) + 4*i8 + 4*(i5 % 3) + 12*get_global_id(0) + n1*(i5 % 3)]);  
+                               ^
+Warning 15 in A-HarrisPrograms.tex line 141: No match found for `('.
+        t9[0].a = vload4(0, &t2[3*n1*get_global_id(0) + 4*i8 + 4*(i5 % 3) + 12*get_global_id(0) + n1*(i5 % 3)]);  
+                        ^
+Warning 15 in A-HarrisPrograms.tex line 139: No match found for `{'.
+      for (int i8 = 0;(i8 < (n1 / 4));i8 = (1 + i8)) {  
+                                                     ^
+Warning 15 in A-HarrisPrograms.tex line 136: No match found for `['.
+        vstore4(t7, 0, &t1[3*n1*get_global_id(0) + 4*i7 + 4*((2 + i5) % 3) + 12*get_global_id(0) + n1*((2 + i5) % 3)]);  
+                          ^
+Warning 15 in A-HarrisPrograms.tex line 136: No match found for `('.
+        vstore4(t7, 0, &t1[3*n1*get_global_id(0) + 4*i7 + 4*((2 + i5) % 3) + 12*get_global_id(0) + n1*((2 + i5) % 3)]);  
+               ^
+Warning 15 in A-HarrisPrograms.tex line 124: No match found for `('.
+        vstore4(t6, 0, &t2[3*n1*get_global_id(0) + 4*i7 + 4*((2 + i5) % 3) + 12*get_global_id(0) + n1*((2 + i5) % 3)]);  
+                                                            ^
+Warning 15 in A-HarrisPrograms.tex line 124: No match found for `['.
+        vstore4(t6, 0, &t2[3*n1*get_global_id(0) + 4*i7 + 4*((2 + i5) % 3) + 12*get_global_id(0) + n1*((2 + i5) % 3)]);  
+                          ^
+Warning 15 in A-HarrisPrograms.tex line 124: No match found for `('.
+        vstore4(t6, 0, &t2[3*n1*get_global_id(0) + 4*i7 + 4*((2 + i5) % 3) + 12*get_global_id(0) + n1*((2 + i5) % 3)]);  
+               ^
+Warning 15 in A-HarrisPrograms.tex line 112: No match found for `('.
+        t5[5] = vload4(0, &t3[4 + 3*n1*get_global_id(0) + 4*i7 + 4*((1 + i5) % 3) + 12*get_global_id(0) + n1*((1 + i5) % 3)]);  
+                                                                   ^
+Warning 15 in A-HarrisPrograms.tex line 112: No match found for `['.
+        t5[5] = vload4(0, &t3[4 + 3*n1*get_global_id(0) + 4*i7 + 4*((1 + i5) % 3) + 12*get_global_id(0) + n1*((1 + i5) % 3)]);  
+                             ^
+Warning 15 in A-HarrisPrograms.tex line 112: No match found for `('.
+        t5[5] = vload4(0, &t3[4 + 3*n1*get_global_id(0) + 4*i7 + 4*((1 + i5) % 3) + 12*get_global_id(0) + n1*((1 + i5) % 3)]);  
+                      ^
+Warning 15 in A-HarrisPrograms.tex line 111: No match found for `('.
+        t5[4] = vload4(0, &t3[3*n1*get_global_id(0) + 4*i7 + 4*((1 + i5) % 3) + 12*get_global_id(0) + n1*((1 + i5) % 3)]);  
+                                                               ^
+Warning 15 in A-HarrisPrograms.tex line 111: No match found for `['.
+        t5[4] = vload4(0, &t3[3*n1*get_global_id(0) + 4*i7 + 4*((1 + i5) % 3) + 12*get_global_id(0) + n1*((1 + i5) % 3)]);  
+                             ^
+Warning 15 in A-HarrisPrograms.tex line 111: No match found for `('.
+        t5[4] = vload4(0, &t3[3*n1*get_global_id(0) + 4*i7 + 4*((1 + i5) % 3) + 12*get_global_id(0) + n1*((1 + i5) % 3)]);  
+                      ^
+Warning 15 in A-HarrisPrograms.tex line 110: No match found for `('.
+        t5[3] = vload4(0, &t3[4 + 3*n1*get_global_id(0) + 4*i7 + 4*(i5 % 3) + 12*get_global_id(0) + n1*(i5 % 3)]);  
+                                                                   ^
+Warning 15 in A-HarrisPrograms.tex line 110: No match found for `['.
+        t5[3] = vload4(0, &t3[4 + 3*n1*get_global_id(0) + 4*i7 + 4*(i5 % 3) + 12*get_global_id(0) + n1*(i5 % 3)]);  
+                             ^
+Warning 15 in A-HarrisPrograms.tex line 110: No match found for `('.
+        t5[3] = vload4(0, &t3[4 + 3*n1*get_global_id(0) + 4*i7 + 4*(i5 % 3) + 12*get_global_id(0) + n1*(i5 % 3)]);  
+                      ^
+Warning 15 in A-HarrisPrograms.tex line 109: No match found for `('.
+        t5[2] = vload4(0, &t3[3*n1*get_global_id(0) + 4*i7 + 4*(i5 % 3) + 12*get_global_id(0) + n1*(i5 % 3)]);  
+                                                               ^
+Warning 15 in A-HarrisPrograms.tex line 109: No match found for `['.
+        t5[2] = vload4(0, &t3[3*n1*get_global_id(0) + 4*i7 + 4*(i5 % 3) + 12*get_global_id(0) + n1*(i5 % 3)]);  
+                             ^
+Warning 15 in A-HarrisPrograms.tex line 109: No match found for `('.
+        t5[2] = vload4(0, &t3[3*n1*get_global_id(0) + 4*i7 + 4*(i5 % 3) + 12*get_global_id(0) + n1*(i5 % 3)]);  
+                      ^
+Warning 15 in A-HarrisPrograms.tex line 108: No match found for `('.
+        t5[1] = vload4(0, &t3[4 + 3*n1*get_global_id(0) + 4*i7 + 4*((2 + i5) % 3) + 12*get_global_id(0) + n1*((2 + i5) % 3)]);  
+                                                                   ^
+Warning 15 in A-HarrisPrograms.tex line 108: No match found for `['.
+        t5[1] = vload4(0, &t3[4 + 3*n1*get_global_id(0) + 4*i7 + 4*((2 + i5) % 3) + 12*get_global_id(0) + n1*((2 + i5) % 3)]);  
+                             ^
+Warning 15 in A-HarrisPrograms.tex line 108: No match found for `('.
+        t5[1] = vload4(0, &t3[4 + 3*n1*get_global_id(0) + 4*i7 + 4*((2 + i5) % 3) + 12*get_global_id(0) + n1*((2 + i5) % 3)]);  
+                      ^
+Warning 15 in A-HarrisPrograms.tex line 107: No match found for `('.
+        t5[0] = vload4(0, &t3[3*n1*get_global_id(0) + 4*i7 + 4*((2 + i5) % 3) + 12*get_global_id(0) + n1*((2 + i5) % 3)]);  
+                                                               ^
+Warning 15 in A-HarrisPrograms.tex line 107: No match found for `['.
+        t5[0] = vload4(0, &t3[3*n1*get_global_id(0) + 4*i7 + 4*((2 + i5) % 3) + 12*get_global_id(0) + n1*((2 + i5) % 3)]);  
+                             ^
+Warning 15 in A-HarrisPrograms.tex line 107: No match found for `('.
+        t5[0] = vload4(0, &t3[3*n1*get_global_id(0) + 4*i7 + 4*((2 + i5) % 3) + 12*get_global_id(0) + n1*((2 + i5) % 3)]);  
+                      ^
+Warning 15 in A-HarrisPrograms.tex line 105: No match found for `{'.
+      for (int i7 = 0;(i7 < (n1 / 4));i7 = (1 + i7)) {  
+                                                     ^
+Warning 15 in A-HarrisPrograms.tex line 102: No match found for `['.
+        vstore4(t8, 0, &t3[3*n1*get_global_id(0) + 4*i6 + 4*((1 + i5) % 3) + 12*get_global_id(0) + n1*((1 + i5) % 3)]);  
+                          ^
+Warning 15 in A-HarrisPrograms.tex line 102: No match found for `('.
+        vstore4(t8, 0, &t3[3*n1*get_global_id(0) + 4*i6 + 4*((1 + i5) % 3) + 12*get_global_id(0) + n1*((1 + i5) % 3)]);  
+               ^
+Warning 15 in A-HarrisPrograms.tex line 97: No match found for `{'.
+      for (int i6 = 0;(i6 < (n1 / 4));i6 = (1 + i6)) {  
+                                                     ^
+Warning 15 in A-HarrisPrograms.tex line 96: No match found for `{'.
+    for (int i5 = 0;(i5 < 32);i5 = (1 + i5)) {  
+                                             ^
+Warning 15 in A-HarrisPrograms.tex line 68: No match found for `('.
+        t5[5] = vload4(0, &t3[4 + 3*n1*get_global_id(0) + 4*i4 + 4*((2 + i2) % 3) + 12*get_global_id(0) + n1*((2 + i2) % 3)]);  
+                      ^
+Warning 15 in A-HarrisPrograms.tex line 67: No match found for `('.
+        t5[4] = vload4(0, &t3[3*n1*get_global_id(0) + 4*i4 + 4*((2 + i2) % 3) + 12*get_global_id(0) + n1*((2 + i2) % 3)]);  
+                                                               ^
+Warning 15 in A-HarrisPrograms.tex line 67: No match found for `['.
+        t5[4] = vload4(0, &t3[3*n1*get_global_id(0) + 4*i4 + 4*((2 + i2) % 3) + 12*get_global_id(0) + n1*((2 + i2) % 3)]);  
+                             ^
+Warning 15 in A-HarrisPrograms.tex line 67: No match found for `('.
+        t5[4] = vload4(0, &t3[3*n1*get_global_id(0) + 4*i4 + 4*((2 + i2) % 3) + 12*get_global_id(0) + n1*((2 + i2) % 3)]);  
+                      ^
+Warning 15 in A-HarrisPrograms.tex line 61: No match found for `{'.
+      for (int i4 = 0;(i4 < (n1 / 4));i4 = (1 + i4)) {  
+                                                     ^
+Warning 15 in A-HarrisPrograms.tex line 58: No match found for `['.
+        vstore4(t4, 0, &t3[3*n1*get_global_id(0) + 4*i3 + 4*((2 + i2) % 3) + 12*get_global_id(0) + n1*((2 + i2) % 3)]);  
+                          ^
+Warning 15 in A-HarrisPrograms.tex line 58: No match found for `('.
+        vstore4(t4, 0, &t3[3*n1*get_global_id(0) + 4*i3 + 4*((2 + i2) % 3) + 12*get_global_id(0) + n1*((2 + i2) % 3)]);  
+               ^
+Warning 15 in A-HarrisPrograms.tex line 53: No match found for `{'.
+      for (int i3 = 0;(i3 < (n1 / 4));i3 = (1 + i3)) {  
+                                                     ^
+Warning 15 in A-HarrisPrograms.tex line 52: No match found for `{'.
+    for (int i2 = 0;(i2 < 2);i2 = (1 + i2)) {  
+                                            ^
+Warning 15 in A-HarrisPrograms.tex line 41: No match found for `{'.
+  for (int gid = get_global_id(0);(gid < (n0 / 32));gid = (gid + get_global_size(0))) {  
+                                                                                      ^
+Warning 15 in A-HarrisPrograms.tex line 40: No match found for `{'.
+            global float* restrict t1, global float* restrict t2, global float* restrict t3) {  
+                                                                                             ^
+Warning 15 in 3-ImperativeCode/storage-folding.tex line 112: No match found for `['.
+  tmp[(2 + i) % 3] = input[2 + i];  
+     ^
+Warning 15 in 3-ImperativeCode/storage-folding.tex line 111: No match found for `{'.
+for (int i = 0; i < n-2; i += 1) {  
+                                 ^
+Warning 15 in 3-ImperativeCode/barrier-insertion.tex line 334: No match found for `{'.
+for (int wg0 = get_group_id(1); wg0 < n; wg0 += get_num_groups(1)) {  
+                                                                   ^
+Warning 15 in 3-ImperativeCode/rise-shine.tex line 254: No match found for `['.
+Loop patterns like \inlineDPIA{for} iterate over bounded indices of type \inlineDPIA{idx[n]}, meaning that the index value belongs to the interval $[0; n[$.  
+                                                                                                                                                         ^
+Warning 15 in 3-ImperativeCode/rise-shine.tex line 254: No match found for `['.
+Loop patterns like \inlineDPIA{for} iterate over bounded indices of type \inlineDPIA{idx[n]}, meaning that the index value belongs to the interval $[0; n[$.  
+                                                                                                                                                    ^
+Warning 17 in main.tex line 184: Number of `(' doesn't match the number of `)'!
+
+
+Warning 17 in main.tex line 184: Number of `[' doesn't match the number of `]'!
+
+
+Warning 17 in main.tex line 184: Number of `{' doesn't match the number of `}'!
+
+

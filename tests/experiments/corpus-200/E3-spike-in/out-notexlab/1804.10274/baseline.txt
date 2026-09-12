@@ -1,0 +1,24 @@
+tectonic pdf bytes=1016676
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=[] secs=3
+warning: msf.tex:410: Underfull \hbox (badness 1348) in paragraph at lines 409--410
+warning: msf.tex:603: Underfull \hbox (badness 2318) in paragraph at lines 584--603
+warning: msf.tex:603: Underfull \hbox (badness 3758) in paragraph at lines 584--603
+warning: msf.tex:603: Underfull \hbox (badness 1210) in paragraph at lines 584--603
+warning: msf.tex:603: Underfull \hbox (badness 1221) in paragraph at lines 584--603
+warning: msf.tex:605: Underfull \hbox (badness 1859) in paragraph at lines 604--605
+warning: msf.tex:605: Underfull \hbox (badness 1762) in paragraph at lines 604--605
+warning: msf.tex:607: Underfull \hbox (badness 10000) in paragraph at lines 606--607
+warning: msf.tex:635: Underfull \hbox (badness 4096) in paragraph at lines 633--635
+warning: msf.tex:410: Underfull \hbox (badness 1348) in paragraph at lines 409--410
+warning: msf.tex:605: Underfull \hbox (badness 1859) in paragraph at lines 604--605
+warning: msf.tex:605: Underfull \hbox (badness 1762) in paragraph at lines 604--605
+warning: msf.tex:607: Underfull \hbox (badness 10000) in paragraph at lines 606--607
+warning: msf.tex:635: Underfull \hbox (badness 4096) in paragraph at lines 633--635
+warning: msf.tex:410: Underfull \hbox (badness 1348) in paragraph at lines 409--410
+warning: msf.tex:605: Underfull \hbox (badness 1859) in paragraph at lines 604--605
+warning: msf.tex:605: Underfull \hbox (badness 1762) in paragraph at lines 604--605
+warning: msf.tex:607: Underfull \hbox (badness 10000) in paragraph at lines 606--607
+warning: msf.tex:635: Underfull \hbox (badness 4096) in paragraph at lines 633--635
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

@@ -1,0 +1,25 @@
+{
+ "coverage": 0.010452,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`DeepLL.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "DeepLL.xtex",
+    "offset": 9919,
+    "length": 47,
+    "line": 338,
+    "column": 44
+   },
+   "message": "citation checking unavailable: `DeepLL.bib` could not be read",
+   "related": []
+  }
+ ]
+}

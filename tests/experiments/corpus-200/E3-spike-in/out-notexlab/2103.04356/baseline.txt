@@ -1,0 +1,27 @@
+tectonic pdf bytes=480274
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=[] secs=3
+--119
+warning: discussion:120: Underfull \hbox (badness 10000) in paragraph at lines 120--120
+warning: discussion:121: Underfull \hbox (badness 10000) in paragraph at lines 121--121
+warning: discussion:123: Underfull \hbox (badness 10000) in paragraph at lines 123--123
+warning: discussion:124: Underfull \hbox (badness 10000) in paragraph at lines 124--124
+warning: discussion:125: Underfull \hbox (badness 10000) in paragraph at lines 125--125
+warning: discussion:130: Underfull \hbox (badness 10000) in paragraph at lines 130--130
+warning: discussion:130: Overfull \hbox (1.33737pt too wide) in paragraph at lines 130--130
+warning: discussion:130: Underfull \hbox (badness 10000) in paragraph at lines 130--130
+warning: discussion:130: Overfull \hbox (1.33737pt too wide) in paragraph at lines 130--130
+warning: discussion:131: Underfull \hbox (badness 10000) in paragraph at lines 131--131
+warning: discussion:131: Overfull \hbox (1.33737pt too wide) in paragraph at lines 131--131
+warning: discussion:131: Underfull \hbox (badness 10000) in paragraph at lines 131--131
+warning: discussion:131: Overfull \hbox (1.33737pt too wide) in paragraph at lines 131--131
+warning: discussion:134: Overfull \hbox (8.35034pt too wide) in paragraph at lines 134--134
+warning: discussion:134: Overfull \hbox (8.35034pt too wide) in paragraph at lines 134--134
+warning: discussion:137: Overfull \hbox (5.91975pt too wide) in paragraph at lines 116--137
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: JPEG: Inconsistent resolution may have been specified in Exif and JFIF: 0x0 - 96x96
+warning: JPEG: Inconsistent resolution may have been specified in Exif and JFIF: 0x0 - 96x96
+warning: JPEG: Inconsistent resolution may have been specified in Exif and JFIF: 0x0 - 96x96
+warning: JPEG: Inconsistent resolution may have been specified in Exif and JFIF: 0x0 - 96x96
+warning: JPEG: Inconsistent resolution may have been specified in Exif and JFIF: 0x0 - 96x96

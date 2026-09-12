@@ -1,0 +1,25 @@
+{
+ "coverage": 0.024516,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`lahteet.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "V889Her_arxiv.xtex",
+    "offset": 5469,
+    "length": 4,
+    "line": 120,
+    "column": 95
+   },
+   "message": "citation checking unavailable: `lahteet.bib` could not be read",
+   "related": []
+  }
+ ]
+}

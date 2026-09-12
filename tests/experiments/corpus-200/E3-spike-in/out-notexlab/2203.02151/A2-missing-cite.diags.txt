@@ -1,0 +1,3 @@
+planted=berridge1987natural__ghost sites=[('main_elife.xtex', 46)]
+xtex new=[('XT1005', 'berridge1987natural__ghost', 'main_elife.xtex', 46)]
+texlab new=[]

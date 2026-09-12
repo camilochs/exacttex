@@ -1,0 +1,145 @@
+{
+ "paper": "2212.13570",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 9951,
+   "chars_after": 10015,
+   "emitted": true,
+   "identity": "import-ext-only",
+   "lines_differing": 8
+  },
+  {
+   "file": "01_introduction.tex",
+   "chars_before": 11001,
+   "chars_after": 11001,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "02_researchmethod.tex",
+   "chars_before": 5827,
+   "chars_after": 5821,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "03_challenges.tex",
+   "chars_before": 29500,
+   "chars_after": 29482,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "04_framework.tex",
+   "chars_before": 21770,
+   "chars_after": 21743,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "05_application.tex",
+   "chars_before": 46808,
+   "chars_after": 46790,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "06_demonstration.tex",
+   "chars_before": 19919,
+   "chars_after": 19892,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "07_discussion.tex",
+   "chars_before": 33606,
+   "chars_after": 33597,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "_appendix.tex",
+   "chars_before": 33880,
+   "chars_after": 33862,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 9,
+ "chars_before": 212262,
+ "chars_after": 212203,
+ "delta_pct": -0.027795837220039386,
+ "unrepaired": {
+  "chars_after": 212203,
+  "chars_before": 212262,
+  "converted_files": 9,
+  "check_exit": 1,
+  "coverage": 0.024287,
+  "bibliography": {
+   "state": "complete",
+   "entries": 74
+  },
+  "errors": 1,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.027795837220039386
+ },
+ "stats": {
+  "cite_cmds_live": 106,
+  "cite_keys_live": 122,
+  "cite_with_optarg_or_star": 5,
+  "cite_keys_outside_grammar": 1,
+  "other_cite_cmds": 0,
+  "labels_live": 45,
+  "labels_outside_grammar": 4,
+  "refs_live": 93,
+  "refs_outside_grammar": 4,
+  "other_ref_cmds": 0,
+  "float_envs": 23,
+  "cite_cmds_annotated": 100,
+  "cite_keys_annotated": 115,
+  "ids_annotated": 41,
+  "refs_annotated": 88,
+  "inputs_root": 8,
+  "inputs_imported": 8,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 1,
+  "leaks_reverted": 1,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "07_discussion.tex",
+   "line": 178,
+   "token": "@ref(tab:03_challenges)",
+   "wrapper": "?",
+   "context": "\\begin{tabular}[c]{@{}l@{}}$\\rightarrow$\\end{tabular}& \\multicolumn{2}{l}{\\begin{tabular}[c]{@{}p{17cm}@{}}\\textbf{Action 2:} Validate the mapping between the t"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1020",
+   "name": "tab:03_challenges",
+   "file": "04_framework.xtex",
+   "line": 32,
+   "message": "prose says `Section` but `tab:03_challenges` is a table",
+   "classification": "prose-word mismatch on a real document [target classed as table]: `tab:` prefix; the paper uses \\appendix",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.024179,
+ "bibliography": {
+  "state": "complete",
+  "entries": 74
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

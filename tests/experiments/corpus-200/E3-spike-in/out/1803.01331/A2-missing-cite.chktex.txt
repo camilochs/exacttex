@@ -1,0 +1,258 @@
+exit=2
+lines=351
+unique_findings=103
+: Delete this space to maintain correct pagereferences.
+\label{1:Governing equation}  
+^
+Warning 2 in Manuscript1.tex line 100: Non-breaking space (`~') should have been used.
+and heavy ions (mass $m_h$; number density $N_h$). The detail information about the light and heavy nuclei is provided in Table \ref{Table:1}.  
+                                                                                                                               ^
+Warning 3 in Manuscript1.tex line 128: You should enclose the previous parenthesis with `{}'.
+$\omega_{jl}^{-1}=(4 \pi G m_l n_{l0})^{-1/2}$ (where $n_{l0}$ and $n_{e0}$ are the  
+                                     ^
+Warning 36 in Manuscript1.tex line 130: You should put a space in front of parenthesis.
+After normalization, Eqs. ($2$)-($6$) can be taken in the following form  
+                                ^
+Warning 3 in Manuscript1.tex line 150: You should enclose the previous parenthesis with `{}'.
+&&\hspace*{0.0cm}n_e =\left(1-\frac{2 \phi}{3 \alpha^2}\right)^\frac{3}{2},  
+                                                             ^
+Warning 3 in Manuscript1.tex line 152: You should enclose the previous parenthesis with `{}'.
+&&\hspace*{0.0cm}n_p =\left(1+\frac{2 \phi}{3 \sigma_1^2 \sigma_2^\frac{2}{3}}\right)^\frac{3}{2}.  
+                                                                                    ^
+Warning 12 in Manuscript1.tex line 155: Interword spacing (`\ ') should perhaps be used.
+Now, we substitute Eqs. (\ref{1eq:13}) and (\ref{1eq:14}) into Eq. (\ref{1eq:12}) and  
+                       ^
+Warning 12 in Manuscript1.tex line 155: Interword spacing (`\ ') should perhaps be used.
+Now, we substitute Eqs. (\ref{1eq:13}) and (\ref{1eq:14}) into Eq. (\ref{1eq:12}) and  
+                                                                  ^
+Warning 2 in Manuscript1.tex line 169: Non-breaking space (`~') should have been used.
+\caption{The values of $\gamma$ when ${\rm ~^{1}_{1}H}$ \cite{Killian2006,Fletcher2006},  
+                                                       ^
+Warning 2 in Manuscript1.tex line 170: Non-breaking space (`~') should have been used.
+${\rm ~^{4}_{2}He}$ \cite{Chandrasekhar1931}, and  ${\rm ~^{12}_{~6}C}$  
+                   ^
+Warning 2 in Manuscript1.tex line 171: Non-breaking space (`~') should have been used.
+\cite{Koester1990,Koester2002} are considered as the light ion species,  and ${\rm ~^{56}_{ 26}Fe}$  
+^
+Warning 2 in Manuscript1.tex line 172: Non-breaking space (`~') should have been used.
+\cite{Vanderburg2015},  ${\rm ~^{85}_{ 37}Rb}$ \cite{Witze2014}, and  ${\rm ~^{96}_{42}Mo}$ \cite{Witze2014}  
+^
+Warning 2 in Manuscript1.tex line 172: Non-breaking space (`~') should have been used.
+\cite{Vanderburg2015},  ${\rm ~^{85}_{ 37}Rb}$ \cite{Witze2014}, and  ${\rm ~^{96}_{42}Mo}$ \cite{Witze2014}  
+                                              ^
+Warning 2 in Manuscript1.tex line 172: Non-breaking space (`~') should have been used.
+\cite{Vanderburg2015},  ${\rm ~^{85}_{ 37}Rb}$ \cite{Witze2014}, and  ${\rm ~^{96}_{42}Mo}$ \cite{Witze2014}  
+                                                                                           ^
+Warning 44 in Manuscript1.tex line 174: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{|p{2.8cm}|p{2.8cm}|m{1cm}|}  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in Manuscript1.tex line 175: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 44 in Manuscript1.tex line 177: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 2 in Manuscript1.tex line 178: Non-breaking space (`~') should have been used.
+ \multirow{2}{4em}{~}                                  &~~~~~~${\rm ~^{56}_{ 26}Fe}$  \cite{Vanderburg2015}                                   &~~2.16 \\ [2.2ex]  
+                                                                                     ^
+Warning 2 in Manuscript1.tex line 181: Non-breaking space (`~') should have been used.
+$~~~~{\rm ~^{1}_{1}H}$ \cite{Killian2006,Fletcher2006}      &~~~~~~${\rm ~^{85}_{ 37}Rb}$  \cite{Witze2014}                                          &~~2.30\\[2.2ex]  
+                      ^
+Warning 2 in Manuscript1.tex line 181: Non-breaking space (`~') should have been used.
+$~~~~{\rm ~^{1}_{1}H}$ \cite{Killian2006,Fletcher2006}      &~~~~~~${\rm ~^{85}_{ 37}Rb}$  \cite{Witze2014}                                          &~~2.30\\[2.2ex]  
+                                                                                          ^
+Warning 39 in Manuscript1.tex line 183: Double space found.
+ ~                                                      &~~~~~~${\rm ~^{96}_{42}Mo}$  \cite{Witze2014}                                              &~~2.28\\[2.2ex]  
+^
+Warning 2 in Manuscript1.tex line 183: Non-breaking space (`~') should have been used.
+ ~                                                      &~~~~~~${\rm ~^{96}_{42}Mo}$  \cite{Witze2014}                                              &~~2.28\\[2.2ex]  
+                                                                                     ^
+Warning 44 in Manuscript1.tex line 184: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 2 in Manuscript1.tex line 185: Non-breaking space (`~') should have been used.
+ \multirow{2}{5em}{~}                            &~~~~~~${\rm ~^{56}_{ 26}Fe}$  \cite{Vanderburg2015}                                             &~~1.08 \\[2.2ex]  
+                                                                               ^
+Warning 2 in Manuscript1.tex line 188: Non-breaking space (`~') should have been used.
+$~~~~{\rm ~^{4}_{2}He}$ \cite{Chandrasekhar1931}   &~~~~~~${\rm ~^{85}_{ 37}Rb}$  \cite{Witze2014}                                    &~~1.15\\[2.2ex]  
+                       ^
+Warning 2 in Manuscript1.tex line 188: Non-breaking space (`~') should have been used.
+$~~~~{\rm ~^{4}_{2}He}$ \cite{Chandrasekhar1931}   &~~~~~~${\rm ~^{85}_{ 37}Rb}$  \cite{Witze2014}                                    &~~1.15\\[2.2ex]  
+                                                                                 ^
+Warning 39 in Manuscript1.tex line 190: Double space found.
+ ~                                                                    &~~~~~~${\rm ~^{96}_{42}Mo}$  \cite{Witze2014}                          &~~1.14\\[2.2ex]  
+^
+Warning 2 in Manuscript1.tex line 190: Non-breaking space (`~') should have been used.
+ ~                                                                    &~~~~~~${\rm ~^{96}_{42}Mo}$  \cite{Witze2014}                          &~~1.14\\[2.2ex]  
+                                                                                                   ^
+Warning 44 in Manuscript1.tex line 191: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 2 in Manuscript1.tex line 192: Non-breaking space (`~') should have been used.
+ \multirow{2}{*}{~}                                    &~~~~~~${\rm ~^{56}_{ 26}Fe}$ \cite{Vanderburg2015}                                       &~~1.08 \\[2.2ex]  
+                                                                                    ^
+Warning 2 in Manuscript1.tex line 195: Non-breaking space (`~') should have been used.
+$~~~~{\rm ~^{12}_{~6}C}$ \cite{Koester1990,Koester2002}   &~~~~~~${\rm ~^{85}_{ 37}Rb}$ \cite{Witze2014}                                        &~~1.15\\[2.2ex]  
+                        ^
+Warning 2 in Manuscript1.tex line 195: Non-breaking space (`~') should have been used.
+$~~~~{\rm ~^{12}_{~6}C}$ \cite{Koester1990,Koester2002}   &~~~~~~${\rm ~^{85}_{ 37}Rb}$ \cite{Witze2014}                                        &~~1.15\\[2.2ex]  
+                                                                                       ^
+Warning 39 in Manuscript1.tex line 197: Double space found.
+ ~                                                 &~~~~~~${\rm ~^{96}_{42}Mo}$   \cite{Witze2014}                                             &~~1.14\\[2.2ex]  
+^
+Warning 2 in Manuscript1.tex line 197: Non-breaking space (`~') should have been used.
+ ~                                                 &~~~~~~${\rm ~^{96}_{42}Mo}$   \cite{Witze2014}                                             &~~1.14\\[2.2ex]  
+                                                                                 ^
+Warning 44 in Manuscript1.tex line 198: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 24 in Manuscript1.tex line 200: Delete this space to maintain correct pagereferences.
+\label{Table:1}  
+^
+Warning 12 in Manuscript1.tex line 203: Interword spacing (`\ ') should perhaps be used.
+We note that the terms on the right hand side of Eq. (\ref{1eq:15}) are the contribution of electron and positron species.  
+                                                    ^
+Warning 12 in Manuscript1.tex line 204: Interword spacing (`\ ') should perhaps be used.
+Thus, Eqs. (\ref{1eq:10}), (\ref{1eq:11}), and (\ref{1eq:15}) describe the dynamics of the  
+          ^
+Warning 24 in Manuscript1.tex line 207: Delete this space to maintain correct pagereferences.
+\label{1:Derivation of NLS equation}  
+^
+Warning 2 in Manuscript1.tex line 209: Non-breaking space (`~') should have been used.
+perturbation method \cite{Taniuti1969,Chowdhury2017a}. So, we first introduce the stretched co-ordinates for  
+                   ^
+Warning 25 in Manuscript1.tex line 214: You might wish to put this between a pair of `{}'
+\xi=\epsilon(x-v_gt),\\  
+                 ^^
+Warning 12 in Manuscript1.tex line 232: Interword spacing (`\ ') should perhaps be used.
+carrier wave number (frequency). The derivative operators in Eqs. (\ref{1eq:10}), (\ref{1eq:11}),  
+                                                                 ^
+Warning 12 in Manuscript1.tex line 240: Interword spacing (`\ ') should perhaps be used.
+Now, by substituting Eqs. (\ref{1eq:17})-(\ref{1eq:21}) into Eqs. (\ref{1eq:10}), (\ref{1eq:11}),  
+                         ^
+Warning 36 in Manuscript1.tex line 240: You should put a space in front of parenthesis.
+Now, by substituting Eqs. (\ref{1eq:17})-(\ref{1eq:21}) into Eqs. (\ref{1eq:10}), (\ref{1eq:11}),  
+                                         ^
+Warning 12 in Manuscript1.tex line 240: Interword spacing (`\ ') should perhaps be used.
+Now, by substituting Eqs. (\ref{1eq:17})-(\ref{1eq:21}) into Eqs. (\ref{1eq:10}), (\ref{1eq:11}),  
+                                                                 ^
+Warning 36 in Manuscript1.tex line 241: You should put a space in front of parenthesis.
+and(\ref{1eq:15}) and collecting the different powers of $\epsilon$. Now, the first order ($m=1$) reduced  
+   ^
+Warning 24 in Manuscript1.tex line 260: Delete this space to maintain correct pagereferences.
+  \label{1Fig:F1}  
+ ^
+Warning 24 in Manuscript1.tex line 265: Delete this space to maintain correct pagereferences.
+  \label{1Fig:F2}  
+ ^
+Warning 12 in Manuscript1.tex line 267: Interword spacing (`\ ') should perhaps be used.
+The dispersion characteristics of the wave are depicted in Fig. \ref{1Fig:F1} [obtained from  
+                                                               ^
+Warning 2 in Manuscript1.tex line 267: Non-breaking space (`~') should have been used.
+The dispersion characteristics of the wave are depicted in Fig. \ref{1Fig:F1} [obtained from  
+                                                               ^
+Warning 12 in Manuscript1.tex line 268: Interword spacing (`\ ') should perhaps be used.
+Eq. (\ref{1eq:24})], which indicates that (a) the angular wave frequency ($\omega$) of the IAWs  exponentially decreases  
+   ^
+Warning 3 in Manuscript1.tex line 280: You should enclose the previous parenthesis with `{}'.
+&&\hspace*{0.0cm}v_g=\frac{\partial \omega}{\partial k}=\frac{\gamma_l \omega^2-(\omega^2 - \beta_1 k^2)^2}{k \omega \gamma_l}.  
+                                                                                                       ^
+Warning 12 in Manuscript1.tex line 313: Interword spacing (`\ ') should perhaps be used.
+Finally, by substituting all the Eqs. (\ref{1eq:22})$-$(\ref{1eq:28}) into the third order  
+                                     ^
+Warning 36 in Manuscript1.tex line 313: You should put a space in front of parenthesis.
+Finally, by substituting all the Eqs. (\ref{1eq:22})$-$(\ref{1eq:28}) into the third order  
+                                                       ^
+Warning 24 in Manuscript1.tex line 330: Delete this space to maintain correct pagereferences.
+\label{1:Stability analysis}  
+^
+Warning 12 in Manuscript1.tex line 332: Interword spacing (`\ ') should perhaps be used.
+in the form $\Phi=\hat{\Phi}~e^{iQ|\hat{\Phi}|^2 \tau}+ c.~c$ (c. c denotes the  
+                                                                 ^
+Warning 12 in Manuscript1.tex line 334: Interword spacing (`\ ') should perhaps be used.
+$\hat{\Phi}_1=\hat{\Phi}_{1,0}e^{i(\tilde{k}\xi-\tilde{\omega}\tau)}$+ c. c.  
+                                                                         ^
+Warning 12 in Manuscript1.tex line 335: Interword spacing (`\ ') should perhaps be used.
+Now, by substituting these values into Eq. (\ref{1eq:29}), one readily obtains the  
+                                          ^
+Warning 2 in Manuscript1.tex line 336: Non-breaking space (`~') should have been used.
+following nonlinear dispersion relation \cite{Chowdhury2018,Sultana2011,Schamel2002,Kourakis2005,Fedele2002,Chowdhury2017b}  
+                                       ^
+Warning 12 in Manuscript1.tex line 343: Interword spacing (`\ ') should perhaps be used.
+It is observed from Eq. (\ref{1eq:32}) that the IAWs will be modulationally stable (unstable) in SG-DQPS  
+                       ^
+Warning 13 in Manuscript1.tex line 346: Intersentence spacing (`\@') should perhaps be used.
+threshold wave number ($k_c$) for the onset of MI. The variation of $P/Q$ with $k$ for $\mu$ is  
+                                                 ^
+Warning 12 in Manuscript1.tex line 347: Interword spacing (`\ ') should perhaps be used.
+shown in Fig. \ref{1Fig:F2} and which clearly indicates that (a) the IAWs are modulatonally  
+             ^
+Warning 2 in Manuscript1.tex line 347: Non-breaking space (`~') should have been used.
+shown in Fig. \ref{1Fig:F2} and which clearly indicates that (a) the IAWs are modulatonally  
+             ^
+Warning 12 in Manuscript1.tex line 351: Interword spacing (`\ ') should perhaps be used.
+can be written [from Eq. (\ref{1eq:32})] as  
+                        ^
+Warning 24 in Manuscript1.tex line 361: Delete this space to maintain correct pagereferences.
+  \label{1Fig:F3}  
+ ^
+Warning 24 in Manuscript1.tex line 366: Delete this space to maintain correct pagereferences.
+  \label{1Fig:F4}  
+ ^
+Warning 12 in Manuscript1.tex line 368: Interword spacing (`\ ') should perhaps be used.
+The effect of $\sigma_2$ and $\gamma$ on the growth rate are presented in Figs. \ref{1Fig:F3} and \ref{1Fig:F4},  
+                                                                               ^
+Warning 2 in Manuscript1.tex line 368: Non-breaking space (`~') should have been used.
+The effect of $\sigma_2$ and $\gamma$ on the growth rate are presented in Figs. \ref{1Fig:F3} and \ref{1Fig:F4},  
+                                                                               ^
+Warning 2 in Manuscript1.tex line 368: Non-breaking space (`~') should have been used.
+The effect of $\sigma_2$ and $\gamma$ on the growth rate are presented in Figs. \ref{1Fig:F3} and \ref{1Fig:F4},  
+                                                                                                 ^
+Warning 13 in Manuscript1.tex line 373: Intersentence spacing (`\@') should perhaps be used.
+So, the charge state and mass of the light and heavy ion plays an opposite role to manifest the $\Gamma$ in SG-DQPS.  
+                                                                                                                   ^
+Warning 12 in Manuscript1.tex line 378: Interword spacing (`\ ') should perhaps be used.
+the solitonic solution of Eq. (\ref{1eq:29}) for the self-gravitating bright envelope solitons can be written as \cite{Chowdhury2018,Sultana2011,Schamel2002,Kourakis2005,Fedele2002}  
+                             ^
+Warning 2 in Manuscript1.tex line 378: Non-breaking space (`~') should have been used.
+the solitonic solution of Eq. (\ref{1eq:29}) for the self-gravitating bright envelope solitons can be written as \cite{Chowdhury2018,Sultana2011,Schamel2002,Kourakis2005,Fedele2002}  
+                                                                                                                ^
+Warning 3 in Manuscript1.tex line 380: You should enclose the previous parenthesis with `{}'.
+&&\hspace*{-0.0cm}\Phi(\xi,\tau)=\left[\psi_0~\mbox{sech}^2 \left(\frac{\xi-U\tau}{W}\right)\right]^{1/2}  
+                                                                                                  ^
+Warning 36 in Manuscript1.tex line 388: You should put a space in front of parenthesis.
+  \caption{The variation of Re($\Phi$) with $\xi$ for bright envelope solitons;  
+                              ^
+Warning 24 in Manuscript1.tex line 391: Delete this space to maintain correct pagereferences.
+  \label{1Fig:F5}  
+ ^
+Warning 24 in Manuscript1.tex line 397: Delete this space to maintain correct pagereferences.
+  \label{1Fig:F6}  
+ ^
+Warning 12 in Manuscript1.tex line 402: Interword spacing (`\ ') should perhaps be used.
+obtained from the numerical analysis of Eq. (\ref{1eq:34}), are depicted in Figs. \ref{1Fig:F5} and  \ref{1Fig:F6}. The bright envelop solitons remain  
+                                           ^
+Warning 12 in Manuscript1.tex line 402: Interword spacing (`\ ') should perhaps be used.
+obtained from the numerical analysis of Eq. (\ref{1eq:34}), are depicted in Figs. \ref{1Fig:F5} and  \ref{1Fig:F6}. The bright envelop solitons remain  
+                                                                                 ^
+Warning 2 in Manuscript1.tex line 402: Non-breaking space (`~') should have been used.
+obtained from the numerical analysis of Eq. (\ref{1eq:34}), are depicted in Figs. \ref{1Fig:F5} and  \ref{1Fig:F6}. The bright envelop solitons remain  
+                                                                                 ^
+Warning 2 in Manuscript1.tex line 402: Non-breaking space (`~') should have been used.
+obtained from the numerical analysis of Eq. (\ref{1eq:34}), are depicted in Figs. \ref{1Fig:F5} and  \ref{1Fig:F6}. The bright envelop solitons remain  
+                                                                                                    ^
+Warning 36 in Manuscript1.tex line 403: You should put a space in front of parenthesis.
+same as time($\tau$) passes, i.e., the self-gravitating bright envelop solitons are modulationally stable (please see Fig. \ref{1Fig:F6}).  
+            ^
+Warning 12 in Manuscript1.tex line 403: Interword spacing (`\ ') should perhaps be used.
+same as time($\tau$) passes, i.e., the self-gravitating bright envelop solitons are modulationally stable (please see Fig. \ref{1Fig:F6}).  
+                                                                                                                          ^
+Warning 2 in Manuscript1.tex line 403: Non-breaking space (`~') should have been used.
+same as time($\tau$) passes, i.e., the self-gravitating bright envelop solitons are modulationally stable (please see Fig. \ref{1Fig:F6}).  
+                                                                                                                          ^
+Warning 24 in Manuscript1.tex line 405: Delete this space to maintain correct pagereferences.
+\label{1:Discussion}  
+^
+Warning 2 in Manuscript1.tex line 422: Non-breaking space (`~') should have been used.
+neutron stars and white dwarf \cite{Chandrasekhar1931,Koester1990,Fowler1994,Koester2002,Zaman2017}).  
+                             ^

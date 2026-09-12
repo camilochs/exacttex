@@ -1,0 +1,3 @@
+warning: main.tex:86: Overfull \hbox (1.18578pt too wide) in paragraph at lines 86--86
+error: main.tex:91: Illegal unit of measure (pt inserted)
+error: halted on potentially-recoverable error as specified

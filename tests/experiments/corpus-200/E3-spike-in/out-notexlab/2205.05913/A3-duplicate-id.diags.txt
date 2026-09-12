@@ -1,0 +1,3 @@
+planted=sec:intro sites=[('draft_final_version.xtex', 166), ('draft_final_version.xtex', 263)]
+xtex new=[('XT1001', 'sec:intro', 'draft_final_version.xtex', 263)]
+texlab new=[]

@@ -1,0 +1,41 @@
+{
+ "coverage": 0.027956,
+ "bibliography": {
+  "state": "complete",
+  "entries": 344
+ },
+ "diagnostics": [
+  {
+   "code": "XT1005",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "citation",
+   "name": "banigan2017",
+   "span": {
+    "file": "multiscale.xtex",
+    "offset": 21328,
+    "length": 28,
+    "line": 353,
+    "column": 49
+   },
+   "message": "citation key `banigan2017` is not in the bibliography \u2014 did you mean `banigan17`?",
+   "related": []
+  },
+  {
+   "code": "XT1005",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "citation",
+   "name": "banigan2017",
+   "span": {
+    "file": "multiscale.xtex",
+    "offset": 21684,
+    "length": 28,
+    "line": 357,
+    "column": 82
+   },
+   "message": "citation key `banigan2017` is not in the bibliography \u2014 did you mean `banigan17`?",
+   "related": []
+  }
+ ]
+}

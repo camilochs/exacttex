@@ -1,0 +1,207 @@
+exit=2
+lines=204
+unique_findings=64
+Warning 8 in multiscale.tex line 2: Wrong length of dash may have been used.
+\documentclass[pre,aps,twocolumn,showpacs,floatfix]{revtex4-1}  
+                                                           ^
+Warning 36 in multiscale.tex line 16: You should put a space in front of parenthesis.
+\newcommand{\kt}[0]{\tilde{K}_r(r)}  
+                               ^
+Warning 36 in multiscale.tex line 18: You should put a space in front of parenthesis.
+\newcommand{\kttwo}[0]{\tilde{K}_r^{\prime\prime}(r)}  
+                                                 ^
+Warning 36 in multiscale.tex line 19: You should put a space in front of parenthesis.
+\newcommand{\ktthree}[0]{\tilde{K}_r^{\prime\prime\prime}(r)}  
+                                                         ^
+Warning 36 in multiscale.tex line 21: You should put a space in front of parenthesis.
+\newcommand{\kb}[0]{\bar{K}_r(r)}  
+                             ^
+Warning 36 in multiscale.tex line 23: You should put a space in front of parenthesis.
+\newcommand{\kbtwo}[0]{\bar{K}_r^{\prime\prime}(r)}  
+                                               ^
+Warning 36 in multiscale.tex line 24: You should put a space in front of parenthesis.
+\newcommand{\kbthree}[0]{\bar{K}_r^{\prime\prime\prime}(r)}  
+                                                       ^
+Warning 36 in multiscale.tex line 29: You should put a space in front of parenthesis.
+\newcommand{\var}[0]{(r,t(r))}  
+                         ^
+Warning 6 in multiscale.tex line 64: No italic correction (`\/') found.
+scale. To be concrete, we turn to an {\it in vitro} system for the  
+                                                  ^
+Warning 6 in multiscale.tex line 96: No italic correction (`\/') found.
+        \caption{{\it Brain organoid schematics} (a) Schematic of  
+                                               ^
+Warning 12 in multiscale.tex line 97: Interword spacing (`\ ') should perhaps be used.
+            a brain organoid at an earlier time and at a later time. (b) Schematic of a  
+                                                                    ^
+Warning 24 in multiscale.tex line 99: Delete this space to maintain correct pagereferences.
+        \label{fig:brain_organoid}  
+       ^
+Warning 39 in multiscale.tex line 127: Double space found.
+organoids ~\cite{Lancaster2021}, we will use these results as a  
+         ^
+Warning 6 in multiscale.tex line 138: No italic correction (`\/') found.
+using brain organoids~\cite{Lancaster2013,Lancaster2014,Lancaster2014b}---an {\it in vitro} realization of a  
+                                                                                          ^
+Warning 6 in multiscale.tex line 167: No italic correction (`\/') found.
+        \caption{{\it A multiscale hypothesis}: The top row is a  
+                                             ^
+Warning 24 in multiscale.tex line 183: Delete this space to maintain correct pagereferences.
+        \label{fig:multiscale_hypothesis}  
+       ^
+Warning 8 in multiscale.tex line 205: Wrong length of dash may have been used.
+means of regulation that is mechanical in nature----mechanical in that  
+                                                ^^^^
+Warning 8 in multiscale.tex line 227: Wrong length of dash may have been used.
+is rather small----approximately about 1.2\%~\cite{Ebersberger2002}----perhaps even this rather  
+               ^^^^
+Warning 6 in multiscale.tex line 258: No italic correction (`\/') found.
+chimp-derived iPSCs. }  
+                     ^
+Warning 39 in multiscale.tex line 316: Double space found.
+structural models of deformable cell nuclei containing chromatin ~\cite{Zhang2022,Liu2021}.    
+                                                                ^
+Warning 6 in multiscale.tex line 323: No italic correction (`\/') found.
+            of tissue structure}: (a) A representative organoid based  
+                               ^
+Warning 12 in multiscale.tex line 328: Interword spacing (`\ ') should perhaps be used.
+          ellipsoid. (b) A schematic of a two-dimensional  
+                    ^
+Warning 12 in multiscale.tex line 333: Interword spacing (`\ ') should perhaps be used.
+          springs). (c) A deformable lamina shell cell nuclei (purple)  
+                   ^
+Warning 24 in multiscale.tex line 336: Delete this space to maintain correct pagereferences.
+        \label{fig:multiscale_modeling}  
+       ^
+Warning 3 in multiscale.tex line 395: You should enclose the previous parenthesis with `{}'.
+E= K_V\sum_{j}(V_{j} - V_{0})^2+K_A\sum_{j}(A_{j} - A_{0})^2 +\gamma\sum_{\alpha}\delta_{\alpha,B} A_{\alpha},  
+                            ^
+Warning 3 in multiscale.tex line 395: You should enclose the previous parenthesis with `{}'.
+E= K_V\sum_{j}(V_{j} - V_{0})^2+K_A\sum_{j}(A_{j} - A_{0})^2 +\gamma\sum_{\alpha}\delta_{\alpha,B} A_{\alpha},  
+                                                         ^
+Warning 39 in multiscale.tex line 403: Double space found.
+      changes the contractility ~\cite{Sahu2020a}. Given this intricate coupling,  
+                               ^
+Warning 18 in multiscale.tex line 432: Use either `` or '' as an alternative to `"'.
+Regarding the linear area term in Eq. (1), for cells located at the boundary of the organoid, an additional surface tension term is introduced for faces that interact with the "vacuum," which consists of empty cells. These empty cells do not exert forces on the other cells, but they enable the surface cells of the organoid to relax. Additionally, at this stage, there is a constraint preventing cells from separating from the organoid.  
+                                                                                                                                                                                ^
+Warning 18 in multiscale.tex line 432: Use either `` or '' as an alternative to `"'.
+Regarding the linear area term in Eq. (1), for cells located at the boundary of the organoid, an additional surface tension term is introduced for faces that interact with the "vacuum," which consists of empty cells. These empty cells do not exert forces on the other cells, but they enable the surface cells of the organoid to relax. Additionally, at this stage, there is a constraint preventing cells from separating from the organoid.  
+                                                                                                                                                                                        ^
+Warning 13 in multiscale.tex line 474: Intersentence spacing (`\@') should perhaps be used.
+material is $\sim 1$ meter of DNA. Using proteins to form chromatin,  
+                                 ^
+Warning 8 in multiscale.tex line 483: Wrong length of dash may have been used.
+a double membrane and 10-30-nm thick filamentous layer of lamin  
+                        ^
+Warning 6 in multiscale.tex line 493: No italic correction (`\/') found.
+        \caption{{\it Localized compression of a model brain organoid containing a lumen}:  
+                                                                                        ^
+Warning 12 in multiscale.tex line 497: Interword spacing (`\ ') should perhaps be used.
+          region denoted by the vertical green lines. (b) Side view of  
+                                                     ^
+Warning 12 in multiscale.tex line 498: Interword spacing (`\ ') should perhaps be used.
+        (a). (c) Probability distribution of the aspect ratio of each  
+            ^
+Warning 12 in multiscale.tex line 499: Interword spacing (`\ ') should perhaps be used.
+        cell before and after the applied compression/deformation. (d) Plot of the  
+                                                                  ^
+Warning 24 in multiscale.tex line 503: Delete this space to maintain correct pagereferences.
+        \label{fig:organoid_compression}  
+       ^
+Warning 2 in multiscale.tex line 509: Non-breaking space (`~') should have been used.
+proteins \cite{dechat08, solovei13,leeuw18}. Therefore, the  
+        ^
+Warning 2 in multiscale.tex line 514: Non-breaking space (`~') should have been used.
+shapes \cite{stephens19}.  Another recent study suggests that  
+      ^
+Warning 6 in multiscale.tex line 520: No italic correction (`\/') found.
+To quantify chromatin dynamics {\it and} nuclear shape, we constructed a chromatin-lamina  
+                                       ^
+Warning 6 in multiscale.tex line 521: No italic correction (`\/') found.
+system with the chromatin modeled as an {\it active} Rouse chain and the lamina as an elastic, polymeric shell with  
+                                                   ^
+Warning 3 in multiscale.tex line 542: You should enclose the previous parenthesis with `{}'.
+U_{ex}=\frac{1}{2}K_{ex}(|\vec{r}_{ij}|-\sigma _{ij})^2  
+                                                    ^
+Warning 39 in multiscale.tex line 580: Double space found.
+Ref. ~\cite{Berg2023} with a varied number of crosslinks as specified  
+    ^
+Warning 8 in multiscale.tex line 600: Wrong length of dash may have been used.
+Now that we have two of the major players in the process----cells and cell nuclei, let us now  
+                                                        ^^^^
+Warning 39 in multiscale.tex line 625: Double space found.
+  Ref. ~\cite{Zhang2022}, but with fewer cells---152 cells, due to the  
+      ^
+Warning 6 in multiscale.tex line 646: No italic correction (`\/') found.
+            lamina shell containing chromatin}: (a)  
+                                             ^
+Warning 12 in multiscale.tex line 649: Interword spacing (`\ ') should perhaps be used.
+          number of linkages $N_L=400$. The strain rate is the same as in Figure 4(d). (b)  
+                                                                                      ^
+Warning 12 in multiscale.tex line 651: Interword spacing (`\ ') should perhaps be used.
+          displacement field for (a). (c) Plot of the chromatin displacement field  
+                                     ^
+Warning 12 in multiscale.tex line 652: Interword spacing (`\ ') should perhaps be used.
+          for $N_C=N_L=0$ for comparison. (d) Probability distribution of the magnitude for  
+                                         ^
+Warning 24 in multiscale.tex line 656: Delete this space to maintain correct pagereferences.
+        \label{fig:chromatin_compression}  
+       ^
+Warning 13 in multiscale.tex line 660: Intersentence spacing (`\@') should perhaps be used.
+discussed in Sec. III. We do this for organoids with a target shape index  
+                     ^
+Warning 6 in multiscale.tex line 684: No italic correction (`\/') found.
+          crosslinkers}: (a)-(f) The  
+                      ^
+Warning 36 in multiscale.tex line 684: You should put a space in front of parenthesis.
+          crosslinkers}: (a)-(f) The  
+                             ^
+Warning 24 in multiscale.tex line 692: Delete this space to maintain correct pagereferences.
+        \label{fig:differences_displacement_maps}  
+       ^
+Warning 6 in multiscale.tex line 722: No italic correction (`\/') found.
+            crosslinkers for different strains}: Left: Plot of  
+                                              ^
+Warning 24 in multiscale.tex line 729: Delete this space to maintain correct pagereferences.
+        \label{fig:total_average_displacement_difference}  
+       ^
+Warning 6 in multiscale.tex line 737: No italic correction (`\/') found.
+        \caption{{\it Differences in strains for different numbers of crosslinkers}: (a) Strain map for $N_c=2500$ for one realization at the end of the applied compression. (b) Plot of average of the difference in chromatin strain between $N_C=2500$ and fewer chromatin crosslinks. The green line is a guide to the eye. (c) Stain maps for $N_C=2500$ and for $N_C=2490$ and for $N_C=2440$ with chromatin springs represented only when the magnitude of the strain exceeds 30\%.}  
+                                                                                  ^
+Warning 12 in multiscale.tex line 737: Interword spacing (`\ ') should perhaps be used.
+        \caption{{\it Differences in strains for different numbers of crosslinkers}: (a) Strain map for $N_c=2500$ for one realization at the end of the applied compression. (b) Plot of average of the difference in chromatin strain between $N_C=2500$ and fewer chromatin crosslinks. The green line is a guide to the eye. (c) Stain maps for $N_C=2500$ and for $N_C=2490$ and for $N_C=2440$ with chromatin springs represented only when the magnitude of the strain exceeds 30\%.}  
+                                                                                                                                                                             ^
+Warning 12 in multiscale.tex line 737: Interword spacing (`\ ') should perhaps be used.
+        \caption{{\it Differences in strains for different numbers of crosslinkers}: (a) Strain map for $N_c=2500$ for one realization at the end of the applied compression. (b) Plot of average of the difference in chromatin strain between $N_C=2500$ and fewer chromatin crosslinks. The green line is a guide to the eye. (c) Stain maps for $N_C=2500$ and for $N_C=2490$ and for $N_C=2440$ with chromatin springs represented only when the magnitude of the strain exceeds 30\%.}  
+                                                                                                                                                                                                                                                                                                                                ^
+Warning 24 in multiscale.tex line 738: Delete this space to maintain correct pagereferences.
+ \label{fig:strain}  
+^
+Warning 6 in multiscale.tex line 798: No italic correction (`\/') found.
+        \caption{{\it Differences in chromatin contacts for different numbers of crosslinkers}: (a)-(c) Contact maps in which red squares or blue squares represent differences between $N_C=2500$ and $N_C=2490$ and between $N_C=2500$ and $N_C=2440$ and the blue square with red outline represent overlap between the two respective cases. (c) Plot of the average number of contacts per chromatin monomer as the number of crosslinks decreases. }  
+                                                                                             ^
+Warning 36 in multiscale.tex line 798: You should put a space in front of parenthesis.
+        \caption{{\it Differences in chromatin contacts for different numbers of crosslinkers}: (a)-(c) Contact maps in which red squares or blue squares represent differences between $N_C=2500$ and $N_C=2490$ and between $N_C=2500$ and $N_C=2440$ and the blue square with red outline represent overlap between the two respective cases. (c) Plot of the average number of contacts per chromatin monomer as the number of crosslinks decreases. }  
+                                                                                                    ^
+Warning 12 in multiscale.tex line 798: Interword spacing (`\ ') should perhaps be used.
+        \caption{{\it Differences in chromatin contacts for different numbers of crosslinkers}: (a)-(c) Contact maps in which red squares or blue squares represent differences between $N_C=2500$ and $N_C=2490$ and between $N_C=2500$ and $N_C=2440$ and the blue square with red outline represent overlap between the two respective cases. (c) Plot of the average number of contacts per chromatin monomer as the number of crosslinks decreases. }  
+                                                                                                                                                                                                                                                                                                                                                ^
+Warning 24 in multiscale.tex line 799: Delete this space to maintain correct pagereferences.
+        \label{fig:contact}  
+       ^
+Warning 36 in multiscale.tex line 804: You should put a space in front of parenthesis.
+To make contact with more conventional chromatin configuration measures, Figs. 9(a)-(c) show the contact map, or adjacency matrix, when two particles are in contact or not with 2 chromatin particle diameters. If they are in contact, they are colored; otherwise, they are not. For $N_C=2500$, the particles in contact are denoted in red (Fig. 9(a)); for the removed crosslinker cases, the particles in contact are denoted in blue and are slightly larger squares(Figs. 9(b) and (c)). We can therefore overlay removed crosslinker cases with no crosslinker removed case, so we can see where there are differences. For $N_C=2500$ case, the two maps perfectly overlap, as they should, but for 10 and 60 crosslinkers removed, there are some purely red squares and some purely blue squares demonstrating the effect of eliminating crosslinkers. These regions should correlate with the differences in displacement maps shown in Figures 5 and 6 as differences in displacements can lead to changes in neighbors. Figure 9(d) demonstrates that the average number of contacts per particle decreases with fewer crosslinkers as expected.  
+                                                                                    ^
+Warning 36 in multiscale.tex line 804: You should put a space in front of parenthesis.
+To make contact with more conventional chromatin configuration measures, Figs. 9(a)-(c) show the contact map, or adjacency matrix, when two particles are in contact or not with 2 chromatin particle diameters. If they are in contact, they are colored; otherwise, they are not. For $N_C=2500$, the particles in contact are denoted in red (Fig. 9(a)); for the removed crosslinker cases, the particles in contact are denoted in blue and are slightly larger squares(Figs. 9(b) and (c)). We can therefore overlay removed crosslinker cases with no crosslinker removed case, so we can see where there are differences. For $N_C=2500$ case, the two maps perfectly overlap, as they should, but for 10 and 60 crosslinkers removed, there are some purely red squares and some purely blue squares demonstrating the effect of eliminating crosslinkers. These regions should correlate with the differences in displacement maps shown in Figures 5 and 6 as differences in displacements can lead to changes in neighbors. Figure 9(d) demonstrates that the average number of contacts per particle decreases with fewer crosslinkers as expected.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+Warning 12 in multiscale.tex line 845: Interword spacing (`\ ') should perhaps be used.
+model as presented in Ref. \cite{Zhang2022} is a reasonable starting point for an  
+                          ^
+Warning 2 in multiscale.tex line 845: Non-breaking space (`~') should have been used.
+model as presented in Ref. \cite{Zhang2022} is a reasonable starting point for an  
+                          ^
+Warning 6 in multiscale.tex line 898: No italic correction (`\/') found.
+chromatin configuration as a function of mechanical {\it and} chemical  
+                                                            ^

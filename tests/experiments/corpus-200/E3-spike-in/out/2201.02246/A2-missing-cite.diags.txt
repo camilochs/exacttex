@@ -1,0 +1,3 @@
+planted=joan__ghost sites=[('QCC_arxiv.xtex', 230)]
+xtex new=[('XT1005', 'joan__ghost', 'QCC_arxiv.xtex', 230)]
+texlab new=[('ERROR', 'QCC_arxiv.tex', 230, 'Undefined reference'), ('info', 'QCC_arxiv.tex', 844, 'Unused entry')]

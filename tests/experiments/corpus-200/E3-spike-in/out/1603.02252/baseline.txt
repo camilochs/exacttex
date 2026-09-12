@@ -1,0 +1,33 @@
+tectonic pdf bytes=6583267
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'apo.tex', 79, 'Undefined reference'), ('ERROR', 'apo.tex', 91, 'Undefined reference'), ('ERROR', 'apo.tex', 143, 'Undefined reference'), ('ERROR', 'apo.tex', 168, 'Undefined reference'), ('ERROR', 'apo.tex', 180, 'Undefined reference'), ('ERROR', 'apo.tex', 196, 'Undefined reference'), ('ERROR', 'apo.tex', 209, 'Undefined reference'), ('ERROR', 'apo.tex', 210, 'Undefined reference'), ('ERROR', 'apo.tex', 239, 'Undefined reference'), ('ERROR', 'apo.tex', 346, 'Undefined reference'), ('ERROR', 'apo.tex', 376, 'Undefined reference'), ('ERROR', 'apo.tex', 383, 'Undefined reference'), ('ERROR', 'apo.tex', 387, 'Undefined reference'), ('ERROR', 'apo.tex', 408, 'Undefined reference'), ('ERROR', 'apo.tex', 410, 'Undefined reference'), ('ERROR', 'apo.tex', 412, 'Undefined reference'), ('ERROR', 'apo.tex', 414, 'Undefined reference'), ('ERROR', 'apo.tex', 416, 'Undefined reference'), ('ERROR', 'apo.tex', 418, 'Undefined reference'), ('ERROR', 'apo.tex', 440, 'Undefined reference'), ('ERROR', 'apo.tex', 441, 'Undefined reference'), ('ERROR', 'apo.tex', 442, 'Undefined reference'), ('ERROR', 'apo.tex', 443, 'Undefined reference'), ('ERROR', 'apo.tex', 444, 'Undefined reference'), ('ERROR', 'apo.tex', 445, 'Undefined reference'), ('ERROR', 'apo.tex', 454, 'Undefined reference'), ('ERROR', 'apo.tex', 472, 'Undefined reference'), ('ERROR', 'apo.tex', 474, 'Undefined reference'), ('ERROR', 'apo.tex', 476, 'Undefined reference'), ('ERROR', 'apo.tex', 478, 'Undefined reference'), ('ERROR', 'apo.tex', 480, 'Undefined reference'), ('ERROR', 'apo.tex', 482, 'Undefined reference'), ('ERROR', 'apo.tex', 506, 'Undefined reference'), ('ERROR', 'apo.tex', 511, 'Undefined reference'), ('ERROR', 'apo.tex', 516, 'Undefined reference'), ('ERROR', 'apo.tex', 521, 'Undefined reference'), ('ERROR', 'apo.tex', 526, 'Undefined reference'), ('ERROR', 'apo.tex', 531, 'Undefined reference'), ('ERROR', 'apo.tex', 542, 'Undefined reference'), ('ERROR', 'apo.tex', 546, 'Undefined reference'), ('info', 'apo.tex', 77, 'Unused label'), ('info', 'apo.tex', 87, 'Unused label'), ('info', 'apo.tex', 227, 'Unused label'), ('info', 'apo.tex', 277, 'Unused label'), ('info', 'apo.tex', 427, 'Unused label'), ('info', 'apo.tex', 550, 'Unused label'), ('info', 'apo.tex', 554, 'Unused label'), ('info', 'apo.tex', 563, 'Unused label')]
+tectonic exit=0 warnings=[] secs=2
+ at line 11 replaced by U+FFFD.
+warning: apo.tex:197: Underfull \hbox (badness 1810) in paragraph at lines 196--197
+warning: apo.tex:197: Underfull \hbox (badness 1448) in paragraph at lines 196--197
+warning: apo.tex:211: Underfull \hbox (badness 812) in paragraph at lines 210--211
+warning: apo.tex:211: Underfull \hbox (badness 812) in paragraph at lines 210--211
+warning: apo.tex:240: Overfull \hbox (11.82845pt too wide) in paragraph at lines 239--240
+warning: apo.tex:285: Underfull \hbox (badness 991) in paragraph at lines 284--285
+warning: apo.tex:310: Underfull \hbox (badness 816) in paragraph at lines 309--310
+warning: apo.tex:310: Underfull \hbox (badness 1527) in paragraph at lines 309--310
+warning: apo.tex:310: Underfull \hbox (badness 1275) in paragraph at lines 309--310
+warning: apo.tex:377: Underfull \hbox (badness 1237) in paragraph at lines 376--377
+warning: apo.tex:457: Underfull \hbox (badness 870) in paragraph at lines 456--457
+warning: apo.tex:547: Overfull \hbox (5.54778pt too wide) in paragraph at lines 546--547
+warning: apo.tex:547: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: apo.tex:547: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: apo.tex:567: Overfull \hbox (2.97786pt too wide) in paragraph at lines 566--567
+warning: apo.tex:573: Underfull \hbox (badness 1038) in paragraph at lines 572--573
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.
+warning: PDF file is tagged... Ignoring tags.

@@ -1,0 +1,25 @@
+{
+ "coverage": 0.025726,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "the document declares no bibliography"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "luca171228-pt_and_qt.xtex",
+    "offset": 35373,
+    "length": 21,
+    "line": 832,
+    "column": 44
+   },
+   "message": "citation checking unavailable: the document declares no bibliography",
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,100 @@
+exit=2
+lines=378
+unique_findings=88
+                                                                                                      ^
+Warning 2 in Preprint_Bonciolini_RSOS.tex line 256: Non-breaking space (`~') should have been used.
+\caption{Ramping cycle of $\nu$ between the values $\nu_0=-4.5$ and $\nu_\text{E}=5.5$ for the oscillator model \eqref{eq:oscillator} for two different ramp rates $R$. The contour plot represents the PDF $P(A;t)$ computed by time-marching the FPE \eqref{eq:fp}. The time is normalised with the ramp time $t_\text{ramp}=(\nu_\text{E}-\nu_0)/R$. In the insets, the ramp cycle in dimensional time. The other parameters of the model are: $\omega_0/2\pi=120$s\textsuperscript{-1}, $\kappa=8$s\textsuperscript{-1}, $\mu=2$s\textsuperscript{-1}, $\Gamma/4\omega_0^2=0.44$.}  
+                                                                                                                                                                                                                                                      ^
+Warning 24 in Preprint_Bonciolini_RSOS.tex line 257: Delete this space to maintain correct pagereferences.
+\label{fig:05_ramp_sim}  
+^
+Warning 24 in Preprint_Bonciolini_RSOS.tex line 262: Delete this space to maintain correct pagereferences.
+\label{ss:ramp_mod}  
+^
+Warning 2 in Preprint_Bonciolini_RSOS.tex line 263: Non-breaking space (`~') should have been used.
+The ramp rate, together with the ramp profile, is expected to influence the bifurcation delay, as shown in \cite{baer2008slow} for a deterministic system. We therefore used the surrogate oscillator model to investigate this aspect in more detail. The parameter $\nu$ was varied linearly in time between two values $\nu_0$ and $\nu_\text{E}$ at different rates $R$.   
+                                                                                                          ^
+Warning 2 in Preprint_Bonciolini_RSOS.tex line 264: Non-breaking space (`~') should have been used.
+Two approaches were used. The first is to simulate \eqref{eq:oscillator} in Simulink, varying the initial condition and running different realisations of the process. Extracting the envelope for each realisation and considering the ensemble statistic, it is possible to draw maps of the evolution in time of the amplitude PDF $P(A;t)$. The other approach is to integrate numerically the FPE \eqref{eq:fp} and obtain directly $P(A;t)$. The two methods closely agree, as shown in the appendix. In \cref{fig:05_ramp_sim} the results of the FPE integration are presented. A ramp up/idle/ramp down/idle cycle is solved, for two different ramp rates $R=$50 rad/s\textsuperscript{2} and $R=$10 rad/s\textsuperscript{2}. The dynamic stochastic bifurcation delay is captured and it is observed that a faster ramp leads to a more pronounced delayed transition from one stable point to the other.\\   
+                                                  ^
+Warning 2 in Preprint_Bonciolini_RSOS.tex line 264: Non-breaking space (`~') should have been used.
+Two approaches were used. The first is to simulate \eqref{eq:oscillator} in Simulink, varying the initial condition and running different realisations of the process. Extracting the envelope for each realisation and considering the ensemble statistic, it is possible to draw maps of the evolution in time of the amplitude PDF $P(A;t)$. The other approach is to integrate numerically the FPE \eqref{eq:fp} and obtain directly $P(A;t)$. The two methods closely agree, as shown in the appendix. In \cref{fig:05_ramp_sim} the results of the FPE integration are presented. A ramp up/idle/ramp down/idle cycle is solved, for two different ramp rates $R=$50 rad/s\textsuperscript{2} and $R=$10 rad/s\textsuperscript{2}. The dynamic stochastic bifurcation delay is captured and it is observed that a faster ramp leads to a more pronounced delayed transition from one stable point to the other.\\   
+                                                                                                                                                                                                                                                                                                                                                                                                      ^
+Warning 24 in Preprint_Bonciolini_RSOS.tex line 277: Delete this space to maintain correct pagereferences.
+\label{fig:06_fpt}  
+^
+Warning 24 in Preprint_Bonciolini_RSOS.tex line 291: Delete this space to maintain correct pagereferences.
+\label{fig:07_control}  
+^
+Warning 24 in Preprint_Bonciolini_RSOS.tex line 301: Delete this space to maintain correct pagereferences.
+\label{s:FPA}  
+^
+Warning 2 in Preprint_Bonciolini_RSOS.tex line 305: Non-breaking space (`~') should have been used.
+A way to estimate the hazard represented by the delayed bifurcation is to compute, using the surrogate model, the statistic of the time $t_\text{fp}$ needed to reach a certain danger level. This is similar to the classical problem of first passage time, often addressed in the context of bifurcation theory for stochastic dynamics in steady double-well  potential \cite{torrent1988stochastic,kuske1999probability,miller2012escape,hu2010first,dibble2016waiting}. A major difference in the present situation is that the potential evolves with time. Ramp rate and noise intensity are expected to influence this escape problem as theoretically shown for other types of bifurcation in \cite{ritchie2017probability} or \cite{berglund2002beyond}. The statistic of the first passage time can be computed either performing an ensemble average over many time-domain simulations of the process, or solving the unsteady Fokker-Planck equation and imposing an absorbing boundary condition at that threshold level. Details about the two methods, with results in close agreement, are provided in the appendix.  
+                                                                                                                                                                                                                                                                                                                                                                           ^
+Warning 2 in Preprint_Bonciolini_RSOS.tex line 305: Non-breaking space (`~') should have been used.
+A way to estimate the hazard represented by the delayed bifurcation is to compute, using the surrogate model, the statistic of the time $t_\text{fp}$ needed to reach a certain danger level. This is similar to the classical problem of first passage time, often addressed in the context of bifurcation theory for stochastic dynamics in steady double-well  potential \cite{torrent1988stochastic,kuske1999probability,miller2012escape,hu2010first,dibble2016waiting}. A major difference in the present situation is that the potential evolves with time. Ramp rate and noise intensity are expected to influence this escape problem as theoretically shown for other types of bifurcation in \cite{ritchie2017probability} or \cite{berglund2002beyond}. The statistic of the first passage time can be computed either performing an ensemble average over many time-domain simulations of the process, or solving the unsteady Fokker-Planck equation and imposing an absorbing boundary condition at that threshold level. Details about the two methods, with results in close agreement, are provided in the appendix.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ^
+Warning 2 in Preprint_Bonciolini_RSOS.tex line 305: Non-breaking space (`~') should have been used.
+A way to estimate the hazard represented by the delayed bifurcation is to compute, using the surrogate model, the statistic of the time $t_\text{fp}$ needed to reach a certain danger level. This is similar to the classical problem of first passage time, often addressed in the context of bifurcation theory for stochastic dynamics in steady double-well  potential \cite{torrent1988stochastic,kuske1999probability,miller2012escape,hu2010first,dibble2016waiting}. A major difference in the present situation is that the potential evolves with time. Ramp rate and noise intensity are expected to influence this escape problem as theoretically shown for other types of bifurcation in \cite{ritchie2017probability} or \cite{berglund2002beyond}. The statistic of the first passage time can be computed either performing an ensemble average over many time-domain simulations of the process, or solving the unsteady Fokker-Planck equation and imposing an absorbing boundary condition at that threshold level. Details about the two methods, with results in close agreement, are provided in the appendix.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ^
+Warning 24 in Preprint_Bonciolini_RSOS.tex line 337: Delete this space to maintain correct pagereferences.
+\label{SUP_experiments}  
+^
+Warning 24 in Preprint_Bonciolini_RSOS.tex line 355: Delete this space to maintain correct pagereferences.
+\label{SUP_validation_FPE}  
+^
+Warning 24 in Preprint_Bonciolini_RSOS.tex line 361: Delete this space to maintain correct pagereferences.
+\label{fig:S01_FPE_validation}  
+^
+Warning 2 in Preprint_Bonciolini_RSOS.tex line 364: Non-breaking space (`~') should have been used.
+The evolution in time of the probability density function $P(A ; t)$ during the ramping of the control parameter $\nu$ can be obtained solving numerically \eqref{eq:fp}. In this case, the drift coefficient is time dependent $\mathcal{F}(A;t)=A(\nu(t)+{\kappa A^2}/{8}-{\mu A^4}/{16})+{\Gamma}/{4\omega_{0}^{2}A}$, where $\nu(t)=\nu_0+Rt$. The solution is obtained via the MATLAB\textsuperscript{\textregistered} \verb|ode23| solver, imposing a Dirichlet boundary condition $P(A ; t)$=0, $\forall t$ in $A=0$ and $A=A_\text{max}$, $A_\text{max}$ being the upper boundary of the domain. The initial condition is the stationary PDF $P_\infty(A;\nu_0)$. The result for the set of parameters $\nu_0=-4.5$, $R=10$, $\kappa=8$, $\mu=2$, $\Gamma=10^6$, $\omega_0=120\times2\pi$, $A_\text{max}=6$ is presented in the left panel of \cref{fig:S01_FPE_validation}. The contour plot represents the PDF $P(A ; t)$ for a ramping sequence leading to a significant bifurcation delay.   
+                                                                                                                                                          ^
+Warning 2 in Preprint_Bonciolini_RSOS.tex line 365: Non-breaking space (`~') should have been used.
+This solution of the unsteady FPE is validated against the statistic of Monte Carlo simulations of the process. In detail, \eqref{eq:oscillator} is simulated 5000 times in Simulink\textsuperscript{\textregistered}, imposing again $\nu=\nu(t)=\nu_0+Rt$ and with the initial conditions distributed according to the stationary PDF $P_\infty(A;\nu_0)$. The ensemble statistic of the trajectories are presented in the right panel of \cref{fig:S01_FPE_validation}. Close agreement with the FPE method can be observed.  
+                                                                                                                          ^
+Warning 24 in Preprint_Bonciolini_RSOS.tex line 370: Delete this space to maintain correct pagereferences.
+\label{SUP_fpt}  
+^
+Warning 9 in Preprint_Bonciolini_RSOS.tex line 374: `}' expected, found `)'.
+\caption{a) FPE solution with absorbing boundary condition and related CDF and PDF of first passage time for a ramp rate of R =10 rad/s\textsuperscript{2}. b) Validation of the FPE method against Monte Carlo simulations statistic for two different ramp rates.}  
+          ^
+Warning 12 in Preprint_Bonciolini_RSOS.tex line 374: Interword spacing (`\ ') should perhaps be used.
+\caption{a) FPE solution with absorbing boundary condition and related CDF and PDF of first passage time for a ramp rate of R =10 rad/s\textsuperscript{2}. b) Validation of the FPE method against Monte Carlo simulations statistic for two different ramp rates.}  
+                                                                                                                                                           ^
+Warning 10 in Preprint_Bonciolini_RSOS.tex line 374: Solo `)' found.
+\caption{a) FPE solution with absorbing boundary condition and related CDF and PDF of first passage time for a ramp rate of R =10 rad/s\textsuperscript{2}. b) Validation of the FPE method against Monte Carlo simulations statistic for two different ramp rates.}  
+                                                                                                                                                             ^
+Warning 10 in Preprint_Bonciolini_RSOS.tex line 374: Solo `}' found.
+\caption{a) FPE solution with absorbing boundary condition and related CDF and PDF of first passage time for a ramp rate of R =10 rad/s\textsuperscript{2}. b) Validation of the FPE method against Monte Carlo simulations statistic for two different ramp rates.}  
+                                                                                                                                                                                                                                                                   ^
+Warning 24 in Preprint_Bonciolini_RSOS.tex line 375: Delete this space to maintain correct pagereferences.
+\label{fig:S02_fpt}  
+^
+Warning 2 in Preprint_Bonciolini_RSOS.tex line 378: Non-breaking space (`~') should have been used.
+The following procedure was adopted to compute the distribution of the first passage time $t_\text{th}$ above the threshold $A_\text{th}$. The FPE \eqref{eq:fp}, with $\nu(t)=\nu_0+Rt$ was numerically solved using the MATLAB\textsuperscript{\textregistered} \verb|ode23|, imposing the Dirichlet condition  $P(A=0\,;\,t)=0$ on  
+                                                                                                                                                  ^
+Warning 24 in Preprint_Bonciolini_RSOS.tex line 384: Delete this space to maintain correct pagereferences.
+\label{SUP_supercritical}  
+^
+Warning 9 in Preprint_Bonciolini_RSOS.tex line 389: `}' expected, found `)'.
+\caption{a) Stationary PDF $P_\infty(p,\dot{p}/\omega;\nu)$ (top) and stationary amplitude PDF $P_\infty(A;\nu)$ (bottom), for the supercritical bifurcation of the Van der Pol oscillator (\ref{vdp}) (compare with \cref{fig:02_bif}b-c). Adopted parameters values are: $\omega_0/2\pi=120$s\textsuperscript{-1}, $\kappa=8$s\textsuperscript{-1}, $\Gamma/4\omega_0^2=0.44$, $\nu\in[-4.5;5.5]$. b) Same test as in \cref{fig:07_control}, this time applied to the supercritical bifurcation of the Van der Pol oscillator. Two exemplary cases (square $R$=10, circle $R$=50) are simulated in Simulink, implementing a control system that ramps down $\nu$ if the danger level is reached.   
+          ^
+Warning 12 in Preprint_Bonciolini_RSOS.tex line 389: Interword spacing (`\ ') should perhaps be used.
+\caption{a) Stationary PDF $P_\infty(p,\dot{p}/\omega;\nu)$ (top) and stationary amplitude PDF $P_\infty(A;\nu)$ (bottom), for the supercritical bifurcation of the Van der Pol oscillator (\ref{vdp}) (compare with \cref{fig:02_bif}b-c). Adopted parameters values are: $\omega_0/2\pi=120$s\textsuperscript{-1}, $\kappa=8$s\textsuperscript{-1}, $\Gamma/4\omega_0^2=0.44$, $\nu\in[-4.5;5.5]$. b) Same test as in \cref{fig:07_control}, this time applied to the supercritical bifurcation of the Van der Pol oscillator. Two exemplary cases (square $R$=10, circle $R$=50) are simulated in Simulink, implementing a control system that ramps down $\nu$ if the danger level is reached.   
+                                                                                                                                                                                                                                                                                                                                                                                                    ^
+Warning 10 in Preprint_Bonciolini_RSOS.tex line 389: Solo `)' found.
+\caption{a) Stationary PDF $P_\infty(p,\dot{p}/\omega;\nu)$ (top) and stationary amplitude PDF $P_\infty(A;\nu)$ (bottom), for the supercritical bifurcation of the Van der Pol oscillator (\ref{vdp}) (compare with \cref{fig:02_bif}b-c). Adopted parameters values are: $\omega_0/2\pi=120$s\textsuperscript{-1}, $\kappa=8$s\textsuperscript{-1}, $\Gamma/4\omega_0^2=0.44$, $\nu\in[-4.5;5.5]$. b) Same test as in \cref{fig:07_control}, this time applied to the supercritical bifurcation of the Van der Pol oscillator. Two exemplary cases (square $R$=10, circle $R$=50) are simulated in Simulink, implementing a control system that ramps down $\nu$ if the danger level is reached.   
+                                                                                                                                                                                                                                                                                                                                                                                                      ^
+Warning 10 in Preprint_Bonciolini_RSOS.tex line 392: Solo `}' found.
+Bottom row: KDE of the PDFs. The mean residence and mean released energy in the danger zone are indicated too.}  
+                                                                                                              ^
+Warning 24 in Preprint_Bonciolini_RSOS.tex line 393: Delete this space to maintain correct pagereferences.
+\label{fig:S03_supercritical}  
+^
+Warning 2 in Preprint_Bonciolini_RSOS.tex line 401: Non-breaking space (`~') should have been used.
+with all the terms having the same meaning as in \eqref{eq:oscillator}. The left panel of \cref{fig:S03_supercritical} shows the the probability density function of the amplitude $P_\infty(A\,;\,\nu)$ for a quasi-steady ramping of the bifurcation parameter. As with the surrogate model of the sub-critical Hopf bifurcation, simulations were performed to illustrate the incurred risk when one of the system parameters is ramped at a finite rate while a controller is fed with the current state of the system. The parameter $\nu$  was ramped up in time and as soon as the oscillation amplitude exceeded the control threshold $A_\text{th}$, $\nu$ was ramped back with the maximum possible rate. The results for two different ramp up rates $R$ are shown in the right panel of \cref{fig:S03_supercritical}. Again, it can be observed the averaged released energy is higher when the ramp rate is faster.  
+                                                ^
+Warning 17 in Preprint_Bonciolini_RSOS.tex line 402: Number of `(' doesn't match the number of `)'!
+
+

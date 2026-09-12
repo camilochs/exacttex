@@ -1,0 +1,3 @@
+planted=eq:integspec sites=[('paper20160222.xtex', 180), ('paper20160222.xtex', 57)]
+xtex new=[('XT1001', 'eq:integspec', 'paper20160222.xtex', 180)]
+texlab new=[('ERROR', 'paper20160222.tex', 57, 'Duplicate label'), ('ERROR', 'paper20160222.tex', 180, 'Duplicate label'), ('info', 'paper20160222.tex', 57, 'Unused label')]

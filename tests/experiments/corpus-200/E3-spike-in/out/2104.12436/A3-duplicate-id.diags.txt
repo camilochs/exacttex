@@ -1,0 +1,3 @@
+planted=sec:preliminaries sites=[('manuscript.xtex', 243), ('manuscript.xtex', 165)]
+xtex new=[('XT1001', 'sec:preliminaries', 'manuscript.xtex', 243)]
+texlab new=[('ERROR', 'manuscript.tex', 165, 'Duplicate label'), ('ERROR', 'manuscript.tex', 243, 'Duplicate label'), ('info', 'manuscript.tex', 165, 'Unused label')]

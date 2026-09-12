@@ -1,0 +1,3 @@
+planted=sec:Introduction sites=[('2018_Feb8_ANN_Nuclear_Physics_camera_ready.xtex', 605), ('2018_Feb8_ANN_Nuclear_Physics_camera_ready.xtex', 652)]
+xtex new=[('XT1001', 'sec:Introduction', '2018_Feb8_ANN_Nuclear_Physics_camera_ready.xtex', 652)]
+texlab new=[]

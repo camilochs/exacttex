@@ -1,0 +1,244 @@
+paper,key,verdict,source,field,in_document,in_source,severity,class
+1902.08411,vasta2016hippocampal,partial,crossref-query,authors,"Vasta, Roberta and Augimeri, Antonio and Cerasa, Antonio and Nigro,
+	Salvatore and Gramigna, Vera and Nonnis, Matteo and Rocca, Federico
+	and Zito, Giancarlo and Quattrone, Aldo and s Disease Neuroimaging
+	Initiative and others",Roberta Vasta and Antonio Augimeri and Antonio Cerasa and Salvatore Nigro and Vera Gramigna and Matteo Nonnis and Federico Rocca and Giancarlo Zito and Aldo Quattrone and . for the Alzheimer's Disease Neuroimaging,high,missing-author
+1911.08837,Kirkbook1998,partial,crossref-query,authors,"Kirk, D.L.",Annette W. Coleman,high,different-work
+1911.08837,symon1971chapter,partial,crossref-query,authors,"Symon, K. R.",Keith R. Symon and B. James Raz,high,missing-author
+2003.04805,bouwman2007csf,partial,crossref-query,authors,"Bouwman, FH and Schoonenboom, SNM and van Der Flier, WM and Van Elk, EJ and Kok, A and Barkhof, F and Blankenstein, MA and Scheltens, Ph",F.H. Bouwman and S.N.M. Schoonenboom and W.M. van der Flier and E.J. van Elk and A. Kok and F. Barkhof and M.A. Blankenstein and Ph. Scheltens,high,name-differs
+2003.04805,bozzali2002white,partial,crossref-query,authors,"Bozzali, M and Falini, A and Franceschi, M and Cercignani, M and Zuffi, M and Scotti, G and Comi, G and Filippi, M",M Bozzali,high,registry-truncated
+2003.04805,cappa2001brain,partial,crossref-query,authors,"Cappa, Atonella and Calcagni, ML and Villa, Giampiero and Giordano, Alessandro and Marra, Camillo and De Rossi, Giuseppe and Puopolo, M and Gainotti, Guido",A Cappa,high,registry-truncated
+2003.04805,caroli2010dynamics,partial,crossref-query,authors,"Caroli, A and Frisoni, GB and Alzheimer's Disease Neuroimaging Initiative",A. Caroli and G.B. Frisoni,high,consortium-only
+2003.04805,cheng2017multi,partial,crossref-query,authors,"Cheng, Bo and Liu, Mingxia and Shen, Dinggang and Li, Zuoyong and Zhang, Daoqiang and Alzheimer’s Disease Neuroimaging Initiative",Bo Cheng and Mingxia Liu and Dinggang Shen and Zuoyong Li and Daoqiang Zhang,high,consortium-only
+2003.04805,davies1976selective,partial,crossref-query,authors,"Davies, Peter and Maloney, AJF",P DAVIES,high,registry-truncated
+2003.04805,dickerson2010dysexecutive,partial,crossref-query,authors,"Dickerson, Bradford C and Wolk, David A and Alzheimer's Disease Neuroimaging Initiative",B. C. Dickerson and D. A. Wolk,high,consortium-only
+2003.04805,galton2000atypical,partial,crossref-query,authors,"Galton, Clare J and Patterson, Karalyn and Xuereb, John H and Hodges, John R",C. J. Galton,high,registry-truncated
+2003.04805,georgiou2008magnetic,partial,crossref-query,authors,"Georgiou-Karistianis, Nellie and Hannan, Anthony J and Egan, Gary F",India Bohanna and Nellie Georgiou-Karistianis and Anthony J. Hannan and Gary F. Egan,high,missing-author
+2003.04805,gray2013random,partial,crossref-query,authors,"Gray, Katherine R and Aljabar, Paul and Heckemann, Rolf A and Hammers, Alexander and Rueckert, Daniel and Alzheimer's Disease Neuroimaging Initiative",Katherine R. Gray and Paul Aljabar and Rolf A. Heckemann and Alexander Hammers and Daniel Rueckert,high,consortium-only
+2003.04805,green1990progressive,partial,crossref-query,authors,"Green, J and Morris, John C and Sandson, J and McKeel, DW and Miller, JW",J. Green,high,registry-truncated
+2003.04805,guerrero2016instantiated,partial,crossref-query,authors,"Guerrero, Ricardo and Schmidt-Richberg, Alexander and Ledig, Christian and Tong, Tong and Wolz, Robin and Rueckert, Daniel and ADNI",R. Guerrero and A. Schmidt-Richberg and C. Ledig and T. Tong and R. Wolz and D. Rueckert,high,registry-truncated
+2003.04805,harutyunyan2017multitask,partial,crossref-query,authors,"Harutyunyan, Hrayr and Khachatrian, Hrant and Kale, David C and Galstyan, Aram",Hrayr Harutyunyan and Hrant Khachatrian and David C. Kale and Greg Ver Steeg and Aram Galstyan,high,missing-author
+2003.04805,hyun2016stgp,partial,crossref-query,authors,"Hyun, Jung Won and Li, Yimei and Huang, Chao and Styner, Martin and Lin, Weili and Zhu, Hongtu and {Alzheimer's} Disease Neuroimaging Initiative",Jung Won Hyun and Yimei Li and Chao Huang and Martin Styner and Weili Lin and Hongtu Zhu,high,consortium-only
+2003.04805,koval2017statistical,partial,crossref-query,authors,"Koval, Igor and Schiratti, J-B and Routier, Alexandre and Bacci, Michael and Colliot, Olivier and Allassonni{\`e}re, St{\'e}phanie and Durrleman, Stanley and Alzheimer’s Disease Neuroimaging Initiative",I. Koval and J.-B. Schiratti and A. Routier and M. Bacci and O. Colliot and S. Allassonnière and S. Durrleman,high,consortium-only
+2003.04805,leung2010automated,partial,crossref-query,authors,"Leung, Kelvin K and Barnes, Josephine and Ridgway, Gerard R and Bartlett, Jonathan W and Clarkson, Matthew J and Macdonald, Kate and Schuff, Norbert and Fox, Nick C and Ourselin, Sebastien and Alzheimer's Disease Neuroimaging Initiative",Kelvin K. Leung and Josephine Barnes and Gerard R. Ridgway and Jonathan W. Bartlett and Matthew J. Clarkson and Kate Macdonald and Norbert Schuff and Nick C. Fox and Sebastien Ourselin,high,consortium-only
+2003.04805,leung2010robust,partial,crossref-query,authors,"Leung, Kelvin K and Clarkson, Matthew J and Bartlett, Jonathan W and Clegg, Shona and Jack, Clifford R and Weiner, Michael W and Fox, Nick C and Ourselin, S{\'e}bastien and Alzheimer's Disease Neuroimaging Initiative",Kelvin K. Leung and Matthew J. Clarkson and Jonathan W. Bartlett and Shona Clegg and Clifford R. Jack and Michael W. Weiner and Nick C. Fox and Sébastien Ourselin,high,consortium-only
+2003.04805,levine1993visual,partial,crossref-query,authors,"Levine, David N and Lee, John M and Fisher, CM",D. N. Levine,high,registry-truncated
+2003.04805,marinescu2017vertex,partial,crossref-query,authors,"Marinescu, R{\u{a}}zvan Valentin and Eshaghi, Arman and Lorenzi, Marco and Young, Alexandra L and Oxtoby, Neil P and Garbarino, Sara and Shakespeare, Timothy J and Crutch, Sebastian J and Alexander, Daniel C and Alzheimer’s Disease Neuroimaging Initiative",Răzvan Valentin Marinescu and Arman Eshaghi and Marco Lorenzi and Alexandra L. Young and Neil P. Oxtoby and Sara Garbarino and Timothy J. Shakespeare and Sebastian J. Crutch and Daniel C. Alexander,high,consortium-only
+2003.04805,modrego2004depression,partial,crossref-query,authors,"Modrego, Pedro J and Ferr{\'a}ndez, Jaime",J.C. Ballenger,high,different-work
+2003.04805,nestor2003topography,partial,crossref-query,authors,"Nestor, PJ and Caine, D and Fryer, TD and Clarke, J and Hodges, JR",P J Nestor,high,registry-truncated
+2003.04805,nir2013effectiveness,partial,crossref-query,authors,"Nir, Talia M and Jahanshad, Neda and Villalon-Reina, Julio E and Toga, Arthur W and Jack, Clifford R and Weiner, Michael W and Thompson, Paul M and ADNI",Talia M. Nir and Neda Jahanshad and Julio E. Villalon-Reina and Arthur W. Toga and Clifford R. Jack and Michael W. Weiner and Paul M. Thompson,high,registry-truncated
+2003.04805,oxtoby2014learning,partial,crossref-query,authors,"Oxtoby, Neil P and Young, Alexandra L and Fox, Nick C and Daga, Pankaj and Cash, David M and Ourselin, Sebastien and Schott, Jonathan M and Alexander, Daniel C and Alzheimer’s Disease Neuroimaging Initiative",Neil P. Oxtoby and Alexandra L. Young and Nick C. Fox and Pankaj Daga and David M. Cash and Sebastien Ourselin and Jonathan M. Schott and Daniel C. Alexander,high,consortium-only
+2003.04805,raj2015network,partial,crossref-query,authors,"Raj, Ashish and LoCastro, Eve and Kuceyeski, Amy and Tosun, Duygu and Relkin, Norman and Weiner, Michael and {Alzheimer's} Disease Neuroimaging Initiative",Ashish Raj and Eve LoCastro and Amy Kuceyeski and Duygu Tosun and Norman Relkin and Michael Weiner,high,consortium-only
+2003.04805,renner2004progressive,partial,crossref-query,authors,"Renner, JA and Burns, JM and Hou, CE and McKeel, DW and Storandt, M and Morris, JC",A. Verma,high,different-work
+2003.04805,sabuncu2011dynamics,partial,crossref-query,authors,"Sabuncu, Mert R and Desikan, Rahul S and Sepulcre, Jorge and Yeo, Boon Thye T and Liu, Hesheng and Schmansky, Nicholas J and Reuter, Martin and Weiner, Michael W and Buckner, Randy L and Sperling, Reisa A and others",Mert R. Sabuncu,high,registry-truncated
+2003.04805,schiratti2015mixed,partial,crossref-query,authors,"Schiratti, J-B and Allassonniere, St{\'e}phanie and Routier, Alexandre and Colliot, Olivier and Durrleman, Stanley and Alzheimers Disease Neuroimaging Initiative",J.-B. Schiratti and S. Allassonnière and A. Routier and O. Colliot and S. Durrleman,high,consortium-only
+2003.04805,schmidt2015multi,partial,crossref-query,authors,"Schmidt-Richberg, Alexander and Guerrero, Ricardo and Ledig, Christian and Molina-Abril, Helena and Frangi, Alejandro F and Rueckert, Daniel and Alzheimers Disease Neuroimaging Initiative",Alexander Schmidt-Richberg and Ricardo Guerrero and Christian Ledig and Helena Molina-Abril and Alejandro F. Frangi and Daniel Rueckert,high,consortium-only
+2003.04805,schmidtke2005posterior,partial,crossref-query,authors,"Schmidtke, Klaus and H{\""u}ll, PD Dr Michael and Talazko, Jochen",Klaus Schmidtke and Michael H�ll and Jochen Talazko,high,spelling-only
+2003.04805,seshadri2010genome,partial,crossref-query,authors,"Seshadri, Sudha and Fitzpatrick, Annette L and Ikram, M Arfan and DeStefano, Anita L and Gudnason, Vilmundur and Boada, Merce and Bis, Joshua C and Smith, Albert V and Carrasquillo, Minerva M and Lambert, Jean Charles and others",Sudha Seshadri,high,registry-truncated
+2003.04805,tang2003coexistent,partial,crossref-query,authors,"Tang-Wai, DF and Josephs, KA and Boeve, Bradley F and Petersen, RC and Parisi, JE and Dickson, DW",D F Tang-Wai,high,registry-truncated
+2003.04805,yang2010quantifying,partial,crossref-query,authors,"Yang, Eric and Farnum, Michael and Lobanov, Victor and Schultz, Tim and Verbeeck, R and Raghavan, N and Samtani, MN and Novak, G and Narayan, V and DiBernardo, A",Eric Yang and Michael Farnum and Victor Lobanov and Tim Schultz and Nandini Raghavan and Mahesh N. Samtani and Gerald Novak and Vaibhav Narayan and Allitia DiBernardo,high,registry-truncated
+2003.04805,young2013accurate,partial,crossref-query,authors,"Young, Jonathan and Modat, Marc and Cardoso, Manuel J and Mendelson, Alex and Cash, Dave and Ourselin, Sebastien and Alzheimer's Disease Neuroimaging Initiative",Jonathan Young and Marc Modat and Manuel J. Cardoso and Alex Mendelson and Dave Cash and Sebastien Ourselin,high,consortium-only
+2003.04805,young2015simulation,partial,crossref-query,authors,"Young, Alexandra L and Oxtoby, Neil P and Ourselin, Sebastien and Schott, Jonathan M and Alexander, Daniel C and Alzheimer's Disease Neuroimaging Initiative",Alexandra L. Young and Neil P. Oxtoby and Sebastien Ourselin and Jonathan M. Schott and Daniel C. Alexander,high,consortium-only
+2003.04805,zhang2011multimodal,partial,crossref-query,authors,"Zhang, Daoqiang and Wang, Yaping and Zhou, Luping and Yuan, Hong and Shen, Dinggang and ADNI",Daoqiang Zhang and Yaping Wang and Luping Zhou and Hong Yuan and Dinggang Shen,high,registry-truncated
+2101.00027,GPT3,partial,crossref-query,authors,"Brown, Tom B and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, Jared and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, Girish and Askell, Amanda and others",Sourav Malakar,high,different-work
+2101.00027,PG19-3,partial,crossref-query,authors,Stephen Roller and Emily Dinan and Naman Goyal and Da Ju and Mary Williamson and Yinhan Liu and Jing Xu and Myle Ott and Kurt Shuster and Eric M. Smith and Y-Lan Boureau and Jason Weston,Stephen Roller and Emily Dinan and Naman Goyal and Da Ju and Mary Williamson and Yinhan Liu and Jing Xu and Myle Ott and Eric Michael Smith and Y-Lan Boureau and Jason Weston,high,registry-truncated
+2103.05754,Thomas2010,partial,openalex,authors,"Michel, Thomas and Paul, M Vanhoutte",Thomas Michel and Paul M. Vanhoutte,high,name-differs
+2103.05754,ghio2001PH,partial,openalex,authors,"Ghio, S and Gavazzi, A and Campana, C and Inserra, C and Klersy, C and Sebastiani, R and Arbustini, E and Recusani, F amd Tavazzi, L",Stefano Ghio and Antonello Gavazzi and Carlo Campana and C. Inserra and Catherine Klersy and Roberta Sebastiani and Eloisa Arbustini and F Recusani and Luigi Tavazzi,high,missing-author
+2103.05754,mozaffarian2016LHF,mismatch,openalex,authors,"Mozaffarian, D and Benjamin, EJ and Go, AS and Arnett, DK and Blaha, MJ and Cushman, M and Das, SR and de Ferranti, S and Despres, JP and Fullerton, HJ and Howard, VJ and Huffman, MD and Isasi, CR and Jimenez, MC and Judd, SE and Kissela, BM and Lichtman, JH and Lisabeth, LD and Liu, S and Mackey, RH and Magid, DJ and McGuire, DK and Mohler, ER 3rd and Moy, CS and Muntner, P and Mussolino, ME and Nasir, K and Neumar, RW and Nichol, G and Palaniappan, L and Pandey, DK and Reeves, MJ and Rodriguez, CJ and Rosamond, W and Sorlie, PD and Stein, J and Towfighi, A and Turan, TN and Virani, SS and Woo, D and Yeh, RW and Turner, MB and Writing Group Members and American Heart Association Statistics Committee and Stroke Statistics Subcommittee",Dariush Mozaffarian and Emelia J. Benjamin and Alan S. Go and Donna K. Arnett and Michael J. Blaha and Mary Cushman and Sandeep R. Das and Sarah D. de Ferranti and Jean‐Pierre Després and Heather J. Fullerton and Virginia J. Howard and Mark D. Huffman and Carmen R. Isasi and Monik C. Jiménez and Suzanne E. Judd and Brett Kissela and Judith H. Lichtman and Lynda D. Lisabeth and Simin Liu and Rachel H. Mackey and David J. Magid and Darren K. McGuire and Emile R. Mohler and Claudia S. Moy and Paul Muntner and Michael E. Mussolino and Khurram Nasir and Robert W. Neumar and Graham Nichol and Latha Palaniappan and Dilip K. Pandey and Mathew J. Reeves and Carlos J. Rodríguez and Wayne D. Rosamond and Paul D. Sorlie and Joel Stein and Amytis Towfighi and Tanya N. Turan and Salim S. Virani and Daniel Woo and Robert W. Yeh and Melanie B. Turner,high,name-differs
+2104.12436,Alanwar17,partial,crossref-query,authors,"Alanwar, Amr and Shoukry, Yasser and Chakraborty, Supriyo and Martin, Paul and Tabuada, Paulo and Srivastava, Mani",Amr Alanwar and Yasser Shoukry and Supriyo Chakraborty and Bharathan Balaji and Paul Martin and Paulo Tabuada and Mani Srivastava,high,missing-author
+2104.12436,Cortes16,partial,crossref-query,authors,"Cort\'{e}s, Jorge and Dullerud, Geir E. and Han, Shuo and Le Ny, Jerome and Mitra, Sayan and Pappas, George J.",Jorge Cortes and Geir E. Dullerud and Shuo Han and Jerome Le Ny and Sayan Mitra and George J. Pappas,high,name-differs
+2104.12436,Darup19_2,partial,crossref-query,authors,"Darup, Moritz Schulze and Jager, Tibor",Moritz Schulze Daru and Tibor Jager,high,spelling-only
+2109.10718,Alanwar17,partial,crossref-query,authors,"Alanwar, Amr and Shoukry, Yasser and Chakraborty, Supriyo and Martin, Paul and Tabuada, Paulo and Srivastava, Mani",Amr Alanwar and Yasser Shoukry and Supriyo Chakraborty and Bharathan Balaji and Paul Martin and Paulo Tabuada and Mani Srivastava,high,missing-author
+2109.10718,Cortes16,partial,crossref-query,authors,"Cort\'{e}s, Jorge and Dullerud, Geir E. and Han, Shuo and Le Ny, Jerome and Mitra, Sayan and Pappas, George J.",Jorge Cortes and Geir E. Dullerud and Shuo Han and Jerome Le Ny and Sayan Mitra and George J. Pappas,high,name-differs
+2109.10718,Darup19_2,partial,crossref-query,authors,"Darup, Moritz Schulze and Jager, Tibor",Moritz Schulze Daru and Tibor Jager,high,spelling-only
+2110.09618,Gershman2012b,mismatch,openalex,authors,"Gershman, Samuel J. and Hoffman, Matthew D. and Blei, David M.",David Mackay,high,different-work
+2110.09618,Nalisnick2017,mismatch,openalex,authors,"Nalisnick, Eric and Smyth, Padhraic",Paul Jorgensen and Joy L. Nishikawa and Bobby‐Joe Breitkreutz and Mike Tyers,high,different-work
+2110.09618,Bishop2006,partial,openalex,authors,"Bishop, Christopher M",Nasser M. Nasrabadi,high,different-work
+2110.09618,Salvatier2016,partial,crossref-query,authors,"Salvatier, John and Wieki, Thomas V. and Fonnesbeck, Christopher",John Salvatier and Thomas V Wiecki and Christopher Fonnesbeck,high,spelling-only
+2110.09618,scipy,partial,openalex,authors,"Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and
+            Haberland, Matt and Reddy, Tyler and Cournapeau, David and
+            Burovski, Evgeni and Peterson, Pearu and Weckesser, Warren and
+            Bright, Jonathan and {van der Walt}, St{\'e}fan J. and
+            Brett, Matthew and Wilson, Joshua and Millman, K. Jarrod and
+            Mayorov, Nikolay and Nelson, Andrew R. J. and Jones, Eric and
+            Kern, Robert and Larson, Eric and Carey, C J and
+            Polat, {\.I}lhan and Feng, Yu and Moore, Eric W. and
+            {VanderPlas}, Jake and Laxalde, Denis and Perktold, Josef and
+            Cimrman, Robert and Henriksen, Ian and Quintero, E. A. and
+            Harris, Charles R. and Archibald, Anne M. and
+            Ribeiro, Ant{\^o}nio H. and Pedregosa, Fabian and
+            {van Mulbregt}, Paul and {SciPy 1.0 Contributors}",Pauli Virtanen and Ralf Gommers and Travis E. Oliphant and Matt Haberland and Tyler Reddy and David Cournapeau and Evgeni Burovski and Pearu Peterson and Warren Weckesser and Jonathan Bright and Stéfan J. van der Walt and Matthew Brett and Joshua Wilson and K. Jarrod Millman and Nikolay Mayorov and Andrew R. J. Nelson and Eric Jones and Robert Kern and Eric Larson and C J Carey and İlhan Polat and Yu Feng and Eric W. Moore and Jake VanderPlas and Denis Laxalde and Josef Perktold and Robert Cimrman and Ian Henriksen and E. A. Quintero and Charles R. Harris and Anne M. Archibald and Antônio H. Ribeiro and Fabian Pedregosa and Paul van Mulbregt and SciPy 1.0 Contributors and Aditya Vijaykumar and Alessandro Pietro Bardelli and Alex Rothberg and Andreas Hilboll and Andreas Kloeckner and Anthony Scopatz and Antony Lee and Ariel Rokem and C. Nathan Woods and Chad Fulton and Charles Masson and Christian Häggström and Clark Fitzgerald and David A. Nicholson and David R. Hagen and Dmitrii V. Pasechnik and Emanuele Olivetti and Eric Martin and Eric Wieser and Fabrice Silva and Felix Lenders and Florian Wilhelm and G. Young and Gavin A. Price and Gert-Ludwig Ingold and Gregory E. Allen and Gregory R. Lee and Hervé Audren and Irvin Probst and Jörg P. Dietrich and Jacob Silterra and James T Webber and Janko Slavič and Joel Nothman and Johannes Buchner and Johannes Kulick and Johannes L. Schönberger and José Vinícius de Miranda Cardoso and Joscha Reimer and Joseph Harrington and Juan Luis Cano Rodríguez and Juan Nunez-Iglesias and Justin Kuczynski and Kevin Tritz and Martin Thoma and Matthew Newville and Matthias Kümmerer and Maximilian Bolingbroke and Michael Tartre and Mikhail Pak and Nathaniel J. Smith and Nikolai Nowaczyk and Nikolay Shebanov and Oleksandr Pavlyk and Per A. Brodtkorb and Perry Lee and Robert T. McGibbon and Roman Feldbauer and Sam Lewis and Sam Tygier and Scott Sievert and Sebastiano Vigna and Stefan Peterson and Surhud More and Tadeusz Pudlik,high,name-differs
+2111.02174,krause2011dezentrales,partial,crossref-query,authors,"Lehnhoff Sebastian, Krause, Olav and Rehtanz, Christian and Wedde, Horst F",Sebastian Lehnhoff and Olav Krause and Christian Rehtanz,high,name-differs
+2203.02151,amit1997model,partial,crossref-query,authors,"Amit, Daniel J and Brunel, Nicolas",D. Amit,high,registry-truncated
+2203.02151,hanggi1989escape,partial,crossref-query,authors,"H{\""a}nggi, Peter and Jung, Peter and Marchesoni, Fabio",Peter H�nggi and Peter Jung and Fabio Marchesoni,high,spelling-only
+2203.02151,maboudi2018uncovering,partial,crossref-query,authors,"Maboudi, Kourosh and Ackermann, Etienne and de Jong, Laurel Watkins and Pfeiffer, Brad E and Foster, David and Diba, Kamran and Kemere, Caleb",Kourosh Maboudi and Etienne Ackermann and Brad Pfeiffer and David Foster and Kamran Diba and Caleb Kemere,high,registry-truncated
+2203.02151,mazzucato2019expectation,partial,crossref-query,authors,"Mazzucato, Luca and La Camera, Giancarlo and Fontanini, Alfredo",L. Mazzucato and G. La Camera and A. Fontanini and Fontanini Alfredo and La Camera Giancarlo,high,name-differs
+2205.05913,EggModel,partial,openalex,authors,"Jansen, J. D. and Fonseca, R. M. and Kahrobaei, S. and Siraj, M. M. and Van Essen, G. M. and Van den Hof, P. M. J.",J. D. Jansen and R.M. Fonseca and S. Kahrobaei and M. Mohsin Siraj and G. M. van Essen and Paul M.J. Van den Hof,high,name-differs
+2205.05913,EggModelData,partial,openalex,authors,"J. D. Jansen and Van Essen, G. M. and S. Kahrobaei and M. Siraj and Van den Hof, P. M. J. and R. M. Fonseca",J. D. Jansen,high,registry-truncated
+2210.08849,Alanwar17,partial,crossref-query,authors,"Alanwar, Amr and Shoukry, Yasser and Chakraborty, Supriyo and Martin, Paul and Tabuada, Paulo and Srivastava, Mani",Amr Alanwar and Yasser Shoukry and Supriyo Chakraborty and Bharathan Balaji and Paul Martin and Paulo Tabuada and Mani Srivastava,high,missing-author
+2210.08849,Darup19_2,partial,crossref-query,authors,"Darup, Moritz Schulze and Jager, Tibor",Moritz Schulze Daru and Tibor Jager,high,spelling-only
+2210.08849,Buchmann01,partial,crossref-query,authors,"Buchmann, Johannes",David Bootyman,high,different-work
+2210.08849,Cortes16,partial,crossref-query,authors,"Cort\'{e}s, Jorge and Dullerud, Geir E. and Han, Shuo and Le Ny, Jerome and Mitra, Sayan and Pappas, George J.",Jorge Cortes and Geir E. Dullerud and Shuo Han and Jerome Le Ny and Sayan Mitra and George J. Pappas,high,name-differs
+2212.13570,Clements2011,partial,crossref-query,authors,"Clements, Paul and Bachmann, Felix and Bass, Len and Garlan, David and Ivers, James and Little, Reed and Nord, Robert and Stafford, Judith",P. Clements and D. Garlan and R. Little and R. Nord and J. Stafford,high,registry-truncated
+2212.13570,Thilakarathne2020,partial,crossref-query,authors,"Thilakarathne, Navod Neranjan and Kagita, Mohan Krishna and Lanka, Dr and Ahmad, Hussain and others",Navod Neranjan .. and Rohan .. and Mohan Krishna .. and Surekha .. and Hussain Ahmad,high,name-differs
+2212.13866,lewis2021software,partial,crossref-query,authors,"Lewis, Grace A and Ozkaya, Ipek and Xu, Xiwei",Grace Lewis and Ozkaya Ipek and Xu Xiwei,high,name-differs
+2212.14404,xing_normalized_2015,partial,openalex,authors,"Xing, Chao and Wang, Dong and Liu, Chao and Lin, Yiye",Xing Chao and Dong Wang and Chao Liu and Yiye Lin,high,name-differs
+2301.00304,adverserialASRlow,partial,openalex,authors,"C S, Anoop and A P, Prathosh and Ramakrishnan, A G",C. S. Anoop and Prathosh AP and A. G. Ramakrishnan,high,name-differs
+2301.00304,european_corpus,partial,openalex,authors,"Gollan, Christian and Bisani, Maximilian and Kanthak, Stephan and Schï, Ralf and Ney, Hermann",Chr. Gollan and M. Bisani and Stephan Kanthak and Ralf Schlüter and Hermann Ney,high,name-differs
+2301.00304,panayotov2015librispeech,partial,crossref-query,authors,Vassil Panayotov,Vassil Panayotov and Guoguo Chen and Daniel Povey and Sanjeev Khudanpur,high,missing-author
+2301.00304,selftrainSoft2,partial,crossref-query,authors,Bhuvana Ramabhadran and Brian Farris and Isabel Leal and Manasa Prasad and Neeraj Gaur and Parisa Haghani and Pedro Jose Moreno Mengibar and Yun Zhu,Isabel Leal and Neeraj Gaur and Parisa Haghani and Brian Farris and Pedro J. Moreno and Manasa Prasad and Bhuvana Ramabhadran and Yun Zhu,high,name-differs
+2301.00688,Cohn94improvinggeneralization,partial,crossref-query,authors,David Cohn and Richard Ladner and Alex Waibel,David Cohn and Les Atlas and Richard Ladner,high,name-differs
+2301.00688,Fabioetal2013,partial,crossref-query,authors,"Fabio, D. R. and Fabio, D. and Carlo, P.",Fabio Della Rossa and Fabio Dercole and Carlo Piccardi,high,name-order-in-registry
+2301.00688,FabricioLiang2013,partial,crossref-query,authors,"Fabricio, B. and Liang, Z.",Fabricio Breve and Liang Zhao,high,name-order-in-registry
+2301.00688,Havensetal2013,partial,crossref-query,authors,"Havens, T. C. and Bezdek, J. C. and Leckie, C., Ramamohanarao, K. and Palaniswami, M.",Timothy C. Havens and James C. Bezdek and Christopher Leckie and Kotagiri Ramamohanarao and Marimuthu Palaniswami,high,missing-author
+2301.00688,Kuester-Book,partial,crossref-query,authors,E. F. Kuester and D. C. Chang,Edward F. Kuester,high,registry-truncated
+2301.00688,SobolevskyCampari2014,partial,crossref-query,authors,"Sobolevsky, S. and Campari, R.",Stanislav Sobolevsky and Riccardo Campari and Alexander Belyi and Carlo Ratti,high,missing-author
+2301.00688,et_overview,partial,openalex,authors,"Bumman, K. and Junghwan, M. and Ildu, K.",Bumman Kim and Moon Junghwan and Kim Ildu,high,name-differs
+2301.00688,miguel_conference,partial,crossref-query,authors,"Rodr\'iguez, M. and Roberg, M. and Pack, R. and Fernandez, P. and Popovi\'c, Z. and Alarcon E. and Maksimovi\'c, D.",Miguel Rodriguez and Michael Roberg and Riley Pack and Pablo Fernandez and Eduard Alarcon and Zoya Popovic and Dragan Maksimovic,high,name-differs
+2301.00688,slug_tuner,partial,crossref-query,authors,{FOCUS Microwaves},C. Tsironis and R. Meierer and B. Hosein and T. Beauchamp and R. Jallad,high,different-work
+2301.00688,woo06_finverse_JNL,partial,openalex,authors,"Young Yun Woo and Youngoo Yang and Bumman Kim,",Young Yun Woo and Youngoo Yang and Bumman Kim,high,formatting-only
+2301.01148,Qin2021,partial,crossref-query,authors,"Qin, Rongjun and Gao, Songyi and Zhang, Xingyuan and Xu, Zhen and Huang, Shengkai and Li, Zewen and Zhang, Weinan and Yu, Yang",Rong-Jun Qin and Xingyuan Zhang and Songyi Gao and Xiong-Hui Chen and Zewen Li and Weinan Zhang and Yang Yu,high,name-differs
+2301.01148,Silver2017,mismatch,openalex,authors,"Silver, David and Schrittwieser, Julian and Simonyan, Karen and Antonoglou, Ioannis and Huang, Aja and Guez, Arthur and Hubert, Thomas and Baker, Lucas and Lai, Matthew and Bolton, Adrian and Chen, Yutian and Lillicrap, Timothy and Hui, Fan and Sifre, Laurent",David Silver and Julian Schrittwieser and Karen Simonyan and Ioannis Antonoglou and Aja Huang and Arthur Guez and Thomas Hubert and Lucas Baker and Matthew Lai and Adrian Bolton and Yutian Chen and Timothy Lillicrap and Fan Hui and Laurent Sifre and George van den Driessche and Thore Graepel and Demis Hassabis,high,missing-author
+2301.01148,Xilei2022,partial,openalex,authors,"Xilei, Dai and Cheng, Siyu and Chong, Adrian",Xilei Dai and Siyu Cheng and Adrian Chong,high,name-differs
+2301.01148,doi:10.1080/19401493.2021.1986574,partial,openalex,authors,David Blum and Javier Arroyo and Sen Huang and J{\'a}n Drgo{\v n}a and Filip Jorissen and Harald Taxt Walnum and Yan Chen and Kyle Benne and Draguna Vrabie and Michael Wetter and Lieve Helsen,David Blum and Javier Arroyo and Sen Huang and Ján Drgoňa and Filip Jorissen and Harald Taxt Walnum and Yan Chen and Kyle Benne and Draguna Vrabie and Michael Wetter and Lieve Helsen,high,formatting-only
+2301.01148,osti_1508212,partial,openalex,authors,"Neukomm, Monica and Nubbe, Valerie and Fares, Robert",Washington DC (United States) U.S. Dept. of Energy (USDOE) and Monica Neukomm and Building Technologies Office (EE-5B) (Building Technologies Office Corporate) USDOE Office of Energy Efficiency and Renewable Energy (EERE) and Valerie Nubbe and Robert L. Fares,high,missing-author
+2302.01310,2020SciPy-NMeth,partial,openalex,authors,"Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and
+            Haberland, Matt and Reddy, Tyler and Cournapeau, David and
+            Burovski, Evgeni and Peterson, Pearu and Weckesser, Warren and
+            Bright, Jonathan and {van der Walt}, St{\'e}fan J. and
+            Brett, Matthew and Wilson, Joshua and Millman, K. Jarrod and
+            Mayorov, Nikolay and Nelson, Andrew R. J. and Jones, Eric and
+            Kern, Robert and Larson, Eric and Carey, C J and
+            Polat, {\.I}lhan and Feng, Yu and Moore, Eric W. and
+            {VanderPlas}, Jake and Laxalde, Denis and Perktold, Josef and
+            Cimrman, Robert and Henriksen, Ian and Quintero, E. A. and
+            Harris, Charles R. and Archibald, Anne M. and
+            Ribeiro, Ant{\^o}nio H. and Pedregosa, Fabian and
+            {van Mulbregt}, Paul and {SciPy 1.0 Contributors}",Pauli Virtanen and Ralf Gommers and Travis E. Oliphant and Matt Haberland and Tyler Reddy and David Cournapeau and Evgeni Burovski and Pearu Peterson and Warren Weckesser and Jonathan Bright and Stéfan J. van der Walt and Matthew Brett and Joshua Wilson and K. Jarrod Millman and Nikolay Mayorov and Andrew R. J. Nelson and Eric Jones and Robert Kern and Eric Larson and C J Carey and İlhan Polat and Yu Feng and Eric W. Moore and Jake VanderPlas and Denis Laxalde and Josef Perktold and Robert Cimrman and Ian Henriksen and E. A. Quintero and Charles R. Harris and Anne M. Archibald and Antônio H. Ribeiro and Fabian Pedregosa and Paul van Mulbregt and SciPy 1.0 Contributors and Aditya Vijaykumar and Alessandro Pietro Bardelli and Alex Rothberg and Andreas Hilboll and Andreas Kloeckner and Anthony Scopatz and Antony Lee and Ariel Rokem and C. Nathan Woods and Chad Fulton and Charles Masson and Christian Häggström and Clark Fitzgerald and David A. Nicholson and David R. Hagen and Dmitrii V. Pasechnik and Emanuele Olivetti and Eric Martin and Eric Wieser and Fabrice Silva and Felix Lenders and Florian Wilhelm and G. Young and Gavin A. Price and Gert-Ludwig Ingold and Gregory E. Allen and Gregory R. Lee and Hervé Audren and Irvin Probst and Jörg P. Dietrich and Jacob Silterra and James T Webber and Janko Slavič and Joel Nothman and Johannes Buchner and Johannes Kulick and Johannes L. Schönberger and José Vinícius de Miranda Cardoso and Joscha Reimer and Joseph Harrington and Juan Luis Cano Rodríguez and Juan Nunez-Iglesias and Justin Kuczynski and Kevin Tritz and Martin Thoma and Matthew Newville and Matthias Kümmerer and Maximilian Bolingbroke and Michael Tartre and Mikhail Pak and Nathaniel J. Smith and Nikolai Nowaczyk and Nikolay Shebanov and Oleksandr Pavlyk and Per A. Brodtkorb and Perry Lee and Robert T. McGibbon and Roman Feldbauer and Sam Lewis and Sam Tygier and Scott Sievert and Sebastiano Vigna and Stefan Peterson and Surhud More and Tadeusz Pudlik,high,name-differs
+2302.01310,braembussche2008turbomachinery,mismatch,openalex,authors,"{Van den Braembussche}, Ren\'e A.",Dominique Thévenin and Gábor Janiga,high,different-work
+2302.12154,alanwar2017,partial,crossref-query,authors,"Alanwar, Amr and Shoukry, Yasser and Chakraborty, Supriyo and Martin, Paul and Tabuada, Paulo and Srivastava, Mani",Amr Alanwar and Yasser Shoukry and Supriyo Chakraborty and Bharathan Balaji and Paul Martin and Paulo Tabuada and Mani Srivastava,high,missing-author
+2302.12154,darup2019,partial,crossref-query,authors,"Darup, Moritz Schulze and Jager, Tibor",Moritz Schulze Daru and Tibor Jager,high,spelling-only
+2302.12542,Bair2004,partial,openalex,authors,"Bair, Eric AND Tibshirani, Robert",Eric Bair and Robert Tibshirani,high,missing-author
+2302.12542,Cairns2011,partial,openalex,authors,RA Carins and IS Harris and TW Mak,Rob A. Cairns and Isaac S. Harris and Tak W. Mak,high,spelling-only
+2302.12542,DeBin2014,partial,openalex,authors,"De Bin,  Riccardo and Sauerbrei,  Willi and Boulesteix,  Anne-Laure",Riccardo De Bin and Willi Sauerbrei and Anne‐Laure Boulesteix,high,name-differs
+2302.12542,Hasin2017,partial,openalex,authors,Yehudit Hasin and Marcus Seldin and Aldons Lusis,Yehudit Hasin-Brumshtein and Marcus Seldin and Aldons J. Lusis,high,name-differs
+2302.12542,Kim2012,partial,openalex,authors,Jinseog   Kim  and  Insuk   Sohn  and  Sin-Ho   Jung  and  {others},Jin‐Seog Kim and Insuk Sohn and Sin‐Ho Jung and Sujong Kim and Changyi Park,high,missing-author
+2302.12542,Rahnenfuhrer2023,partial,openalex,authors,"Rahnenf\""{u}hrer,  J\""{o}rg and De Bin,  Riccardo and Benner,  Axel and Ambrogi,  Federico and Lusa,  Lara and Boulesteix,  Anne-Laure and Migliavacca,  Eugenia and Binder,  Harald and Michiels,  Stefan and Sauerbrei,  Willi and McShane,  Lisa",Jörg Rahnenführer and Riccardo De Bin and Axel Benner and Federico Ambrogi and Lara Lusa and Anne‐Laure Boulesteix and Eugenia Migliavacca and Harald Binder and Stefan Michiels and Willi Sauerbrei and Lisa M. McShane and for topic group “High-dimensional data” (TG9) of the STRATOS initiative,high,name-differs
+2304.08622,Bernabe2016,partial,crossref-query,authors,"Bernabe-Rubio, M. and et. al.",Miguel Bernabé-Rubio and Germán Andrés and Javier Casares-Arias and Jaime Fernández-Barrera and Laura Rangel and Natalia Reglero-Real and David C. Gershlick and José J. Fernández and Jaime Millán and Isabel Correas and David G. Miguez and Miguel A. Alonso,high,name-differs
+2304.08622,Chenn2003,partial,crossref-query,authors,"Chenn, A. and Walsh, C. A.",A. Chenn,high,registry-truncated
+2304.08622,Lancaster2021,partial,crossref-query,authors,Silvia Benito-Kwiecinski and Stefano L. Giandomenico and Magdalena Sutcliffe and Erlend S. Riis and Paula Freire-Pritchett and Iva Kelava and Stephanie Wunderlich and Ulrich Martin and Gregory A. Wray and Kate McDole and Madeline A. Lancaster,Silvia Benito-Kwiecinski and Stefano L. Giandomenico and Magdalena Sutcliffe and Erlend S. Riis and Paula Freire-Pritchett and Iva Kelava and Stephanie Wunderlich and Ulrich Martin and Greg Wray and Madeline A. Lancaster,high,registry-truncated
+2304.08622,Lomakin2020,partial,crossref-query,authors,"Lomakin, AJ and Cattin, CJ and Cuvelier, Damien and Alraies, Zahraa and Molina, Marc and Nader, GPF and Srivastava, Nishit and S{\'a}ez, PJ and Garcia-Arcos, JM and Zhitnyak, IY and others",A.J. Lomakin and C.J. Cattin and D. Cuvelier and Z. Alraies and M. Molina and G. Nader and N. Srivastava and J.M. Garcia-Arcos and I.Y. Zhitnyak and A. Bhargava and M.K. Driscoll and E.S. Welf and R. Fiolka and R.J. Petrie and N. Manel and A.M. Lennon-Duménil and D.J. Müller and M. Piel,high,name-differs
+2304.08622,Nonaka2013,partial,crossref-query,authors,"Nonaka-Kinoshita, M. and et. al.",Miki Nonaka‐Kinoshita and Isabel Reillo and Benedetta Artegiani and Maria Ángeles Martínez‐Martínez and Mark Nelson and Víctor Borrell and Federico Calegari,high,different-work
+2304.08622,Ramani2017,partial,crossref-query,authors,"Ramani, Vijay and Deng, Xinxian and Qiu, Ruolan and Gunderson, Kevin L and Steemers, Frank J and Disteche, Christine M and Noble, William S and Duan, Zhijun and Shendure, Jay",Vijay Ramani and Xinxian Deng and Kevin L Gunderson and Frank J Steemers and Christine M Disteche and William S Noble and Zhijun Duan and Jay Shendure,high,registry-truncated
+2304.08622,Sato2009,partial,crossref-query,authors,"Sato, Toshiro and Vries, Robert G and Snippert, Hugo J and Van De Wetering, Marc and Barker, Nick and Stange, Daniel E and Van Es, Johan H and Abo, Arie and Kujala, Pekka and Peters, Peter J and others",Toshiro Sato and Robert G. Vries and Hugo J. Snippert and Marc van de Wetering and Nick Barker and Daniel E. Stange and Johan H. van Es and Arie Abo and Pekka Kujala and Peter J. Peters and Hans Clevers,high,name-differs
+2304.08622,Stahl2013,partial,crossref-query,authors,"Stahl, R. and et. al.",Ronny Stahl and Tessa Walcher and Camino De Juan Romero and Gregor Alexander Pilz and Silvia Cappello and Martin Irmler and José Miguel Sanz-Aquela and Johannes Beckers and Robert Blum and Víctor Borrell and Magdalena Götz,high,name-differs
+2304.08622,Vandewalle2005,partial,crossref-query,authors,"Vandewalle, Cindy and Comijn, Joke and De Craene, Bram and Vermassen, Petra and Bruyneel, Erik and Andersen, Henriette and Tulchinsky, Eugene and Van Roy, Frans and Berx, Geert",C. Vandewalle,high,registry-truncated
+2304.08622,Xu2010,partial,crossref-query,authors,"Xu, G. and Knutsen, A. K. and Dikranian, K. Kroenke, C. D. and Bayly, P. V. and Taber L. A.",Gang Xu and Andrew K. Knutsen and Krikor Dikranian and Christopher D. Kroenke and Philip V. Bayly and Larry A. Taber,high,name-differs
+2304.08622,bronshtein15,partial,crossref-query,authors,"Bronshtein, I. and et al.",Maria Chiara Lionetti and Silvia Bonfanti and Maria Rita Fumagalli and Francesc Font-Clos and Giulio Costantini and Oleksandr Chepizhko and Stefano Zapperi and Caterina La Porta,high,different-work
+2304.08622,felsenfeld03,partial,crossref-query,authors,"Felsenfled, G. and Groudine, M.",Gary Felsenfeld and Mark Groudine,high,spelling-only
+2304.08622,fernandez_2006,partial,crossref-query,authors,"Fernandez, P and Pullarkar, P A and Ott, A",Pablo Fernández and Pramod A. Pullarkat and Albrecht Ott,high,spelling-only
+2304.08622,hannezo_2017,partial,crossref-query,authors,"Hannezo, E and Scheele, C L G J and Moad, M and Drogo, N and Heer, R and Sampongna, R V and van Rheenen, J and Simons, B D",Edouard Hannezo and Colinda L.G.J. Scheele and Mohammad Moad and Nicholas Drogo and Rakesh Heer and Rosemary V. Sampogna and Jacco van Rheenen and Benjamin D. Simons,high,name-differs
+2304.08622,keren08,partial,crossref-query,authors,"Keren, K. and Pincus, Z. and Allen, G. M. and Barnhart, E. L. and Marriott, G. and Mogilner, A.and Theriot, J. A.",Kinneret Keren and Zachary Pincus and Greg M. Allen and Erin L. Barnhart and Gerard Marriott and Alex Mogilner and Julie A. Theriot,high,missing-author
+2304.08622,paoluzzi16,partial,crossref-query,authors,"Paoluzzi, M. and Di Leonardo R. and Marchetti, M. C. and Angelini, L.",Matteo Paoluzzi and Roberto Di Leonardo and M. Cristina Marchetti and Luca Angelani,high,name-differs
+2304.08622,peng92,partial,crossref-query,authors,"Peng, C. K. and Buldyrev, S. V. and Goldberger, A. L. and Havlin, S. and Sciortino, F. and Simons, M. and Stanley H. E.",C.-K. Peng and S. V. Buldyrev and A. L. Goldberger and S. Havlin and F. Sciortino and M. Simons and H. E. Stanley,high,name-differs
+2312.17127,kallenberg-2010,partial,crossref-query,authors,"Kallenberg, Olav",Gerry Leversha,high,different-work
+2312.17127,markerModelTheoryIntroduction2002,partial,crossref-query,authors,"Marker, David",Gerry Leversha,high,different-work
+2312.17127,poly-pos-boxes,partial,crossref-query,authors,"{Alves Diniz}, M. and {Salasar}, L.~E. and {Bassi
+                   Stern}, R.",Marcio A. Diniz and R. B. Stern and Luis E. Salazar,high,different-work
+2312.17141,eaton,partial,crossref-query,authors,Morris L. Eaton,F. H. C. Marriott and Morris L. Eaton,high,missing-author
+2312.17141,heunen-kaarsgaard,partial,openalex,authors,Chris Heunen and Robin Kaarsgaard,Chris Heunen and Miriam Backens,high,name-differs
+2312.17141,kallenberg,partial,crossref-query,authors,"Kallenberg, Olav",Gerry Leversha,high,different-work
+2312.17141,lambek-scott,partial,crossref-query,authors,J Lambek and P J Scott,J. L. Bell and J. Lambek and P. J. Scott,high,missing-author
+2312.17141,poly-pos-boxes,partial,crossref-query,authors,"{Alves Diniz}, M. and {Salasar}, L.~E. and {Bassi
+                   Stern}, R.",Marcio A. Diniz and R. B. Stern and Luis E. Salazar,high,different-work
+2312.17141,problog,partial,crossref-query,authors,"De~Raedt, L and Kimming, A.",Luc De Raedt and Angelika Kimmig,high,different-work
+2312.17141,queueing,partial,openalex,authors,"Tijms, Henk",Henk Tijms and Koen Staats,high,missing-author
+2312.17141,sicp,partial,crossref-query,authors,"Abelson, Harold and Sussman, Gerald Jay and {with~Julie~Sussman}",Christopher Fry and Harold Abelson and Gerald Sussman and Julie Sussman,high,missing-author
+2312.17141,tzevelekos,partial,crossref-query,authors,Nikos Tzevelekos,Andrzej S. Murawski and Nikos Tzevelekos,high,missing-author
+2312.17141,tzevelekos-thesis,partial,crossref-query,authors,Nikos Tzevelekos,Andrzej S. Murawski and Nikos Tzevelekos,high,missing-author
+2312.17141,zhang_schur,partial,openalex,authors,"Z., Zhang",Fuzhen Zhang,high,different-work
+2401.00908,chung2022flan2,partial,openalex,authors,"Hyung Won Chung and
+                  Le Hou and
+                  Shayne Longpre and
+                  Barret Zoph and
+                  Yi Tay and
+                  William Fedus and
+                  Eric Li and
+                  Xuezhi Wang and
+                  Mostafa Dehghani and
+                  Siddhartha Brahma and
+                  Albert Webson and
+                  Shixiang Shane Gu and
+                  Zhuyun Dai and
+                  Mirac Suzgun and
+                  Xinyun Chen and
+                  Aakanksha Chowdhery and
+                  Sharan Narang and
+                  Gaurav Mishra and
+                  Adams Yu and
+                  Vincent Y. Zhao and
+                  Yanping Huang and
+                  Andrew M. Dai and
+                  Hongkun Yu and
+                  Slav Petrov and
+                  Ed H. Chi and
+                  Jeff Dean and
+                  Jacob Devlin and
+                  Adam Roberts and
+                  Denny Zhou and
+                  Quoc V. Le and
+                  Jason Wei","Hyung Won Chung and Le Hou and Shayne Longpre and Barret Zoph and Yi Tay and William Fedus and Eric Li and Xuezhi Wang and Mostafa Dehghani and Siddhartha Brahma and Albert Webson and Shixiang Gu and Zhuyun Dai and Mirac Süzgün and Xinyun Chen and Aakanksha Chowdhery and Castro-Ros, Alex and Pellat, Marie and Robinson, Kevin and Valter, Dasha and Sharan Narang and Gaurav Mishra and Adams Yu and Vincent Zhao and Yanping Huang and Andrew M. Dai and Hongkun Yu and Slav Petrov and Ed H. and Jeff Dean and Jacob Devlin and Adam Roberts and Denny Zhou and Quoc V. Le and Wei, Jason",high,name-differs
+2401.00908,kenton2019bert,partial,crossref-query,authors,"Kenton, Jacob Devlin Ming-Wei Chang and Toutanova, Lee Kristina",Jacob Devlin and Ming-Wei Chang and Kenton Lee and Kristina Toutanova,high,name-differs
+2401.00908,landeghem2023dude,partial,openalex,authors,"Jordy Van Landeghem and
+                  Rub{\`{e}}n Tito and
+                  Lukasz Borchmann and
+                  Michal Pietruszka and
+                  Pawel J{\'{o}}ziak and
+                  Rafal Powalski and
+                  Dawid Jurkiewicz and
+                  Micka{\""{e}}l Coustaty and
+                  Bertrand Anckaert and
+                  Ernest Valveny and
+                  Matthew B. Blaschko and
+                  Sien Moens and
+                  Tomasz Stanislawek",Jordy Van Landeghem and Rubèn Tito and Łukasz Borchmann and Michał Pietruszka and Paweł Józiak and Rafał Powalski and Dawid Jurkiewicz and Mickaël Coustaty and Bertrand Ackaert and Ernest Valveny and Matthew B. Blaschko and Sien Moens and Tomasz Stanisławek,high,spelling-only
+2401.00908,su2023roformer,partial,crossref-query,authors,Jianlin Su and Yu Lu and Shengfeng Pan and Ahmed Murtadha and Bo Wen and Yunfeng Liu,Jianlin Su and Murtadha Ahmed and Yu Lu and Shengfeng Pan and Wen Bo and Yunfeng Liu,high,name-differs
+2401.00908,ye2023mplugdocowl,partial,openalex,authors,"Jiabo Ye and
+                  Anwen Hu and
+                  Haiyang Xu and
+                  Qinghao Ye and
+                  Ming Yan and
+                  Yuhao Dan and
+                  Chenlin Zhao and
+                  Guohai Xu and
+                  Chenliang Li and
+                  Junfeng Tian and
+                  Qian Qi and
+                  Ji Zhang and
+                  Fei Huang",Jiabo Ye and Anwen Hu and Haiyang Xu and Qinghao Ye and Ming Yan and Yuhao Dan and Chenlin Zhao and Guohai Xu and Chenliang Li and Junfeng Tian and Qi Qian and Ji Zhang and Fei Huang,high,spelling-only
+2401.00908,ye2023mplugowl,partial,openalex,authors,"Qinghao Ye and
+                  Haiyang Xu and
+                  Guohai Xu and
+                  Jiabo Ye and
+                  Ming Yan and
+                  Yiyang Zhou and
+                  Junyang Wang and
+                  Anwen Hu and
+                  Pengcheng Shi and
+                  Yaya Shi and
+                  Chenliang Li and
+                  Yuanhong Xu and
+                  Hehong Chen and
+                  Junfeng Tian and
+                  Qian Qi and
+                  Ji Zhang and
+                  Fei Huang","Qinghao Ye and Haiyang Xu and Guohai Xu and Jiabo Ye and Ming Yan and Yiyang Zhou and Junyang Wang and Anwen Hu and Pengcheng Shi and Yaya Shi and Chenliang Li and Yuanhong Xu and Hehong Chen and Junfeng Tian and Qian Qi and Ji Zhang and Fei Huang and Zhou, Jingren",high,formatting-only
+2402.02482,billio2012econometric,partial,crossref-query,authors,"Billio, Monica and Getmansky, Mila and Lo, Andrew W and Pelizzon, Loriana",Monica Billio and Andrew W. Lo and Mila Getmansky Sherman and Loriana Pelizzon,high,name-differs
+2402.07189,haastad1990tensor,partial,crossref-query,authors,"H{\aa}stad, Johan",Johan Håstad,high,different-work
+2411.02431,gilbarg1977elliptic,partial,crossref-query,authors,"Gilbarg, David and Trudinger, Neil S and Gilbarg, David and Trudinger, NS",David Gilbarg and Neil S. Trudinger,high,formatting-only
+2412.19463,Feng23a,partial,crossref-query,authors,Yuan Feng and Li Zhou and Yingte Xu,Yuan Feng and Li Zhou and Yingte Xu and Xiaoquan Xu,high,formatting-only
+2501.00655,prioritysampling,partial,crossref-query,authors,Dejan Grubisic and Chris Cummins and Volker Seeker and Hugh Leather,Dejan Grubisic and Volker Seeker and Gabriel Synnaeve and Hugh Leather and John Mellor-Crummey and Chris Cummins,high,missing-author
+2501.00655,transcoder,partial,crossref-query,authors,"Lachaux, Marie-Anne and Roziere, Baptiste and Chanussot, Lowik and Lample, Guillaume",Baptiste Roziere,high,registry-truncated
+2608.31170,Jain2020ContextualRF,partial,crossref-query,authors,Mahaveer Jain and Gil Keren and Jay Mahadeokar and Yatharth Saraf,Mahaveer Jain and Gil Keren and Jay Mahadeokar and Geoffrey Zweig and Florian Metze and Yatharth Saraf,high,missing-author
+2608.31170,delrio2021,partial,openalex,authors,"Del Rio, Miguel and Delworth, Natalie and Westerman, Ryan and Huang, Michelle and Bhandari, Nishchal and Palakapilly, Joseph and McNamara, Quinten and Dong, Joshua and {\.{Z}}elasko, Piotr and Jett{\'e}, Miguel",Miguel Del Rio and Natalie Delworth and Ryan Westerman and Michelle Huang and Nishchal Bhandari and Joseph Palakapilly and Quinten McNamara and Joshua Dong and Piotr Żelasko and Migüel Jetté,high,name-differs
+2608.31170,medicallessons2026,mismatch,openalex,authors,"Bain, Carlos and Bain, Max",carlos,high,different-work

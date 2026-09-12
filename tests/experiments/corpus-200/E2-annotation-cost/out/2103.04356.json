@@ -1,0 +1,163 @@
+{
+ "paper": "2103.04356",
+ "main": "bmc_article.tex",
+ "files": [
+  {
+   "file": "bmc_article.tex",
+   "chars_before": 18496,
+   "chars_after": 18520,
+   "emitted": true,
+   "identity": "import-ext-only",
+   "lines_differing": 3
+  },
+  {
+   "file": "Introduction.tex",
+   "chars_before": 1886,
+   "chars_after": 1886,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "background.tex",
+   "chars_before": 11214,
+   "chars_after": 11202,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "discussion.tex",
+   "chars_before": 18011,
+   "chars_after": 17990,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 4,
+ "chars_before": 49607,
+ "chars_after": 49598,
+ "delta_pct": -0.01814260084262302,
+ "unrepaired": {
+  "chars_after": 49568,
+  "chars_before": 49607,
+  "converted_files": 4,
+  "check_exit": 0,
+  "coverage": 0.019971,
+  "bibliography": {
+   "state": "complete",
+   "entries": 29
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.07861793698469974
+ },
+ "stats": {
+  "cite_cmds_live": 24,
+  "cite_keys_live": 28,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 2,
+  "other_cite_cmds": 0,
+  "labels_live": 21,
+  "labels_outside_grammar": 0,
+  "refs_live": 10,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 11,
+  "cite_cmds_annotated": 22,
+  "cite_keys_annotated": 23,
+  "ids_annotated": 11,
+  "refs_annotated": 10,
+  "inputs_root": 3,
+  "inputs_imported": 3,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 10,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "discussion.tex",
+   "line": 15,
+   "token": "@id(fig:un_optimization)",
+   "wrapper": "?",
+   "context": "\\subfigure[\\small Q-Q plot of empirical distribution (blue dots) against the fitted \\textit{recipinvgauss} distribution (red line).]{\\includegraphics[scale=0.3]"
+  },
+  {
+   "file": "discussion.tex",
+   "line": 18,
+   "token": "@id(fig:optimization)",
+   "wrapper": "?",
+   "context": "\\subfigure[\\small Q-Q plot of empirical distribution (blue dots) against the fitted \\textit{chi2} distribution (red line). ]{\\includegraphics[scale=0.3]{DA2.png"
+  },
+  {
+   "file": "discussion.tex",
+   "line": 21,
+   "token": "@id(fig:discretization)",
+   "wrapper": "?",
+   "context": "\\subfigure[\\small Empirical distribution (gray bins) and corresponding cut-off points using equal-width, equal-frequency and D2I statistical fitting with and wi"
+  },
+  {
+   "file": "discussion.tex",
+   "line": 84,
+   "token": "@id(fig:mit_DI2_single_with_nobordervalues)",
+   "wrapper": "?",
+   "context": "\\subfigure[\\small Variable \"mit\" distribution before Kolmogorov-Smirnov outlier removal (brown and blue area) after Kolmogorov-Smirnov outlier removal (brown ar"
+  },
+  {
+   "file": "discussion.tex",
+   "line": 88,
+   "token": "@id(fig:mit_DI2_single_without_nobordervalues)",
+   "wrapper": "?",
+   "context": "\\subfigure[\\small Variable \"mit\" categories distribution after DI2 single column discretization, Kolmogorov-Smirnov outlier removal and no border values (blue c"
+  },
+  {
+   "file": "discussion.tex",
+   "line": 91,
+   "token": "@id(fig:mit_DI2_single_with_bordervalues)",
+   "wrapper": "?",
+   "context": "\\subfigure[\\small Variable \"mit\" categories distribution after DI2 discretization with different settings without border values. Single column discretization wi"
+  },
+  {
+   "file": "discussion.tex",
+   "line": 100,
+   "token": "@id(fig:mit_DI2_whole_with_nobordervalues)",
+   "wrapper": "?",
+   "context": "\\subfigure[\\small Categories between 0 and 2.]{\\includegraphics[width=0.9\\textwidth]{discussion2/bordervvalues1.jpg}\\label{fig:mit_DI2_whole_with_nobordervalues"
+  },
+  {
+   "file": "discussion.tex",
+   "line": 103,
+   "token": "@id(fig:mit_DI2_whole_without_nobordervalues)",
+   "wrapper": "?",
+   "context": "\\subfigure[\\small Categories between 2 and 4.]{\\includegraphics[width=0.9\\textwidth]{discussion2/bordervvalues2.jpg}\\label{fig:mit_DI2_whole_without_noborderval"
+  },
+  {
+   "file": "discussion.tex",
+   "line": 160,
+   "token": "@id(fig:flebic)",
+   "wrapper": "?",
+   "context": "\\subfigure[\\small Average accuracy of each FleBiC with different discretization methods.]{\\includegraphics[width=0.9\\textwidth]{Results/All_flebics.PNG}\\label{f"
+  },
+  {
+   "file": "discussion.tex",
+   "line": 163,
+   "token": "@id(fig:flebic_NUC)",
+   "wrapper": "?",
+   "context": "\\subfigure[\\small Average sensitivity when predicting class NUC of each FleBiC version.]{\\includegraphics[width=0.9\\textwidth]{Results/NUC_all_flebics.PNG}\\labe"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.019958,
+ "bibliography": {
+  "state": "complete",
+  "entries": 29
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

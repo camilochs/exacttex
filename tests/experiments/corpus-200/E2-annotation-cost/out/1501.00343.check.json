@@ -1,0 +1,25 @@
+{
+ "coverage": 0.01956,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`REFERENCES.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "BicoloringCover_journal_19.02.15.xtex",
+    "offset": 10463,
+    "length": 8,
+    "line": 259,
+    "column": 24
+   },
+   "message": "citation checking unavailable: `REFERENCES.bib` could not be read",
+   "related": []
+  }
+ ]
+}

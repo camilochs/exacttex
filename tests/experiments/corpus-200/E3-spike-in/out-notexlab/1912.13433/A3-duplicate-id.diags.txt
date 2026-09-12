@@ -1,0 +1,3 @@
+planted=Fig:1 sites=[('Main_SI_combined.xtex', 71), ('Main_SI_combined.xtex', 61)]
+xtex new=[('XT1001', 'Fig:1', 'Main_SI_combined.xtex', 71), ('XT1020', 'Fig:1', 'Main_SI_combined.xtex', 66), ('XT1020', 'Fig:1', 'Main_SI_combined.xtex', 85), ('XT1020', 'Fig:1', 'Main_SI_combined.xtex', 140), ('XT1020', 'Fig:1', 'Main_SI_combined.xtex', 200)]
+texlab new=[]

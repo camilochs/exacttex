@@ -1,0 +1,285 @@
+exit=2
+lines=5547
+unique_findings=1671
+ut punctuation outside inner math mode.
+G_{m}\right) .$ In particular, the following result play an important role for studying this type of questions (see e.g. the books \cite{gol}, \cite{sws} and  
+             ^
+Warning 12 in Ph.D._Thesis_of_G._Tephnadze.tex line 10417: Interword spacing (`\ ') should perhaps be used.
+G_{m}\right) .$ In particular, the following result play an important role for studying this type of questions (see e.g. the books \cite{gol}, \cite{sws} and  
+                                                                                                                        ^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10417: Non-breaking space (`~') should have been used.
+G_{m}\right) .$ In particular, the following result play an important role for studying this type of questions (see e.g. the books \cite{gol}, \cite{sws} and  
+                                                                                                                                  ^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10417: Non-breaking space (`~') should have been used.
+G_{m}\right) .$ In particular, the following result play an important role for studying this type of questions (see e.g. the books \cite{gol}, \cite{sws} and  
+                                                                                                                                              ^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10418: Non-breaking space (`~') should have been used.
+\cite{13}).  
+^
+Warning 24 in Ph.D._Thesis_of_G._Tephnadze.tex line 10421: Delete this space to maintain correct pagereferences.
+\label{lemmaae} Let $f\in L_{1}$ and $T_{n}:L_{1}\rightarrow L_{1}$ be some  
+^
+Warning 12 in Ph.D._Thesis_of_G._Tephnadze.tex line 10433: Interword spacing (`\ ') should perhaps be used.
+T_{n}f\rightarrow f\text{ a.e. \ \ for every }f\in S  
+                              ^
+Warning 40 in Ph.D._Thesis_of_G._Tephnadze.tex line 10436: You should put punctuation outside inner math mode.
+T^{\ast }$ is bounded from the space $L_{1}$ to the space $weak-L_{1},$ that  
+                                                                     ^
+Warning 12 in Ph.D._Thesis_of_G._Tephnadze.tex line 10445: Interword spacing (`\ ') should perhaps be used.
+T_{n}f\rightarrow f,\text{ a.e. \ \ for every }f\in L_{1}\left( G_{m}\right)  
+                               ^
+Warning 24 in Ph.D._Thesis_of_G._Tephnadze.tex line 10451: Delete this space to maintain correct pagereferences.
+\label{remarkae}Since the Vilenkin function $\psi _{m}$ is constant on $%  
+^
+Warning 40 in Ph.D._Thesis_of_G._Tephnadze.tex line 10452: You should put punctuation outside inner math mode.
+I_{n}(x)$ for every $x\in G_{m}$ and $0\leq m<M_{n},$ it is clear that each  
+                                                   ^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10463: Non-breaking space (`~') should have been used.
+On the other hand, notice that, by Corollary \ref{dn2.3} (Paley lemma), it  
+                                            ^
+Warning 11 in Ph.D._Thesis_of_G._Tephnadze.tex line 10473: You should use \cdots or \ldots to achieve an ellipsis.
+f\in L_{1}$ there exist Vilenkin polynomials $P_{1},P_{2}...,$ such that $%  
+                                                         ^^^
+Warning 40 in Ph.D._Thesis_of_G._Tephnadze.tex line 10473: You should put punctuation outside inner math mode.
+f\in L_{1}$ there exist Vilenkin polynomials $P_{1},P_{2}...,$ such that $%  
+                                                            ^
+Warning 12 in Ph.D._Thesis_of_G._Tephnadze.tex line 10474: Interword spacing (`\ ') should perhaps be used.
+P_{n}\rightarrow f$ \ a.e. when $n\rightarrow \infty .$ This means that the  
+                          ^
+Warning 40 in Ph.D._Thesis_of_G._Tephnadze.tex line 10474: You should put punctuation outside inner math mode.
+P_{n}\rightarrow f$ \ a.e. when $n\rightarrow \infty .$ This means that the  
+                                                     ^
+Warning 40 in Ph.D._Thesis_of_G._Tephnadze.tex line 10475: You should put punctuation outside inner math mode.
+Vilenkin polynomials are dense in the space $L_{1}.$  
+                                                  ^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10478: Non-breaking space (`~') should have been used.
+By using Lemma \ref{lemmaae}, remarks \ref{remarkae} and the results in our previous sections we in particular obtain the  
+              ^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10478: Non-breaking space (`~') should have been used.
+By using Lemma \ref{lemmaae}, remarks \ref{remarkae} and the results in our previous sections we in particular obtain the  
+                                     ^
+Warning 12 in Ph.D._Thesis_of_G._Tephnadze.tex line 10479: Interword spacing (`\ ') should perhaps be used.
+following a.e. convergence results.  
+              ^
+Warning 24 in Ph.D._Thesis_of_G._Tephnadze.tex line 10482: Delete this space to maintain correct pagereferences.
+\label{theoremae1}Let $f\in L_{1}$ and $t_{n}$ be the regular N\"orlund means  
+^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10509: Non-breaking space (`~') should have been used.
+\}$, where $P\in \mathcal{P}$ is dense in the space $L_{1}$ (see Remark \ref%  
+                                                                       ^
+Warning 40 in Ph.D._Thesis_of_G._Tephnadze.tex line 10510: You should put punctuation outside inner math mode.
+{remarkae})$.$  
+            ^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10512: Non-breaking space (`~') should have been used.
+On the other hand, by combining Lemma \ref{lemma2.3} and Theorem \ref%  
+                                     ^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10512: Non-breaking space (`~') should have been used.
+On the other hand, by combining Lemma \ref{lemma2.3} and Theorem \ref%  
+                                                                ^
+Warning 40 in Ph.D._Thesis_of_G._Tephnadze.tex line 10520: You should put punctuation outside inner math mode.
+the space $weak-L_{1},$ that is,%  
+                     ^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10527: Non-breaking space (`~') should have been used.
+According to Lemma \ref{lemmaae} we obtain that under condition (\ref{fn0})  
+                  ^
+Warning 12 in Ph.D._Thesis_of_G._Tephnadze.tex line 10528: Interword spacing (`\ ') should perhaps be used.
+we have a.e. convergence%  
+            ^
+Warning 1 in Ph.D._Thesis_of_G._Tephnadze.tex line 10534: Command terminated with space.
+\QED  
+    ^
+Warning 24 in Ph.D._Thesis_of_G._Tephnadze.tex line 10537: Delete this space to maintain correct pagereferences.
+\label{corollaryae1}Let $f\in L_{1}$. Then%  
+^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10557: Non-breaking space (`~') should have been used.
+just using Theorem \ref{theoremae1}.  
+                  ^
+Warning 1 in Ph.D._Thesis_of_G._Tephnadze.tex line 10558: Command terminated with space.
+\QED  
+    ^
+Warning 24 in Ph.D._Thesis_of_G._Tephnadze.tex line 10561: Delete this space to maintain correct pagereferences.
+\label{theoremae2}Let $f\in L_{1}$ and $t_{n}$ be N\"orlund means with  
+^
+Warning 10 in Ph.D._Thesis_of_G._Tephnadze.tex line 10574: Solo `)' found.
+By using part b) of Theorem \ref{theorem1n} we get that every N\"orlund mean,  
+               ^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10574: Non-breaking space (`~') should have been used.
+By using part b) of Theorem \ref{theorem1n} we get that every N\"orlund mean,  
+                           ^
+Warning 40 in Ph.D._Thesis_of_G._Tephnadze.tex line 10584: You should put punctuation outside inner math mode.
+we obtain that $t_{n}P\rightarrow P,$ \ when \ $n\rightarrow \infty ,$ where $%  
+                                   ^
+Warning 40 in Ph.D._Thesis_of_G._Tephnadze.tex line 10584: You should put punctuation outside inner math mode.
+we obtain that $t_{n}P\rightarrow P,$ \ when \ $n\rightarrow \infty ,$ where $%  
+                                                                    ^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10585: Non-breaking space (`~') should have been used.
+P\in \mathcal{P}$ is dense in the space $L_{1}$ (see Remark \ref{remarkae})$%  
+                                                           ^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10588: Non-breaking space (`~') should have been used.
+On the other hand, by combining Lemma \ref{lemma2.3} and part a) of Theorem %  
+                                     ^
+Warning 10 in Ph.D._Thesis_of_G._Tephnadze.tex line 10588: Solo `)' found.
+On the other hand, by combining Lemma \ref{lemma2.3} and part a) of Theorem %  
+                                                               ^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10589: Non-breaking space (`~') should have been used.
+\ref{Theorem3normax} we obtain that the maximal operator of N\"orlund means with non-increasing sequence $\{q_{k}:k\in  
+^
+Warning 40 in Ph.D._Thesis_of_G._Tephnadze.tex line 10595: You should put punctuation outside inner math mode.
+space $L_{1}$ to the space $weak-L_{1},$ that is%  
+                                      ^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10602: Non-breaking space (`~') should have been used.
+According to Lemma \ref{lemmaae} we obtain that under conditions (\ref{6a})  
+                  ^
+Warning 12 in Ph.D._Thesis_of_G._Tephnadze.tex line 10603: Interword spacing (`\ ') should perhaps be used.
+and (\ref{7a}) we have a.e. convergence%  
+                           ^
+Warning 1 in Ph.D._Thesis_of_G._Tephnadze.tex line 10609: Command terminated with space.
+\QED  
+    ^
+Warning 24 in Ph.D._Thesis_of_G._Tephnadze.tex line 10612: Delete this space to maintain correct pagereferences.
+\label{corollaryae2}Let $f\in L_{1}$. Then%  
+^
+Warning 36 in Ph.D._Thesis_of_G._Tephnadze.tex line 10625: You should put a space in front of parenthesis.
+By combining (\ref{node0})-(\ref{node01}) with (\ref{node1})-(\ref{node2})  
+                           ^
+Warning 36 in Ph.D._Thesis_of_G._Tephnadze.tex line 10625: You should put a space in front of parenthesis.
+By combining (\ref{node0})-(\ref{node01}) with (\ref{node1})-(\ref{node2})  
+                                                             ^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10634: Non-breaking space (`~') should have been used.
+Hence, the proof is complete by just using Theorem \ref{theoremae2}.  
+                                                  ^
+Warning 1 in Ph.D._Thesis_of_G._Tephnadze.tex line 10635: Command terminated with space.
+\QED  
+    ^
+Warning 24 in Ph.D._Thesis_of_G._Tephnadze.tex line 10638: Delete this space to maintain correct pagereferences.
+\label{corollaryae22a}Let $f\in L_{1}$ and $t_{n}$ be N\"orlund means with  
+^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10647: Non-breaking space (`~') should have been used.
+The proof is analogously to the proofs of Theorems \ref{theoremae1} and \ref%  
+                                                  ^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10647: Non-breaking space (`~') should have been used.
+The proof is analogously to the proofs of Theorems \ref{theoremae1} and \ref%  
+                                                                       ^
+Warning 1 in Ph.D._Thesis_of_G._Tephnadze.tex line 10649: Command terminated with space.
+\QED  
+    ^
+Warning 24 in Ph.D._Thesis_of_G._Tephnadze.tex line 10652: Delete this space to maintain correct pagereferences.
+\label{theoremae3}Let $f\in L_{1}$. Then%  
+^
+Warning 12 in Ph.D._Thesis_of_G._Tephnadze.tex line 10654: Interword spacing (`\ ') should perhaps be used.
+\text{\ \ \ }R_{n}f\rightarrow f,\text{ \ \ \ a.e. \ \ \ \ when \ }%  
+                                                  ^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10660: Non-breaking space (`~') should have been used.
+The proof is analogously to the proofs of Theorems \ref{theoremae1} and \ref%  
+                                                  ^
+Warning 2 in Ph.D._Thesis_of_G._Tephnadze.tex line 10660: Non-breaking space (`~') should have been used.
+The proof is analogously to the proofs of Theorems \ref{theoremae1} and \ref%  
+                                                                       ^
+Warning 1 in Ph.D._Thesis_of_G._Tephnadze.tex line 10662: Command terminated with space.
+\QED  
+    ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10671: Wrong length of dash may have been used.
+Hungar., 129 (2010), no. 4, 381-392.  
+                               ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10682: Wrong length of dash may have been used.
+Agriensis, XXII, 1994, 109-114.  
+                          ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10685: Wrong length of dash may have been used.
+for Vilenkin-Fej\'er means, Publ. Math. Debrecen 85 (2014), no. 1-2, 181--196.  
+                                                                 ^
+Warning 12 in Ph.D._Thesis_of_G._Tephnadze.tex line 10688: Interword spacing (`\ ') should perhaps be used.
+of Vilenkin-N\"orlund means, Acta Math. Acad. Paedagog. Nyh\`azi. (to appear).  
+                                                                 ^
+Warning 12 in Ph.D._Thesis_of_G._Tephnadze.tex line 10703: Interword spacing (`\ ') should perhaps be used.
+Math. 7 (2006), no. 4, Article 149, 7 pp. (electronic).  
+                                         ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10709: Wrong length of dash may have been used.
+65 (1949), 372-414.  
+              ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10712: Wrong length of dash may have been used.
+Math. Hungar. 47 (1986), no. 1-2, 33--44.  
+                              ^
+Warning 36 in Ph.D._Thesis_of_G._Tephnadze.tex line 10717: You should put a space in front of parenthesis.
+\bibitem{FMS} \textit{S. Fridli, P. Manchanda and A.H. Siddiqi,} Approximation by Walsh-N\"orlund means, Acta Sci. Math.(Szeged) 74 (2008), no. 3-4, 593-608.  
+                                                                                                                        ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10717: Wrong length of dash may have been used.
+\bibitem{FMS} \textit{S. Fridli, P. Manchanda and A.H. Siddiqi,} Approximation by Walsh-N\"orlund means, Acta Sci. Math.(Szeged) 74 (2008), no. 3-4, 593-608.  
+                                                                                                                                                 ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10717: Wrong length of dash may have been used.
+\bibitem{FMS} \textit{S. Fridli, P. Manchanda and A.H. Siddiqi,} Approximation by Walsh-N\"orlund means, Acta Sci. Math.(Szeged) 74 (2008), no. 3-4, 593-608.  
+                                                                                                                                                        ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10721: Wrong length of dash may have been used.
+(1979), no. 1, 111-116.  
+                  ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10728: Wrong length of dash may have been used.
+respect to the Vilenkin system, Acta Math. Hungar. 61 (1993), no. 1-2,  
+                                                                   ^
+Warning 12 in Ph.D._Thesis_of_G._Tephnadze.tex line 10754: Interword spacing (`\ ') should perhaps be used.
+of one-dimensional Walsh-Fourier series, Rend. del Circ. Mat. di Paler. Ser.  
+                                              ^
+Warning 12 in Ph.D._Thesis_of_G._Tephnadze.tex line 10754: Interword spacing (`\ ') should perhaps be used.
+of one-dimensional Walsh-Fourier series, Rend. del Circ. Mat. di Paler. Ser.  
+                                                             ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10755: Wrong length of dash may have been used.
+II, 82(2010), 345-357.  
+                 ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10765: Wrong length of dash may have been used.
+means, Acta Sci. Math. (Szeged) 74 (2008), no. 3-4, 615--624.  
+                                                ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10769: Wrong length of dash may have been used.
+rearrangement, Publ. Math. Debrecen 71 (2007), no. 1-2, 43--55.  
+                                                    ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10772: Wrong length of dash may have been used.
+Walsh-Fourier series, Acta Math. Hungar. 93 (2001), no. 1-2, 59--70.  
+                                                         ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10776: Wrong length of dash may have been used.
+no. 3-4, 569--579.  
+     ^
+Warning 12 in Ph.D._Thesis_of_G._Tephnadze.tex line 10780: Interword spacing (`\ ') should perhaps be used.
+theory of functions, Prof. M. Drinov Acad. Publ. House, Sofia, 2012,  
+                          ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10789: Wrong length of dash may have been used.
+Acta Sci. Math. (Szeged) 72 (2006), no. 1-2, 159--177.  
+                                         ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10800: Wrong length of dash may have been used.
+Fourier constants, J. London Math. Soc. 6 (1931), 3-9.  
+                                                   ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10838: Wrong length of dash may have been used.
+(II), Proc. London Math. Soc. S2-34 no. 1, 265.  
+                                ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10841: Wrong length of dash may have been used.
+of derivative, Acta Math. Acad. Sci. Hungar. 29 (1977), no. 1-2, 155--164.  
+                                                             ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10845: Wrong length of dash may have been used.
+76-94.  
+  ^
+Warning 40 in Ph.D._Thesis_of_G._Tephnadze.tex line 10853: You should put punctuation outside inner math mode.
+means on the martingale Hardy space $H_{p},$ Bulletin of TICMI, Vol. 18, (2014),  
+                                          ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10873: Wrong length of dash may have been used.
+respect to the Walsh-Fourier series, Acta Math. Hungar. 49 (1987), no. 3-4,  
+                                                                        ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10888: Wrong length of dash may have been used.
+Vilenkin-Fourier coefficients, Acta Sci. Math. (Szeged) 63 (1997), no. 1-2,  
+                                                                        ^
+Warning 40 in Ph.D._Thesis_of_G._Tephnadze.tex line 10892: You should put punctuation outside inner math mode.
+H_{1}\left( T\right) ,$ Banach spaces, harmonic analysis, and probability  
+                     ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10896: Wrong length of dash may have been used.
+Math. Sbornik 34, (1954), no. 3, 441-472.  
+                                    ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10925: Wrong length of dash may have been used.
+Georgian Math. J. 20 (2013), no. 1, 169-177.}  
+                                       ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10933: Wrong length of dash may have been used.
+Nyh\'azi. 27 (2011), {no. 2, }245-256.  
+                                 ^
+Warning 13 in Ph.D._Thesis_of_G._Tephnadze.tex line 10939: Intersentence spacing (`\@') should perhaps be used.
+systems, (Russian) Bull. Acad. Sci. URSS. S�r. Math. 11, (1947), 363--400.  
+                                        ^
+Warning 8 in Ph.D._Thesis_of_G._Tephnadze.tex line 10947: Wrong length of dash may have been used.
+Walsh-Fourier series, Anal. Math. 27 (2001), 141-156.  
+                                                ^
+Warning 17 in Ph.D._Thesis_of_G._Tephnadze.tex line 10979: Number of `(' doesn't match the number of `)'!
+
+

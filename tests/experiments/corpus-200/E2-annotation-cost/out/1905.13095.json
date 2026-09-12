@@ -1,0 +1,102 @@
+{
+ "paper": "1905.13095",
+ "main": "paperQuantum.tex",
+ "files": [
+  {
+   "file": "paperQuantum.tex",
+   "chars_before": 120125,
+   "chars_after": 119987,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 120125,
+ "chars_after": 119987,
+ "delta_pct": -0.11488033298647242,
+ "unrepaired": {
+  "chars_after": 119987,
+  "chars_before": 120125,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.021211,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`references.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.11488033298647242
+ },
+ "stats": {
+  "cite_cmds_live": 51,
+  "cite_keys_live": 53,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 1,
+  "other_cite_cmds": 0,
+  "labels_live": 47,
+  "labels_outside_grammar": 1,
+  "refs_live": 45,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 18,
+  "float_envs": 2,
+  "cite_cmds_annotated": 49,
+  "cite_keys_annotated": 50,
+  "ids_annotated": 46,
+  "refs_annotated": 44,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 2,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "paperQuantum.tex",
+   "line": 277,
+   "token": "@cite(LL16)",
+   "wrapper": "?",
+   "context": "\\begin{theorem}[Lin and Lin~\\cite{LL16}]\\label{thm:binaryClassical2quantum}"
+  },
+  {
+   "file": "paperQuantum.tex",
+   "line": 1195,
+   "token": "@ref(alg:BFSlist)",
+   "wrapper": "Comment",
+   "context": "\\Comment{ this can be found using one call to the algorithm~\\ref{alg:BFSlist} in $\\cG'$"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.021211,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`references.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "paperQuantum.xtex",
+    "offset": 1832,
+    "length": 4,
+    "line": 76,
+    "column": 19
+   },
+   "message": "citation checking unavailable: `references.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

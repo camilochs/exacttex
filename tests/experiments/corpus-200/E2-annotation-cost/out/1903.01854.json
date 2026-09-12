@@ -1,0 +1,368 @@
+{
+ "paper": "1903.01854",
+ "main": "CAMIRADA-Biomedical-Informatics-v01.tex",
+ "files": [
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "chars_before": 22003,
+   "chars_after": 21997,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 22003,
+ "chars_after": 21997,
+ "delta_pct": -0.027269008771531156,
+ "unrepaired": {
+  "chars_after": 21964,
+  "chars_before": 22003,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.032141,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "the document declares no bibliography"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.1772485570149525
+ },
+ "stats": {
+  "cite_cmds_live": 46,
+  "cite_keys_live": 47,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 14,
+  "labels_outside_grammar": 1,
+  "refs_live": 11,
+  "refs_outside_grammar": 1,
+  "other_ref_cmds": 0,
+  "float_envs": 5,
+  "cite_cmds_annotated": 27,
+  "cite_keys_annotated": 28,
+  "ids_annotated": 2,
+  "refs_annotated": 0,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 40,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 94,
+   "token": "@id(eq:01)",
+   "wrapper": "?",
+   "context": "\\begin{equation}\\label{eq:01}"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 99,
+   "token": "@citep(shi2013walking)",
+   "wrapper": "?",
+   "context": "Where $N$ is the number of all genes in PPI network and $n_1$ is the number of target genes of one microRNA that we showed with TG.  For each microRNA we calcul"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 102,
+   "token": "@id(eq:02)",
+   "wrapper": "?",
+   "context": "\\begin{equation}\\label{eq:02}"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 107,
+   "token": "@citep(shi2013walking)",
+   "wrapper": "?",
+   "context": "Which $n_2$ is the number of disease genes. For all pairs of microRNAs and disease genes we did the above procedures. For computing ES1 we considered disease ge"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 110,
+   "token": "@id(eq:03)",
+   "wrapper": "?",
+   "context": "\\begin{equation} \\label{eq:03}"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 116,
+   "token": "@ref(eq:01)",
+   "wrapper": "?",
+   "context": "We mapped targets of each microRNA and DEG onto co-expression network. For all pairs of microRNAs and DEGs we calculated ES. For computing ES1 we considered DEG"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 116,
+   "token": "@ref(eq:02)",
+   "wrapper": "?",
+   "context": "We mapped targets of each microRNA and DEG onto co-expression network. For all pairs of microRNAs and DEGs we calculated ES. For computing ES1 we considered DEG"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 121,
+   "token": "@id(fig:1)",
+   "wrapper": "?",
+   "context": "\\caption{An overview of our framework to predict new diseases associated with microRNAs.}\\label{fig:1}"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 125,
+   "token": "@ref(eq:03)",
+   "wrapper": "?",
+   "context": "We did all above producers on TF and targets of microRNAs. First in order, we mapped targets of all microRNAs and TFs onto co-expression network and for each mi"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 125,
+   "token": "@ref(eq:01)",
+   "wrapper": "?",
+   "context": "We did all above producers on TF and targets of microRNAs. First in order, we mapped targets of all microRNAs and TFs onto co-expression network and for each mi"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 125,
+   "token": "@ref(eq:02)",
+   "wrapper": "?",
+   "context": "We did all above producers on TF and targets of microRNAs. First in order, we mapped targets of all microRNAs and TFs onto co-expression network and for each mi"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 125,
+   "token": "@ref(fig:1)",
+   "wrapper": "?",
+   "context": "We did all above producers on TF and targets of microRNAs. First in order, we mapped targets of all microRNAs and TFs onto co-expression network and for each mi"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 128,
+   "token": "@citep(shi2013walking)",
+   "wrapper": "?",
+   "context": "To measure the importance of the relationship between microRNAs and disease, we used the p-value. To calculate the p-value, we first created 1000 random network"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 128,
+   "token": "@citep(shi2013walking)",
+   "wrapper": "?",
+   "context": "To measure the importance of the relationship between microRNAs and disease, we used the p-value. To calculate the p-value, we first created 1000 random network"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 131,
+   "token": "@id(III)",
+   "wrapper": "?",
+   "context": "\\section{Results And Performance}\\label{III}"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 134,
+   "token": "@citep(le2015network)",
+   "wrapper": "?",
+   "context": "To compute the AUC, we first need to calculate the sensitivity and specificity based on the following formulas, and the sensitivity is defined as the correct de"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 137,
+   "token": "@id(eq:04)",
+   "wrapper": "?",
+   "context": "\\begin{equation}\\label{eq:04}"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 142,
+   "token": "@id(eq:05)",
+   "wrapper": "?",
+   "context": "\\begin{equation}\\label{eq:05}"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 147,
+   "token": "@citep(jiang2008mir2disease)",
+   "wrapper": "?",
+   "context": "For computing of these we needed to define the set of $TP$\u060c $TN$\u060c $FP$ and $FN$. At first we should define positive set and negative set. For positive set we co"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 147,
+   "token": "@citep(li2013hmdd)",
+   "wrapper": "?",
+   "context": "For computing of these we needed to define the set of $TP$\u060c $TN$\u060c $FP$ and $FN$. At first we should define positive set and negative set. For positive set we co"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 149,
+   "token": "@citep(lee2013microrna)",
+   "wrapper": "?",
+   "context": "Nowadays, it is very difficult or impossible to collect data for non-cancerous microRNA \\citep{lee2013microrna}. For a negative data set, we chose microRNAs tha"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 149,
+   "token": "@citep(lee2013microrna)",
+   "wrapper": "?",
+   "context": "Nowadays, it is very difficult or impossible to collect data for non-cancerous microRNA \\citep{lee2013microrna}. For a negative data set, we chose microRNAs tha"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 153,
+   "token": "@ref(fig:2)",
+   "wrapper": "?",
+   "context": "As the Figure \\ref{fig:2} shows, the lowest AUC is for disease-microRNAs and the maximum AUC is for CAMIRADA approach. So, this shows that DEGs and TFs influenc"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 158,
+   "token": "@id(fig:2)",
+   "wrapper": "?",
+   "context": "\\caption{Computing AUC for each three list of p-value for DEG-microRNAs, Disease-microRNAs and TF-microRNAs. And we calculated AUC for CAMIRADA.}\\label{fig:2}"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 161,
+   "token": "@citep(MetaP)",
+   "wrapper": "?",
+   "context": "The tests included Wilkinsonp, sumlog, sumz, logitp, meanp and sump from metap \\citep{MetaP} package in R. Then we scored microRNAs according to our model. For "
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 172,
+   "token": "@id(fig:3)",
+   "wrapper": "?",
+   "context": "\\caption{The AUC for all of the p-value combining tests.}\\label{fig:3}"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 175,
+   "token": "@ref(fig:3)",
+   "wrapper": "?",
+   "context": "To select the best test for combining the p-value, we combined the three lists of p-values by all tests and then we calculated AUC for each tests results are sh"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 175,
+   "token": "@ref(fig:3)",
+   "wrapper": "?",
+   "context": "To select the best test for combining the p-value, we combined the three lists of p-values by all tests and then we calculated AUC for each tests results are sh"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 178,
+   "token": "@ref(fig:4)",
+   "wrapper": "?",
+   "context": "For more comparing the tests to combine the p-value we combined the three lists of p-values and we calculated AUC for 65, 130, and 260 number of the microRNAs f"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 183,
+   "token": "@id(fig:4)",
+   "wrapper": "?",
+   "context": "\\caption{Bar chart for comparing the tests to combine the p-value.}\\label{fig:4}"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 198,
+   "token": "@citep(shyamasundar2016mir)",
+   "wrapper": "?",
+   "context": "hsa-miR-93 \\citep{shyamasundar2016mir} & 0.000679 & Tumor suppressor \\\\"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 199,
+   "token": "@citep(landman2014role)",
+   "wrapper": "?",
+   "context": "hsa-miR-526b \\citep{landman2014role} & 0.000702 & Oncogene \\\\"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 200,
+   "token": "@citep(hossain2006mir)",
+   "wrapper": "?",
+   "context": "hsa-miR-17 \\citep{hossain2006mir} & 0.000951 & Oncogene \\\\"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 201,
+   "token": "@citep(li2012differential)",
+   "wrapper": "?",
+   "context": "hsa-miR-20b \\citep{li2012differential} & 0.00125 & Oncogene \\\\"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 202,
+   "token": "@citep(chen2016mir)",
+   "wrapper": "?",
+   "context": "hsa-miR-199a \\citep{chen2016mir} & 0.001486 & Tumor suppressor \\\\"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 203,
+   "token": "@citep(li2015epigenetic)",
+   "wrapper": "?",
+   "context": "hsa-miR-20a \\citep{li2015epigenetic} & 0.001529 & Oncogene \\\\"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 204,
+   "token": "@citep(fang2016down)",
+   "wrapper": "?",
+   "context": "hsa-miR-149 \\citep{fang2016down} & 0.0020011 & Oncogene \\\\"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 205,
+   "token": "@citep(lehmann2010identification)",
+   "wrapper": "?",
+   "context": "hsa-miR-199b \\citep{lehmann2010identification} & 0.00265 & Biomarker \\\\"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 207,
+   "token": "@citep(cheng2012microrna)",
+   "wrapper": "?",
+   "context": "hsa-miR-502 \\citep{cheng2012microrna} & 0.036284 & Tumor suppressor\\\\"
+  },
+  {
+   "file": "CAMIRADA-Biomedical-Informatics-v01.tex",
+   "line": 212,
+   "token": "@id(IV)",
+   "wrapper": "?",
+   "context": "\\section{Conclusion}\\label{IV}"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.032092,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "the document declares no bibliography"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "CAMIRADA-Biomedical-Informatics-v01.xtex",
+    "offset": 2795,
+    "length": 15,
+    "line": 54,
+    "column": 104
+   },
+   "message": "citation checking unavailable: the document declares no bibliography",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

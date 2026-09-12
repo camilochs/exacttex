@@ -1,0 +1,25 @@
+{
+ "coverage": 0.021796,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "the document declares no bibliography"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "msf.xtex",
+    "offset": 3766,
+    "length": 10,
+    "line": 51,
+    "column": 637
+   },
+   "message": "citation checking unavailable: the document declares no bibliography",
+   "related": []
+  }
+ ]
+}

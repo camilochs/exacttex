@@ -1,0 +1,25 @@
+{
+ "coverage": 0.033732,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`mgrit_cg_selection_refs.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "mgrit_cg_selection.xtex",
+    "offset": 4918,
+    "length": 15,
+    "line": 100,
+    "column": 349
+   },
+   "message": "citation checking unavailable: `mgrit_cg_selection_refs.bib` could not be read",
+   "related": []
+  }
+ ]
+}

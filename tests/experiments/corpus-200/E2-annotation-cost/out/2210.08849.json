@@ -1,0 +1,113 @@
+{
+ "paper": "2210.08849",
+ "main": "manuscript.tex",
+ "files": [
+  {
+   "file": "manuscript.tex",
+   "chars_before": 42743,
+   "chars_after": 42689,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 42743,
+ "chars_after": 42689,
+ "delta_pct": -0.12633647614814122,
+ "unrepaired": {
+  "chars_after": 42677,
+  "chars_before": 42743,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.017714,
+  "bibliography": {
+   "state": "complete",
+   "entries": 118
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.15441124862550593
+ },
+ "stats": {
+  "cite_cmds_live": 17,
+  "cite_keys_live": 36,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 22,
+  "labels_outside_grammar": 0,
+  "refs_live": 6,
+  "refs_outside_grammar": 6,
+  "other_ref_cmds": 12,
+  "float_envs": 2,
+  "cite_cmds_annotated": 15,
+  "cite_keys_annotated": 34,
+  "ids_annotated": 18,
+  "refs_annotated": 0,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 6,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "manuscript.tex",
+   "line": 137,
+   "token": "@id(fig:net_enc)",
+   "wrapper": "?",
+   "context": "\\subfigure[Eavesdropping in encrypted network.]{\\includegraphics[scale=.85]{./fig/eavesdropping_attack.pdf}\\label{fig:net_enc}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 138,
+   "token": "@id(fig:enc_ctrl)",
+   "wrapper": "?",
+   "context": "\\subfigure[Eavesdropping in encrypted control.]{\\includegraphics[scale=.85]{./fig/parameter_estimation_attack.pdf}\\label{fig:enc_ctrl}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 194,
+   "token": "@cite(Buchmann01)",
+   "wrapper": "?",
+   "context": "\\begin{definition}[Cryptosystem~\\cite{Buchmann01}]\\label{def:cryptosystem}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 255,
+   "token": "@cite(Katz21)",
+   "wrapper": "?",
+   "context": "\\begin{definition}[IND-CPA~\\cite{Katz21}]\\label{def:ind-cpa}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 357,
+   "token": "@id(fig:ind-cpa)",
+   "wrapper": "?",
+   "context": "\\subfigure[IND-CPA game.]{\\includegraphics[scale=1]{./fig/ind-cpa_game_model.pdf}\\label{fig:ind-cpa}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 358,
+   "token": "@id(fig:ind-pea)",
+   "wrapper": "?",
+   "context": "\\subfigure[IND-PEA game.]{\\includegraphics[scale=1]{./fig/ind-pea_game_model.pdf}\\label{fig:ind-pea}}"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.017709,
+ "bibliography": {
+  "state": "complete",
+  "entries": 118
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

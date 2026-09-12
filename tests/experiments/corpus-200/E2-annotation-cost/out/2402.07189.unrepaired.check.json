@@ -1,0 +1,73 @@
+{
+ "coverage": 0.028582,
+ "bibliography": {
+  "state": "complete",
+  "entries": 64
+ },
+ "diagnostics": [
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:e2lsh",
+   "span": {
+    "file": "writeup.xtex",
+    "offset": 25084,
+    "length": 9,
+    "line": 328,
+    "column": 1147
+   },
+   "message": "identifier `tab:e2lsh` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:srp",
+   "span": {
+    "file": "writeup.xtex",
+    "offset": 29629,
+    "length": 7,
+    "line": 366,
+    "column": 1031
+   },
+   "message": "identifier `tab:srp` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:e2lsh",
+   "span": {
+    "file": "writeup.xtex",
+    "offset": 31294,
+    "length": 9,
+    "line": 401,
+    "column": 18
+   },
+   "message": "identifier `tab:e2lsh` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:srp",
+   "span": {
+    "file": "writeup.xtex",
+    "offset": 31314,
+    "length": 7,
+    "line": 401,
+    "column": 38
+   },
+   "message": "identifier `tab:srp` is not declared",
+   "related": []
+  }
+ ]
+}

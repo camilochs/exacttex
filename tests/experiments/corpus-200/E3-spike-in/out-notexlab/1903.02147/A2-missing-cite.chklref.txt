@@ -1,0 +1,405 @@
+pdf=1
+exit=0
+lines=1466
+unique_findings=12
+dist/tex/generic/xkeyval/xke
+yval.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/xkeyval/xkv
+utils.tex)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/xcolor/xcolor
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/frontendl
+ayer/tikz.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/basiclaye
+r/pgf.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/utilities
+/pgfrcs.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfutil-common.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfutil-latex.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfrcs.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/pgf.rev
+ision.tex)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/basiclaye
+r/pgfcore.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/systemlay
+er/pgfsys.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/systeml
+ayer/pgfsys.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfkeys.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfkeyslibraryfiltered.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/systeml
+ayer/pgf.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/systeml
+ayer/pgfsys-pdftex.def
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/systeml
+ayer/pgfsys-common-pdf.def)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/systeml
+ayer/pgfsyssoftpath.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/systeml
+ayer/pgfsysprotocol.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcore.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmath.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathutil.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathparser.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.basic.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.trigonometric.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.random.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.comparison.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.base.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.round.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.misc.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.integerarithmetics.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathcalc.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfloat.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fint.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorepoints.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorepathconstruct.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorepathusage.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorescopes.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoregraphicstate.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoretransformations.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorequick.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoreobjects.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorepathprocessing.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorearrows.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoreshade.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoreimage.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoreexternal.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorelayers.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoretransparency.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorepatterns.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorerdf.code.tex)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/modules
+/pgfmoduleshapes.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/modules
+/pgfmoduleplot.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/compatibi
+lity/pgfcomp-version-0-65.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/compatibi
+lity/pgfcomp-version-1-18.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/utilities
+/pgffor.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/utilities
+/pgfkeys.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfkeys.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/math/pgfm
+ath.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmath.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgffor.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/fronten
+dlayer/tikz/tikz.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/librari
+es/pgflibraryplothandlers.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/modules
+/pgfmodulematrix.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/fronten
+dlayer/tikz/libraries/tikzlibrarytopaths.code.tex)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/fronten
+dlayer/tikz/libraries/tikzlibrarypositioning.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/multirow/mult
+irow.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/algorithm2e/a
+lgorithm2e.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ifoddpage/ifo
+ddpage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/xspace.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/relsize/relsi
+ze.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def) (./NeuroP2P.aux)
+Unknown journal: specify \journalname{<name of your journal>} in preambel
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+SVJour3 warning: Missing \journalname
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+Overfull \hbox (1.70296pt too wide) in paragraph at lines 68--69
+\OT1/cmr/m/n/10 tion. The ap-pli-ca-tion of graph-theoretic meth-ods to neu-
+
+Overfull \hbox (2.45294pt too wide) in paragraph at lines 70--72
+\OT1/cmr/m/n/10 cell-specific bio-phys-i-cal prop-er-ties, can vary sig-nif-i-c
+antly
+
+LaTeX Warning: Citation `y1972histologie__ghost' on page 1 undefined on input l
+ine 80.
+
+
+Overfull \hbox (2.3695pt too wide) in paragraph at lines 109--114
+\OT1/cmr/m/n/10 the de-vel-op-ment of ef-fi-cient ways to en-code these shapes.
+
+[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}]
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active [2 <./moto
+r_1_1.PNG> <./motor_1_2.PNG> <./motor_2_1.PNG> <./motor_2_2.PNG> <./prelimbic_1
+.PNG> <./prelimbic_2.PNG> <./somato1.PNG> <./somato2.PNG> <./visual_1_1.PNG> <.
+/visual_1_2.PNG> <./visual_2_1.PNG> <./visual_2_2.PNG>]
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active [3 <./ex_G
+anglion.PNG> <./ex_Pyramidal.PNG> <./ex_Granule.PNG> <./ex_Purkinje.PNG> <./ex_
+Motor.PNG> <./ex_projection.PNG>]
+Underfull \vbox (badness 10000) has occurred while \output is active
+Overfull \hbox (4.95287pt too wide) in paragraph at lines 156--170
+[]\OT1/cmr/m/n/10 This ap-proach has sev-eral draw-backs. The Path2Path
+[4]
+Underfull \vbox (badness 10000) has occurred while \output is active
+Overfull \hbox (8.44644pt too wide) in paragraph at lines 172--174
+\OT1/cmr/m/n/10 col-lect ex-ter-nal re-sources by the \OT1/cmr/m/it/10 minimal-
+length-maximal-
+[5 <./NeuronFeatures.PNG>] [6 <./Algorithm_at_glance.PNG>]
+Overfull \hbox (0.26009pt too wide) in paragraph at lines 199--202
+[]\OT1/cmr/m/n/10 A path can be con-sid-ered as an open curve, $\OML/cmm/m/it/1
+0 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;  t 
+\OMS/cmsy/m/n/10 2
+
+Overfull \hbox (1.28625pt too wide) in paragraph at lines 205--210
+\OT1/cmr/m/n/10 mod-u-lar, con-sists of four key stages as de-picted in Fig. 4[
+].
+[7 <./SRVF.PNG>]
+Overfull \hbox (11.7585pt too wide) in paragraph at lines 254--257
+\OT1/cmr/m/n/10 statis-tics. For ex-am-ple, adding an ex-tra leaf ver-tex chang
+es
+[8]
+Overfull \hbox (18.23184pt too wide) in paragraph at lines 297--305
+ [][] 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (1.39732pt too wide) in paragraph at lines 311--313
+\OT1/cmr/m/n/10 paths of neu-ron 2. The as-signed cor-re-spon-dence is added
+
+Overfull \hbox (2.34181pt too wide) in paragraph at lines 311--313
+\OT1/cmr/m/n/10 re-place-ment. In the Munkres al-go-rithm, if one `worker'(a
+
+Overfull \hbox (5.20296pt too wide) in paragraph at lines 311--313
+\OT1/cmr/m/n/10 sig-nif-i-cantly large, it de-mands fur-ther in-spec-tion wheth
+er
+
+Underfull \vbox (badness 4454) has occurred while \output is active [9 <./NevPy
+2Py1.PNG> <./NevPy2Py2.PNG> <./NevPy2Py3.PNG> <./NevPy2Py4.PNG> <./NevPy2Py5.PN
+G> <./NevPy2Py10.PNG> <./NevPy2Py9.PNG> <./NevPy2Py8.PNG> <./NevPy2Py7.PNG> <./
+NevPy2Py6.PNG>]
+Underfull \vbox (badness 1895) has occurred while \output is active
+Overfull \hbox (15.31409pt too wide) in paragraph at lines 383--385
+\OT1/cmr/m/n/10 ter-me-di-ate de-for-ma-tions? Sta-tis-ti-cal as-sess-ment of a
+natom-
+[10 <./pathDmotor1.png (PNG copy)> <./pathDmotor2.png (PNG copy)> <./pathDpreli
+mbic.png (PNG copy)> <./pathDsomato.png (PNG copy)> <./pathDvisual1.png (PNG co
+py)> <./pathDvisual2.png (PNG copy)>]
+Overfull \hbox (1.31404pt too wide) in paragraph at lines 387--389
+\OT1/cmr/m/n/10 re-con-structed neu-rons, Neu-ro-mor-pho.org [2]. To demon-
+
+Underfull \vbox (badness 1577) has occurred while \output is active
+Overfull \hbox (15.00842pt too wide) in paragraph at lines 396--397
+\OT1/cmr/m/n/10 pie charts present a com-pre-hen-sive view of fea-ture strength
+.
+[11 <./dlM1M2.PNG> <./dlM1P1.PNG> <./dlM1S1.PNG> <./dlM1V1.PNG> <./dlM1S2.PNG> 
+<./dlM2P1.PNG> <./dlM2S1.PNG> <./dlM2V1.PNG> <./dlM2V2.PNG> <./dlP1S1.PNG> <./d
+lP1V1.PNG> <./dlP1V2.PNG> <./dlS1V1.PNG> <./dlS1V2.PNG> <./dlV1V2.PNG> <./dlOve
+rall.PNG>]
+Overfull \hbox (11.4252pt too wide) in paragraph at lines 428--429
+\OT1/cmr/m/n/10 so-matosen-sory cor-tex (neuron-2) con-tains $28$ rooted paths,
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active [12 <./Gr2
+Py1.PNG> <./Gr2Py5.PNG> <./Gr2Py7.PNG> <./Gr2Py9.PNG> <./Gr2Py11.PNG> <./Gr2Py2
+1.PNG> <./Gr2Py19.PNG> <./Gr2Py17.PNG> <./Gr2Py15.PNG> <./Gr2Py13.PNG> <./Gr2Py
+23.PNG> <./Gr2Py25.PNG> <./Gr2Py27.PNG> <./Gr2Py29.PNG> <./Gr2Py31.PNG> <./Gr2P
+y41.PNG> <./Gr2Py39.PNG> <./Gr2Py37.PNG> <./Gr2Py33.PNG>]
+Underfull \vbox (badness 10000) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active [13]
+Overfull \hbox (34.16495pt too wide) in paragraph at lines 501--503
+ [][] 
+
+Overfull \hbox (8.5736pt too wide) in paragraph at lines 510--511
+ [][] 
+
+Overfull \hbox (3.43764pt too wide) in paragraph at lines 525--532
+ [][] 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (0.56398pt too wide) in paragraph at lines 537--538
+[]\OT1/cmr/m/n/10 For clas-si-fi-ca-tion, we com-pute the im-por-tant weights
+[14 <./confusionMatd1.PNG> <./dataset1comp.png (PNG copy)> <./classwiseACC1.PNG
+>]
+Overfull \hbox (34.16495pt too wide) in paragraph at lines 578--580
+ [][] 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (8.57541pt too wide) in paragraph at lines 588--589
+ [][] 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (34.16495pt too wide) in paragraph at lines 598--599
+ [][] 
+
+Underfull \vbox (badness 10000) has occurred while \output is active [15]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (4.81409pt too wide) in paragraph at lines 606--607
+\OT1/cmr/m/n/10 NeuroPath2Path fol-lows a graph-theoretic ap-proach that
+
+Overfull \hbox (4.50854pt too wide) in paragraph at lines 608--609
+\OT1/cmr/m/n/10 roPath2Path in two ma-jor do-mains - mor-pho-log-i-cal anal-
+
+Underfull \vbox (badness 7759) has occurred while \output is active
+Underfull \vbox (badness 2012) has occurred while \output is active [16{/opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/cm-super/cm-sup
+er-ts1.enc}]
+Underfull \vbox (badness 10000) has occurred while \output is active [17 <./pat
+hGanglion.png (PNG copy)> <./pathGranule.png (PNG copy)> <./pathMotor.png (PNG 
+copy)> <./pathPurkinje.png (PNG copy)> <./pathPyramidal.png (PNG copy)> <./Tabl
+e-dataset2.PNG> <./dataset2comp.png (PNG copy)> <./classwiseACC.PNG>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (2.62448pt too wide) in paragraph at lines 657--660
+\OT1/cmr/m/n/10 vid-ual fea-ture dis-tances be $\OML/cmm/m/it/10 D[] \OT1/cmr/m
+/n/10 = [\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 b[]\OT1/cmr/m/n/10
+ ) \OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 ) \OM
+L/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^U[]\OT1/cmr/m/n/10 ) $
+
+Overfull \hbox (12.9807pt too wide) in paragraph at lines 703--704
+\OT1/cmr/m/n/10 rons con-sists of four stages - find-ing self-similarity (routi
+ne-
+(./NeuroP2P.bbl [18 <./data2Ratio.png (PNG copy)>]
+Underfull \hbox (badness 1292) in paragraph at lines 64--67
+\OT1/cmr/m/n/8.5 toura Costa, L.: Mor-pho-log-i-cal neu-ron clas-si-fi-ca-tion
+[19 <./Pur2Gr1.PNG> <./Pur2Gr2.PNG> <./Pur2Gr3.PNG> <./Pur2Gr4.PNG> <./Pur2Gr5.
+PNG> <./Pur2Gr10.PNG> <./Pur2Gr9.PNG> <./Pur2Gr8.PNG> <./Pur2Gr7.PNG> <./Pur2Gr
+6.PNG> <./Pur2Gr11.PNG> <./Pur2Gr12.PNG> <./Pur2Gr13.PNG> <./Pur2Gr14.PNG> <./P
+ur2Gr15.PNG> <./Pur2Gr20.PNG> <./Pur2Gr19.PNG> <./Pur2Gr17.PNG> <./Pur2Gr16.PNG
+>]
+Underfull \hbox (badness 1454) in paragraph at lines 153--156
+[]\OT1/cmr/m/n/8.5 Myatt, D., Hadling-ton, T., As-coli, G., Na-suto, S.:
+[20])  [21] (./NeuroP2P.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></opt/h
+omebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbx10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20260301/share/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></opt/homebrew/Cellar/texlive/
+20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homeb
+rew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cmextr
+a/cmex7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1
+/public/amsfonts/cmextra/cmex9.pfb></opt/homebrew/Cellar/texlive/20260301/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/tex
+live/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></opt/h
+omebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></opt/homebrew/
+Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
+b></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20260301/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/homebrew/Cellar/t
+exlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></opt
+/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/typ
+e1/public/amsfonts/symbols/msbm10.pfb></opt/homebrew/Cellar/texlive/20260301/sh
+are/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></opt/homebrew/Cel
+lar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+
+Output written on NeuroP2P.pdf (21 pages, 2353324 bytes).
+Transcript written on NeuroP2P.log.
+************************************
+** Labels in starred environments **
+************************************
+-- NeuroP2P.tex         line  264: consider using a STAR environment
+-- NeuroP2P.tex         line  288: consider using a STAR environment
+-- NeuroP2P.tex         line  401: remove label importSet1 
+-- NeuroP2P.tex         line  446: remove label pathCorrespondence 
+-- NeuroP2P.tex         line  542: remove label importSet2 
+-- NeuroP2P.tex         line  674: consider using a STAR environment
+
+*******************
+** Unused Labels **
+*******************
+-- NeuroP2P.tex         line  125: remove label fig3
+-- NeuroP2P.tex         line  346: remove label elasticMorph
+-- NeuroP2P.tex         line  377: remove label fig: grpymorph
+-- NeuroP2P.tex         line  493: remove label dataset1confusion
+-- NeuroP2P.tex         line  650: remove label fig: purgrmorph
+-- NeuroP2P.tex         line   78: remove label intro
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

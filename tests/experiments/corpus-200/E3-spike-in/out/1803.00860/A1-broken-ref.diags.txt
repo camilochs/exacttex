@@ -1,0 +1,3 @@
+planted=tab:SEsources__ghost sites=[('ms.xtex', 101)]
+xtex new=[('XT1003', 'tab:SEsources__ghost', 'ms.xtex', 101)]
+texlab new=[]

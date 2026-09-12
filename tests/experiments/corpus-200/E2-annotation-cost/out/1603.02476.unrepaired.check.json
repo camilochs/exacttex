@@ -1,0 +1,25 @@
+{
+ "coverage": 0.041069,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`EHFS.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "EHFS.xtex",
+    "offset": 5490,
+    "length": 23,
+    "line": 148,
+    "column": 153
+   },
+   "message": "citation checking unavailable: `EHFS.bib` could not be read",
+   "related": []
+  }
+ ]
+}

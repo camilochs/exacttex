@@ -1,0 +1,63 @@
+{
+ "coverage": 0.021554,
+ "bibliography": {
+  "state": "complete",
+  "entries": 24
+ },
+ "diagnostics": [
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "equation",
+   "name": "eq4",
+   "span": {
+    "file": "CASE_ver2.xtex",
+    "offset": 12677,
+    "length": 8,
+    "line": 117,
+    "column": 21
+   },
+   "message": "identifier `eq4` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "CASE_ver2.xtex",
+      "offset": 9016,
+      "length": 8,
+      "line": 80,
+      "column": 18
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "equation",
+   "name": "eq4",
+   "span": {
+    "file": "CASE_ver2.xtex",
+    "offset": 15796,
+    "length": 8,
+    "line": 153,
+    "column": 21
+   },
+   "message": "identifier `eq4` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "CASE_ver2.xtex",
+      "offset": 9016,
+      "length": 8,
+      "line": 80,
+      "column": 18
+     }
+    }
+   ]
+  }
+ ]
+}

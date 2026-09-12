@@ -1,0 +1,228 @@
+exit=2
+lines=830
+unique_findings=238
+lot}), at an operating point relevant for the considered scenario (i.e. at \textit{FAD}$_{\text{max}}$), it has a significantly higher detection delay compared to other detectors.  
+                                                                                                             ^
+Warning 2 in 05_Results.tex line 47: Non-breaking space (`~') should have been used.
+Although the \gls{HTM} detector has the lowest average detection delay over the largest range of $\tau$ (Fig. \ref{fig:detection_detection_delay_line_plot}), at an operating point relevant for the considered scenario (i.e. at \textit{FAD}$_{\text{max}}$), it has a significantly higher detection delay compared to other detectors.  
+                                                                                                             ^
+Warning 12 in 05_Results.tex line 47: Interword spacing (`\ ') should perhaps be used.
+Although the \gls{HTM} detector has the lowest average detection delay over the largest range of $\tau$ (Fig. \ref{fig:detection_detection_delay_linechktex: WARNING -- ChkTeX does not handle lines over 4093 bytes correctly.  Some errors and line numbers may be wrong in this file.
+_plot}), at an operating point relevant for the considered scenario (i.e. at \textit{FAD}$_{\text{max}}$), it has a significantly higher detection delay compared to other detectors.  
+                                                                                                                                                                                                                              ^
+Warning 12 in 05_Results.tex line 48: Interword spacing (`\ ') should perhaps be used.
+The \gls{HTM} detector requires a higher threshold compared to the other detectors (see Fig. \ref{fig:F1_score_AUC_PR_line_plot} (c)) , due to the particularly strong vulnerability to high \gls{FP} numbers for low thresholds.  
+                                                                                            ^
+Warning 2 in 05_Results.tex line 48: Non-breaking space (`~') should have been used.
+The \gls{HTM} detector requires a higher threshold compared to the other detectors (see Fig. \ref{fig:F1_score_AUC_PR_line_plot} (c)) , due to the particularly strong vulnerability to high \gls{FP} numbers for low thresholds.  
+                                                                                            ^
+Warning 26 in 05_Results.tex line 48: You ought to remove spaces in front of punctuation.
+The \gls{HTM} detector requires a higher threshold compared to the other detectors (see Fig. \ref{fig:F1_score_AUC_PR_line_plot} (c)) , due to the particularly strong vulnerability to high \gls{FP} numbers for low thresholds.  
+                                                                                                                                     ^
+Warning 2 in 05_Results.tex line 53: Non-breaking space (`~') should have been used.
+However, it has to be considered, that the calculation of the average detection delay is only based on detected events according to \eqref{eq:detection_delay}.   
+                                                                                                                                   ^
+Warning 12 in 05_Results.tex line 56: Interword spacing (`\ ') should perhaps be used.
+Fig. \ref{fig:F1_score_AUC_PR_line_plot} (a) and (b) show the $F_{1}$ score over the threshold $\tau$ and the precision-recall curve for the different detectors, respectively.   
+    ^
+Warning 2 in 05_Results.tex line 56: Non-breaking space (`~') should have been used.
+Fig. \ref{fig:F1_score_AUC_PR_line_plot} (a) and (b) show the $F_{1}$ score over the threshold $\tau$ and the precision-recall curve for the different detectors, respectively.   
+    ^
+Warning 24 in 05_Results.tex line 67: Delete this space to maintain correct pagereferences.
+    \caption{(a): $F_{1}$ score, (b): Precision-recall curve, (c): \textit{FAD} score for Persistence, \gls{HTM}, \gls{ARIMA}, \gls{SR} and \gls{CNN} detector.} \label{fig:F1_score_AUC_PR_line_plot}  
+                                                                                                                                                                ^
+Warning 12 in 05_Results.tex line 70: Interword spacing (`\ ') should perhaps be used.
+Fig. \ref{fig:F1_score_AUC_PR_line_plot} (b) shows that, compared to all other detectors, the \gls{SR} detector is able to keep the precision on a higher level for an increasing recall.   
+    ^
+Warning 2 in 05_Results.tex line 70: Non-breaking space (`~') should have been used.
+Fig. \ref{fig:F1_score_AUC_PR_line_plot} (b) shows that, compared to all other detectors, the \gls{SR} detector is able to keep the precision on a higher level for an increasing recall.   
+    ^
+Warning 2 in 05_Results.tex line 73: Non-breaking space (`~') should have been used.
+This can partly be explained by the internal calculation of the anomaly score, which differs from the external calculation used for Persistence, \gls{ARIMA} and \gls{CNN} detector (see Subsection \ref{sec:HTM}).  
+                                                                                                                                                                                                   ^
+Warning 12 in 05_Results.tex line 78: Interword spacing (`\ ') should perhaps be used.
+Fig. \ref{fig:F1_score_AUC_PR_line_plot} (c) shows the \textit{FAD} score for all detectors over the threshold $\tau$.  
+    ^
+Warning 2 in 05_Results.tex line 78: Non-breaking space (`~') should have been used.
+Fig. \ref{fig:F1_score_AUC_PR_line_plot} (c) shows the \textit{FAD} score for all detectors over the threshold $\tau$.  
+    ^
+Warning 2 in 05_Results.tex line 82: Non-breaking space (`~') should have been used.
+However, as described in Subsection \ref{sec:metrics_detection} the \textit{FAD} score emphasises early event detection and weights \glspl{FP} low compared to \glspl{FN}, explaining the decrease of the optimal threshold.   
+                                   ^
+Warning 2 in 05_Results.tex line 92: Non-breaking space (`~') should have been used.
+As described in Section \ref{sec:Requirements} this is considered a great advantage in a scenario of edge computing-based distributed event detection with time and resource constraints.   
+                       ^
+Warning 24 in 05_Results.tex line 94: Delete this space to maintain correct pagereferences.
+\subsection{\gls{OS} classification of \gls{FA} events} \label{sec:results_classification}  
+                                                       ^
+Warning 12 in 05_Results.tex line 95: Interword spacing (`\ ') should perhaps be used.
+In Fig. \ref{fig:Confusion_matrix} the confusion matrix for the \gls{EVM} model applied on the \gls{OS} test dataset is depicted.  
+       ^
+Warning 2 in 05_Results.tex line 95: Non-breaking space (`~') should have been used.
+In Fig. \ref{fig:Confusion_matrix} the confusion matrix for the \gls{EVM} model applied on the \gls{OS} test dataset is depicted.  
+       ^
+Warning 18 in 05_Results.tex line 96: Use either `` or '' as an alternative to `"'.
+Besides the two known event classes \gls{FA} and \gls{NO}, three unknown event classes are included in the test dataset, namely \gls{MP}, \gls{FV} and \gls{DU}, which are summarized as "unknown".   
+                                                                                                                                                                                         ^
+Warning 18 in 05_Results.tex line 96: Use either `` or '' as an alternative to `"'.
+Besides the two known event classes \gls{FA} and \gls{NO}, three unknown event classes are included in the test dataset, namely \gls{MP}, \gls{FV} and \gls{DU}, which are summarized as "unknown".   
+                                                                                                                                                                                                 ^
+Warning 12 in 05_Results.tex line 99: Interword spacing (`\ ') should perhaps be used.
+From Fig. \ref{fig:Confusion_matrix} it can be derived that the \gls{EVM} is able to correctly classify \SI{90}{\percent} of the \gls{FA} events and \SI{76}{\percent} of the \gls{NO} events.  
+         ^
+Warning 2 in 05_Results.tex line 99: Non-breaking space (`~') should have been used.
+From Fig. \ref{fig:Confusion_matrix} it can be derived that the \gls{EVM} is able to correctly classify \SI{90}{\percent} of the \gls{FA} events and \SI{76}{\percent} of the \gls{NO} events.  
+         ^
+Warning 18 in Graphics/09_Confusion_matrix.tikz line 9: Use either `` or '' as an alternative to `"'.
+\def\classNames{{"\smash{FA}","\smash{NO}","\smash{unknown}"}} %class names. Adapt at will  
+                 ^
+Warning 18 in Graphics/09_Confusion_matrix.tikz line 9: Use either `` or '' as an alternative to `"'.
+\def\classNames{{"\smash{FA}","\smash{NO}","\smash{unknown}"}} %class names. Adapt at will  
+                            ^
+Warning 18 in Graphics/09_Confusion_matrix.tikz line 9: Use either `` or '' as an alternative to `"'.
+\def\classNames{{"\smash{FA}","\smash{NO}","\smash{unknown}"}} %class names. Adapt at will  
+                              ^
+Warning 18 in Graphics/09_Confusion_matrix.tikz line 9: Use either `` or '' as an alternative to `"'.
+\def\classNames{{"\smash{FA}","\smash{NO}","\smash{unknown}"}} %class names. Adapt at will  
+                                         ^
+Warning 18 in Graphics/09_Confusion_matrix.tikz line 9: Use either `` or '' as an alternative to `"'.
+\def\classNames{{"\smash{FA}","\smash{NO}","\smash{unknown}"}} %class names. Adapt at will  
+                                           ^
+Warning 18 in Graphics/09_Confusion_matrix.tikz line 9: Use either `` or '' as an alternative to `"'.
+\def\classNames{{"\smash{FA}","\smash{NO}","\smash{unknown}"}} %class names. Adapt at will  
+                                                           ^
+Warning 24 in Graphics/09_Confusion_matrix.tikz line 68: Delete this space to maintain correct pagereferences.
+    \caption{Confusion matrix of the \gls{EVM} model on the \gls{OS} classification test dataset with an openness $O$ = \SI{24.7}{\percent}.} \label{fig:Confusion_matrix}  
+                                                                                                                                             ^
+Warning 12 in 05_Results.tex line 106: Interword spacing (`\ ') should perhaps be used.
+In general, Fig. \ref{fig:Confusion_matrix} demonstrates that the influence of the unknown classes on precision and recall of a class is higher compared to the influence of the other known class.   
+                ^
+Warning 2 in 05_Results.tex line 106: Non-breaking space (`~') should have been used.
+In general, Fig. \ref{fig:Confusion_matrix} demonstrates that the influence of the unknown classes on precision and recall of a class is higher compared to the influence of the other known class.   
+                ^
+Warning 12 in 05_Results.tex line 112: Interword spacing (`\ ') should perhaps be used.
+In Fig. \ref{fig:EVM_line_plot} the comparison of the \gls{OS} and \gls{CS} \gls{EVM} for a varying openness $O$ of the test dataset is depicted.   
+       ^
+Warning 2 in 05_Results.tex line 112: Non-breaking space (`~') should have been used.
+In Fig. \ref{fig:EVM_line_plot} the comparison of the \gls{OS} and \gls{CS} \gls{EVM} for a varying openness $O$ of the test dataset is depicted.   
+       ^
+Warning 24 in 05_Results.tex line 116: Delete this space to maintain correct pagereferences.
+    \caption{Comparison of the $F_{1}$ score between \gls{OS} and \gls{CS} \gls{EVM} model on the \gls{OS} classification problem with a varying openness $O$.} \label{fig:EVM_line_plot}  
+                                                                                                                                                               ^
+Warning 12 in 05_Results.tex line 132: Interword spacing (`\ ') should perhaps be used.
+In the final scenario ($O=\SI{24.7}{\percent}$) all unknown event classes are added to the test dataset, corresponding to the scenario described by Fig. \ref{fig:Confusion_matrix}. Adding the unknown \gls{DU} event class further decreases performance for both the \gls{OS} and \gls{CS} classifier.  
+                                                                                                                                                        ^
+Warning 2 in 05_Results.tex line 132: Non-breaking space (`~') should have been used.
+In the final scenario ($O=\SI{24.7}{\percent}$) all unknown event classes are added to the test dataset, corresponding to the scenario described by Fig. \ref{fig:Confusion_matrix}. Adding the unknown \gls{DU} event class further decreases performance for both the \gls{OS} and \gls{CS} classifier.  
+                                                                                                                                                        ^
+Warning 24 in 06_Conclusion.tex line 1: Delete this space to maintain correct pagereferences.
+\section{Conclusion and future work} \label{sec:Conclusion}  
+                                    ^
+Warning 24 in 08_appendix.tex line 4: Delete this space to maintain correct pagereferences.
+\caption{General procedure of the \gls{EIP} for \gls{FA} events.}  \label{algo:pipeline}  
+                                                                  ^
+Warning 1 in 08_appendix.tex line 6: Command terminated with space.
+\For {new incoming data point $x_{\Delta,t}$}:  
+    ^
+Warning 1 in 08_appendix.tex line 8: Command terminated with space.
+ \State \Call{persistence\_forecast}{$x_{\Delta,t}$} \Comment{Start of unsupervised event detection}  
+       ^
+Warning 1 in 08_appendix.tex line 9: Command terminated with space.
+        \State \hspace{14pt} \Return $\hat{x}_{\Delta,t}$  
+              ^
+Warning 1 in 08_appendix.tex line 9: Command terminated with space.
+        \State \hspace{14pt} \Return $\hat{x}_{\Delta,t}$  
+                                    ^
+Warning 1 in 08_appendix.tex line 10: Command terminated with space.
+    \If {$|\hat{x}_{\Delta,t}-x_{\Delta,t}|<\tau$}:  
+       ^
+Warning 1 in 08_appendix.tex line 11: Command terminated with space.
+        \State Declare $x_{\Delta,t}$ normal behavior  
+              ^
+Warning 1 in 08_appendix.tex line 14: Command terminated with space.
+        \State Declare $x_{\Delta,t}$ an event  
+              ^
+Warning 1 in 08_appendix.tex line 15: Command terminated with space.
+        \State \Call{backward\_sampling}{$x_{\Delta,t}$} \Comment{Start of event sampling}  
+              ^
+Warning 1 in 08_appendix.tex line 16: Command terminated with space.
+            \State  \hspace{14pt} \Return $\bm{x}_{\Delta,\text{bw}}=\{x_{\Delta,t-w_{\bm{x}}},...,x_{\Delta,t+e}\}$  
+                  ^
+Warning 1 in 08_appendix.tex line 16: Command terminated with space.
+            \State  \hspace{14pt} \Return $\bm{x}_{\Delta,\text{bw}}=\{x_{\Delta,t-w_{\bm{x}}},...,x_{\Delta,t+e}\}$  
+                                         ^
+Warning 11 in 08_appendix.tex line 16: You should use \ldots to achieve an ellipsis.
+            \State  \hspace{14pt} \Return $\bm{x}_{\Delta,\text{bw}}=\{x_{\Delta,t-w_{\bm{x}}},...,x_{\Delta,t+e}\}$  
+                                                                                               ^^^
+Warning 1 in 08_appendix.tex line 17: Command terminated with space.
+        \State \Call{forward\_sampling}{$x_{\Delta,t}$}   
+              ^
+Warning 1 in 08_appendix.tex line 18: Command terminated with space.
+            \State \hspace{14pt} \textbf{if} another event at $x_{\Delta,t+a} \in \{x_{\Delta,t+1},...,x_{\Delta,t+w_{\bm{x}}}\}$ \textbf{then}:  
+                  ^
+Warning 11 in 08_appendix.tex line 18: You should use \ldots to achieve an ellipsis.
+            \State \hspace{14pt} \textbf{if} another event at $x_{\Delta,t+a} \in \{x_{\Delta,t+1},...,x_{\Delta,t+w_{\bm{x}}}\}$ \textbf{then}:  
+                                                                                                   ^^^
+Warning 1 in 08_appendix.tex line 19: Command terminated with space.
+            \State \hspace{28pt} \Return $\bm{x}_{\Delta,\text{fw}}=\{x_{\Delta,t-e},...,x_{\Delta,t+a+e}\}$  
+                  ^
+Warning 1 in 08_appendix.tex line 19: Command terminated with space.
+            \State \hspace{28pt} \Return $\bm{x}_{\Delta,\text{fw}}=\{x_{\Delta,t-e},...,x_{\Delta,t+a+e}\}$  
+                                        ^
+Warning 11 in 08_appendix.tex line 19: You should use \ldots to achieve an ellipsis.
+            \State \hspace{28pt} \Return $\bm{x}_{\Delta,\text{fw}}=\{x_{\Delta,t-e},...,x_{\Delta,t+a+e}\}$  
+                                                                                     ^^^
+Warning 1 in 08_appendix.tex line 20: Command terminated with space.
+            \State \hspace{14pt} \textbf{else}:  
+                  ^
+Warning 1 in 08_appendix.tex line 21: Command terminated with space.
+            \State \hspace{28pt} \Return $\bm{x}_{\Delta,\text{fw}}=\{x_{\Delta,t-e},...,x_{\Delta,t+w_{\bm{x}}}\}$  
+                  ^
+Warning 1 in 08_appendix.tex line 21: Command terminated with space.
+            \State \hspace{28pt} \Return $\bm{x}_{\Delta,\text{fw}}=\{x_{\Delta,t-e},...,x_{\Delta,t+w_{\bm{x}}}\}$  
+                                        ^
+Warning 11 in 08_appendix.tex line 21: You should use \ldots to achieve an ellipsis.
+            \State \hspace{28pt} \Return $\bm{x}_{\Delta,\text{fw}}=\{x_{\Delta,t-e},...,x_{\Delta,t+w_{\bm{x}}}\}$  
+                                                                                     ^^^
+Warning 1 in 08_appendix.tex line 23: Command terminated with space.
+        \For {$\bm{x}$ in [$\bm{x}_{\Delta,\text{bw}}$, $\bm{x}_{\Delta,\text{fw}}$]}:  
+            ^
+Warning 1 in 08_appendix.tex line 24: Command terminated with space.
+            \State Calculate feature vector $v = [\mu_{\bm{x}}, \sigma_{\bm{x}},x_{\text{min}}, x_{\text{max}}, n_{0}, n_{\text{minmax}}]$  
+                  ^
+Warning 1 in 08_appendix.tex line 25: Command terminated with space.
+             \State \Call{extreme\_value\_machine}{$v$} \Comment{Start of \gls{OS} classification}  
+                   ^
+Warning 1 in 08_appendix.tex line 26: Command terminated with space.
+             \State \hspace{14pt} \Return $P(C_{flexibility}|v)$, $P(C_{normal\_behavior}|v)$  
+                   ^
+Warning 1 in 08_appendix.tex line 26: Command terminated with space.
+             \State \hspace{14pt} \Return $P(C_{flexibility}|v)$, $P(C_{normal\_behavior}|v)$  
+                                         ^
+Warning 1 in 08_appendix.tex line 27: Command terminated with space.
+                \If {$P(C_{flexibility}|v) \geq P(C_{normal\_behavior}|v)$ \textbf{and} $\geq \rho$}:  
+                   ^
+Warning 1 in 08_appendix.tex line 28: Command terminated with space.
+                \State Declare sample $\bm{x}$ as flexibility activation event  
+                      ^
+Warning 1 in 08_appendix.tex line 29: Command terminated with space.
+                \ElsIf {$P(C_{flexibility}|v) \leq P(C_{normal\_behavior}|v)$ \textbf{and} $\geq \rho$}:  
+                      ^
+Warning 1 in 08_appendix.tex line 30: Command terminated with space.
+                \State Declare sample $\bm{x}$ as normal behavior  
+                      ^
+Warning 1 in 08_appendix.tex line 32: Command terminated with space.
+                \State Declare sample $\bm{x}$ as unknown event  
+                      ^
+Warning 1 in 08_appendix.tex line 33: Command terminated with space.
+                \EndIf  
+                      ^
+Warning 1 in 08_appendix.tex line 34: Command terminated with space.
+        \EndFor  
+               ^
+Warning 1 in 08_appendix.tex line 35: Command terminated with space.
+    \EndIf  
+          ^
+Warning 1 in 08_appendix.tex line 36: Command terminated with space.
+\EndFor  
+       ^

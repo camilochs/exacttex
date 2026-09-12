@@ -1,0 +1,115 @@
+exit=2
+lines=396
+unique_findings=86
+                                                                                      ^
+Warning 3 in CASE_ver2.tex line 253: You should enclose the previous parenthesis with `{}'.
+In this section, we conducted experimental validations of the proposed NMPC-CLF-Relax-CBF and other safety-critical controllers using the Husky A200 robot, as depicted in Fig. \ref{ex_ps} and Fig. \ref{ex_ct}. A detailed video of the experiment is available online (Video 1). The Husky was programmed to move from $\xi_0=[0,0,0]^T$ (m,m,rad) to $\xi_r=[7,0,0]^T$ (m,m,rad), navigating around an obstacle located at (3.5m, 0m) with a radius of 0.45 m. Additionally, a circular path was defined as $[x_r(t)=2.5 \cos(0.16t), , y_r(t) = 2.5 \sin(0.16t)]^T$ with an obstacle $r_{ob}=0.45$ m positioned at (0m, -2.35m). The control parameters were set as follows: $W_{\xi} = \text{diag}(15, 15, 0.1)$, $W_u = \text{diag}(0.01, 0.01)$, $W_{v} = \text{diag}(1, 1, 1)$, $W_1 = 100$, $W_2 = 10$, and $\alpha = 0.2$. The chosen sampling time was $\tau = 0.2$ s, with $N = 5$ for the point stabilisation problem and $N = 7$ for circle tracking. The experimental results were consistent with the outcomes obtained from the MATLAB simulations, demonstrating that all controllers achieved effective target positioning and reference tracking. The BT controller allowed the robot to approach the obstacle more closely, necessitating stops and direction reversals to navigate around it. The CBF controller generated a better strategy for obstacle avoidance; however, it could only achieve smooth and optimal trajectories with appropriate values of $\gamma$. The Relax-CBF demonstrated that the proposed NMPC-CLF-Relax-CBF effectively ensures the robot's safe and accurate navigation with short prediction times and a significantly wide range of $\gamma$ values, simultaneously enhancing feasibility, safety, and computational efficiency. By employing Relax-CBF, the NMPC was able to reduce the prediction time ($N\tau$) from 1.2 seconds to 0.5 seconds, achieving a 58.33\% reduction in simulations, and from 3 seconds to 1.4 seconds, achieving a 53.33\% reduction in experiments.   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+Warning 38 in CASE_ver2.tex line 260: You should not use punctuation in front of quotes.
+\bibitem{ref6} A. Amangeldi, A. Dospanova and S. Kusdavletov, ``Multi-Goal Point Stabilization Control for Differential Drive Mobile Robot with Odometry,'' \textit{2023 15th International Conference on Computer and Automation Engineering}, pp. 389-393, 2023.   
+                                                                                                                                                        ^
+Warning 8 in CASE_ver2.tex line 260: Wrong length of dash may have been used.
+\bibitem{ref6} A. Amangeldi, A. Dospanova and S. Kusdavletov, ``Multi-Goal Point Stabilization Control for Differential Drive Mobile Robot with Odometry,'' \textit{2023 15th International Conference on Computer and Automation Engineering}, pp. 389-393, 2023.   
+                                                                                                                                                                                                                                                       ^
+Warning 38 in CASE_ver2.tex line 261: You should not use punctuation in front of quotes.
+\bibitem{ref7} M. J. Rabbani and A. Y. Memon, ``Output Feedback Stabilization of Nonholonomic Wheeled Mobile Robot Using Backstepping Control,'' \textit{IEEE 12th International Conference on Control System, Computing and Engineering}, pp. 119-124, 2022.   
+                                                                                                                                             ^
+Warning 8 in CASE_ver2.tex line 261: Wrong length of dash may have been used.
+\bibitem{ref7} M. J. Rabbani and A. Y. Memon, ``Output Feedback Stabilization of Nonholonomic Wheeled Mobile Robot Using Backstepping Control,'' \textit{IEEE 12th International Conference on Control System, Computing and Engineering}, pp. 119-124, 2022.   
+                                                                                                                                                                                                                                                  ^
+Warning 38 in CASE_ver2.tex line 262: You should not use punctuation in front of quotes.
+\bibitem{ref8} G. Oriolo, A. De Luca, and M. Vendittelli, ``WMR control via dynamic feedback linearisation: Design, implementation, and experimental validation,'' \textit{IEEE Transactions on Control Systems Technology}, vol.10, no. 6, pp. 835--852, 2002.   
+                                                                                                                                                               ^
+Warning 38 in CASE_ver2.tex line 263: You should not use punctuation in front of quotes.
+\bibitem{ref9} D. A. Marrugo-Tobón et al., ``Kinematic Constraint-Based Linear Feedback Control Design for Differential-Drive Mobile Robot Trajectory Tracking,'' \textit{IEEE 6th Colombian Conference on Automatic Control}, pp. 1-6, 2023.   
+                                                                                                                                                               ^
+Warning 8 in CASE_ver2.tex line 263: Wrong length of dash may have been used.
+\bibitem{ref9} D. A. Marrugo-Tobón et al., ``Kinematic Constraint-Based Linear Feedback Control Design for Differential-Drive Mobile Robot Trajectory Tracking,'' \textit{IEEE 6th Colombian Conference on Automatic Control}, pp. 1-6, 2023.   
+                                                                                                                                                                                                                                     ^
+Warning 38 in CASE_ver2.tex line 264: You should not use punctuation in front of quotes.
+\bibitem{ref10} U. Kumar and N. Sukavanam, ``Backstepping based trajectory tracking control of a four-wheeled mobile robot,'' \textit{International Journal of Advanced Robotic Systems}, vol. 5, no. 4, pp. 403 - 410, 2008.   
+                                                                                                                          ^
+Warning 8 in CASE_ver2.tex line 264: Wrong length of dash may have been used.
+\bibitem{ref10} U. Kumar and N. Sukavanam, ``Backstepping based trajectory tracking control of a four-wheeled mobile robot,'' \textit{International Journal of Advanced Robotic Systems}, vol. 5, no. 4, pp. 403 - 410, 2008.   
+                                                                                                                                                                                                                 ^
+Warning 38 in CASE_ver2.tex line 265: You should not use punctuation in front of quotes.
+\bibitem{ref12} X. Zhang et al., ``Position/Attitude Cascade Regulation of Nonholonomic Four-Wheeled Mobile Robot via Double-Loop Sliding-Mode Control Mechanism,'' \textit{Entropy}, vol. 25, no. 1, pp. 27–27, 2022.   
+                                                                                                                                                                ^
+Warning 38 in CASE_ver2.tex line 266: You should not use punctuation in front of quotes.
+\bibitem{ref2} F. Xie and R. Fierro, ``First-state contractive model predictive control of nonholonomic mobile robots,'' \textit{Proceedings of the American Control Conference}, pp. 3494-3499, 2008.   
+                                                                                                                     ^
+Warning 8 in CASE_ver2.tex line 266: Wrong length of dash may have been used.
+\bibitem{ref2} F. Xie and R. Fierro, ``First-state contractive model predictive control of nonholonomic mobile robots,'' \textit{Proceedings of the American Control Conference}, pp. 3494-3499, 2008.   
+                                                                                                                                                                                          ^
+Warning 38 in CASE_ver2.tex line 267: You should not use punctuation in front of quotes.
+\bibitem{ref15} Mohamed W. Mehrez, George K. I. Mann, and Raymond G. Gosine, ``Comparison of stabilising NMPC designs for wheeled mobile robots: An experimental study,'' \textit{In 2015 Moratuwa Engineering Research Conference (MERCon)}, pages 130–135, 2015.   
+                                                                                                                                                                      ^
+Warning 18 in CASE_ver2.tex line 269: Use either `` or '' as an alternative to `"'.
+J. Van Den Berg, S. J. Guy, M. Lin, and D. Manocha, ``Reciprocal n-body collision avoidance," in \textit{Robotics Research: The 14th International Symposium ISRR}, Berlin, Heidelberg: Springer Berlin Heidelberg, pp. 3-19, 2011.   
+                                                                                            ^
+Warning 8 in CASE_ver2.tex line 269: Wrong length of dash may have been used.
+J. Van Den Berg, S. J. Guy, M. Lin, and D. Manocha, ``Reciprocal n-body collision avoidance," in \textit{Robotics Research: The 14th International Symposium ISRR}, Berlin, Heidelberg: Springer Berlin Heidelberg, pp. 3-19, 2011.   
+                                                                                                                                                                                                                         ^
+Warning 18 in CASE_ver2.tex line 271: Use either `` or '' as an alternative to `"'.
+Y. Chen, F. Zhao, and Y. Lou, ``Interactive model predictive control for robot navigation in dense crowds," \textit{IEEE Transactions on Systems, Man, and Cybernetics: Systems}, vol. 52, no. 4, pp. 2289-2301, 2021.   
+                                                                                                          ^
+Warning 8 in CASE_ver2.tex line 271: Wrong length of dash may have been used.
+Y. Chen, F. Zhao, and Y. Lou, ``Interactive model predictive control for robot navigation in dense crowds," \textit{IEEE Transactions on Systems, Man, and Cybernetics: Systems}, vol. 52, no. 4, pp. 2289-2301, 2021.   
+                                                                                                                                                                                                          ^
+Warning 13 in CASE_ver2.tex line 273: Intersentence spacing (`\@') should perhaps be used.
+H. Yang, C. Yao, C. Liu, and Q. Chen, ``RMRL: Robot Navigation in Crowd Environments with Risk Map-based Deep Reinforcement Learning," \textit{IEEE Robotics and Automation Letters}, 2023.   
+                                            ^
+Warning 18 in CASE_ver2.tex line 273: Use either `` or '' as an alternative to `"'.
+H. Yang, C. Yao, C. Liu, and Q. Chen, ``RMRL: Robot Navigation in Crowd Environments with Risk Map-based Deep Reinforcement Learning," \textit{IEEE Robotics and Automation Letters}, 2023.   
+                                                                                                                                     ^
+Warning 18 in CASE_ver2.tex line 275: Use either `` or '' as an alternative to `"'.
+R. Han, S. Chen, S. Wang, Z. Zhang, R. Gao, Q. Hao, and J. Pan, ``Reinforcement learned distributed multi-robot navigation with reciprocal velocity obstacle shaped rewards," \textit{IEEE Robotics and Automation Letters}, vol. 7, no. 3, pp. 5896-5903, 2022.   
+                                                                                                                                                                            ^
+Warning 8 in CASE_ver2.tex line 275: Wrong length of dash may have been used.
+R. Han, S. Chen, S. Wang, Z. Zhang, R. Gao, Q. Hao, and J. Pan, ``Reinforcement learned distributed multi-robot navigation with reciprocal velocity obstacle shaped rewards," \textit{IEEE Robotics and Automation Letters}, vol. 7, no. 3, pp. 5896-5903, 2022.   
+                                                                                                                                                                                                                                                    ^
+Warning 13 in CASE_ver2.tex line 277: Intersentence spacing (`\@') should perhaps be used.
+R. Han, S. Wang, S. Wang, Z. Zhang, Q. Zhang, Y. C. Eldar, and J. Pan, ``RDA: An accelerated collision-free motion planner for autonomous navigation in cluttered environments," \textit{IEEE Robotics and Automation Letters}, vol. 8, no. 3, pp. 1715-1722, 2023.   
+                                                                            ^
+Warning 18 in CASE_ver2.tex line 277: Use either `` or '' as an alternative to `"'.
+R. Han, S. Wang, S. Wang, Z. Zhang, Q. Zhang, Y. C. Eldar, and J. Pan, ``RDA: An accelerated collision-free motion planner for autonomous navigation in cluttered environments," \textit{IEEE Robotics and Automation Letters}, vol. 8, no. 3, pp. 1715-1722, 2023.   
+                                                                                                                                                                               ^
+Warning 8 in CASE_ver2.tex line 277: Wrong length of dash may have been used.
+R. Han, S. Wang, S. Wang, Z. Zhang, Q. Zhang, Y. C. Eldar, and J. Pan, ``RDA: An accelerated collision-free motion planner for autonomous navigation in cluttered environments," \textit{IEEE Robotics and Automation Letters}, vol. 8, no. 3, pp. 1715-1722, 2023.   
+                                                                                                                                                                                                                                                       ^
+Warning 18 in CASE_ver2.tex line 279: Use either `` or '' as an alternative to `"'.
+B. Lindqvist, S. S. Mansouri, A. A. Agha-mohammadi, and G. Nikolakopoulos, ``Nonlinear MPC for collision avoidance and control of UAVs with dynamic obstacles," \textit{IEEE Robotics and Automation Letters}, vol. 5, no. 4, pp. 6001-6008, 2020.   
+                                                                                                                                                              ^
+Warning 8 in CASE_ver2.tex line 279: Wrong length of dash may have been used.
+B. Lindqvist, S. S. Mansouri, A. A. Agha-mohammadi, and G. Nikolakopoulos, ``Nonlinear MPC for collision avoidance and control of UAVs with dynamic obstacles," \textit{IEEE Robotics and Automation Letters}, vol. 5, no. 4, pp. 6001-6008, 2020.   
+                                                                                                                                                                                                                                      ^
+Warning 18 in CASE_ver2.tex line 281: Use either `` or '' as an alternative to `"'.
+A. D. Ameset al., ``Control Barrier Functions: Theory and Applications," \textit{18th European Control Conference (ECC)}, Naples, Italy, pp. 3420-3431, 2019.   
+                                                                       ^
+Warning 8 in CASE_ver2.tex line 281: Wrong length of dash may have been used.
+A. D. Ameset al., ``Control Barrier Functions: Theory and Applications," \textit{18th European Control Conference (ECC)}, Naples, Italy, pp. 3420-3431, 2019.   
+                                                                                                                                                 ^
+Warning 38 in CASE_ver2.tex line 292: You should not use punctuation in front of quotes.
+\bibitem{ref26} A. D. Ames, S. Coogan, M. Egerstedt, G. Notomista, K. Sreenath and P. Tabuada, ``Control Barrier Functions: Theory and Applications,'' \textit{18th European Control Conference (ECC)}, pp. 3420-3431, 2019.   
+                                                                                                                                                   ^
+Warning 8 in CASE_ver2.tex line 292: Wrong length of dash may have been used.
+\bibitem{ref26} A. D. Ames, S. Coogan, M. Egerstedt, G. Notomista, K. Sreenath and P. Tabuada, ``Control Barrier Functions: Theory and Applications,'' \textit{18th European Control Conference (ECC)}, pp. 3420-3431, 2019.   
+                                                                                                                                                                                                                ^
+Warning 38 in CASE_ver2.tex line 293: You should not use punctuation in front of quotes.
+\bibitem{ref20} Vayeda Anshav Bhavesh, ``Comparison of various obstacle avoidance algorithms,'' \textit{International Journal of Engineering Research and Technology (IJERT)}, 2015.   
+                                                                                            ^
+Warning 38 in CASE_ver2.tex line 294: You should not use punctuation in front of quotes.
+\bibitem{ref24} Bock, H.G. and Plitt, K.J, ``A multiple shooting algorithm for direct solution of optimal control problems,'' \textit{Proceedings 9th IFAC World Congress Budapest}, Pergamon Press, pp. 243-247, 1984.   
+                                                                                                                          ^
+Warning 8 in CASE_ver2.tex line 294: Wrong length of dash may have been used.
+\bibitem{ref24} Bock, H.G. and Plitt, K.J, ``A multiple shooting algorithm for direct solution of optimal control problems,'' \textit{Proceedings 9th IFAC World Congress Budapest}, Pergamon Press, pp. 243-247, 1984.   
+                                                                                                                                                                                                            ^
+Warning 15 in CASE_ver2.tex line 45: No match found for `['.
+The state of the nonholonomic mobile robot is defined by a state vector $\xi = [x, y, \theta]^T \in \Re^3$, which includes the spatial position $\xi_{xy} = [x, y[^T$ (m,m) and the orientation angle $\theta$ (rad) of the robot. The robot's control inputs are represented by a vector $u = [v, w]^T \in \Re^2$, where $v$ (m/s) and $w$ (rad/s) correspond to linear velocity and angular velocity, respectively. This study considers the kinematic model of a nonholonomic mobile robot as follows:   
+                                                                                                                                                                 ^
+Warning 15 in CASE_ver2.tex line 45: No match found for `['.
+The state of the nonholonomic mobile robot is defined by a state vector $\xi = [x, y, \theta]^T \in \Re^3$, which includes the spatial position $\xi_{xy} = [x, y[^T$ (m,m) and the orientation angle $\theta$ (rad) of the robot. The robot's control inputs are represented by a vector $u = [v, w]^T \in \Re^2$, where $v$ (m/s) and $w$ (rad/s) correspond to linear velocity and angular velocity, respectively. This study considers the kinematic model of a nonholonomic mobile robot as follows:   
+                                                                                                                                                            ^
+Warning 17 in CASE_ver2.tex line 296: Number of `[' doesn't match the number of `]'!
+
+

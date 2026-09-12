@@ -1,0 +1,6 @@
+warning: main.tex:100: Overfull \hbox (12.7316pt too wide) in paragraph at lines 100--100
+warning: main.tex:100: Overfull \hbox (280.04623pt too wide) in paragraph at lines 100--100
+warning: main.tex:100: Underfull \hbox (badness 10000) in paragraph at lines 100--100
+warning: main.tex:100: Underfull \hbox (badness 10000) in paragraph at lines 100--100
+error: main.tex:118: Unable to load picture or PDF file 'figures/planted_ghost.pdf'
+error: halted on potentially-recoverable error as specified

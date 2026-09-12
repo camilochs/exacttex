@@ -1,0 +1,3 @@
+planted=fig::align_dFdC_C2__ghost sites=[('FG_align.xtex', 739)]
+xtex new=[('XT1003', 'fig::align_dFdC_C2__ghost', 'FG_align.xtex', 739)]
+texlab new=[]

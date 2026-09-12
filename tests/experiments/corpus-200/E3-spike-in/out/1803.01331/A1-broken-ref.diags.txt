@@ -1,0 +1,3 @@
+planted=Table:1__ghost sites=[('Manuscript1.xtex', 100)]
+xtex new=[('XT1003', 'Table:1__ghost', 'Manuscript1.xtex', 100)]
+texlab new=[('ERROR', 'Manuscript1.tex', 100, 'Undefined reference'), ('info', 'Manuscript1.tex', 200, 'Unused label')]

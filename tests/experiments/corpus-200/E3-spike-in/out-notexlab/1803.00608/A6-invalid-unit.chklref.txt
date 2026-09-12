@@ -1,0 +1,659 @@
+pdf=0
+exit=0
+lines=2742
+unique_findings=93
+arning: Reference `resp-funct-ref' on page 1 undefined on input line 107
+9.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1091 \begin{figure}[htb!]
+                           
+
+LaTeX Warning: Reference `FFav' on page 1 undefined on input line 1098.
+
+
+LaTeX Warning: Reference `GF-nearfield' on page 1 undefined on input line 1098.
+
+
+
+LaTeX Warning: Reference `Fig-F2trans' on page 1 undefined on input line 1098.
+
+
+LaTeX Warning: Reference `FFav' on page 1 undefined on input line 1098.
+
+
+LaTeX Warning: Reference `GF-nearfield' on page 1 undefined on input line 1098.
+
+
+
+LaTeX Warning: Reference `Fig-F2trans' on page 1 undefined on input line 1098.
+
+
+LaTeX Warning: Reference `FFav' on page 1 undefined on input line 1101.
+
+
+LaTeX Warning: Reference `FFtrans-spect' on page 1 undefined on input line 1101
+.
+
+
+LaTeX Warning: Reference `spectrometer' on page 1 undefined on input line 1118.
+
+
+
+LaTeX Warning: Reference `Eq-response-function' on page 1 undefined on input li
+ne 1133.
+
+
+LaTeX Warning: Reference `TDS-FFSignal-1' on page 1 undefined on input line 114
+4.
+
+
+LaTeX Warning: Reference `KK-phase-sect2' on page 1 undefined on input line 115
+6.
+
+
+LaTeX Warning: Reference `time-revers-shift' on page 1 undefined on input line 
+1180.
+
+
+LaTeX Warning: Reference `TDSstreak' on page 1 undefined on input line 1195.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1208  \begin{figure}[htb!]
+                            
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 1212.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 1212.
+
+
+LaTeX Warning: Reference `TDS-FFSignal-1' on page 1 undefined on input line 121
+5.
+
+
+LaTeX Warning: Reference `Signal1' on page 1 undefined on input line 1216.
+
+
+LaTeX Warning: Reference `TDS-FFSignal2' on page 1 undefined on input line 1221
+.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 1233.
+
+
+LaTeX Warning: Reference `TDSstreak' on page 1 undefined on input line 1233.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 1233.
+
+
+LaTeX Warning: Reference `TDSstreak' on page 1 undefined on input line 1233.
+
+
+LaTeX Warning: Reference `Signal2' on page 1 undefined on input line 1236.
+
+
+LaTeX Warning: Reference `Gauss-Cosine' on page 1 undefined on input line 1239.
+
+
+
+LaTeX Warning: Reference `TDS-FFSignal3' on page 1 undefined on input line 1256
+.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 1269.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 1269.
+
+
+LaTeX Warning: Reference `FFSignal4' on page 1 undefined on input line 1276.
+
+
+LaTeX Warning: Reference `Signal4' on page 1 undefined on input line 1276.
+
+
+LaTeX Warning: Reference `Signal1-av-single' on page 1 undefined on input line 
+1294.
+
+
+LaTeX Warning: Reference `Signal4' on page 1 undefined on input line 1304.
+
+
+LaTeX Warning: Reference `response-function' on page 1 undefined on input line 
+1362.
+
+
+LaTeX Warning: Reference `Gamma-path' on page 1 undefined on input line 1365.
+
+
+LaTeX Warning: Reference `asymptotic-zero' on page 1 undefined on input line 13
+81.
+
+
+LaTeX Warning: Reference `semicircle1' on page 1 undefined on input line 1384.
+
+
+LaTeX Warning: Reference `asymptotic-zero' on page 1 undefined on input line 14
+00.
+
+
+LaTeX Warning: Reference `Gamma-path' on page 1 undefined on input line 1427.
+
+
+LaTeX Warning: Reference `Cauchy' on page 1 undefined on input line 1434.
+
+
+LaTeX Warning: Reference `semicircle1b' on page 1 undefined on input line 1441.
+
+
+
+LaTeX Warning: Reference `response-integral' on page 1 undefined on input line 
+1485.
+
+
+LaTeX Warning: Reference `Fourier-Response' on page 1 undefined on input line 1
+502.
+
+
+LaTeX Warning: Reference `principal-value' on page 1 undefined on input line 15
+10.
+
+
+LaTeX Warning: Reference `rho-trunc-cos-squared' on page 1 undefined on input l
+ine 1532.
+
+
+LaTeX Warning: Reference `Gauss-Cosine' on page 1 undefined on input line 1532.
+
+
+
+LaTeX Warning: Reference `Gauss-KK-Gamma1' on page 1 undefined on input line 15
+36.
+
+
+LaTeX Warning: Reference `even-odd' on page 1 undefined on input line 1565.
+
+
+LaTeX Warning: Command \c invalid in math mode on input line 1571.
+
+! Please use \mathaccent for accents in math mode.
+<recently read> \accent 
+                        
+l.1571 where ${\cal FT}\{S(t)\, fç
+                                   (t)\}$ denotes the Fourier transform of t...
+
+
+LaTeX Warning: Reference `Re-Im' on page 1 undefined on input line 1593.
+
+
+LaTeX Warning: Reference `disp-relation' on page 1 undefined on input line 1603
+.
+
+
+LaTeX Warning: Reference `disp-relation' on page 1 undefined on input line 1612
+.
+
+
+LaTeX Warning: Reference `Weg-log(omega)' on page 1 undefined on input line 162
+3.
+
+
+LaTeX Warning: Reference `aux-function' on page 1 undefined on input line 1627.
+
+
+
+LaTeX Warning: Reference `Gamma-path' on page 1 undefined on input line 1627.
+
+
+LaTeX Warning: Reference `aux-function' on page 1 undefined on input line 1627.
+
+
+
+LaTeX Warning: Reference `Gamma-path' on page 1 undefined on input line 1627.
+
+
+LaTeX Warning: Reference `Sect-Blaschke' on page 1 undefined on input line 1635
+.
+
+
+LaTeX Warning: Reference `inverse-powerlaw' on page 1 undefined on input line 1
+651.
+
+
+LaTeX Warning: Reference `FF-cosine' on page 1 undefined on input line 1651.
+
+
+LaTeX Warning: Reference `inverse-powerlaw' on page 1 undefined on input line 1
+653.
+
+
+LaTeX Warning: Reference `Gamma3-Integral' on page 1 undefined on input line 16
+63.
+
+
+LaTeX Warning: Reference `Weg-log(omega)' on page 1 undefined on input line 167
+1.
+
+
+LaTeX Warning: Reference `Fourier-formfactor' on page 1 undefined on input line
+ 1674.
+
+
+Overfull \hbox (25.66515pt too wide) detected at line 1678
+[][] \OML/cmm/m/it/10.95 f[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 !\OT1/cmr/m
+/n/10.95 )\OML/cmm/m/it/10.95 d! \OMS/cmsy/m/n/10.95 ^^Q P [][] [] \OML/cmm/m/i
+t/10.95 d! \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 ^^@\OML/cmm/m/it/10.95 i^^Y
+ []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 F\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/1
+0.95 ![]\OT1/cmr/m/n/10.95 )) + \OML/cmm/m/it/10.95 ^^Y\OT1/cmr/m/n/10.95 ^^H(\
+OML/cmm/m/it/10.95 ![]\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/10.95 i^^Y []\OT1/cm
+r/m/n/10.95 (\OML/cmm/m/it/10.95 \OT1/cmr/m/n/10.95 ) \OML/cmm/m/it/10.95 :
+
+LaTeX Warning: Reference `FF-FF*' on page 1 undefined on input line 1686.
+
+
+LaTeX Warning: Reference `phase-reflectivity' on page 1 undefined on input line
+ 1724.
+
+
+LaTeX Warning: Reference `KK-phase' on page 1 undefined on input line 1732.
+
+
+LaTeX Warning: Reference `KK-phase' on page 1 undefined on input line 1732.
+
+
+LaTeX Warning: Reference `KK-phase' on page 1 undefined on input line 1735.
+
+
+LaTeX Warning: Reference `Weg-log(omega)' on page 1 undefined on input line 173
+5.
+
+
+LaTeX Warning: Reference `KK-phase' on page 1 undefined on input line 1735.
+
+
+LaTeX Warning: Reference `aux-function' on page 1 undefined on input line 1743.
+
+
+
+LaTeX Warning: Reference `Weg-log(omega)' on page 1 undefined on input line 174
+3.
+
+
+LaTeX Warning: Reference `Disp-ampl-phase' on page 1 undefined on input line 17
+61.
+
+
+LaTeX Warning: Reference `truncatedGauss' on page 1 undefined on input line 180
+0.
+
+
+LaTeX Warning: Reference `Ftrunc-ana' on page 1 undefined on input line 1802.
+
+
+LaTeX Warning: Reference `inverse-powerlaw' on page 1 undefined on input line 1
+807.
+
+
+LaTeX Warning: Reference `KK-phase' on page 1 undefined on input line 1807.
+
+
+LaTeX Warning: Reference `KK-phase' on page 1 undefined on input line 1812.
+
+
+LaTeX Warning: Reference `FF-FF*' on page 1 undefined on input line 1814.
+
+
+LaTeX Warning: Reference `Blaschke-Re-Im' on page 1 undefined on input line 184
+8.
+
+
+LaTeX Warning: Reference `Blaschke-Phase-a-b' on page 1 undefined on input line
+ 1861.
+
+
+LaTeX Warning: Reference `mod-formfactor' on page 1 undefined on input line 187
+8.
+
+
+LaTeX Warning: Reference `KK-phase' on page 1 undefined on input line 1882.
+
+
+LaTeX Warning: Reference `F-mod' on page 1 undefined on input line 1884.
+
+
+LaTeX Warning: Reference `ana-phase-retrieve' on page 1 undefined on input line
+ 1905.
+
+
+LaTeX Warning: Reference `2cos-diffwidth' on page 1 undefined on input line 191
+4.
+
+
+LaTeX Warning: Reference `FF-cosine' on page 1 undefined on input line 1915.
+
+
+LaTeX Warning: Reference `ana-phase-retrieve' on page 1 undefined on input line
+ 1921.
+
+
+LaTeX Warning: Reference `reconstr-phase' on page 1 undefined on input line 192
+8.
+
+
+LaTeX Warning: Reference `reconstr-phase' on page 1 undefined on input line 192
+8.
+
+
+LaTeX Warning: Reference `two-cos2-contour' on page 1 undefined on input line 1
+932.
+
+
+LaTeX Warning: Reference `two-cos2-contour' on page 1 undefined on input line 1
+937.
+
+
+LaTeX Warning: Reference `two-cos2-nzeros' on page 1 undefined on input line 19
+38.
+
+
+LaTeX Warning: Reference `3Cos2-KK-nonequi' on page 1 undefined on input line 1
+947.
+
+
+LaTeX Warning: Reference `3Cos2-KK-nonequi' on page 1 undefined on input line 1
+947.
+
+
+LaTeX Warning: Reference `3Cos2-nonequi-FF-front' on page 1 undefined on input 
+line 1947.
+
+
+LaTeX Warning: Reference `3Cos2-KK-nonequi' on page 1 undefined on input line 1
+957.
+
+
+LaTeX Warning: Reference `3Cos2-nonequi-FF-center' on page 1 undefined on input
+ line 1957.
+
+
+LaTeX Warning: Reference `3Cos2-nonequi-center-KKB' on page 1 undefined on inpu
+t line 1965.
+
+
+LaTeX Warning: Reference `FF1-FF2' on page 1 undefined on input line 1992.
+
+
+LaTeX Warning: Reference `FF-FF*' on page 1 undefined on input line 1992.
+
+
+LaTeX Warning: Reference `2Cos2-front-rear' on page 1 undefined on input line 1
+996.
+
+
+LaTeX Warning: Reference `KK-phase-sect2' on page 1 undefined on input line 199
+7.
+
+
+LaTeX Warning: Reference `2Cos2-centered-FF' on page 1 undefined on input line 
+2016.
+
+
+LaTeX Warning: Reference `KK-phase' on page 1 undefined on input line 2035.
+
+
+LaTeX Warning: Reference `Gauss-KK-Gamma1' on page 1 undefined on input line 20
+38.
+
+
+LaTeX Warning: Reference `trunc-Gauss2' on page 1 undefined on input line 2038.
+
+
+
+LaTeX Warning: Reference `KK-phase' on page 1 undefined on input line 2038.
+
+
+LaTeX Warning: Reference `KKphase-trunc' on page 1 undefined on input line 2049
+.
+
+
+LaTeX Warning: Reference `KKphase-trunc' on page 1 undefined on input line 2049
+.
+
+
+LaTeX Warning: Reference `Ftrunc-ana' on page 1 undefined on input line 2053.
+
+
+LaTeX Warning: Reference `truncatedGauss-C' on page 1 undefined on input line 2
+054.
+
+
+LaTeX Warning: Reference `FF-inverse-power' on page 1 undefined on input line 2
+057.
+
+
+LaTeX Warning: Reference `KK-phase' on page 1 undefined on input line 2060.
+
+
+LaTeX Warning: Reference `KK-phase' on page 1 undefined on input line 2066.
+
+
+LaTeX Warning: Reference `truncatedGauss-C' on page 1 undefined on input line 2
+072.
+
+
+LaTeX Warning: Reference `KKphase-trunc' on page 1 undefined on input line 2075
+.
+
+
+LaTeX Warning: Reference `KK-phase' on page 1 undefined on input line 2078.
+
+
+LaTeX Warning: Reference `ana-phase-retrieve' on page 1 undefined on input line
+ 2083.
+
+
+LaTeX Warning: Reference `2cos-diffwidth' on page 1 undefined on input line 208
+3.
+
+
+LaTeX Warning: Reference `two-cos2-contour' on page 1 undefined on input line 2
+083.
+
+
+LaTeX Warning: Reference `2Gauss-difsig' on page 1 undefined on input line 2084
+.
+
+
+LaTeX Warning: Reference `2Gauss-difsig' on page 1 undefined on input line 2101
+.
+
+
+LaTeX Warning: Reference `2Gauss-trunc' on page 1 undefined on input line 2132.
+
+
+
+LaTeX Warning: Reference `2Gauss-difsig' on page 1 undefined on input line 2132
+.
+
+
+LaTeX Warning: Reference `doubleGauss-trunc-KKB' on page 1 undefined on input l
+ine 2137.
+
+
+LaTeX Warning: Reference `two-cos2-contour' on page 1 undefined on input line 2
+137.
+
+
+LaTeX Warning: Reference `doubleGauss-trunc-KKB' on page 1 undefined on input l
+ine 2138.
+
+
+LaTeX Warning: Reference `TransRad' on page 1 undefined on input line 2164.
+
+
+LaTeX Warning: Reference `diff-geom' on page 1 undefined on input line 2167.
+
+
+LaTeX Warning: Reference `2DFourier' on page 1 undefined on input line 2202.
+
+(./reference-CTR.tex
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 44.
+
+) 
+
+! LaTeX Error: \begin{figure} on input line 77 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2215 \end{document}
+                     
+(./CTR-Spectr-arXive.aux)
+
+LaTeX Warning: There were undefined references.
+
+! You can't use `\end' in internal vertical mode.
+\enddocument ...cument/end}\deadcycles \z@ \@@end 
+                                                  
+l.2215 \end{document}
+                     
+
+! LaTeX Error: \begin{figure} on input line 77 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2215 \end{document}
+                     
+! Missing } inserted.
+<inserted text> 
+                }
+l.2215 \end{document}
+                     
+)
+! Emergency stop.
+<*> ...kage{chklref}\input {CTR-Spectr-arXive.tex}
+                                                  
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on CTR-Spectr-arXive.log.
+************************************
+** Labels in starred environments **
+************************************
+-- CTR-Spectr-arXive.tex line  142: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  147: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  154: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  199: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  214: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  291: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  335: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  350: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  369: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  387: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  392: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  399: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  403: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  410: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  547: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  564: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  619: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  633: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1327: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1332: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1337: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1356: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1487: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1503: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1511: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1594: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1604: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1680: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1721: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1766: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1821: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1838: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 2120: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 2178: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 2184: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 2197: consider using a STAR environment
+
+*******************
+** Unused Labels **
+*******************
+-- CTR-Spectr-arXive.tex line 1155: remove label reco-iter
+-- CTR-Spectr-arXive.tex line 1270: remove label Signal3
+-- CTR-Spectr-arXive.tex line 1316: remove label AppendixA
+-- CTR-Spectr-arXive.tex line 1323: remove label complex-analysis
+-- CTR-Spectr-arXive.tex line 1352: remove label residue
+-- CTR-Spectr-arXive.tex line 1354: remove label residue
+-- CTR-Spectr-arXive.tex line 1526: remove label disp-relation-epsilon
+-- CTR-Spectr-arXive.tex line 1527: remove label disp-relation-epsilon
+-- CTR-Spectr-arXive.tex line 1562: remove label tildeS
+-- CTR-Spectr-arXive.tex line 1563: remove label tildeS
+-- CTR-Spectr-arXive.tex line  158: remove label E-bewegtesTeilchen-Kap7
+-- CTR-Spectr-arXive.tex line 1583: remove label Eq-convolution
+-- CTR-Spectr-arXive.tex line 1584: remove label Eq-convolution
+-- CTR-Spectr-arXive.tex line  161: remove label E-bewegtesTeilchen-Kap7
+-- CTR-Spectr-arXive.tex line 1619: remove label log-phase
+-- CTR-Spectr-arXive.tex line 1620: remove label log-phase
+-- CTR-Spectr-arXive.tex line 1656: remove label large-semicircle
+-- CTR-Spectr-arXive.tex line 1658: remove label large-semicircle
+-- CTR-Spectr-arXive.tex line 1668: remove label Gamma3-Integral-faux
+-- CTR-Spectr-arXive.tex line 1716: remove label formfactor-definition
+-- CTR-Spectr-arXive.tex line 1718: remove label formfactor-definition
+-- CTR-Spectr-arXive.tex line 1748: remove label faux-Gauss
+-- CTR-Spectr-arXive.tex line 1749: remove label faux-Gauss
+-- CTR-Spectr-arXive.tex line 1757: remove label IntGamma1
+-- CTR-Spectr-arXive.tex line 1758: remove label IntGamma1
+-- CTR-Spectr-arXive.tex line  176: remove label Eperp
+-- CTR-Spectr-arXive.tex line 1829: remove label Fmod
+-- CTR-Spectr-arXive.tex line 1832: remove label Fmod
+-- CTR-Spectr-arXive.tex line 1845: remove label Bla-phase
+-- CTR-Spectr-arXive.tex line 1847: remove label Bla-phase
+-- CTR-Spectr-arXive.tex line 1876: remove label Blaschke-phase-n
+-- CTR-Spectr-arXive.tex line 1877: remove label Blaschke-phase-n
+-- CTR-Spectr-arXive.tex line 1919: remove label FF-two-cos2
+-- CTR-Spectr-arXive.tex line 1920: remove label FF-two-cos2
+-- CTR-Spectr-arXive.tex line 2117: remove label Eq2Gauss-trunc
+-- CTR-Spectr-arXive.tex line 2174: remove label ExEy
+-- CTR-Spectr-arXive.tex line 2175: remove label ExEy
+-- CTR-Spectr-arXive.tex line  220: remove label Fourier-Eperp-A
+-- CTR-Spectr-arXive.tex line  223: remove label Fourier-Eperp-A
+-- CTR-Spectr-arXive.tex line  282: remove label TR-reff
+-- CTR-Spectr-arXive.tex line  284: remove label TR-reff
+-- CTR-Spectr-arXive.tex line  286: remove label eff-size
+-- CTR-Spectr-arXive.tex line  288: remove label eff-size
+-- CTR-Spectr-arXive.tex line  359: remove label formfactor
+-- CTR-Spectr-arXive.tex line  364: remove label Fourier-Eperp-C
+-- CTR-Spectr-arXive.tex line  367: remove label Fourier-Eperp-C
+-- CTR-Spectr-arXive.tex line  417: remove label 3DFF
+-- CTR-Spectr-arXive.tex line  418: remove label 3DFF
+-- CTR-Spectr-arXive.tex line  433: remove label FFtrans-Gauss
+-- CTR-Spectr-arXive.tex line  434: remove label FFtrans-Gauss
+-- CTR-Spectr-arXive.tex line  478: remove label FFlong
+-- CTR-Spectr-arXive.tex line  512: remove label autocorrelation-function
+-- CTR-Spectr-arXive.tex line  513: remove label autocorrelation-function
+-- CTR-Spectr-arXive.tex line  516: remove label ambiguity
+-- CTR-Spectr-arXive.tex line  749: remove label Iter-Kap3
+-- CTR-Spectr-arXive.tex line   78: remove label intro
+-- CTR-Spectr-arXive.tex line  973: remove label 202m-beamline
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

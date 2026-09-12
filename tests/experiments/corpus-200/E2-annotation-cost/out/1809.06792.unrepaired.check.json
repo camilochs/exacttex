@@ -1,0 +1,25 @@
+{
+ "coverage": 0.036367,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`GOE_sq.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "GOE_sq.xtex",
+    "offset": 2642,
+    "length": 4,
+    "line": 56,
+    "column": 128
+   },
+   "message": "citation checking unavailable: `GOE_sq.bib` could not be read",
+   "related": []
+  }
+ ]
+}

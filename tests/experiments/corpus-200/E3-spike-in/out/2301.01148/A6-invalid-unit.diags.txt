@@ -1,0 +1,3 @@
+planted=fig:planted_unit sites=[('content/manuscript/introduction.xtex', 2)]
+xtex new=[('XT1007', '', 'content/manuscript/introduction.xtex', 2)]
+texlab new=[]

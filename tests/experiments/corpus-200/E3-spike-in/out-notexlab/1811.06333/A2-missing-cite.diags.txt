@@ -1,0 +1,3 @@
+planted=amba49__ghost sites=[('wright.xtex', 29)]
+xtex new=[]
+texlab new=[]

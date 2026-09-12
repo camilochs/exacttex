@@ -1,0 +1,31 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=[] secs=2
+ph at lines 265--266
+warning: ms.tex:270: Underfull \hbox (badness 1728) in paragraph at lines 269--270
+warning: ms.tex:273: Underfull \hbox (badness 1629) in paragraph at lines 272--273
+warning: ms.tex:273: Underfull \hbox (badness 2197) in paragraph at lines 272--273
+warning: ms.tex:273: Underfull \hbox (badness 2662) in paragraph at lines 272--273
+warning: ms.tex:290: Underfull \hbox (badness 2126) in paragraph at lines 290--290
+warning: ms.tex:305: Underfull \hbox (badness 1668) in paragraph at lines 304--305
+warning: ms.tex:310: Underfull \hbox (badness 1221) in paragraph at lines 309--310
+warning: ms.tex:315: Overfull \hbox (14.22638pt too wide) in paragraph at lines 313--315
+warning: ms.tex:323: Underfull \hbox (badness 1418) in paragraph at lines 322--323
+warning: ms.tex:323: Underfull \hbox (badness 2285) in paragraph at lines 322--323
+warning: ms.tex:323: Underfull \hbox (badness 1694) in paragraph at lines 322--323
+warning: ms.tex:383: Underfull \hbox (badness 6316) in paragraph at lines 382--383
+warning: ms.tex:393: Underfull \hbox (badness 4739) in paragraph at lines 392--393
+warning: ms.tex:405: Underfull \hbox (badness 2285) in paragraph at lines 405--405
+warning: ms.tex:436: Underfull \hbox (badness 3250) in paragraph at lines 435--436
+warning: ms.tex:443: Underfull \hbox (badness 1087) in paragraph at lines 443--443
+warning: ms.tex:465: Underfull \hbox (badness 2762) in paragraph at lines 464--465
+warning: ms.tex:467: Underfull \hbox (badness 2158) in paragraph at lines 466--467
+warning: ms.tex:467: Underfull \hbox (badness 1303) in paragraph at lines 466--467
+warning: ms.tex:467: Underfull \hbox (badness 6236) in paragraph at lines 466--467
+warning: ms.tex:472: Underfull \hbox (badness 2799) in paragraph at lines 470--472
+error: ms.bbl:24: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+error: halted on potentially-recoverable error as specified

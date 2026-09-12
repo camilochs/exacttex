@@ -1,0 +1,554 @@
+pdf=0
+exit=0
+lines=1634
+unique_findings=12
+/texmf-dist/tex/latex/pgf/utilities
+/pgfrcs.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfutil-common.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfutil-latex.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfrcs.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/pgf.rev
+ision.tex)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/basiclaye
+r/pgfcore.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/systemlay
+er/pgfsys.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/systeml
+ayer/pgfsys.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfkeys.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfkeyslibraryfiltered.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/systeml
+ayer/pgf.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/systeml
+ayer/pgfsys-pdftex.def
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/systeml
+ayer/pgfsys-common-pdf.def)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/systeml
+ayer/pgfsyssoftpath.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/systeml
+ayer/pgfsysprotocol.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcore.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmath.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathutil.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathparser.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.basic.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.trigonometric.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.random.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.comparison.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.base.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.round.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.misc.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.integerarithmetics.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathcalc.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfloat.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fint.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorepoints.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorepathconstruct.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorepathusage.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorescopes.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoregraphicstate.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoretransformations.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorequick.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoreobjects.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorepathprocessing.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorearrows.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoreshade.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoreimage.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoreexternal.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorelayers.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoretransparency.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorepatterns.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorerdf.code.tex)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/modules
+/pgfmoduleshapes.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/modules
+/pgfmoduleplot.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/compatibi
+lity/pgfcomp-version-0-65.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/compatibi
+lity/pgfcomp-version-1-18.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/utilities
+/pgffor.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/utilities
+/pgfkeys.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfkeys.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/math/pgfm
+ath.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmath.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgffor.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/fronten
+dlayer/tikz/tikz.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/librari
+es/pgflibraryplothandlers.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/modules
+/pgfmodulematrix.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/fronten
+dlayer/tikz/libraries/tikzlibrarytopaths.code.tex)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/fronten
+dlayer/tikz/libraries/tikzlibrarypositioning.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/multirow/mult
+irow.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/algorithm2e/a
+lgorithm2e.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ifoddpage/ifo
+ddpage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/xspace.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/relsize/relsi
+ze.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def) (./NeuroP2P.aux)
+Unknown journal: specify \journalname{<name of your journal>} in preambel
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+SVJour3 warning: Missing \journalname
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+Overfull \hbox (1.70296pt too wide) in paragraph at lines 68--69
+\OT1/cmr/m/n/10 tion. The ap-pli-ca-tion of graph-theoretic meth-ods to neu-
+
+Overfull \hbox (2.45294pt too wide) in paragraph at lines 70--72
+\OT1/cmr/m/n/10 cell-specific bio-phys-i-cal prop-er-ties, can vary sig-nif-i-c
+antly
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   q
+l.78 ...aphics[width=3qm]{Algorithm_at_glance.PNG}
+                                                  \caption{Planted figure}\e...
+
+
+! Package calc Error: `q' invalid at this point.
+
+See the calc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 ...aphics[width=3qm]{Algorithm_at_glance.PNG}
+                                                  \caption{Planted figure}\e...
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   q
+l.78 ...aphics[width=3qm]{Algorithm_at_glance.PNG}
+                                                  \caption{Planted figure}\e...
+
+
+! Package calc Error: `q' invalid at this point.
+
+See the calc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 ...aphics[width=3qm]{Algorithm_at_glance.PNG}
+                                                  \caption{Planted figure}\e...
+
+
+Overfull \hbox (471.62817pt too wide) in paragraph at lines 78--78
+ []\OT1/cmr/m/n/10 m!m![] 
+! Extra }, or forgotten \endgroup.
+\@endfloatbox ...pagefalse \outer@nobreak \egroup 
+                                                  \color@endbox 
+l.78 ...e.PNG}\caption{Planted figure}\end{figure}
+                                                  
+! Extra }, or forgotten \endgroup.
+\color@endbox ->\color@endgroup \egroup 
+                                        
+l.78 ...e.PNG}\caption{Planted figure}\end{figure}
+                                                  
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 \begin{figure*}[t]
+                       
+
+LaTeX Warning: Reference `fig: Pyrmd' on page 1 undefined on input line 112.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.116 \begin{figure*}[t]
+                        
+
+LaTeX Warning: Reference `fig55: algorithm block' on page 1 undefined on input 
+line 206.
+
+
+LaTeX Warning: Reference `featureExtract' on page 1 undefined on input line 212
+.
+
+
+LaTeX Warning: Reference `pathdistance' on page 1 undefined on input line 215.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.220 \begin{figure*}[t]
+                        
+
+LaTeX Warning: Reference `PathAssign' on page 1 undefined on input line 243.
+
+
+LaTeX Warning: Reference `fig4: neuronFeature' on page 1 undefined on input lin
+e 250.
+
+
+LaTeX Warning: Reference `pathmodel' on page 1 undefined on input line 256.
+
+
+LaTeX Warning: Reference `alg2' on page 1 undefined on input line 280.
+
+
+LaTeX Warning: Reference `dfg' on page 1 undefined on input line 286.
+
+
+Overfull \hbox (18.23184pt too wide) in paragraph at lines 298--306
+ [][] 
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.315 \begin{figure*}[t]
+                        
+
+LaTeX Warning: Reference `eq:featureDist' on page 1 undefined on input line 343
+.
+
+
+LaTeX Warning: Reference `fig12: SRVF' on page 1 undefined on input line 381.
+
+
+LaTeX Warning: Reference `fig: pypymorph' on page 1 undefined on input line 382
+.
+
+
+LaTeX Warning: Reference `dfg' on page 1 undefined on input line 382.
+
+
+LaTeX Warning: Reference `fig: pathdist' on page 1 undefined on input line 395.
+
+
+
+LaTeX Warning: Reference `featureExtract' on page 1 undefined on input line 397
+.
+
+
+LaTeX Warning: Reference `fig: importance1' on page 1 undefined on input line 3
+97.
+
+
+LaTeX Warning: Reference `importSet1' on page 1 undefined on input line 397.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.399 \begin{table*}[ht]
+                        
+
+LaTeX Warning: Reference `PathAssign' on page 1 undefined on input line 429.
+
+
+LaTeX Warning: Reference `pathCorrespondence' on page 1 undefined on input line
+ 429.
+
+
+LaTeX Warning: Reference `pathCorrespondence' on page 1 undefined on input line
+ 431.
+
+
+LaTeX Warning: Reference `pathCorrespondence' on page 1 undefined on input line
+ 438.
+
+
+LaTeX Warning: Reference `PathAssign' on page 1 undefined on input line 438.
+
+
+LaTeX Warning: Reference `alg2' on page 1 undefined on input line 439.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.443 \begin{table*}[ht]
+                        
+
+LaTeX Warning: Reference `dfg' on page 1 undefined on input line 484.
+
+
+LaTeX Warning: Reference `importSet1' on page 1 undefined on input line 484.
+
+
+LaTeX Warning: Reference `dataset2confusion' on page 1 undefined on input line 
+487.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.489 \begin{figure}[h]
+                       
+
+LaTeX Warning: Reference `dataset1comp' on page 1 undefined on input line 498.
+
+
+LaTeX Warning: Reference `dataset1comp' on page 1 undefined on input line 498.
+
+
+Overfull \hbox (34.16495pt too wide) in paragraph at lines 502--504
+ [][] 
+
+Overfull \hbox (8.5736pt too wide) in paragraph at lines 511--512
+ [][] 
+
+LaTeX Warning: Reference `dataset1comp' on page 1 undefined on input line 516.
+
+
+LaTeX Warning: Reference `classwiseACC1' on page 1 undefined on input line 516.
+
+
+
+LaTeX Warning: Reference `fig: pathdistCell' on page 1 undefined on input line 
+521.
+
+
+Overfull \hbox (3.43764pt too wide) in paragraph at lines 526--533
+ [][] 
+
+LaTeX Warning: Reference `importSet2' on page 1 undefined on input line 538.
+
+
+LaTeX Warning: Reference `dfg' on page 1 undefined on input line 538.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.540 \begin{table*}[ht]
+                        
+
+LaTeX Warning: Reference `dataset2confusion' on page 1 undefined on input line 
+563.
+
+
+LaTeX Warning: Reference `dataset2comp' on page 1 undefined on input line 572.
+
+
+LaTeX Warning: Reference `dataset2comp' on page 1 undefined on input line 574.
+
+
+LaTeX Warning: Reference `classwiseACC' on page 1 undefined on input line 574.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.576 \begin{figure}[h]
+                       
+
+Overfull \hbox (34.16495pt too wide) in paragraph at lines 579--581
+ [][] 
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.586 \begin{figure}[h]
+                       
+
+Overfull \hbox (8.57541pt too wide) in paragraph at lines 589--590
+ [][] 
+
+LaTeX Warning: Reference `data2ratio' on page 1 undefined on input line 595.
+
+
+Overfull \hbox (34.16495pt too wide) in paragraph at lines 599--600
+ [][] 
+
+LaTeX Warning: Reference `path2path' on page 1 undefined on input line 619.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.624 \begin{figure*}[h]
+                        
+
+LaTeX Warning: Reference `OptimEq' on page 1 undefined on input line 674.
+
+
+LaTeX Warning: Reference `alg1' on page 1 undefined on input line 679.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.707 \caption
+              {Find $\chi$}
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.760 \textbf
+             {Routine 4:} (Reassignment)\\
+(./NeuroP2P.bbl
+Underfull \hbox (badness 1292) in paragraph at lines 64--67
+\OT1/cmr/m/n/8.5 toura Costa, L.: Mor-pho-log-i-cal neu-ron clas-si-fi-ca-tion
+
+Underfull \hbox (badness 1454) in paragraph at lines 153--156
+[]\OT1/cmr/m/n/8.5 Myatt, D., Hadling-ton, T., As-coli, G., Na-suto, S.:
+) 
+
+! LaTeX Error: \begin{figure} on input line 78 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.811 \end{document}
+                    
+(./NeuroP2P.aux)
+
+LaTeX Warning: There were undefined references.
+
+! You can't use `\end' in internal vertical mode.
+\enddocument ...cument/end}\deadcycles \z@ \@@end 
+                                                  
+l.811 \end{document}
+                    
+
+! LaTeX Error: \begin{figure} on input line 78 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.811 \end{document}
+                    
+! Missing } inserted.
+<inserted text> 
+                }
+l.811 \end{document}
+                    
+)
+! Emergency stop.
+<*> \RequirePackage{chklref}\input {NeuroP2P.tex}
+                                                 
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on NeuroP2P.log.
+************************************
+** Labels in starred environments **
+************************************
+-- NeuroP2P.tex         line  265: consider using a STAR environment
+-- NeuroP2P.tex         line  289: consider using a STAR environment
+-- NeuroP2P.tex         line  402: remove label importSet1 
+-- NeuroP2P.tex         line  447: remove label pathCorrespondence 
+-- NeuroP2P.tex         line  543: remove label importSet2 
+-- NeuroP2P.tex         line  675: consider using a STAR environment
+
+*******************
+** Unused Labels **
+*******************
+-- NeuroP2P.tex         line  126: remove label fig3
+-- NeuroP2P.tex         line  347: remove label elasticMorph
+-- NeuroP2P.tex         line  378: remove label fig: grpymorph
+-- NeuroP2P.tex         line  494: remove label dataset1confusion
+-- NeuroP2P.tex         line  651: remove label fig: purgrmorph
+-- NeuroP2P.tex         line   79: remove label intro
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

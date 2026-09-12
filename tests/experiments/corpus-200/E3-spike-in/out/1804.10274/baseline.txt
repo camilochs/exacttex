@@ -1,0 +1,24 @@
+tectonic pdf bytes=1016676
+xtex exit=0 errors=[]
+texlab=[('info', 'msf.tex', 50, 'Unused label'), ('info', 'msf.tex', 115, 'Unused label'), ('info', 'msf.tex', 133, 'Unused label'), ('info', 'msf.tex', 143, 'Unused label'), ('info', 'msf.tex', 166, 'Unused label'), ('info', 'msf.tex', 186, 'Unused label'), ('info', 'msf.tex', 189, 'Unused label'), ('info', 'msf.tex', 215, 'Unused label'), ('info', 'msf.tex', 229, 'Unused label'), ('info', 'msf.tex', 234, 'Unused label'), ('info', 'msf.tex', 245, 'Unused label'), ('info', 'msf.tex', 250, 'Unused label'), ('info', 'msf.tex', 275, 'Unused label'), ('info', 'msf.tex', 353, 'Unused label'), ('info', 'msf.tex', 364, 'Unused label'), ('info', 'msf.tex', 370, 'Unused label'), ('info', 'msf.tex', 411, 'Unused label'), ('info', 'msf.tex', 417, 'Unused label'), ('info', 'msf.tex', 471, 'Unused label'), ('info', 'msf.tex', 474, 'Unused label'), ('info', 'msf.tex', 477, 'Unused label'), ('info', 'msf.tex', 484, 'Unused label'), ('info', 'msf.tex', 489, 'Unused label'), ('info', 'msf.tex', 494, 'Unused label'), ('info', 'msf.tex', 561, 'Unused label'), ('info', 'msf.tex', 579, 'Unused label'), ('info', 'msf.tex', 640, 'Unused label'), ('info', 'msf.tex', 645, 'Unused label'), ('info', 'msf.tex', 650, 'Unused label'), ('info', 'msf.tex', 654, 'Unused label')]
+tectonic exit=0 warnings=[] secs=3
+warning: msf.tex:410: Underfull \hbox (badness 1348) in paragraph at lines 409--410
+warning: msf.tex:603: Underfull \hbox (badness 2318) in paragraph at lines 584--603
+warning: msf.tex:603: Underfull \hbox (badness 3758) in paragraph at lines 584--603
+warning: msf.tex:603: Underfull \hbox (badness 1210) in paragraph at lines 584--603
+warning: msf.tex:603: Underfull \hbox (badness 1221) in paragraph at lines 584--603
+warning: msf.tex:605: Underfull \hbox (badness 1859) in paragraph at lines 604--605
+warning: msf.tex:605: Underfull \hbox (badness 1762) in paragraph at lines 604--605
+warning: msf.tex:607: Underfull \hbox (badness 10000) in paragraph at lines 606--607
+warning: msf.tex:635: Underfull \hbox (badness 4096) in paragraph at lines 633--635
+warning: msf.tex:410: Underfull \hbox (badness 1348) in paragraph at lines 409--410
+warning: msf.tex:605: Underfull \hbox (badness 1859) in paragraph at lines 604--605
+warning: msf.tex:605: Underfull \hbox (badness 1762) in paragraph at lines 604--605
+warning: msf.tex:607: Underfull \hbox (badness 10000) in paragraph at lines 606--607
+warning: msf.tex:635: Underfull \hbox (badness 4096) in paragraph at lines 633--635
+warning: msf.tex:410: Underfull \hbox (badness 1348) in paragraph at lines 409--410
+warning: msf.tex:605: Underfull \hbox (badness 1859) in paragraph at lines 604--605
+warning: msf.tex:605: Underfull \hbox (badness 1762) in paragraph at lines 604--605
+warning: msf.tex:607: Underfull \hbox (badness 10000) in paragraph at lines 606--607
+warning: msf.tex:635: Underfull \hbox (badness 4096) in paragraph at lines 633--635
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

@@ -1,0 +1,201 @@
+id,field,category,title,license,unpack,bytes,tex_bytes,files,tex_files,main_file,n_roots,documentclass,language,bib_files,bbl_files,source,harvested
+2304.01373,cs,cs.CL,Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling,CC BY-SA 4.0,tar,9223254,117560,136,2,main.tex,1,article,,1,1,corpus-50,2026-09-01
+2211.05100,cs,cs.CL,BLOOM: A 176B-Parameter Open-Access Multilingual Language Model,CC BY 4.0,tar,6589056,226182,50,11,main.tex,1,article,,1,1,corpus-50,2026-09-01
+2101.00027,cs,cs.CL,The Pile: An 800GB Dataset of Diverse Text for Language Modeling,CC BY 4.0,tar,2929188,177659,28,1,the-pile.tex,1,article,,1,1,corpus-50,2026-09-01
+2603.02873,cs,cs.CL,LaTeX Compilation: Challenges in the Era of LLMs,CC BY 4.0,tar,552738,100642,23,10,main_en.tex,3,article,,1,1,corpus-50,2026-09-01
+2301.00304,cs,cs.CL,Sample-Efficient Unsupervised Domain Adaptation of Speech Recognition Systems A case study for Modern Greek,CC BY 4.0,tar,2268550,87168,11,1,New_IEEEtran_how-to.tex,1,IEEEtran,,1,1,corpus-50,2026-09-01
+2301.00303,cs,cs.CL,Rethinking with Retrieval: Faithful Large Language Model Inference,CC BY 4.0,tar,1046143,55105,16,8,00-root.tex,1,article,,1,1,corpus-50,2026-09-01
+2301.00152,cs,cs.CL,Towards Proactively Forecasting Sentence-Specific Information Popularity within Online News Documents,CC BY 4.0,tar,1724324,67779,19,2,paper.tex,1,acmart,,1,1,corpus-50,2026-09-01
+2301.00068,cs,cs.CL,Inconsistencies in Masked Language Models,CC BY 4.0,tar,5169459,37385,28,1,acl_latex.tex,1,article,,1,1,corpus-50,2026-09-01
+2212.14882,cs,cs.CL,ChatGPT Makes Medicine Easy to Swallow: An Exploratory Case Study on Simplified Radiology Reports,CC BY 4.0,tar,652915,239416,11,2,main.tex,1,article,,1,1,corpus-50,2026-09-01
+2301.00688,cs,cs.CL,Active Learning for Neural Machine Translation,CC BY 4.0,tar,1600180,60714,23,1,MTT_reveyrand.tex,1,IEEEtran,,2,1,corpus-50,2026-09-01
+2301.06902,cs,cs.CL,TA-DA: Topic-Aware Domain Adaptation for Scientific Keyphrase Identification and Classification (Student Abstract),CC BY 4.0,tar,304362,15430,6,1,smadu.tex,1,article,,1,1,corpus-50,2026-09-01
+2212.14657,cs,cs.CL,Linear programming word problems formulation using EnsembleCRF NER labeler and T5 text generator with data augmentations,CC BY-SA 4.0,tar,496778,33055,7,1,neurips_2020.tex,1,article,,0,1,corpus-50,2026-09-01
+2401.00908,cs,cs.CL,DocLLM: A layout-aware generative language model for multimodal document understanding,CC BY 4.0,tar,919780,109844,24,10,main.tex,2,article,,2,1,corpus-50,2026-09-01
+2401.00582,cs,cs.CL,An Analysis of Embedding Layers and Similarity Scores using Siamese Neural Networks,CC BY 4.0,tar,358175,48438,9,2,templateArxiv.tex,2,article,,1,1,corpus-50,2026-09-01
+2401.02979,cs,cs.CL,Are we describing the same sound? An analysis of word embedding spaces of expressive piano performance,CC BY 4.0,tar,2083357,43004,22,4,sample-authordraft.tex,1,acmart,,1,1,corpus-50,2026-09-01
+2212.14129,cs,cs.PL,Matchertext: Towards Verbatim Interlanguage Embedding,CC BY 4.0,tar,478134,107139,15,11,main.tex,1,article,,0,1,corpus-50,2026-09-01
+2212.12035,cs,cs.PL,A Domain-Extensible Compiler with Controllable Automation of Optimisations,CC BY 4.0,tar,2552393,544623,81,39,main.tex,1,book,english,1,1,corpus-50,2026-09-01
+2212.11637,cs,cs.PL,Time and Space Measures for a Complete Graph Computation Model,CC BY 4.0,tar,1758053,132897,81,14,main.tex,1,eptcs,,0,1,corpus-50,2026-09-01
+2212.10307,cs,cs.PL,Efficient and Sound Differentiable Programming in a Functional Array-Processing Language,CC BY 4.0,tar,1410730,390896,96,56,main.tex,2,jfp,,0,2,corpus-50,2026-09-01
+2312.17141,cs,cs.PL,Probabilistic Programming with Exact Conditions,CC BY 4.0,tar,1662223,206374,125,11,main.tex,1,acmart,,1,1,corpus-50,2026-09-01
+2312.17127,cs,cs.PL,"Probabilistic programming interfaces for random graphs: Markov categories, graphons, and nominal sets",CC BY 4.0,tar,1034706,152233,20,10,popl24.tex,1,acmart,,1,1,corpus-50,2026-09-01
+2312.15379,cs,cs.PL,A flexible specification approach for verifying total correctness of fine-grained concurrent modules,CC BY 4.0,tar,246143,163387,53,16,main.tex,1,acmart,,0,1,corpus-50,2026-09-01
+2312.15035,cs,cs.PL,Hardcaml: An OCaml Hardware Domain-Specific Language for Efficient and Robust Design,CC BY 4.0,tar,264311,48581,44,1,hardcaml.tex,1,article,,0,1,corpus-50,2026-09-01
+2501.00169,cs,cs.PL,DeepLL: Considering Linear Logic for the Analysis of Deep Learning Experiments,CC BY 4.0,tar,56884,41159,3,1,DeepLL.tex,1,article,,0,1,corpus-50,2026-09-01
+2412.19908,cs,cs.PL,Comprehensive Verification of Packet Processing,CC BY 4.0,tar,194584,102004,7,4,paper.tex,1,acmart,,0,1,corpus-50,2026-09-01
+2412.19463,cs,cs.PL,Laws of Quantum Programming,CC BY 4.0,tar,536355,189495,17,1,main.tex,1,acmart,,1,1,corpus-50,2026-09-01
+2212.14834,cs,cs.SE,Large Language Models are Zero-Shot Fuzzers: Fuzzing Deep-Learning Libraries via Large Language Models,CC BY 4.0,tar,1567612,84788,30,16,main.tex,1,acmart,,1,1,corpus-50,2026-09-01
+2212.14779,cs,cs.SE,BlueCov: Integrating Test Coverage and Model Checking with JBMC,CC BY 4.0,tar,359560,58396,13,1,paper.tex,1,acmart,english,1,1,corpus-50,2026-09-01
+2212.14404,cs,cs.SE,Cross Version Defect Prediction with Class Dependency Embeddings,CC BY 4.0,tar,408886,53679,12,1,main.tex,1,elsarticle,,1,1,corpus-50,2026-09-01
+2212.13866,cs,cs.SE,Architecture Decisions in AI-based Systems Development: An Empirical Study,CC BY 4.0,tar,1003363,124718,8,2,main.tex,1,IEEEtran,spanish,1,1,corpus-50,2026-09-01
+2212.13773,cs,cs.SE,A Bayesian Framework for Automated Debugging,CC BY 4.0,tar,4596289,75991,17,1,main.tex,1,acmart,,1,1,corpus-50,2026-09-01
+2212.13570,cs,cs.SE,A Compositional Approach to Creating Architecture Frameworks with an Application to Distributed AI Systems,CC BY-SA 4.0,tar,6054298,226766,38,12,main.tex,3,elsarticle,,1,1,corpus-50,2026-09-01
+2401.00515,cs,cs.SE,Empirical Analysis of Vulnerabilities Life Cycle in Golang Ecosystem,CC BY 4.0,tar,20007195,233877,27,1,sample-sigconf.tex,1,acmart,,1,1,corpus-50,2026-09-01
+2401.00379,cs,cs.SE,DREAM: Debugging and Repairing AutoML Pipelines,CC BY 4.0,tar,1167342,142587,69,33,main.tex,1,acmart,,1,1,corpus-50,2026-09-01
+2401.00879,cs,cs.SE,SoK: Demystifying Privacy Enhancing Technologies Through the Lens of Software Developers,CC BY 4.0,tar,2206021,134235,15,1,sample-acmsmall.tex,1,acmart,,2,1,corpus-50,2026-09-01
+2312.17358,cs,cs.SE,An Introduction to Adaptive Software Security,CC BY 4.0,tar,583972,50876,9,1,sample-sigplan.tex,1,acmart,,0,0,corpus-50,2026-09-01
+2501.00655,cs,cs.SE,Finding Missed Code Size Optimizations in Compilers using LLMs,CC BY 4.0,tar,448205,49889,18,7,main.tex,1,fairmeta,,1,1,corpus-50,2026-09-01
+2301.01286,cs,cs.LG,Pseudo-Inverted Bottleneck Convolution for DARTS Search Space,CC BY 4.0,tar,1129776,23959,54,1,main.tex,1,article,,1,1,corpus-50,2026-09-01
+2301.00301,cs,cs.LG,Generalized PTR: User-Friendly Recipes for Data-Adaptive Algorithms with Differential Privacy,CC BY 4.0,tar,3711260,358082,70,40,aistats_main.tex,4,article,,2,2,corpus-50,2026-09-01
+2301.01148,cs,cs.LG,MERLIN: Multi-agent offline and transfer learning for occupant-centric energy flexible operation of grid-interactive communities using smart meter data and CityLearn,CC BY 4.0,tar,17161117,110561,121,12,main_submitted_20221228.tex,3,cas-dc,,3,1,corpus-50,2026-09-01
+2301.00281,cs,cs.LG,Lightmorphic Signatures Analysis Toolkit,CC BY 4.0,tar,38730,12653,5,1,Lightmorphic_Signatures_Analysis_Toolkit.tex,1,article,,1,1,corpus-50,2026-09-01
+2301.01596,cs,cs.LG,Hospital transfer risk prediction for COVID-19 patients from a medicalized hotel based on Diffusion GraphSAGE,CC BY 4.0,tar,803692,41523,12,1,template.tex,1,article,,1,1,corpus-50,2026-09-01
+2301.00126,cs,cs.LG,Broad Learning System with Takagi-Sugeno Fuzzy Subsystem for Tobacco Origin Identification based on Near Infrared Spectroscopy,CC BY 4.0,tar,6308632,34250,26,5,main.tex,1,elsarticle,,1,1,corpus-50,2026-09-01
+2401.00907,cs,cs.LG,LaFFi: Leveraging Hybrid Natural Language Feedback for Fine-tuning Language Models,CC BY 4.0,tar,1101585,28233,12,1,aaai24.tex,1,article,,1,1,corpus-50,2026-09-01
+2601.02404,cs,cs.CL,PCEval: A Benchmark for Evaluating Physical Computing Capabilities of Large Language Models,CC BY 4.0,tar,15333923,164893,23,2,main.tex,1,article,,1,0,corpus-50,2026-09-01
+2608.31170,cs,cs.CL,Context-Aware Interleaved Batching for WhisperX,CC BY 4.0,tar,102876,28700,5,1,main.tex,1,INTERSPEECH2023,,1,0,corpus-50,2026-09-01
+2601.00882,cs,cs.PL,BALI: Branch-Aware Loop Invariant Inference with Large Language Models,CC BY 4.0,tar,668069,32668,13,7,main.tex,1,article,,1,0,corpus-50,2026-09-01
+2608.27798,cs,cs.PL,Cambria: Resource Abstraction for Parametrized Algebraic Effects and Handlers,CC BY 4.0,tar,148078,111863,4,1,main.tex,1,acmart,,0,1,corpus-50,2026-09-01
+2512.24941,cs,cs.SE,Securing High-Concurrency Ticket Sales: A Framework Based on Microservice,CC BY 4.0,tar,2039880,76279,27,1,openwork.tex,1,article,,0,0,corpus-50,2026-09-01
+2608.30708,cs,cs.SE,sbom-unifier: Integration Framework for Heterogeneous SBOMs,CC BY 4.0,tar,934818,34524,20,11,main.tex,1,IEEEtran,,1,0,corpus-50,2026-09-01
+1412.6334,cs,cs.CL,Leveraging Monolingual Data for Crosslingual Compositional Word Representations,CC BY 4.0,tar,668612,34933,7,1,iclr2015.tex,1,article,,0,1,harvest-200,2026-09-11
+1603.00928,cs,cs.CC,Trainyard is NP-Hard,CC BY 4.0,tar,2282974,34851,29,1,trainyard.tex,1,lipics-v2016,,0,1,harvest-200,2026-09-11
+1603.00973,cs,cs.DS,Tight Analysis of a Multiple-Swap Heuristic for Budgeted Red-Blue Median,CC0 1.0,tar,449813,94269,3,1,arxiv_v1.tex,1,article,,0,0,harvest-200,2026-09-11
+1511.05552,cs,cs.NE,Recurrent Neural Networks Hardware Implementation on FPGA,CC BY 4.0,tar,1332477,28389,12,1,bare_conf.tex,1,IEEEtran,,0,1,harvest-200,2026-09-11
+1603.01595,cs,cs.CL,Sentiment Analysis in Scholarly Book Reviews,CC0 1.0,tar,73023,24959,4,2,absabook.tex,1,llncs,french,0,1,harvest-200,2026-09-11
+1501.00343,cs,cs.DM,Bicoloring covers for graphs and hypergraphs,CC BY 4.0,tar,397093,178122,6,1,BicoloringCover_journal_19.02.15.tex,1,article,,0,1,harvest-200,2026-09-11
+1612.08091,cs,cs.PL,ProjectQ: An Open Source Software Framework for Quantum Computing,CC BY 4.0,tar,874110,47259,13,1,projectq.tex,1,quantumarticle,english,0,1,harvest-200,2026-09-11
+1505.06236,cs,cs.CV,A Bottom-up Approach for Pancreas Segmentation using Cascaded Superpixels and (Deep) Image Patch Labeling,CC0 1.0,tar,9313812,85762,26,1,Pancreas_Segmentation_arXiv2016.tex,1,IEEEtran,,0,1,harvest-200,2026-09-11
+1603.01722,cs,cs.AI,A Linked Data Scalability Challenge: Concept Reuse Leads to Semantic Decay,CC BY 4.0,tar,574498,32040,5,1,ParetiWebSci15.tex,1,sig-alternate,,0,1,harvest-200,2026-09-11
+1603.01770,cs,cs.SD,An Argument-based Creative Assistant for Harmonic Blending,CC BY 4.0,tar,347484,61322,17,8,iccc2016.tex,1,article,english,0,1,harvest-200,2026-09-11
+1603.01863,cs,cs.SD,Improved Noise Weighting in CELP Coding of Speech - Applying the Vorbis Psychoacoustic Model To Speex,CC BY 4.0,tar,500972,32116,12,1,aes120.tex,1,IEEEtran,,0,1,harvest-200,2026-09-11
+1603.01987,cs,cs.IR,A matter of words: NLP for quality evaluation of Wikipedia medical articles,CC BY-SA 4.0,tar,935074,61780,10,1,wiki16v1.tex,1,llncs,,0,1,harvest-200,2026-09-11
+1603.02252,cs,cs.CV,Drift Robust Non-rigid Optical Flow Enhancement for Long Sequences,CC0 1.0,tar,6700994,51917,16,1,apo.tex,1,iosart2c,,0,1,harvest-200,2026-09-11
+1603.02457,cs,cs.DS,On Self-Reducibility and Reoptimization of Closest Substring Problem,CC0 1.0,tar,108513,46024,3,1,CSP_Reoptimization.tex,1,acm_proc_article-sp,,0,1,harvest-200,2026-09-11
+1603.02476,cs,cs.NI,Fair Scheduling for Data Collection in Mobile Sensor Networks with Energy Harvesting,CC0 1.0,tar,8989400,58182,65,1,EHFS.tex,1,IEEEtran,,0,1,harvest-200,2026-09-11
+1612.00669,cs,cs.PL,Transaction-based Sandboxing for JavaScript,CC BY 4.0,tar,330029,200456,18,13,main.tex,1,lipics,,0,0,harvest-200,2026-09-11
+1603.02532,cs,cs.LG,On the inconsistency of $\ell_1$-penalised sparse precision matrix estimation,CC BY 4.0,tar,1055803,41577,12,1,structlearn_arxiv.tex,1,article,,0,0,harvest-200,2026-09-11
+1612.00666,cs,cs.PL,Dynamic Structural Operational Semantics,CC BY-SA 4.0,tar,263725,253480,2,1,main_arXiv2.tex,1,eptcs,english,0,0,harvest-200,2026-09-11
+1603.02780,cs,cs.IT,A Novel Design of Linear Phase Non-uniform Digital Filter Banks,CC BY 4.0,tar,1052595,61868,13,1,new_manuscript.tex,1,elsarticle,,0,1,harvest-200,2026-09-11
+1603.03014,cs,cs.IR,Plagiarism Detection - State-of-the-art systems (2016) and evaluation methods,CC BY 4.0,tar,161113,20895,6,1,final.tex,1,sig-alternate,english,0,2,harvest-200,2026-09-11
+1603.06549,cs,cs.DB,Consistently faster and smaller compressed bitmaps with Roaring,CC BY 4.0,tar,125649,102674,4,1,RunRoaringBitmap.tex,1,speauth,,0,1,harvest-200,2026-09-11
+1801.01618,cs,cs.DB,Enabling Strong Database Integrity using Trusted Execution Environments,CC BY-SA 4.0,tar,1399297,135,2,1,main.tex,1,article,,0,0,harvest-200,2026-09-11
+1803.00860,eess,eess.AS,"Can we steal your vocal identity from the Internet?: Initial investigation of cloning Obama's voice using GAN, WaveNet and low-quality found data",CC BY 4.0,tar,591690,48880,13,1,ms.tex,1,article,,0,1,harvest-200,2026-09-11
+1803.00985,cs,cs.CL,Hybrid Model For Word Prediction Using Naive Bayes and Latent Information,CC BY 4.0,tar,489450,54933,19,6,artigo.tex,1,IEEEtran,,0,1,harvest-200,2026-09-11
+1803.00989,cs,cs.DC,Secure and Privacy-Aware Data Dissemination for Cloud-Based Applications,CC BY 4.0,tar,764162,92971,18,8,sample-sigconf.tex,2,acmart,"portuges,brazilian,english",0,0,harvest-200,2026-09-11
+1803.01516,cs,cs.CV,A new stereo formulation not using pixel and disparity models,CC BY 4.0,tar,3463155,26566,12,1,oguri.tex,1,article,,0,0,harvest-200,2026-09-11
+1803.01580,cs,cs.CL,Calculated attributes of synonym sets,CC BY 4.0,tar,3084934,51449,16,11,v11_synset_calc.tex,1,IEEEtran,"russian, english",0,0,harvest-200,2026-09-11
+1803.01598,cs,cs.CR,RAPTOR: Ransomware Attack PredicTOR,CC BY 4.0,tar,1640689,80502,45,12,main.tex,1,llncs,,0,1,harvest-200,2026-09-11
+1803.00386,cs,cs.CV,Context-Aware Learning using Transferable Features for Classification of Breast Cancer Histology Images,CC0 1.0,tar,1359265,25594,6,1,typeinst.tex,1,llncs,,0,0,harvest-200,2026-09-11
+1803.02065,cs,cs.CY,"""So, Tell Me What Users Want, What They Really, Really Want!""",CC BY 4.0,tar,302015,139990,10,3,main.tex,3,sigchi-ext,,0,1,harvest-200,2026-09-11
+1803.02129,cs,cs.CV,A Non-Technical Survey on Deep Convolutional Neural Network Architectures,CC BY 4.0,tar,2206096,56484,27,1,dcnn_architectures.tex,1,IEEEtran,,0,1,harvest-200,2026-09-11
+1803.02179,cs,cs.IR,The Impact of Semantic Context Cues on the User Acceptance of Tag Recommendations: An Online Study,CC BY 4.0,tar,537348,13857,7,1,document.tex,1,acmart,,0,1,harvest-200,2026-09-11
+1712.06679,cs,cs.CV,DecideNet: Counting Varying Density Crowds Through Attention Guided Detection and Density Estimation,CC BY 4.0,tar,1235364,51166,13,1,cvpr_person.tex,1,article,,0,1,harvest-200,2026-09-11
+1511.00234,math,math-ph,Haantjes Structures for the Jacobi-Calogero Model and the Benenti Systems,CC BY-SA 4.0,tar,72418,65245,2,1,sigma16-023.tex,1,sigma,,0,0,harvest-200,2026-09-11
+1603.01425,math,math.AT,Representations of virtual braids by automorphisms and virtual knot groups,CC0 1.0,tar,488639,93579,8,1,GVK-10-ENG.tex,1,article,russian,0,0,harvest-200,2026-09-11
+1502.07516,math,math.DG,Nijenhuis Integrability for Killing Tensors,CC BY-SA 4.0,tar,25072,17899,2,1,sigma16-024.tex,1,sigma,,0,0,harvest-200,2026-09-11
+1603.01720,math,math.PR,The quadratic covariation for a weighted fractional Brownian motion,CC BY 4.0,single,102409,102409,1,1,main.tex,1,amsart,,0,0,harvest-200,2026-09-11
+1603.01839,math,math.OC,Singular Infinite Horizon Quadratic Control of Linear Systems with Known Disturbances: A Regularization Approach,CC0 1.0,tar,364022,105242,4,1,article_for_archive2016.tex,1,article,,0,0,harvest-200,2026-09-11
+1408.1555,math,math.GT,Basic Forms and Orbit Spaces: a Diffeological Approach,CC BY-SA 4.0,tar,83965,76792,2,1,sigma16-026.tex,1,sigma,,0,0,harvest-200,2026-09-11
+1504.00715,math,math.RT,"Loops in SU(2), Riemann Surfaces, and Factorization, I",CC BY-SA 4.0,tar,113981,106808,2,1,sigma16-025.tex,1,sigma,,0,0,harvest-200,2026-09-11
+1603.02589,math,math.ST,Applications of Information Theory: Statistics and Statistical Mechanics,CC BY 4.0,tar,149683,35691,6,1,Information_Theory_20151115-copy.tex,1,article,english,0,0,harvest-200,2026-09-11
+0902.0621,math,math.CA,Basic Hypergeometric Functions as Limits of Elliptic Hypergeometric Functions,CC BY-SA 4.0,tar,137296,130264,2,1,sigma09-059.tex,1,sigma,,0,0,harvest-200,2026-09-11
+1510.03966,math,math.ST,Natural Exponential Families: Resolution of A Conjecture and Existence of Reduction Functions,CC BY-SA 4.0,single,52804,52804,1,1,main.tex,1,article,,0,0,harvest-200,2026-09-11
+1607.00041,physics,quant-ph,Sandwiched Rényi Convergence for Quantum Evolutions,CC BY 4.0,tar,558846,126426,8,1,entprod.tex,1,quantumarticle,,0,1,harvest-200,2026-09-11
+1803.00627,math,math.CA,Ph.D. Thesis-Martingale Hardy spaces and summability of the one dimensional Vilenkin-Fourier series,CC0 1.0,tar,452284,420008,7,1,Ph.D._Thesis_of_G._Tephnadze.tex,1,book,,0,0,harvest-200,2026-09-11
+1803.01399,math,math.DG,Ancient Solutions to Curve Shortening with Finite Total Curvature,CC BY-SA 4.0,tar,237035,48630,24,1,ancientCurveShortening.tex,1,amsart,,0,1,harvest-200,2026-09-11
+1803.01480,math,math.CO,A doubling construction for Williamson matrices,CC0 1.0,tar,8346,6556,2,1,williamson-doubling.tex,1,article,,0,1,harvest-200,2026-09-11
+1803.02052,math,math.FA,A shrinking projection approximant for the split equilibrium problems and fixed point problems in Hilbert spaces,CC BY 4.0,single,51313,51313,1,1,main.tex,1,amsart,,0,0,harvest-200,2026-09-11
+1803.02336,math,math.LO,A symmetric $β$-model,CC BY 4.0,single,26234,26234,1,1,main.tex,1,article,,0,0,harvest-200,2026-09-11
+1708.02519,math,math-ph,Asymptotics for Hankel Determinants Associated to a Hermite Weight with a Varying Discontinuity,CC BY-SA 4.0,tar,171989,164810,2,1,sigma18-018.tex,1,sigma,,0,0,harvest-200,2026-09-11
+1803.02263,physics,quant-ph,Quantum theory within the probability calculus: a there-you-go theorem and partially exchangeable models,CC BY 4.0,tar,2442702,73433,122,1,luca171228-pt_and_qt.tex,1,memoir,"main=british,french,italian,german,swedish,latin,esperanto",0,1,harvest-200,2026-09-11
+1803.02526,math,math.DG,Characterization of warped product submanifolds of Lorentzian concircular structure Manifolds,CC BY 4.0,single,42372,42372,1,1,main.tex,1,amsart,,0,0,harvest-200,2026-09-11
+1803.02610,math,math.DG,Submanifolds of Generalized Sasakian-space-forms with respect to certain connections,CC BY 4.0,single,35677,35677,1,1,main.tex,1,amsart,,0,0,harvest-200,2026-09-11
+1408.0305,math,math.CA,Multivariate Quadratic Transformations and the Interpolation Kernel,CC BY-SA 4.0,tar,255083,247904,2,1,sigma18-019.tex,1,sigma,,0,0,harvest-200,2026-09-11
+1712.01549,math,math-ph,"Evolutionary Hirota Type (2+1)-Dimensional Equations: Lax Pairs, Recursion Operators and Bi-Hamiltonian Structures",CC BY-SA 4.0,tar,72876,65697,2,1,sigma18-017.tex,1,sigma,,0,0,harvest-200,2026-09-11
+1803.02867,math,math.PR,Phase transitions for a model with uncountable spin space on the Cayley tree: the general case,CC BY 4.0,single,36190,36190,1,1,main.tex,1,amsart,,0,0,harvest-200,2026-09-11
+1903.00264,math,math.DS,Robust Heteroclinic Tangencies,CC BY 4.0,tar,1213991,54368,6,1,hetero-tangencial.tex,1,amsart,,0,0,harvest-200,2026-09-11
+1903.00294,math,math.FA,On the farthest point problem in Banach spaces,CC BY 4.0,tar,266109,15054,2,1,uniquely_remotal_in_l_1.tex,1,amsart,,0,0,harvest-200,2026-09-11
+1903.00370,math,math.FA,Compact operators between lattice normed spaces,CC BY 4.0,single,28541,28541,1,1,main.tex,1,article,,0,0,harvest-200,2026-09-11
+1608.07835,math,math.RT,Generalised Umbral Moonshine,CC BY-SA 4.0,tar,192584,92211,9,1,sigma19-014.tex,1,sigma,,0,0,harvest-200,2026-09-11
+1807.00873,math,math-ph,A Geometric Approach to the Concept of Extensivity in Thermodynamics,CC BY-SA 4.0,tar,68171,60992,2,1,sigma19-015.tex,1,sigma,,0,0,harvest-200,2026-09-11
+1809.06792,math,math-ph,On the combinatorics of last passage percolation in a quarter square and $\mathrm{GOE}^2$ fluctuations,CC0 1.0,tar,535630,55385,9,1,GOE_sq.tex,1,article,,0,1,harvest-200,2026-09-11
+1810.07369,math,math.AP,On Gaussian curvature equations in $\mathbb{R}^2$ with prescribed non-positive curvature,CC BY 4.0,single,43961,43961,1,1,main.tex,1,article,,0,0,harvest-200,2026-09-11
+1902.05693,eess,eess.SP,The Impact of Power-Electronics-Based Load Dynamics on Large-disturbance Voltage Stability,CC BY 4.0,tar,6904100,24799,17,1,main_jk.tex,1,IEEEtran,english,0,1,harvest-200,2026-09-11
+1503.00846,physics,astro-ph.SR,Evolution of Magnetic Helicity and Energy Spectra of Solar Active Regions,CC BY 4.0,tar,4320486,50504,18,1,paper20160222.tex,1,emulateapj-rtx4,,0,0,harvest-200,2026-09-11
+1503.08722,physics,hep-th,Varying constants entropic--$Λ$CDM cosmology,CC BY 4.0,tar,4110303,77094,5,1,EF_VPC_41.tex,1,revtex4-1,,0,0,harvest-200,2026-09-11
+1603.01552,physics,cond-mat.mtrl-sci,A stochastic model of solid state thin film deposition: application to chalcopyrite growth,CC BY 4.0,tar,2199347,61477,14,1,stochastic.tex,1,revtex4-1,,0,1,harvest-200,2026-09-11
+1905.13095,physics,quant-ph,Quantum Speedup Based on Classical Decision Trees,CC BY 4.0,tar,356488,120125,5,1,paperQuantum.tex,1,Quantumarticle,,0,1,harvest-200,2026-09-11
+1907.12724,physics,quant-ph,Classical and Quantum Algorithms for Tensor Principal Component Analysis,CC BY 4.0,tar,213159,147501,3,1,spikequantum.tex,1,quantumarticle,,0,1,harvest-200,2026-09-11
+1602.03252,physics,cond-mat.mtrl-sci,Uncovering the behavior of Hf2Te2P and the candidate Dirac metal Zr2Te2P,CC0 1.0,tar,3743037,31837,14,1,221_v2.tex,1,revtex4-1,,0,1,harvest-200,2026-09-11
+1510.05422,physics,cond-mat.mtrl-sci,A first-principles study on the phonon transport in layered BiCuOSe,CC0 1.0,tar,1764851,65424,10,1,manuscript.tex,1,revtex4-1,CJK,0,0,harvest-200,2026-09-11
+1603.02830,physics,cond-mat.other,Tunable magnetic alignment between trapped exciton-polariton condensates,CC BY 4.0,tar,6838406,39781,17,1,ising.tex,1,revtex4-1,,0,1,harvest-200,2026-09-11
+1910.03726,math,math.NA,Optimizing multigrid reduction-in-time (MGRIT) and Parareal coarse-grid operators for linear advection,CC BY 4.0,tar,761389,108639,24,1,mgrit_cg_selection.tex,1,WileyNJD-v2,,0,1,harvest-200,2026-09-11
+2007.03788,stat,stat.AP,"Trajectories, bifurcations and pseudotime in large clinical datasets: applications to myocardial infarction and diabetes data",CC BY 4.0,tar,10144625,106901,13,1,clintraj.tex,1,oup-contemporary-modified,,0,1,harvest-200,2026-09-11
+1603.01170,physics,physics.plasm-ph,Ion-acoustic cnoidal waves in a quantum plasma,CC BY-SA 4.0,tar,2241919,44173,8,1,cnoidal_ArXiv.tex,1,revtex4,,0,0,harvest-200,2026-09-11
+1603.01192,physics,physics.plasm-ph,Linear and nonlinear ion-acoustic waves in non-relativistic quantum plasmas with arbitrary degeneracy,CC BY-SA 4.0,tar,4567955,56085,9,1,QIAW_ArXiv.tex,1,revtex4,,0,0,harvest-200,2026-09-11
+1803.02106,physics,astro-ph.IM,The PoGO+ Balloon-Borne Hard X-ray Polarimetry Mission,CC BY 4.0,tar,5128406,54082,20,1,galaxies-273475-english.tex,1,mdpi,,0,0,harvest-200,2026-09-11
+1803.01490,physics,cond-mat.mtrl-sci,A cascading nonlinear magneto-optical effect in topological insulators,CC BY 4.0,tar,6285967,46296,7,1,ManuscriptSpinSR_Feb16Arxiv.tex,1,revtex4-1,,0,0,harvest-200,2026-09-11
+1803.01560,physics,q-bio.BM,The start of the Abiogenesis: Preservation of homochirality in proteins as a necessary and sufficient condition for the establishment of the metabolism,CC BY 4.0,tar,2185953,34291,3,1,articlerevised.tex,1,elsarticle,,0,0,harvest-200,2026-09-11
+1710.09648,physics,hep-th,Constructing an entangled state in Heisenberg picture for inflationary cosmology,CC BY 4.0,single,47606,47606,1,1,main.tex,1,revtex4,,0,0,harvest-200,2026-09-11
+2108.09061,physics,quant-ph,A Grover search-based algorithm for the list coloring problem,CC BY 4.0,tar,615785,42853,12,1,main.tex,1,ieeeaccess,,1,1,harvest-200,2026-09-11
+2112.03761,stat,stat.AP,Outpatient Diversion using Real-Time Length-of-Stay Predictions,CC BY 4.0,tar,1231301,55272,14,1,main.tex,1,interact,,1,1,harvest-200,2026-09-11
+1803.00608,physics,physics.acc-ph,Longitudinal Bunch Diagnostics using Coherent Transition Radiation Spectroscopy,CC BY 4.0,tar,9789558,211735,76,2,CTR-Spectr-arXive.tex,1,article,ngerman,0,0,harvest-200,2026-09-11
+1803.01331,physics,physics.plasm-ph,Self-gravitating envelope solitons in a degenerate quantum plasma system,CC0 1.0,tar,1989875,30693,10,1,Manuscript1.tex,1,svjour3,,0,0,harvest-200,2026-09-11
+1803.02422,physics,cs.SI,Towards Quantifying Sampling Bias in Network Inference,CC BY 4.0,tar,444623,58593,24,1,main.tex,1,acmart,,0,0,harvest-200,2026-09-11
+1803.02676,physics,physics.flu-dyn,Experiments and modelling of rate-dependent transition delay in a stochastic subcritical bifurcation,CC BY 4.0,tar,2764430,56108,13,1,Preprint_Bonciolini_RSOS.tex,1,Article_website,,0,1,harvest-200,2026-09-11
+2205.05913,math,math.NA,Comparison of nonlinear field-split preconditioners for two-phase flow in heterogeneous porous media,CC BY 4.0,tar,967338,149817,28,7,draft_final_version.tex,7,elsarticle,,1,1,harvest-200,2026-09-11
+1803.03215,physics,physics.comp-ph,Deep Learning: A Tool for Computational Nuclear Physics,CC BY 4.0,tar,938714,88886,13,1,2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex,1,IEEEtran,,0,1,harvest-200,2026-09-11
+1711.10097,physics,hep-ph,Effective Field Theory of Majorana Dark Matter,CC BY 4.0,tar,340294,32456,4,1,main.tex,1,revtex4,,0,0,harvest-200,2026-09-11
+1812.06068,physics,gr-qc,Scalar Stochastic Gravitational-Wave Background in Brans-Dicke Theory of Gravity,CC BY 4.0,tar,1112372,46436,11,1,songming1213.tex,1,revtex4-1,,0,1,harvest-200,2026-09-11
+1811.05330,physics,astro-ph.SR,Long-term spot monitoring of the young solar analogue V889 Her,CC BY 4.0,tar,5744544,47235,27,1,V889Her_arxiv.tex,1,aa,,0,1,harvest-200,2026-09-11
+1804.10274,physics,astro-ph.HE,Is the universe static?,CC0 1.0,tar,987639,86447,13,1,msf.tex,1,openjournal,,0,0,harvest-200,2026-09-11
+1805.00159,physics,astro-ph.CO,Detecting Galaxy-Filament Alignments in the Sloan Digital Sky Survey III,CC BY 4.0,tar,6620399,100926,243,1,FG_align.tex,1,mnras,,0,1,harvest-200,2026-09-11
+1811.06333,physics,astro-ph.SR,The Dynamics of OB Associations,CC BY 4.0,tar,7320248,21824,9,1,wright.tex,1,cs20proc,,0,1,harvest-200,2026-09-11
+2104.12436,eess,eess.SY,Designing Optimal Key Lengths and Control Laws for Encrypted Control Systems based on Sample Identifying Complexity and Deciphering Time,CC BY 4.0,tar,2510019,95890,21,1,manuscript.tex,1,ieeecolor,,1,1,harvest-200,2026-09-11
+2109.10718,eess,eess.SY,Input-Output History Feedback Controller for Encrypted Control with Leveled Fully Homomorphic Encryption,CC BY 4.0,tar,2725549,79994,17,1,manuscript.tex,1,ieeecolor,,1,1,harvest-200,2026-09-11
+2210.08849,eess,eess.SY,Towards Provably Secure Encrypted Control Using Homomorphic Encryption,CC BY 4.0,tar,632773,42744,10,1,manuscript.tex,1,ieeeconf,,2,1,harvest-200,2026-09-11
+1810.09301,physics,astro-ph.HE,Bayesian analysis of the hardening in AMS-02 nuclei spectra,CC BY 4.0,tar,12362253,78454,32,1,ms.tex,1,aastex62,,0,0,harvest-200,2026-09-11
+2211.11348,eess,eess.SY,Enhancing Mobile Robot Navigation Safety and Efficiency through NMPC with Relaxed CBF in Dynamic Environments,CC BY 4.0,tar,7419181,34608,9,1,CASE_ver2.tex,1,ieeeconf,,0,0,harvest-200,2026-09-11
+2302.01310,stat,stat.ML,Knowledge Gradient for Multi-Objective Bayesian Optimization with Decoupled Evaluations,CC BY 4.0,tar,1180517,140027,21,2,paper.tex,1,llncs,,1,1,harvest-200,2026-09-11
+1812.09227,physics,astro-ph.EP,Discovery of Six Optical Phase Curves with K2,CC BY 4.0,tar,5260753,95132,19,1,main.tex,1,aastex6,,0,0,harvest-200,2026-09-11
+2302.12154,eess,eess.SY,Optimal Controller and Security Parameter for Encrypted Control Systems Under Least Squares Identification,CC BY 4.0,tar,532505,42358,8,1,manuscript.tex,1,ieeecolor,,2,1,harvest-200,2026-09-11
+1806.03841,physics,cond-mat.str-el,Analytic continuation via domain-knowledge free machine learning,CC0 1.0,tar,503484,31809,9,1,ML_AC_v19_arixv.tex,1,revtex4-1,"english,ngerman",0,1,harvest-200,2026-09-11
+2203.03745,physics,quant-ph,Self-restricting Noise and Exponential Relative Entropy Decay Under Unital Quantum Markov Semigroups,CC BY 4.0,tar,296120,150548,17,10,decay_quasi_new.tex,1,quantumarticle,english,0,1,harvest-200,2026-09-11
+1903.01317,physics,cond-mat.mtrl-sci,"Theoretical Study on Anisotropic Magnetoresistance Effects of I//[100], I//[110], and I//[001] for Ferromagnets with A Crystal Field of Tetragonal Symmetry",CC BY 4.0,tar,459430,134696,6,1,68886_rev2.tex,1,jpsj3,,0,0,harvest-200,2026-09-11
+2411.02431,physics,physics.flu-dyn,Prediction of Multiscale Features Using Deep Learning-based Preconditioner-Solver Architecture for Darcy Equation in High-Contrast Media,CC BY 4.0,tar,1191611,79987,13,1,elsarticle-template-harv.tex,1,elsarticle,,1,0,harvest-200,2026-09-11
+1808.02684,physics,cond-mat.mtrl-sci,High throughput screening for spin-gapless semiconductors in quaternary Heusler compounds,CC0 1.0,tar,9519655,127062,117,4,SGS-100728.tex,2,revtex4,,0,0,harvest-200,2026-09-11
+1902.07045,physics,cond-mat.mtrl-sci,Fundamentals of cathodoluminescence in a STEM: The impact of sample geometry and electron beam energy on light emission of semiconductors,CC BY-SA 4.0,tar,4842649,38763,18,1,manuscript.tex,1,elsart,english,0,0,harvest-200,2026-09-11
+2106.01193,physics,quant-ph,Quantum Heat Engines with Carnot Efficiency at Maximum Power,CC BY 4.0,tar,2209011,110134,5,1,QuantSup_PowerEff_PRR_V22.tex,1,revtex4-1,,0,0,harvest-200,2026-09-11
+1610.03183,physics,cond-mat.mes-hall,Nanodiamond integration with photonic devices,CC BY 4.0,tar,15358264,196788,90,6,paper.tex,6,lpor2014,,0,2,harvest-200,2026-09-11
+2201.02246,physics,quant-ph,Quantum computing based on complex Clifford algebras,CC BY 4.0,tar,110091,66771,5,1,QCC_arxiv.tex,1,amsart,czech,0,0,harvest-200,2026-09-11
+2208.10412,physics,physics.flu-dyn,Hamiltonian derivation of the point vortex model from the two-dimensional nonlinear Schrödinger equation,CC BY 4.0,tar,183422,51633,4,1,NLS_to_PtVortex_v2_CLEAN.tex,1,revtex4-1,,0,1,harvest-200,2026-09-11
+2211.01084,physics,gr-qc,Constructing a family of conformally flat scalar field models,CC BY 4.0,single,29823,29823,1,1,main.tex,1,iopart,,0,0,harvest-200,2026-09-11
+2303.01678,eess,eess.IV,Nonlinear ill-posed problem in low-dose dental cone-beam computed tomography,CC BY 4.0,tar,5504132,97592,17,2,preprint.tex,1,ima-authoring-template,,0,0,harvest-200,2026-09-11
+2304.08622,bio,q-bio.TO,How human-derived brain organoids are built differently from brain organoids derived from genetically-close relatives: A multi-scale hypothesis,CC BY 4.0,tar,10228895,63629,13,1,multiscale.tex,1,revtex4-1,,1,1,harvest-200,2026-09-11
+1808.03273,bio,q-bio.QM,Random forest prediction of Alzheimer's disease using pairwise selection from time series data,CC BY 4.0,tar,86078,46374,5,2,main.tex,1,elsarticle,,0,1,harvest-200,2026-09-11
+1903.02830,stat,stat.AP,Estimating a pressure dependent thermal conductivity coefficient with applications in food technology,CC BY 4.0,tar,603267,40160,9,1,VersionIPSE.tex,1,interact,,0,0,harvest-200,2026-09-11
+1907.02829,stat,stat.AP,Risk models for breast cancer and their validation,CC BY 4.0,tar,4372761,79933,9,2,brentnallcuzick-arXiv.tex,2,imsart,,0,1,harvest-200,2026-09-11
+2103.02667,stat,stat.ML,Out of Distribution Generalization in Machine Learning,CC BY 4.0,tar,1818606,269492,11,1,thesis.tex,1,book,english,0,1,harvest-200,2026-09-11
+1705.07950,stat,stat.ME,Variable Screening for High Dimensional Time Series,CC BY 4.0,tar,162215,113046,3,1,EJS1402-Accepted.tex,1,imsart,,0,1,harvest-200,2026-09-11
+1803.08424,stat,stat.CO,Autoplotly - Automatic Generation of Interactive Visualizations for Popular Statistical Results,CC BY 4.0,tar,1727043,19334,21,2,RJwrapper.tex,1,report,,0,1,harvest-200,2026-09-11
+2003.04805,bio,q-bio.QM,Modelling the Neuroanatomical Progression of Alzheimer's Disease and Posterior Cortical Atrophy,CC BY 4.0,tar,9537118,678625,179,11,report.tex,1,book,romanian,1,1,harvest-200,2026-09-11
+1902.08411,bio,q-bio.NC,Probabilistic Inference of Binary Markov Random Fields in Spiking Neural Networks through Mean-field Approximation,CC BY 4.0,tar,14800840,78834,26,2,main.tex,2,elsarticle,,2,2,harvest-200,2026-09-11
+2103.03688,stat,stat.ME,On the Occasional Exactness of the Distributional Transform Approximation for Direct Gaussian Copula Models with Discrete Margins,CC BY 4.0,tar,371531,29268,7,1,DT_exact_plain.tex,1,amsart,,0,1,harvest-200,2026-09-11
+2104.00629,stat,stat.ML,Regularized target encoding outperforms traditional methods in supervised machine learning with high cardinality features,CC BY 4.0,tar,254362,76467,9,1,manuscript.tex,1,svjour3,,0,0,harvest-200,2026-09-11
+2110.09618,stat,stat.ML,Interpolating between sampling and variational inference with infinite stochastic mixtures,CC BY 4.0,tar,12637091,96439,25,1,arxiv-main-with-supplement.tex,1,uai2022,american,2,1,harvest-200,2026-09-11
+2110.09717,stat,stat.AP,Hierarchical Bayesian Modeling of Ocean Heat Content and its Uncertainty,CC BY 4.0,tar,8331940,116040,32,2,ms.tex,2,imsart,,1,2,harvest-200,2026-09-11
+2111.02174,eess,eess.SY,Unsupervised detection and open-set classification of fast-ramped flexibility activation events,CC BY 4.0,tar,343462,87165,42,15,00_main.tex,1,cas-dc,,1,1,harvest-200,2026-09-11
+2111.15371,stat,stat.ME,A Hierarchical Geodesic Model for Longitudinal Analysis on Manifolds,CC BY 4.0,tar,3894532,133087,34,3,geomixed_sp_preprint.tex,3,llncs,english,1,1,harvest-200,2026-09-11
+2302.12542,stat,stat.AP,Tutorial on survival modeling with applications to omics data,CC BY 4.0,tar,7923849,85737,11,1,main.tex,1,oup-authoring-template,,1,1,harvest-200,2026-09-11
+2402.02482,econ,econ.EM,"Decomposing Global Bank Network Connectedness: What is Common, Idiosyncratic and When?",CC BY 4.0,tar,352979,182367,7,1,main.tex,1,elsarticle,,1,1,harvest-200,2026-09-11
+2402.07189,stat,stat.ML,Improving LSH via Tensorized Random Projection,CC BY 4.0,tar,719702,150544,13,1,writeup.tex,1,sn-jnl,,1,1,harvest-200,2026-09-11
+2405.15204,stat,stat.ME,A New Fit Assessment Framework for Common Factor Models Using Generalized Residuals,CC BY 4.0,tar,702382,91923,14,1,2ndrevGR.tex,1,apa7,american,0,1,harvest-200,2026-09-11
+1803.04179,bio,q-bio.PE,Interactions mediated by a public good transiently increase cooperativity in growing Pseudomonas putida metapopulations,CC BY 4.0,tar,854011,75124,10,1,pyov_arxiv.tex,1,revtex4,,0,0,harvest-200,2026-09-11
+1707.06854,bio,q-bio.PE,Should Evolution Necessarily be Egolution?,CC BY 4.0,tar,447523,31392,16,1,ws-acs.tex,1,ws-acs,,0,1,harvest-200,2026-09-11
+1803.10996,bio,q-bio.BM,Dihedral angle prediction using generative adversarial networks,CC BY 4.0,tar,10006865,164043,306,1,thesis_arxiv.tex,1,book,english,0,1,harvest-200,2026-09-11
+1903.01854,bio,q-bio.GN,"CAMIRADA: Cancer microRNA association discovery algorithm, a case study on breast cancer",CC BY 4.0,tar,7296138,22005,15,1,CAMIRADA-Biomedical-Informatics-v01.tex,1,elsarticle,,0,1,harvest-200,2026-09-11
+1903.02147,bio,q-bio.NC,NeuroPath2Path: Classification and elastic morphing between neuronal arbors using path-wise similarity,CC BY 4.0,tar,2523013,95567,113,1,NeuroP2P.tex,1,svjour3,,0,1,harvest-200,2026-09-11
+1902.06614,bio,q-bio.PE,Methods for approximating stochastic evolutionary dynamics on graphs,CC BY 4.0,tar,1104097,97269,9,1,Overton_ApproximatingEvolutionaryDynamics.tex,1,elsarticle,english,0,1,harvest-200,2026-09-11
+1808.05137,bio,q-bio.NC,Ghost imaging with the human eye,CC BY 4.0,tar,754763,26620,7,1,eye-ghost-imaging.tex,1,revtex4-1,,0,0,harvest-200,2026-09-11
+1911.08837,physics,cond-mat.soft,"Motility and Phototaxis of $Gonium$, the Simplest Differentiated Colonial Alga",CC BY 4.0,tar,7406329,90239,25,1,Gonium.tex,1,revtex4-2,,1,1,harvest-200,2026-09-11
+1908.08190,bio,q-bio.PE,"Diversity in Biology: definitions, quantification, and models",CC BY 4.0,tar,5310547,115627,13,1,diversity_final3.tex,1,iopart,,0,1,harvest-200,2026-09-11
+1904.00445,bio,q-bio.QM,"The KiTS19 Challenge Data: 300 Kidney Tumor Cases with Clinical Context, CT Semantic Segmentations, and Surgical Outcomes",CC0 1.0,tar,527235,35378,8,1,main.tex,1,llncs,,1,1,harvest-200,2026-09-11
+2003.06789,bio,q-bio.SC,Bistability and oscillations in cooperative microtubule and kinetochore dynamics in the mitotic spindle,CC BY 4.0,tar,6050819,151495,21,1,MT_kinetochore_dynamics.tex,1,iopart,,1,1,harvest-200,2026-09-11
+2003.11008,bio,q-bio.TO,Automatic Tissue Segmentation with Deep Learning in Patients with Congenital or Acquired Distortion of Brain Anatomy,CC BY 4.0,tar,3341514,25109,8,1,nilab_malformation.tex,1,llncs,,0,1,harvest-200,2026-09-11
+2103.04356,bio,q-bio.QM,DI2: prior-free and multi-item discretization ofbiomedical data and its applications,CC BY 4.0,tar,721554,49612,31,4,bmc_article.tex,1,bmcart,,1,1,harvest-200,2026-09-11
+1912.13433,bio,q-bio.PE,Optimal evolutionary control for artificial selection on molecular phenotypes,CC BY 4.0,tar,7024138,155509,11,1,Main_SI_combined.tex,1,revtex4-2,,0,0,harvest-200,2026-09-11
+2103.05754,bio,q-bio.TO,Numerical predictions of shear stress and cyclic stretch in the healthy pulmonary vasculature,CC BY 4.0,tar,40982580,54790,27,1,main.tex,1,svjour3,,1,1,harvest-200,2026-09-11
+2203.02151,bio,q-bio.NC,Neural mechanisms underlying the temporal organization of naturalistic animal behavior,CC BY 4.0,tar,13396639,130736,21,1,main_elife.tex,1,elife,,1,1,harvest-200,2026-09-11
+2203.02438,bio,q-bio.NC,Distinct excitatory and inhibitory bump wandering in a stochastic neural field,CC BY 4.0,tar,5465265,93017,14,2,eibump.tex,2,siamart190516,,0,0,harvest-200,2026-09-11

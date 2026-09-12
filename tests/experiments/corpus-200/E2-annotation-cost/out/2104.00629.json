@@ -1,0 +1,309 @@
+{
+ "paper": "2104.00629",
+ "main": "manuscript.tex",
+ "files": [
+  {
+   "file": "manuscript.tex",
+   "chars_before": 76431,
+   "chars_after": 76395,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 76431,
+ "chars_after": 76395,
+ "delta_pct": -0.04710130706127095,
+ "unrepaired": {
+  "chars_after": 76293,
+  "chars_before": 76431,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.006328,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`literature.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.18055501040153865
+ },
+ "stats": {
+  "cite_cmds_live": 0,
+  "cite_keys_live": 0,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 46,
+  "labels_outside_grammar": 0,
+  "refs_live": 15,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 7,
+  "cite_cmds_annotated": 0,
+  "cite_keys_annotated": 0,
+  "ids_annotated": 12,
+  "refs_annotated": 15,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 34,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "manuscript.tex",
+   "line": 168,
+   "token": "@id(introduction)",
+   "wrapper": "?",
+   "context": "\\section{Introduction}\\label{introduction}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 180,
+   "token": "@id(notation)",
+   "wrapper": "?",
+   "context": "\\subsection{Notation}\\label{notation}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 189,
+   "token": "@id(related-work)",
+   "wrapper": "?",
+   "context": "\\subsection{Related Work}\\label{related-work}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 250,
+   "token": "@id(categorical-encoding-benchmarks)",
+   "wrapper": "?",
+   "context": "\\subsection{Categorical Encoding Benchmarks}\\label{categorical-encoding-benchmarks}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 279,
+   "token": "@id(contributions)",
+   "wrapper": "?",
+   "context": "\\subsection{Contributions}\\label{contributions}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 289,
+   "token": "@id(encodings)",
+   "wrapper": "?",
+   "context": "\\section{Encodings}\\label{encodings}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 297,
+   "token": "@id(integer-encoding)",
+   "wrapper": "?",
+   "context": "\\subsection{Integer Encoding}\\label{integer-encoding}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 306,
+   "token": "@id(frequency-encoding)",
+   "wrapper": "?",
+   "context": "\\subsection{Frequency Encoding}\\label{frequency-encoding}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 315,
+   "token": "@id(indicator-encoding)",
+   "wrapper": "?",
+   "context": "\\subsection{Indicator Encoding}\\label{indicator-encoding}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 328,
+   "token": "@id(hash-encoding)",
+   "wrapper": "?",
+   "context": "\\subsection{Hash Encoding}\\label{hash-encoding}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 339,
+   "token": "@id(leaf-encoding)",
+   "wrapper": "?",
+   "context": "\\subsection{Leaf Encoding}\\label{leaf-encoding}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 352,
+   "token": "@id(impact-encoding)",
+   "wrapper": "?",
+   "context": "\\subsection{Impact Encoding}\\label{impact-encoding}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 363,
+   "token": "@id(glmm-encoding)",
+   "wrapper": "?",
+   "context": "\\subsection{GLMM Encoding}\\label{glmm-encoding}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 384,
+   "token": "@id(control-conditions)",
+   "wrapper": "?",
+   "context": "\\subsection{Control Conditions}\\label{control-conditions}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 398,
+   "token": "@id(benchmark-setup)",
+   "wrapper": "?",
+   "context": "\\section{Benchmark Setup}\\label{benchmark-setup}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 401,
+   "token": "@id(datasets)",
+   "wrapper": "?",
+   "context": "\\subsection{Datasets}\\label{datasets}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 415,
+   "token": "@id(high-cardinality-threshold)",
+   "wrapper": "?",
+   "context": "\\subsection{High Cardinality Threshold}\\label{high-cardinality-threshold}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 428,
+   "token": "@id(machine-learning-pipeline-and-algorithms)",
+   "wrapper": "?",
+   "context": "\\subsection{Machine Learning Pipeline and Algorithms}\\label{machine-learning-pipeline-and-algorithms}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 460,
+   "token": "@id(performance-evaluation)",
+   "wrapper": "?",
+   "context": "\\subsection{Performance Evaluation}\\label{performance-evaluation}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 475,
+   "token": "@id(benchmark-results)",
+   "wrapper": "?",
+   "context": "\\section{Benchmark Results}\\label{benchmark-results}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 486,
+   "token": "@id(encoder-performance)",
+   "wrapper": "?",
+   "context": "\\subsection{Encoder Performance}\\label{encoder-performance}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 517,
+   "token": "@id(meta-rankings-and-dataset-clustering)",
+   "wrapper": "?",
+   "context": "\\subsection{Meta Rankings and Dataset Clustering}\\label{meta-rankings-and-dataset-clustering}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 559,
+   "token": "@id(summary-of-encoder-performance)",
+   "wrapper": "?",
+   "context": "\\subsection{Summary of Encoder Performance}\\label{summary-of-encoder-performance}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 588,
+   "token": "@id(runtime-analysis)",
+   "wrapper": "?",
+   "context": "\\subsection{Runtime Analysis}\\label{runtime-analysis}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 644,
+   "token": "@id(analysing-high-cardinality-thresholds)",
+   "wrapper": "?",
+   "context": "\\subsection{Analysing High Cardinality Thresholds}\\label{analysing-high-cardinality-thresholds}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 657,
+   "token": "@id(discussion)",
+   "wrapper": "?",
+   "context": "\\section{Discussion}\\label{discussion}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 677,
+   "token": "@id(limitations)",
+   "wrapper": "?",
+   "context": "\\subsection{Limitations}\\label{limitations}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 699,
+   "token": "@id(conclusion)",
+   "wrapper": "?",
+   "context": "\\subsection{Conclusion}\\label{conclusion}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 708,
+   "token": "@id(declarations)",
+   "wrapper": "?",
+   "context": "\\subsection{Declarations}\\label{declarations}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 711,
+   "token": "@id(funding)",
+   "wrapper": "?",
+   "context": "\\subsubsection{Funding}\\label{funding}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 716,
+   "token": "@id(conflicts-of-interest)",
+   "wrapper": "?",
+   "context": "\\subsubsection{Conflicts of Interest}\\label{conflicts-of-interest}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 721,
+   "token": "@id(code-availability)",
+   "wrapper": "?",
+   "context": "\\subsubsection{Code Availability}\\label{code-availability}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 726,
+   "token": "@id(availability-of-data)",
+   "wrapper": "?",
+   "context": "\\subsubsection{Availability of Data}\\label{availability-of-data}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 731,
+   "token": "@id(references)",
+   "wrapper": "?",
+   "context": "\\section*{References}\\label{references}}"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.006319,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`literature.bib` could not be read"
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

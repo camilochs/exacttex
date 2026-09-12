@@ -1,0 +1,14 @@
+warning: fmtcount.sty:10: 
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+warning: fmtcount.sty:22: Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+warning: fcprefix.sty:10: 
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+warning: fcprefix.sty:22: Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+warning: fcnumparser.sty:10: 
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+warning: fcnumparser.sty:22: Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+warning: fc-english.def:10: 
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+warning: fc-english.def:22: Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+error: main.tex:26: Unable to load picture or PDF file 'figures/planted_ghost.pdf'
+error: halted on potentially-recoverable error as specified

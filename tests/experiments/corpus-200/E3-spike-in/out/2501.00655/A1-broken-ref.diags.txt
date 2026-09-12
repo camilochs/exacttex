@@ -1,0 +1,3 @@
+planted=sec:mutation__ghost sites=[('sections/methodology.xtex', 7)]
+xtex new=[('XT1003', 'sec:mutation__ghost', 'sections/methodology.xtex', 7)]
+texlab new=[('ERROR', 'sections/methodology.tex', 7, 'Undefined reference')]

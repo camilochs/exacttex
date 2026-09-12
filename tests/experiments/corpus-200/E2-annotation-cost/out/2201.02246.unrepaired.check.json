@@ -1,0 +1,25 @@
+{
+ "coverage": 0.011671,
+ "bibliography": {
+  "state": "complete",
+  "entries": 19
+ },
+ "diagnostics": [
+  {
+   "code": "XT1005",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "citation",
+   "name": "Lounesto",
+   "span": {
+    "file": "QCC_arxiv.xtex",
+    "offset": 21622,
+    "length": 8,
+    "line": 358,
+    "column": 155
+   },
+   "message": "citation key `Lounesto` is not in the bibliography \u2014 did you mean `lounesto`?",
+   "related": []
+  }
+ ]
+}

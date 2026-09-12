@@ -1,0 +1,169 @@
+{
+ "paper": "2412.19463",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 189487,
+   "chars_after": 189070,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 189487,
+ "chars_after": 189070,
+ "delta_pct": -0.22006786745264847,
+ "unrepaired": {
+  "chars_after": 189070,
+  "chars_before": 189487,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.05219,
+  "bibliography": {
+   "state": "complete",
+   "entries": 96
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.22006786745264847
+ },
+ "stats": {
+  "cite_cmds_live": 119,
+  "cite_keys_live": 208,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 33,
+  "other_cite_cmds": 0,
+  "labels_live": 143,
+  "labels_outside_grammar": 4,
+  "refs_live": 305,
+  "refs_outside_grammar": 28,
+  "other_ref_cmds": 0,
+  "float_envs": 3,
+  "cite_cmds_annotated": 85,
+  "cite_keys_annotated": 94,
+  "ids_annotated": 139,
+  "refs_annotated": 264,
+  "inputs_root": 2,
+  "inputs_imported": 0,
+  "inputs_left": 2,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 14,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "main.tex",
+   "line": 1772,
+   "token": "@cite(NC00)",
+   "wrapper": "?",
+   "context": "\\begin{lem}[Implementation of $\\kif$-statement with auxiliary variable, c.f.~\\cite{NC00}]"
+  },
+  {
+   "file": "main.tex",
+   "line": 1782,
+   "token": "@ref(thm-defer)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Theorem~\\ref{thm-defer}]"
+  },
+  {
+   "file": "main.tex",
+   "line": 1999,
+   "token": "@ref(qif-law)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Proposition~\\ref{qif-law}]"
+  },
+  {
+   "file": "main.tex",
+   "line": 2035,
+   "token": "@ref(circuit-seq-law)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Proposition~\\ref{circuit-seq-law}]"
+  },
+  {
+   "file": "main.tex",
+   "line": 2053,
+   "token": "@ref(choice-laws)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Proposition~\\ref{choice-laws}]"
+  },
+  {
+   "file": "main.tex",
+   "line": 2080,
+   "token": "@ref(init-laws)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Proposition~\\ref{init-laws}]"
+  },
+  {
+   "file": "main.tex",
+   "line": 2279,
+   "token": "@ref(if-laws)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Proposition~\\ref{if-laws}]"
+  },
+  {
+   "file": "main.tex",
+   "line": 2344,
+   "token": "@ref(nested-if-law)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Proposition~\\ref{nested-if-law}]"
+  },
+  {
+   "file": "main.tex",
+   "line": 2378,
+   "token": "@ref(sequential-laws)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Proposition~\\ref{sequential-laws}]"
+  },
+  {
+   "file": "main.tex",
+   "line": 2426,
+   "token": "@ref(prop:interplay-qif-if)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Proposition~\\ref{prop:interplay-qif-if}]"
+  },
+  {
+   "file": "main.tex",
+   "line": 2440,
+   "token": "@ref(prop-fix)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Proposition~\\ref{prop-fix}]"
+  },
+  {
+   "file": "main.tex",
+   "line": 2463,
+   "token": "@ref(loop-law)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Proposition~\\ref{loop-law}]"
+  },
+  {
+   "file": "main.tex",
+   "line": 2534,
+   "token": "@ref(laws-nd)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Proposition~\\ref{laws-nd}]"
+  },
+  {
+   "file": "main.tex",
+   "line": 2645,
+   "token": "@ref(thm-defer)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Theorem~\\ref{thm-defer}]"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.05219,
+ "bibliography": {
+  "state": "complete",
+  "entries": 96
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

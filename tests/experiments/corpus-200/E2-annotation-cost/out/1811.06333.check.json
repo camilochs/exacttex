@@ -1,0 +1,25 @@
+{
+ "coverage": 0.036952,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`bibliography.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "wright.xtex",
+    "offset": 2223,
+    "length": 13,
+    "line": 29,
+    "column": 135
+   },
+   "message": "citation checking unavailable: `bibliography.bib` could not be read",
+   "related": []
+  }
+ ]
+}

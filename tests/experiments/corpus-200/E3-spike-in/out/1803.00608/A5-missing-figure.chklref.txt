@@ -1,0 +1,381 @@
+pdf=1
+exit=0
+lines=1726
+unique_findings=93
+
+t/fonts/type1/public/amsfonts/cm/cmmib10.pfb></opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/C
+ellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
+></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr6.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20260301/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></opt/home
+brew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/homebrew/C
+ellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
+b></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20260301/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></opt/homebrew/Cellar
+/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></
+opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm-sup
+er/sfrm1000.pfb>
+Output written on CTR-Spectr-arXive.pdf (61 pages, 7477229 bytes).
+Transcript written on CTR-Spectr-arXive.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./CTR-Spectr-arXive.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/article.
+cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/size11.c
+lo))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/calc.st
+y)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsma
+th.sty
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amste
+xt.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsge
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsbs
+y.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsop
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amss
+ymb.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amsf
+onts.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/textcomp
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/sectsty/sects
+ty.sty
+
+LaTeX Warning: Command \underbar  has changed.
+               Check if current package is valid.
+
+
+LaTeX Warning: Command \underline  has changed.
+               Check if current package is valid.
+
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def) (./CTR-Spectr-arXive.aux)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+Underfull \hbox (badness 10000) in paragraph at lines 67--71
+
+
+LaTeX Warning: File `figures/planted_ghost.pdf' not found on input line 77.
+
+
+! Package pdftex.def Error: File `figures/planted_ghost.pdf' not found: using d
+raft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.77 ...=0.5\linewidth]{figures/planted_ghost.pdf}
+                                                  \caption{Planted figure}\e...
+
+[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc
+/dvips/cm-super/cm-super-ts1.enc}] [2 <./CTR-Fig/TDS-principle.pdf>]
+
+! LaTeX Error: Unicode character ̈ (U+0308)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.132 ...m into a metal is based on the Weizs\"ä
+                                                  cker-Williams method of vi...
+
+[3 <./CTR-Fig/TDS-signal.pdf>] [4] [5 <./CTR-Fig/field-rel-positron.pdf>]
+[6 <./CTR-Fig/Ginzburg-Frank.pdf>] [7 <./CTR-Fig/diffr-geom.pdf>] [8 <./CTR-Fig
+/r-eff.pdf> <./CTR-Fig/sourcesize-nearfield.png>] [9] [10 <./CTR-Fig/3D-bunch.p
+df>] [11]
+Overfull \hbox (14.22696pt too wide) in paragraph at lines 464--466
+ [][] 
+[12 <./CTR-Fig/Ftrans.pdf>] [13] [14 <./KK-Fig/time-reversal-shift.pdf>]
+[15 <./KK-Fig/Akutowicz-function.pdf>] [16 <./KK-Fig/Akuto-f1-KK.pdf>] [17 <./K
+K-Fig/Akuto-f2-KKB.pdf> <./KK-Fig/Akuto-Gauss-Cos2.pdf>]
+Overfull \hbox (28.45276pt too wide) in paragraph at lines 710--711
+ [][] 
+
+Underfull \vbox (badness 1286) has occurred while \output is active [18 <./KK-F
+ig/KKB-2Cos-Kap3.pdf> <./KK-Fig/3Cos2-equi.pdf
+
+pdfTeX warning: pdflatex (file ./KK-Fig/3Cos2-equi.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+>]
+Underfull \vbox (badness 10000) has occurred while \output is active [19 <./KK-
+Fig/3Cos2-nonequi.pdf> <./KK-Fig/FF_models.pdf>] [20 <./CTR-Fig/Gerchberg-Saxto
+n-loop.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 832--833
+
+[21 <./CTR-Fig/IterGauss.pdf> <./CTR-Fig/Akuto-Gauss-Cos2-IT.pdf>] [22 <./CTR-F
+ig/2Cos-diffwidth-IT.pdf> <./CTR-Fig/3Cos-equi-IT.pdf>] [23 <./CTR-Fig/3Cos-non
+equi-IT.pdf>] [24 <./CTR-Fig/blazed-grating.pdf>] [25] [26 <./KK-Fig/multistage
+.pdf> <./KK-Fig/grating-5rays.pdf>]
+Underfull \vbox (badness 6893) has occurred while \output is active [27 <./CTR-
+Fig/pyrodetector.pdf>] [28 <./CTR-Fig/beamline-202m-optics.pdf> <./CTR-Fig/202C
+TR-beamline-drawing.pdf>] [29] [30 <./CTR-Fig/response-prelim.pdf> <./CTR-Fig/r
+esponse-final.pdf>]
+Overfull \hbox (2.74904pt too wide) in paragraph at lines 1084--1087
+\OT1/cmr/m/n/10 which al-lows us to de-rive the lon-gi-tu-di-nal form fac-tor f
+rom the mea-sured voltage-signal vec-tor $[] = (\OML/cmm/m/it/10 v[]; v[] [] v[
+]\OT1/cmr/m/n/10 )$
+[31 <./CTR-Fig/ratio-FFtrans.pdf>] [32 <./CTR-Fig/TDS-FF-Signal1.pdf>]
+Underfull \vbox (badness 2173) has occurred while \output is active [33]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 1212.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 1212.
+
+[34 <./CTR-Fig/TDS-streak.pdf> <./CTR-Fig/Signal-1.pdf>]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 1233.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 1233.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 1269.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 1269.
+
+[35 <./CTR-Fig/TDS-FF-Signal2.pdf> <./CTR-Fig/Signal-2.pdf>] [36 <./CTR-Fig/TDS
+-FF-Signal3.pdf> <./CTR-Fig/Signal-3.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active [37 <./CTR
+-Fig/Signal-4.pdf> <./CTR-Fig/FF-Signal-4.pdf> <./CTR-Fig/Iter-av-single.pdf>]
+[38] [39] [40] [41 <./KK-Fig/Weg-Gamma.pdf>] [42]
+
+LaTeX Warning: Command \c invalid in math mode on input line 1571.
+
+! Please use \mathaccent for accents in math mode.
+<recently read> \accent 
+                        
+l.1571 where ${\cal FT}\{S(t)\, fç
+                                   (t)\}$ denotes the Fourier transform of t...
+
+[43] [44]
+Underfull \hbox (badness 10000) in paragraph at lines 1650--1652
+
+[45 <./KK-Fig/Weg-Gamma-faux.pdf>] [46] [47] [48 <./KK-Fig/FFGauss-trunc.pdf>]
+[49] [50 <./KK-Fig/Blaschke-phase-Re-Im.pdf> <./KK-Fig/Blaschke-phase-various-b
+.pdf>] [51 <./KK-Fig/2Cos-centered-KKB.pdf>] [52 <./KK-Fig/2Cos-KKB-N.pdf> <./K
+K-Fig/3Cos2-nonequi-front.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1980--1983
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1994--1995
+
+[53 <./KK-Fig/3Cos2-nonequi-center.pdf> <./KK-Fig/3Cos-nonequi-KKB.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active [54 <./KK-
+Fig/2Cos-front-rear.pdf> <./KK-Fig/2Cos-centered-FF.pdf>] [55 <./KK-Fig/truncGa
+uss-FF-Integrand.pdf>] [56 <./KK-Fig/doubleGauss-centered.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 2132--2134
+
+[57 <./KK-Fig/doubleGauss-contour.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 2135--2136
+
+[58 <./KK-Fig/KKB-2Gauss-trunc.pdf>] [59] (./reference-CTR.tex
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 44.
+
+[60])  [61] (./CTR-Spectr-arXive.aux) )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></opt/h
+omebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm
+extra/cmbsy7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmbx10.pfb></opt/homebrew/Cellar/texlive/20260301/shar
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/te
+xlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt
+/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi5.pfb></opt/homebrew/Cellar/texlive/20260301/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive
+/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/homeb
+rew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmib10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></opt/homebrew/Ce
+llar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb>
+</opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20260301/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></opt/homebrew/Cellar/texliv
+e/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/hom
+ebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy6.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></opt/homebrew/C
+ellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pf
+b></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmti12.pfb></opt/homebrew/Cellar/texlive/20260301/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></opt/homebrew/Cella
+r/texlive/20260301/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on CTR-Spectr-arXive.pdf (61 pages, 7468160 bytes).
+Transcript written on CTR-Spectr-arXive.log.
+************************************
+** Labels in starred environments **
+************************************
+-- CTR-Spectr-arXive.tex line  142: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  147: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  154: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  199: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  214: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  291: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  335: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  350: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  369: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  387: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  392: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  399: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  403: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  410: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  547: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  564: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  619: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line  633: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1327: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1332: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1337: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1356: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1487: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1503: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1511: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1594: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1604: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1680: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1721: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1766: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1821: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 1838: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 2120: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 2178: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 2184: consider using a STAR environment
+-- CTR-Spectr-arXive.tex line 2197: consider using a STAR environment
+
+*******************
+** Unused Labels **
+*******************
+-- CTR-Spectr-arXive.tex line 1155: remove label reco-iter
+-- CTR-Spectr-arXive.tex line 1270: remove label Signal3
+-- CTR-Spectr-arXive.tex line 1316: remove label AppendixA
+-- CTR-Spectr-arXive.tex line 1323: remove label complex-analysis
+-- CTR-Spectr-arXive.tex line 1352: remove label residue
+-- CTR-Spectr-arXive.tex line 1354: remove label residue
+-- CTR-Spectr-arXive.tex line 1526: remove label disp-relation-epsilon
+-- CTR-Spectr-arXive.tex line 1527: remove label disp-relation-epsilon
+-- CTR-Spectr-arXive.tex line 1562: remove label tildeS
+-- CTR-Spectr-arXive.tex line 1563: remove label tildeS
+-- CTR-Spectr-arXive.tex line  158: remove label E-bewegtesTeilchen-Kap7
+-- CTR-Spectr-arXive.tex line 1583: remove label Eq-convolution
+-- CTR-Spectr-arXive.tex line 1584: remove label Eq-convolution
+-- CTR-Spectr-arXive.tex line  161: remove label E-bewegtesTeilchen-Kap7
+-- CTR-Spectr-arXive.tex line 1619: remove label log-phase
+-- CTR-Spectr-arXive.tex line 1620: remove label log-phase
+-- CTR-Spectr-arXive.tex line 1656: remove label large-semicircle
+-- CTR-Spectr-arXive.tex line 1658: remove label large-semicircle
+-- CTR-Spectr-arXive.tex line 1668: remove label Gamma3-Integral-faux
+-- CTR-Spectr-arXive.tex line 1716: remove label formfactor-definition
+-- CTR-Spectr-arXive.tex line 1718: remove label formfactor-definition
+-- CTR-Spectr-arXive.tex line 1748: remove label faux-Gauss
+-- CTR-Spectr-arXive.tex line 1749: remove label faux-Gauss
+-- CTR-Spectr-arXive.tex line 1757: remove label IntGamma1
+-- CTR-Spectr-arXive.tex line 1758: remove label IntGamma1
+-- CTR-Spectr-arXive.tex line  176: remove label Eperp
+-- CTR-Spectr-arXive.tex line 1829: remove label Fmod
+-- CTR-Spectr-arXive.tex line 1832: remove label Fmod
+-- CTR-Spectr-arXive.tex line 1845: remove label Bla-phase
+-- CTR-Spectr-arXive.tex line 1847: remove label Bla-phase
+-- CTR-Spectr-arXive.tex line 1876: remove label Blaschke-phase-n
+-- CTR-Spectr-arXive.tex line 1877: remove label Blaschke-phase-n
+-- CTR-Spectr-arXive.tex line 1919: remove label FF-two-cos2
+-- CTR-Spectr-arXive.tex line 1920: remove label FF-two-cos2
+-- CTR-Spectr-arXive.tex line 2117: remove label Eq2Gauss-trunc
+-- CTR-Spectr-arXive.tex line 2174: remove label ExEy
+-- CTR-Spectr-arXive.tex line 2175: remove label ExEy
+-- CTR-Spectr-arXive.tex line  220: remove label Fourier-Eperp-A
+-- CTR-Spectr-arXive.tex line  223: remove label Fourier-Eperp-A
+-- CTR-Spectr-arXive.tex line  282: remove label TR-reff
+-- CTR-Spectr-arXive.tex line  284: remove label TR-reff
+-- CTR-Spectr-arXive.tex line  286: remove label eff-size
+-- CTR-Spectr-arXive.tex line  288: remove label eff-size
+-- CTR-Spectr-arXive.tex line  359: remove label formfactor
+-- CTR-Spectr-arXive.tex line  364: remove label Fourier-Eperp-C
+-- CTR-Spectr-arXive.tex line  367: remove label Fourier-Eperp-C
+-- CTR-Spectr-arXive.tex line  417: remove label 3DFF
+-- CTR-Spectr-arXive.tex line  418: remove label 3DFF
+-- CTR-Spectr-arXive.tex line  433: remove label FFtrans-Gauss
+-- CTR-Spectr-arXive.tex line  434: remove label FFtrans-Gauss
+-- CTR-Spectr-arXive.tex line  478: remove label FFlong
+-- CTR-Spectr-arXive.tex line  512: remove label autocorrelation-function
+-- CTR-Spectr-arXive.tex line  513: remove label autocorrelation-function
+-- CTR-Spectr-arXive.tex line  516: remove label ambiguity
+-- CTR-Spectr-arXive.tex line  749: remove label Iter-Kap3
+-- CTR-Spectr-arXive.tex line   78: remove label intro
+-- CTR-Spectr-arXive.tex line  973: remove label 202m-beamline
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

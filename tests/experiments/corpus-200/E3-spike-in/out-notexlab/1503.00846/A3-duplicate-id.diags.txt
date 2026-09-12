@@ -1,0 +1,3 @@
+planted=eq:integspec sites=[('paper20160222.xtex', 180), ('paper20160222.xtex', 57)]
+xtex new=[('XT1001', 'eq:integspec', 'paper20160222.xtex', 180)]
+texlab new=[]

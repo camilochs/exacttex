@@ -1,0 +1,3 @@
+planted=sec_model__ghost sites=[('main.xtex', 321)]
+xtex new=[('XT1003', 'sec_model__ghost', 'main.xtex', 321)]
+texlab new=[]

@@ -1,0 +1,3 @@
+planted=Schmueser-FEL__ghost sites=[('CTR-Spectr-arXive.xtex', 78)]
+xtex new=[('XT1005', 'Schmueser-FEL__ghost', 'CTR-Spectr-arXive.xtex', 78)]
+texlab new=[('info', 'reference-CTR.tex', 10, 'Unused entry')]

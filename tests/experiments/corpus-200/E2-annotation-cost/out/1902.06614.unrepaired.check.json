@@ -1,0 +1,201 @@
+{
+ "coverage": 0.03972,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`Overton_ApproximatingEvolutionaryDynamics_refs.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "Table:Results1",
+   "span": {
+    "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+    "offset": 59407,
+    "length": 14,
+    "line": 468,
+    "column": 781
+   },
+   "message": "identifier `Table:Results1` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "Table:Results1",
+   "span": {
+    "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+    "offset": 61319,
+    "length": 14,
+    "line": 477,
+    "column": 451
+   },
+   "message": "identifier `Table:Results1` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "Table:Results2",
+   "span": {
+    "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+    "offset": 61344,
+    "length": 14,
+    "line": 477,
+    "column": 476
+   },
+   "message": "identifier `Table:Results2` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "Table:Results2",
+   "span": {
+    "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+    "offset": 62241,
+    "length": 14,
+    "line": 477,
+    "column": 1373
+   },
+   "message": "identifier `Table:Results2` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "Table:Results1",
+   "span": {
+    "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+    "offset": 69339,
+    "length": 14,
+    "line": 548,
+    "column": 701
+   },
+   "message": "identifier `Table:Results1` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "Table:Results2",
+   "span": {
+    "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+    "offset": 69364,
+    "length": 14,
+    "line": 548,
+    "column": 726
+   },
+   "message": "identifier `Table:Results2` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "Table:Results1",
+   "span": {
+    "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+    "offset": 69807,
+    "length": 14,
+    "line": 550,
+    "column": 334
+   },
+   "message": "identifier `Table:Results1` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "Table:Results2",
+   "span": {
+    "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+    "offset": 69832,
+    "length": 14,
+    "line": 550,
+    "column": 359
+   },
+   "message": "identifier `Table:Results2` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "Table:Results2",
+   "span": {
+    "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+    "offset": 71731,
+    "length": 14,
+    "line": 550,
+    "column": 2258
+   },
+   "message": "identifier `Table:Results2` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "Table:Results1",
+   "span": {
+    "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+    "offset": 71792,
+    "length": 14,
+    "line": 552,
+    "column": 43
+   },
+   "message": "identifier `Table:Results1` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "Table:Results2",
+   "span": {
+    "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+    "offset": 71817,
+    "length": 14,
+    "line": 552,
+    "column": 68
+   },
+   "message": "identifier `Table:Results2` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "Overton_ApproximatingEvolutionaryDynamics.xtex",
+    "offset": 3755,
+    "length": 9,
+    "line": 57,
+    "column": 235
+   },
+   "message": "citation checking unavailable: `Overton_ApproximatingEvolutionaryDynamics_refs.bib` could not be read",
+   "related": []
+  }
+ ]
+}

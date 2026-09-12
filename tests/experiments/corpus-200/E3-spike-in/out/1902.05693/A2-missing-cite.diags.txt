@@ -1,0 +1,3 @@
+planted=yorino1992investigation__ghost sites=[('main_jk.xtex', 66)]
+xtex new=[]
+texlab new=[]

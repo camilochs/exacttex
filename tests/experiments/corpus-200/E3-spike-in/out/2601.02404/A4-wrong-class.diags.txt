@@ -1,0 +1,3 @@
+planted=fig:planted_wrongclass sites=[('main.xtex', 382)]
+xtex new=[('XT1004', 'fig:planted_wrongclass', 'main.xtex', 408)]
+texlab new=[]

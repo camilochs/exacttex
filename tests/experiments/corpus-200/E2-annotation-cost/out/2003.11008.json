@@ -1,0 +1,87 @@
+{
+ "paper": "2003.11008",
+ "main": "nilab_malformation.tex",
+ "files": [
+  {
+   "file": "nilab_malformation.tex",
+   "chars_before": 25109,
+   "chars_after": 25067,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 25109,
+ "chars_after": 25067,
+ "delta_pct": -0.16727069974909395,
+ "unrepaired": {
+  "chars_after": 25067,
+  "chars_before": 25109,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.046276,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`nilab_malformation.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.16727069974909395
+ },
+ "stats": {
+  "cite_cmds_live": 17,
+  "cite_keys_live": 23,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 14,
+  "labels_outside_grammar": 0,
+  "refs_live": 15,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 3,
+  "cite_cmds_annotated": 17,
+  "cite_keys_annotated": 23,
+  "ids_annotated": 14,
+  "refs_annotated": 15,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.046276,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`nilab_malformation.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "nilab_malformation.xtex",
+    "offset": 4118,
+    "length": 18,
+    "line": 131,
+    "column": 36
+   },
+   "message": "citation checking unavailable: `nilab_malformation.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

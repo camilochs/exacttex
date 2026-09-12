@@ -1,0 +1,3 @@
+planted=preskill2018quantum__ghost sites=[('paper.xtex', 95)]
+xtex new=[]
+texlab new=[]

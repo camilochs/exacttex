@@ -1,0 +1,535 @@
+pdf=0
+exit=0
+lines=5475
+unique_findings=4
+acelet \...
+l.16 \lett
+          {} x = \exprind{0} \inn{} \exprind{1}
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.20 \lett
+          {} x = & & \lett{} y = \exprind{0} \inn{}\\
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.25 \lett
+          {} x = \exprind{0} \inn{} & & \lett{} x = \exprind{0} \inn{} \\
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.28 \lett
+          {} x = \exprind{0} \inn{} & & \lett{} y = \exprind{1} \inn{} \\
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.32 f
+      (\lett{} x = \exprind{0} \inn{} \exprind{1})
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.36 \end
+         {tabular}
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.37 \subcaption{$\lambda$-Calculus Rules}
+                                          
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.37 \subcaption{$\lambda$-Calculus Rules}
+                                          
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.37 \subcaption{$\lambda$-Calculus Rules}
+                                          
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.37 \subcaption{$\lambda$-Calculus Rules}
+                                          
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.42 \expr
+          {} \vconst{+} 0 = 0 \vconst{+} \expr{}
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.45 \expr
+          {} \vconst{*} 1 = 1 \vconst{*} \expr{}
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.48 \expr
+          {} \vconst{*} 0 = 0 \vconst{*} \expr{}
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.51 \expr
+          {} \vconst{+} -\expr{} = \expr{} \vconst{-} \expr{}
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.54 \exprind
+             {0} \vconst{*} \exprind{1} \vconst{+}
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.58 \end
+         {tabular}
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.59 \subcaption{Ring-Structure Rules}
+                                      
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.59 \subcaption{Ring-Structure Rules}
+                                      
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.59 \subcaption{Ring-Structure Rules}
+                                      
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.59 \subcaption{Ring-Structure Rules}
+                                      
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.68 \vget
+          {(\vbuild{\exprind{0}}{\exprind{1}})}{\exprind{2}}
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.74 \vlength
+             {(\vbuild{\exprind{0}}{\exprind{1}})}
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.77 \end
+         {tabular}
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.78 \subcaption{Loop Fusion Rules}
+                                   
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.78 \subcaption{Loop Fusion Rules}
+                                   
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.78 \subcaption{Loop Fusion Rules}
+                                   
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.78 \subcaption{Loop Fusion Rules}
+                                   
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.97 \iif
+         {} \vtrue{} &&\\
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.102 \iif
+          {} \vfalse{}&&\\
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.107 \iif
+          {} \exprind{0} &&\\
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.112 \iif
+          {} \exprind{0} && \iif{} \exprind{0} \\
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+[]|$   $[]\T1/cmtt/m/n/9 else[] $[][]$\T1/ptm/m/n/9 [$[][]$ $\OMS/ztmcm/m/n/9 7
+!$
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.117 f
+        (\iif{} \exprind{0} && \iif{} \exprind{0}\\
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.121 \end
+          {tabular}
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.122 \subcaption{Conditional Rules}
+                                    
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.122 \subcaption{Conditional Rules}
+                                    
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.122 \subcaption{Conditional Rules}
+                                    
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.122 \subcaption{Conditional Rules}
+                                    
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.127 \vfstk
+            {} \adpair{\exprind{0}}{\exprind{1}}
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.134 \vsndk
+            {} \adpair{\exprind{0}}{\exprind{1}}
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.137 \end
+          {tabular}
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.138 \subcaption{Tuple Normalisation Rules}
+                                            
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.138 \subcaption{Tuple Normalisation Rules}
+                                            
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.138 \subcaption{Tuple Normalisation Rules}
+                                            
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.138 \subcaption{Tuple Normalisation Rules}
+                                            
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.145 \vifoldk
+              {} f z 0
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.151 \vifoldk
+              {} f z (n + 1)
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.154 \vifoldk
+              {} (\vabs{a i}{} a) z n
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.157 \vifoldk
+              {} (\vabs{a i}{} \iif(i = \exprind{0}) \then{} \exprind{1} \el...
+
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.165 \end
+          {tabular}
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.166 \subcaption{Loop Normalisation Rules}
+                                           
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.166 \subcaption{Loop Normalisation Rules}
+                                           
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.166 \subcaption{Loop Normalisation Rules}
+                                           
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.166 \subcaption{Loop Normalisation Rules}
+                                           
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.175 \vifoldk
+              {} (\vabs{a i}{}&&
+! Undefined control sequence.
+\@BTswitch ->{\CT@arc@ 
+                       \hrule \@height \@thisrulewidth }\futurenonspacelet \...
+l.185 \end
+          {tabular}
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.187 \subcaption{Loop Fission Rule}
+                                    
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.187 \subcaption{Loop Fission Rule}
+                                    
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.187 \subcaption{Loop Fission Rule}
+                                    
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.187 \subcaption{Loop Fission Rule}
+                                    
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.192 ...sion} are more useful in the AD context.}
+                                                  
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.192 ...sion} are more useful in the AD context.}
+                                                  
+
+LaTeX Warning: Reference `fig:fsmooth_opt_tuple' on page 15 undefined on input 
+line 192.
+
+
+LaTeX Warning: Reference `fig:fsmooth_opt_fission' on page 15 undefined on inpu
+t line 192.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.192 ...sion} are more useful in the AD context.}
+                                                  
+
+LaTeX Warning: Reference `fig:fsmooth_opt_tuple' on page 15 undefined on input 
+line 192.
+
+
+LaTeX Warning: Reference `fig:fsmooth_opt_fission' on page 15 undefined on inpu
+t line 192.
+
+
+LaTeX Warning: Float too large for page by 16.84183pt on input line 194.
+
+)
+
+LaTeX Warning: Reference `fig:fsmooth_opt_ring' on page 15 undefined on input l
+ine 20.
+
+
+LaTeX Warning: Reference `fig:fsmooth_opt_lambda' on page 15 undefined on input
+ line 26.
+
+! Undefined control sequence.
+\lst@HRefStepCounter ...\begingroup \c@lstlisting 
+                                                  \lst@neglisting \advance \...
+l.30 \begin{lstlisting}
+                       
+! Missing number, treated as zero.
+<to be read again> 
+                   \advance 
+l.30 \begin{lstlisting}
+                       
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \advance 
+l.30 \begin{lstlisting}
+                       
+! Undefined control sequence.
+\lst@HRefStepCounter ...ng \advance \c@lstlisting 
+                                                  \m@ne \xdef \lst@neglistin...
+l.30 \begin{lstlisting}
+                       
+! Missing number, treated as zero.
+<to be read again> 
+                   \xdef 
+l.30 \begin{lstlisting}
+                       
+! Undefined control sequence.
+\lst@HRefStepCounter ...sting {\the \c@lstlisting 
+                                                  }\ifx \hyper@refstepcounte...
+l.30 \begin{lstlisting}
+                       
+! You can't use `end-group character }' after \the.
+\lst@HRefStepCounter ...ting {\the \c@lstlisting }
+                                                  \ifx \hyper@refstepcounter...
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   1
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   2
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   1
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   2
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   1
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   2
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   1
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   2
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   1
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   2
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   1
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   2
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   1
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   2
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   1
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   2
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   1
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   2
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   1
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   2
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   1
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   2
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   1
+l.30 \begin{lstlisting}
+                       
+! Illegal parameter number in definition of \lst@neglisting.
+<to be read again> 
+                   2
+l.30 \begin{lstlisting}
+                       
+! Undefined control sequence.
+\lsthk@PreInit ...undefined \def \lst@firstnumber 
+                                                  {\lst@lineno }\fi \linewid...
+l.30 \begin{lstlisting}
+                       
+! Undefined control sequence.
+\lsthk@Init ...tdefault }\let \lsts@nfss@catcodes 
+                                                  \nfss@catcodes \let \nfss@...
+l.30 \begin{lstlisting}
+                       
+! Undefined control sequence.
+<argument> \<
+             
+l.30 \begin{lstlisting}
+                       
+! TeX capacity exceeded, sorry [input stack size=10000].
+\reserved@a ->\def \reserved@a 
+                               *{\@vspacer }\reserved@a 
+l.30 \begin{lstlisting}
+                       
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on main.log.
+************************************
+** Labels in starred environments **
+************************************
+-- overview.tex         line   68: consider using a STAR environment
+-- fsmooth_d.tex        line   95: consider using a STAR environment
+
+*******************
+** Unused Labels **
+*******************
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

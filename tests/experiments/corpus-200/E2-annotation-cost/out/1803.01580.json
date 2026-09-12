@@ -1,0 +1,134 @@
+{
+ "paper": "1803.01580",
+ "main": "v11_synset_calc.tex",
+ "files": [
+  {
+   "file": "v11_synset_calc.tex",
+   "chars_before": 5066,
+   "chars_after": 5132,
+   "emitted": true,
+   "identity": "import-ext-only",
+   "lines_differing": 9
+  },
+  {
+   "file": "chapter/1_intro.tex",
+   "chars_before": 2445,
+   "chars_after": 2445,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "chapter/2_wvr.tex",
+   "chars_before": 4451,
+   "chars_after": 4451,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "chapter/3_ints.tex",
+   "chars_before": 2462,
+   "chars_after": 2462,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "chapter/4_rank_centrality.tex",
+   "chars_before": 5588,
+   "chars_after": 5576,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "chapter/5_calcrank.tex",
+   "chars_before": 6006,
+   "chars_after": 5997,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "chapter/6_experiments.tex",
+   "chars_before": 4778,
+   "chars_after": 4775,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "chapter/6_experiments2.tex",
+   "chars_before": 1821,
+   "chars_after": 1821,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "chapter/7_conclusion.tex",
+   "chars_before": 1123,
+   "chars_after": 1123,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "chapter/bibliography.tex",
+   "chars_before": 10123,
+   "chars_after": 10123,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 10,
+ "chars_before": 43863,
+ "chars_after": 43905,
+ "delta_pct": 0.0957526844949046,
+ "unrepaired": {
+  "chars_after": 43905,
+  "chars_before": 43863,
+  "converted_files": 10,
+  "check_exit": 0,
+  "coverage": 0.027429,
+  "bibliography": {
+   "state": "complete",
+   "entries": 14
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": 0.0957526844949046
+ },
+ "stats": {
+  "cite_cmds_live": 19,
+  "cite_keys_live": 21,
+  "cite_with_optarg_or_star": 1,
+  "cite_keys_outside_grammar": 1,
+  "other_cite_cmds": 0,
+  "labels_live": 10,
+  "labels_outside_grammar": 0,
+  "refs_live": 12,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 4,
+  "cite_cmds_annotated": 17,
+  "cite_keys_annotated": 17,
+  "ids_annotated": 10,
+  "refs_annotated": 12,
+  "inputs_root": 9,
+  "inputs_imported": 9,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.027429,
+ "bibliography": {
+  "state": "complete",
+  "entries": 14
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

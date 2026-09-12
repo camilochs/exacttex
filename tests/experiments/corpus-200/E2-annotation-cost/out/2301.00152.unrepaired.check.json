@@ -1,0 +1,25 @@
+{
+ "coverage": 0.034967,
+ "bibliography": {
+  "state": "complete",
+  "entries": 90
+ },
+ "diagnostics": [
+  {
+   "code": "XT1005",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "citation",
+   "name": "LexRank",
+   "span": {
+    "file": "paper.xtex",
+    "offset": 31093,
+    "length": 7,
+    "line": 403,
+    "column": 80
+   },
+   "message": "citation key `LexRank` is not in the bibliography \u2014 did you mean `lexrank`?",
+   "related": []
+  }
+ ]
+}

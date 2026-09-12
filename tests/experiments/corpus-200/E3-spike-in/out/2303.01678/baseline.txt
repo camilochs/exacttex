@@ -1,0 +1,33 @@
+tectonic pdf bytes=3951164
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'preprint.tex', 621, 'Expecting a curly bracket: "}"'), ('info', 'preprint.tex', 119, 'Unused label'), ('info', 'preprint.tex', 169, 'Unused label'), ('info', 'preprint.tex', 176, 'Unused label'), ('info', 'preprint.tex', 184, 'Unused label'), ('info', 'preprint.tex', 230, 'Unused label'), ('info', 'preprint.tex', 234, 'Unused label'), ('info', 'preprint.tex', 238, 'Unused label'), ('info', 'preprint.tex', 242, 'Unused label'), ('info', 'preprint.tex', 276, 'Unused label'), ('info', 'preprint.tex', 300, 'Unused label'), ('info', 'preprint.tex', 306, 'Unused label'), ('info', 'preprint.tex', 310, 'Unused label'), ('info', 'preprint.tex', 328, 'Unused label'), ('info', 'preprint.tex', 338, 'Unused label'), ('info', 'preprint.tex', 355, 'Unused label'), ('info', 'preprint.tex', 367, 'Unused label'), ('info', 'preprint.tex', 416, 'Unused label'), ('info', 'preprint.tex', 438, 'Unused label'), ('info', 'preprint.tex', 478, 'Unused entry'), ('info', 'preprint.tex', 482, 'Unused entry'), ('info', 'preprint.tex', 504, 'Unused entry'), ('info', 'preprint.tex', 513, 'Unused entry'), ('info', 'preprint.tex', 516, 'Unused entry'), ('info', 'preprint.tex', 524, 'Unused entry'), ('info', 'preprint.tex', 528, 'Unused entry'), ('info', 'preprint.tex', 529, 'Unused entry'), ('info', 'preprint.tex', 532, 'Unused entry'), ('info', 'preprint.tex', 535, 'Unused entry'), ('info', 'preprint.tex', 563, 'Unused entry'), ('info', 'preprint.tex', 566, 'Unused entry'), ('info', 'preprint.tex', 572, 'Unused entry'), ('info', 'preprint.tex', 575, 'Unused entry'), ('info', 'preprint.tex', 595, 'Unused entry'), ('info', 'preprint.tex', 607, 'Unused entry')]
+tectonic exit=0 warnings=[] secs=2
+: >> Reading special command stopped around >>[{ThisPage} << /CropBox [0 0 535.73697 697.32014] >> /PUT pd...<<
+warning: Unknown PDF object type.
+warning: Could not find a valid object in array object.
+warning: Interpreting PS code failed!!! Output might be broken!!!
+warning: Interpreting special command ps: (ps:) failed.
+warning: >> at page="23" position="(72, 625.209)" (in PDF)
+warning: >> xxx "ps: [{ThisPage} << /CropBox [0 0 535.73697 697.32014] >> /PU..."
+warning: >> Reading special command stopped around >>[{ThisPage} << /CropBox [0 0 535.73697 697.32014] >> /PUT pd...<<
+warning: Unknown PDF object type.
+warning: Could not find a valid object in array object.
+warning: Interpreting PS code failed!!! Output might be broken!!!
+warning: Interpreting special command ps: (ps:) failed.
+warning: >> at page="24" position="(72, 625.209)" (in PDF)
+warning: >> xxx "ps: [{ThisPage} << /CropBox [0 0 535.73697 697.32014] >> /PU..."
+warning: >> Reading special command stopped around >>[{ThisPage} << /CropBox [0 0 535.73697 697.32014] >> /PUT pd...<<
+warning: Unknown PDF object type.
+warning: Could not find a valid object in array object.
+warning: Interpreting PS code failed!!! Output might be broken!!!
+warning: Interpreting special command ps: (ps:) failed.
+warning: >> at page="25" position="(72, 625.209)" (in PDF)
+warning: >> xxx "ps: [{ThisPage} << /CropBox [0 0 535.73697 697.32014] >> /PU..."
+warning: >> Reading special command stopped around >>[{ThisPage} << /CropBox [0 0 535.73697 697.32014] >> /PUT pd...<<
+warning: Unknown PDF object type.
+warning: Could not find a valid object in array object.
+warning: Interpreting PS code failed!!! Output might be broken!!!
+warning: Interpreting special command ps: (ps:) failed.
+warning: >> at page="26" position="(72, 625.209)" (in PDF)
+warning: >> xxx "ps: [{ThisPage} << /CropBox [0 0 535.73697 697.32014] >> /PU..."
+warning: >> Reading special command stopped around >>[{ThisPage} << /CropBox [0 0 535.73697 697.32014] >> /PUT pd...<<

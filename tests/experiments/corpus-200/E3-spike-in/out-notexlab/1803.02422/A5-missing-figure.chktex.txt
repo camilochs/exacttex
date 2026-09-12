@@ -1,0 +1,324 @@
+exit=2
+lines=558
+unique_findings=127
+in main.tex line 601: Interword spacing (`\ ') should perhaps be used.
+The authors would like to thank Dr. Peter Fennell for his time and helpful advice on various technical topics, and Prof. Dr. Markus Strohmaier, Dr. Mathieu G\'enois and Reinhard Munz for their valuable comments and suggestions to improve the quality of the paper. This work was supported in part by the ARO (contract W911NF-16-1-0306) and by the AFOSR (contract FA9550-17-1-0327).  
+                                                                                                                        ^
+Warning 12 in main.tex line 601: Interword spacing (`\ ') should perhaps be used.
+The authors would like to thank Dr. Peter Fennell for his time and helpful advice on various technical topics, and Prof. Dr. Markus Strohmaier, Dr. Mathieu G\'enois and Reinhard Munz for their valuable comments and suggestions to improve the quality of the paper. This work was supported in part by the ARO (contract W911NF-16-1-0306) and by the AFOSR (contract FA9550-17-1-0327).  
+                                                                                                                            ^
+Warning 12 in main.tex line 601: Interword spacing (`\ ') should perhaps be used.
+The authors would like to thank Dr. Peter Fennell for his time and helpful advice on various technical topics, and Prof. Dr. Markus Strohmaier, Dr. Mathieu G\'enois and Reinhard Munz for their valuable comments and suggestions to improve the quality of the paper. This work was supported in part by the ARO (contract W911NF-16-1-0306) and by the AFOSR (contract FA9550-17-1-0327).  
+                                                                                                                                                   ^
+Warning 8 in main.tex line 601: Wrong length of dash may have been used.
+The authors would like to thank Dr. Peter Fennell for his time and helpful advice on various technical topics, and Prof. Dr. Markus Strohmaier, Dr. Mathieu G\'enois and Reinhard Munz for their valuable comments and suggestions to improve the quality of the paper. This work was supported in part by the ARO (contract W911NF-16-1-0306) and by the AFOSR (contract FA9550-17-1-0327).  
+                                                                                                                                                                                                                                                                                                                                      ^
+Warning 8 in main.tex line 601: Wrong length of dash may have been used.
+The authors would like to thank Dr. Peter Fennell for his time and helpful advice on various technical topics, and Prof. Dr. Markus Strohmaier, Dr. Mathieu G\'enois and Reinhard Munz for their valuable comments and suggestions to improve the quality of the paper. This work was supported in part by the ARO (contract W911NF-16-1-0306) and by the AFOSR (contract FA9550-17-1-0327).  
+                                                                                                                                                                                                                                                                                                                                        ^
+Warning 8 in main.tex line 601: Wrong length of dash may have been used.
+The authors would like to thank Dr. Peter Fennell for his time and helpful advice on various technical topics, and Prof. Dr. Markus Strohmaier, Dr. Mathieu G\'enois and Reinhard Munz for their valuable comments and suggestions to improve the quality of the paper. This work was supported in part by the ARO (contract W911NF-16-1-0306) and by the AFOSR (contract FA9550-17-1-0327).  
+                                                                                                                                                                                                                                                                                                                                                                                ^
+Warning 8 in main.tex line 601: Wrong length of dash may have been used.
+The authors would like to thank Dr. Peter Fennell for his time and helpful advice on various technical topics, and Prof. Dr. Markus Strohmaier, Dr. Mathieu G\'enois and Reinhard Munz for their valuable comments and suggestions to improve the quality of the paper. This work was supported in part by the ARO (contract W911NF-16-1-0306) and by the AFOSR (contract FA9550-17-1-0327).  
+                                                                                                                                                                                                                                                                                                                                                                                   ^
+Warning 8 in main.tex line 601: Wrong length of dash may have been used.
+The authors would like to thank Dr. Peter Fennell for his time and helpful advice on various technical topics, and Prof. Dr. Markus Strohmaier, Dr. Mathieu G\'enois and Reinhard Munz for their valuable comments and suggestions to improve the quality of the paper. This work was supported in part by the ARO (contract W911NF-16-1-0306) and by the AFOSR (contract FA9550-17-1-0327).  
+                                                                                                                                                                                                                                                                                                                                                                                     ^
+Warning 1 in main.tex line 608: Command terminated with space.
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi  
+    ^
+Warning 1 in main.tex line 608: Command terminated with space.
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi  
+               ^
+Warning 1 in main.tex line 608: Command terminated with space.
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi  
+                             ^
+Warning 1 in main.tex line 608: Command terminated with space.
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi  
+                                  ^
+Warning 1 in main.tex line 608: Command terminated with space.
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi  
+                                             ^
+Warning 1 in main.tex line 609: Command terminated with space.
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi  
+    ^
+Warning 1 in main.tex line 609: Command terminated with space.
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi  
+             ^
+Warning 1 in main.tex line 609: Command terminated with space.
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi  
+                             ^
+Warning 1 in main.tex line 609: Command terminated with space.
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi  
+                                  ^
+Warning 1 in main.tex line 609: Command terminated with space.
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi  
+                                           ^
+Warning 1 in main.tex line 610: Command terminated with space.
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi  
+    ^
+Warning 1 in main.tex line 610: Command terminated with space.
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi  
+               ^
+Warning 1 in main.tex line 610: Command terminated with space.
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi  
+                             ^
+Warning 1 in main.tex line 610: Command terminated with space.
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi  
+                                  ^
+Warning 1 in main.tex line 610: Command terminated with space.
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi  
+                                             ^
+Warning 1 in main.tex line 611: Command terminated with space.
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi  
+    ^
+Warning 1 in main.tex line 611: Command terminated with space.
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi  
+                  ^
+Warning 1 in main.tex line 611: Command terminated with space.
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi  
+                             ^
+Warning 1 in main.tex line 611: Command terminated with space.
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi  
+                                  ^
+Warning 1 in main.tex line 611: Command terminated with space.
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi  
+                                                ^
+Warning 1 in main.tex line 612: Command terminated with space.
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi  
+    ^
+Warning 1 in main.tex line 612: Command terminated with space.
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi  
+              ^
+Warning 1 in main.tex line 612: Command terminated with space.
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi  
+                             ^
+Warning 1 in main.tex line 612: Command terminated with space.
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi  
+                                  ^
+Warning 1 in main.tex line 612: Command terminated with space.
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi  
+                                            ^
+Warning 1 in main.tex line 613: Command terminated with space.
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi  
+    ^
+Warning 1 in main.tex line 613: Command terminated with space.
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi  
+              ^
+Warning 1 in main.tex line 613: Command terminated with space.
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi  
+                             ^
+Warning 1 in main.tex line 613: Command terminated with space.
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi  
+                                  ^
+Warning 1 in main.tex line 613: Command terminated with space.
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi  
+                                            ^
+Warning 1 in main.tex line 614: Command terminated with space.
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi  
+    ^
+Warning 1 in main.tex line 614: Command terminated with space.
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi  
+              ^
+Warning 1 in main.tex line 614: Command terminated with space.
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi  
+                             ^
+Warning 1 in main.tex line 614: Command terminated with space.
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi  
+                                  ^
+Warning 1 in main.tex line 614: Command terminated with space.
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi  
+                                            ^
+Warning 1 in main.tex line 615: Command terminated with space.
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi  
+    ^
+Warning 1 in main.tex line 615: Command terminated with space.
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi  
+                      ^
+Warning 1 in main.tex line 615: Command terminated with space.
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi  
+                                 ^
+Warning 1 in main.tex line 615: Command terminated with space.
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi  
+                                      ^
+Warning 1 in main.tex line 615: Command terminated with space.
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi  
+                                                        ^
+Warning 1 in main.tex line 616: Command terminated with space.
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi  
+    ^
+Warning 1 in main.tex line 616: Command terminated with space.
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi  
+             ^
+Warning 1 in main.tex line 616: Command terminated with space.
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi  
+                             ^
+Warning 1 in main.tex line 616: Command terminated with space.
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi  
+                                  ^
+Warning 1 in main.tex line 616: Command terminated with space.
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi  
+                                           ^
+Warning 1 in main.tex line 628: Command terminated with space.
+\newblock \showarticletitle{Network Sampling Designs for Relational  
+         ^
+Warning 1 in main.tex line 630: Command terminated with space.
+\newblock  
+         ^
+Warning 1 in main.tex line 638: Command terminated with space.
+\newblock \showarticletitle{Accessing hidden and hard-to-reach populations:  
+         ^
+Warning 1 in main.tex line 640: Command terminated with space.
+\newblock \bibinfo{journal}{\emph{Social research update}}  
+         ^
+Warning 1 in main.tex line 643: Command terminated with space.
+\newblock  
+         ^
+Warning 1 in main.tex line 652: Command terminated with space.
+\newblock \showarticletitle{Inference in OSNs via Lightweight Partial Crawls}.  
+         ^
+Warning 1 in main.tex line 656: Command terminated with space.
+\newblock  
+         ^
+Warning 1 in main.tex line 663: Command terminated with space.
+\newblock \bibinfo{booktitle}{\emph{Network science}}.  
+         ^
+Warning 1 in main.tex line 664: Command terminated with space.
+\newblock \bibinfo{publisher}{Cambridge university press}.  
+         ^
+Warning 1 in main.tex line 665: Command terminated with space.
+\newblock  
+         ^
+Warning 1 in main.tex line 672: Command terminated with space.
+\newblock \bibinfo{booktitle}{\emph{Introduction to statistical relational  
+         ^
+Warning 1 in main.tex line 674: Command terminated with space.
+\newblock \bibinfo{publisher}{MIT press}.  
+         ^
+Warning 1 in main.tex line 675: Command terminated with space.
+\newblock  
+         ^
+Warning 1 in main.tex line 682: Command terminated with space.
+\newblock \showarticletitle{Snowball sampling}.  
+         ^
+Warning 1 in main.tex line 683: Command terminated with space.
+\newblock \bibinfo{journal}{\emph{The annals of mathematical statistics}}  
+         ^
+Warning 1 in main.tex line 685: Command terminated with space.
+\newblock  
+         ^
+Warning 1 in main.tex line 695: Command terminated with space.
+\newblock \showarticletitle{Visibility of minorities in social networks}.  
+         ^
+Warning 1 in main.tex line 696: Command terminated with space.
+\newblock \bibinfo{journal}{\emph{arXiv:1702.00150}} (\bibinfo{year}{2017}).  
+         ^
+Warning 1 in main.tex line 697: Command terminated with space.
+\newblock  
+         ^
+Warning 1 in main.tex line 705: Command terminated with space.
+\newblock \showarticletitle{Sampling from large graphs}. In  
+         ^
+Warning 1 in main.tex line 709: Command terminated with space.
+\newblock  
+         ^
+Warning 1 in main.tex line 717: Command terminated with space.
+\newblock \showarticletitle{Classification in Networked Data: A Toolkit and a  
+         ^
+Warning 1 in main.tex line 719: Command terminated with space.
+\newblock \bibinfo{journal}{\emph{J. Mach. Learn. Res.}}  \bibinfo{volume}{8}  
+         ^
+Warning 1 in main.tex line 721: Command terminated with space.
+\newblock  
+         ^
+Warning 8 in main.tex line 722: Wrong length of dash may have been used.
+\showISSN{1532-4435}  
+              ^
+Warning 1 in main.tex line 733: Command terminated with space.
+\newblock \showarticletitle{Influence maximization in complex networks through  
+         ^
+Warning 1 in main.tex line 735: Command terminated with space.
+\newblock \bibinfo{journal}{\emph{Nature}} \bibinfo{volume}{524},  
+         ^
+Warning 1 in main.tex line 737: Command terminated with space.
+\newblock  
+         ^
+Warning 1 in main.tex line 746: Command terminated with space.
+\newblock \bibinfo{booktitle}{\emph{The PageRank citation ranking: Bringing  
+         ^
+Warning 1 in main.tex line 748: Command terminated with space.
+\newblock \bibinfo{type}{{T}echnical {R}eport}. \bibinfo{institution}{Stanford  
+         ^
+Warning 12 in main.tex line 748: Interword spacing (`\ ') should perhaps be used.
+\newblock \bibinfo{type}{{T}echnical {R}eport}. \bibinfo{institution}{Stanford  
+                                               ^
+Warning 1 in main.tex line 750: Command terminated with space.
+\newblock  
+         ^
+Warning 1 in main.tex line 760: Command terminated with space.
+\newblock \showarticletitle{Collective Classification in Network Data}.  
+         ^
+Warning 1 in main.tex line 761: Command terminated with space.
+\newblock \bibinfo{journal}{\emph{AI Magazine}} \bibinfo{volume}{29},  
+         ^
+Warning 1 in main.tex line 763: Command terminated with space.
+\newblock  
+         ^
+Warning 1 in main.tex line 776: Command terminated with space.
+\newblock \showarticletitle{Social structure of Facebook networks}.  
+         ^
+Warning 1 in main.tex line 777: Command terminated with space.
+\newblock \bibinfo{journal}{\emph{Physica A: Statistical Mechanics and its  
+         ^
+Warning 13 in main.tex line 777: Intersentence spacing (`\@') should perhaps be used.
+\newblock \bibinfo{journal}{\emph{Physica A: Statistical Mechanics and its  
+                                           ^
+Warning 1 in main.tex line 780: Command terminated with space.
+\newblock  
+         ^
+Warning 1 in main.tex line 790: Command terminated with space.
+\newblock \showarticletitle{Sampling from Social Networks with Attributes}. In  
+         ^
+Warning 1 in main.tex line 796: Command terminated with space.
+\newblock  
+         ^
+Warning 8 in main.tex line 797: Wrong length of dash may have been used.
+\showISBNx{978-1-4503-4913-0}  
+              ^
+Warning 8 in main.tex line 797: Wrong length of dash may have been used.
+\showISBNx{978-1-4503-4913-0}  
+                ^
+Warning 8 in main.tex line 797: Wrong length of dash may have been used.
+\showISBNx{978-1-4503-4913-0}  
+                     ^
+Warning 8 in main.tex line 797: Wrong length of dash may have been used.
+\showISBNx{978-1-4503-4913-0}  
+                          ^
+Warning 1 in main.tex line 809: Command terminated with space.
+\newblock \showarticletitle{Should We Be Confident in Peer Effects Estimated  
+         ^
+Warning 8 in main.tex line 812: Wrong length of dash may have been used.
+  Montr{\'{e}}al, Qu{\'{e}}bec, Canada, May 15-18, 2017.}}  
+                                              ^
+Warning 1 in main.tex line 814: Command terminated with space.
+\newblock  
+         ^
+Warning 1 in main.tex line 827: Command terminated with space.
+\newblock \showarticletitle{Stochastic Gradient Descent for Relational Logistic  
+         ^
+Warning 1 in main.tex line 829: Command terminated with space.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1707.07716}}  
+         ^
+Warning 1 in main.tex line 831: Command terminated with space.
+\newblock  
+         ^
+Warning 1 in main.tex line 838: Command terminated with space.
+\newblock \showarticletitle{Investigating the impact of graph structure and  
+         ^
+Warning 1 in main.tex line 840: Command terminated with space.
+\newblock  (\bibinfo{year}{2016}).  
+         ^
+Warning 1 in main.tex line 841: Command terminated with space.
+\newblock  
+         ^

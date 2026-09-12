@@ -1,0 +1,3 @@
+planted=Lee08__ghost sites=[('manuscript.xtex', 170)]
+xtex new=[('XT1005', 'Lee08__ghost', 'manuscript.xtex', 170)]
+texlab new=[]

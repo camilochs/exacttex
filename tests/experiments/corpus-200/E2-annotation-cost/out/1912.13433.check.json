@@ -1,0 +1,25 @@
+{
+ "coverage": 0.030817,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "the document declares no bibliography"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "Main_SI_combined.xtex",
+    "offset": 3359,
+    "length": 13,
+    "line": 62,
+    "column": 146
+   },
+   "message": "citation checking unavailable: the document declares no bibliography",
+   "related": []
+  }
+ ]
+}

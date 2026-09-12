@@ -1,0 +1,28 @@
+tectonic pdf bytes=5321038
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=[] secs=7
+badness 1024) in paragraph at lines 6--7
+warning: content/manuscript/introduction:15: Underfull \hbox (badness 1152) in paragraph at lines 14--15
+warning: content/manuscript/framework:20: Underfull \hbox (badness 1189) in paragraph at lines 19--20
+warning: content/manuscript/implementation:69: Overfull \hbox (0.72954pt too wide) in paragraph at lines 58--69
+warning: content/manuscript/implementation:321: 
+Missing character: There is no ��� ("2019) in font t1-stixgeneral!
+warning: could not represent character "’" (0x2019) in font "t1-stixgeneral"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: content/manuscript/conclusion:6: Overfull \hbox (5.65552pt too wide) in paragraph at lines 5--6
+warning: main_submitted_20221228.bbl:95: 
+Missing character: There is no �� ("148) in font t1-stixgeneral!
+warning: could not represent character "ň" (0x148) in font "t1-stixgeneral"
+warning: main_submitted_20221228.bbl:189: Missing character: There is no �� ("148) in font t1-stixgeneral!
+warning: could not represent character "ň" (0x148) in font "t1-stixgeneral"
+warning: main_submitted_20221228.bbl:318: 
+Missing character: There is no ��� ("2013) in font t1-stixgeneral!
+warning: could not represent character "–" (0x2013) in font "t1-stixgeneral"
+warning: main_submitted_20221228.bbl:382: Underfull \hbox (badness 6332) in paragraph at lines 377--382
+warning: main_submitted_20221228.bbl:382: Underfull \hbox (badness 10000) in paragraph at lines 377--382
+warning: main_submitted_20221228.bbl:397: Underfull \hbox (badness 7238) in paragraph at lines 392--397
+warning: main_submitted_20221228.bbl:428: Underfull \hbox (badness 2617) in paragraph at lines 422--428
+warning: main_submitted_20221228.tex:164: Overfull \vbox (1.744pt too high) has occurred while \output is active
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

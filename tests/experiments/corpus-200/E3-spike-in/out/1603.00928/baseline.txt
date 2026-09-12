@@ -1,0 +1,5 @@
+tectonic pdf bytes=1914751
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'lipics-v2016.cls', 165, 'Undefined reference'), ('ERROR', 'trainyard.tex', 78, 'Undefined reference'), ('ERROR', 'trainyard.tex', 85, 'Undefined reference'), ('ERROR', 'trainyard.tex', 87, 'Undefined reference'), ('ERROR', 'trainyard.tex', 88, 'Undefined reference'), ('ERROR', 'trainyard.tex', 97, 'Undefined reference'), ('info', 'trainyard.tex', 176, 'Unused label')]
+tectonic exit=0 warnings=['AloupisDGV15', 'CasualReport', 'CondonFLS97', 'Eppstein', 'FlakeB02', 'GualaLN14', 'KendallPS08', 'Mehta14a', 'RatnerW90', 'Story', 'ToP', 'Viglietta14', 'Week', 'culberson1999sokoban', 'hearn2009games'] secs=4
+warning: errors were issued by BibTeX, but were ignored; use --print and/or --keep-logs for details.

@@ -1,0 +1,2 @@
+error: trainyard.tex:83: Illegal unit of measure (pt inserted)
+error: halted on potentially-recoverable error as specified

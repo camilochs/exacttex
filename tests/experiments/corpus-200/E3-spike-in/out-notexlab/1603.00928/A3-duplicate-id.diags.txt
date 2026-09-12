@@ -1,0 +1,3 @@
+planted=fig:tiles sites=[('trainyard.xtex', 126), ('trainyard.xtex', 82)]
+xtex new=[('XT1001', 'fig:tiles', 'trainyard.xtex', 126), ('XT1004', 'fig:tiles', 'trainyard.xtex', 108), ('XT1004', 'fig:tiles', 'trainyard.xtex', 162), ('XT1004', 'fig:tiles', 'trainyard.xtex', 163), ('XT1004', 'fig:tiles', 'trainyard.xtex', 165), ('XT1004', 'fig:tiles', 'trainyard.xtex', 167), ('XT1004', 'fig:tiles', 'trainyard.xtex', 183), ('XT1020', 'fig:tiles', 'trainyard.xtex', 108), ('XT1020', 'fig:tiles', 'trainyard.xtex', 162), ('XT1020', 'fig:tiles', 'trainyard.xtex', 163), ('XT1020', 'fig:tiles', 'trainyard.xtex', 165), ('XT1020', 'fig:tiles', 'trainyard.xtex', 167), ('XT1020', 'fig:tiles', 'trainyard.xtex', 183)]
+texlab new=[]

@@ -1,0 +1,10 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=[] secs=2
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: writeup.tex:240: Underfull \hbox (badness 10000) in paragraph at lines 237--240
+warning: writeup.tex:240: Underfull \vbox (badness 10000) has occurred while \output is active
+error: writeup.tex:240: Undefined control sequence
+error: halted on potentially-recoverable error as specified

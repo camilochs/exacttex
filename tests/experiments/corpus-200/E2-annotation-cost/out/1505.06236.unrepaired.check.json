@@ -1,0 +1,52 @@
+{
+ "coverage": 0.045556,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`mybibfile.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT1020",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "F1Eval",
+   "span": {
+    "file": "Pancreas_Segmentation_arXiv2016.xtex",
+    "offset": 63092,
+    "length": 4,
+    "line": 394,
+    "column": 970
+   },
+   "message": "prose says `Fig.` but `F1Eval` is a table",
+   "related": [
+    {
+     "message": "table declared here",
+     "span": {
+      "file": "Pancreas_Segmentation_arXiv2016.xtex",
+      "offset": 68668,
+      "length": 6,
+      "line": 427,
+      "column": 316
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "Pancreas_Segmentation_arXiv2016.xtex",
+    "offset": 9240,
+    "length": 10,
+    "line": 146,
+    "column": 991
+   },
+   "message": "citation checking unavailable: `mybibfile.bib` could not be read",
+   "related": []
+  }
+ ]
+}

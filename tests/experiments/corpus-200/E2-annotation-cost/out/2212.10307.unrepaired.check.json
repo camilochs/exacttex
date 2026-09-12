@@ -1,0 +1,41 @@
+{
+ "coverage": 0.027568,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`ref.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:fsmooth_core_syntax",
+   "span": {
+    "file": "overview.xtex",
+    "offset": 3439,
+    "length": 23,
+    "line": 50,
+    "column": 13
+   },
+   "message": "identifier `fig:fsmooth_core_syntax` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "related.xtex",
+    "offset": 203,
+    "length": 8,
+    "line": 5,
+    "column": 16
+   },
+   "message": "citation checking unavailable: `ref.bib` could not be read",
+   "related": []
+  }
+ ]
+}

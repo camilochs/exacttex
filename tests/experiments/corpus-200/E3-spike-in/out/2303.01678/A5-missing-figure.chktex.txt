@@ -1,0 +1,143 @@
+exit=2
+lines=1191
+unique_findings=309
+es). {\em Optik}, 50:269-278, 1978.  
+                                                                                                                                                                            ^
+Warning 8 in preprint.tex line 534: Wrong length of dash may have been used.
+\bibitem{Lehmann1981} L. Lehmann, R. Alvarez, A. Macovski, W. Brody, N. Pelc, S. J. Riederer, and A. Hall. Generalized image combinations in dual KVP digital radiography. {\em Medical Physics}, 8:659-667, 1981.  
+                                                                                                                                                                                                       ^
+Warning 8 in preprint.tex line 535: Wrong length of dash may have been used.
+\bibitem{Lambert1892} J. H. Lambert and E. Anding. Lamberts Photometrie: Photometria, Sive De Mensura et Gradibus Luminis, Colorum et Umbrae. {\em W. Engelmann},  1728-1777, 1892.  
+                                                                                                                                                                       ^
+Warning 13 in preprint.tex line 537: Intersentence spacing (`\@') should perhaps be used.
+\bibitem{Li2004} T. Li, X. Li, J. Wang, J. Wen, H. Lu, J. Hsieh, and Z. Liang. Nonlinear sinogram smoothing for low-dose x-ray CT. {\it IEEE Transactions on Nuclear Science}, 51:2505--2513, 2004.  
+                                                                                                                                 ^
+Warning 13 in preprint.tex line 538: Intersentence spacing (`\@') should perhaps be used.
+\bibitem{Liu2016} J. Liu, H. Ding, S. Molloi, X. Zhang, and H. Gao. TICMR: Total Image Constrained Material Reconstruction via nonlocal total variation regularization for spectral CT. {\it IEEE Transactions on Medical Imaging}, 35:2578--2586, 2016.  
+                                                                         ^
+Warning 13 in preprint.tex line 538: Intersentence spacing (`\@') should perhaps be used.
+\bibitem{Liu2016} J. Liu, H. Ding, S. Molloi, X. Zhang, and H. Gao. TICMR: Total Image Constrained Material Reconstruction via nonlocal total variation regularization for spectral CT. {\it IEEE Transactions on Medical Imaging}, 35:2578--2586, 2016.  
+                                                                                                                                                                                      ^
+Warning 13 in preprint.tex line 539: Intersentence spacing (`\@') should perhaps be used.
+\bibitem{Leng2019} S. Leng, M. Bruesewitz, S. Tao, K. Rajendran, A. F. Halaweish, N. G. Campeau \etal. Photon-counting detector CT: system design and clinical applications of an emerging technology. {\em Radiographics}, 39(3):729, 2019.  
+                                                                                                                                  ^
+Warning 8 in preprint.tex line 540: Wrong length of dash may have been used.
+\bibitem{Lee2019} S. M. Lee, T. Bayaraa, H. Jeong, C. M. Hyun, and J. K. Seo. A direct sinogram correction method to reduce metal-related beam-hardening in computed tomography. {\em IEEE Access}, 7:128828-128836, 2019.  
+                                                                                                                                                                                                            ^
+Warning 12 in preprint.tex line 541: Interword spacing (`\ ') should perhaps be used.
+\bibitem{Lin2019} W.-A. Lin, H. Liao, C. Peng, X. Sun, J. Zhang, J. Luo, R. Chellappa, and S. K. Zhou. Dudonet: Dual domain network for CT metal artifact reduction. \emph{in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition}, 10512--10521, 2019.  
+                                                                                                                                                                    ^
+Warning 8 in preprint.tex line 542: Wrong length of dash may have been used.
+\bibitem{lee2020automated} J. H. Lee, S. S. Han, Y. H. Kim, C. Lee, and I. Kim. Application of a fully deep convolutional neural network to the automation of tooth segmentation on panoramic radiographs. {\em Oral surgery, oral medicine, oral pathology and oral radiology}, 129(6):635-642, 2020.  
+                                                                                                                                                                                                                                                                                           ^
+Warning 8 in preprint.tex line 543: Wrong length of dash may have been used.
+\bibitem{li2021creating} Q. Li, M. Bi, K. Yang, and W. Liu. The creation of a virtual dental patient with dynamic occlusion and its application in esthetic dentistry. {\em The Journal of Prosthetic Dentistry}, 126(1):14-18, 2021.  
+                                                                                                                                                                                                                           ^
+Warning 13 in preprint.tex line 545: Intersentence spacing (`\@') should perhaps be used.
+\bibitem{Menvielle2006} N. Menvielle, Y. Goussard, D. Orban, and G. Soulez. Reduction of beam-hardening artifacts in X-ray CT. {\em 2005 IEEE Engineering in Medicine and Biology 27th Annual Conference}, 1865--1868, 2006.  
+                                                                                                                             ^
+Warning 1 in preprint.tex line 550: Command terminated with space.
+\bibitem{Natterer1986} F. Natterer. The Mathematics of Computerized Tomography. {\emph John Wiley $\&$ Sons}, 1986.  
+                                                                                      ^
+Warning 8 in preprint.tex line 551: Wrong length of dash may have been used.
+\bibitem{Neitzel1992} U. Neitzel. Grids or air gaps for scatter reduction in digital radiography: a model calculation. {\em Medical physics}, 19(2):475-481, 1992.  
+                                                                                                                                                       ^
+Warning 12 in preprint.tex line 553: Interword spacing (`\ ') should perhaps be used.
+\bibitem{Nowozin2016} S. Nowozin, B. Cseke, and R.Tomioka. f-gan: Training generative neural samplers using variational divergence minimization. {\em Advances in neural information processing systems}, 29, 2016.  
+                                                          ^
+Warning 8 in preprint.tex line 556: Wrong length of dash may have been used.
+\bibitem{Otsu1979} N. Otsu. A threshold selection method from gray-level histograms. {\em IEEE transactions on systems, man, and cybernetics}, 9(1):62-66, 1979.  
+                                                                                                                                                      ^
+Warning 8 in preprint.tex line 557: Wrong length of dash may have been used.
+\bibitem{Osher2005} S. Osher, M. Burger, D. Goldfarb, J. Xu, and W. Yin. An iterative regularization method for total variation-based image restoration. {\em Multiscale Modeling and Simulation}, 4(2):460-489, 2005.  
+                                                                                                                                                                                                           ^
+Warning 8 in preprint.tex line 558: Wrong length of dash may have been used.
+\bibitem{OSullivan2007} J. A. O'Sullivan and J. Benac. Alternating minimization algorithms for transmission tomography. {\it IEEE Transactions on Medical Imaging}, 26:283-297, 2007.  
+                                                                                                                                                                          ^
+Warning 6 in preprint.tex line 563: No italic correction (`\/') found.
+\bibitem{Park2015} H. S, Park, D. Hwang, and J. K. Seo. Metal artifact reduction for polychromatic X-ray CT based on a beam hardening corrector. {\it IEEE Transactions on Medical Imaging} 35:480--487, 2015.  
+                                                                                                                                                                                          ^
+Warning 13 in preprint.tex line 564: Intersentence spacing (`\@') should perhaps be used.
+\bibitem{Park2016b} H. S. Park, H. Gao, S. M. Lee, and J. K. Seo. Towards beam hardening correction for polychromatic X-ray CT. {\em Journal of Computational Mathematics}, 34:672--681, 2016.  
+                                                                                                                              ^
+Warning 8 in preprint.tex line 566: Wrong length of dash may have been used.
+\bibitem{Park2018} H. S. Park, S. M. Lee, H. P. Kim, J. K. Seo, and Y. E. Chung. CT sinogram-consistency learning for metal-induced beam hardening correction. {\em Medical physics}, 45(12):5376-5384, 2018.  
+                                                                                                                                                                                                 ^
+Warning 13 in preprint.tex line 567: Intersentence spacing (`\@') should perhaps be used.
+\bibitem{Park2019} H. S. Park, J. Baek, K. You, J. K. Choi, J. K. Seo. Unpaired image denoising using a generative adversarial network in X-ray CT. {\em IEEE Access}, 7:110414--110425, 2019.  
+                                                                                                                                                  ^
+Warning 13 in preprint.tex line 569: Intersentence spacing (`\@') should perhaps be used.
+\bibitem{Park2022} H. S. Park, J. K. Seo, C. M. Hyun, S. M. Lee, and K. Jeon, A fidelity-embedded learning for metal artifact reduction in dental CBCT. {\em Medical Physics}, 49(8), 5195--5205, 2022.  
+                                                                                                                                                      ^
+Warning 12 in preprint.tex line 572: Interword spacing (`\ ') should perhaps be used.
+\bibitem{Radon1917} J. H. Radon. Uber die Bestimmung von Funktionen durch ihre Integralwerte l\"angs gewisser Mannigfaltig. {\em Ber. vor S\"achs. Akad. Wiss.}, 69:262--77, 1917.  
+                                                                                                                                     ^
+Warning 8 in preprint.tex line 575: Wrong length of dash may have been used.
+\bibitem{ronneberger2015u} O. Ronneberger, P. Fischer, and T. Brox. U-net: Convolutional networks for biomedical image segmentation. {\em In International Conference on Medical image computing and computer-assisted intervention}, Springer, Cham:234-241, 2015.  
+                                                                                                                                                                                                                                                        ^
+Warning 8 in preprint.tex line 576: Wrong length of dash may have been used.
+\bibitem{rusu2009fast} R. B. Rusu, N. Blodow, and M. Beetz. Fast point feature histograms (FPFH) for 3D registration. {\em In 2009 IEEE international conference on robotics and automation}, 3212-3217, 2009.  
+                                                                                                                                                                                                  ^
+Warning 8 in preprint.tex line 577: Wrong length of dash may have been used.
+\bibitem{redmon2016you} J. Redmon, S. Divvala, R. Girshick, and A. Farhadi. You only look once: Unified, real-time object detection. {\em In Proceedings of the IEEE conference on computer vision and pattern recognition}, 779-788, 2016.  
+                                                                                                                                                                                                                                ^
+Warning 8 in preprint.tex line 578: Wrong length of dash may have been used.
+\bibitem{rao2020symmetric} Y. Rao, Y. Wang, F. Meng, J. Pu, J. Sun, and Q. Wang. A symmetric fully convolutional residual network with DCRF for accurate tooth segmentation. {\em IEEE Access}, 8:92028-92038, 2020.  
+                                                                                                                                                                                                       ^
+Warning 13 in preprint.tex line 580: Intersentence spacing (`\@') should perhaps be used.
+\bibitem{Stonestrom1981} J. P. Stonestrom, R. E. Alvarez and A. Macovski. A framework for spectral artifact corrections in X-ray CT. {\em IEEE Trans. Biomed. Eng.}, 28(2):128--141, 1981.  
+                                                                                                                                   ^
+Warning 8 in preprint.tex line 581: Wrong length of dash may have been used.
+\bibitem{Smith1985} K. T. Smith, and F. Keinert. Mathematical foundations of computed tomography. {\em Applied Optics}, 24(23):3950-3957, 1985.  
+                                                                                                                                   ^
+Warning 6 in preprint.tex line 582: No italic correction (`\/') found.
+\bibitem{Samet1988} H. Samet and M. Tamminen. Efficient component labeling of images of arbitrary dimension represented by linear bintrees. {\em IEEE transactions on pattern analysis and machine intelligence} 10.4:579-586, 1988.  
+                                                                                                                                                                                                               ^
+Warning 8 in preprint.tex line 582: Wrong length of dash may have been used.
+\bibitem{Samet1988} H. Samet and M. Tamminen. Efficient component labeling of images of arbitrary dimension represented by linear bintrees. {\em IEEE transactions on pattern analysis and machine intelligence} 10.4:579-586, 1988.  
+                                                                                                                                                                                                                         ^
+Warning 8 in preprint.tex line 584: Wrong length of dash may have been used.
+\bibitem{Shikhaliev2005} P. M. Shikhaliev, T. Xu, and S. Molloi. Photon counting computed tomography: concept and initial results. {\em Medical physics}, 32(2):427-436, 2005.  
+                                                                                                                                                                   ^
+Warning 13 in preprint.tex line 585: Intersentence spacing (`\@') should perhaps be used.
+\bibitem{Sidky2011} E. Y. Sidky, Y. Duchin, X. Pan, and C. Ullberg. A constrained, total-variation minimization algorithm for low-intensity x-ray CT. {\em Medical physics}, 38(S1):S117-S125, 2011.  
+                                                                                                                                                    ^
+Warning 8 in preprint.tex line 590: Wrong length of dash may have been used.
+\bibitem{Ulyanov2020} D. Ulyanov, A. Vedaldi, and V. Lempitsky. Deep image prior. {\em In Proceedings of the IEEE conference on computer vision and pattern recognition}, 9446-9454, 2018.  
+                                                                                                                                                                              ^
+Warning 8 in preprint.tex line 596: Wrong length of dash may have been used.
+\bibitem{Wang2008} Y. Wang, J. Yang, W. Yin, and Y. Zhang. A new alternating minimization algorithm for total variation image reconstruction. {\it SIAM Journal on Imaging Science}, 1:248 -- 272, 2008.  
+                                                                                                                                                                                           ^^
+Warning 13 in preprint.tex line 598: Intersentence spacing (`\@') should perhaps be used.
+\bibitem{Willemink2018} M. J. Willemink, M. Persson, A. Pourmorteza, N. J. Pelc, and D. Fleischmann. Photon-counting CT: technical principles and clinical prospects. {\em Radiology}, 289(2):293-312, 2018.  
+                                                                                                                       ^
+Warning 8 in preprint.tex line 598: Wrong length of dash may have been used.
+\bibitem{Willemink2018} M. J. Willemink, M. Persson, A. Pourmorteza, N. J. Pelc, and D. Fleischmann. Photon-counting CT: technical principles and clinical prospects. {\em Radiology}, 289(2):293-312, 2018.  
+                                                                                                                                                                                                 ^
+Warning 12 in preprint.tex line 603: Interword spacing (`\ ') should perhaps be used.
+\bibitem{Yu2020} L. Yu, Z. Zhang, X. Li, and L. Xing. Deep Sinogram Completion with Image Prior for Metal Artifact Reduction in CT Images. \emph{IEEE Transactions on Medical Imaging}, 40:228--238, 2020.  
+                                                                                                                                          ^
+Warning 12 in preprint.tex line 604: Interword spacing (`\ ') should perhaps be used.
+\bibitem{Yun2022} H. S. Yun, C. M. Hyun, S. H. Baek, S.-H. Lee, and J. K. Seo. Automated 3D cephalometric landmark identification using computerized tomography. \emph{Plos One}, 2022.  
+                                                                                                                                                                ^
+Warning 13 in preprint.tex line 609: Intersentence spacing (`\@') should perhaps be used.
+Y. Zhang, H. Yan, X. Jia, J. Yang, S. B. Jiang, and X. Mou. A hybrid metal artifact reduction algorithm for x-ray CT. {\emph Medical Physics}, 40(4):041910, 2013.  
+                                                                                                                    ^
+Warning 1 in preprint.tex line 609: Command terminated with space.
+Y. Zhang, H. Yan, X. Jia, J. Yang, S. B. Jiang, and X. Mou. A hybrid metal artifact reduction algorithm for x-ray CT. {\emph Medical Physics}, 40(4):041910, 2013.  
+                                                                                                                            ^
+Warning 8 in preprint.tex line 610: Wrong length of dash may have been used.
+\bibitem{zimmermann2015intraoral} M. Zimmermann, A. Mehl, W. H. M\"{o}rmann, and S. Reich. Intraoral scanning systems-a current overview. {\em International journal of computerized dentistry}, 18(2):101-129, 2015.  
+                                                                                                                                                                                                          ^
+Warning 8 in preprint.tex line 614: Wrong length of dash may have been used.
+\bibitem{Zhang2018-1} Y. Zhang, and H. Yu. Convolutional neural network based metal artifact reduction in x-ray computed tomography. { \em IEEE transactions on medical imaging}, 37(6):1370-1381, 2018.  
+                                                                                                                                                                                            ^
+Warning 17 in preprint.tex line 621: Number of `(' doesn't match the number of `)'!
+
+
+Warning 17 in preprint.tex line 621: Number of `[' doesn't match the number of `]'!
+
+
+Warning 17 in preprint.tex line 621: Number of `{' doesn't match the number of `}'!
+
+

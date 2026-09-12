@@ -1,0 +1,25 @@
+{
+ "coverage": 0.038047,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`tang.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "tang.xtex",
+    "offset": 641,
+    "length": 7,
+    "line": 19,
+    "column": 17
+   },
+   "message": "citation checking unavailable: `tang.bib` could not be read",
+   "related": []
+  }
+ ]
+}

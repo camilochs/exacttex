@@ -1,0 +1,7 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=[] secs=2
+warning: lineno.sty:296: Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+error: pgfsys-pdftex.def:385: Undefined control sequence
+error: halted on potentially-recoverable error as specified

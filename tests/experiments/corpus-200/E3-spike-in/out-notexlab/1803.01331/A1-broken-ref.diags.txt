@@ -1,0 +1,3 @@
+planted=Table:1__ghost sites=[('Manuscript1.xtex', 100)]
+xtex new=[('XT1003', 'Table:1__ghost', 'Manuscript1.xtex', 100)]
+texlab new=[]

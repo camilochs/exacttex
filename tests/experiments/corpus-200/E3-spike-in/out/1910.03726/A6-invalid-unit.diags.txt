@@ -1,0 +1,3 @@
+planted=fig:planted_unit sites=[('mgrit_cg_selection.xtex', 99)]
+xtex new=[('XT1007', '', 'mgrit_cg_selection.xtex', 99)]
+texlab new=[]

@@ -1,0 +1,12 @@
+9 claims: 0 fresh and carried over, 9 to verify
+10.5555/944919.944937 · settled
+augenstein-etal-2017-semeval · settled
+augenstein2017multi · settled
+beltagy-etal-2019-scibert · settled
+ganin2015unsupervised · settled
+goodfellow2015explaining · settled
+lample-etal-2016-neural · settled
+luan2018multitask · settled
+qasemizadeh-schumann-2016-acl · settled
+network: 6 requests (crossref 5, openalex 1) · 0 retries · 82127 bytes down · 7 fetched, 0 carried over, 2 unanswered
+record: 9 claims → .xtexverified

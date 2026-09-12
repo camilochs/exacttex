@@ -1,0 +1,169 @@
+{
+ "coverage": 0.020453,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`REFERENCES.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "cor:kncover",
+   "span": {
+    "file": "BicoloringCover_journal_19.02.15.xtex",
+    "offset": 46354,
+    "length": 11,
+    "line": 1047,
+    "column": 19
+   },
+   "message": "identifier `cor:kncover` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "thm:complete",
+   "span": {
+    "file": "BicoloringCover_journal_19.02.15.xtex",
+    "offset": 54961,
+    "length": 12,
+    "line": 1205,
+    "column": 19
+   },
+   "message": "identifier `thm:complete` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "thm:complete",
+   "span": {
+    "file": "BicoloringCover_journal_19.02.15.xtex",
+    "offset": 58492,
+    "length": 12,
+    "line": 1294,
+    "column": 14
+   },
+   "message": "identifier `thm:complete` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "cor:cgraph",
+   "span": {
+    "file": "BicoloringCover_journal_19.02.15.xtex",
+    "offset": 75719,
+    "length": 10,
+    "line": 1710,
+    "column": 23
+   },
+   "message": "identifier `cor:cgraph` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "thm:complete",
+   "span": {
+    "file": "BicoloringCover_journal_19.02.15.xtex",
+    "offset": 84145,
+    "length": 12,
+    "line": 1879,
+    "column": 142
+   },
+   "message": "identifier `thm:complete` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "thm:complete",
+   "span": {
+    "file": "BicoloringCover_journal_19.02.15.xtex",
+    "offset": 96713,
+    "length": 12,
+    "line": 2183,
+    "column": 24
+   },
+   "message": "identifier `thm:complete` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "thm:complete",
+   "span": {
+    "file": "BicoloringCover_journal_19.02.15.xtex",
+    "offset": 108654,
+    "length": 12,
+    "line": 2455,
+    "column": 17
+   },
+   "message": "identifier `thm:complete` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "thm:complete",
+   "span": {
+    "file": "BicoloringCover_journal_19.02.15.xtex",
+    "offset": 119800,
+    "length": 12,
+    "line": 2719,
+    "column": 46
+   },
+   "message": "identifier `thm:complete` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "thm:complete",
+   "span": {
+    "file": "BicoloringCover_journal_19.02.15.xtex",
+    "offset": 137635,
+    "length": 12,
+    "line": 3089,
+    "column": 39
+   },
+   "message": "identifier `thm:complete` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "BicoloringCover_journal_19.02.15.xtex",
+    "offset": 10463,
+    "length": 8,
+    "line": 259,
+    "column": 24
+   },
+   "message": "citation checking unavailable: `REFERENCES.bib` could not be read",
+   "related": []
+  }
+ ]
+}

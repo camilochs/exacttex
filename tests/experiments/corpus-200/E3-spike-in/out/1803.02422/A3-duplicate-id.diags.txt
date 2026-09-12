@@ -1,0 +1,3 @@
+planted=background sites=[('main.xtex', 125), ('main.xtex', 90)]
+xtex new=[('XT1001', 'background', 'main.xtex', 125)]
+texlab new=[('ERROR', 'main.tex', 90, 'Duplicate label'), ('ERROR', 'main.tex', 125, 'Duplicate label')]

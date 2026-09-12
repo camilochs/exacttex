@@ -1,0 +1,452 @@
+pdf=1
+exit=0
+lines=1283
+unique_findings=0
+atbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi6.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/homebrew/Cellar/texlive/202
+60301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/
+Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
+b></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr9.pfb></opt/homebrew/Cellar/texlive/20260301/shar
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></opt/homebrew/Cellar/tex
+live/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/h
+omebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/cm-super/sfbx0800.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/cm-super/sfbx1000.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></opt/homebrew
+/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.
+pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/
+cm-super/sfrm0800.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/f
+onts/type1/public/cm-super/sfrm0900.pfb></opt/homebrew/Cellar/texlive/20260301/
+share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></opt/homebrew/Cellar
+/texlive/20260301/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></o
+pt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm-supe
+r/sfti0800.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/ty
+pe1/public/cm-super/sfti0900.pfb></opt/homebrew/Cellar/texlive/20260301/share/t
+exmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></opt/homebrew/Cellar/texliv
+e/20260301/share/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></opt/home
+brew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm-super/sftt0
+900.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/pub
+lic/cm-super/sftt1000.pfb>
+Output written on main.pdf (6 pages, 460747 bytes).
+Transcript written on main.log.
+sh: line 1: 41689 Filesize limit exceeded: 25   pdflatex -interaction nonstopmode --jobname "main" '\RequirePackage{chklref}\input' "{main.tex}" 2>&1
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./main.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/elsarticle/el
+sarticle.cls
+Document Class: elsarticle 2026/01/09, 3.5: Elsevier Ltd
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fontenc.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3kernel/expl
+3.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3packages/xp
+arse/xparse.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/etoolbox/etoo
+lbox.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/article.
+cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/size10.c
+lo))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def))) (./main.spl)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/natbib/natbib
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/geometry/geom
+etry.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/ifvte
+x.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iftex
+.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fleqn.cl
+o))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amss
+ymb.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amsf
+onts.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/epsf
+ig.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/subeqnarray/s
+ubeqnarray.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/multirow/mult
+irow.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pstricks/pstr
+icks.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/xcolor/xcolor
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/xkeyval/pst
+-xkey.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/xkeyval/xkeyv
+al.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/xkeyval/xke
+yval.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/xkeyval/xkv
+utils.tex))))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pstricks/ps
+tricks.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pstricks/ps
+t-fp.tex `pst-fp' v0.06, 2020/11/20 (hv))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/utilities
+/pgffor.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/utilities
+/pgfrcs.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfutil-common.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfutil-latex.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfrcs.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/pgf.rev
+ision.tex)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/utilities
+/pgfkeys.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfkeys.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfkeyslibraryfiltered.code.tex)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/math/pgfm
+ath.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmath.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathutil.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathparser.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.basic.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.trigonometric.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.random.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.comparison.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.base.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.round.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.misc.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.integerarithmetics.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathcalc.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfloat.code.tex)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgffor.code.tex))
+`PSTricks' v3.22A  <2025/12/13> (tvz,hv)
+--- We are running latex or xelatex ---
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pstricks/ps
+tricks.con)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pstricks/ps
+tricks-color.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pstricks/ps
+tricks-arrows.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pstricks/ps
+tricks-dots.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pstricks/ps
+t-code-grid.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pstricks/ps
+t-code-box.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pstricks/ps
+t-code-arc.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pstricks/ps
+t-code-circle_ellipse.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pstricks/ps
+t-code-ref_rot.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pstricks/ps
+t-code-put.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pstricks/ps
+t-code-pspicture.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pstricks/ps
+tricks.con))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pstricks/ps
+t-fp.tex `pst-fp' v0.06, 2020/11/20 (hv)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/colortbl/colo
+rtbl.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/array.s
+ty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/bm.sty)
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/units/units.s
+ty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ifthen.s
+ty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/units/nicefra
+c.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/tabular
+x.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/booktabs/book
+tabs.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/algorithms/al
+gorithm.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/float/float.s
+ty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/algorithms/al
+gorithmic.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsma
+th.sty
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amste
+xt.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsge
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsbs
+y.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsop
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/subfigure/sub
+figure.sty
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/subfigure/sub
+figure.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/soul/soul.s
+ty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/soul/soul-o
+ri.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/infwarerr/i
+nfwarerr.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/etexcmds/et
+excmds.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/verbati
+m.sty)
+
+LaTeX Warning: \include should only be used after \begin{document} on input lin
+e 16.
+
+(./macpap2.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hype
+rref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/kvdefinekey
+s/kvdefinekeys.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdfescape/p
+dfescape.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdftexcmds/
+pdftexcmds.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hycolor/hycol
+or.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/name
+ref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/refcount/refc
+ount.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/gettitlestr
+ing/gettitlestring.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/stringenc/s
+tringenc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/pd1e
+nc.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/intcalc/int
+calc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/puen
+c.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/url/url.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bitset/bits
+et.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bigintcalc/
+bigintcalc.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hpdf
+tex.def
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/rerunfilechec
+k/rerunfilecheck.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/uniquecount
+er/uniquecounter.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/paralist/para
+list.sty) (./main.aux)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(./main.out) (./main.out)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+
+Package natbib Warning: Citation `nestor2004__ghost' on page 1 undefined on inp
+ut line 118.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 140.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cnotenum' on input line 140.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 140.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@corref' on input line 140.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 140.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\comma' on input line 140.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 140.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@fnmark' on input line 140.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 140.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\comma' on input line 140.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 140.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@fnmark' on input line 140.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 140.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\comma' on input line 140.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 140.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@fnmark' on input line 140.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 140.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\comma' on input line 140.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 140.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@fnmark' on input line 140.
+
+[1
+Non-PDF special ignored!
+<special> header=pstricks.pro
+Non-PDF special ignored!
+<special> header=pst-algparser.pro
+Non-PDF special ignored!
+<special> header=pst-tools.pro
+Non-PDF special ignored!
+<special> header=pst-dots.pro
+{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updmap
+/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/d
+vips/cm-super/cm-super-t1.enc}
+Non-PDF special ignored!
+<special> ps: /pssetRGBcolor /setrgbcolor load def /pssetCMYKcolor /setcmyk...
+Non-PDF special ignored!
+<special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
+Non-PDF special ignored!
+<special> ps:tx@Dict begin  gsave STV CP T /ps@refangle 0.  def grestore  e...
+]************************************
+** Labels in starred environments **
+************************************
+
+*******************
+** Unused Labels **
+*******************
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

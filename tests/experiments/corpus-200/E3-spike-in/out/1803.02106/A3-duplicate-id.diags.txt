@@ -1,0 +1,3 @@
+planted=Payload sites=[('galaxies-273475-english.xtex', 161), ('galaxies-273475-english.xtex', 149)]
+xtex new=[('XT1001', 'Payload', 'galaxies-273475-english.xtex', 161)]
+texlab new=[('ERROR', 'galaxies-273475-english.tex', 149, 'Duplicate label'), ('ERROR', 'galaxies-273475-english.tex', 161, 'Duplicate label')]

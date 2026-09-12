@@ -1,0 +1,3 @@
+planted=fig:planted_missing sites=[('writeup.xtex', 237)]
+xtex new=[('XT1006', 'figures/planted_ghost.pdf', 'writeup.xtex', 237)]
+texlab new=[]

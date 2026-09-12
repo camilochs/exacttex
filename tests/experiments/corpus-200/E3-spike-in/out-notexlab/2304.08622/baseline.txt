@@ -1,0 +1,26 @@
+tectonic pdf bytes=10000975
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=[] secs=3
+ing (1.5).
+warning: multiscale.bbl:74: Overfull \vbox (6.48044pt too high) has occurred while \output is active
+warning: multiscale.bbl:74: Overfull \vbox (6.48044pt too high) has occurred while \output is active
+warning: multiscale.bbl:294: Underfull \hbox (badness 1748) in paragraph at lines 287--294
+warning: multiscale.bbl:467: Underfull \hbox (badness 4229) in paragraph at lines 463--467
+warning: multiscale.bbl:1065: Underfull \hbox (badness 2726) in paragraph at lines 1057--1065
+warning: multiscale.bbl:1101: Underfull \hbox (badness 3849) in paragraph at lines 1096--1101
+warning: Trying to include PDF file with version (1.7), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.7), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: multiscale.bbl:74: Overfull \vbox (6.48044pt too high) has occurred while \output is active
+warning: multiscale.bbl:74: Overfull \vbox (6.48044pt too high) has occurred while \output is active
+warning: multiscale.bbl:294: Underfull \hbox (badness 1748) in paragraph at lines 287--294
+warning: multiscale.bbl:467: Underfull \hbox (badness 4229) in paragraph at lines 463--467
+warning: multiscale.bbl:1065: Underfull \hbox (badness 2726) in paragraph at lines 1057--1065
+warning: multiscale.bbl:1101: Underfull \hbox (badness 3849) in paragraph at lines 1096--1101
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: Trying to include PDF file with version (1.7), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.7), which is newer than current output PDF setting (1.5).
+warning: PDF file is tagged... Ignoring tags.
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: PDF file is tagged... Ignoring tags.

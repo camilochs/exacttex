@@ -1,0 +1,136 @@
+exit=2
+lines=1209
+unique_findings=370
+                                                                                                                                 ^
+Warning 10 in CTR-Spectr-arXive.tex line 1927: Solo `}' found.
+         \newline {\bf (b)} The  original charge distribution $\rho(t)$ (red curve) and the  reconstruction (blue dots) using the reconstruction  phase Eq.\,(\ref{reconstr-phase}), i.e.  the difference between Kramers-Kronig phase and  Blaschke phase (computed for $N_B=10$ zeros). As a  reminder,  the Kramers-Kronig reconstruction without Blaschke phase is also shown here by the green dotted curve (labelled $N_B=0$).}}  
+                                                                                                                                                                                                                                                                                                                                                                                                                                     ^
+Warning 24 in CTR-Spectr-arXive.tex line 1928: Delete this space to maintain correct pagereferences.
+\label{two-cos2-contour}  
+^
+Warning 45 in CTR-Spectr-arXive.tex line 1935: Use \[ ... \] instead of $$ ... $$.
+$$\Phi_{\rm B}(\omega)=\sum_{n=1}^{N_B} \Phi_{B,n}(\omega)\,,~~~\Phi_{\rm rec}(\omega)=\Phi_{\rm KK}(\omega)-\Phi_{\rm B}(\omega)\,.$$    
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 24 in CTR-Spectr-arXive.tex line 1942: Delete this space to maintain correct pagereferences.
+\label{two-cos2-nzeros}  
+^
+Warning 2 in CTR-Spectr-arXive.tex line 1946: Non-breaking space (`~') should have been used.
+We consider the superposition of three  cosine-squared pulses  of equal width and with non-uniform spacing which has already been shown in Fig.\,\ref{3Cos2-KK-nonequi}. First we take the case that the largest peak is at the front.  Then the  KK phase yields a perfect reconstruction, see Figs.\,\ref{3Cos2-KK-nonequi}a and \ref{3Cos2-nonequi-FF-front}a. This can be understood as follows: The complex form factor has no zeros in the upper half of the complex frequency plane, hence the Blaschke phase is zero and the reconstruction phase is identical with the KK phase.  
+                                                                                                                                                                                                                                                                                                                                  ^
+Warning 24 in CTR-Spectr-arXive.tex line 1953: Delete this space to maintain correct pagereferences.
+\label{3Cos2-nonequi-FF-front}  
+^
+Warning 24 in CTR-Spectr-arXive.tex line 1962: Delete this space to maintain correct pagereferences.
+\label{3Cos2-nonequi-FF-center}  
+^
+Warning 24 in CTR-Spectr-arXive.tex line 1970: Delete this space to maintain correct pagereferences.
+\label{3Cos2-nonequi-center-KKB}  
+^
+Warning 45 in CTR-Spectr-arXive.tex line 1982: Use \[ ... \] instead of $$ ... $$.
+$${\cal F}_1(\hat{\omega})=\int_{t=-\infty}^{t=+\infty}\rho_1(t) \exp(+i\,\hat{\omega}t)dt~~\Rightarrow~~{\cal F}_1(-\hat{\omega})=\int_{t=-\infty}^{t=+\infty}\rho_1(t) \exp(-i\,\hat{\omega}t)dt=\int_{t=-\infty}^{t=+\infty}\rho_2(-t) \exp(-i\,\hat{\omega}t)dt\,.$$  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 45 in CTR-Spectr-arXive.tex line 1984: Use \[ ... \] instead of $$ ... $$.
+$${\cal F}_1(-\hat{\omega})=\int_{t'=+\infty}^{t'=-\infty}\rho_2(t') \exp(+i\,\hat{\omega}t')(-dt')  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 24 in CTR-Spectr-arXive.tex line 2005: Delete this space to maintain correct pagereferences.
+\label{2Cos2-front-rear}  
+^
+Warning 24 in CTR-Spectr-arXive.tex line 2012: Delete this space to maintain correct pagereferences.
+\label{2Cos2-centered-FF}  
+^
+Warning 13 in CTR-Spectr-arXive.tex line 2030: Intersentence spacing (`\@') should perhaps be used.
+\section{Appendix C:  Gaussians and truncated Gaussians}  
+                   ^
+Warning 45 in CTR-Spectr-arXive.tex line 2038: Use \[ ... \] instead of $$ ... $$.
+$$  
+^^^^^^
+Warning 3 in CTR-Spectr-arXive.tex line 2040: You should enclose the previous parenthesis with `{}'.
+\rho_{\rm trunc}(t)=\frac{1}{\sqrt{2\pi}\sigma}\exp\left(\frac{-(t-\tau)^2}{2 \sigma^2} \right)  ~~~\mathrm{for}~~~t \ge 0$$  
+                                                                       ^
+Warning 24 in CTR-Spectr-arXive.tex line 2049: Delete this space to maintain correct pagereferences.
+\label{truncatedGauss-C}  
+^
+Warning 45 in CTR-Spectr-arXive.tex line 2067: Use \[ ... \] instead of $$ ... $$.
+$$I_{\rm trunc}(\omega)=-\frac{\ln(| {\cal F}_{\rm trunc}(\omega)|) } {\omega^2}\,.$$  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 45 in CTR-Spectr-arXive.tex line 2069: Use \[ ... \] instead of $$ ... $$.
+$$I_{\rm Gauss}(\omega)=-\frac{\ln(| {\cal F}_{\rm Gauss}(\omega)|) } {\omega^2}=-\frac{-\omega^2 \sigma^2 } {2\omega^2}  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 24 in CTR-Spectr-arXive.tex line 2088: Delete this space to maintain correct pagereferences.
+                $\Im({\cal F}(\hat{\omega}))=0$ (yellow) in the complex         $\hat{\omega}$ plane.  There are a huge number of densely spaced complex zeros (black dots).}}                  \label{2Gauss-difsig}  
+                                                                                                                                                                                               ^
+Warning 45 in CTR-Spectr-arXive.tex line 2093: Use \[ ... \] instead of $$ ... $$.
+$$\rho(t)=\frac{A_1}{\sqrt{2\pi}\,\sigma_1}\exp\left(-\frac{t^2}{2 \sigma_1^2}\right)+  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 45 in CTR-Spectr-arXive.tex line 2097: Use \[ ... \] instead of $$ ... $$.
+$${\cal F}(\omega)=A_1\exp\left(-\frac{\sigma_1^2 \omega^2}{2 }\right)  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 24 in CTR-Spectr-arXive.tex line 2108: Delete this space to maintain correct pagereferences.
+                \label{2Gauss-trunc}  
+               ^
+Warning 45 in CTR-Spectr-arXive.tex line 2128: Use \[ ... \] instead of $$ ... $$.
+$${\cal F}_{\rm trunc}(\omega)=A_1 {\cal F}_1(\omega)+A_2 {\cal F}_2(\omega)\,.$$  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 12 in CTR-Spectr-arXive.tex line 2129: Interword spacing (`\ ') should perhaps be used.
+It is very instructive to study the contour line pattern  in the complex        $\hat{\omega}$ plane  for various values of the cutoff time $T$. \vspace{1mm}  
+                                                                                                                                                ^
+Warning 9 in CTR-Spectr-arXive.tex line 2143: `}' expected, found `)'.
+         $\Im({\cal F}(\hat{\omega}))=0$        (yellow) in the complex         frequency plane. The black circles indicate the crossing points where the  form factor ${\cal F}(\hat{\omega}))$ vanishes. {\bf (b)}    The  reconstruction  based on  the Kramers-Kronig phase and the Blaschke phase (blue curve) is in rather good agreement with the original charge distribution $\rho(t)$ (red curve).  Shown is also the Kramers-Kronig reconstruction without Blaschke phase (green curve) which fails to reproduce the original.}}  
+                                                                                                                                                                                              ^
+Warning 10 in CTR-Spectr-arXive.tex line 2143: Solo `}' found.
+         $\Im({\cal F}(\hat{\omega}))=0$        (yellow) in the complex         frequency plane. The black circles indicate the crossing points where the  form factor ${\cal F}(\hat{\omega}))$ vanishes. {\bf (b)}    The  reconstruction  based on  the Kramers-Kronig phase and the Blaschke phase (blue curve) is in rather good agreement with the original charge distribution $\rho(t)$ (red curve).  Shown is also the Kramers-Kronig reconstruction without Blaschke phase (green curve) which fails to reproduce the original.}}  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^
+Warning 24 in CTR-Spectr-arXive.tex line 2144: Delete this space to maintain correct pagereferences.
+\label{doubleGauss-trunc-KKB}  
+^
+Warning 13 in CTR-Spectr-arXive.tex line 2161: Intersentence spacing (`\@') should perhaps be used.
+\section{Appendix D:  Propagation of  Radiation by  Fourier Transformation}  
+                   ^
+Warning 2 in CTR-Spectr-arXive.tex line 2163: Non-breaking space (`~') should have been used.
+The analytical and semi-analytical computations in Section~\ref{TransRad} are based on cylindrical symmetry. This symmetry  is not present in many practical cases, for example when one wants to compute transition radiation from a rectangular or asymmetric screen.  The numerical two-dimensional Fourier transformation permits to deal with such situations and offers the additional advantage that the radiation can be propagated through a whole optical system consisting of drift spaces, apertures and focusing elements such as parabolic or elliptic mirrors. The method is explained at length in Ref.\,\cite{Casalbuoni-I}, see also Refs.\,\cite{Goodman}, \cite{Lawrence}. Here we present the main ideas and formulas. A Mathematica\texttrademark \, code {\it THzTransport} \cite{THzTransport}  was developed for carrying out this analysis.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
+Warning 1 in CTR-Spectr-arXive.tex line 2163: Command terminated with space.
+The analytical and semi-analytical computations in Section~\ref{TransRad} are based on cylindrical symmetry. This symmetry  is not present in many practical cases, for example when one wants to compute transition radiation from a rectangular or asymmetric screen.  The numerical two-dimensional Fourier transformation permits to deal with such situations and offers the additional advantage that the radiation can be propagated through a whole optical system consisting of drift spaces, apertures and focusing elements such as parabolic or elliptic mirrors. The method is explained at length in Ref.\,\cite{Casalbuoni-I}, see also Refs.\,\cite{Goodman}, \cite{Lawrence}. Here we present the main ideas and formulas. A Mathematica\texttrademark \, code {\it THzTransport} \cite{THzTransport}  was developed for carrying out this analysis.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ^
+Warning 6 in CTR-Spectr-arXive.tex line 2163: No italic correction (`\/') found.
+The analytical and semi-analytical computations in Section~\ref{TransRad} are based on cylindrical symmetry. This symmetry  is not present in many practical cases, for example when one wants to compute transition radiation from a rectangular or asymmetric screen.  The numerical two-dimensional Fourier transformation permits to deal with such situations and offers the additional advantage that the radiation can be propagated through a whole optical system consisting of drift spaces, apertures and focusing elements such as parabolic or elliptic mirrors. The method is explained at length in Ref.\,\cite{Casalbuoni-I}, see also Refs.\,\cite{Goodman}, \cite{Lawrence}. Here we present the main ideas and formulas. A Mathematica\texttrademark \, code {\it THzTransport} \cite{THzTransport}  was developed for carrying out this analysis.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+Warning 2 in CTR-Spectr-arXive.tex line 2163: Non-breaking space (`~') should have been used.
+The analytical and semi-analytical computations in Section~\ref{TransRad} are based on cylindrical symmetry. This symmetry  is not present in many practical cases, for example when one wants to compute transition radiation from a rectangular or asymmetric screen.  The numerical two-dimensional Fourier transformation permits to deal with such situations and offers the additional advantage that the radiation can be propagated through a whole optical system consisting of drift spaces, apertures and focusing elements such as parabolic or elliptic mirrors. The method is explained at length in Ref.\,\cite{Casalbuoni-I}, see also Refs.\,\cite{Goodman}, \cite{Lawrence}. Here we present the main ideas and formulas. A Mathematica\texttrademark \, code {\it THzTransport} \cite{THzTransport}  was developed for carrying out this analysis.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+Warning 3 in CTR-Spectr-arXive.tex line 2178: You should enclose the previous parenthesis with `{}'.
+R'=\overline{QP}=\sqrt{D^2+(x-\xi)^2+(y-\eta)^2}  
+                                 ^
+Warning 3 in CTR-Spectr-arXive.tex line 2178: You should enclose the previous parenthesis with `{}'.
+R'=\overline{QP}=\sqrt{D^2+(x-\xi)^2+(y-\eta)^2}  
+                                            ^
+Warning 8 in reference-CTR.tex line 27: Wrong length of dash may have been used.
+\bibitem{roehrs-thesis} M. R\"ohrs, {\it Investigations of the phase space distributions of electron bunches at the FLASH-linac using a transverse deflecting structure}, Ph.D. thesis, University of Hamburg 2008,  THESIS-2008-12.  
+                                                                                                                                                                                                                                ^
+Warning 8 in reference-CTR.tex line 35: Wrong length of dash may have been used.
+TESLA Test Facility Linac}, Ph.D. thesis Universit\"at Hamburg 1999, DESY-THESIS-1999-033.  
+                                                                                     ^
+Warning 13 in reference-CTR.tex line 50: Intersentence spacing (`\@') should perhaps be used.
+\bibitem{Casalbuoni-I} S. Casalbuoni, B. Schmidt and P. Schm\"user, {\it Far-Infrared Transition and Diffraction Radiation. Part I: Production, Diffraction and Optical Propagation}, DESY TESLA Report 2005-15 (2005).  
+                                                                                                                                  ^
+Warning 8 in reference-CTR.tex line 50: Wrong length of dash may have been used.
+\bibitem{Casalbuoni-I} S. Casalbuoni, B. Schmidt and P. Schm\"user, {\it Far-Infrared Transition and Diffraction Radiation. Part I: Production, Diffraction and Optical Propagation}, DESY TESLA Report 2005-15 (2005).  
+                                                                                                                                                                                                            ^
+Warning 12 in reference-CTR.tex line 72: Interword spacing (`\ ') should perhaps be used.
+\bibitem{Blaschke} W. Blaschke, {\it Eine Erweiterung des Satzes von Vitali \"uber Folgen analytischer Funktionen}, Berichte Math.-Phys., Kl. S\"achs. Gesell. der Wiss. Leipzig, 67 (1915), pp. 194 - 200.  
+                                                                                                                                                              ^
+Warning 8 in reference-CTR.tex line 72: Wrong length of dash may have been used.
+\bibitem{Blaschke} W. Blaschke, {\it Eine Erweiterung des Satzes von Vitali \"uber Folgen analytischer Funktionen}, Berichte Math.-Phys., Kl. S\"achs. Gesell. der Wiss. Leipzig, 67 (1915), pp. 194 - 200.  
+                                                                                                                                                                                                     ^
+Warning 8 in reference-CTR.tex line 105: Wrong length of dash may have been used.
+THESIS-2010-02, 2008.  
+           ^
+Warning 8 in reference-CTR.tex line 116: Wrong length of dash may have been used.
+Ph.D. Thesis, University of Hamburg 2015, DESY-THESIS-2016-017.  
+                                                          ^
+Warning 6 in reference-CTR.tex line 129: No italic correction (`\/') found.
+\bibitem{THzTransport}  For information on the Mathematica code {\it THzTransport} please contact: Bernhard.Schmidt$@$Desy.de  
+                                                                                 ^
+Warning 17 in CTR-Spectr-arXive.tex line 2216: Number of `(' doesn't match the number of `)'!
+
+

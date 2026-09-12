@@ -1,0 +1,271 @@
+exit=2
+lines=1716
+unique_findings=478
+                                                        ^^
+Warning 2 in sigma18-019.tex line 3652: Non-breaking space (`~') should have been used.
+The analogue of Theorem \ref{thm:van_litt_interp} is even simpler than in  
+                       ^
+Warning 2 in sigma18-019.tex line 3654: Non-breaking space (`~') should have been used.
+in Corollary \ref{cor:dual_litt_pre_van}. This is particularly lucky  
+            ^
+Warning 25 in sigma18-019.tex line 3676: You might wish to put this between a pair of `{}'
+ \Gampqq\big(t^{i+1},t^{-i}q,t^it_0^2,t^iu_0^2,\sqrt{pq}v^{\pm 1}t^it_0/d^2,\sqrt{pq}v^{\pm 1}t^i u_0/d^2\big).  
+                               ^^
+Warning 25 in sigma18-019.tex line 3676: You might wish to put this between a pair of `{}'
+ \Gampqq\big(t^{i+1},t^{-i}q,t^it_0^2,t^iu_0^2,\sqrt{pq}v^{\pm 1}t^it_0/d^2,\sqrt{pq}v^{\pm 1}t^i u_0/d^2\big).  
+                                        ^^
+Warning 25 in sigma18-019.tex line 3676: You might wish to put this between a pair of `{}'
+ \Gampqq\big(t^{i+1},t^{-i}q,t^it_0^2,t^iu_0^2,\sqrt{pq}v^{\pm 1}t^it_0/d^2,\sqrt{pq}v^{\pm 1}t^i u_0/d^2\big).  
+                                                                   ^^
+Warning 2 in sigma18-019.tex line 3680: Non-breaking space (`~') should have been used.
+We also have an analogue of Theorem \ref{thm:spec_int_litt}, this time in the form of a difference equation.  
+                                   ^
+Warning 3 in sigma18-019.tex line 3683: You should enclose the previous parenthesis with `{}'.
+If $t_0t_1t_2t_3 = \big(p/c^2\big)^2$, then  
+                                 ^
+Warning 3 in sigma18-019.tex line 3685: You should enclose the previous parenthesis with `{}'.
+D^{(n)}_q(t_0,t_1,t_2,t_3;t;p)_{\vec{x}} \cL^{\prime(n)}_c(\vec{x};t;p,q)  
+                             ^
+Warning 3 in sigma18-019.tex line 3696: You should enclose the previous parenthesis with `{}'.
+D^{(n)}_q\big(p^{1/2}v^{\pm 1}/c^2;t;p\big)_x \cL^{\prime(n)}_c(\vec{x};t;p,q).  
+                                          ^
+Warning 2 in sigma18-019.tex line 3701: Non-breaking space (`~') should have been used.
+When $v=c$, this is a special case of Corollary \ref{cor:dual_litt_recur}. That the right-hand side is independent of $v$ follows from the case  
+                                               ^
+Warning 2 in sigma18-019.tex line 3724: Non-breaking space (`~') should have been used.
+ In a suitable limit $v_0v_1\to q^{-m/2}$, this becomes an identity involving finite sums of interpolation functions. The interpolation functions are modular (\cite[Section~6]{bctheta}), but the evaluation at~$z_i^2$ is not preserved by the modular group. In other words, the identity depends on a choice of 2-isogeny, which we may replace by any other 2-isogeny. Upon doing so, we find that the identity we require is a special case of Theorem \ref{thm:L2_kern}; to be precise, it is obtained from that identity by first swapping $p$ and $q$ then taking the limit $v_0v_1\to q^{-m}$.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+Warning 2 in sigma18-019.tex line 3728: Non-breaking space (`~') should have been used.
+ Unlike Theorems \ref{thm:L1_kern} and \ref{thm:L2_kern}, we have been  
+                ^
+Warning 2 in sigma18-019.tex line 3728: Non-breaking space (`~') should have been used.
+ Unlike Theorems \ref{thm:L1_kern} and \ref{thm:L2_kern}, we have been  
+                                      ^
+Warning 6 in sigma18-019.tex line 3740: No italic correction (`\/') found.
+The {\em Kawanaka kernel} is defined by  
+                        ^
+Warning 3 in sigma18-019.tex line 3746: You should enclose the previous parenthesis with `{}'.
+\Delta^{(n)}_S\big(\vec{z};(pq)^{1/2}v^{\pm 1}/c;t;p,q\big).  
+                              ^
+Warning 3 in sigma18-019.tex line 3757: You should enclose the previous parenthesis with `{}'.
+\cL^{-(n)}_c(\vec{x};pq/t;p,q) = \Gamppqq\big(t^2\big)^n \prod_{1\le i<j\le n} \Gamppqq\big(t^2 x_i^{\pm 1}x_j^{\pm 1}\big) \cL^{-(n)}_c(\vec{x};-t;p,q).  
+                                                     ^
+Warning 2 in sigma18-019.tex line 3814: Non-breaking space (`~') should have been used.
+partition based at $t_0$, when it follows from Theorem \ref{thm:L3_kern},  
+                                                      ^
+Warning 2 in sigma18-019.tex line 3815: Non-breaking space (`~') should have been used.
+as discussed in \cite{littlewood}.  
+               ^
+Warning 3 in sigma18-019.tex line 3830: You should enclose the previous parenthesis with `{}'.
+(-c)^{|\mu|} \frac{C^-_\mu(-t;q,t)C^0_\mu\big(qt^{n-1}/c^2;q,t\big)}  
+   ^
+Warning 3 in sigma18-019.tex line 3842: You should enclose the previous parenthesis with `{}'.
+\cL^{-(n)}_{-(pq/t)^{1/2}}(\vec{x};-t;p,q)= \Gamppqq(pq/t)^n  
+                  ^
+Warning 3 in sigma18-019.tex line 3842: You should enclose the previous parenthesis with `{}'.
+\cL^{-(n)}_{-(pq/t)^{1/2}}(\vec{x};-t;p,q)= \Gamppqq(pq/t)^n  
+                                                         ^
+Warning 3 in sigma18-019.tex line 3843: You should enclose the previous parenthesis with `{}'.
+\!\prod_{1\le i\le n} \!\Gampq\big((pq/t)^{1/2} x_i^{\pm 1}\big)  
+                                        ^
+Warning 3 in sigma18-019.tex line 3889: You should enclose the previous parenthesis with `{}'.
+\Delta^{(n)}_S\big(\vec{z};\pm(pq)^{1/4}w^{\pm 1}/\sqrt{c},(pq)^{1/4}v^{\pm 1}/d;t^{1/2};p^{1/2},q^{1/2}\big).  
+                                 ^
+Warning 3 in sigma18-019.tex line 3889: You should enclose the previous parenthesis with `{}'.
+\Delta^{(n)}_S\big(\vec{z};\pm(pq)^{1/4}w^{\pm 1}/\sqrt{c},(pq)^{1/4}v^{\pm 1}/d;t^{1/2};p^{1/2},q^{1/2}\big).  
+                                                              ^
+Warning 25 in sigma18-019.tex line 3903: You might wish to put this between a pair of `{}'
+ \frac{\Gampq\big(t^it_rt_s/d^2\big)}  
+                    ^^
+Warning 25 in sigma18-019.tex line 3903: You might wish to put this between a pair of `{}'
+ \frac{\Gampq\big(t^it_rt_s/d^2\big)}  
+                       ^^
+Warning 25 in sigma18-019.tex line 3904: You might wish to put this between a pair of `{}'
+ {\Gampq\big(t^it_rt_s\big)} \\  
+               ^^
+Warning 25 in sigma18-019.tex line 3904: You might wish to put this between a pair of `{}'
+ {\Gampq\big(t^it_rt_s\big)} \\  
+                  ^^
+Warning 3 in sigma18-019.tex line 3910: You should enclose the previous parenthesis with `{}'.
+ (pq)^{1/4}v^{\pm 1}/d;t^{1/2};p^{1/2},q^{1/2}\big).  
+    ^
+Warning 2 in sigma18-019.tex line 3938: Non-breaking space (`~') should have been used.
+The analogue of the vanishing integrals of Theorems \ref{thm:van_litt}  
+                                                   ^
+Warning 2 in sigma18-019.tex line 3939: Non-breaking space (`~') should have been used.
+and \ref{thm:van_dual_litt} is again straightforward, now using  
+   ^
+Warning 2 in sigma18-019.tex line 3940: Non-breaking space (`~') should have been used.
+\cite[Corollary~4.16]{littlewood}. Note that in this case, the integral never  
+^
+Warning 3 in sigma18-019.tex line 3950: You should enclose the previous parenthesis with `{}'.
+\frac{\Delta_{\blambda}\big({-}1/u_0|t^{n/2},t^{(n-1)/2}t_0,\pm \big(t^{n-1}t_0u_0\big)^{-1/2};t^{1/2};p^{1/2},q^{1/2}\big)}  
+                                                                                      ^
+Warning 25 in sigma18-019.tex line 3957: You might wish to put this between a pair of `{}'
+ \Gampq\big(t^i t_0t_1,t^it_0u_0,t^it_1u_0,t^i t_0t_1/d^2,t^it_0u_0/d^2,t^it_1u_0/d^2\big).  
+                         ^^
+Warning 25 in sigma18-019.tex line 3957: You might wish to put this between a pair of `{}'
+ \Gampq\big(t^i t_0t_1,t^it_0u_0,t^it_1u_0,t^i t_0t_1/d^2,t^it_0u_0/d^2,t^it_1u_0/d^2\big).  
+                                   ^^
+Warning 25 in sigma18-019.tex line 3957: You might wish to put this between a pair of `{}'
+ \Gampq\big(t^i t_0t_1,t^it_0u_0,t^it_1u_0,t^i t_0t_1/d^2,t^it_0u_0/d^2,t^it_1u_0/d^2\big).  
+                                                            ^^
+Warning 25 in sigma18-019.tex line 3957: You might wish to put this between a pair of `{}'
+ \Gampq\big(t^i t_0t_1,t^it_0u_0,t^it_1u_0,t^i t_0t_1/d^2,t^it_0u_0/d^2,t^it_1u_0/d^2\big).  
+                                                                          ^^
+Warning 6 in sigma18-019.tex line 3967: No italic correction (`\/') found.
+but here we encounter a significant difficulty: the corresponding right-hand side of Corollary~\ref{cor:quad_kaw} now has {\em two} pairs of parameters multiplying to $t^{(1-n)/2}$, and thus the standard residue calculation no longer applies. It is likely one could express the result as a sum of two nice terms, though.  
+                                                                                                                                  ^
+Warning 2 in sigma18-019.tex line 3971: Non-breaking space (`~') should have been used.
+In \cite[Section~5]{littlewood}, the author developed a sequence of seven  
+  ^
+Warning 2 in sigma18-019.tex line 3973: Non-breaking space (`~') should have been used.
+special case of one of Corollaries \ref{cor:quad_litt},  
+                                  ^
+Warning 2 in sigma18-019.tex line 3974: Non-breaking space (`~') should have been used.
+\ref{cor:quad_dual_litt} or \ref{cor:quad_kaw}. This suggests that the  
+^
+Warning 2 in sigma18-019.tex line 3974: Non-breaking space (`~') should have been used.
+\ref{cor:quad_dual_litt} or \ref{cor:quad_kaw}. This suggests that the  
+                           ^
+Warning 2 in sigma18-019.tex line 4029: Non-breaking space (`~') should have been used.
+Of course, since the above Selberg integral has 8 parameters, one can obtain a~large number of other quadratic evaluations by applying the~$W(E_7)$ symmetry of the integral, \cite[Section~9]{xforms} (essentially just the special case of Theorem~\ref{thm:bailey_xform} above in which~$\vec{x}$  
+                                                                                                                                                                             ^
+Warning 2 in sigma18-019.tex line 4065: Non-breaking space (`~') should have been used.
+concision. Substituting this into Corollary \ref{cor:quad_kaw} proves  
+                                           ^
+Warning 2 in sigma18-019.tex line 4066: Non-breaking space (`~') should have been used.
+Conjecture Q6 of \cite{littlewood}.  
+                ^
+Warning 2 in sigma18-019.tex line 4084: Non-breaking space (`~') should have been used.
+in the sense that Theorem~{\rm \ref{thm:quad_kaw}} and its corollaries continue to hold after the stated specialization.  
+                              ^
+Warning 2 in sigma18-019.tex line 4087: Non-breaking space (`~') should have been used.
+We would expect (following the derivation of \cite{littlewood}) to obtain  
+                                            ^
+Warning 6 in sigma18-019.tex line 4096: No italic correction (`\/') found.
+of that corollary, the right-hand side of that identity {\em does} have a  
+                                                                 ^
+Warning 2 in sigma18-019.tex line 4139: Non-breaking space (`~') should have been used.
+in the sense that Theorem~{\rm \ref{thm:quad_dual_litt}} and its corollaries continue to hold after the stated specialization.  
+                              ^
+Warning 2 in sigma18-019.tex line 4143: Non-breaking space (`~') should have been used.
+ This proves Conjecture Q5 of \cite{littlewood}. There is a corresponding  
+                             ^
+Warning 2 in sigma18-019.tex line 4144: Non-breaking space (`~') should have been used.
+ evaluation coming from Theorem \ref{thm:van_dual_litt_interp}, but as  
+                               ^
+Warning 2 in sigma18-019.tex line 4151: Non-breaking space (`~') should have been used.
+We now have two conjectures remaining, Q1 and Q4 of \cite{littlewood}. It  
+                                                   ^
+Warning 2 in sigma18-019.tex line 4155: Non-breaking space (`~') should have been used.
+the development of \cite{littlewood} in reverse, and prove Q1 by a modular  
+                  ^
+Warning 2 in sigma18-019.tex line 4156: Non-breaking space (`~') should have been used.
+transform from Q2 (i.e., Theorem \ref{thm:Q2} above). This requires a  
+                                ^
+Warning 2 in sigma18-019.tex line 4158: Non-breaking space (`~') should have been used.
+that the relevant special cases of Theorem \ref{thm:van_litt} are suitable  
+                                          ^
+Warning 2 in sigma18-019.tex line 4160: Non-breaking space (`~') should have been used.
+only a special case of the version of Theorem \ref{thm:quad_litt} we  
+                                             ^
+Warning 2 in sigma18-019.tex line 4163: Non-breaking space (`~') should have been used.
+difficulty, in that the first step of obtaining Theorem \ref{thm:van_litt}  
+                                                       ^
+Warning 2 in sigma18-019.tex line 4164: Non-breaking space (`~') should have been used.
+from Theorem \ref{thm:quad_litt} was to specialize the auxiliary parameter  
+            ^
+Warning 3 in sigma18-019.tex line 4175: You should enclose the previous parenthesis with `{}'.
+If $u_0u_1u_2u_3 = (pq/t)^4$, then  
+                        ^
+Warning 3 in sigma18-019.tex line 4193: You should enclose the previous parenthesis with `{}'.
+{\Gampq(t)^{2n}\prod\limits_{1\le i<j\le 2n} \Gampq\big(t x_i^{\pm 1}x_j^{\pm 1}\big)},  
+         ^
+Warning 2 in sigma18-019.tex line 4211: Non-breaking space (`~') should have been used.
+rational function coefficients. Thus, by Lemma \ref{lem:int_uniq} below,  
+                                              ^
+Warning 2 in sigma18-019.tex line 4229: Non-breaking space (`~') should have been used.
+in the sense that Theorem~{\rm \ref{thm:quad_litt}} and its corollaries continue to hold after the stated specialization.  
+                              ^
+Warning 2 in sigma18-019.tex line 4240: Non-breaking space (`~') should have been used.
+This proves Conjecture Q1 of \cite{littlewood}; dualizing in the usual way  
+                            ^
+Warning 2 in sigma18-019.tex line 4241: Non-breaking space (`~') should have been used.
+gives the following, which proves Conjecture Q4 of \cite{littlewood},  
+                                                  ^
+Warning 2 in sigma18-019.tex line 4257: Non-breaking space (`~') should have been used.
+in the sense that Theorem~{\rm \ref{thm:quad_dual_litt}} and its corollaries continue to hold after the stated specialization.  
+                              ^
+Warning 3 in sigma18-019.tex line 4269: You should enclose the previous parenthesis with `{}'.
+L^{(2n)}_{(pqt)^{1/4}}(\vec{x};t;p,q) =\prod_{1\le i\le 2n} \frac{1}{\Gampqq\big((pq/t)^{1/2}x_i^{\pm 2}\big)}  
+              ^
+Warning 3 in sigma18-019.tex line 4269: You should enclose the previous parenthesis with `{}'.
+L^{(2n)}_{(pqt)^{1/4}}(\vec{x};t;p,q) =\prod_{1\le i\le 2n} \frac{1}{\Gampqq\big((pq/t)^{1/2}x_i^{\pm 2}\big)}  
+                                                                                      ^
+Warning 3 in sigma18-019.tex line 4270: You should enclose the previous parenthesis with `{}'.
+L^{\prime(2n)}_{(p/qt)^{1/4}}(\vec{x};t;p,q),\\  
+                     ^
+Warning 3 in sigma18-019.tex line 4271: You should enclose the previous parenthesis with `{}'.
+ L^{-(n)}_{-(pq/t)^{1/4}}\big(\vec{x};-t^{1/2};p^{1/2},q^{1/2}\big)\\  
+                 ^
+Warning 3 in sigma18-019.tex line 4272: You should enclose the previous parenthesis with `{}'.
+ \qquad{} = \prod_{1\le i\le n} \frac{1}{\Gamphq\big((pqt)^{1/4} x_i^{\pm 1},-(pq/t)^{1/4}x_i^{\pm 1}\big)}  
+                                                         ^
+Warning 3 in sigma18-019.tex line 4272: You should enclose the previous parenthesis with `{}'.
+ \qquad{} = \prod_{1\le i\le n} \frac{1}{\Gamphq\big((pqt)^{1/4} x_i^{\pm 1},-(pq/t)^{1/4}x_i^{\pm 1}\big)}  
+                                                                                   ^
+Warning 3 in sigma18-019.tex line 4273: You should enclose the previous parenthesis with `{}'.
+L^{\prime(n)}_{(p/qt)^{1/4}}(\vec{x};t;p,q),  
+                    ^
+Warning 3 in sigma18-019.tex line 4277: You should enclose the previous parenthesis with `{}'.
+$d=(pqt)^{1/4}$ of Theorem~\ref{thm:litt_braid}, we obtain an expression  
+       ^
+Warning 6 in sigma18-019.tex line 4278: No italic correction (`\/') found.
+for the Littlewood kernel as an integral involving the {\em dual}  
+                                                                ^
+Warning 2 in sigma18-019.tex line 4286: Non-breaking space (`~') should have been used.
+Theorems \ref{thm:Q1} and \ref{thm:Q2}, we see that the two  
+        ^
+Warning 2 in sigma18-019.tex line 4286: Non-breaking space (`~') should have been used.
+Theorems \ref{thm:Q1} and \ref{thm:Q2}, we see that the two  
+                         ^
+Warning 1 in sigma18-019.tex line 4292: Command terminated with space.
+The integral{\samepage  
+                      ^
+Warning 3 in sigma18-019.tex line 4297: You should enclose the previous parenthesis with `{}'.
+\Delta^{(n)}_S\big(\vec{z};(pq)^{1/4}v^{\pm 1}/c,t^{1/2},p^{1/2}t^{1/2};t;p,q^{1/2}\big)\end{split}  
+                              ^
+Warning 2 in sigma18-019.tex line 4304: Non-breaking space (`~') should have been used.
+Corollary \ref{cor:weird_quad}. If we used the Kawanaka version instead,  
+         ^
+Warning 3 in sigma18-019.tex line 4318: You should enclose the previous parenthesis with `{}'.
+\Delta^{(n)}_S\big(\vec{z};p^{1/2}(qt)^{1/4}v^{\pm 1}/c,1,t^{1/2};t;p,q^{1/2}\big)  
+                                     ^
+Warning 3 in sigma18-019.tex line 4324: You should enclose the previous parenthesis with `{}'.
+\qquad {}= \Gampqh\big(t^{1/2},\sqrt{p}(qt)^{1/4}v^{\pm 1}/c\big)  
+                                          ^
+Warning 3 in sigma18-019.tex line 4328: You should enclose the previous parenthesis with `{}'.
+\Delta^{(n)}_S\big(\vec{z};p^{1/2}(qt)^{1/4}v^{\pm 1}/c,t,t^{1/2};t;p,q^{1/2}\big).  
+                                     ^
+Warning 2 in sigma18-019.tex line 4365: Non-breaking space (`~') should have been used.
+A key step in using integral or difference equations to determine various formal series was the fact that the limiting systems have no nonconstant polynomial solutions. As this requires some properties of interpolation polynomials \cite{OkounkovA:1998,bcpoly}, we address those statements in this appendix.  
+                                                                                                                                                                                                                                      ^
+Warning 3 in sigma18-019.tex line 4407: You should enclose the previous parenthesis with `{}'.
+D^{(n)}_q\big(u\big(t^{1/2}v\big)^{\pm 1};t;p\big)f  
+                                ^
+Warning 2 in sigma18-019.tex line 4423: Non-breaking space (`~') should have been used.
+integral operator defined in \cite{diffintrep_koorn}, which in present  
+                            ^
+Warning 2 in sigma18-019.tex line 4427: Non-breaking space (`~') should have been used.
+ Corollary \ref{cor:int_eq_interp_ii}.  
+          ^
+Warning 8 in sigma18-019.tex line 4448: Wrong length of dash may have been used.
+to Izergin--Korepin determinants and their elliptic analogues, and  
+          ^^
+Warning 1 in sigma18-019.tex line 4626: Command terminated with space.
+\end{thebibliography}\LastPageEnding  
+                                    ^
+Warning 17 in sigma18-019.tex line 4628: Number of `(' doesn't match the number of `)'!
+
+

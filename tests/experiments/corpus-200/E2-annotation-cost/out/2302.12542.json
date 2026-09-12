@@ -1,0 +1,155 @@
+{
+ "paper": "2302.12542",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 85720,
+   "chars_after": 85660,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 85720,
+ "chars_after": 85660,
+ "delta_pct": -0.0699953336444237,
+ "unrepaired": {
+  "chars_after": 85660,
+  "chars_before": 85720,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.032809,
+  "bibliography": {
+   "state": "complete",
+   "entries": 146
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.0699953336444237
+ },
+ "stats": {
+  "cite_cmds_live": 139,
+  "cite_keys_live": 159,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 3,
+  "other_cite_cmds": 4,
+  "labels_live": 20,
+  "labels_outside_grammar": 0,
+  "refs_live": 4,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 43,
+  "float_envs": 11,
+  "cite_cmds_annotated": 124,
+  "cite_keys_annotated": 139,
+  "ids_annotated": 20,
+  "refs_annotated": 4,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 12,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "main.tex",
+   "line": 374,
+   "token": "@cite(Tibshirani1997)",
+   "wrapper": "?",
+   "context": "\\ \\ Lasso Cox [\\cite{Tibshirani1997}]       & $\\ell_1$-norm   & \\xmark  & \\xmark &"
+  },
+  {
+   "file": "main.tex",
+   "line": 376,
+   "token": "@cite(Zhang2007)",
+   "wrapper": "?",
+   "context": "\\ \\ Adaptive Lasso Cox [\\cite{Zhang2007}]       & weighted $\\ell_1$-norm   & \\xmark  & \\xmark & less false positives than Lasso"
+  },
+  {
+   "file": "main.tex",
+   "line": 378,
+   "token": "@cite(Simon2011)",
+   "wrapper": "?",
+   "context": "\\ \\ Elastic Net Cox [\\cite{Simon2011}]     & $\\ell_1/\\ell_2$-norm   & \\cmark  & \\xmark &"
+  },
+  {
+   "file": "main.tex",
+   "line": 380,
+   "token": "@cite(Kim2012)",
+   "wrapper": "?",
+   "context": "\\ \\ Group-Lasso Cox [\\cite{Kim2012}]     & $\\ell_2$-norm   & \\cmark  & \\xmark & independent groups of features selected"
+  },
+  {
+   "file": "main.tex",
+   "line": 382,
+   "token": "@cite(Simon2013)",
+   "wrapper": "?",
+   "context": "\\ \\ Sparse Group-Lasso Cox [\\cite{Simon2013}]     & $\\ell_1/\\ell_2$-norm   & \\cmark  & \\xmark &"
+  },
+  {
+   "file": "main.tex",
+   "line": 384,
+   "token": "@cite(Fan2002)",
+   "wrapper": "?",
+   "context": "\\ \\ SCAD Cox [\\cite{Fan2002}]      & quadratic spline and symmetric penalty   & \\cmark  & \\xmark &  selection of relatively large effects"
+  },
+  {
+   "file": "main.tex",
+   "line": 386,
+   "token": "@cite(Fan2010)",
+   "wrapper": "?",
+   "context": "\\ \\ SIS Cox [\\cite{Fan2010}]    & top ranked variables and any penalty & \\cmark  & \\xmark & suited to ultra-high dimensions"
+  },
+  {
+   "file": "main.tex",
+   "line": 390,
+   "token": "@cite(Lee2011)",
+   "wrapper": "?",
+   "context": "\\ \\ [\\cite{Lee2011}]     & Lasso (Laplace) prior   & \\xmark  & \\cmark &  selection of posterior mean with a cutoff"
+  },
+  {
+   "file": "main.tex",
+   "line": 392,
+   "token": "@cite(Lee2015)",
+   "wrapper": "?",
+   "context": "\\ \\ [\\cite{Lee2015}]     & Elastic Net, group/fused Lasso priors   & \\cmark  & \\cmark & selection of posterior mean with a cutoff"
+  },
+  {
+   "file": "main.tex",
+   "line": 394,
+   "token": "@cite(Konrath2013)",
+   "wrapper": "?",
+   "context": "\\ \\ [\\cite{Konrath2013}]     & Spike-and-slab prior   & \\xmark  & \\cmark &"
+  },
+  {
+   "file": "main.tex",
+   "line": 396,
+   "token": "@cite(Madjar2021)",
+   "wrapper": "?",
+   "context": "\\ \\ [\\cite{Madjar2021}]     & Spike-and-slab \\& MRF priors   & \\cmark  & \\cmark &"
+  },
+  {
+   "file": "main.tex",
+   "line": 398,
+   "token": "@cite(Mu2021)",
+   "wrapper": "?",
+   "context": "\\ \\ [\\cite{Mu2021}]     & Horseshoe prior   & \\xmark  & \\cmark & selection of posterior mean with a cutoff \\\\"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.032809,
+ "bibliography": {
+  "state": "complete",
+  "entries": 146
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

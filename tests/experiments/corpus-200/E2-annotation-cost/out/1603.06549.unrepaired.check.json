@@ -1,0 +1,288 @@
+{
+ "coverage": 0.020782,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`bib/RoaringBitmap.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:iustat",
+   "span": {
+    "file": "RunRoaringBitmap.xtex",
+    "offset": 66625,
+    "length": 10,
+    "line": 886,
+    "column": 15
+   },
+   "message": "identifier `tab:iustat` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:comp",
+   "span": {
+    "file": "RunRoaringBitmap.xtex",
+    "offset": 69332,
+    "length": 8,
+    "line": 954,
+    "column": 46
+   },
+   "message": "identifier `tab:comp` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:rand",
+   "span": {
+    "file": "RunRoaringBitmap.xtex",
+    "offset": 73814,
+    "length": 8,
+    "line": 1040,
+    "column": 15
+   },
+   "message": "identifier `tab:rand` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:si",
+   "span": {
+    "file": "RunRoaringBitmap.xtex",
+    "offset": 74714,
+    "length": 6,
+    "line": 1048,
+    "column": 79
+   },
+   "message": "identifier `tab:si` is not declared \u2014 did you mean `tab:ser`?",
+   "related": [
+    {
+     "message": "`tab:ser` is declared here",
+     "span": {
+      "file": "RunRoaringBitmap.xtex",
+      "offset": 72487,
+      "length": 7,
+      "line": 1004,
+      "column": 14
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:su",
+   "span": {
+    "file": "RunRoaringBitmap.xtex",
+    "offset": 74781,
+    "length": 6,
+    "line": 1048,
+    "column": 146
+   },
+   "message": "identifier `tab:su` is not declared \u2014 did you mean `tab:ser`?",
+   "related": [
+    {
+     "message": "`tab:ser` is declared here",
+     "span": {
+      "file": "RunRoaringBitmap.xtex",
+      "offset": 72487,
+      "length": 7,
+      "line": 1004,
+      "column": 14
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:eu",
+   "span": {
+    "file": "RunRoaringBitmap.xtex",
+    "offset": 77019,
+    "length": 6,
+    "line": 1062,
+    "column": 103
+   },
+   "message": "identifier `tab:eu` is not declared \u2014 did you mean `tab:ser`?",
+   "related": [
+    {
+     "message": "`tab:ser` is declared here",
+     "span": {
+      "file": "RunRoaringBitmap.xtex",
+      "offset": 72487,
+      "length": 7,
+      "line": 1004,
+      "column": 14
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:eupq",
+   "span": {
+    "file": "RunRoaringBitmap.xtex",
+    "offset": 77036,
+    "length": 8,
+    "line": 1062,
+    "column": 120
+   },
+   "message": "identifier `tab:eupq` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:eupq",
+   "span": {
+    "file": "RunRoaringBitmap.xtex",
+    "offset": 77133,
+    "length": 8,
+    "line": 1064,
+    "column": 41
+   },
+   "message": "identifier `tab:eupq` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:inmemmaprand",
+   "span": {
+    "file": "RunRoaringBitmap.xtex",
+    "offset": 83451,
+    "length": 16,
+    "line": 1184,
+    "column": 40
+   },
+   "message": "identifier `tab:inmemmaprand` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:inmemmapeu",
+   "span": {
+    "file": "RunRoaringBitmap.xtex",
+    "offset": 83926,
+    "length": 14,
+    "line": 1188,
+    "column": 73
+   },
+   "message": "identifier `tab:inmemmapeu` is not declared \u2014 did you mean `tab:inmemmap`?",
+   "related": [
+    {
+     "message": "`tab:inmemmap` is declared here",
+     "span": {
+      "file": "RunRoaringBitmap.xtex",
+      "offset": 85562,
+      "length": 12,
+      "line": 1208,
+      "column": 14
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:inmemmapeupq",
+   "span": {
+    "file": "RunRoaringBitmap.xtex",
+    "offset": 83951,
+    "length": 16,
+    "line": 1188,
+    "column": 98
+   },
+   "message": "identifier `tab:inmemmapeupq` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:inmemmapeu",
+   "span": {
+    "file": "RunRoaringBitmap.xtex",
+    "offset": 85013,
+    "length": 14,
+    "line": 1197,
+    "column": 141
+   },
+   "message": "identifier `tab:inmemmapeu` is not declared \u2014 did you mean `tab:inmemmap`?",
+   "related": [
+    {
+     "message": "`tab:inmemmap` is declared here",
+     "span": {
+      "file": "RunRoaringBitmap.xtex",
+      "offset": 85562,
+      "length": 12,
+      "line": 1208,
+      "column": 14
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:inmemmapeupq",
+   "span": {
+    "file": "RunRoaringBitmap.xtex",
+    "offset": 85038,
+    "length": 16,
+    "line": 1197,
+    "column": 166
+   },
+   "message": "identifier `tab:inmemmapeupq` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "RunRoaringBitmap.xtex",
+    "offset": 5094,
+    "length": 11,
+    "line": 138,
+    "column": 84
+   },
+   "message": "citation checking unavailable: `bib/RoaringBitmap.bib` could not be read",
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,3 @@
+planted=sec:related_work sites=[('writeup.xtex', 271), ('writeup.xtex', 236)]
+xtex new=[('XT1001', 'sec:related_work', 'writeup.xtex', 271)]
+texlab new=[('ERROR', 'writeup.tex', 236, 'Duplicate label'), ('ERROR', 'writeup.tex', 271, 'Duplicate label')]

@@ -1,0 +1,25 @@
+tectonic pdf bytes=199988
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'QCC_arxiv.tex', 358, 'Undefined reference'), ('info', 'QCC_arxiv.tex', 397, 'Unused label'), ('info', 'QCC_arxiv.tex', 653, 'Unused label'), ('info', 'QCC_arxiv.tex', 660, 'Unused label'), ('info', 'QCC_arxiv.tex', 863, 'Unused entry')]
+tectonic exit=0 warnings=['Lounesto'] secs=2
+d while \output is active
+warning: QCC_arxiv.tex:684: Overfull \vbox (6.444pt too high) has occurred while \output is active
+warning: QCC_arxiv.tex:722: Overfull \vbox (6.444pt too high) has occurred while \output is active
+warning: QCC_arxiv.tex:783: Overfull \vbox (6.444pt too high) has occurred while \output is active
+warning: QCC_arxiv.tex:830: Overfull \vbox (6.444pt too high) has occurred while \output is active
+warning: QCC_arxiv.tex:870: Overfull \vbox (6.444pt too high) has occurred while \output is active
+warning: QCC_arxiv.tex:272: Overfull \vbox (6.444pt too high) has occurred while \output is active
+warning: QCC_arxiv.tex:311: Overfull \vbox (6.444pt too high) has occurred while \output is active
+warning: QCC_arxiv.tex:344: Overfull \vbox (6.444pt too high) has occurred while \output is active
+warning: QCC_arxiv.tex:400: Overfull \vbox (6.444pt too high) has occurred while \output is active
+warning: QCC_arxiv.tex:438: Overfull \vbox (6.444pt too high) has occurred while \output is active
+warning: QCC_arxiv.tex:495: Overfull \vbox (6.444pt too high) has occurred while \output is active
+warning: QCC_arxiv.tex:556: Overfull \vbox (6.444pt too high) has occurred while \output is active
+warning: QCC_arxiv.tex:593: Overfull \vbox (6.444pt too high) has occurred while \output is active
+warning: QCC_arxiv.tex:644: Overfull \vbox (6.444pt too high) has occurred while \output is active
+warning: QCC_arxiv.tex:684: Overfull \vbox (6.444pt too high) has occurred while \output is active
+warning: QCC_arxiv.tex:722: Overfull \vbox (6.444pt too high) has occurred while \output is active
+warning: QCC_arxiv.tex:783: Overfull \vbox (6.444pt too high) has occurred while \output is active
+warning: QCC_arxiv.tex:830: Overfull \vbox (6.444pt too high) has occurred while \output is active
+warning: QCC_arxiv.tex:870: Overfull \vbox (6.444pt too high) has occurred while \output is active
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

@@ -1,0 +1,3 @@
+planted=norm_qubit sites=[('QCC_arxiv.xtex', 233), ('QCC_arxiv.xtex', 229)]
+xtex new=[('XT1001', 'norm_qubit', 'QCC_arxiv.xtex', 233)]
+texlab new=[('ERROR', 'QCC_arxiv.tex', 229, 'Duplicate label'), ('ERROR', 'QCC_arxiv.tex', 233, 'Duplicate label')]

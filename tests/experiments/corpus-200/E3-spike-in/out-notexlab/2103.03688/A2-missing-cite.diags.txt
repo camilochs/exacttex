@@ -1,0 +1,3 @@
+planted=musgrove2016hierarchical__ghost sites=[('DT_exact_plain.xtex', 153)]
+xtex new=[]
+texlab new=[]

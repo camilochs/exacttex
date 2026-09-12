@@ -1,0 +1,78 @@
+{
+ "paper": "1803.00386",
+ "main": "typeinst.tex",
+ "files": [
+  {
+   "file": "typeinst.tex",
+   "chars_before": 25590,
+   "chars_after": 25581,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 25590,
+ "chars_after": 25581,
+ "delta_pct": -0.035169988276670575,
+ "unrepaired": {
+  "chars_after": 25578,
+  "chars_before": 25590,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.039794,
+  "bibliography": {
+   "state": "complete",
+   "entries": 24
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.04689331770222743
+ },
+ "stats": {
+  "cite_cmds_live": 28,
+  "cite_keys_live": 36,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 4,
+  "labels_outside_grammar": 0,
+  "refs_live": 4,
+  "refs_outside_grammar": 1,
+  "other_ref_cmds": 0,
+  "float_envs": 3,
+  "cite_cmds_annotated": 28,
+  "cite_keys_annotated": 36,
+  "ids_annotated": 3,
+  "refs_annotated": 3,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 1,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "typeinst.tex",
+   "line": 60,
+   "token": "@id(X)",
+   "wrapper": "thanks",
+   "context": "\\author[1]{Ruqayya Awan\\thanks{Joint co-authors\\protect\\label{X}}}"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.039789,
+ "bibliography": {
+  "state": "complete",
+  "entries": 24
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

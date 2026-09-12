@@ -1,0 +1,3 @@
+planted=das2007google__ghost sites=[('writeup.xtex', 237)]
+xtex new=[('XT1005', 'das2007google__ghost', 'writeup.xtex', 237)]
+texlab new=[('ERROR', 'writeup.tex', 237, 'Undefined reference'), ('info', 'references.bib', 429, 'Unused entry')]

@@ -1,0 +1,7 @@
+warning: lineno.sty:296: Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: algorithmic.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+error: draft_final_version.tex:167: Unable to load picture or PDF file 'figures/planted_ghost.pdf'
+error: halted on potentially-recoverable error as specified

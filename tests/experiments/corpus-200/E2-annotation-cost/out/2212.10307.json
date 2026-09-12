@@ -1,0 +1,190 @@
+{
+ "paper": "2212.10307",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 6245,
+   "chars_after": 6341,
+   "emitted": true,
+   "identity": "import-ext-only",
+   "lines_differing": 12
+  },
+  {
+   "file": "preamble.tex",
+   "chars_before": 3257,
+   "chars_after": 3257,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "macros.tex",
+   "chars_before": 18807,
+   "chars_after": 18807,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "abstract.tex",
+   "chars_before": 949,
+   "chars_after": 949,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "intro.tex",
+   "chars_before": 14269,
+   "chars_after": 14263,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "overview.tex",
+   "chars_before": 9156,
+   "chars_after": 9141,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "fsmooth_d.tex",
+   "chars_before": 17874,
+   "chars_after": 17859,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "efficient.tex",
+   "chars_before": 31440,
+   "chars_after": 31434,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "semantics.tex",
+   "chars_before": 144,
+   "chars_after": 141,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "exp.tex",
+   "chars_before": 15078,
+   "chars_after": 15066,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "related.tex",
+   "chars_before": 10812,
+   "chars_after": 10809,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "conclusion.tex",
+   "chars_before": 7389,
+   "chars_after": 7389,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "acknowledgements.tex",
+   "chars_before": 251,
+   "chars_after": 251,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 13,
+ "chars_before": 135671,
+ "chars_after": 135707,
+ "delta_pct": 0.026534778987403352,
+ "unrepaired": {
+  "chars_after": 135704,
+  "chars_before": 135671,
+  "converted_files": 13,
+  "check_exit": 1,
+  "coverage": 0.027568,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`ref.bib` could not be read"
+  },
+  "errors": 1,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": 0.024323547405119737
+ },
+ "stats": {
+  "cite_cmds_live": 97,
+  "cite_keys_live": 121,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 2,
+  "other_cite_cmds": 0,
+  "labels_live": 21,
+  "labels_outside_grammar": 0,
+  "refs_live": 75,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 9,
+  "cite_cmds_annotated": 95,
+  "cite_keys_annotated": 117,
+  "ids_annotated": 20,
+  "refs_annotated": 74,
+  "inputs_root": 12,
+  "inputs_imported": 12,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 12,
+  "defects_reverted": 1,
+  "leaks_reverted": 1,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "overview.tex",
+   "line": 47,
+   "token": "@id(fig:fsmooth_core_syntax)",
+   "wrapper": "?",
+   "context": "\\label{fig:fsmooth_core_syntax}}"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1003",
+   "name": "fig:fsmooth_core_syntax",
+   "file": "overview.xtex",
+   "line": 50,
+   "message": "identifier `fig:fsmooth_core_syntax` is not declared",
+   "classification": "compiler-unreachable: \\label{fig:fsmooth_core_syntax} exists (2x) in a region the inventory does not read",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.027412,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`ref.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "related.xtex",
+    "offset": 203,
+    "length": 8,
+    "line": 5,
+    "column": 16
+   },
+   "message": "citation checking unavailable: `ref.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

@@ -1,0 +1,128 @@
+{
+ "paper": "2401.00908",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 30232,
+   "chars_after": 30262,
+   "emitted": true,
+   "identity": "import-ext-only",
+   "lines_differing": 6
+  },
+  {
+   "file": "sec_abstract.tex",
+   "chars_before": 3515,
+   "chars_after": 3515,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "sec_intro.tex",
+   "chars_before": 13268,
+   "chars_after": 13265,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "sec_relatedwork.tex",
+   "chars_before": 8742,
+   "chars_after": 8736,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "sec_pretrain.tex",
+   "chars_before": 22353,
+   "chars_after": 22347,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "sec_instructtune.tex",
+   "chars_before": 12238,
+   "chars_after": 12232,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "sec_ablation.tex",
+   "chars_before": 12938,
+   "chars_after": 12917,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 7,
+ "chars_before": 103286,
+ "chars_after": 103274,
+ "delta_pct": -0.011618225122475456,
+ "unrepaired": {
+  "chars_after": 103274,
+  "chars_before": 103286,
+  "converted_files": 7,
+  "check_exit": 0,
+  "coverage": 0.032174,
+  "bibliography": {
+   "state": "complete",
+   "entries": 76
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.011618225122475456
+ },
+ "stats": {
+  "cite_cmds_live": 82,
+  "cite_keys_live": 121,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 3,
+  "other_cite_cmds": 0,
+  "labels_live": 20,
+  "labels_outside_grammar": 0,
+  "refs_live": 27,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 14,
+  "cite_cmds_annotated": 77,
+  "cite_keys_annotated": 109,
+  "ids_annotated": 20,
+  "refs_annotated": 27,
+  "inputs_root": 6,
+  "inputs_imported": 6,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 2,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "main.tex",
+   "line": 225,
+   "token": "@cite(penedo2023refinedweb)",
+   "wrapper": "?",
+   "context": "Backbone          & \\multicolumn{2}{|c}{Falcon-1B \\cite{penedo2023refinedweb}}                     & \\multicolumn{2}{|c}{Llama2-7B \\cite{touvron2023llama}}     "
+  },
+  {
+   "file": "main.tex",
+   "line": 225,
+   "token": "@cite(touvron2023llama)",
+   "wrapper": "?",
+   "context": "Backbone          & \\multicolumn{2}{|c}{Falcon-1B \\cite{penedo2023refinedweb}}                     & \\multicolumn{2}{|c}{Llama2-7B \\cite{touvron2023llama}}     "
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.032174,
+ "bibliography": {
+  "state": "complete",
+  "entries": 76
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

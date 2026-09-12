@@ -1,0 +1,3 @@
+planted=sec_intro sites=[('main_arXiv2.xtex', 377), ('main_arXiv2.xtex', 556)]
+xtex new=[('XT1001', 'sec_intro', 'main_arXiv2.xtex', 556)]
+texlab new=[('ERROR', 'main_arXiv2.tex', 377, 'Duplicate label'), ('ERROR', 'main_arXiv2.tex', 556, 'Duplicate label'), ('info', 'main_arXiv2.tex', 556, 'Unused label')]

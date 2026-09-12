@@ -1,0 +1,3 @@
+planted=sec:hpc-programming sites=[('2-Background.xtex', 29), ('2-Background.xtex', 28)]
+xtex new=[('XT1001', 'sec:hpc-programming', '2-Background.xtex', 29)]
+texlab new=[]

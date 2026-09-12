@@ -1,0 +1,8 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=[] secs=2
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+error: main.tex:119: Extra \endgroup
+error: halted on potentially-recoverable error as specified

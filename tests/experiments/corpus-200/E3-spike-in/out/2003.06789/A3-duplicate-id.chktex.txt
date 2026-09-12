@@ -1,0 +1,339 @@
+exit=2
+lines=1107
+unique_findings=358
+_kinetochore_dynamics.tex line 1900: Delete this space to maintain correct pagereferences.
+        \label{fig:flux}  
+       ^
+Warning 2 in MT_kinetochore_dynamics.tex line 1904: Non-breaking space (`~') should have been used.
+ in \cite{banigan2015},   
+   ^
+Warning 24 in MT_kinetochore_dynamics.tex line 1924: Delete this space to maintain correct pagereferences.
+\label{sec:PEF}  
+^
+Warning 6 in MT_kinetochore_dynamics.tex line 1936: No italic correction (`\/') found.
+which depend on the {\it absolute} position  
+                                 ^
+Warning 35 in MT_kinetochore_dynamics.tex line 2001: You should perhaps use `\min' instead.
+$F_\mathrm{min}$  at the same time  
+           ^^^
+Warning 36 in MT_kinetochore_dynamics.tex line 2021: You should put a space in front of parenthesis.
+for each of the states depicted in figure\ \ref{fig:PEF}(ab),  
+                                                        ^
+Warning 36 in MT_kinetochore_dynamics.tex line 2023: You should put a space in front of parenthesis.
+trajectories in figure\ \ref{fig:PEF}(c) confirming this   
+                                     ^
+Warning 35 in MT_kinetochore_dynamics.tex line 2039: You should perhaps use `\min' instead.
+                      reaches the left turning point $F_\mathrm{min}$ first  
+                                                                ^^^
+Warning 24 in MT_kinetochore_dynamics.tex line 2065: Delete this space to maintain correct pagereferences.
+        \label{fig:PEF}  
+       ^
+Warning 36 in MT_kinetochore_dynamics.tex line 2073: You should put a space in front of parenthesis.
+as we demonstrate in figure\ \ref{fig:PEFsimu}(a)  
+                                              ^
+Warning 36 in MT_kinetochore_dynamics.tex line 2075: You should put a space in front of parenthesis.
+In figure~\ref{fig:PEFsimu}(b),  
+                           ^
+Warning 36 in MT_kinetochore_dynamics.tex line 2091: You should put a space in front of parenthesis.
+see histograms of kinetochore positions in figure~\ref{fig:PEFsimu}(c).  
+                                                                   ^
+Warning 2 in MT_kinetochore_dynamics.tex line 2095: Non-breaking space (`~') should have been used.
+Levesque and Compton \cite{levesque2001},  
+                    ^
+Warning 35 in MT_kinetochore_dynamics.tex line 2116: You should perhaps use `\min' instead.
+        when reaching $F_\mathrm{min}$ in the phase space at the same time,  
+                                 ^^^
+Warning 24 in MT_kinetochore_dynamics.tex line 2152: Delete this space to maintain correct pagereferences.
+        \label{fig:PEFsimu}  
+       ^
+Warning 35 in MT_kinetochore_dynamics.tex line 2159: You should perhaps use `\min' instead.
+between the  turning points at  $F_\mathrm{min}$ and $F_\mathrm{max}$.  
+                                           ^^^
+Warning 35 in MT_kinetochore_dynamics.tex line 2159: You should perhaps use `\max' instead.
+between the  turning points at  $F_\mathrm{min}$ and $F_\mathrm{max}$.  
+                                                                ^^^
+Warning 36 in MT_kinetochore_dynamics.tex line 2190: You should put a space in front of parenthesis.
+see figure~\ref{fig:PEFsimu}(a).  
+                            ^
+Warning 35 in MT_kinetochore_dynamics.tex line 2194: You should perhaps use `\min' instead.
+and reach the turning point $F_\mathrm{min}$ at nearly the same time.  
+                                       ^^^
+Warning 36 in MT_kinetochore_dynamics.tex line 2198: You should put a space in front of parenthesis.
+as in state $2/2'$ in figure~\ref{fig:PEF}(a)  
+                                          ^
+Warning 36 in MT_kinetochore_dynamics.tex line 2217: You should put a space in front of parenthesis.
+see figure~\ref{fig:PEFsimu}(b).  
+                            ^
+Warning 24 in MT_kinetochore_dynamics.tex line 2239: Delete this space to maintain correct pagereferences.
+\label{sec:push}  
+^
+Warning 2 in MT_kinetochore_dynamics.tex line 2248: Non-breaking space (`~') should have been used.
+In \cite{waters1996}, it was shown that the link between  
+  ^
+Warning 2 in MT_kinetochore_dynamics.tex line 2250: Non-breaking space (`~') should have been used.
+the experiments in \cite{khodjakov1996} demonstrated  
+                  ^
+Warning 6 in MT_kinetochore_dynamics.tex line 2275: No italic correction (`\/') found.
+(ii) A ``waiting'' boundary condition, where the {\it relative} velocity   
+                                                              ^
+Warning 2 in MT_kinetochore_dynamics.tex line 2301: Non-breaking space (`~') should have been used.
+roughly 7-fold \cite{newton2004}.  
+              ^
+Warning 35 in MT_kinetochore_dynamics.tex line 2330: You should perhaps use `\max' instead.
+the maximum MT-kinetochore distance  $x_\mathrm{max}$ to zero,  
+                                                ^^^
+Warning 35 in MT_kinetochore_dynamics.tex line 2332: You should perhaps use `\max' instead.
+When  $x_\mathrm{max}$ is negative in the basic model  
+                 ^^^
+Warning 35 in MT_kinetochore_dynamics.tex line 2338: You should perhaps use `\min' instead.
+the minimum distance $x_\mathrm{min}$ becomes positive  
+                                ^^^
+Warning 35 in MT_kinetochore_dynamics.tex line 2339: You should perhaps use `\max' instead.
+while $x_\mathrm{max}$ is zero.  
+                 ^^^
+Warning 35 in MT_kinetochore_dynamics.tex line 2348: You should perhaps use `\max' instead.
+        x^\mathrm{conf}_\mathrm{max} =  
+                                ^^^
+Warning 35 in MT_kinetochore_dynamics.tex line 2351: You should perhaps use `\max' instead.
+                        x_\mathrm{max}, & $v_\mathrm{k}\geq v^0_+$,}  
+                                  ^^^
+Warning 1 in MT_kinetochore_dynamics.tex line 2351: Command terminated with space.
+                        x_\mathrm{max}, & $v_\mathrm{k}\geq v^0_+$,}  
+                                                           ^
+Warning 35 in MT_kinetochore_dynamics.tex line 2353: You should perhaps use `\min' instead.
+        x^\mathrm{conf}_\mathrm{min} =   
+                                ^^^
+Warning 35 in MT_kinetochore_dynamics.tex line 2356: You should perhaps use `\min' instead.
+                        x_\mathrm{min}, & $v_\mathrm{k}\geq v^0_-$.  
+                                  ^^^
+Warning 1 in MT_kinetochore_dynamics.tex line 2356: Command terminated with space.
+                        x_\mathrm{min}, & $v_\mathrm{k}\geq v^0_-$.  
+                                                           ^
+Warning 36 in MT_kinetochore_dynamics.tex line 2363: You should put a space in front of parenthesis.
+boundary conditions (see figure\ \ref{fig:conf_wckin}(a)).   
+                                                     ^
+Warning 35 in MT_kinetochore_dynamics.tex line 2364: You should perhaps use `\max' instead.
+Because $x^\mathrm{conf}_\mathrm{max}\le 0$ for any confining   
+                                 ^^^
+Warning 24 in MT_kinetochore_dynamics.tex line 2418: Delete this space to maintain correct pagereferences.
+        \label{fig:conf_wckin}  
+       ^
+Warning 2 in MT_kinetochore_dynamics.tex line 2432: Non-breaking space (`~') should have been used.
+has already been solved in \cite{mulder2012,Zelinski2012}.  
+                          ^
+Warning 35 in MT_kinetochore_dynamics.tex line 2440: You should perhaps use `\min' instead.
+$\int_{x^\mathrm{conf}_\mathrm{min}}^{x^\mathrm{conf}_\mathrm{max}} p(x) \dd x = 1$.  
+                               ^^^
+Warning 35 in MT_kinetochore_dynamics.tex line 2440: You should perhaps use `\max' instead.
+$\int_{x^\mathrm{conf}_\mathrm{min}}^{x^\mathrm{conf}_\mathrm{max}} p(x) \dd x = 1$.  
+                                                              ^^^
+Warning 2 in MT_kinetochore_dynamics.tex line 2445: Non-breaking space (`~') should have been used.
+in figure\  \ref{fig:conf_wckin}(a)   
+           ^
+Warning 36 in MT_kinetochore_dynamics.tex line 2445: You should put a space in front of parenthesis.
+in figure\  \ref{fig:conf_wckin}(a)   
+                                ^
+Warning 36 in MT_kinetochore_dynamics.tex line 2453: You should put a space in front of parenthesis.
+are shown in figure~\ref{fig:conf_wckin}(b) as colored regions.  
+                                        ^
+Warning 36 in MT_kinetochore_dynamics.tex line 2504: You should put a space in front of parenthesis.
+Figure~\ref{fig:conf_wckin}(b) also shows that   
+                           ^
+Warning 36 in MT_kinetochore_dynamics.tex line 2510: You should put a space in front of parenthesis.
+ in figure~\ref{fig:conf_wckin}(b),  a fixed point   
+                               ^
+Warning 35 in MT_kinetochore_dynamics.tex line 2518: You should perhaps use `\max' instead.
+near the right turning point $F_\mathrm{max}$  
+                                        ^^^
+Warning 36 in MT_kinetochore_dynamics.tex line 2531: You should put a space in front of parenthesis.
+$n\lesssim 100$ in the shaded regions in  figure~\ref{fig:conf_wckin}(b).   
+                                                                     ^
+Warning 36 in MT_kinetochore_dynamics.tex line 2537: You should put a space in front of parenthesis.
+(see figure\ \ref{fig:conf_wckin}(c))  
+                                 ^
+Warning 36 in MT_kinetochore_dynamics.tex line 2543: You should put a space in front of parenthesis.
+  (see figure\ \ref{fig:conf_wckin}(d)).   
+                                   ^
+Warning 36 in MT_kinetochore_dynamics.tex line 2548: You should put a space in front of parenthesis.
+the upper blue dot in  figure\ \ref{fig:conf_wckin}(c) moves to the   
+                                                   ^
+Warning 36 in MT_kinetochore_dynamics.tex line 2552: You should put a space in front of parenthesis.
+ in   figure~\ref{fig:conf_wckin}(b)  PEFs  are essential to   
+                                 ^
+Warning 2 in MT_kinetochore_dynamics.tex line 2581: Non-breaking space (`~') should have been used.
+ around $60\,{\rm nm}$ \cite{Wei2005,Wang2008}  
+                      ^
+Warning 2 in MT_kinetochore_dynamics.tex line 2584: Non-breaking space (`~') should have been used.
+ \cite{Wang2008}. This bending corresponds to linker length changes   
+^
+Warning 2 in MT_kinetochore_dynamics.tex line 2587: Non-breaking space (`~') should have been used.
+ around  $\SI{100}{\nano\metre}$ \cite{Maresca2009}  or  
+                                ^
+Warning 2 in MT_kinetochore_dynamics.tex line 2588: Non-breaking space (`~') should have been used.
+ $\SI{50}{\nano\metre}$ \cite{dumont2012}.  
+                       ^
+Warning 2 in MT_kinetochore_dynamics.tex line 2610: Non-breaking space (`~') should have been used.
+MCAK \cite{newton2004}, and a linker stiffness   
+    ^
+Warning 2 in MT_kinetochore_dynamics.tex line 2615: Non-breaking space (`~') should have been used.
+the experimental results \cite{Wei2005,Wang2008,Maresca2009,dumont2012}  
+                        ^
+Warning 36 in MT_kinetochore_dynamics.tex line 2616: You should put a space in front of parenthesis.
+(see  figure\ \ref{fig:conf_wckin}(a)).  
+                                  ^
+Warning 36 in MT_kinetochore_dynamics.tex line 2618: You should put a space in front of parenthesis.
+ in   figure~\ref{fig:conf_wckin}(b) and   
+                                 ^
+Warning 24 in MT_kinetochore_dynamics.tex line 2639: Delete this space to maintain correct pagereferences.
+\label{sec:ptk1}  
+^
+Warning 35 in MT_kinetochore_dynamics.tex line 2718: You should perhaps use `\min' instead.
+in the left turning point $F_\mathrm{min}$  
+                                     ^^^
+Warning 24 in MT_kinetochore_dynamics.tex line 2776: Delete this space to maintain correct pagereferences.
+        \label{tab:ptk1parameters}  
+       ^
+Warning 1 in MT_kinetochore_dynamics.tex line 2778: Command terminated with space.
+        \lineup  
+               ^
+Warning 1 in MT_kinetochore_dynamics.tex line 2780: Command terminated with space.
+                \br  
+                   ^
+Warning 1 in MT_kinetochore_dynamics.tex line 2782: Command terminated with space.
+                \mr  
+                   ^
+Warning 1 in MT_kinetochore_dynamics.tex line 2792: Command terminated with space.
+                \br  
+                   ^
+Warning 36 in MT_kinetochore_dynamics.tex line 2799: You should put a space in front of parenthesis.
+in figure~\ref{fig:ptk1}(a) are very similar  
+                        ^
+Warning 36 in MT_kinetochore_dynamics.tex line 2809: You should put a space in front of parenthesis.
+see figure~\ref{fig:ptk1}(d).  
+                         ^
+Warning 36 in MT_kinetochore_dynamics.tex line 2812: You should put a space in front of parenthesis.
+inter-kinetochore and MT-kinetochore distances (figure~\ref{fig:ptk1}(e-g))  
+                                                                     ^
+Warning 24 in MT_kinetochore_dynamics.tex line 2841: Delete this space to maintain correct pagereferences.
+        \label{fig:ptk1}  
+       ^
+Warning 24 in MT_kinetochore_dynamics.tex line 2860: Delete this space to maintain correct pagereferences.
+        \label{tab:ptk1comparison}  
+       ^
+Warning 1 in MT_kinetochore_dynamics.tex line 2862: Command terminated with space.
+        \lineup  
+               ^
+Warning 1 in MT_kinetochore_dynamics.tex line 2864: Command terminated with space.
+                \br  
+                   ^
+Warning 1 in MT_kinetochore_dynamics.tex line 2866: Command terminated with space.
+                \mr  
+                   ^
+Warning 2 in MT_kinetochore_dynamics.tex line 2868: Non-breaking space (`~') should have been used.
+                        & \cite{wan2012} \\  
+                         ^
+Warning 2 in MT_kinetochore_dynamics.tex line 2870: Non-breaking space (`~') should have been used.
+                        & \cite{wan2012} \\  
+                         ^
+Warning 2 in MT_kinetochore_dynamics.tex line 2871: Non-breaking space (`~') should have been used.
+                single kinetochore frequency & \SI{4.27}{\milli\hertz} & 4.14--\SI{4.23}{\milli\hertz} & \cite{wan2012} \\  
+                                                                                                        ^
+Warning 2 in MT_kinetochore_dynamics.tex line 2872: Non-breaking space (`~') should have been used.
+                breathing frequency & $\sim\SI{8.6}{\milli\hertz}$ & \SI{8.25}{\milli\hertz} & \cite{wan2012} \\  
+                                                                                              ^
+Warning 2 in MT_kinetochore_dynamics.tex line 2874: Non-breaking space (`~') should have been used.
+                        & \cite{civelekoglu2013} \\  
+                         ^
+Warning 2 in MT_kinetochore_dynamics.tex line 2876: Non-breaking space (`~') should have been used.
+                        & \cite{civelekoglu2013} \\  
+                         ^
+Warning 2 in MT_kinetochore_dynamics.tex line 2878: Non-breaking space (`~') should have been used.
+                        \SI{0.76}{\micro\meter} & 0.5--\SI{1.1}{\micro\meter} & \cite{civelekoglu2013} \\  
+                                                                               ^
+Warning 2 in MT_kinetochore_dynamics.tex line 2879: Non-breaking space (`~') should have been used.
+                mean number of attached MTs & 21.4 & 20--25 & \cite{mcewen1997} \\  
+                                                             ^
+Warning 1 in MT_kinetochore_dynamics.tex line 2880: Command terminated with space.
+                \br  
+                   ^
+Warning 2 in MT_kinetochore_dynamics.tex line 2942: Non-breaking space (`~') should have been used.
+observed in the experiment \cite{wan2012}.  
+                          ^
+Warning 35 in MT_kinetochore_dynamics.tex line 2981: You should perhaps use `\min' instead.
+$F_\mathrm{min}$ and $F_\mathrm{max}$ of the hysteresis loop,  
+           ^^^
+Warning 35 in MT_kinetochore_dynamics.tex line 2981: You should perhaps use `\max' instead.
+$F_\mathrm{min}$ and $F_\mathrm{max}$ of the hysteresis loop,  
+                                ^^^
+Warning 2 in MT_kinetochore_dynamics.tex line 2988: Non-breaking space (`~') should have been used.
+\cite{banigan2015} and   
+^
+Warning 2 in MT_kinetochore_dynamics.tex line 3011: Non-breaking space (`~') should have been used.
+recently using optical trap measurements \cite{Volkov2018}.  
+                                        ^
+Warning 2 in MT_kinetochore_dynamics.tex line 3045: Non-breaking space (`~') should have been used.
+  in \cite{deluca2006,deluca2011,zaytsev2014,Deluca2018}  
+    ^
+Warning 36 in MT_kinetochore_dynamics.tex line 3059: You should put a space in front of parenthesis.
+(figure~\ref{fig:xvk}(b));  
+                     ^
+Warning 35 in MT_kinetochore_dynamics.tex line 3085: You should perhaps use `\min' instead.
+order of $p(x)$ near $x_\mathrm{min}$ is a linear function  
+                                ^^^
+Warning 2 in MT_kinetochore_dynamics.tex line 3092: Non-breaking space (`~') should have been used.
+In \cite{zaytsev2014}, besides suppression,  
+  ^
+Warning 36 in MT_kinetochore_dynamics.tex line 3096: You should put a space in front of parenthesis.
+which is consistent with our model (figure~\ref{fig:unconfined}(c)).  
+                                                               ^
+Warning 36 in MT_kinetochore_dynamics.tex line 3100: You should put a space in front of parenthesis.
+fluctuative if less MTs are attached (figure~\ref{fig:unconfined}(ab)).  
+                                                                 ^
+Warning 2 in MT_kinetochore_dynamics.tex line 3173: Non-breaking space (`~') should have been used.
+\cite{waters1996,khodjakov1996}.  
+^
+Warning 2 in MT_kinetochore_dynamics.tex line 3185: Non-breaking space (`~') should have been used.
+are expected \cite{newton2004}.  
+            ^
+Warning 6 in MT_kinetochore_dynamics.tex line 3186: No italic correction (`\/') found.
+We found that {\it both} the linker stiffness $c$ {\it and}   
+                       ^
+Warning 6 in MT_kinetochore_dynamics.tex line 3186: No italic correction (`\/') found.
+We found that {\it both} the linker stiffness $c$ {\it and}   
+                                                          ^
+Warning 2 in MT_kinetochore_dynamics.tex line 3202: Non-breaking space (`~') should have been used.
+\cite{Wei2005,Wang2008,Maresca2009,dumont2012}.  
+^
+Warning 2 in MT_kinetochore_dynamics.tex line 3207: Non-breaking space (`~') should have been used.
+\cite{kline2004},  
+^
+Warning 36 in MT_kinetochore_dynamics.tex line 3210: You should put a space in front of parenthesis.
+Then, in accordance to our results (see  figure\ \ref{fig:conf_wckin}(cd)),   
+                                                                     ^
+Warning 35 in MT_kinetochore_dynamics.tex line 3211: You should perhaps use `\max' instead.
+the  turning point  $F_\mathrm{max}$ of the hysteresis loop  
+                               ^^^
+Warning 2 in MT_kinetochore_dynamics.tex line 3271: Non-breaking space (`~') should have been used.
+compatible with recent optical trap measurements \cite{Volkov2018}.   
+                                                ^
+Warning 24 in MT_kinetochore_dynamics.tex line 3283: Delete this space to maintain correct pagereferences.
+        \label{tab:summary}  
+       ^
+Warning 1 in MT_kinetochore_dynamics.tex line 3286: Command terminated with space.
+                \br  
+                   ^
+Warning 1 in MT_kinetochore_dynamics.tex line 3288: Command terminated with space.
+                \mr  
+                   ^
+Warning 1 in MT_kinetochore_dynamics.tex line 3295: Command terminated with space.
+                \br  
+                   ^
+Warning 1 in MT_kinetochore_dynamics.tex line 3299: Command terminated with space.
+\ack  
+    ^
+Warning 12 in MT_kinetochore_dynamics.tex line 3301: Interword spacing (`\ ') should perhaps be used.
+No. \mbox{KI 662/9-1}).  
+   ^
+Warning 8 in MT_kinetochore_dynamics.tex line 3301: Wrong length of dash may have been used.
+No. \mbox{KI 662/9-1}).  
+                  ^

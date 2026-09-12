@@ -1,0 +1,263 @@
+{
+ "paper": "1803.02676",
+ "main": "Preprint_Bonciolini_RSOS.tex",
+ "files": [
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "chars_before": 56108,
+   "chars_after": 56036,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 56108,
+ "chars_after": 56036,
+ "delta_pct": -0.12832394667427105,
+ "unrepaired": {
+  "chars_after": 56018,
+  "chars_before": 56108,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.021083,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`RSOS_cited_papers.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.1604049333428388
+ },
+ "stats": {
+  "cite_cmds_live": 40,
+  "cite_keys_live": 67,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 30,
+  "labels_outside_grammar": 0,
+  "refs_live": 5,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 45,
+  "float_envs": 10,
+  "cite_cmds_annotated": 22,
+  "cite_keys_annotated": 33,
+  "ids_annotated": 24,
+  "refs_annotated": 4,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 25,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 80,
+   "token": "@cite(may2008complex)",
+   "wrapper": "txb",
+   "context": "Many systems exhibit abrupt changes, or tipping, e.g. population extinction \\cite{drake2010early,dodorico2005noise}, emergence of infectious diseases \\cite{dibb"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 81,
+   "token": "@cite(scheffer2009early,kuehn2011mathematical,scheffer2012anticipating)",
+   "wrapper": "txb",
+   "context": "Tipping is dangerous if some states of the system are associated with extreme or catastrophic events, \\txb{and this explains the interest this subject has recei"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 83,
+   "token": "@cite(nazarimehr2017can,dakos2008slowing,dakos2015resilience,lenton2012early,meisel2015critical)",
+   "wrapper": "txb",
+   "context": "\\textit{B-tipping} is induced by a \\textit{Bifurcation} where the system state changes drastically for a small change of a control parameter. \\txb{In this case,"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 83,
+   "token": "@cite(karnatak2017early,jiang2018predicting)",
+   "wrapper": "?",
+   "context": "\\textit{B-tipping} is induced by a \\textit{Bifurcation} where the system state changes drastically for a small change of a control parameter. \\txb{In this case,"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 84,
+   "token": "@cite(sutera1981stochastic,sura2002noise,semenov2017noise,nikolaou2015detection)",
+   "wrapper": "txb",
+   "context": "In \\textit{N-tipping}, dynamic \\textit{Noise} induces jumps between several coexisting attractors \\txb{(e.g. \\cite{sutera1981stochastic,sura2002noise,semenov201"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 84,
+   "token": "@cite(carpenter2006rising,chen2018rising)",
+   "wrapper": "?",
+   "context": "In \\textit{N-tipping}, dynamic \\textit{Noise} induces jumps between several coexisting attractors \\txb{(e.g. \\cite{sutera1981stochastic,sura2002noise,semenov201"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 85,
+   "token": "@cite(ashwin2017parameter,siteur2016ecosystems,chen2015patterned,wieczorek2011excitability)",
+   "wrapper": "txb",
+   "context": "\\textit{R-tipping} is induced by the \\textit{Rate} at which a control parameter is varied\\txb{, if several possible attractors are present in the range of param"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 85,
+   "token": "@cite(tony2017experimental)",
+   "wrapper": "?",
+   "context": "\\textit{R-tipping} is induced by the \\textit{Rate} at which a control parameter is varied\\txb{, if several possible attractors are present in the range of param"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 86,
+   "token": "@cite(baer2008slow)",
+   "wrapper": "txb",
+   "context": "\\txb{Inertial effects can also delay the bifurcation, moving the tipping point to higher/lower values of the bifurcation parameter as observed, for example, by "
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 98,
+   "token": "@cite(ashwin2017fast)",
+   "wrapper": "txb",
+   "context": "In this case, the evolution of the system  results from the interplay of different time scales set by the ramp rate, the noise intensity and the system relaxati"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 98,
+   "token": "@cite(sun2015delay)",
+   "wrapper": "?",
+   "context": "In this case, the evolution of the system  results from the interplay of different time scales set by the ramp rate, the noise intensity and the system relaxati"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 98,
+   "token": "@cite(clements2016rate)",
+   "wrapper": "?",
+   "context": "In this case, the evolution of the system  results from the interplay of different time scales set by the ramp rate, the noise intensity and the system relaxati"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 99,
+   "token": "@cite(berglund2002pathwise)",
+   "wrapper": "txb",
+   "context": "\\txb{Berglund and Gentz \\cite{berglund2002pathwise} provide theoretical and numerical analyses for rate-delayed tipping in presence of noise in supercritical pi"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 99,
+   "token": "@cite(ritchie2016early)",
+   "wrapper": "?",
+   "context": "\\txb{Berglund and Gentz \\cite{berglund2002pathwise} provide theoretical and numerical analyses for rate-delayed tipping in presence of noise in supercritical pi"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 101,
+   "token": "@cite(kwasniok2015forecasting)",
+   "wrapper": "txb",
+   "context": "\\txb{Kwasniok \\cite{kwasniok2015forecasting} introduces a method to predict a fold and a Hopf bifurcation in presence of noise. Kuehn \\cite{kuehn2017uncertainty"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 101,
+   "token": "@cite(kuehn2017uncertainty)",
+   "wrapper": "?",
+   "context": "\\txb{Kwasniok \\cite{kwasniok2015forecasting} introduces a method to predict a fold and a Hopf bifurcation in presence of noise. Kuehn \\cite{kuehn2017uncertainty"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 177,
+   "token": "@ref(eq:wave)",
+   "wrapper": "?",
+   "context": "The thermoacoustic behaviour described in the previous section can be reproduced by a low-order model derived from first principles. The Helmholtz equation (\\re"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 179,
+   "token": "@id(helmholtz)",
+   "wrapper": "?",
+   "context": "\\label{helmholtz}"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 183,
+   "token": "@id(helmholtz_BC)",
+   "wrapper": "?",
+   "context": "\\label{helmholtz_BC}"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 187,
+   "token": "@cite(lieuwen2003statistical,culick2006unsteady)",
+   "wrapper": "?",
+   "context": "Although non-linear coupling among different thermoacoustic modes can occur in some practical configurations, we focus on situations where, like in the present "
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 190,
+   "token": "@id(eq:mode)",
+   "wrapper": "?",
+   "context": "\\label{eq:mode}"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 197,
+   "token": "@id(eq:mode_osc)",
+   "wrapper": "?",
+   "context": "\\label{eq:mode_osc}"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 202,
+   "token": "@id(eq:mode_alpha)",
+   "wrapper": "?",
+   "context": "\\label{eq:mode_alpha}"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 207,
+   "token": "@id(eq:mode_q)",
+   "wrapper": "?",
+   "context": "\\label{eq:mode_q}"
+  },
+  {
+   "file": "Preprint_Bonciolini_RSOS.tex",
+   "line": 211,
+   "token": "@cite(lieuwen2003statistical,culick2006unsteady)",
+   "wrapper": "?",
+   "context": "Therefore, the system dynamics can be approximated by a forced damped harmonic oscillator \\eqref{eq:mode_osc} of resonance frequency $\\omega_0$. The term $\\alph"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.021076,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`RSOS_cited_papers.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "Preprint_Bonciolini_RSOS.xtex",
+    "offset": 3891,
+    "length": 32,
+    "line": 80,
+    "column": 83
+   },
+   "message": "citation checking unavailable: `RSOS_cited_papers.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

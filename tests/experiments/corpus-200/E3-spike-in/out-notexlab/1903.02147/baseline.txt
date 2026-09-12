@@ -1,0 +1,26 @@
+tectonic pdf bytes=2744213
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=['ascoli2007neuromorpho', 'ascoli2008petilla', 'basu2011path2path', 'batabyal2017neurosol', 'batabyal2018elasticpath2path', 'batabyal2018neurobfd', 'bielza2014branching', 'brown2008quantifying', 'cervantes2018morphological', 'fischler1981random', 'gasparini2004initiation', 'genet2014incorporating', 'gillette2015topological', 'gillette2015topological1', 'glaser1990neuron', 'harary1969graph', 'jan2010branching', 'kanari2018topological', 'lin2010ricci', 'london2005dendritic', 'lopez2011models', 'meijering2010neuron', 'migliore2002emerging', 'miina2002application', 'munkres1957algorithms', 'murphy2014janelia', 'myatt2012neuromantic', 'polavaram2014statistical', 'puvskavs2015fractal', 'romand2011morphological', 'samsonovich2006morphological', 'sarkar2013shape', 'scorcioni2008measure', 'sporns2005human', 'srivastava2011shape', 'stockley1993system', 'vishwanathan2010graph', 'wan2015blastneuron', 'wen2008cost', 'williams2004spatial', 'y1972histologie'] secs=6
+e \output is active
+warning: NeuroP2P.tex:429: Overfull \hbox (11.42587pt too wide) in paragraph at lines 428--429
+warning: NeuroP2P.tex:429: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: NeuroP2P.tex:433: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: NeuroP2P.tex:441: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: NeuroP2P.tex:485: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: NeuroP2P.tex:503: Overfull \hbox (34.17491pt too wide) in paragraph at lines 501--503
+warning: NeuroP2P.tex:511: Overfull \hbox (8.57204pt too wide) in paragraph at lines 510--511
+warning: NeuroP2P.tex:511: Underfull \hbox (badness 1033) in paragraph at lines 511--511
+warning: NeuroP2P.tex:511: Underfull \hbox (badness 1057) in paragraph at lines 511--511
+warning: NeuroP2P.tex:517: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: NeuroP2P.tex:532: Overfull \hbox (3.45152pt too wide) in paragraph at lines 525--532
+warning: NeuroP2P.tex:538: Overfull \hbox (0.55585pt too wide) in paragraph at lines 537--538
+warning: NeuroP2P.tex:580: Overfull \hbox (34.17491pt too wide) in paragraph at lines 578--580
+warning: NeuroP2P.tex:589: Overfull \hbox (8.56593pt too wide) in paragraph at lines 588--589
+warning: NeuroP2P.tex:599: Overfull \hbox (34.17491pt too wide) in paragraph at lines 598--599
+warning: NeuroP2P.tex:607: Overfull \hbox (4.84584pt too wide) in paragraph at lines 606--607
+warning: NeuroP2P.tex:607: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: NeuroP2P.tex:609: Overfull \hbox (4.25584pt too wide) in paragraph at lines 608--609
+warning: NeuroP2P.tex:660: Overfull \hbox (2.62543pt too wide) in paragraph at lines 657--660
+warning: NeuroP2P.tex:704: Overfull \hbox (12.98586pt too wide) in paragraph at lines 703--704
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

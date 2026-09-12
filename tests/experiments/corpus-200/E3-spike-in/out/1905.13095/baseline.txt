@@ -1,0 +1,28 @@
+tectonic pdf bytes=470665
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'paperQuantum.tex', 76, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 84, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 88, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 92, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 96, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 165, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 173, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 175, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 176, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 189, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 245, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 253, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 256, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 275, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 277, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 281, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 406, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 654, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 682, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 755, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 806, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 807, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 808, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 1027, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 1028, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 1089, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 1165, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 1166, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 1215, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 1254, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 1257, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 1259, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 1261, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 1262, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 1264, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 1276, 'Undefined reference'), ('ERROR', 'paperQuantum.tex', 1277, 'Undefined reference'), ('info', 'paperQuantum.tex', 143, 'Unused label'), ('info', 'paperQuantum.tex', 164, 'Unused label'), ('info', 'paperQuantum.tex', 187, 'Unused label'), ('info', 'paperQuantum.tex', 241, 'Unused label'), ('info', 'paperQuantum.tex', 407, 'Unused label'), ('info', 'paperQuantum.tex', 408, 'Unused label'), ('info', 'paperQuantum.tex', 581, 'Unused label'), ('info', 'paperQuantum.tex', 590, 'Unused label'), ('info', 'paperQuantum.tex', 762, 'Unused label'), ('info', 'paperQuantum.tex', 773, 'Unused label'), ('info', 'paperQuantum.tex', 787, 'Unused label'), ('info', 'paperQuantum.tex', 788, 'Unused label'), ('info', 'paperQuantum.tex', 791, 'Unused label'), ('info', 'paperQuantum.tex', 1016, 'Unused label'), ('info', 'paperQuantum.tex', 1018, 'Unused label'), ('info', 'paperQuantum.tex', 1020, 'Unused label'), ('info', 'paperQuantum.tex', 1094, 'Unused label'), ('info', 'paperQuantum.tex', 1123, 'Unused label'), ('info', 'paperQuantum.tex', 1149, 'Unused label'), ('info', 'paperQuantum.tex', 1152, 'Unused label'), ('info', 'paperQuantum.tex', 1154, 'Unused label'), ('info', 'paperQuantum.tex', 1158, 'Unused label'), ('info', 'paperQuantum.tex', 1160, 'Unused label')]
+tectonic exit=0 warnings=['AMRR11', 'Ari15', 'BHT98', 'BR12', 'BT18', 'CMB16', 'ChK10', 'Cira06', 'DHHM04', 'Durr1996', 'Grover96', 'HK70', 'HLS07', 'ItoJeffery15', 'Kahn62', 'LL16', 'LMRS10', 'LMRSS11', 'RS12', 'Rei09', 'Shi02', 'Tarjan76', 'Zhang05'] secs=3
+ paragraph at lines 1152--1153
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:469: Underfull \hbox (badness 10000) in paragraph at lines 463--469
+warning: paperQuantum.tex:544: Overfull \hbox (0.6339pt too wide) in paragraph at lines 541--544
+warning: paperQuantum.tex:588: Overfull \hbox (14.98766pt too wide) detected at line 588
+warning: paperQuantum.tex:650: Overfull \hbox (26.09552pt too wide) in paragraph at lines 649--650
+warning: paperQuantum.tex:674: Overfull \hbox (13.42482pt too wide) in paragraph at lines 672--674
+warning: paperQuantum.tex:1153: Overfull \hbox (9.8789pt too wide) in paragraph at lines 1152--1153
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:469: Underfull \hbox (badness 10000) in paragraph at lines 463--469
+warning: paperQuantum.tex:544: Overfull \hbox (0.6339pt too wide) in paragraph at lines 541--544
+warning: paperQuantum.tex:588: Overfull \hbox (14.98766pt too wide) detected at line 588
+warning: paperQuantum.tex:650: Overfull \hbox (26.09552pt too wide) in paragraph at lines 649--650
+warning: paperQuantum.tex:674: Overfull \hbox (13.42482pt too wide) in paragraph at lines 672--674
+warning: paperQuantum.tex:1153: Overfull \hbox (9.8789pt too wide) in paragraph at lines 1152--1153
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

@@ -1,0 +1,151 @@
+{
+ "paper": "2312.15379",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 79585,
+   "chars_after": 79475,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "figures/heaplanglt-syntax.tex",
+   "chars_before": 1327,
+   "chars_after": 1327,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "figures/heaplanglt-extensions.tex",
+   "chars_before": 3231,
+   "chars_after": 3231,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "figures/state/heaplanglt-state-simplified.tex",
+   "chars_before": 849,
+   "chars_after": 849,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "figures/lat/lat.tex",
+   "chars_before": 663,
+   "chars_after": 663,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "figures/lat/tclat-unfair.tex",
+   "chars_before": 1591,
+   "chars_after": 1591,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "figures/lat/tclat-fair.tex",
+   "chars_before": 1821,
+   "chars_after": 1821,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "appendix-body.tex",
+   "chars_before": 61860,
+   "chars_after": 61722,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 8,
+ "chars_before": 150927,
+ "chars_after": 150679,
+ "delta_pct": -0.1643178490263505,
+ "unrepaired": {
+  "chars_after": 150676,
+  "chars_before": 150927,
+  "converted_files": 8,
+  "check_exit": 0,
+  "coverage": 0.061979,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`ref.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.16630556494199183
+ },
+ "stats": {
+  "cite_cmds_live": 71,
+  "cite_keys_live": 103,
+  "cite_with_optarg_or_star": 11,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 93,
+  "labels_outside_grammar": 0,
+  "refs_live": 143,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 69,
+  "cite_cmds_annotated": 60,
+  "cite_keys_annotated": 92,
+  "ids_annotated": 92,
+  "refs_annotated": 142,
+  "inputs_root": 7,
+  "inputs_imported": 7,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 9,
+  "defects_reverted": 0,
+  "leaks_reverted": 2,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "main.tex",
+   "line": 642,
+   "token": "@ref(fig:spinlock-classic-sassy)",
+   "wrapper": "?",
+   "context": "\\begin{subcaptionbox}{Client invariant and atomic updates. Because the \\spinlock implementation in Figure~\\ref{fig:spinlock-classic-sassy} uses booleans we impl"
+  },
+  {
+   "file": "main.tex",
+   "line": 642,
+   "token": "@id(fig:safety-proof-concrete-spinlock-defs)",
+   "wrapper": "?",
+   "context": "\\begin{subcaptionbox}{Client invariant and atomic updates. Because the \\spinlock implementation in Figure~\\ref{fig:spinlock-classic-sassy} uses booleans we impl"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.061978,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`ref.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "main.xtex",
+    "offset": 5292,
+    "length": 24,
+    "line": 100,
+    "column": 58
+   },
+   "message": "citation checking unavailable: `ref.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

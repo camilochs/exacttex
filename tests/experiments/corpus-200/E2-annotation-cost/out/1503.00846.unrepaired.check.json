@@ -1,0 +1,41 @@
+{
+ "coverage": 0.039908,
+ "bibliography": {
+  "state": "complete",
+  "entries": 54
+ },
+ "diagnostics": [
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "Tsummary",
+   "span": {
+    "file": "paper20160222.xtex",
+    "offset": 28524,
+    "length": 8,
+    "line": 609,
+    "column": 56
+   },
+   "message": "identifier `Tsummary` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "Tsummary",
+   "span": {
+    "file": "paper20160222.xtex",
+    "offset": 36867,
+    "length": 8,
+    "line": 780,
+    "column": 52
+   },
+   "message": "identifier `Tsummary` is not declared",
+   "related": []
+  }
+ ]
+}

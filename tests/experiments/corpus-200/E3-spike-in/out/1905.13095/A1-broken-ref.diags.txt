@@ -1,0 +1,3 @@
+planted=thm:binaryClassical2quantum__ghost sites=[('paperQuantum.xtex', 321)]
+xtex new=[('XT1003', 'thm:binaryClassical2quantum__ghost', 'paperQuantum.xtex', 321)]
+texlab new=[('ERROR', 'paperQuantum.tex', 321, 'Undefined reference')]

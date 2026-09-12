@@ -1,0 +1,25 @@
+{
+ "coverage": 0.027558,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`varselection.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "EJS1402-Accepted.xtex",
+    "offset": 3214,
+    "length": 9,
+    "line": 111,
+    "column": 479
+   },
+   "message": "citation checking unavailable: `varselection.bib` could not be read",
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[('info', 'eptcs.cls', 101, 'Unused label'), ('info', 'main_arXiv2.tex', 377, 'Unused label'), ('info', 'main_arXiv2.tex', 808, 'Unused label'), ('info', 'main_arXiv2.tex', 844, 'Unused label'), ('info', 'main_arXiv2.tex', 876, 'Unused label'), ('info', 'main_arXiv2.tex', 895, 'Unused label'), ('info', 'main_arXiv2.tex', 958, 'Unused label'), ('info', 'main_arXiv2.tex', 986, 'Unused label'), ('info', 'main_arXiv2.tex', 996, 'Unused label'), ('info', 'main_arXiv2.tex', 1515, 'Unused label'), ('info', 'main_arXiv2.tex', 1641, 'Unused label'), ('info', 'main_arXiv2.tex', 1704, 'Unused label'), ('info', 'main_arXiv2.tex', 1783, 'Unused label'), ('info', 'main_arXiv2.tex', 2108, 'Unused label'), ('info', 'main_arXiv2.tex', 2127, 'Unused label'), ('info', 'main_arXiv2.tex', 2155, 'Unused label'), ('info', 'main_arXiv2.tex', 2276, 'Unused label'), ('info', 'main_arXiv2.tex', 2489, 'Unused label'), ('info', 'main_arXiv2.tex', 2823, 'Unused label')]
+tectonic exit=1 warnings=[] secs=2
+error: main_arXiv2.tex:29: ! LaTeX Error: File `diagrams.sty' not found.
+error: halted on potentially-recoverable error as specified

@@ -1,0 +1,1198 @@
+{
+ "paper": "2203.02151",
+ "main": "main_elife.tex",
+ "files": [
+  {
+   "file": "main_elife.tex",
+   "chars_before": 130736,
+   "chars_after": 130691,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 130736,
+ "chars_after": 130691,
+ "delta_pct": -0.034420511565291884,
+ "unrepaired": {
+  "chars_after": 130688,
+  "chars_before": 130736,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.052468,
+  "bibliography": {
+   "state": "complete",
+   "entries": 222
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.036715212336311344
+ },
+ "stats": {
+  "cite_cmds_live": 254,
+  "cite_keys_live": 402,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 16,
+  "labels_outside_grammar": 0,
+  "refs_live": 97,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 10,
+  "cite_cmds_annotated": 141,
+  "cite_keys_annotated": 240,
+  "ids_annotated": 15,
+  "refs_annotated": 50,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 161,
+  "revert_rounds": 2,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "main_elife.tex",
+   "line": 60,
+   "token": "@citep(wiltschko2015mapping,findley2021sniff,recanatesi2022metastable)",
+   "wrapper": "lm",
+   "context": "\\lm{After controlling for all known contextual effects, an individual's behavior still exhibits a large amount of residual temporal variability across repetitio"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 76,
+   "token": "@citep(honegger2018stochasticity)",
+   "wrapper": "lm",
+   "context": "\\lm{These three aspects of temporal variability (hierarchical, contextual, stochastic) can all be observed in the naturalistic behavior of a single individual d"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 91,
+   "token": "@ref(box:videos)",
+   "wrapper": "lm",
+   "context": "\\caption{\\label{box:definitions}Definitions of behavioral units \\lm{(see Appendix \\ref{box:videos} for how to extract these features from videos).}}"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 95,
+   "token": "@citep(brown2018ethology)",
+   "wrapper": "lm",
+   "context": "Action & The simplest building blocks of behavior at the lowest level of the hierarchy, which occur at a fast, typically sub-second timescale, and cannot be fur"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 95,
+   "token": "@citep(anderson2014toward)",
+   "wrapper": "?",
+   "context": "Action & The simplest building blocks of behavior at the lowest level of the hierarchy, which occur at a fast, typically sub-second timescale, and cannot be fur"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 95,
+   "token": "@citep(berman2016predictability,marshall2021continuous)",
+   "wrapper": "lm",
+   "context": "Action & The simplest building blocks of behavior at the lowest level of the hierarchy, which occur at a fast, typically sub-second timescale, and cannot be fur"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 103,
+   "token": "@ref(box:videos)",
+   "wrapper": "lm",
+   "context": "The study of naturalistic behavior based on animal videos has recently undergone a revolution due to the spectacular accuracy and efficiency of \\lm{computationa"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 103,
+   "token": "@ref(box:definitions)",
+   "wrapper": "?",
+   "context": "The study of naturalistic behavior based on animal videos has recently undergone a revolution due to the spectacular accuracy and efficiency of \\lm{computationa"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 103,
+   "token": "@ref(box:videos)",
+   "wrapper": "lm",
+   "context": "The study of naturalistic behavior based on animal videos has recently undergone a revolution due to the spectacular accuracy and efficiency of \\lm{computationa"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 103,
+   "token": "@citep(berman2014mapping,berman2016predictability)",
+   "wrapper": "?",
+   "context": "The study of naturalistic behavior based on animal videos has recently undergone a revolution due to the spectacular accuracy and efficiency of \\lm{computationa"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 103,
+   "token": "@citep(marshall2021continuous)",
+   "wrapper": "?",
+   "context": "The study of naturalistic behavior based on animal videos has recently undergone a revolution due to the spectacular accuracy and efficiency of \\lm{computationa"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 103,
+   "token": "@ref(figtwo)",
+   "wrapper": "?",
+   "context": "The study of naturalistic behavior based on animal videos has recently undergone a revolution due to the spectacular accuracy and efficiency of \\lm{computationa"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 103,
+   "token": "@ref(figtwo)",
+   "wrapper": "?",
+   "context": "The study of naturalistic behavior based on animal videos has recently undergone a revolution due to the spectacular accuracy and efficiency of \\lm{computationa"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 103,
+   "token": "@citep(linderman2019hierarchical)",
+   "wrapper": "?",
+   "context": "The study of naturalistic behavior based on animal videos has recently undergone a revolution due to the spectacular accuracy and efficiency of \\lm{computationa"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 103,
+   "token": "@citep(tao2019statistical)",
+   "wrapper": "?",
+   "context": "The study of naturalistic behavior based on animal videos has recently undergone a revolution due to the spectacular accuracy and efficiency of \\lm{computationa"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 103,
+   "token": "@citep(maye2007order)",
+   "wrapper": "?",
+   "context": "The study of naturalistic behavior based on animal videos has recently undergone a revolution due to the spectacular accuracy and efficiency of \\lm{computationa"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 103,
+   "token": "@citep(johnson2020probabilistic)",
+   "wrapper": "?",
+   "context": "The study of naturalistic behavior based on animal videos has recently undergone a revolution due to the spectacular accuracy and efficiency of \\lm{computationa"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 103,
+   "token": "@citep(wiltschko2015mapping,markowitz2018striatum)",
+   "wrapper": "?",
+   "context": "The study of naturalistic behavior based on animal videos has recently undergone a revolution due to the spectacular accuracy and efficiency of \\lm{computationa"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 103,
+   "token": "@citep(killeen1988behavioral)",
+   "wrapper": "?",
+   "context": "The study of naturalistic behavior based on animal videos has recently undergone a revolution due to the spectacular accuracy and efficiency of \\lm{computationa"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 103,
+   "token": "@ref(figthree)",
+   "wrapper": "?",
+   "context": "The study of naturalistic behavior based on animal videos has recently undergone a revolution due to the spectacular accuracy and efficiency of \\lm{computationa"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 103,
+   "token": "@ref(box:videos)",
+   "wrapper": "lm",
+   "context": "The study of naturalistic behavior based on animal videos has recently undergone a revolution due to the spectacular accuracy and efficiency of \\lm{computationa"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 126,
+   "token": "@ref(figthree)",
+   "wrapper": "lm",
+   "context": "\\lm{Ensemble activity recorded in M2 during the Marshmallow task unfolded via sequences of multi-neuron firing patterns, each one lasting hundreds of millisecon"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 128,
+   "token": "@citep(wiltschko2015mapping,batty2019behavenet,johnson2020probabilistic,2021distance,findley2021sniff)",
+   "wrapper": "lm",
+   "context": "\\lm{The use of state space models with underlying Markovian dynamics as generative models, capturing both naturalistic behavior \\citep{wiltschko2015mapping,batt"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 128,
+   "token": "@citep(maboudi2018uncovering,linderman2019hierarchical,recanatesi2022metastable)",
+   "wrapper": "?",
+   "context": "\\lm{The use of state space models with underlying Markovian dynamics as generative models, capturing both naturalistic behavior \\citep{wiltschko2015mapping,batt"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 148,
+   "token": "@ref(figthree)",
+   "wrapper": "?",
+   "context": "Metastable attractors can be concatenated into sequences, which can either be random, as observed during ongoing periods in sensory cortex \\citep{mazzucato2015d"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 148,
+   "token": "@ref(figfive)",
+   "wrapper": "?",
+   "context": "Metastable attractors can be concatenated into sequences, which can either be random, as observed during ongoing periods in sensory cortex \\citep{mazzucato2015d"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 156,
+   "token": "@ref(box:attractors)",
+   "wrapper": "lm",
+   "context": "The hypothesis that preparatory activity for upcoming actions is encoded in discrete attractors in M2 has been convincingly demonstrated using causal manipulati"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 160,
+   "token": "@ref(box:videos)",
+   "wrapper": "lm",
+   "context": "\\lm{The metastable attractor model assumes the existence of discrete units of behavior at the level of actions, although large variability in movement execution"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 162,
+   "token": "@ref(figfive)",
+   "wrapper": "lm",
+   "context": "At higher levels of the behavioral hierarchy, repetitions of the same behavioral sequence (such as a jump attempt, an olfactory search trial, or a waiting trial"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 162,
+   "token": "@ref(figeight)",
+   "wrapper": "?",
+   "context": "At higher levels of the behavioral hierarchy, repetitions of the same behavioral sequence (such as a jump attempt, an olfactory search trial, or a waiting trial"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 197,
+   "token": "@citep(wyrick2021state)",
+   "wrapper": "lm",
+   "context": "Although it is not possible to measure potential wells directly in the brain, using mean field theory one can show that the height of these potential wells is d"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 216,
+   "token": "@ref(figtwo)",
+   "wrapper": "lm",
+   "context": "Contextual modulations of temporal variability may affect other aspects of natural behavior beyond average action timing, such as the frequency of occurrence of"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 216,
+   "token": "@ref(figfive)",
+   "wrapper": "?",
+   "context": "Contextual modulations of temporal variability may affect other aspects of natural behavior beyond average action timing, such as the frequency of occurrence of"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 216,
+   "token": "@ref(box:videos)",
+   "wrapper": "?",
+   "context": "Contextual modulations of temporal variability may affect other aspects of natural behavior beyond average action timing, such as the frequency of occurrence of"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 229,
+   "token": "@ref(figthree)",
+   "wrapper": "lm",
+   "context": "The computational mechanisms discussed so far can separately account for some specific features of contextual modulations, but none of the existing models can a"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 229,
+   "token": "@ref(figfour)",
+   "wrapper": "?",
+   "context": "The computational mechanisms discussed so far can separately account for some specific features of contextual modulations, but none of the existing models can a"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 229,
+   "token": "@ref(figfive)",
+   "wrapper": "?",
+   "context": "The computational mechanisms discussed so far can separately account for some specific features of contextual modulations, but none of the existing models can a"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 248,
+   "token": "@citep(kaplan2020nested)",
+   "wrapper": "?",
+   "context": "\\caption{\\lm{{\\it Behavioral and neural hierarchies in C. elegans}. Top: Behavioral hierarchy in C. elegans. A 0.05-Hz cycle drives switches between forward and"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 255,
+   "token": "@ref(fig:worm)",
+   "wrapper": "?",
+   "context": "\\lm{Remarkable progress in both behavioral and neurophysiological aspects of the hierarchy has been made in the worm {\\it C. elegans} (Fig. \\ref{fig:worm}). The"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 255,
+   "token": "@citep(gomez2016hierarchical)",
+   "wrapper": "?",
+   "context": "\\lm{Remarkable progress in both behavioral and neurophysiological aspects of the hierarchy has been made in the worm {\\it C. elegans} (Fig. \\ref{fig:worm}). The"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 255,
+   "token": "@citep(kaplan2020nested)",
+   "wrapper": "?",
+   "context": "\\lm{Remarkable progress in both behavioral and neurophysiological aspects of the hierarchy has been made in the worm {\\it C. elegans} (Fig. \\ref{fig:worm}). The"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 255,
+   "token": "@citep(hallinen2021decoding)",
+   "wrapper": "?",
+   "context": "\\lm{Remarkable progress in both behavioral and neurophysiological aspects of the hierarchy has been made in the worm {\\it C. elegans} (Fig. \\ref{fig:worm}). The"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 257,
+   "token": "@citep(ben2009molecular,flavell2013serotonin)",
+   "wrapper": "lm",
+   "context": "\\lm{At the top of this motor hierarchy we find a much longer-lasting organization of states in terms of exploration, exploitation, and quiescence. In contrast t"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 267,
+   "token": "@citep(ayroles2014behavioral)",
+   "wrapper": "lm",
+   "context": "A hallmark of the fly behavior emerging from this analysis is that the different branches of this hierarchical tree in the fruit fly are segregated. Namely, mov"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 267,
+   "token": "@citep(buchanan2015neuronal)",
+   "wrapper": "?",
+   "context": "A hallmark of the fly behavior emerging from this analysis is that the different branches of this hierarchical tree in the fruit fly are segregated. Namely, mov"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 280,
+   "token": "@citep(kawai2015motor)",
+   "wrapper": "lm",
+   "context": "This multiscale analysis of ongoing behavior was applied to mice in a recent study, where mouse body piercing allowed for tracking of the three-dimensional pose"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 280,
+   "token": "@ref(figsix)",
+   "wrapper": "?",
+   "context": "This multiscale analysis of ongoing behavior was applied to mice in a recent study, where mouse body piercing allowed for tracking of the three-dimensional pose"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 307,
+   "token": "@ref(figseven)",
+   "wrapper": "lm",
+   "context": "What are the computational mechanisms underlying this hierarchical temporal structure featuring a wide distribution of timescales? Single-cell biophysical prope"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 307,
+   "token": "@ref(figsix)",
+   "wrapper": "?",
+   "context": "What are the computational mechanisms underlying this hierarchical temporal structure featuring a wide distribution of timescales? Single-cell biophysical prope"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 315,
+   "token": "@ref(box:metaattractors)",
+   "wrapper": "lm",
+   "context": "An alternative robust and biologically plausible way to generate a vast hierarchy of timescales was proposed based on the ingredients of recurrent functional cl"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 315,
+   "token": "@ref(figseven)",
+   "wrapper": "?",
+   "context": "An alternative robust and biologically plausible way to generate a vast hierarchy of timescales was proposed based on the ingredients of recurrent functional cl"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 322,
+   "token": "@citep(stern2021reservoir)",
+   "wrapper": "lm",
+   "context": "On the theory side, although recurrent dynamics can generate heterogeneous distributions of timescales (Fig. \\ref{figseven}E), this model needs to be extended t"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 322,
+   "token": "@ref(figseven)",
+   "wrapper": "?",
+   "context": "On the theory side, although recurrent dynamics can generate heterogeneous distributions of timescales (Fig. \\ref{figseven}E), this model needs to be extended t"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 322,
+   "token": "@citep(schaub2015emergence)",
+   "wrapper": "?",
+   "context": "On the theory side, although recurrent dynamics can generate heterogeneous distributions of timescales (Fig. \\ref{figseven}E), this model needs to be extended t"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 322,
+   "token": "@citep(mckenzie2014hippocampal)",
+   "wrapper": "lm",
+   "context": "On the theory side, although recurrent dynamics can generate heterogeneous distributions of timescales (Fig. \\ref{figseven}E), this model needs to be extended t"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 322,
+   "token": "@citep(rigotti2013importance)",
+   "wrapper": "?",
+   "context": "On the theory side, although recurrent dynamics can generate heterogeneous distributions of timescales (Fig. \\ref{figseven}E), this model needs to be extended t"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 322,
+   "token": "@citep(mazzucato2015dynamics)",
+   "wrapper": "?",
+   "context": "On the theory side, although recurrent dynamics can generate heterogeneous distributions of timescales (Fig. \\ref{figseven}E), this model needs to be extended t"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 322,
+   "token": "@citep(recanatesi2022metastable)",
+   "wrapper": "?",
+   "context": "On the theory side, although recurrent dynamics can generate heterogeneous distributions of timescales (Fig. \\ref{figseven}E), this model needs to be extended t"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 322,
+   "token": "@citep(kaplan2020nested)",
+   "wrapper": "?",
+   "context": "On the theory side, although recurrent dynamics can generate heterogeneous distributions of timescales (Fig. \\ref{figseven}E), this model needs to be extended t"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 322,
+   "token": "@ref(fig:worm)",
+   "wrapper": "?",
+   "context": "On the theory side, although recurrent dynamics can generate heterogeneous distributions of timescales (Fig. \\ref{figseven}E), this model needs to be extended t"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 332,
+   "token": "@citep(berman2016predictability)",
+   "wrapper": "lm",
+   "context": "Which network architectures can implement a hierarchical attractor landscape? The behavioral hierarchy discovered in \\lm{flies \\citep{berman2016predictability} "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 332,
+   "token": "@citep(marshall2021continuous)",
+   "wrapper": "?",
+   "context": "Which network architectures can implement a hierarchical attractor landscape? The behavioral hierarchy discovered in \\lm{flies \\citep{berman2016predictability} "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 332,
+   "token": "@citep(dawkins1976hierarchical)",
+   "wrapper": "lm",
+   "context": "Which network architectures can implement a hierarchical attractor landscape? The behavioral hierarchy discovered in \\lm{flies \\citep{berman2016predictability} "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 332,
+   "token": "@citep(gomez2016hierarchical,gupta2019context)",
+   "wrapper": "?",
+   "context": "Which network architectures can implement a hierarchical attractor landscape? The behavioral hierarchy discovered in \\lm{flies \\citep{berman2016predictability} "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 332,
+   "token": "@citep(reddy2022lexical)",
+   "wrapper": "?",
+   "context": "Which network architectures can implement a hierarchical attractor landscape? The behavioral hierarchy discovered in \\lm{flies \\citep{berman2016predictability} "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 341,
+   "token": "@citep(dhawale2017role)",
+   "wrapper": "?",
+   "context": "{\\it Variability in movements and body posture.} A large source of variability in behavior originates from variability in movement execution \\citep{dhawale2017r"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 341,
+   "token": "@citep(churchland2006central)",
+   "wrapper": "?",
+   "context": "{\\it Variability in movements and body posture.} A large source of variability in behavior originates from variability in movement execution \\citep{dhawale2017r"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 341,
+   "token": "@citep(schwarz2015changes,szigeti2015searching)",
+   "wrapper": "?",
+   "context": "{\\it Variability in movements and body posture.} A large source of variability in behavior originates from variability in movement execution \\citep{dhawale2017r"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 341,
+   "token": "@citep(costa2019adaptive,costa2021maximally,ahamed2021capturing)",
+   "wrapper": "?",
+   "context": "{\\it Variability in movements and body posture.} A large source of variability in behavior originates from variability in movement execution \\citep{dhawale2017r"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 341,
+   "token": "@citep(van2004role)",
+   "wrapper": "?",
+   "context": "{\\it Variability in movements and body posture.} A large source of variability in behavior originates from variability in movement execution \\citep{dhawale2017r"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 342,
+   "token": "@citep(honegger2018stochasticity)",
+   "wrapper": "?",
+   "context": "{\\it Stochastic individuality.} One important source of behavioral variability is phenotypic variability across different individuals with identical genetic pro"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 343,
+   "token": "@citep(kawai2015motor,marshall2021continuous)",
+   "wrapper": "?",
+   "context": "from measurable variables such as learning or other developmental conditions - such as behavioral differences in identical twins reared in the same environment."
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 343,
+   "token": "@citep(berman2014mapping)",
+   "wrapper": "?",
+   "context": "from measurable variables such as learning or other developmental conditions - such as behavioral differences in identical twins reared in the same environment."
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 343,
+   "token": "@citep(recanatesi2022metastable)",
+   "wrapper": "?",
+   "context": "from measurable variables such as learning or other developmental conditions - such as behavioral differences in identical twins reared in the same environment."
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 344,
+   "token": "@citep(corrales2016internal)",
+   "wrapper": "?",
+   "context": "{\\it Variability on longer timescales.} Internal states, such as hunger \\citep{corrales2016internal}, and circadian rhythms \\citep{patke2020molecular}  induce d"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 344,
+   "token": "@citep(patke2020molecular)",
+   "wrapper": "?",
+   "context": "{\\it Variability on longer timescales.} Internal states, such as hunger \\citep{corrales2016internal}, and circadian rhythms \\citep{patke2020molecular}  induce d"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 344,
+   "token": "@citep(dissel2014logic,yao2014drosophila)",
+   "wrapper": "?",
+   "context": "{\\it Variability on longer timescales.} Internal states, such as hunger \\citep{corrales2016internal}, and circadian rhythms \\citep{patke2020molecular}  induce d"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 344,
+   "token": "@citep(hastings2018generation,schibler2015clock)",
+   "wrapper": "?",
+   "context": "{\\it Variability on longer timescales.} Internal states, such as hunger \\citep{corrales2016internal}, and circadian rhythms \\citep{patke2020molecular}  induce d"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 344,
+   "token": "@citep(nelson2005introduction)",
+   "wrapper": "?",
+   "context": "{\\it Variability on longer timescales.} Internal states, such as hunger \\citep{corrales2016internal}, and circadian rhythms \\citep{patke2020molecular}  induce d"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 344,
+   "token": "@citep(schibler2015clock)",
+   "wrapper": "?",
+   "context": "{\\it Variability on longer timescales.} Internal states, such as hunger \\citep{corrales2016internal}, and circadian rhythms \\citep{patke2020molecular}  induce d"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 344,
+   "token": "@ref(figfive)",
+   "wrapper": "?",
+   "context": "{\\it Variability on longer timescales.} Internal states, such as hunger \\citep{corrales2016internal}, and circadian rhythms \\citep{patke2020molecular}  induce d"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 344,
+   "token": "@ref(figthree)",
+   "wrapper": "?",
+   "context": "{\\it Variability on longer timescales.} Internal states, such as hunger \\citep{corrales2016internal}, and circadian rhythms \\citep{patke2020molecular}  induce d"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 344,
+   "token": "@citep(murakami2017distinct)",
+   "wrapper": "?",
+   "context": "{\\it Variability on longer timescales.} Internal states, such as hunger \\citep{corrales2016internal}, and circadian rhythms \\citep{patke2020molecular}  induce d"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 345,
+   "token": "@citep(churgin2017longitudinal)",
+   "wrapper": "?",
+   "context": "{\\it Aging}. Other sources of contextual modulation of behavior may act on even longer timescales spanning the whole lifetime of an individual \\citep{churgin201"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 345,
+   "token": "@citep(prinz2004similar,bucher2005animal)",
+   "wrapper": "?",
+   "context": "{\\it Aging}. Other sources of contextual modulation of behavior may act on even longer timescales spanning the whole lifetime of an individual \\citep{churgin201"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 345,
+   "token": "@citep(sowell2004mapping,yeatman2014lifespan)",
+   "wrapper": "?",
+   "context": "{\\it Aging}. Other sources of contextual modulation of behavior may act on even longer timescales spanning the whole lifetime of an individual \\citep{churgin201"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 345,
+   "token": "@citep(yeatman2014lifespan)",
+   "wrapper": "?",
+   "context": "{\\it Aging}. Other sources of contextual modulation of behavior may act on even longer timescales spanning the whole lifetime of an individual \\citep{churgin201"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 347,
+   "token": "@citep(hoy2016vision,michaiel2020dynamics)",
+   "wrapper": "?",
+   "context": "Although most of the experiments discussed in this review entailed the behavior of individual animals, contextual modulations of behavior were prominently obser"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 347,
+   "token": "@citep(calhoun2019unsupervised)",
+   "wrapper": "?",
+   "context": "Although most of the experiments discussed in this review entailed the behavior of individual animals, contextual modulations of behavior were prominently obser"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 347,
+   "token": "@citep(coen2014dynamic)",
+   "wrapper": "?",
+   "context": "Although most of the experiments discussed in this review entailed the behavior of individual animals, contextual modulations of behavior were prominently obser"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 347,
+   "token": "@citep(calhoun2019unsupervised)",
+   "wrapper": "?",
+   "context": "Although most of the experiments discussed in this review entailed the behavior of individual animals, contextual modulations of behavior were prominently obser"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 347,
+   "token": "@citep(nummela2017social)",
+   "wrapper": "?",
+   "context": "Although most of the experiments discussed in this review entailed the behavior of individual animals, contextual modulations of behavior were prominently obser"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 347,
+   "token": "@citep(macdougall2016optogenetic)",
+   "wrapper": "?",
+   "context": "Although most of the experiments discussed in this review entailed the behavior of individual animals, contextual modulations of behavior were prominently obser"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 347,
+   "token": "@citep(pereira2020sleap,lauer2021multi)",
+   "wrapper": "?",
+   "context": "Although most of the experiments discussed in this review entailed the behavior of individual animals, contextual modulations of behavior were prominently obser"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 347,
+   "token": "@citep(eliades2017marmoset)",
+   "wrapper": "?",
+   "context": "Although most of the experiments discussed in this review entailed the behavior of individual animals, contextual modulations of behavior were prominently obser"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 349,
+   "token": "@citep(olveczky2005vocal,kao2005contributions)",
+   "wrapper": "?",
+   "context": "What is the beneficial role of behavioral variability? A basic aspect of motor variability is avoiding predation or competition. Seminal work in songbirds has e"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 349,
+   "token": "@citep(darshan2017canonical)",
+   "wrapper": "?",
+   "context": "What is the beneficial role of behavioral variability? A basic aspect of motor variability is avoiding predation or competition. Seminal work in songbirds has e"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 349,
+   "token": "@citep(wu2014temporal)",
+   "wrapper": "?",
+   "context": "What is the beneficial role of behavioral variability? A basic aspect of motor variability is avoiding predation or competition. Seminal work in songbirds has e"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 351,
+   "token": "@ref(figsix)",
+   "wrapper": "?",
+   "context": "{\\it Behavioral energy landscape.} The structure of naturalistic behavior emerging on long timescales in the fruit fly is a hierarchical tree-like organization "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 351,
+   "token": "@ref(figeight)",
+   "wrapper": "?",
+   "context": "{\\it Behavioral energy landscape.} The structure of naturalistic behavior emerging on long timescales in the fruit fly is a hierarchical tree-like organization "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 351,
+   "token": "@citep(berman2016predictability)",
+   "wrapper": "?",
+   "context": "{\\it Behavioral energy landscape.} The structure of naturalistic behavior emerging on long timescales in the fruit fly is a hierarchical tree-like organization "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 351,
+   "token": "@citep(wang2015landscape)",
+   "wrapper": "?",
+   "context": "{\\it Behavioral energy landscape.} The structure of naturalistic behavior emerging on long timescales in the fruit fly is a hierarchical tree-like organization "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 351,
+   "token": "@citep(genkin2020moving,duncker2019learning)",
+   "wrapper": "?",
+   "context": "{\\it Behavioral energy landscape.} The structure of naturalistic behavior emerging on long timescales in the fruit fly is a hierarchical tree-like organization "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 351,
+   "token": "@citep(bowman2013introduction)",
+   "wrapper": "?",
+   "context": "{\\it Behavioral energy landscape.} The structure of naturalistic behavior emerging on long timescales in the fruit fly is a hierarchical tree-like organization "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 351,
+   "token": "@citep(costa2021maximally)",
+   "wrapper": "?",
+   "context": "{\\it Behavioral energy landscape.} The structure of naturalistic behavior emerging on long timescales in the fruit fly is a hierarchical tree-like organization "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 352,
+   "token": "@ref(figeight)",
+   "wrapper": "?",
+   "context": "{\\it Neural mechanisms of flexible behavioral hierarchies.} The model of nested basins of attractions proposed in Fig. \\ref{figeight} can explain a tree-like be"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 352,
+   "token": "@citep(berman2016predictability)",
+   "wrapper": "?",
+   "context": "{\\it Neural mechanisms of flexible behavioral hierarchies.} The model of nested basins of attractions proposed in Fig. \\ref{figeight} can explain a tree-like be"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 352,
+   "token": "@citep(marshall2021continuous)",
+   "wrapper": "?",
+   "context": "{\\it Neural mechanisms of flexible behavioral hierarchies.} The model of nested basins of attractions proposed in Fig. \\ref{figeight} can explain a tree-like be"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 352,
+   "token": "@ref(figseven)",
+   "wrapper": "?",
+   "context": "{\\it Neural mechanisms of flexible behavioral hierarchies.} The model of nested basins of attractions proposed in Fig. \\ref{figeight} can explain a tree-like be"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 353,
+   "token": "@ref(figfive)",
+   "wrapper": "?",
+   "context": "Are the computational mechanisms generating the tree-like hierarchy sufficient to generate flexible hierarchies? Recent theoretical work highlighted the importa"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 353,
+   "token": "@citep(logiaco2021thalamic)",
+   "wrapper": "?",
+   "context": "Are the computational mechanisms generating the tree-like hierarchy sufficient to generate flexible hierarchies? Recent theoretical work highlighted the importa"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 353,
+   "token": "@citep(murray2017learning)",
+   "wrapper": "?",
+   "context": "Are the computational mechanisms generating the tree-like hierarchy sufficient to generate flexible hierarchies? Recent theoretical work highlighted the importa"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 353,
+   "token": "@citep(zhang2019correlated,zhang2021unifying)",
+   "wrapper": "?",
+   "context": "Are the computational mechanisms generating the tree-like hierarchy sufficient to generate flexible hierarchies? Recent theoretical work highlighted the importa"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 354,
+   "token": "@ref(box:metaattractors)",
+   "wrapper": "?",
+   "context": "{\\it A theory of metastable dynamics in biologically plausible models.} A variety of neural circuit models have been proposed to generate metastable dynamics (s"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 354,
+   "token": "@citep(recanatesi2022metastable)",
+   "wrapper": "?",
+   "context": "{\\it A theory of metastable dynamics in biologically plausible models.} A variety of neural circuit models have been proposed to generate metastable dynamics (s"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 354,
+   "token": "@citep(huang2017once,shi2022cortical)",
+   "wrapper": "?",
+   "context": "{\\it A theory of metastable dynamics in biologically plausible models.} A variety of neural circuit models have been proposed to generate metastable dynamics (s"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 354,
+   "token": "@citep(mazzucato2019expectation,wyrick2021state)",
+   "wrapper": "?",
+   "context": "{\\it A theory of metastable dynamics in biologically plausible models.} A variety of neural circuit models have been proposed to generate metastable dynamics (s"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 354,
+   "token": "@citep(stern2021reservoir)",
+   "wrapper": "?",
+   "context": "{\\it A theory of metastable dynamics in biologically plausible models.} A variety of neural circuit models have been proposed to generate metastable dynamics (s"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 372,
+   "token": "@citep(mathis2018deeplabcut,segalin2020mouse,pereira2019fast)",
+   "wrapper": "?",
+   "context": "Several video analysis tools are available to extract behavioral features from videos, ranging from standard computer vision algorithms to deep learning-based m"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 372,
+   "token": "@citep(wiltschko2015mapping,batty2019behavenet)",
+   "wrapper": "?",
+   "context": "Several video analysis tools are available to extract behavioral features from videos, ranging from standard computer vision algorithms to deep learning-based m"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 372,
+   "token": "@citep(berman2014mapping,szigeti2015searching)",
+   "wrapper": "?",
+   "context": "Several video analysis tools are available to extract behavioral features from videos, ranging from standard computer vision algorithms to deep learning-based m"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 373,
+   "token": "@citep(brown2018ethology,berman2018measuring,pereira2020quantifying)",
+   "wrapper": "?",
+   "context": "{\\bf Discrete vs continuous features.} The first choice regards the definition of what constitutes a fundamental unit of behavior for a particular model system "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 373,
+   "token": "@citep(stephens2008dimensionality,szigeti2015searching)",
+   "wrapper": "?",
+   "context": "{\\bf Discrete vs continuous features.} The first choice regards the definition of what constitutes a fundamental unit of behavior for a particular model system "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 373,
+   "token": "@citep(brown2013dictionary,vogelstein2014discovery,schwarz2015changes)",
+   "wrapper": "?",
+   "context": "{\\bf Discrete vs continuous features.} The first choice regards the definition of what constitutes a fundamental unit of behavior for a particular model system "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 373,
+   "token": "@citep(ahamed2021capturing)",
+   "wrapper": "?",
+   "context": "{\\bf Discrete vs continuous features.} The first choice regards the definition of what constitutes a fundamental unit of behavior for a particular model system "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 373,
+   "token": "@citep(marques2018structure)",
+   "wrapper": "?",
+   "context": "{\\bf Discrete vs continuous features.} The first choice regards the definition of what constitutes a fundamental unit of behavior for a particular model system "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 373,
+   "token": "@citep(bateson1976growing)",
+   "wrapper": "?",
+   "context": "{\\bf Discrete vs continuous features.} The first choice regards the definition of what constitutes a fundamental unit of behavior for a particular model system "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 373,
+   "token": "@ref(figtwo)",
+   "wrapper": "?",
+   "context": "{\\bf Discrete vs continuous features.} The first choice regards the definition of what constitutes a fundamental unit of behavior for a particular model system "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 373,
+   "token": "@ref(figfive)",
+   "wrapper": "?",
+   "context": "{\\bf Discrete vs continuous features.} The first choice regards the definition of what constitutes a fundamental unit of behavior for a particular model system "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 373,
+   "token": "@citep(wiltschko2015mapping)",
+   "wrapper": "?",
+   "context": "{\\bf Discrete vs continuous features.} The first choice regards the definition of what constitutes a fundamental unit of behavior for a particular model system "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 373,
+   "token": "@citep(linderman2019hierarchical)",
+   "wrapper": "?",
+   "context": "{\\bf Discrete vs continuous features.} The first choice regards the definition of what constitutes a fundamental unit of behavior for a particular model system "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 373,
+   "token": "@citep(findley2021sniff,parker2021distance)",
+   "wrapper": "?",
+   "context": "{\\bf Discrete vs continuous features.} The first choice regards the definition of what constitutes a fundamental unit of behavior for a particular model system "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 373,
+   "token": "@citep(wiltschko2015mapping)",
+   "wrapper": "?",
+   "context": "{\\bf Discrete vs continuous features.} The first choice regards the definition of what constitutes a fundamental unit of behavior for a particular model system "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 373,
+   "token": "@ref(figtwo)",
+   "wrapper": "?",
+   "context": "{\\bf Discrete vs continuous features.} The first choice regards the definition of what constitutes a fundamental unit of behavior for a particular model system "
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 374,
+   "token": "@ref(figtwo)",
+   "wrapper": "?",
+   "context": "An alternative data-driven approach to segmentation of behavior avoids having to choose the number of units and their dynamical features {\\it a priori}, but rat"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 374,
+   "token": "@citep(berman2014mapping)",
+   "wrapper": "?",
+   "context": "An alternative data-driven approach to segmentation of behavior avoids having to choose the number of units and their dynamical features {\\it a priori}, but rat"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 374,
+   "token": "@citep(marshall2021continuous)",
+   "wrapper": "?",
+   "context": "An alternative data-driven approach to segmentation of behavior avoids having to choose the number of units and their dynamical features {\\it a priori}, but rat"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 375,
+   "token": "@citep(tinbergen2020study,dawkins1976hierarchical,simon1991architecture)",
+   "wrapper": "?",
+   "context": "{\\bf Non-Markovianity and long timescales}. Discrete behavioral representations based on state space models are convenient and effective for capturing naturalis"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 375,
+   "token": "@citep(tao2019statistical)",
+   "wrapper": "?",
+   "context": "{\\bf Non-Markovianity and long timescales}. Discrete behavioral representations based on state space models are convenient and effective for capturing naturalis"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 375,
+   "token": "@citep(berman2016predictability,alba2020exploring)",
+   "wrapper": "?",
+   "context": "{\\bf Non-Markovianity and long timescales}. Discrete behavioral representations based on state space models are convenient and effective for capturing naturalis"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 398,
+   "token": "@citep(inagaki2019discrete)",
+   "wrapper": "?",
+   "context": "In a head-fixed delay response task (top), one of two tones was presented during the sample epoch and the mouse reported its decision after the delay epoch by d"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 413,
+   "token": "@citep(wyrick2021state)",
+   "wrapper": "?",
+   "context": "\\captionof{figure}{{\\bf A)} Biologically plausible model of a cortical circuit generating metastable attractor dynamics. A recurrent network of E (black triangl"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 413,
+   "token": "@id(figattractormeta)",
+   "wrapper": "?",
+   "context": "\\captionof{figure}{{\\bf A)} Biologically plausible model of a cortical circuit generating metastable attractor dynamics. A recurrent network of E (black triangl"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 421,
+   "token": "@citep(brunel2000dynamics,huang2017once)",
+   "wrapper": "lm",
+   "context": "\\lm{Given a multi-stable landscape with multiple fixed points, such as the one generated by clustered networks, there are specific requirements on the statistic"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 421,
+   "token": "@citep(hanggi1990reaction,huang2017once,LitwinKumarDoiron2012)",
+   "wrapper": "?",
+   "context": "\\lm{Given a multi-stable landscape with multiple fixed points, such as the one generated by clustered networks, there are specific requirements on the statistic"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 421,
+   "token": "@citep(fourcaud2002dynamics)",
+   "wrapper": "?",
+   "context": "\\lm{Given a multi-stable landscape with multiple fixed points, such as the one generated by clustered networks, there are specific requirements on the statistic"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 421,
+   "token": "@citep(stern2021reservoir)",
+   "wrapper": "?",
+   "context": "\\lm{Given a multi-stable landscape with multiple fixed points, such as the one generated by clustered networks, there are specific requirements on the statistic"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 421,
+   "token": "@citep(hanggi1990reaction,huang2017once,LitwinKumarDoiron2012)",
+   "wrapper": "?",
+   "context": "\\lm{Given a multi-stable landscape with multiple fixed points, such as the one generated by clustered networks, there are specific requirements on the statistic"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 421,
+   "token": "@citep(stern2021reservoir)",
+   "wrapper": "?",
+   "context": "\\lm{Given a multi-stable landscape with multiple fixed points, such as the one generated by clustered networks, there are specific requirements on the statistic"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 421,
+   "token": "@citep(LitwinKumarDoiron2012,mazzucato2019expectation)",
+   "wrapper": "?",
+   "context": "\\lm{Given a multi-stable landscape with multiple fixed points, such as the one generated by clustered networks, there are specific requirements on the statistic"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 421,
+   "token": "@citep(rostami2020spiking,wyrick2021state)",
+   "wrapper": "?",
+   "context": "\\lm{Given a multi-stable landscape with multiple fixed points, such as the one generated by clustered networks, there are specific requirements on the statistic"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 421,
+   "token": "@ref(figseven)",
+   "wrapper": "?",
+   "context": "\\lm{Given a multi-stable landscape with multiple fixed points, such as the one generated by clustered networks, there are specific requirements on the statistic"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 421,
+   "token": "@citep(stern2021reservoir)",
+   "wrapper": "?",
+   "context": "\\lm{Given a multi-stable landscape with multiple fixed points, such as the one generated by clustered networks, there are specific requirements on the statistic"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 427,
+   "token": "@citep(genkin2020moving,duncker2019learning)",
+   "wrapper": "lm",
+   "context": "\\lm{An exciting new direction aims to infer the dynamical system underlying the observed spiking activity directly from the data. Assuming that high dimensional"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 427,
+   "token": "@citep(recanatesi2022metastable)",
+   "wrapper": "?",
+   "context": "\\lm{An exciting new direction aims to infer the dynamical system underlying the observed spiking activity directly from the data. Assuming that high dimensional"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 148,
+   "token": "@ref(figthree)",
+   "wrapper": "?",
+   "context": "Metastable attractors can be concatenated into sequences, which can either be random, as observed during ongoing periods in sensory cortex \\citep{mazzucato2015d"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 216,
+   "token": "@ref(figfive)",
+   "wrapper": "?",
+   "context": "Contextual modulations of temporal variability may affect other aspects of natural behavior beyond average action timing, such as the frequency of occurrence of"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 280,
+   "token": "@ref(figsix)",
+   "wrapper": "?",
+   "context": "This multiscale analysis of ongoing behavior was applied to mice in a recent study, where mouse body piercing allowed for tracking of the three-dimensional pose"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 315,
+   "token": "@ref(figseven)",
+   "wrapper": "?",
+   "context": "An alternative robust and biologically plausible way to generate a vast hierarchy of timescales was proposed based on the ingredients of recurrent functional cl"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 322,
+   "token": "@ref(figseven)",
+   "wrapper": "?",
+   "context": "On the theory side, although recurrent dynamics can generate heterogeneous distributions of timescales (Fig. \\ref{figseven}E), this model needs to be extended t"
+  },
+  {
+   "file": "main_elife.tex",
+   "line": 322,
+   "token": "@citep(recanatesi2022metastable)",
+   "wrapper": "?",
+   "context": "On the theory side, although recurrent dynamics can generate heterogeneous distributions of timescales (Fig. \\ref{figseven}E), this model needs to be extended t"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.05171,
+ "bibliography": {
+  "state": "complete",
+  "entries": 222
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

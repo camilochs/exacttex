@@ -1,0 +1,395 @@
+exit=2
+lines=987
+unique_findings=287
+e also the LMCS journal version 2010-6(4)).  
+                                                 ^
+Warning 1 in main_arXiv2.tex line 2999: Command terminated with space.
+\newblock A model of cooperative threads.  
+         ^
+Warning 1 in main_arXiv2.tex line 3000: Command terminated with space.
+\newblock {\em Logical Methods in Computer Science}, 6(4), 2010.  
+         ^
+Warning 1 in main_arXiv2.tex line 3004: Command terminated with space.
+\newblock {Turning SOS Rules into Equations}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3005: Command terminated with space.
+\newblock {\em Information and Computation}, 111(1):1--52, 1994.  
+         ^
+Warning 1 in main_arXiv2.tex line 3009: Command terminated with space.
+\newblock {Structural Operational Semantics}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3010: Command terminated with space.
+\newblock In J.~A. Bergstra, A.~Ponse, and S.~A. Smolka, editors, {\em Handbook  
+         ^
+Warning 1 in main_arXiv2.tex line 3015: Command terminated with space.
+\newblock Algebraic properties for free!  
+         ^
+Warning 1 in main_arXiv2.tex line 3016: Command terminated with space.
+\newblock {\em Bulletin of the European Association for Theoretical Computer  
+         ^
+Warning 1 in main_arXiv2.tex line 3021: Command terminated with space.
+\newblock {A Foundation for Actor Computation}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3022: Command terminated with space.
+\newblock {\em J. Funct. Program.}, 7(1):1--72, 1997.  
+         ^
+Warning 1 in main_arXiv2.tex line 3026: Command terminated with space.
+\newblock {Modular Software Upgrades for Distributed Systems}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3027: Command terminated with space.
+\newblock In D.~Thomas, editor, {\em 20th European Conference ON  
+         ^
+Warning 1 in main_arXiv2.tex line 3033: Command terminated with space.
+\newblock {\em The Lambda Calculus: its Syntax and Semantics}, volume 103 of  
+         ^
+Warning 1 in main_arXiv2.tex line 3035: Command terminated with space.
+\newblock North-Holland, 1981.  
+         ^
+Warning 1 in main_arXiv2.tex line 3039: Command terminated with space.
+\newblock {UpgradeJ: Incremental Typechecking for Class Upgrades}.  
+         ^
+Warning 13 in main_arXiv2.tex line 3039: Intersentence spacing (`\@') should perhaps be used.
+\newblock {UpgradeJ: Incremental Typechecking for Class Upgrades}.  
+                   ^
+Warning 1 in main_arXiv2.tex line 3040: Command terminated with space.
+\newblock In J.~Vitek, editor, {\em 22nd European Conference on Object-Oriented  
+         ^
+Warning 1 in main_arXiv2.tex line 3046: Command terminated with space.
+\newblock Lazy modular upgrades in persistent object stores.  
+         ^
+Warning 1 in main_arXiv2.tex line 3047: Command terminated with space.
+\newblock In R.~Crocker and G.~L.~S. Jr., editors, {\em ACM SIGPLAN Conference  
+         ^
+Warning 1 in main_arXiv2.tex line 3053: Command terminated with space.
+\newblock Mobile ambients.  
+         ^
+Warning 1 in main_arXiv2.tex line 3054: Command terminated with space.
+\newblock {\em Theoretical computer science}, 240(1):177--213, 2000.  
+         ^
+Warning 1 in main_arXiv2.tex line 3058: Command terminated with space.
+\newblock Maude {MSOS} tool.  
+         ^
+Warning 1 in main_arXiv2.tex line 3059: Command terminated with space.
+\newblock {\em Electronic Notes in Theoretical Computer Science}, 176(4):133 --  
+         ^
+Warning 8 in main_arXiv2.tex line 3059: Wrong length of dash may have been used.
+\newblock {\em Electronic Notes in Theoretical Computer Science}, 176(4):133 --  
+                                                                             ^^
+Warning 1 in main_arXiv2.tex line 3061: Command terminated with space.
+\newblock Proceedings of the 6th International Workshop on Rewriting Logic and  
+         ^
+Warning 1 in main_arXiv2.tex line 3066: Command terminated with space.
+\newblock Modular bisimulation theory for computations and values.  
+         ^
+Warning 1 in main_arXiv2.tex line 3067: Command terminated with space.
+\newblock In F.~Pfenning, editor, {\em 16th International Conference on  
+         ^
+Warning 1 in main_arXiv2.tex line 3074: Command terminated with space.
+\newblock Modular semantics for transition system specifications with negative  
+         ^
+Warning 1 in main_arXiv2.tex line 3076: Command terminated with space.
+\newblock In P.~R. D'Argenio and H.~C. Melgratti, editors, {\em 24th  
+         ^
+Warning 1 in main_arXiv2.tex line 3082: Command terminated with space.
+\newblock Reusable components of semantic specifications {XII}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3083: Command terminated with space.
+\newblock {\em Trans. Aspect-Oriented Software Development}, 12:132--179, 2015.  
+         ^
+Warning 1 in main_arXiv2.tex line 3088: Command terminated with space.
+\newblock Maude: specification and programming in rewriting logic.  
+         ^
+Warning 1 in main_arXiv2.tex line 3089: Command terminated with space.
+\newblock {\em Theoretical Computer Science}, 285(2):187 -- 243, 2002.  
+         ^
+Warning 8 in main_arXiv2.tex line 3089: Wrong length of dash may have been used.
+\newblock {\em Theoretical Computer Science}, 285(2):187 -- 243, 2002.  
+                                                         ^^
+Warning 1 in main_arXiv2.tex line 3090: Command terminated with space.
+\newblock Rewriting Logic and its Applications.  
+         ^
+Warning 1 in main_arXiv2.tex line 3094: Command terminated with space.
+\newblock {A Complete Guide to the Future}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3095: Command terminated with space.
+\newblock In R.~de~Nicola, editor, {\em Proc.\ 16th European Symposium on  
+         ^
+Warning 1 in main_arXiv2.tex line 3101: Command terminated with space.
+\newblock {More Dynamic Object Re-classification: Fickle$_{II}$}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3102: Command terminated with space.
+\newblock {\em ACM Trans. Program. Lang. Syst.}, 24(2):153--191, 2002.  
+         ^
+Warning 1 in main_arXiv2.tex line 3106: Command terminated with space.
+\newblock The semantics of future and an application.  
+         ^
+Warning 1 in main_arXiv2.tex line 3107: Command terminated with space.
+\newblock {\em J. Funct. Program.}, 9(1):1--31, 1999.  
+         ^
+Warning 1 in main_arXiv2.tex line 3111: Command terminated with space.
+\newblock {Compositionality of Hennessy-Milner logic by structural operational  
+         ^
+Warning 1 in main_arXiv2.tex line 3113: Command terminated with space.
+\newblock {\em Theoretical Computer Science}, 354(3):421--440, 2006.  
+         ^
+Warning 1 in main_arXiv2.tex line 3117: Command terminated with space.
+\newblock Algebraic meta-theory of processes with data.  
+         ^
+Warning 1 in main_arXiv2.tex line 3118: Command terminated with space.
+\newblock In J.~Borgstr{\"{o}}m and B.~Luttik, editors, {\em Proc. 20th Int.  
+         ^
+Warning 1 in main_arXiv2.tex line 3125: Command terminated with space.
+\newblock Multilisp: {A} language for concurrent symbolic computation.  
+         ^
+Warning 1 in main_arXiv2.tex line 3126: Command terminated with space.
+\newblock {\em {ACM} Trans. Program. Lang. Syst.}, 7(4):501--538, 1985.  
+         ^
+Warning 1 in main_arXiv2.tex line 3130: Command terminated with space.
+\newblock {\em Dynamic Logic}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3131: Command terminated with space.
+\newblock MIT Press, 2000.  
+         ^
+Warning 1 in main_arXiv2.tex line 3135: Command terminated with space.
+\newblock {\em A distributed Pi-calculus}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3136: Command terminated with space.
+\newblock Cambridge University Press, 2007.  
+         ^
+Warning 1 in main_arXiv2.tex line 3140: Command terminated with space.
+\newblock Resource access control in systems of mobile agents.  
+         ^
+Warning 1 in main_arXiv2.tex line 3141: Command terminated with space.
+\newblock {\em Information and Computation}, 173(1):82--120, 2002.  
+         ^
+Warning 1 in main_arXiv2.tex line 3145: Command terminated with space.
+\newblock {A Universal Modular ACTOR Formalism for Artificial Intelligence}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3146: Command terminated with space.
+\newblock In N.~J. Nilsson, editor, {\em 3rd International Joint Conference on  
+         ^
+Warning 1 in main_arXiv2.tex line 3151: Command terminated with space.
+\newblock {\em {The Spin Model Checker}}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3152: Command terminated with space.
+\newblock Addison-Wesley, 2003.  
+         ^
+Warning 1 in main_arXiv2.tex line 3156: Command terminated with space.
+\newblock {\em {Transitions and Trees: An Introduction to Structural  
+         ^
+Warning 1 in main_arXiv2.tex line 3158: Command terminated with space.
+\newblock Cambridge Univ. Press, 2010.  
+         ^
+Warning 1 in main_arXiv2.tex line 3162: Command terminated with space.
+\newblock {Dynamic Classes: Modular Asynchronous Evolution of Distributed  
+         ^
+Warning 1 in main_arXiv2.tex line 3164: Command terminated with space.
+\newblock In A.~Cavalcanti and D.~Dams, editors, {\em 2nd World Congress ON  
+         ^
+Warning 1 in main_arXiv2.tex line 3170: Command terminated with space.
+\newblock An asynchronous communication model for distributed concurrent  
+         ^
+Warning 1 in main_arXiv2.tex line 3172: Command terminated with space.
+\newblock In {\em Proc.\ 2nd Intl.\ Conf.\ on Software Engineering and Formal  
+         ^
+Warning 1 in main_arXiv2.tex line 3178: Command terminated with space.
+\newblock Inheritance in the presence of asynchronous method calls.  
+         ^
+Warning 1 in main_arXiv2.tex line 3179: Command terminated with space.
+\newblock In {\em 38th Hawaii International Conference on System Sciences  
+         ^
+Warning 9 in main_arXiv2.tex line 3180: `)' expected, found `}'.
+  {(HICSS-38} 2005), {CD-ROM} / Abstracts Proceedings, 3-6 January 2005, Big  
+            ^
+Warning 9 in main_arXiv2.tex line 3180: `}' expected, found `)'.
+  {(HICSS-38} 2005), {CD-ROM} / Abstracts Proceedings, 3-6 January 2005, Big  
+                  ^
+Warning 8 in main_arXiv2.tex line 3180: Wrong length of dash may have been used.
+  {(HICSS-38} 2005), {CD-ROM} / Abstracts Proceedings, 3-6 January 2005, Big  
+                                                        ^
+Warning 1 in main_arXiv2.tex line 3185: Command terminated with space.
+\newblock {An Asynchronous Communication Model for Distributed Concurrent  
+         ^
+Warning 1 in main_arXiv2.tex line 3187: Command terminated with space.
+\newblock {\em Software and System Modeling}, 6(1):39--58, 2007.  
+         ^
+Warning 1 in main_arXiv2.tex line 3191: Command terminated with space.
+\newblock A formal model of service-oriented dynamic object groups.  
+         ^
+Warning 1 in main_arXiv2.tex line 3192: Command terminated with space.
+\newblock {\em Science of Computer Programming}, 115--116:3--22, 2016.  
+         ^
+Warning 1 in main_arXiv2.tex line 3196: Command terminated with space.
+\newblock {A Dynamic Class Construct for Asynchronous Concurrent Objects}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3197: Command terminated with space.
+\newblock In M.~Steffen and G.~Zavattaro, editors, {\em 7th IFIP WG 6.1  
+         ^
+Warning 1 in main_arXiv2.tex line 3205: Command terminated with space.
+\newblock Run your research: On the effectiveness of lightweight mechanization.  
+         ^
+Warning 1 in main_arXiv2.tex line 3206: Command terminated with space.
+\newblock In {\em Proceedings of the 39th Annual ACM SIGPLAN-SIGACT Symposium  
+         ^
+Warning 13 in main_arXiv2.tex line 3208: Intersentence spacing (`\@') should perhaps be used.
+  NY, USA, 2012. ACM.  
+                    ^
+Warning 1 in main_arXiv2.tex line 3212: Command terminated with space.
+\newblock {Programs, Life Cycles, and Laws of Software Evolution}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3213: Command terminated with space.
+\newblock {\em Proceedings of The IEEE}, 68(9):1060--1076, 1980.  
+         ^
+Warning 1 in main_arXiv2.tex line 3217: Command terminated with space.
+\newblock Runtime support for type-safe dynamic java classes.  
+         ^
+Warning 1 in main_arXiv2.tex line 3218: Command terminated with space.
+\newblock In E.~Bertino, editor, {\em 14th European Conference on  
+         ^
+Warning 1 in main_arXiv2.tex line 3224: Command terminated with space.
+\newblock {\em Software Evolution}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3225: Command terminated with space.
+\newblock Springer Publishing Company, Incorporated, 1 edition, 2008.  
+         ^
+Warning 1 in main_arXiv2.tex line 3229: Command terminated with space.
+\newblock {A modular SOS for ML concurrency primitives}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3230: Command terminated with space.
+\newblock Technical Report RS-99-57, BRICS, Dept. of Computer Science, Univ. of  
+         ^
+Warning 8 in main_arXiv2.tex line 3230: Wrong length of dash may have been used.
+\newblock Technical Report RS-99-57, BRICS, Dept. of Computer Science, Univ. of  
+                                ^
+Warning 12 in main_arXiv2.tex line 3230: Interword spacing (`\ ') should perhaps be used.
+\newblock Technical Report RS-99-57, BRICS, Dept. of Computer Science, Univ. of  
+                                                 ^
+Warning 12 in main_arXiv2.tex line 3230: Interword spacing (`\ ') should perhaps be used.
+\newblock Technical Report RS-99-57, BRICS, Dept. of Computer Science, Univ. of  
+                                                                            ^
+Warning 1 in main_arXiv2.tex line 3235: Command terminated with space.
+\newblock {Foundations of Modular SOS}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3236: Command terminated with space.
+\newblock In {\em Mathematical Foundations of Computer Science (MFCS'99)},  
+         ^
+Warning 1 in main_arXiv2.tex line 3241: Command terminated with space.
+\newblock {Foundations of Modular SOS}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3242: Command terminated with space.
+\newblock Technical Report BRICS RS-99-54, Basic Research in Computer Science,  
+         ^
+Warning 8 in main_arXiv2.tex line 3242: Wrong length of dash may have been used.
+\newblock Technical Report BRICS RS-99-54, Basic Research in Computer Science,  
+                                      ^
+Warning 1 in main_arXiv2.tex line 3247: Command terminated with space.
+\newblock Modular structural operational semantics.  
+         ^
+Warning 1 in main_arXiv2.tex line 3248: Command terminated with space.
+\newblock {\em J. Log. Algebr. Program.}, 60-61:195--228, 2004.  
+         ^
+Warning 8 in main_arXiv2.tex line 3248: Wrong length of dash may have been used.
+\newblock {\em J. Log. Algebr. Program.}, 60-61:195--228, 2004.  
+                                            ^
+Warning 1 in main_arXiv2.tex line 3252: Command terminated with space.
+\newblock {Implicit Propagation in Structural Operational Semantics}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3253: Command terminated with space.
+\newblock {\em Electr. Notes Theor. Comput. Sci.}, 229(4):49--66, 2009.  
+         ^
+Warning 1 in main_arXiv2.tex line 3257: Command terminated with space.
+\newblock Funkons: Component-based semantics in {K}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3258: Command terminated with space.
+\newblock In S.~Escobar, editor, {\em 10th International Workshop on Rewriting  
+         ^
+Warning 1 in main_arXiv2.tex line 3264: Command terminated with space.
+\newblock Sos formats and meta-theory: 20 years after.  
+         ^
+Warning 1 in main_arXiv2.tex line 3265: Command terminated with space.
+\newblock {\em Theoretical Computer Science}, 373(3):238--272, 2007.  
+         ^
+Warning 1 in main_arXiv2.tex line 3269: Command terminated with space.
+\newblock Notions of bisimulation and congruence formats for {SOS} with data.  
+         ^
+Warning 1 in main_arXiv2.tex line 3270: Command terminated with space.
+\newblock {\em Information and Computation}, 200(1):107--147, 2005.  
+         ^
+Warning 1 in main_arXiv2.tex line 3274: Command terminated with space.
+\newblock Safe and timely updates to multi-threaded programs.  
+         ^
+Warning 1 in main_arXiv2.tex line 3275: Command terminated with space.
+\newblock In M.~Hind and A.~Diwan, editors, {\em Proceedings of the ACM SIGPLAN  
+         ^
+Warning 1 in main_arXiv2.tex line 3281: Command terminated with space.
+\newblock {\em Basic Category Theory for Computer Scientists}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3282: Command terminated with space.
+\newblock MIT Press, 1991.  
+         ^
+Warning 1 in main_arXiv2.tex line 3287: Command terminated with space.
+\newblock {\em {Software Foundations}}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3288: Command terminated with space.
+\newblock e-book (\url{http://www.cis.upenn.edu/~bcpierce/sf/}), July 2012.  
+         ^
+Warning 1 in main_arXiv2.tex line 3292: Command terminated with space.
+\newblock {Semantical Considerations On Floyd-Hoare Logic}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3293: Command terminated with space.
+\newblock In {\em IEEE Symposium On Foundations of Computer Science (FOCS'76)},  
+         ^
+Warning 1 in main_arXiv2.tex line 3298: Command terminated with space.
+\newblock {Dynamic Structural Operational Semantics (long version)}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3299: Command terminated with space.
+\newblock Technical Report 426, Department of Informatics, University of Oslo,  
+         ^
+Warning 1 in main_arXiv2.tex line 3304: Command terminated with space.
+\newblock An overview of the {K} semantic framework.  
+         ^
+Warning 1 in main_arXiv2.tex line 3305: Command terminated with space.
+\newblock {\em Journal of Logic and Algebraic Programming}, 79(6):397--434,  
+         ^
+Warning 1 in main_arXiv2.tex line 3311: Command terminated with space.
+\newblock Ott: Effective tool support for the working semanticist.  
+         ^
+Warning 1 in main_arXiv2.tex line 3312: Command terminated with space.
+\newblock {\em Journal of Functional Programming}, 20(1):71--122, Jan. 2010.  
+         ^
+Warning 1 in main_arXiv2.tex line 3316: Command terminated with space.
+\newblock Mutatis mutandis: safe and predictable dynamic software updating.  
+         ^
+Warning 1 in main_arXiv2.tex line 3317: Command terminated with space.
+\newblock In J.~Palsberg and M.~Abadi, editors, {\em 32nd ACM SIGPLAN-SIGACT  
+         ^
+Warning 1 in main_arXiv2.tex line 3323: Command terminated with space.
+\newblock {\it Mutatis Mutandis}: Safe and predictable dynamic software  
+         ^
+Warning 6 in main_arXiv2.tex line 3323: No italic correction (`\/') found.
+\newblock {\it Mutatis Mutandis}: Safe and predictable dynamic software  
+                               ^
+Warning 1 in main_arXiv2.tex line 3325: Command terminated with space.
+\newblock {\em ACM Trans. Program. Lang. Syst.}, 29(4), 2007.  
+         ^
+Warning 1 in main_arXiv2.tex line 3329: Command terminated with space.
+\newblock Tool support for component-based semantics.  
+         ^
+Warning 1 in main_arXiv2.tex line 3330: Command terminated with space.
+\newblock In L.~Fuentes, D.~S. Batory, and K.~Czarnecki, editors, {\em 15th  
+         ^
+Warning 1 in main_arXiv2.tex line 3335: Command terminated with space.
+\newblock A syntactic approach to type soundness.  
+         ^
+Warning 1 in main_arXiv2.tex line 3336: Command terminated with space.
+\newblock {\em Information and Computation}, 115(1):38 -- 94, 1994.  
+         ^
+Warning 8 in main_arXiv2.tex line 3336: Wrong length of dash may have been used.
+\newblock {\em Information and Computation}, 115(1):38 -- 94, 1994.  
+                                                       ^^
+Warning 1 in main_arXiv2.tex line 3340: Command terminated with space.
+\newblock {Type-Safe Runtime Class Upgrades in Creol}.  
+         ^
+Warning 1 in main_arXiv2.tex line 3341: Command terminated with space.
+\newblock In {\em FMOODS}, volume 4037 of {\em {LNCS}}, pages 202--217.  
+         ^

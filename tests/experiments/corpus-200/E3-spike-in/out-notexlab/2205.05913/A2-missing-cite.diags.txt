@@ -1,0 +1,3 @@
+planted=aziz1979petroleum__ghost sites=[('draft_final_version.xtex', 168)]
+xtex new=[('XT1005', 'aziz1979petroleum__ghost', 'draft_final_version.xtex', 168)]
+texlab new=[]

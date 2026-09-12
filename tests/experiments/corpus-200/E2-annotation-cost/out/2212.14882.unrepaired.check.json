@@ -1,0 +1,52 @@
+{
+ "coverage": 0.032114,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`main.bbl.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT1004",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "appendix",
+   "name": "app:tab:questionnaire_answers",
+   "span": {
+    "file": "main.xtex",
+    "offset": 31719,
+    "length": 29,
+    "line": 394,
+    "column": 154
+   },
+   "message": "reference `app:tab:questionnaire_answers` requires appendix, but its target is table",
+   "related": [
+    {
+     "message": "table declared here",
+     "span": {
+      "file": "main.xtex",
+      "offset": 150945,
+      "length": 29,
+      "line": 1847,
+      "column": 5
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "main.xtex",
+    "offset": 4653,
+    "length": 7,
+    "line": 128,
+    "column": 78
+   },
+   "message": "citation checking unavailable: `main.bbl.bib` could not be read",
+   "related": []
+  }
+ ]
+}

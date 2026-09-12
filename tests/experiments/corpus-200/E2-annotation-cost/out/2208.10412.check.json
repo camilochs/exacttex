@@ -1,0 +1,25 @@
+{
+ "coverage": 0.033931,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`NLS_to_PtVortex.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "NLS_to_PtVortex_v2_CLEAN.xtex",
+    "offset": 1819,
+    "length": 18,
+    "line": 40,
+    "column": 384
+   },
+   "message": "citation checking unavailable: `NLS_to_PtVortex.bib` could not be read",
+   "related": []
+  }
+ ]
+}

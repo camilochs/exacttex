@@ -1,0 +1,2 @@
+error: QCC_arxiv.tex:230: Illegal unit of measure (pt inserted)
+error: halted on potentially-recoverable error as specified

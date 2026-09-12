@@ -1,0 +1,27 @@
+tectonic pdf bytes=47698
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'main.tex', 119, 'Undefined reference'), ('ERROR', 'main.tex', 123, 'Undefined reference'), ('ERROR', 'main.tex', 125, 'Undefined reference'), ('ERROR', 'main.tex', 127, 'Undefined reference'), ('ERROR', 'main.tex', 129, 'Undefined reference'), ('ERROR', 'main.tex', 133, 'Undefined reference'), ('ERROR', 'main.tex', 135, 'Undefined reference'), ('ERROR', 'main.tex', 137, 'Undefined reference'), ('ERROR', 'main.tex', 141, 'Undefined reference'), ('ERROR', 'main.tex', 145, 'Undefined reference'), ('ERROR', 'main.tex', 375, 'Undefined reference'), ('ERROR', 'main.tex', 377, 'Undefined reference'), ('ERROR', 'main.tex', 379, 'Undefined reference'), ('ERROR', 'main.tex', 381, 'Undefined reference'), ('ERROR', 'main.tex', 385, 'Undefined reference'), ('ERROR', 'proceedings.tex', 266, 'Undefined reference'), ('ERROR', 'proceedings.tex', 278, 'Undefined reference'), ('ERROR', 'proceedings.tex', 428, 'Undefined reference'), ('ERROR', 'proceedings.tex', 545, 'Undefined reference'), ('ERROR', 'proceedings.tex', 548, 'Undefined reference'), ('ERROR', 'proceedings.tex', 549, 'Undefined reference'), ('ERROR', 'proceedings.tex', 550, 'Undefined reference'), ('ERROR', 'proceedings.tex', 551, 'Undefined reference'), ('ERROR', 'proceedings.tex', 552, 'Undefined reference'), ('ERROR', 'proceedings.tex', 553, 'Undefined reference'), ('ERROR', 'proceedings.tex', 554, 'Undefined reference'), ('ERROR', 'proceedings.tex', 555, 'Undefined reference'), ('ERROR', 'proceedings.tex', 556, 'Undefined reference')]
+tectonic exit=0 warnings=['Aloysius2006', 'Armstrong2018', 'Bauman2014', 'Buss2000', 'Chen2004', 'Cook1994', 'Diener2002', 'Ekstrand2015', 'Ekstrand2016', 'Evans2016', 'Kahneman1991', 'Kahneman2005', 'Kay1995', 'Kay1997', 'McFadden1999', 'Mekler2016', 'Ng2000', 'Pommeranz2012', 'Pu2009', 'Redelmeier1996a', 'Seligman2005', 'Steele1996', 'Teitelman1966', 'Tversky1974', 'Zimmerman2009', 'bentham1996collected', 'hagman2015public', 'hurka1993perfectionism', 'jameson2014choice', 'parfit2012makes', 'ritter2014user', 'slovak2017reflective'] secs=2
+ox (12.52376pt too wide) in paragraph at lines 151--152
+warning: main.tex:235: Overfull \hbox (1.22986pt too wide) in paragraph at lines 234--235
+warning: main.tex:259: Overfull \hbox (1.03477pt too wide) in paragraph at lines 258--259
+warning: main.tex:271: Overfull \hbox (10.09442pt too wide) in paragraph at lines 269--271
+warning: main.tex:385: Underfull \hbox (badness 10000) in paragraph at lines 385--385
+warning: main.tex:385: Underfull \hbox (badness 10000) in paragraph at lines 385--385
+warning: main.tex:386: Underfull \hbox (badness 10000) in paragraph at lines 386--386
+warning: main.tex:386: Underfull \hbox (badness 10000) in paragraph at lines 386--386
+warning: main.tex:100: Overfull \hbox (12.7316pt too wide) in paragraph at lines 100--100
+warning: main.tex:100: Overfull \hbox (280.04623pt too wide) in paragraph at lines 100--100
+warning: main.tex:100: Underfull \hbox (badness 10000) in paragraph at lines 100--100
+warning: main.tex:100: Underfull \hbox (badness 10000) in paragraph at lines 100--100
+warning: main.tex:122: Overfull \hbox (0.71146pt too wide) in paragraph at lines 121--122
+warning: main.tex:127: Underfull \hbox (badness 10000) in paragraph at lines 127--127
+warning: main.tex:152: Overfull \hbox (12.52376pt too wide) in paragraph at lines 151--152
+warning: main.tex:235: Overfull \hbox (1.22986pt too wide) in paragraph at lines 234--235
+warning: main.tex:259: Overfull \hbox (1.03477pt too wide) in paragraph at lines 258--259
+warning: main.tex:271: Overfull \hbox (10.09442pt too wide) in paragraph at lines 269--271
+warning: main.tex:385: Underfull \hbox (badness 10000) in paragraph at lines 385--385
+warning: main.tex:385: Underfull \hbox (badness 10000) in paragraph at lines 385--385
+warning: main.tex:386: Underfull \hbox (badness 10000) in paragraph at lines 386--386
+warning: main.tex:386: Underfull \hbox (badness 10000) in paragraph at lines 386--386
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

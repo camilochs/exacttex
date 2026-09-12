@@ -1,0 +1,87 @@
+{
+ "paper": "2110.09717",
+ "main": "ms.tex",
+ "files": [
+  {
+   "file": "ms.tex",
+   "chars_before": 96078,
+   "chars_after": 95967,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 96078,
+ "chars_after": 95967,
+ "delta_pct": -0.11553113095609817,
+ "unrepaired": {
+  "chars_after": 95967,
+  "chars_before": 96078,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.037137,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`AOAS1605_bib.bib` did not parse \u2014 two fields at line 239 have no comma between them"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.11553113095609817
+ },
+ "stats": {
+  "cite_cmds_live": 63,
+  "cite_keys_live": 63,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 37,
+  "labels_outside_grammar": 0,
+  "refs_live": 66,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 22,
+  "cite_cmds_annotated": 63,
+  "cite_keys_annotated": 63,
+  "ids_annotated": 37,
+  "refs_annotated": 66,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.037137,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`AOAS1605_bib.bib` did not parse \u2014 two fields at line 239 have no comma between them"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "ms.xtex",
+    "offset": 5267,
+    "length": 18,
+    "line": 115,
+    "column": 138
+   },
+   "message": "citation checking unavailable: `AOAS1605_bib.bib` did not parse \u2014 two fields at line 239 have no comma between them",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

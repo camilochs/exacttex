@@ -1,0 +1,5 @@
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: 00_main.tex:8: Overfull \hbox (123.62721pt too wide) detected at line 8
+error: 01_Introduction:2: Unable to load picture or PDF file 'figures/planted_ghost.pdf'
+error: halted on potentially-recoverable error as specified

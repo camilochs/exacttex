@@ -1,0 +1,376 @@
+pdf=0
+exit=0
+lines=372
+unique_findings=0
+Running pdflatex  -interaction nonstopmode   "luca171228-pt_and_qt.tex" to collect labels references and environment declarations
+
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./luca171228-pt_and_qt.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updmap
+/pdftex.map}{classico.map}
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/memoir/memoir
+.cls
+Document Class: memoir 2025/11/04 v3.8.4b configurable book, report, article do
+cument class
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/xpatch/xpatch
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3kernel/expl
+3.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3packages/xp
+arse/xparse.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/etoolbox/etoo
+lbox.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iftex
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/memoir/mem10.
+clo)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/array.s
+ty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/dcolumn
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/delarra
+y.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/tabular
+x.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/booktabs/book
+tabs.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/name
+ref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/refcount/refc
+ount.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/infwarerr/i
+nfwarerr.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/gettitlestr
+ing/gettitlestring.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/verbati
+m.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/shortvrb
+.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fontenc.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdftex/glyp
+htounicode.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/inputenx/inpu
+tenx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/inputenx/ix-a
+lias.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/inputenc
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/utf8.def
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/omsenc.d
+fu)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ot1enc.d
+fu)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/t1enc.df
+u)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ts1enc.d
+fu)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/textcomp
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ulem/ulem.s
+ty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsma
+th.sty
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amste
+xt.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsge
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsbs
+y.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsop
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/mathtools/mat
+htools.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/calc.st
+y)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/mathtools/mhs
+etup.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/mathtools/emp
+heq.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/framed/framed
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amss
+ymb.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amsf
+onts.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsxt
+ra.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/babel/babel
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/babel/txtba
+bel.def)
+! Extra \else.
+<argument> \else 
+                 a5paper
+l.4234   \fi}
+             
+! Undefined control sequence.
+l.4235 \let\bbl@toload
+                      \@empty
+! Undefined control sequence.
+l.4236 \let\bbl@toload@last
+                           \@empty
+! Undefined control sequence.
+l.4237 \let\bbl@unkopt
+                      \@gobble  %% <- Ugly
+! Undefined control sequence.
+l.4241 \let\BabelLocalesTentative
+                                 \bbl@tempc
+! Undefined control sequence.
+\bbl@forcmd #1->\bbl@tempa #1\@@ 
+                                 
+l.4259   \fi}
+             
+! Illegal parameter number in definition of \bbl@tempf.
+<to be read again> 
+                   1
+l.4259   \fi}
+             
+! Illegal parameter number in definition of \bbl@tempf.
+<to be read again> 
+                   1
+l.4259   \fi}
+             
+! Illegal parameter number in definition of \bbl@tempf.
+<to be read again> 
+                   1
+l.4259   \fi}
+             
+)
+! Incomplete \iffalse; all text was ignored after line 4259.
+<inserted text> 
+                \fi 
+l.84 ...ish,latin,esperanto]{babel}\selectlanguage
+                                                  {british}
+! Undefined control sequence.
+<argument> \@nil 
+                 
+l.84 ...ish,latin,esperanto]{babel}\selectlanguage
+                                                  {british}
+)
+Runaway argument?
+autopunct=false,english=british]{csquotes} \setquotestyle {american} \ETC.
+! File ended while scanning use of \@iforloop.
+<inserted text> 
+                \par 
+<*> luca171228-pt_and_qt.tex
+                            
+! Emergency stop.
+<*> luca171228-pt_and_qt.tex
+                            
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on luca171228-pt_and_qt.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./luca171228-pt_and_qt.tex{/opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}{classico.map}
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/memoir/memoir
+.cls
+Document Class: memoir 2025/11/04 v3.8.4b configurable book, report, article do
+cument class
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/xpatch/xpatch
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3kernel/expl
+3.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3packages/xp
+arse/xparse.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/etoolbox/etoo
+lbox.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iftex
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/memoir/mem10.
+clo)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/array.s
+ty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/dcolumn
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/delarra
+y.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/tabular
+x.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/booktabs/book
+tabs.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/name
+ref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/refcount/refc
+ount.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/infwarerr/i
+nfwarerr.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/gettitlestr
+ing/gettitlestring.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/verbati
+m.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/shortvrb
+.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fontenc.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdftex/glyp
+htounicode.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/inputenx/inpu
+tenx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/inputenx/ix-a
+lias.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/inputenc
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/utf8.def
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/omsenc.d
+fu)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ot1enc.d
+fu)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/t1enc.df
+u)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ts1enc.d
+fu)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/textcomp
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ulem/ulem.s
+ty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsma
+th.sty
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amste
+xt.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsge
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsbs
+y.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsop
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/mathtools/mat
+htools.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/calc.st
+y)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/mathtools/mhs
+etup.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/mathtools/emp
+heq.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/framed/framed
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amss
+ymb.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amsf
+onts.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsxt
+ra.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/babel/babel
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/babel/txtba
+bel.def)
+! Extra \else.
+<argument> \else 
+                 a5paper
+l.4234   \fi}
+             
+! Undefined control sequence.
+l.4235 \let\bbl@toload
+                      \@empty
+! Undefined control sequence.
+l.4236 \let\bbl@toload@last
+                           \@empty
+! Undefined control sequence.
+l.4237 \let\bbl@unkopt
+                      \@gobble  %% <- Ugly
+! Undefined control sequence.
+l.4241 \let\BabelLocalesTentative
+                                 \bbl@tempc
+! Undefined control sequence.
+\bbl@forcmd #1->\bbl@tempa #1\@@ 
+                                 
+l.4259   \fi}
+             
+! Illegal parameter number in definition of \bbl@tempf.
+<to be read again> 
+                   1
+l.4259   \fi}
+             
+! Illegal parameter number in definition of \bbl@tempf.
+<to be read again> 
+                   1
+l.4259   \fi}
+             
+! Illegal parameter number in definition of \bbl@tempf.
+<to be read again> 
+                   1
+l.4259   \fi}
+             
+)
+! Incomplete \iffalse; all text was ignored after line 4259.
+<inserted text> 
+                \fi 
+l.84 ...ish,latin,esperanto]{babel}\selectlanguage
+                                                  {british}
+! Undefined control sequence.
+<argument> \@nil 
+                 
+l.84 ...ish,latin,esperanto]{babel}\selectlanguage
+                                                  {british}
+)
+Runaway argument?
+autopunct=false,english=british]{csquotes} \setquotestyle {american} \ETC.
+! File ended while scanning use of \@iforloop.
+<inserted text> 
+                \par 
+<*> ...e{chklref}\input {luca171228-pt_and_qt.tex}
+                                                  
+! Emergency stop.
+<*> ...e{chklref}\input {luca171228-pt_and_qt.tex}
+                                                  
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on luca171228-pt_and_qt.log.
+************************************
+** Labels in starred environments **
+************************************
+
+*******************
+** Unused Labels **
+*******************
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

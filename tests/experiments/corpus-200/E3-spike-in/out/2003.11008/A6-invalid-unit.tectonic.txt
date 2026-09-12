@@ -1,0 +1,3 @@
+warning: nilab_malformation.tex:111: Overfull \hbox (10.27707pt too wide) in paragraph at lines 95--111
+error: nilab_malformation.tex:116: Illegal unit of measure (pt inserted)
+error: halted on potentially-recoverable error as specified

@@ -1,0 +1,3 @@
+planted=PhysRevLett.106.202502__ghost sites=[('2018_Feb8_ANN_Nuclear_Physics_camera_ready.xtex', 607)]
+xtex new=[]
+texlab new=[]

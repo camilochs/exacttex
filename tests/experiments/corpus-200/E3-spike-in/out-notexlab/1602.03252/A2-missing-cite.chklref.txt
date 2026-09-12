@@ -1,0 +1,546 @@
+pdf=1
+exit=0
+lines=599
+unique_findings=12
+/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/dcolumn
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/array.s
+ty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/bm.sty)
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/xcolor/xcolor
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ucs/ucs.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ucs/data/uni-
+global.def))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/inputenc
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ucs/utf8x.def
+))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/latexsym
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/subfigure/sub
+figure.sty
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/subfigure/sub
+figure.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/epsf
+ig.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def)
+No file 221_v2.aux.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ucs/ucsencs.d
+ef)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ulasy.fd
+)
+
+Package natbib Warning: Citation `Huiwen2015' on page 1 undefined on input line
+ 33.
+
+
+Package natbib Warning: Citation `Klitzing1986' on page 1 undefined on input li
+ne 38.
+
+
+Package natbib Warning: Citation `Stormer1999' on page 1 undefined on input lin
+e 38.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ucs/data/uni-
+32.def)
+
+Package natbib Warning: Citation `wehling2014__ghost' on page 1 undefined on in
+put line 38.
+
+
+Package natbib Warning: Citation `Zhang2009' on page 1 undefined on input line 
+38.
+
+
+Package natbib Warning: Citation `Chen178' on page 1 undefined on input line 38
+.
+
+
+Package natbib Warning: Citation `Hsieh2009' on page 1 undefined on input line 
+38.
+
+
+Package natbib Warning: Citation `Zhang2009' on page 1 undefined on input line 
+38.
+
+
+Package natbib Warning: Citation `Xia2009' on page 1 undefined on input line 38
+.
+
+
+Package natbib Warning: Citation `Hsieh2009' on page 1 undefined on input line 
+38.
+
+
+Package natbib Warning: Citation `Liu2014' on page 1 undefined on input line 38
+.
+
+
+Package natbib Warning: Citation `Wang2013' on page 1 undefined on input line 3
+8.
+
+
+Package natbib Warning: Citation `Wang2012' on page 1 undefined on input line 3
+8.
+
+
+Package natbib Warning: Citation `Liu2014a' on page 1 undefined on input line 3
+8.
+
+
+Package natbib Warning: Citation `Weng2015' on page 1 undefined on input line 3
+8.
+
+
+Package natbib Warning: Citation `Lv2015' on page 1 undefined on input line 38.
+
+
+
+Package natbib Warning: Citation `Xu2015' on page 1 undefined on input line 38.
+
+
+
+Package natbib Warning: Citation `Shekhar2015' on page 1 undefined on input lin
+e 38.
+
+
+Package natbib Warning: Citation `Dzero2010' on page 1 undefined on input line 
+38.
+
+
+Package natbib Warning: Citation `Xu2013' on page 1 undefined on input line 38.
+
+
+
+Package natbib Warning: Citation `Jiang2013' on page 1 undefined on input line 
+38.
+
+
+Package natbib Warning: Citation `wehling2014' on page 1 undefined on input lin
+e 40.
+
+
+Package natbib Warning: Citation `Liang2015' on page 1 undefined on input line 
+40.
+
+
+Package natbib Warning: Citation `Shekhar2015' on page 1 undefined on input lin
+e 40.
+
+
+Package natbib Warning: Citation `He2015' on page 1 undefined on input line 40.
+
+
+
+Package natbib Warning: Citation `Aggarwal2016' on page 1 undefined on input li
+ne 40.
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 40--41
+[]\OT1/cmr/m/n/10 Given their novel physics and po-ten-tial prac-ti-cal
+
+Package natbib Warning: Citation `Huiwen2015' on page 1 undefined on input line
+ 42.
+
+
+Package natbib Warning: Citation `Tschulik2009' on page 1 undefined on input li
+ne 45.
+
+
+LaTeX Warning: Reference `fig:XRD' on page 1 undefined on input line 45.
+
+
+Underfull \hbox (badness 2582) in paragraph at lines 45--46
+\OT1/cmr/m/n/10 from el-e-ments as pre-vi-ously de-scribed for the Zr
+[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}]
+
+Package natbib Warning: Citation `stahl' on page 2 undefined on input line 47.
+
+
+Package natbib Warning: Citation `Shiskin_PRL_2007' on page 2 undefined on inpu
+t line 53.
+
+
+Package natbib Warning: Citation `Fuchs_PRB_2007' on page 2 undefined on input 
+line 53.
+
+
+Package natbib Warning: Citation `Shiskin_PRB_2007' on page 2 undefined on inpu
+t line 53.
+
+
+Package natbib Warning: Citation `Shiskin_PRB_2006' on page 2 undefined on inpu
+t line 53.
+
+
+Package natbib Warning: Citation `Perdew_PRL_1996' on page 2 undefined on input
+ line 53.
+
+
+Package natbib Warning: Citation `Blochl_PRB_1994' on page 2 undefined on input
+ line 53.
+
+
+Package natbib Warning: Citation `Kokalj_CMS_2003' on page 2 undefined on input
+ line 57.
+
+
+LaTeX Warning: Reference `fig:XRD' on page 2 undefined on input line 61.
+
+
+Package natbib Warning: Citation `Tschulik2009' on page 2 undefined on input li
+ne 61.
+
+
+Package natbib Warning: Citation `teatum' on page 2 undefined on input line 61.
+
+
+
+LaTeX Warning: Reference `fig:XRD' on page 2 undefined on input line 63.
+
+
+LaTeX Warning: Reference `fig:rhoHC' on page 2 undefined on input line 73.
+
+
+LaTeX Warning: Reference `fig:rhoHC' on page 2 undefined on input line 75.
+
+[2]
+
+LaTeX Warning: Reference `fig:M' on page 3 undefined on input line 85.
+
+
+LaTeX Warning: Reference `fig:QO' on page 3 undefined on input line 95.
+
+
+LaTeX Warning: Reference `fig:QO' on page 3 undefined on input line 95.
+
+
+LaTeX Warning: Reference `tab:table1' on page 3 undefined on input line 95.
+
+
+LaTeX Warning: Reference `fig:QO' on page 3 undefined on input line 95.
+
+[3 <./XRD.pdf>]
+
+LaTeX Warning: Reference `tab:table1' on page 4 undefined on input line 106.
+
+
+LaTeX Warning: Reference `fig:FS' on page 4 undefined on input line 129.
+
+
+LaTeX Warning: Reference `fig:Band_structure' on page 4 undefined on input line
+ 129.
+
+
+LaTeX Warning: Reference `fig:pockets' on page 4 undefined on input line 129.
+
+
+LaTeX Warning: Reference `fig:pockets' on page 4 undefined on input line 129.
+
+
+LaTeX Warning: Reference `fig:Band_structure' on page 4 undefined on input line
+ 129.
+
+[4 <./RandHC.pdf>] (./221_v2.bbl [5 <./M.pdf>]
+
+LaTeX Warning: Reference `LastBibItem' on page 6 undefined on input line 9.
+
+
+Underfull \hbox (badness 1735) in paragraph at lines 314--325
+ []\OT1/cmr/m/n/9 S.-Y. Xu, I. Be-lopol-ski, D. S. Sanchez, C. Zhang,
+[6 <./QO.pdf>] [7 <./Zr2Te2P.pdf> <./Hf2Te2P.pdf> <./Zr2Te2P_fs_spin.pdf> <./Zr
+2Te2P_fs.pdf> <./Hf2Te2P_fs_spin.pdf> <./Hf2Te2P_fs.pdf>])
+
+Package natbib Warning: There were undefined citations.
+
+[8 <./Zr221.pdf> <./Hf221.pdf>] (./221_v2.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbx7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebre
+w/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6
+.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi9.pfb></opt/homebrew/Cellar/texlive/20260301
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cella
+r/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></o
+pt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20260301/share/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></opt/homebrew/Cellar/texlive/2
+0260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebr
+ew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+6.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy9.pfb></opt/homebrew/Cellar/texlive/2026030
+1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/homebrew/Cel
+lar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+</opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsf
+onts/symbols/msbm10.pfb>
+Output written on 221_v2.pdf (8 pages, 3851757 bytes).
+Transcript written on 221_v2.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./221_v2.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/revtex4-1/rev
+tex4-1.cls
+Document Class: revtex4-1 2020/09/30 4.1s (http://publish.aps.org/revtex4/ for 
+documentation)
+ltxutil[2020/09/30 4.1s utilities package (portions licensed from W. E. Baxter 
+web at superscript.com)]
+ltxfront[2020/09/30 4.1s frontmatter package (AO,DPC)]
+ltxgrid[2020/09/30 4.1s page grid package (portions licensed from W. E. Baxter 
+web at superscript.com)]
+
+Class revtex4-1 Warning: No Society specified, using default society aps.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/revtex4-1/aps
+4-1.rtx)
+
+Class revtex4-1 Warning: No type size specified, using default 10.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/revtex4-1/aps
+10pt4-1.rtx)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/textcase/text
+case.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amss
+ymb.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amsf
+onts.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsma
+th.sty
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amste
+xt.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsge
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsbs
+y.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsop
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/url/url.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/natbib/natbib
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/revtex4-1/rev
+symb4-1.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/dcolumn
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/array.s
+ty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/bm.sty)
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/xcolor/xcolor
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ucs/ucs.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ucs/data/uni-
+global.def))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/inputenc
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ucs/utf8x.def
+))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/latexsym
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/subfigure/sub
+figure.sty
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/subfigure/sub
+figure.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/epsf
+ig.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def) (./221_v2.aux
+
+LaTeX Warning: Label `fig:Hf_spin' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:Hf_spin' multiply defined.
+
+
+LaTeX Warning: Label `fig:Hf_ls' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:Hf_ls' multiply defined.
+
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ucs/ucsencs.d
+ef)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ulasy.fd
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ucs/data/uni-
+32.def)
+
+Package natbib Warning: Citation `wehling2014__ghost' on page 1 undefined on in
+put line 38.
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 40--41
+[]\OT1/cmr/m/n/10 Given their novel physics and po-ten-tial prac-ti-cal
+
+Underfull \hbox (badness 2582) in paragraph at lines 45--46
+\OT1/cmr/m/n/10 from el-e-ments as pre-vi-ously de-scribed for the Zr
+[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}] [2] [3 <./XRD.pdf>] [4 <./RandHC.pdf>] (./221_v2.bbl [5 <./M.pd
+f>] [6 <./QO.pdf>] [7 <./Zr2Te2P.pdf> <./Hf2Te2P.pdf> <./Zr2Te2P_fs_spin.pdf> <
+./Zr2Te2P_fs.pdf> <./Hf2Te2P_fs_spin.pdf> <./Hf2Te2P_fs.pdf>]) 
+
+Package natbib Warning: There were undefined citations.
+
+[8 <./Zr221.pdf> <./Hf221.pdf>] (./221_v2.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/homebrew
+/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
+pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20260301/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/
+texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt
+/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/2
+0260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></opt/homebre
+w/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
+.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/2026030
+1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></opt/homebrew/Cell
+ar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
+.pfb>
+Output written on 221_v2.pdf (8 pages, 3844001 bytes).
+Transcript written on 221_v2.log.
+************************************
+** Labels in starred environments **
+************************************
+-- 221_v2.tex           line  111: remove label tab:table1 
+
+*******************
+** Unused Labels **
+*******************
+-- 221_v2.tex           line  100: remove label eqn:1
+-- 221_v2.tex           line  136: remove label fig:Zr_FS
+-- 221_v2.tex           line  140: remove label fig:Hf_FS
+-- 221_v2.tex           line  153: remove label fig:Zr_spin
+-- 221_v2.tex           line  157: remove label fig:Zr_ls
+-- 221_v2.tex           line  162: remove label fig:Hf_spin
+-- 221_v2.tex           line  166: remove label fig:Hf_ls
+-- 221_v2.tex           line  179: remove label fig:Hf_spin
+-- 221_v2.tex           line  183: remove label fig:Hf_ls
+-- 221_v2.tex           line   36: remove label FirstPage
+-- 221_v2.tex           line   99: remove label eqn:1
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

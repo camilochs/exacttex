@@ -1,0 +1,3 @@
+planted=sec:setups sites=[('ms.xtex', 301), ('ms.xtex', 285)]
+xtex new=[('XT1001', 'sec:setups', 'ms.xtex', 301)]
+texlab new=[]

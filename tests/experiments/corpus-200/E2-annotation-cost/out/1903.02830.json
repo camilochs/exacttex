@@ -1,0 +1,230 @@
+{
+ "paper": "1903.02830",
+ "main": "VersionIPSE.tex",
+ "files": [
+  {
+   "file": "VersionIPSE.tex",
+   "chars_before": 40160,
+   "chars_after": 40079,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 40160,
+ "chars_after": 40079,
+ "delta_pct": -0.20169322709163345,
+ "unrepaired": {
+  "chars_after": 40052,
+  "chars_before": 40160,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.038575,
+  "bibliography": {
+   "state": "complete",
+   "entries": 20
+  },
+  "errors": 9,
+  "advisories": 0,
+  "build_exit": 1,
+  "build_emitted": false,
+  "delta_pct": -0.2689243027888446
+ },
+ "stats": {
+  "cite_cmds_live": 26,
+  "cite_keys_live": 36,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 1,
+  "other_cite_cmds": 0,
+  "labels_live": 37,
+  "labels_outside_grammar": 1,
+  "refs_live": 32,
+  "refs_outside_grammar": 2,
+  "other_ref_cmds": 28,
+  "float_envs": 4,
+  "cite_cmds_annotated": 24,
+  "cite_keys_annotated": 25,
+  "ids_annotated": 27,
+  "refs_annotated": 20,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 9,
+  "leaks_reverted": 11,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "VersionIPSE.tex",
+   "line": 388,
+   "token": "@ref(eq:posterior)",
+   "wrapper": "?",
+   "context": "\\KwResult{Samples $\\{\\theta_{1},...,\\theta_{N}\\}$ of the posterior distribution~(\\ref{eq:posterior})}"
+  },
+  {
+   "file": "VersionIPSE.tex",
+   "line": 393,
+   "token": "@id(SMHquotient)",
+   "wrapper": "?",
+   "context": "\\begin{equation}\\label{SMHquotient}"
+  },
+  {
+   "file": "VersionIPSE.tex",
+   "line": 439,
+   "token": "@ref(eq:posterior)",
+   "wrapper": "?",
+   "context": "\\KwResult{Samples $\\{\\theta_{1},...,\\theta_{N}\\}$ of the posterior distribution~(\\ref{eq:posterior})}"
+  },
+  {
+   "file": "VersionIPSE.tex",
+   "line": 511,
+   "token": "@cite(Smith2014)",
+   "wrapper": "?",
+   "context": "~\\cite{Smith2014}}"
+  },
+  {
+   "file": "VersionIPSE.tex",
+   "line": 512,
+   "token": "@id(tab:pars)",
+   "wrapper": "?",
+   "context": "\\label{tab:pars}"
+  },
+  {
+   "file": "VersionIPSE.tex",
+   "line": 584,
+   "token": "@id(fig:trace1)",
+   "wrapper": "?",
+   "context": "\\subfloat[\\label{fig:trace1} Trace plot]{\\resizebox*{5cm}{!}{\\includegraphics[]{trace_plot1.png}}}\\hspace{5pt}"
+  },
+  {
+   "file": "VersionIPSE.tex",
+   "line": 585,
+   "token": "@id(fig:hyperpar1)",
+   "wrapper": "?",
+   "context": "\\subfloat[\\label{fig:hyperpar1} Posterior distribution of $\\sigma_2$]{\\resizebox*{5cm}{!}{\\includegraphics[]{hyper_parameter1.png}}}\\\\"
+  },
+  {
+   "file": "VersionIPSE.tex",
+   "line": 586,
+   "token": "@id(fig:estimators1)",
+   "wrapper": "?",
+   "context": "\\subfloat[\\label{fig:estimators1}{\\bf True and estimators} Middle row depicts 100 samples of the posterior"
+  },
+  {
+   "file": "VersionIPSE.tex",
+   "line": 595,
+   "token": "@id(fig:trace2)",
+   "wrapper": "?",
+   "context": "\\subfloat[\\label{fig:trace2} Trace plot]{\\resizebox*{5cm}{!}{\\includegraphics[]{trace_plot2.png}}}\\hspace{5pt}"
+  },
+  {
+   "file": "VersionIPSE.tex",
+   "line": 596,
+   "token": "@id(fig:hyperpar2)",
+   "wrapper": "?",
+   "context": "\\subfloat[\\label{fig:hyperpar2}Posterior distribution of $\\sigma_2$]{\\resizebox*{5cm}{!}{\\includegraphics[]{hyper_parameter2.png}}}\\\\"
+  },
+  {
+   "file": "VersionIPSE.tex",
+   "line": 597,
+   "token": "@id(fig:estimators2)",
+   "wrapper": "?",
+   "context": "\\subfloat[\\label{fig:estimators2}Truth and estimators]{\\resizebox*{10cm}{!}{\\includegraphics[]{true_vs_estimators2.png}}}"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1001",
+   "name": "sec:intro",
+   "file": "VersionIPSE.xtex",
+   "line": 123,
+   "message": "identifier `sec:intro` is already declared",
+   "classification": "real: \\label{sec:intro} appears 2x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "tab:pars",
+   "file": "VersionIPSE.xtex",
+   "line": 476,
+   "message": "identifier `tab:pars` is not declared",
+   "classification": "compiler-unreachable: \\label{tab:pars} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "tab:pars",
+   "file": "VersionIPSE.xtex",
+   "line": 556,
+   "message": "identifier `tab:pars` is not declared",
+   "classification": "compiler-unreachable: \\label{tab:pars} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "fig:trace1",
+   "file": "VersionIPSE.xtex",
+   "line": 573,
+   "message": "identifier `fig:trace1` is not declared",
+   "classification": "compiler-unreachable: \\label{fig:trace1} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "fig:trace2",
+   "file": "VersionIPSE.xtex",
+   "line": 573,
+   "message": "identifier `fig:trace2` is not declared",
+   "classification": "compiler-unreachable: \\label{fig:trace2} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "fig:hyperpar1",
+   "file": "VersionIPSE.xtex",
+   "line": 574,
+   "message": "identifier `fig:hyperpar1` is not declared",
+   "classification": "compiler-unreachable: \\label{fig:hyperpar1} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "fig:hyperpar2",
+   "file": "VersionIPSE.xtex",
+   "line": 574,
+   "message": "identifier `fig:hyperpar2` is not declared",
+   "classification": "compiler-unreachable: \\label{fig:hyperpar2} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "fig:estimators1",
+   "file": "VersionIPSE.xtex",
+   "line": 575,
+   "message": "identifier `fig:estimators1` is not declared",
+   "classification": "compiler-unreachable: \\label{fig:estimators1} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "fig:estimators2",
+   "file": "VersionIPSE.xtex",
+   "line": 575,
+   "message": "identifier `fig:estimators2` is not declared",
+   "classification": "compiler-unreachable: \\label{fig:estimators2} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.034706,
+ "bibliography": {
+  "state": "complete",
+  "entries": 20
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

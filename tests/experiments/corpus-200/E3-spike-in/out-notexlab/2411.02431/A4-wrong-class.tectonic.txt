@@ -1,0 +1,51 @@
+g:   choose a different font that covers the unrepresentable character(s)
+warning: elsarticle-template-harv.tex:127: Overfull \hbox (3.36896pt too wide) in paragraph at lines 126--127
+warning: elsarticle-template-harv.tex:134: 
+Missing character: There is no ��� ("2014) in font ec-lmr12!
+warning: could not represent character "—" (0x2014) in font "ec-lmr12"
+warning: elsarticle-template-harv.tex:136: Missing character: There is no ��� ("200C) in font ec-lmr12!
+warning: could not represent character "‌" (0x200c) in font "ec-lmr12"
+warning: elsarticle-template-harv.tex:136: Missing character: There is no ��� ("200C) in font ec-lmr12!
+warning: could not represent character "‌" (0x200c) in font "ec-lmr12"
+warning: elsarticle-template-harv.tex:136: Missing character: There is no ��� ("200C) in font ec-lmr12!
+warning: could not represent character "‌" (0x200c) in font "ec-lmr12"
+warning: elsarticle-template-harv.tex:136: Missing character: There is no ��� ("200C) in font ec-lmr12!
+warning: could not represent character "‌" (0x200c) in font "ec-lmr12"
+warning: elsarticle-template-harv.tex:136: Missing character: There is no ��� ("200C) in font ec-lmr12!
+warning: could not represent character "‌" (0x200c) in font "ec-lmr12"
+warning: elsarticle-template-harv.tex:138: 
+Missing character: There is no ��� ("2019) in font ec-lmr12!
+warning: could not represent character "’" (0x2019) in font "ec-lmr12"
+warning: elsarticle-template-harv.bbl:38: 
+Missing character: There is no ��� ("2019) in font ec-lmr12!
+warning: could not represent character "’" (0x2019) in font "ec-lmr12"
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: Object @equation.2.2 already defined.
+warning: Object @figure.1 already defined.
+warning: Object @equation.2.4 already defined.
+warning: Object @equation.2.5 already defined.
+warning: Object @equation.2.6 already defined.
+warning: Object @equation.2.6 already defined.
+warning: Object @equation.2.7 already defined.
+warning: Object @equation.2.8 already defined.
+warning: Object @equation.2.9 already defined.
+warning: Object @figure.2 already defined.
+warning: Object @figure.3 already defined.
+warning: Object @equation.4.26 already defined.
+warning: Object @equation.4.26 already defined.
+warning: Object @equation.4.26 already defined.
+warning: Object @equation.4.26 already defined.
+warning: Object @equation.4.26 already defined.
+warning: Object @table.1 already defined.
+warning: Object @equation.4.26 already defined.
+warning: Object @equation.4.26 already defined.
+warning: Object @equation.4.28 already defined.
+warning: Object @equation.4.43 already defined.
+warning: Object @table.2 already defined.
+warning: Object @figure.4 already defined.
+warning: Object @figure.5 already defined.
+warning: Object @figure.6 already defined.
+warning: Object @table.3 already defined.
+warning: Object @figure.7 already defined.
+warning: Object @figure.8 already defined.
+warning: Object @figure.9 already defined.

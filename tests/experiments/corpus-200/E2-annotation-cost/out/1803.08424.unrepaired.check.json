@@ -1,0 +1,52 @@
+{
+ "coverage": 0.03929,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`tang.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "figure:dlm_caption",
+   "span": {
+    "file": "tang.xtex",
+    "offset": 11670,
+    "length": 18,
+    "line": 266,
+    "column": 16
+   },
+   "message": "identifier `figure:dlm_caption` is not declared \u2014 did you mean `figure:lm_caption`?",
+   "related": [
+    {
+     "message": "`figure:lm_caption` is declared here",
+     "span": {
+      "file": "tang.xtex",
+      "offset": 16715,
+      "length": 17,
+      "line": 402,
+      "column": 7
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "tang.xtex",
+    "offset": 641,
+    "length": 7,
+    "line": 19,
+    "column": 17
+   },
+   "message": "citation checking unavailable: `tang.bib` could not be read",
+   "related": []
+  }
+ ]
+}
