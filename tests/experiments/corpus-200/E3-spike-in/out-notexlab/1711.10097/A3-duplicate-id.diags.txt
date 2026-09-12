@@ -1,0 +1,3 @@
+planted=Diagram sites=[('main.xtex', 83), ('main.xtex', 25)]
+xtex new=[('XT1001', 'Diagram', 'main.xtex', 83), ('XT1020', 'Diagram', 'main.xtex', 109), ('XT1020', 'Diagram', 'main.xtex', 110), ('XT1020', 'Diagram', 'main.xtex', 118)]
+texlab new=[]

@@ -1,0 +1,5 @@
+2 claims: 0 fresh and carried over, 2 to verify
+https://life.bio.sunysb.edu/morph/data/datasets · settled
+http://www.oai.ucsf.edu/ · settled
+network: 3 requests (http 3) · 1 retries · 0 bytes down · 0 fetched, 0 carried over, 2 unanswered
+record: 2 claims → .xtexverified

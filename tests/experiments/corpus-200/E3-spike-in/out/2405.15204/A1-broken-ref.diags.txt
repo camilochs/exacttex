@@ -1,0 +1,3 @@
+planted=eq:est_eq__ghost sites=[('2ndrevGR.xtex', 109)]
+xtex new=[('XT1003', 'eq:est_eq__ghost', '2ndrevGR.xtex', 109)]
+texlab new=[('ERROR', '2ndrevGR.tex', 109, 'Undefined reference')]

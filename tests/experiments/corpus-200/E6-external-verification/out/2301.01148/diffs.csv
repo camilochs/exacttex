@@ -1,0 +1,11 @@
+target,kind,verdict,field,severity,document,source
+Gelazanskas2014DemandDirection,bib-entry,partial,year,medium,2014,2013
+Qin2021,bib-entry,partial,year,medium,2021,2022
+Qin2021,bib-entry,partial,authors,high,"Qin, Rongjun and Gao, Songyi and Zhang, Xingyuan and Xu, Zhen and Huang, Shengkai and Li, Zewen and Zhang, Weinan and Yu, Yang",Rong-Jun Qin and Xingyuan Zhang and Songyi Gao and Xiong-Hui Chen and Zewen Li and Weinan Zhang and Yang Yu
+Silver2017,bib-entry,mismatch,title,medium,{Article Mastering the game of Go without human knowledge},Mastering the game of Go without human knowledge
+Silver2017,bib-entry,mismatch,authors,high,"Silver, David and Schrittwieser, Julian and Simonyan, Karen and Antonoglou, Ioannis and Huang, Aja and Guez, Arthur and Hubert, Thomas and Baker, Lucas and Lai, Matthew and Bolton, Adrian and Chen, Yu",David Silver and Julian Schrittwieser and Karen Simonyan and Ioannis Antonoglou and Aja Huang and Arthur Guez and Thomas Hubert and Lucas Baker and Matthew Lai and Adrian Bolton and Yutian Chen and Ti
+Vazquez-Canteli2020,bib-entry,mismatch,title,medium,{MARLISA: Multi-Agent Reinforcement Learning with Iterative Sequential Action Selection for Load Shaping of Grid-Interactive Connected Buildings},MARLISA
+Xilei2022,bib-entry,partial,authors,high,"Xilei, Dai and Cheng, Siyu and Chong, Adrian",Xilei Dai and Siyu Cheng and Adrian Chong
+doi:10.1080/19401493.2021.1986574,bib-entry,partial,authors,high,David Blum and Javier Arroyo and Sen Huang and J{\'a}n Drgo{\v n}a and Filip Jorissen and Harald Taxt Walnum and Yan Chen and Kyle Benne and Draguna Vrabie and Michael Wetter and Lieve Helsen,David Blum and Javier Arroyo and Sen Huang and Ján Drgoňa and Filip Jorissen and Harald Taxt Walnum and Yan Chen and Kyle Benne and Draguna Vrabie and Michael Wetter and Lieve Helsen
+osti_1508212,bib-entry,partial,authors,high,"Neukomm, Monica and Nubbe, Valerie and Fares, Robert",Washington DC (United States) U.S. Dept. of Energy (USDOE) and Monica Neukomm and Building Technologies Office (EE-5B) (Building Technologies Office Corporate) USDOE Office of Energy Efficiency and Re
+ruelens2016reinforcement,bib-entry,partial,year,medium,2016,2018

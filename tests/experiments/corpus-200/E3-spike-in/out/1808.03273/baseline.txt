@@ -1,0 +1,6 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'main.tex', 118, 'Undefined reference'), ('ERROR', 'main.tex', 120, 'Undefined reference'), ('ERROR', 'main.tex', 131, 'Undefined reference'), ('ERROR', 'main.tex', 132, 'Undefined reference'), ('ERROR', 'main.tex', 134, 'Undefined reference'), ('ERROR', 'main.tex', 161, 'Undefined reference'), ('ERROR', 'main.tex', 164, 'Undefined reference'), ('ERROR', 'main.tex', 265, 'Undefined reference'), ('ERROR', 'main.tex', 270, 'Undefined reference'), ('ERROR', 'main.tex', 332, 'Undefined reference')]
+tectonic exit=1 warnings=[] secs=2
+error: main.tex:12: ! LaTeX Error: File `pstricks.sty' not found.
+error: halted on potentially-recoverable error as specified

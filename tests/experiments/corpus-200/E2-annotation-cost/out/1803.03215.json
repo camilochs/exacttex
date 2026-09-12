@@ -1,0 +1,87 @@
+{
+ "paper": "1803.03215",
+ "main": "2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex",
+ "files": [
+  {
+   "file": "2018_Feb8_ANN_Nuclear_Physics_camera_ready.tex",
+   "chars_before": 88886,
+   "chars_after": 88817,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 88886,
+ "chars_after": 88817,
+ "delta_pct": -0.07762752289449407,
+ "unrepaired": {
+  "chars_after": 88817,
+  "chars_before": 88886,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.025468,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`bibtemplate_ANN_Nuclear_Physics_2018_short.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.07762752289449407
+ },
+ "stats": {
+  "cite_cmds_live": 50,
+  "cite_keys_live": 54,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 2,
+  "other_cite_cmds": 0,
+  "labels_live": 23,
+  "labels_outside_grammar": 0,
+  "refs_live": 29,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 10,
+  "cite_cmds_annotated": 48,
+  "cite_keys_annotated": 48,
+  "ids_annotated": 23,
+  "refs_annotated": 29,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.025468,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`bibtemplate_ANN_Nuclear_Physics_2018_short.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "2018_Feb8_ANN_Nuclear_Physics_camera_ready.xtex",
+    "offset": 27044,
+    "length": 22,
+    "line": 607,
+    "column": 506
+   },
+   "message": "citation checking unavailable: `bibtemplate_ANN_Nuclear_Physics_2018_short.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

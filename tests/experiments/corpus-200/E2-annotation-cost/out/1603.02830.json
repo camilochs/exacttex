@@ -1,0 +1,305 @@
+{
+ "paper": "1603.02830",
+ "main": "ising.tex",
+ "files": [
+  {
+   "file": "ising.tex",
+   "chars_before": 39770,
+   "chars_after": 39755,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 39770,
+ "chars_after": 39755,
+ "delta_pct": -0.037716872014080964,
+ "unrepaired": {
+  "chars_after": 39713,
+  "chars_before": 39770,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.033934,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`bib.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.14332411365350767
+ },
+ "stats": {
+  "cite_cmds_live": 39,
+  "cite_keys_live": 61,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 8,
+  "other_cite_cmds": 2,
+  "labels_live": 19,
+  "labels_outside_grammar": 0,
+  "refs_live": 33,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 2,
+  "float_envs": 11,
+  "cite_cmds_annotated": 25,
+  "cite_keys_annotated": 31,
+  "ids_annotated": 5,
+  "refs_annotated": 22,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 31,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "ising.tex",
+   "line": 405,
+   "token": "@id(si:expmeth)",
+   "wrapper": "?",
+   "context": "\\label{si:expmeth}"
+  },
+  {
+   "file": "ising.tex",
+   "line": 415,
+   "token": "@cite(tsotsis_lasing)",
+   "wrapper": "?",
+   "context": "excitation~\\cite{tsotsis_lasing}. The CW pump is a single-mode Ti:Sapphire"
+  },
+  {
+   "file": "ising.tex",
+   "line": 421,
+   "token": "@cite(MRAF)",
+   "wrapper": "?",
+   "context": "algorithm~\\cite{MRAF}. The separation of the pump spots"
+  },
+  {
+   "file": "ising.tex",
+   "line": 434,
+   "token": "@id(si:realspace)",
+   "wrapper": "?",
+   "context": "\\label{si:realspace}"
+  },
+  {
+   "file": "ising.tex",
+   "line": 440,
+   "token": "@id(fig:realspace)",
+   "wrapper": "?",
+   "context": "\\label{fig:realspace}"
+  },
+  {
+   "file": "ising.tex",
+   "line": 443,
+   "token": "@ref(fig:realspace)",
+   "wrapper": "?",
+   "context": "We can squeeze or stretch the trap without affecting the barrier pump spots [Fig.\\ref{fig:realspace}(a)]. Using a Wollaston prism in front of the CCD, we measur"
+  },
+  {
+   "file": "ising.tex",
+   "line": 443,
+   "token": "@ref(fig:realspace)",
+   "wrapper": "?",
+   "context": "We can squeeze or stretch the trap without affecting the barrier pump spots [Fig.\\ref{fig:realspace}(a)]. Using a Wollaston prism in front of the CCD, we measur"
+  },
+  {
+   "file": "ising.tex",
+   "line": 443,
+   "token": "@cite(ohadi_spontaneous_2015_SI)",
+   "wrapper": "?",
+   "context": "We can squeeze or stretch the trap without affecting the barrier pump spots [Fig.\\ref{fig:realspace}(a)]. Using a Wollaston prism in front of the CCD, we measur"
+  },
+  {
+   "file": "ising.tex",
+   "line": 443,
+   "token": "@ref(fig:realspace)",
+   "wrapper": "?",
+   "context": "We can squeeze or stretch the trap without affecting the barrier pump spots [Fig.\\ref{fig:realspace}(a)]. Using a Wollaston prism in front of the CCD, we measur"
+  },
+  {
+   "file": "ising.tex",
+   "line": 446,
+   "token": "@id(si:phase)",
+   "wrapper": "?",
+   "context": "\\label{si:phase}"
+  },
+  {
+   "file": "ising.tex",
+   "line": 451,
+   "token": "@id(fig:michelson)",
+   "wrapper": "?",
+   "context": "\\label{fig:michelson}"
+  },
+  {
+   "file": "ising.tex",
+   "line": 454,
+   "token": "@ref(fig:michelson)",
+   "wrapper": "?",
+   "context": "To experimentally study the phase coherence between the two condensates, a modified Michelson interferometer is used, as shown in Fig.~\\ref{fig:michelson}. The "
+  },
+  {
+   "file": "ising.tex",
+   "line": 458,
+   "token": "@cite(love_intrinsic_2008)",
+   "wrapper": "?",
+   "context": "condensate with the excitonic reservoir~\\cite{love_intrinsic_2008}. Both effects"
+  },
+  {
+   "file": "ising.tex",
+   "line": 472,
+   "token": "@id(fig:TheoryPhaseHist)",
+   "wrapper": "?",
+   "context": "\\label{fig:TheoryPhaseHist}"
+  },
+  {
+   "file": "ising.tex",
+   "line": 477,
+   "token": "@ref(fig:TheoryPhaseHist)",
+   "wrapper": "?",
+   "context": "Fig.~\\ref{fig:TheoryPhaseHist} shows a histogram of the phase difference between"
+  },
+  {
+   "file": "ising.tex",
+   "line": 490,
+   "token": "@id(fig:Potential)",
+   "wrapper": "?",
+   "context": "\\label{fig:Potential}"
+  },
+  {
+   "file": "ising.tex",
+   "line": 500,
+   "token": "@cite(stover_locking_1966)",
+   "wrapper": "?",
+   "context": "in a similar fashion to the injection locking of two laser oscillators~\\cite{stover_locking_1966}."
+  },
+  {
+   "file": "ising.tex",
+   "line": 502,
+   "token": "@ref(fig:Potential)",
+   "wrapper": "?",
+   "context": "By measuring the blueshift of polaritons across the saddle points of the double-hexagon trap, we can extract the potential profile, as shown in Fig.~\\ref{fig:Po"
+  },
+  {
+   "file": "ising.tex",
+   "line": 505,
+   "token": "@id(si:spinnoise)",
+   "wrapper": "?",
+   "context": "\\label{si:spinnoise}"
+  },
+  {
+   "file": "ising.tex",
+   "line": 508,
+   "token": "@cite(ohadi_spontaneous_2015_SI)",
+   "wrapper": "?",
+   "context": "work~\\cite{ohadi_spontaneous_2015_SI}, we demonstrated how the interaction of the"
+  },
+  {
+   "file": "ising.tex",
+   "line": 517,
+   "token": "@ref(fig:pumpSpotDiameter)",
+   "wrapper": "?",
+   "context": "in Fig.~\\ref{fig:pumpSpotDiameter}. We measure the"
+  },
+  {
+   "file": "ising.tex",
+   "line": 524,
+   "token": "@ref(fig:pumpSpotDiameter)",
+   "wrapper": "?",
+   "context": "Fig.~\\ref{fig:pumpSpotDiameter}."
+  },
+  {
+   "file": "ising.tex",
+   "line": 532,
+   "token": "@id(fig:pumpSpotDiameter)",
+   "wrapper": "?",
+   "context": "\\label{fig:pumpSpotDiameter}"
+  },
+  {
+   "file": "ising.tex",
+   "line": 537,
+   "token": "@id(si:resexc)",
+   "wrapper": "?",
+   "context": "\\label{si:resexc}"
+  },
+  {
+   "file": "ising.tex",
+   "line": 548,
+   "token": "@id(fig:TheorySwitching)",
+   "wrapper": "?",
+   "context": "\\label{fig:TheorySwitching}"
+  },
+  {
+   "file": "ising.tex",
+   "line": 557,
+   "token": "@id(fig:TheoryNoiseSwitching)",
+   "wrapper": "?",
+   "context": "\\label{fig:TheoryNoiseSwitching}"
+  },
+  {
+   "file": "ising.tex",
+   "line": 562,
+   "token": "@id(eq:mainSI)",
+   "wrapper": "?",
+   "context": "\\label{eq:mainSI}"
+  },
+  {
+   "file": "ising.tex",
+   "line": 578,
+   "token": "@ref(fig:TheorySwitching)",
+   "wrapper": "?",
+   "context": "In both the AF-regime and the F-regime, when the spin state of condensate 1 is switched, condensate 2 also switches spin, as shown in Fig.~\\ref{fig:TheorySwitch"
+  },
+  {
+   "file": "ising.tex",
+   "line": 580,
+   "token": "@ref(eq:mainSI)",
+   "wrapper": "?",
+   "context": "To demonstrate noise-induced spin flips a spin noise function $f_n$ is added to Eq.~\\ref{eq:mainSI}.  Here, $f_n(t)=[f_{n+}, f_{n-}]^T$"
+  },
+  {
+   "file": "ising.tex",
+   "line": 584,
+   "token": "@id(eq:noise)",
+   "wrapper": "?",
+   "context": "\\begin{align}\\label{eq:noise}"
+  },
+  {
+   "file": "ising.tex",
+   "line": 588,
+   "token": "@ref(fig:TheoryNoiseSwitching)",
+   "wrapper": "?",
+   "context": "where $D$ is the total noise intensity. Fig.~\\ref{fig:TheoryNoiseSwitching} shows the influence of spin noise on the"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.033898,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`bib.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "ising.xtex",
+    "offset": 3380,
+    "length": 20,
+    "line": 68,
+    "column": 58
+   },
+   "message": "citation checking unavailable: `bib.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

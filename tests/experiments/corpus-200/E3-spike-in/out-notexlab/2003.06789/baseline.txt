@@ -1,0 +1,24 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=[] secs=3
+ wide) in paragraph at lines 409--434
+warning: MT_kinetochore_dynamics.tex:1376: Underfull \hbox (badness 2671) in paragraph at lines 1358--1376
+warning: MT_kinetochore_dynamics.tex:1789: Overfull \hbox (12.31378pt too wide) in paragraph at lines 1783--1789
+warning: MT_kinetochore_dynamics.tex:2417: Overfull \hbox (1.27252pt too wide) in paragraph at lines 2380--2417
+warning: MT_kinetochore_dynamics.tex:2882: Overfull \hbox (26.5915pt too wide) in paragraph at lines 2863--2882
+warning: MT_kinetochore_dynamics.tex:3290: Underfull \hbox (badness 10000) in paragraph at lines 3289--3290
+warning: MT_kinetochore_dynamics.tex:3297: Overfull \hbox (39.21019pt too wide) in paragraph at lines 3285--3297
+warning: MT_kinetochore_dynamics.tex:3305: Underfull \hbox (badness 2913) in paragraph at lines 3300--3305
+warning: MT_kinetochore_dynamics.tex:434: Overfull \hbox (5.88017pt too wide) in paragraph at lines 409--434
+warning: MT_kinetochore_dynamics.tex:1376: Underfull \hbox (badness 2671) in paragraph at lines 1358--1376
+warning: MT_kinetochore_dynamics.tex:1789: Overfull \hbox (12.31378pt too wide) in paragraph at lines 1783--1789
+warning: MT_kinetochore_dynamics.tex:2417: Overfull \hbox (1.27252pt too wide) in paragraph at lines 2380--2417
+warning: MT_kinetochore_dynamics.tex:2882: Overfull \hbox (26.5915pt too wide) in paragraph at lines 2863--2882
+warning: MT_kinetochore_dynamics.tex:3290: Underfull \hbox (badness 10000) in paragraph at lines 3289--3290
+warning: MT_kinetochore_dynamics.tex:3297: Overfull \hbox (39.21019pt too wide) in paragraph at lines 3285--3297
+warning: MT_kinetochore_dynamics.tex:3305: Underfull \hbox (badness 2913) in paragraph at lines 3300--3305
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: sorry, PostScript images are not supported by Tectonic
+warning: for details, please see https://github.com/tectonic-typesetting/tectonic/issues/27
+error: pdf: image inclusion failed for "Fig1.eps" (page=1).

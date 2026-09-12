@@ -1,0 +1,25 @@
+{
+ "coverage": 0.045066,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`mybibfile.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "Pancreas_Segmentation_arXiv2016.xtex",
+    "offset": 9240,
+    "length": 10,
+    "line": 146,
+    "column": 991
+   },
+   "message": "citation checking unavailable: `mybibfile.bib` could not be read",
+   "related": []
+  }
+ ]
+}

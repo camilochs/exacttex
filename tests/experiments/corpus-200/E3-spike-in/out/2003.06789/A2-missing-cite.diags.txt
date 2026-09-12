@@ -1,0 +1,3 @@
+planted=dumont2009__ghost sites=[('MT_kinetochore_dynamics.xtex', 139)]
+xtex new=[('XT1005', 'dumont2009__ghost', 'MT_kinetochore_dynamics.xtex', 139)]
+texlab new=[('ERROR', 'MT_kinetochore_dynamics.tex', 139, 'Undefined reference'), ('info', 'MT_kinetochore_dynamics.bib', 118, 'Unused entry')]

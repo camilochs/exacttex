@@ -1,0 +1,174 @@
+exit=2
+lines=240
+unique_findings=66
+Warning 35 in ws-acs.tex line 110: You should perhaps use `\sin' instead.
+y(O):=y(O)+|\mathrm{\bf v}(O)|sin(\alpha(O)).  
+                              ^^^
+Warning 2 in ws-acs.tex line 118: Non-breaking space (`~') should have been used.
+The organisms live inside a discrete plane square field $\overline{1,100}\times \overline{1,100}$ with rather common toric topology, which means that  if an organism moves behind a border it appears out of the opposite border with the same speed vector (see Figure \ref{fig:1}).  
+                                                                                                                                                                                                                                                                        ^
+Warning 24 in ws-acs.tex line 125: Delete this space to maintain correct pagereferences.
+\label{fig:1}  
+^
+Warning 8 in ws-acs.tex line 137: Wrong length of dash may have been used.
+The initial conditions -- positions, radii and colors of the population's organisms -- are chosen uniformly: $(x,y)\in\overline{1,100}^2$, $rad\in\overline{ds,ms}$, $(r,g,b)\in\overline{1,255}^3$.  
+                       ^^
+Warning 8 in ws-acs.tex line 137: Wrong length of dash may have been used.
+The initial conditions -- positions, radii and colors of the population's organisms -- are chosen uniformly: $(x,y)\in\overline{1,100}^2$, $rad\in\overline{ds,ms}$, $(r,g,b)\in\overline{1,255}^3$.  
+                                                                                    ^^
+Warning 8 in ws-acs.tex line 141: Wrong length of dash may have been used.
+\item $ns>ds$ -- an evident survival constraint;  
+              ^^
+Warning 10 in ws-acs.tex line 161: Solo `)' found.
+1) the distance between their centers does not exceed the sum of their radii,  
+ ^
+Warning 3 in ws-acs.tex line 164: You should enclose the previous parenthesis with `{}'.
+\sqrt{(x(O_1)-x(O_2))^2+(y(O_1)-y(O_2))^2}\le rad(O_1)+rad(O_2);  
+                    ^
+Warning 3 in ws-acs.tex line 164: You should enclose the previous parenthesis with `{}'.
+\sqrt{(x(O_1)-x(O_2))^2+(y(O_1)-y(O_2))^2}\le rad(O_1)+rad(O_2);  
+                                      ^
+Warning 10 in ws-acs.tex line 167: Solo `)' found.
+2) the condition \eqref{touch} was not true at the previous step.   
+ ^
+Warning 2 in ws-acs.tex line 167: Non-breaking space (`~') should have been used.
+2) the condition \eqref{touch} was not true at the previous step.   
+                ^
+Warning 38 in ws-acs.tex line 194: You should not use punctuation in front of quotes.
+The probability $p$ to split reflects the organism's ``fitness'' and is inversely related to the ``distance'' between the  organism's genome $(r(O),g(O),b(O))$ and the current target genome $(r_0,g_0,b_0)$ (which may be considered as the best possible genome for the ``current environment,'' see the next subsection for the details):  
+                                                                                                                                                                                                                                                                                                ^
+Warning 3 in ws-acs.tex line 198: You should enclose the previous parenthesis with `{}'.
+p=1-\sqrt{\frac{((r(O)-r_o)^2+(g(O)-g_o)^2+(b(O)-b_o)^2)}{3\cdot255^2}}.  
+                          ^
+Warning 3 in ws-acs.tex line 198: You should enclose the previous parenthesis with `{}'.
+p=1-\sqrt{\frac{((r(O)-r_o)^2+(g(O)-g_o)^2+(b(O)-b_o)^2)}{3\cdot255^2}}.  
+                                       ^
+Warning 3 in ws-acs.tex line 198: You should enclose the previous parenthesis with `{}'.
+p=1-\sqrt{\frac{((r(O)-r_o)^2+(g(O)-g_o)^2+(b(O)-b_o)^2)}{3\cdot255^2}}.  
+                                                    ^
+Warning 9 in ws-acs.tex line 206: `]' expected, found `)'.
+The angles $\alpha(O_1)$ and $\alpha(O_2)$ are selected uniformly from $[0,2\pi)$, the size is predefined at $rad(O_1)=rad(O_2)=ns$.   
+                                                                               ^
+Warning 2 in ws-acs.tex line 218: Non-breaking space (`~') should have been used.
+One of the main purposes of this article is to see how successful are the altruistic and selfish strategies in a radically changing environment. The changes in the population's environment here are modeled by subsequent changes in the replication probability function \eqref{rep_prob}, each of which consists in a modification of the target genome $(r_0,g_0,b_0)$. All the populations have to follow through the same sequence of target genomes:  
+                                                                                                                                                                                                                                                                           ^
+Warning 2 in ws-acs.tex line 223: Non-breaking space (`~') should have been used.
+which may be visualized as the vertices of the RGB-color cube (see Figure \ref{fig:2}). The environment (target genome) changes right after  the population ``adapts to the current environment.'' In the following experiments it means that the fitness function \eqref{rep_prob} switches to the next  target genome as soon as the population produces an organism, whose genome is \textit{equal} to the current target genome.  
+                                                                         ^
+Warning 38 in ws-acs.tex line 223: You should not use punctuation in front of quotes.
+which may be visualized as the vertices of the RGB-color cube (see Figure \ref{fig:2}). The environment (target genome) changes right after  the population ``adapts to the current environment.'' In the following experiments it means that the fitness function \eqref{rep_prob} switches to the next  target genome as soon as the population produces an organism, whose genome is \textit{equal} to the current target genome.  
+                                                                                                                                                                                               ^
+Warning 2 in ws-acs.tex line 223: Non-breaking space (`~') should have been used.
+which may be visualized as the vertices of the RGB-color cube (see Figure \ref{fig:2}). The environment (target genome) changes right after  the population ``adapts to the current environment.'' In the following experiments it means that the fitness function \eqref{rep_prob} switches to the next  target genome as soon as the population produces an organism, whose genome is \textit{equal} to the current target genome.  
+                                                                                                                                                                                                                                                                  ^
+Warning 24 in ws-acs.tex line 240: Delete this space to maintain correct pagereferences.
+\label{fig:2}       % Give a unique label  
+^
+Warning 8 in ws-acs.tex line 288: Wrong length of dash may have been used.
+5& - & - \\  
+   ^
+Warning 8 in ws-acs.tex line 288: Wrong length of dash may have been used.
+5& - & - \\  
+       ^
+Warning 8 in ws-acs.tex line 289: Wrong length of dash may have been used.
+6& - & \includegraphics[width=0.29\textwidth]{Fig3_a6m.pdf}  
+   ^
+Warning 24 in ws-acs.tex line 293: Delete this space to maintain correct pagereferences.
+\label{fig:3}       % Give a unique label  
+^
+Warning 10 in ws-acs.tex line 308: Solo `)' found.
+A population with the parameters $(ms,ds,ns)$ was assigned one of the above categories $x\in\overline{1,6}$ if 1) more than 50\% of the 100 experiments with these parameters resulted in the category $x$ or, if there is no such a category, 2) $x$ was the lowest category, which contained at least 16\% ($\approx$ 100\%/6 categories) of the results.  
+                                                                                                                ^
+Warning 10 in ws-acs.tex line 308: Solo `)' found.
+A population with the parameters $(ms,ds,ns)$ was assigned one of the above categories $x\in\overline{1,6}$ if 1) more than 50\% of the 100 experiments with these parameters resulted in the category $x$ or, if there is no such a category, 2) $x$ was the lowest category, which contained at least 16\% ($\approx$ 100\%/6 categories) of the results.  
+                                                                                                                                                                                                                                                ^
+Warning 24 in ws-acs.tex line 329: Delete this space to maintain correct pagereferences.
+\label{tab:1}       % Give a unique label  
+^
+Warning 44 in ws-acs.tex line 331: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{r||l}  
+^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in ws-acs.tex line 332: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|c|c|c|c}  
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in ws-acs.tex line 333: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline\noalign{\smallskip}  
+^^^^^^
+Warning 44 in ws-acs.tex line 335: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\noalign{\smallskip}\hline\noalign{\smallskip}  
+                    ^^^^^^
+Warning 44 in ws-acs.tex line 351: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|c|c|c|c}  
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in ws-acs.tex line 352: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline\noalign{\smallskip}  
+^^^^^^
+Warning 44 in ws-acs.tex line 354: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\noalign{\smallskip}\hline\noalign{\smallskip}  
+                    ^^^^^^
+Warning 2 in ws-acs.tex line 380: Non-breaking space (`~') should have been used.
+\caption{The connection between ``speed'' and ``stability'' of evolution for the ``dexterous'' populations (based on Table \ref{tab:1})}  
+                                                                                                                          ^
+Warning 24 in ws-acs.tex line 381: Delete this space to maintain correct pagereferences.
+\label{fig:4}       % Give a unique label  
+^
+Warning 12 in ws-acs.tex line 385: Interword spacing (`\ ') should perhaps be used.
+6-Altruistic graph of Fig. \ref{fig:4} shows that most of the ``dexterous'' populations lie in some 2D plane. The equation for this plane may be constructed by linear regression:  
+                          ^
+Warning 2 in ws-acs.tex line 385: Non-breaking space (`~') should have been used.
+6-Altruistic graph of Fig. \ref{fig:4} shows that most of the ``dexterous'' populations lie in some 2D plane. The equation for this plane may be constructed by linear regression:  
+                          ^
+Warning 38 in ws-acs.tex line 398: You should not use punctuation in front of quotes.
+In each idyll-test a population has to beget its first target genome $(0,0,0)$ in $10^4$ steps, following which the environment remains constant (the target genome is not switching) for either $10^4$ or $10^5$ steps. After such a ``peaceful age,'' the target genome changes to the opposite one, $(255,255,255)$, and the population has to beget the new target genome before the step $10^6$. The idyll-test experiments revealed only two categories of populations: ``fallen'' (see the description in the previous section) and ``succeeders'' (those who passed the idyll-test).   
+                                                                                                                                                                                                                                                    ^
+Warning 2 in ws-acs.tex line 400: Non-breaking space (`~') should have been used.
+Just as the stress-test, each idyll-test with the parameters $(ms,ds,ns)$ and under the constraints \eqref{constraints} was repeated 100 times. The result of such a series of experiments was similarly either the category that appeared in more than 50\% of the series or (if it does not exist) the lowest category having at least 16\% of the experiments.  
+                                                                                                   ^
+Warning 24 in ws-acs.tex line 407: Delete this space to maintain correct pagereferences.
+\label{tab:2}       % Give a unique label  
+^
+Warning 44 in ws-acs.tex line 408: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c||c||c}  
+^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in ws-acs.tex line 409: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline\noalign{\smallskip}  
+^^^^^^
+Warning 44 in ws-acs.tex line 411: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\noalign{\smallskip}\hline\noalign{\smallskip}  
+                    ^^^^^^
+Warning 44 in ws-acs.tex line 413: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|c}  
+^^^^^^^^^^^^^^^^^^^^
+Warning 44 in ws-acs.tex line 418: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{c|c}  
+^^^^^^^^^^^^^^^^^^^^
+Warning 38 in ws-acs.tex line 426: You should not use punctuation in front of quotes.
+Almost all the altruistic ``dexterous'' populations that passed the idyll-test independently of the duration of the ``peaceful age.'' The ``fallen'' populations are as rare in the idyll-test as they were in the stress-test (see Tab. 2: two in the experiment with $10^4$ idyllic steps and one with $10^5$), which   
+                                                                                                                                  ^
+Warning 2 in ws-acs.tex line 432: Non-breaking space (`~') should have been used.
+There are two hypotheses I would like to discuss in connection with the obtained results: one practical and one philosophical. The practical one concerns the evolutionary computation \cite{gen_alg_2,gen_alg_3}. Preservation of genetic diversity and ability to escape from overspecialization are very important features for any evolutionary computation approach. %, see e.g. \cite{gen_alg_1}:  
+                                                                                                                                                                                      ^
+Warning 12 in ws-acs.tex line 434: Interword spacing (`\ ') should perhaps be used.
+As we have seen, altruism-based evolutionary strategies may prove to be more adaptive and resistant to the common traps of evolution process, which means that altruism-based genetic algorithms are worth a further extensive study (already started in e.g. \cite{altru_gen2,altru_gen4,altru_gen3,altru_gen1}).  
+                                                                                                                                                                                                                                                             ^
+Warning 2 in ws-acs.tex line 434: Non-breaking space (`~') should have been used.
+As we have seen, altruism-based evolutionary strategies may prove to be more adaptive and resistant to the common traps of evolution process, which means that altruism-based genetic algorithms are worth a further extensive study (already started in e.g. \cite{altru_gen2,altru_gen4,altru_gen3,altru_gen1}).  
+                                                                                                                                                                                                                                                             ^
+Warning 8 in ws-acs.tex line 439: Wrong length of dash may have been used.
+The second -- philosophical -- speculation is devoted to as much as the life in our Universe.  
+           ^^
+Warning 8 in ws-acs.tex line 439: Wrong length of dash may have been used.
+The second -- philosophical -- speculation is devoted to as much as the life in our Universe.  
+                            ^^
+Warning 8 in ws-acs.tex line 440: Wrong length of dash may have been used.
+Considering the obtained experimental results, it is not unreasonable to assume that life with altruistic energy exchange is able to survive, adapt and develop in an unpredictable environment for longer periods compared to the selfish-based life. If we suppose that there are planets in the Universe, where life emerged in altruistic form, than group selection (at planetary level) will favor them as more resistant to the caprices of Nature. The life on such ``altruistic-biosphere'' planets should exist for longer periods and thus may become intelligent more often on average in comparison with the selfish life. The longer intelligent life exists -- the higher the chances for it to transform into a civilization of space travelers. Which  brings us to the final hypothesis: \textit{the highly developed extraterrestrial intelligent life we could encounter has more chances to be based on the altruistic principles} (see more on this topic in \cite{extra2,extra1}).  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^^
+Warning 2 in ws-acs.tex line 440: Non-breaking space (`~') should have been used.
+Considering the obtained experimental results, it is not unreasonable to assume that life with altruistic energy exchange is able to survive, adapt and develop in an unpredictable environment for longer periods compared to the selfish-based life. If we suppose that there are planets in the Universe, where life emerged in altruistic form, than group selection (at planetary level) will favor them as more resistant to the caprices of Nature. The life on such ``altruistic-biosphere'' planets should exist for longer periods and thus may become intelligent more often on average in comparison with the selfish life. The longer intelligent life exists -- the higher the chances for it to transform into a civilization of space travelers. Which  brings us to the final hypothesis: \textit{the highly developed extraterrestrial intelligent life we could encounter has more chances to be based on the altruistic principles} (see more on this topic in \cite{extra2,extra1}).  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+Warning 17 in ws-acs.tex line 455: Number of `(' doesn't match the number of `)'!
+
+
+Warning 17 in ws-acs.tex line 455: Number of `[' doesn't match the number of `]'!
+
+

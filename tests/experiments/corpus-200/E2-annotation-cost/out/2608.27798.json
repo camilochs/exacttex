@@ -1,0 +1,95 @@
+{
+ "paper": "2608.27798",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 109723,
+   "chars_after": 109612,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 109723,
+ "chars_after": 109612,
+ "delta_pct": -0.10116383985126182,
+ "unrepaired": {
+  "chars_after": 109612,
+  "chars_before": 109723,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.016787,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`references.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.10116383985126182
+ },
+ "stats": {
+  "cite_cmds_live": 59,
+  "cite_keys_live": 78,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 14,
+  "other_cite_cmds": 0,
+  "labels_live": 37,
+  "labels_outside_grammar": 0,
+  "refs_live": 2,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 74,
+  "float_envs": 2,
+  "cite_cmds_annotated": 44,
+  "cite_keys_annotated": 45,
+  "ids_annotated": 37,
+  "refs_annotated": 2,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 1,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "main.tex",
+   "line": 1509,
+   "token": "@cite(free-theorems)",
+   "wrapper": "?",
+   "context": "\\begin{corollary}[Vacuousness~\\cite{free-theorems}] \\label{cor:vacuous}"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.016787,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`references.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "main.xtex",
+    "offset": 9435,
+    "length": 21,
+    "line": 249,
+    "column": 38
+   },
+   "message": "citation checking unavailable: `references.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

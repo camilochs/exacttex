@@ -1,0 +1,3 @@
+planted=sec:definitions sites=[('thesis.xtex', 415), ('thesis.xtex', 380)]
+xtex new=[('XT1001', 'sec:definitions', 'thesis.xtex', 415)]
+texlab new=[('ERROR', 'thesis.tex', 380, 'Duplicate label'), ('ERROR', 'thesis.tex', 415, 'Duplicate label'), ('info', 'thesis.tex', 380, 'Unused label')]

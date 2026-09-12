@@ -1,0 +1,25 @@
+{
+ "coverage": 0.025468,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`bibtemplate_ANN_Nuclear_Physics_2018_short.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "2018_Feb8_ANN_Nuclear_Physics_camera_ready.xtex",
+    "offset": 27044,
+    "length": 22,
+    "line": 607,
+    "column": 506
+   },
+   "message": "citation checking unavailable: `bibtemplate_ANN_Nuclear_Physics_2018_short.bib` could not be read",
+   "related": []
+  }
+ ]
+}

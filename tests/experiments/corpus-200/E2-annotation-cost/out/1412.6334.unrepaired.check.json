@@ -1,0 +1,25 @@
+{
+ "coverage": 0.050355,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`iclr2015.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "iclr2015.xtex",
+    "offset": 3262,
+    "length": 34,
+    "line": 85,
+    "column": 8
+   },
+   "message": "citation checking unavailable: `iclr2015.bib` could not be read",
+   "related": []
+  }
+ ]
+}

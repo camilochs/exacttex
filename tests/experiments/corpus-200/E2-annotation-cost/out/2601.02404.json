@@ -1,0 +1,127 @@
+{
+ "paper": "2601.02404",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 152131,
+   "chars_after": 152033,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "math_commands.tex",
+   "chars_before": 12284,
+   "chars_after": 12284,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 2,
+ "chars_before": 164415,
+ "chars_after": 164317,
+ "delta_pct": -0.05960526715932245,
+ "unrepaired": {
+  "chars_after": 164317,
+  "chars_before": 164415,
+  "converted_files": 2,
+  "check_exit": 0,
+  "coverage": 0.01764,
+  "bibliography": {
+   "state": "complete",
+   "entries": 67
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.05960526715932245
+ },
+ "stats": {
+  "cite_cmds_live": 30,
+  "cite_keys_live": 50,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 40,
+  "labels_outside_grammar": 6,
+  "refs_live": 71,
+  "refs_outside_grammar": 35,
+  "other_ref_cmds": 1,
+  "float_envs": 25,
+  "cite_cmds_annotated": 24,
+  "cite_keys_annotated": 44,
+  "ids_annotated": 34,
+  "refs_annotated": 35,
+  "inputs_root": 1,
+  "inputs_imported": 1,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 7,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "main.tex",
+   "line": 238,
+   "token": "@ref(Appendix:Interview)",
+   "wrapper": "small",
+   "context": "\\raggedleft{\\small{- Public High School Computer Science Teacher C, Appendix \\ref{Appendix:Interview}. Q4}}"
+  },
+  {
+   "file": "main.tex",
+   "line": 396,
+   "token": "@citep(chen2021evaluating)",
+   "wrapper": "shortstack",
+   "context": "\\multirow{2}{*}{\\shortstack[l]{HumanEval \\citep{chen2021evaluating}\\\\MBPP \\citep{austin2021program}}} & \\multirow{2}{*}{General SW} & \\yes & \\no & \\no & \\yes & "
+  },
+  {
+   "file": "main.tex",
+   "line": 396,
+   "token": "@citep(austin2021program)",
+   "wrapper": "?",
+   "context": "\\multirow{2}{*}{\\shortstack[l]{HumanEval \\citep{chen2021evaluating}\\\\MBPP \\citep{austin2021program}}} & \\multirow{2}{*}{General SW} & \\yes & \\no & \\no & \\yes & "
+  },
+  {
+   "file": "main.tex",
+   "line": 399,
+   "token": "@citep(liu2023verilogeval)",
+   "wrapper": "shortstack",
+   "context": "\\multirow{2}{*}{\\shortstack[l]{VerilogEval \\citep{liu2023verilogeval}\\\\ResBench \\citep{guo2025resbench}}} & \\multirow{2}{*}{HDL Design} & \\yes & \\yes$^{\\pmb{{\\a"
+  },
+  {
+   "file": "main.tex",
+   "line": 399,
+   "token": "@citep(guo2025resbench)",
+   "wrapper": "?",
+   "context": "\\multirow{2}{*}{\\shortstack[l]{VerilogEval \\citep{liu2023verilogeval}\\\\ResBench \\citep{guo2025resbench}}} & \\multirow{2}{*}{HDL Design} & \\yes & \\yes$^{\\pmb{{\\a"
+  },
+  {
+   "file": "main.tex",
+   "line": 402,
+   "token": "@citep(yang2024embedgenius)",
+   "wrapper": "shortstack",
+   "context": "\\multirow{3}{*}{\\shortstack[l]{EmbedTask \\citep{yang2024embedgenius}\\\\MICRO25 \\citep{jansen2023words}\\\\\\textsc{\\textbf{PCEval}}}} & \\multirow{3}{*}{Physical Com"
+  },
+  {
+   "file": "main.tex",
+   "line": 402,
+   "token": "@citep(jansen2023words)",
+   "wrapper": "?",
+   "context": "\\multirow{3}{*}{\\shortstack[l]{EmbedTask \\citep{yang2024embedgenius}\\\\MICRO25 \\citep{jansen2023words}\\\\\\textsc{\\textbf{PCEval}}}} & \\multirow{3}{*}{Physical Com"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.01764,
+ "bibliography": {
+  "state": "complete",
+  "entries": 67
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

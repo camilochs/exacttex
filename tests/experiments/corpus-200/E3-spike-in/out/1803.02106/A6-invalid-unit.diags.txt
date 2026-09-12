@@ -1,0 +1,3 @@
+planted=fig:planted_unit sites=[('galaxies-273475-english.xtex', 150)]
+xtex new=[('XT1007', '', 'galaxies-273475-english.xtex', 150)]
+texlab new=[]

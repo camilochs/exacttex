@@ -1,0 +1,31 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'ms.tex', 62, 'Undefined reference'), ('ERROR', 'ms.tex', 64, 'Undefined reference'), ('ERROR', 'ms.tex', 68, 'Undefined reference'), ('ERROR', 'ms.tex', 77, 'Undefined reference'), ('ERROR', 'ms.tex', 83, 'Undefined reference'), ('ERROR', 'ms.tex', 92, 'Undefined reference'), ('ERROR', 'ms.tex', 101, 'Undefined reference'), ('ERROR', 'ms.tex', 120, 'Undefined reference'), ('ERROR', 'ms.tex', 124, 'Undefined reference'), ('ERROR', 'ms.tex', 189, 'Undefined reference'), ('ERROR', 'ms.tex', 244, 'Undefined reference'), ('ERROR', 'ms.tex', 272, 'Undefined reference'), ('ERROR', 'ms.tex', 274, 'Undefined reference'), ('ERROR', 'ms.tex', 302, 'Undefined reference'), ('ERROR', 'ms.tex', 304, 'Undefined reference'), ('ERROR', 'ms.tex', 320, 'Undefined reference'), ('ERROR', 'ms.tex', 322, 'Undefined reference'), ('ERROR', 'ms.tex', 340, 'Undefined reference'), ('ERROR', 'ms.tex', 342, 'Undefined reference'), ('ERROR', 'ms.tex', 343, 'Undefined reference'), ('ERROR', 'ms.tex', 353, 'Undefined reference'), ('ERROR', 'ms.tex', 355, 'Undefined reference'), ('ERROR', 'ms.tex', 368, 'Undefined reference'), ('ERROR', 'ms.tex', 425, 'Undefined reference'), ('ERROR', 'ms.tex', 435, 'Undefined reference'), ('info', 'ms.tex', 60, 'Unused label'), ('info', 'ms.tex', 75, 'Unused label'), ('info', 'ms.tex', 95, 'Unused label'), ('info', 'ms.tex', 99, 'Unused label'), ('info', 'ms.tex', 193, 'Unused label'), ('info', 'ms.tex', 242, 'Unused label'), ('info', 'ms.tex', 271, 'Unused label'), ('info', 'ms.tex', 300, 'Unused label'), ('info', 'ms.tex', 400, 'Unused label'), ('info', 'ms.tex', 462, 'Unused label'), ('info', 'ms.tex', 475, 'Unused label')]
+tectonic exit=1 warnings=[] secs=2
+ph at lines 265--266
+warning: ms.tex:270: Underfull \hbox (badness 1728) in paragraph at lines 269--270
+warning: ms.tex:273: Underfull \hbox (badness 1629) in paragraph at lines 272--273
+warning: ms.tex:273: Underfull \hbox (badness 2197) in paragraph at lines 272--273
+warning: ms.tex:273: Underfull \hbox (badness 2662) in paragraph at lines 272--273
+warning: ms.tex:290: Underfull \hbox (badness 2126) in paragraph at lines 290--290
+warning: ms.tex:305: Underfull \hbox (badness 1668) in paragraph at lines 304--305
+warning: ms.tex:310: Underfull \hbox (badness 1221) in paragraph at lines 309--310
+warning: ms.tex:315: Overfull \hbox (14.22638pt too wide) in paragraph at lines 313--315
+warning: ms.tex:323: Underfull \hbox (badness 1418) in paragraph at lines 322--323
+warning: ms.tex:323: Underfull \hbox (badness 2285) in paragraph at lines 322--323
+warning: ms.tex:323: Underfull \hbox (badness 1694) in paragraph at lines 322--323
+warning: ms.tex:383: Underfull \hbox (badness 6316) in paragraph at lines 382--383
+warning: ms.tex:393: Underfull \hbox (badness 4739) in paragraph at lines 392--393
+warning: ms.tex:405: Underfull \hbox (badness 2285) in paragraph at lines 405--405
+warning: ms.tex:436: Underfull \hbox (badness 3250) in paragraph at lines 435--436
+warning: ms.tex:443: Underfull \hbox (badness 1087) in paragraph at lines 443--443
+warning: ms.tex:465: Underfull \hbox (badness 2762) in paragraph at lines 464--465
+warning: ms.tex:467: Underfull \hbox (badness 2158) in paragraph at lines 466--467
+warning: ms.tex:467: Underfull \hbox (badness 1303) in paragraph at lines 466--467
+warning: ms.tex:467: Underfull \hbox (badness 6236) in paragraph at lines 466--467
+warning: ms.tex:472: Underfull \hbox (badness 2799) in paragraph at lines 470--472
+error: ms.bbl:24: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+error: halted on potentially-recoverable error as specified

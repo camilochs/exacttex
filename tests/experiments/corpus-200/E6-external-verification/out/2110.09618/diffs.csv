@@ -1,0 +1,18 @@
+target,kind,verdict,field,severity,document,source
+Barp2018,bib-entry,partial,year,medium,2018,2017
+Fauss2021,bib-entry,mismatch,title,medium,{A variational interpretation of the Cram{\'{e}}r–Rao bound},A variational interpretation of the Cramér–Rao bound
+Fauss2021,bib-entry,mismatch,year,medium,2021,2020
+Gershman2012b,bib-entry,mismatch,authors,high,"Gershman, Samuel J. and Hoffman, Matthew D. and Blei, David M.",David Mackay
+Gershman2012b,bib-entry,mismatch,title,medium,{Nonparametric Variational Inference},Comparison of Approximate Methods for Handling Hyperparameters
+Gershman2012b,bib-entry,mismatch,year,medium,2012,1999
+Nalisnick2017,bib-entry,mismatch,authors,high,"Nalisnick, Eric and Smyth, Padhraic",Paul Jorgensen and Joy L. Nishikawa and Bobby‐Joe Breitkreutz and Mike Tyers
+Nalisnick2017,bib-entry,mismatch,title,medium,{Variational Inference with Stein Mixtures},Systematic Identification of Pathways That Couple Cell Growth and Division in Yeast
+Nalisnick2017,bib-entry,mismatch,year,medium,2017,2002
+Neal2010,bib-entry,partial,year,medium,2010,2026
+Zhang2019,bib-entry,partial,year,medium,2019,2018
+Bishop2006,bib-entry,partial,authors,high,"Bishop, Christopher M",Nasser M. Nasrabadi
+Bishop2006,bib-entry,partial,year,medium,2006,2007
+Salvatier2016,bib-entry,partial,authors,high,"Salvatier, John and Wieki, Thomas V. and Fonnesbeck, Christopher",John Salvatier and Thomas V Wiecki and Christopher Fonnesbeck
+scipy,bib-entry,partial,authors,high,"Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and
+            Haberland, Matt and Reddy, Tyler and Cournapeau, David and
+            Burovski, Evgeni and Peterson, Pearu and Weckesser, War",Pauli Virtanen and Ralf Gommers and Travis E. Oliphant and Matt Haberland and Tyler Reddy and David Cournapeau and Evgeni Burovski and Pearu Peterson and Warren Weckesser and Jonathan Bright and Stéfa

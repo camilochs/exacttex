@@ -1,0 +1,9 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'sigma18-019.tex', 2672, 'Expecting a curly bracket: "}"'), ('ERROR', 'sigma18-019.tex', 2672, 'Unexpected "}"'), ('info', 'sigma18-019.tex', 2672, 'Unused label'), ('info', 'sigma18-019.tex', 3585, 'Unused label'), ('info', 'sigma18-019.tex', 3942, 'Unused label'), ('info', 'sigma18-019.tex', 4016, 'Unused label'), ('info', 'sigma18-019.tex', 4067, 'Unused label'), ('info', 'sigma18-019.tex', 4123, 'Unused label'), ('info', 'sigma18-019.tex', 4244, 'Unused label'), ('info', 'sigma18-019.tex', 4362, 'Unused label')]
+tectonic exit=1 warnings=[] secs=2
+error: sigma18-019.tex:57: LaTeX3 Error: Backend request inconsistent with engine: using 'xetex'
+(LaTeX3)        backend.
+
+For immediate help type H <return>
+error: halted on potentially-recoverable error as specified

@@ -1,0 +1,87 @@
+{
+ "paper": "1810.07369",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 43961,
+   "chars_after": 43916,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 43961,
+ "chars_after": 43916,
+ "delta_pct": -0.10236345852005187,
+ "unrepaired": {
+  "chars_after": 43916,
+  "chars_before": 43961,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.008152,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "the document declares no bibliography"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.10236345852005187
+ },
+ "stats": {
+  "cite_cmds_live": 20,
+  "cite_keys_live": 24,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 1,
+  "other_cite_cmds": 0,
+  "labels_live": 22,
+  "labels_outside_grammar": 7,
+  "refs_live": 37,
+  "refs_outside_grammar": 31,
+  "other_ref_cmds": 70,
+  "float_envs": 0,
+  "cite_cmds_annotated": 19,
+  "cite_keys_annotated": 19,
+  "ids_annotated": 15,
+  "refs_annotated": 6,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.008152,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "the document declares no bibliography"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "main.xtex",
+    "offset": 6941,
+    "length": 2,
+    "line": 188,
+    "column": 42
+   },
+   "message": "citation checking unavailable: the document declares no bibliography",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

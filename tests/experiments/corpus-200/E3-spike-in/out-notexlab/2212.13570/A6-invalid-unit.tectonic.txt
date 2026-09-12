@@ -1,0 +1,5 @@
+warning: algorithmic.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: lineno.sty:296: Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+error: 01_introduction:2: Illegal unit of measure (pt inserted)
+error: halted on potentially-recoverable error as specified

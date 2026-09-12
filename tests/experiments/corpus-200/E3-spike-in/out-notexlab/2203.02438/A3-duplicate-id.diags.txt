@@ -1,0 +1,3 @@
+planted=sec:Introduction sites=[('eibump.xtex', 142), ('eibump.xtex', 141)]
+xtex new=[('XT1001', 'sec:Introduction', 'eibump.xtex', 142)]
+texlab new=[]

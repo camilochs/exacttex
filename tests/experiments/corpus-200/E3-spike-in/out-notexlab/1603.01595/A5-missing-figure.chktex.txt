@@ -1,0 +1,152 @@
+exit=2
+lines=369
+unique_findings=59
+on}} {\color{blue}{target=}}"historiens" {\color{blue}{category=}}"methodology" {\color{blue}{polarity=}}"positive" {\color{blue}{polarityterms=}}"renommes" {\color{blue}{occurrence=}}"1" />  
+                                               ^
+Warning 18 in absabook.tex line 158: Use either `` or '' as an alternative to `"'.
+<{\color{red}{Opinion}} {\color{blue}{target=}}"historiens" {\color{blue}{category=}}"methodology" {\color{blue}{polarity=}}"positive" {\color{blue}{polarityterms=}}"renommes" {\color{blue}{occurrence=}}"1" />  
+                                                          ^
+Warning 18 in absabook.tex line 158: Use either `` or '' as an alternative to `"'.
+<{\color{red}{Opinion}} {\color{blue}{target=}}"historiens" {\color{blue}{category=}}"methodology" {\color{blue}{polarity=}}"positive" {\color{blue}{polarityterms=}}"renommes" {\color{blue}{occurrence=}}"1" />  
+                                                                                     ^
+Warning 18 in absabook.tex line 158: Use either `` or '' as an alternative to `"'.
+<{\color{red}{Opinion}} {\color{blue}{target=}}"historiens" {\color{blue}{category=}}"methodology" {\color{blue}{polarity=}}"positive" {\color{blue}{polarityterms=}}"renommes" {\color{blue}{occurrence=}}"1" />  
+                                                                                                 ^
+Warning 18 in absabook.tex line 158: Use either `` or '' as an alternative to `"'.
+<{\color{red}{Opinion}} {\color{blue}{target=}}"historiens" {\color{blue}{category=}}"methodology" {\color{blue}{polarity=}}"positive" {\color{blue}{polarityterms=}}"renommes" {\color{blue}{occurrence=}}"1" />  
+                                                                                                                            ^
+Warning 18 in absabook.tex line 158: Use either `` or '' as an alternative to `"'.
+<{\color{red}{Opinion}} {\color{blue}{target=}}"historiens" {\color{blue}{category=}}"methodology" {\color{blue}{polarity=}}"positive" {\color{blue}{polarityterms=}}"renommes" {\color{blue}{occurrence=}}"1" />  
+                                                                                                                                     ^
+Warning 18 in absabook.tex line 158: Use either `` or '' as an alternative to `"'.
+<{\color{red}{Opinion}} {\color{blue}{target=}}"historiens" {\color{blue}{category=}}"methodology" {\color{blue}{polarity=}}"positive" {\color{blue}{polarityterms=}}"renommes" {\color{blue}{occurrence=}}"1" />  
+                                                                                                                                                                     ^
+Warning 18 in absabook.tex line 158: Use either `` or '' as an alternative to `"'.
+<{\color{red}{Opinion}} {\color{blue}{target=}}"historiens" {\color{blue}{category=}}"methodology" {\color{blue}{polarity=}}"positive" {\color{blue}{polarityterms=}}"renommes" {\color{blue}{occurrence=}}"1" />  
+                                                                                                                                                                              ^
+Warning 18 in absabook.tex line 158: Use either `` or '' as an alternative to `"'.
+<{\color{red}{Opinion}} {\color{blue}{target=}}"historiens" {\color{blue}{category=}}"methodology" {\color{blue}{polarity=}}"positive" {\color{blue}{polarityterms=}}"renommes" {\color{blue}{occurrence=}}"1" />  
+                                                                                                                                                                                                           ^
+Warning 18 in absabook.tex line 158: Use either `` or '' as an alternative to `"'.
+<{\color{red}{Opinion}} {\color{blue}{target=}}"historiens" {\color{blue}{category=}}"methodology" {\color{blue}{polarity=}}"positive" {\color{blue}{polarityterms=}}"renommes" {\color{blue}{occurrence=}}"1" />  
+                                                                                                                                                                                                             ^
+Warning 44 in absabook.tex line 177: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 44 in absabook.tex line 179: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 44 in absabook.tex line 194: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline   
+^^^^^^
+Warning 18 in absabook.tex line 203: Use either `` or '' as an alternative to `"'.
+   \item Some annotators extract the same target but use different writing (e.g. "the man" vs "man").  
+                                                                                 ^
+Warning 18 in absabook.tex line 203: Use either `` or '' as an alternative to `"'.
+   \item Some annotators extract the same target but use different writing (e.g. "the man" vs "man").  
+                                                                                         ^
+Warning 18 in absabook.tex line 203: Use either `` or '' as an alternative to `"'.
+   \item Some annotators extract the same target but use different writing (e.g. "the man" vs "man").  
+                                                                                              ^
+Warning 18 in absabook.tex line 203: Use either `` or '' as an alternative to `"'.
+   \item Some annotators extract the same target but use different writing (e.g. "the man" vs "man").  
+                                                                                                  ^
+Warning 18 in absabook.tex line 224: Use either `` or '' as an alternative to `"'.
+ \textit{"Mais la méthode avec laquelle il est présenté comme seule hypothèse recevable pose problème."}  
+         ^
+Warning 18 in absabook.tex line 224: Use either `` or '' as an alternative to `"'.
+ \textit{"Mais la méthode avec laquelle il est présenté comme seule hypothèse recevable pose problème."}  
+                                                                                                           ^
+Warning 13 in absabook.tex line 237: Intersentence spacing (`\@') should perhaps be used.
+  \item term POS: We use  Talismane parser to attach a part of speech tag to each term.  
+                ^
+Warning 37 in absabook.tex line 241: You should avoid spaces in front of parenthesis.
+ \item term type: the type of the word (uppercase, digit, symbol, combination )  
+                                                                              ^
+Warning 37 in absabook.tex line 244: You should avoid spaces in front of parenthesis.
+ \item Prefixes (all prefixes having length between one to four ).  
+                                                                ^
+Warning 2 in absabook.tex line 263: Non-breaking space (`~') should have been used.
+The last  line demonstrates the results obtaining from applying our system on the restaurant reviews provided by SemEval-2015 \cite{rosenthal_semeval-2015_2015}.  
+                                                                                                                             ^
+Warning 44 in absabook.tex line 266: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{|l|c|c|c|}  
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in absabook.tex line 267: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 44 in absabook.tex line 269: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 44 in absabook.tex line 275: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 18 in absabook.tex line 284: Use either `` or '' as an alternative to `"'.
+  \textit{"Mais la méthode avec laquelle il est présenté comme seule hypothèse recevable pose problème."}  
+          ^
+Warning 18 in absabook.tex line 284: Use either `` or '' as an alternative to `"'.
+  \textit{"Mais la méthode avec laquelle il est présenté comme seule hypothèse recevable pose problème."}  
+                                                                                                            ^
+Warning 2 in absabook.tex line 296: Non-breaking space (`~') should have been used.
+ As described in  \cite{hamdan_impact_2014}, we tested different thresholds for choosing the words which have the highest Z score, a grid search in the interval [-2..5] with step of 0.5 has been done. We found -0.5 is the best one for book reviews. Thus, we added the number of words having Z score higher than -0.5 in each class positive,negative and neutral in the restaurant and laptop sets, the two classes which have the maximum number and minimum numbers of words having Z score higher than the threshold. These 5 features have been added to the feature space.  
+                 ^
+Warning 13 in absabook.tex line 302: Intersentence spacing (`\@') should perhaps be used.
+We also trained a L1-regularized Logistic regression classifier implemented in LIBLINEAR. The classifier is trained on the training dataset using the previous features with the three polarities (positive, negative, and neutral) as labels.  
+                                                                                        ^
+Warning 2 in absabook.tex line 304: Non-breaking space (`~') should have been used.
+We have used 10 fold cross-validation for evaluating our system. The results are shown in Table 3. The last two lines demonstrate the results obtaining from applying our system on the restaurant and laptop reviews provided by SemEval-2015 \cite{rosenthal_semeval-2015_2015}.  
+                                                                                                                                                                                                                                              ^
+Warning 44 in absabook.tex line 308: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{|l|c|c|c|}  
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in absabook.tex line 309: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 44 in absabook.tex line 311: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 44 in absabook.tex line 327: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 2 in absabook.tex line 338: Non-breaking space (`~') should have been used.
+The early work on opinion target detection from on-line reviews presented by \cite{hu_mining_2004} used association rule mining based on Apriori algorithm \cite{agrawal_fast_1994} to extract frequent noun phrases as product features. For polarity detection, they used two seed sets of 30 positive and negative adjectives, then WordNet has been used to find and add the synonyms of the seed words. Infrequent product features or opinion targets had been processed by finding the noun related to an opinionated word.  
+                                                                            ^
+Warning 2 in absabook.tex line 338: Non-breaking space (`~') should have been used.
+The early work on opinion target detection from on-line reviews presented by \cite{hu_mining_2004} used association rule mining based on Apriori algorithm \cite{agrawal_fast_1994} to extract frequent noun phrases as product features. For polarity detection, they used two seed sets of 30 positive and negative adjectives, then WordNet has been used to find and add the synonyms of the seed words. Infrequent product features or opinion targets had been processed by finding the noun related to an opinionated word.  
+                                                                                                                                                          ^
+Warning 2 in absabook.tex line 340: Non-breaking space (`~') should have been used.
+Opinion Digger \cite{moghaddam_opinion_2010} also used Apriori algorithm to extract the frequent opinion targets. kNN algorithm is applied to estimate the aspect rating scaling from 1 to 5 stands for (Excellent, Good, Average, Poor, Terrible).  
+              ^
+Warning 12 in absabook.tex line 340: Interword spacing (`\ ') should perhaps be used.
+Opinion Digger \cite{moghaddam_opinion_2010} also used Apriori algorithm to extract the frequent opinion targets. kNN algorithm is applied to estimate the aspect rating scaling from 1 to 5 stands for (Excellent, Good, Average, Poor, Terrible).  
+                                                                                                                 ^
+Warning 12 in absabook.tex line 342: Interword spacing (`\ ') should perhaps be used.
+Supervised methods use normally  Conditional Random Fields (CRF) or Hidden Markov models (HMM). \cite{jin_novel_2009} applied a HMM model to extract opinion targets using the words and their part-of-speech tags in order to learn a model, then unsupervised algorithm for determining the opinion targets polarity using the nearest opinion word to the opinion target and taking into account the polarity reversal words (such as not).  
+                                                                                               ^
+Warning 2 in absabook.tex line 342: Non-breaking space (`~') should have been used.
+Supervised methods use normally  Conditional Random Fields (CRF) or Hidden Markov models (HMM). \cite{jin_novel_2009} applied a HMM model to extract opinion targets using the words and their part-of-speech tags in order to learn a model, then unsupervised algorithm for determining the opinion targets polarity using the nearest opinion word to the opinion target and taking into account the polarity reversal words (such as not).  
+                                                                                               ^
+Warning 2 in absabook.tex line 344: Non-breaking space (`~') should have been used.
+A CRF model was used by \cite{jakob_extracting_2010} with the following features: tokens, POS tags, syntactic dependency (if the opinion target has a relation with the opinionated word), word distance (the distance between the word in the closest noun phrase and the opinionated word), and opinion sentences (each token in the sentence containing an opinionated expression is labeled by this feature), the input of this method is also the opinionated expressions, they use these expressions for predicting the opinion target polarity using the dependency parsing for retrieving the pair target-expression from the training set. We also applied a CRF model with different features \cite{hamdan_supervised_2014,hamdan_lsislif2015-1}.  
+                       ^
+Warning 2 in absabook.tex line 344: Non-breaking space (`~') should have been used.
+A CRF model was used by \cite{jakob_extracting_2010} with the following features: tokens, POS tags, syntactic dependency (if the opinion target has a relation with the opinionated word), word distance (the distance between the word in the closest noun phrase and the opinionated word), and opinion sentences (each token in the sentence containing an opinionated expression is labeled by this feature), the input of this method is also the opinionated expressions, they use these expressions for predicting the opinion target polarity using the dependency parsing for retrieving the pair target-expression from the training set. We also applied a CRF model with different features \cite{hamdan_supervised_2014,hamdan_lsislif2015-1}.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ^
+Warning 12 in absabook.tex line 346: Interword spacing (`\ ') should perhaps be used.
+Unsupervised methods based on LDA (Latent Dirichlet allocation) have been proposed. \cite{brody_unsupervised_2010} used LDA to figure out the opinion targets, determined the number of topics by applying a  clustering method, then they used a similar method proposed by \cite{hatzivassiloglou_predicting_1997} to extract the conjunctive adjectives, but not the disjunctive due to the specificity of the domain.  
+                                                                                   ^
+Warning 2 in absabook.tex line 346: Non-breaking space (`~') should have been used.
+Unsupervised methods based on LDA (Latent Dirichlet allocation) have been proposed. \cite{brody_unsupervised_2010} used LDA to figure out the opinion targets, determined the number of topics by applying a  clustering method, then they used a similar method proposed by \cite{hatzivassiloglou_predicting_1997} to extract the conjunctive adjectives, but not the disjunctive due to the specificity of the domain.  
+                                                                                   ^
+Warning 2 in absabook.tex line 346: Non-breaking space (`~') should have been used.
+Unsupervised methods based on LDA (Latent Dirichlet allocation) have been proposed. \cite{brody_unsupervised_2010} used LDA to figure out the opinion targets, determined the number of topics by applying a  clustering method, then they used a similar method proposed by \cite{hatzivassiloglou_predicting_1997} to extract the conjunctive adjectives, but not the disjunctive due to the specificity of the domain.  
+                                                                                                                                                                                                                                                                            ^
+Warning 2 in absabook.tex line 348: Non-breaking space (`~') should have been used.
+\cite{lin_weakly_2012}  proposed Joint model of Sentiment and Topic (JST) which extends the state-of-the-art topic model (LDA) by adding a sentiment layer, this model is fully unsupervised and it can detect sentiment and topic simultaneously.  
+^
+Warning 2 in absabook.tex line 350: Non-breaking space (`~') should have been used.
+\cite{wei_sentiment_2010} modeled the hierarchical relation between product aspects. They defined Sentiment Ontology Tree (SOT) to formulate the knowledge of hierarchical relationships among product attributes and tackled the problem of sentiment analysis as a hierarchical classification problem. Unsupervised hierarchical aspect Sentiment model (HASM) was proposed by  \cite{kim_hierarchical_2013} to discover a hierarchical structure of aspect-based sentiments from unlabeled online reviews.  
+^
+Warning 2 in absabook.tex line 350: Non-breaking space (`~') should have been used.
+\cite{wei_sentiment_2010} modeled the hierarchical relation between product aspects. They defined Sentiment Ontology Tree (SOT) to formulate the knowledge of hierarchical relationships among product attributes and tackled the problem of sentiment analysis as a hierarchical classification problem. Unsupervised hierarchical aspect Sentiment model (HASM) was proposed by  \cite{kim_hierarchical_2013} to discover a hierarchical structure of aspect-based sentiments from unlabeled online reviews.  
+                                                                                                                                                                                                                                                                                                                                                                                  ^

@@ -1,0 +1,19 @@
+16 claims: 0 fresh and carried over, 16 to verify
+https://huggingface.co/datasets/litosway/MedicalLessons · settled
+Chang2021ContextAwareTT · settled
+Jain2020ContextualRF · settled
+Makhoul2007PERFORMANCEMF · settled
+ahn2026 · settled
+bain2023 · settled
+banerasroux2026 · settled
+bredin2020pyannote · settled
+delrio2021 · settled
+kurzinger2020ctc · settled
+medicallessons2026 · settled
+parulekar2025laserllmbasedasrscoring · settled
+peng2023reproducing · settled
+radford2022 · settled
+roy2021 · settled
+williams2018contextual · settled
+network: 14 requests (crossref 12, http 1, openalex 1) · 0 retries · 418455 bytes down · 11 fetched, 0 carried over, 5 unanswered
+record: 16 claims → .xtexverified

@@ -1,0 +1,95 @@
+{
+ "paper": "2003.06789",
+ "main": "MT_kinetochore_dynamics.tex",
+ "files": [
+  {
+   "file": "MT_kinetochore_dynamics.tex",
+   "chars_before": 151495,
+   "chars_after": 151414,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 151495,
+ "chars_after": 151414,
+ "delta_pct": -0.05346711112577973,
+ "unrepaired": {
+  "chars_after": 151414,
+  "chars_before": 151495,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.046343,
+  "bibliography": {
+   "state": "complete",
+   "entries": 81
+  },
+  "errors": 1,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.05346711112577973
+ },
+ "stats": {
+  "cite_cmds_live": 178,
+  "cite_keys_live": 261,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 27,
+  "labels_outside_grammar": 0,
+  "refs_live": 146,
+  "refs_outside_grammar": 1,
+  "other_ref_cmds": 0,
+  "float_envs": 21,
+  "cite_cmds_annotated": 175,
+  "cite_keys_annotated": 259,
+  "ids_annotated": 27,
+  "refs_annotated": 145,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 1,
+  "leaks_reverted": 2,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "MT_kinetochore_dynamics.tex",
+   "line": 666,
+   "token": "@cite(waters1996)",
+   "wrapper": "?",
+   "context": "cohesin bond rest length & $d_0$ & $\\SI{1}{\\micro\\metre}$ & \\multicolumn{2}{r}{\\cite{waters1996}}\\\\"
+  },
+  {
+   "file": "MT_kinetochore_dynamics.tex",
+   "line": 667,
+   "token": "@cite(magidson2011)",
+   "wrapper": "?",
+   "context": "centrosome position & $x_\\mathrm{c}$ & $\\SI{6.8}{\\micro m}$ & \\multicolumn{2}{r}{\\cite{magidson2011}} \\\\"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1005",
+   "name": "Deluca2018",
+   "file": "MT_kinetochore_dynamics.xtex",
+   "line": 3045,
+   "message": "citation key `Deluca2018` is not in the bibliography \u2014 did you mean `DeLuca2018`?",
+   "classification": "real: key absent from every .bib in the paper",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.046006,
+ "bibliography": {
+  "state": "complete",
+  "entries": 81
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

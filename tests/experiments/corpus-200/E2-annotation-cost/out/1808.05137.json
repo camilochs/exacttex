@@ -1,0 +1,168 @@
+{
+ "paper": "1808.05137",
+ "main": "eye-ghost-imaging.tex",
+ "files": [
+  {
+   "file": "eye-ghost-imaging.tex",
+   "chars_before": 26620,
+   "chars_after": 26608,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 26620,
+ "chars_after": 26608,
+ "delta_pct": -0.045078888054094664,
+ "unrepaired": {
+  "chars_after": 26593,
+  "chars_before": 26620,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.023277,
+  "bibliography": {
+   "state": "complete",
+   "entries": 24
+  },
+  "errors": 9,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.10142749812171299
+ },
+ "stats": {
+  "cite_cmds_live": 21,
+  "cite_keys_live": 35,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 9,
+  "labels_outside_grammar": 0,
+  "refs_live": 11,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 5,
+  "float_envs": 5,
+  "cite_cmds_annotated": 21,
+  "cite_keys_annotated": 35,
+  "ids_annotated": 4,
+  "refs_annotated": 4,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 6,
+  "leaks_reverted": 6,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "eye-ghost-imaging.tex",
+   "line": 56,
+   "token": "@id(layout)",
+   "wrapper": "?",
+   "context": "\\label{layout}}"
+  },
+  {
+   "file": "eye-ghost-imaging.tex",
+   "line": 93,
+   "token": "@id(einstein)",
+   "wrapper": "?",
+   "context": "\\label{einstein}}"
+  },
+  {
+   "file": "eye-ghost-imaging.tex",
+   "line": 111,
+   "token": "@id(diagram)",
+   "wrapper": "?",
+   "context": "\\label{diagram}}"
+  },
+  {
+   "file": "eye-ghost-imaging.tex",
+   "line": 125,
+   "token": "@id(decomp)",
+   "wrapper": "?",
+   "context": "\\label{decomp}}"
+  },
+  {
+   "file": "eye-ghost-imaging.tex",
+   "line": 137,
+   "token": "@ref(decomp)",
+   "wrapper": "caption",
+   "context": "\\caption{Examples of simulated images used to evaluate visible persistence times. The top row shows the chose images (numbers and letters) together with the num"
+  },
+  {
+   "file": "eye-ghost-imaging.tex",
+   "line": 138,
+   "token": "@id(letters)",
+   "wrapper": "?",
+   "context": "\\label{letters}}"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1003",
+   "name": "layout",
+   "file": "eye-ghost-imaging.xtex",
+   "line": 86,
+   "message": "identifier `layout` is not declared",
+   "classification": "compiler-unreachable: \\label{layout} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "einstein",
+   "file": "eye-ghost-imaging.xtex",
+   "line": 99,
+   "message": "identifier `einstein` is not declared",
+   "classification": "compiler-unreachable: \\label{einstein} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "diagram",
+   "file": "eye-ghost-imaging.xtex",
+   "line": 117,
+   "message": "identifier `diagram` is not declared",
+   "classification": "compiler-unreachable: \\label{diagram} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "decomp",
+   "file": "eye-ghost-imaging.xtex",
+   "line": 117,
+   "message": "identifier `decomp` is not declared",
+   "classification": "compiler-unreachable: \\label{decomp} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "diagram",
+   "file": "eye-ghost-imaging.xtex",
+   "line": 130,
+   "message": "identifier `diagram` is not declared",
+   "classification": "compiler-unreachable: \\label{diagram} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "letters",
+   "file": "eye-ghost-imaging.xtex",
+   "line": 132,
+   "message": "identifier `letters` is not declared",
+   "classification": "compiler-unreachable: \\label{letters} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.018942,
+ "bibliography": {
+  "state": "complete",
+  "entries": 24
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

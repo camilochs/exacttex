@@ -1,0 +1,130 @@
+{
+ "paper": "1803.00989",
+ "main": "sample-sigconf.tex",
+ "files": [
+  {
+   "file": "sample-sigconf.tex",
+   "chars_before": 27988,
+   "chars_after": 28036,
+   "emitted": true,
+   "identity": "import-ext-only",
+   "lines_differing": 6
+  },
+  {
+   "file": "ucc_intro.tex",
+   "chars_before": 6449,
+   "chars_after": 6449,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "ucc_background.tex",
+   "chars_before": 15032,
+   "chars_after": 15011,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "ucc_solution.tex",
+   "chars_before": 18964,
+   "chars_after": 18946,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "ucc_eval.tex",
+   "chars_before": 14589,
+   "chars_after": 14568,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "ucc_related.tex",
+   "chars_before": 3197,
+   "chars_after": 3194,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "ucc_conclusions_next.tex",
+   "chars_before": 1846,
+   "chars_after": 1843,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 7,
+ "chars_before": 88065,
+ "chars_after": 88047,
+ "delta_pct": -0.020439448134900357,
+ "unrepaired": {
+  "chars_after": 88047,
+  "chars_before": 88065,
+  "converted_files": 7,
+  "check_exit": 0,
+  "coverage": 0.018495,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "the document declares no bibliography"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.020439448134900357
+ },
+ "stats": {
+  "cite_cmds_live": 25,
+  "cite_keys_live": 31,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 1,
+  "other_cite_cmds": 0,
+  "labels_live": 22,
+  "labels_outside_grammar": 0,
+  "refs_live": 28,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 8,
+  "cite_cmds_annotated": 24,
+  "cite_keys_annotated": 29,
+  "ids_annotated": 22,
+  "refs_annotated": 28,
+  "inputs_root": 6,
+  "inputs_imported": 6,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.018495,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "the document declares no bibliography"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "ucc_related.xtex",
+    "offset": 156,
+    "length": 31,
+    "line": 4,
+    "column": 116
+   },
+   "message": "citation checking unavailable: the document declares no bibliography",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

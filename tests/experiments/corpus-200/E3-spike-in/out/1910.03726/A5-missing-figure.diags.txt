@@ -1,0 +1,3 @@
+planted=fig:planted_missing sites=[('mgrit_cg_selection.xtex', 99)]
+xtex new=[('XT1006', 'figures/planted_ghost.pdf', 'mgrit_cg_selection.xtex', 99)]
+texlab new=[]

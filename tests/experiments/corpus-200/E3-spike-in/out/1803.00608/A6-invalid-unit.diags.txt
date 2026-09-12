@@ -1,0 +1,3 @@
+planted=fig:planted_unit sites=[('CTR-Spectr-arXive.xtex', 77)]
+xtex new=[('XT1007', '', 'CTR-Spectr-arXive.xtex', 77)]
+texlab new=[]

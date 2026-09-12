@@ -1,0 +1,119 @@
+{
+ "paper": "1908.08190",
+ "main": "diversity_final3.tex",
+ "files": [
+  {
+   "file": "diversity_final3.tex",
+   "chars_before": 115616,
+   "chars_after": 115559,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 115616,
+ "chars_after": 115559,
+ "delta_pct": -0.04930113479103238,
+ "unrepaired": {
+  "chars_after": 115559,
+  "chars_before": 115616,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.062032,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`references3.bib` could not be read"
+  },
+  "errors": 1,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.04930113479103238
+ },
+ "stats": {
+  "cite_cmds_live": 176,
+  "cite_keys_live": 329,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 2,
+  "other_cite_cmds": 0,
+  "labels_live": 19,
+  "labels_outside_grammar": 0,
+  "refs_live": 49,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 12,
+  "cite_cmds_annotated": 173,
+  "cite_keys_annotated": 316,
+  "ids_annotated": 19,
+  "refs_annotated": 46,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 1,
+  "leaks_reverted": 3,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "diversity_final3.tex",
+   "line": 316,
+   "token": "@ref(CLONECOUNTS)",
+   "wrapper": "?",
+   "context": "(see clone counts in Section \\ref{CLONECOUNTS}).}{in a certain"
+  },
+  {
+   "file": "diversity_final3.tex",
+   "line": 1500,
+   "token": "@ref(BARCODE_EXPT)",
+   "wrapper": "?",
+   "context": "in Figure~\\ref{BARCODE_EXPT}}, stem cells (HSCs) were extracted from"
+  },
+  {
+   "file": "diversity_final3.tex",
+   "line": 2115,
+   "token": "@cite(domina2017categorical)",
+   "wrapper": "?",
+   "context": "system~\\cite{domina2017categorical}.} In this context, the social"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1003",
+   "name": "eq:logi-setup",
+   "file": "diversity_final3.xtex",
+   "line": 2412,
+   "message": "identifier `eq:logi-setup` is not declared",
+   "classification": "real: no \\label with this name anywhere in the sources",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.061867,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`references3.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "diversity_final3.xtex",
+    "offset": 6809,
+    "length": 80,
+    "line": 205,
+    "column": 15
+   },
+   "message": "citation checking unavailable: `references3.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

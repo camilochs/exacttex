@@ -1,0 +1,25 @@
+{
+ "coverage": 0.032141,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "the document declares no bibliography"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "CAMIRADA-Biomedical-Informatics-v01.xtex",
+    "offset": 2795,
+    "length": 15,
+    "line": 54,
+    "column": 104
+   },
+   "message": "citation checking unavailable: the document declares no bibliography",
+   "related": []
+  }
+ ]
+}

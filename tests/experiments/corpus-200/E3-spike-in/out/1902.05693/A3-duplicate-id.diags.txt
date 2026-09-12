@@ -1,0 +1,3 @@
+planted=perturb1 sites=[('main_jk.xtex', 70), ('main_jk.xtex', 63)]
+xtex new=[('XT1001', 'perturb1', 'main_jk.xtex', 70)]
+texlab new=[('ERROR', 'main_jk.tex', 63, 'Duplicate label'), ('ERROR', 'main_jk.tex', 70, 'Duplicate label')]

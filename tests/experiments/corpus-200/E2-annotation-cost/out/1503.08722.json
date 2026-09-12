@@ -1,0 +1,70 @@
+{
+ "paper": "1503.08722",
+ "main": "EF_VPC_41.tex",
+ "files": [
+  {
+   "file": "EF_VPC_41.tex",
+   "chars_before": 77094,
+   "chars_after": 76950,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 77094,
+ "chars_after": 76950,
+ "delta_pct": -0.18678496381041326,
+ "unrepaired": {
+  "chars_after": 76950,
+  "chars_before": 77094,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.04104,
+  "bibliography": {
+   "state": "complete",
+   "entries": 78
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.18678496381041326
+ },
+ "stats": {
+  "cite_cmds_live": 76,
+  "cite_keys_live": 148,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 3,
+  "other_cite_cmds": 0,
+  "labels_live": 49,
+  "labels_outside_grammar": 1,
+  "refs_live": 132,
+  "refs_outside_grammar": 38,
+  "other_ref_cmds": 0,
+  "float_envs": 3,
+  "cite_cmds_annotated": 73,
+  "cite_keys_annotated": 138,
+  "ids_annotated": 48,
+  "refs_annotated": 94,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.04104,
+ "bibliography": {
+  "state": "complete",
+  "entries": 78
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

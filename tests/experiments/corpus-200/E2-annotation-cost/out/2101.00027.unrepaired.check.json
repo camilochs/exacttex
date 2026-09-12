@@ -1,0 +1,68 @@
+{
+ "coverage": 0.023567,
+ "bibliography": {
+  "state": "complete",
+  "entries": 129
+ },
+ "diagnostics": [
+  {
+   "code": "XT1020",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "table:pile_perplexity_utf8",
+   "span": {
+    "file": "the-pile.xtex",
+    "offset": 23149,
+    "length": 6,
+    "line": 262,
+    "column": 130
+   },
+   "message": "prose says `Figure` but `table:pile_perplexity_utf8` is a table",
+   "related": [
+    {
+     "message": "table declared here",
+     "span": {
+      "file": "the-pile.xtex",
+      "offset": 28475,
+      "length": 26,
+      "line": 326,
+      "column": 5
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1005",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "citation",
+   "name": "bibliotik",
+   "span": {
+    "file": "the-pile.xtex",
+    "offset": 5657,
+    "length": 9,
+    "line": 93,
+    "column": 83
+   },
+   "message": "citation key `bibliotik` is not in the bibliography \u2014 did you mean `Bibliotik`?",
+   "related": []
+  },
+  {
+   "code": "XT1005",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "citation",
+   "name": "bibliotik",
+   "span": {
+    "file": "the-pile.xtex",
+    "offset": 12517,
+    "length": 9,
+    "line": 170,
+    "column": 138
+   },
+   "message": "citation key `bibliotik` is not in the bibliography \u2014 did you mean `Bibliotik`?",
+   "related": []
+  }
+ ]
+}

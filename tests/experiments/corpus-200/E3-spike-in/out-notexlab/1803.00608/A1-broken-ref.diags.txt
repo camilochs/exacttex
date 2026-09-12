@@ -1,0 +1,3 @@
+planted=TDS-schematic__ghost sites=[('CTR-Spectr-arXive.xtex', 97)]
+xtex new=[('XT1003', 'TDS-schematic__ghost', 'CTR-Spectr-arXive.xtex', 97)]
+texlab new=[]

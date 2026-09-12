@@ -1,0 +1,3 @@
+planted=parameters sites=[('wright.xtex', 45), ('wright.xtex', 25)]
+xtex new=[('XT1001', 'parameters', 'wright.xtex', 45), ('XT1020', 'parameters', 'wright.xtex', 48)]
+texlab new=[('ERROR', 'wright.tex', 25, 'Duplicate label'), ('ERROR', 'wright.tex', 45, 'Duplicate label')]

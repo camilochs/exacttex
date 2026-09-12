@@ -1,0 +1,27 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=['a:gpos', 'a:ngpos', 'app:ada', 'app:meta', 'app:proofs', 'chap:CIG', 'chap:cases', 'chap:forward', 'chap:rob', 'defi:valid', 'eq:bopt', 'eq:distrob', 'eq:irm1', 'eq:irm_a', 'eq:irm_b', 'eq:irm_c', 'eq:irmconst', 'eq:lse', 'eq:optmatchnew', 'eq:penalty_dist', 'eq:penalty_ones', 'eq:pg', 'eq:plike', 'eq:pseudocounts', 'eq:q', 'eq:qref-emp', 'eq:qref-exp', 'eq:rhsinvmn', 'eq:robopt', 'eq:theo_cond', 'eq:vbound', 'eq:vderivative', 'eq:worsenv', 'eq:worstx', 'ex:adversarial', 'ex:cob', 'ex:example', 'ex:toy-x1change', 'fig:calibration', 'fig:chains_definitions', 'fig:chains_results', 'fig:ellipsoids', 'fig:penalties', 'mdf@pagelabel-1', 'obsdef:invpred', 'prop:robust', 'sec:IRM', 'sec:causgen', 'sec:color_mnist', 'sec:erm', 'sec:examples', 'sec:exploration', 'sec:invdef', 'sec:outlook', 'sec:rl', 'sec:robopt', 'sec:robotics', 'sec:wrob', 'sub:causasinv', 'sub:nonlinw', 'sub:realizable', 'subsub:disjoint', 'subsub:findata', 'tab:colored-mnist-results', 'theo:cauout', 'theo:genp1', 'theo:invtest', 'theo:lingen', 'theo:nonlingen', 'theo:nonlingen2', 'theo:solutions'] secs=4
+\vbox (badness 2426) has occurred while \output is active
+warning: thesis.tex:2417: Overfull \hbox (13.60219pt too wide) in paragraph at lines 2417--2417
+warning: thesis.tex:2417: Overfull \hbox (2.83246pt too wide) in paragraph at lines 2417--2417
+warning: thesis.tex:2417: Overfull \hbox (7.09718pt too wide) in paragraph at lines 2417--2417
+warning: thesis.tex:2417: Overfull \hbox (5.3111pt too wide) in paragraph at lines 2417--2417
+warning: thesis.tex:2417: Overfull \hbox (11.70157pt too wide) in paragraph at lines 2417--2417
+warning: thesis.tex:2417: Overfull \hbox (14.54593pt too wide) in paragraph at lines 2417--2417
+warning: thesis.tex:2417: Overfull \hbox (5.79697pt too wide) in paragraph at lines 2417--2417
+warning: thesis.tex:2417: Overfull \hbox (15.20715pt too wide) in paragraph at lines 2417--2417
+warning: thesis.tex:2417: Overfull \hbox (1.466pt too wide) in paragraph at lines 2417--2417
+warning: thesis.tex:2417: Overfull \hbox (4.79091pt too wide) in paragraph at lines 2417--2417
+warning: thesis.tex:2417: Overfull \hbox (62.77466pt too wide) in paragraph at lines 2417--2417
+warning: thesis.tex:2417: Overfull \hbox (112.17468pt too wide) in paragraph at lines 2417--2417
+warning: thesis.tex:2593: Overfull \hbox (12.70978pt too wide) in paragraph at lines 2588--2593
+warning: thesis.tex:2621: Overfull \hbox (75.5704pt too wide) detected at line 2621
+warning: thesis.tex:2645: Overfull \hbox (29.26073pt too wide) in paragraph at lines 2642--2645
+warning: thesis.tex:2685: Overfull \hbox (2.50731pt too wide) in paragraph at lines 2681--2685
+warning: thesis.tex:2778: Overfull \hbox (54.00807pt too wide) in paragraph at lines 2774--2778
+warning: thesis.tex:2916: Overfull \hbox (5.23587pt too wide) in paragraph at lines 2910--2916
+warning: thesis.tex:2940: Overfull \hbox (17.66615pt too wide) detected at line 2940
+warning: thesis.tex:2940: Underfull \vbox (badness 5519) has occurred while \output is active
+error: can't open path `thesis.bib`
+caused by: not found

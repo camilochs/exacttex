@@ -1,0 +1,183 @@
+{
+ "paper": "2212.14779",
+ "main": "paper.tex",
+ "files": [
+  {
+   "file": "paper.tex",
+   "chars_before": 58392,
+   "chars_after": 58326,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 58392,
+ "chars_after": 58326,
+ "delta_pct": -0.11302918207973695,
+ "unrepaired": {
+  "chars_after": 58320,
+  "chars_before": 58392,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.024456,
+  "bibliography": {
+   "state": "complete",
+   "entries": 14
+  },
+  "errors": 10,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.12330456226880394
+ },
+ "stats": {
+  "cite_cmds_live": 15,
+  "cite_keys_live": 19,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 24,
+  "labels_outside_grammar": 0,
+  "refs_live": 19,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 3,
+  "cite_cmds_annotated": 15,
+  "cite_keys_annotated": 19,
+  "ids_annotated": 22,
+  "refs_annotated": 8,
+  "inputs_root": 1,
+  "inputs_imported": 0,
+  "inputs_left": 1,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 10,
+  "leaks_reverted": 3,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "paper.tex",
+   "line": 1341,
+   "token": "@id(sec:testc-minim)",
+   "wrapper": "?",
+   "context": "\\label{sec:testc-minim}"
+  },
+  {
+   "file": "paper.tex",
+   "line": 1353,
+   "token": "@ref(alg:test-case-minimization)",
+   "wrapper": "?",
+   "context": "For algorithm~\\ref{alg:test-case-minimization}, let $S$ be the set of traces for"
+  },
+  {
+   "file": "paper.tex",
+   "line": 1362,
+   "token": "@id(alg:test-case-minimization)",
+   "wrapper": "?",
+   "context": "\\label{alg:test-case-minimization}"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1003",
+   "name": "lst:example-program",
+   "file": "paper.xtex",
+   "line": 477,
+   "message": "identifier `lst:example-program` is not declared",
+   "classification": "compiler-unreachable: \\label{lst:example-program} exists (2x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "lst:math-abs",
+   "file": "paper.xtex",
+   "line": 480,
+   "message": "identifier `lst:math-abs` is not declared",
+   "classification": "compiler-unreachable: \\label{lst:math-abs} exists (2x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "lst:math-max",
+   "file": "paper.xtex",
+   "line": 497,
+   "message": "identifier `lst:math-max` is not declared",
+   "classification": "compiler-unreachable: \\label{lst:math-max} exists (2x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "lst:example-program",
+   "file": "paper.xtex",
+   "line": 614,
+   "message": "identifier `lst:example-program` is not declared",
+   "classification": "compiler-unreachable: \\label{lst:example-program} exists (2x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "lst:test-example-program",
+   "file": "paper.xtex",
+   "line": 644,
+   "message": "identifier `lst:test-example-program` is not declared",
+   "classification": "compiler-unreachable: \\label{lst:test-example-program} exists (2x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "lst:goal-mapping",
+   "file": "paper.xtex",
+   "line": 749,
+   "message": "identifier `lst:goal-mapping` is not declared",
+   "classification": "compiler-unreachable: \\label{lst:goal-mapping} exists (2x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "lst:additional-test-case",
+   "file": "paper.xtex",
+   "line": 1026,
+   "message": "identifier `lst:additional-test-case` is not declared",
+   "classification": "compiler-unreachable: \\label{lst:additional-test-case} exists (2x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "lst:bytecode-instrumentation",
+   "file": "paper.xtex",
+   "line": 1092,
+   "message": "identifier `lst:bytecode-instrumentation` is not declared",
+   "classification": "compiler-unreachable: \\label{lst:bytecode-instrumentation} exists (2x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "lst:record-coverage-goal",
+   "file": "paper.xtex",
+   "line": 1154,
+   "message": "identifier `lst:record-coverage-goal` is not declared",
+   "classification": "compiler-unreachable: \\label{lst:record-coverage-goal} exists (2x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "lst:inmem-db-to-disk",
+   "file": "paper.xtex",
+   "line": 1206,
+   "message": "identifier `lst:inmem-db-to-disk` is not declared",
+   "classification": "compiler-unreachable: \\label{lst:inmem-db-to-disk} exists (2x) in a region the inventory does not read",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.020336,
+ "bibliography": {
+  "state": "complete",
+  "entries": 14
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

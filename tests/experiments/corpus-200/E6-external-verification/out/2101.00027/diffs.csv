@@ -1,0 +1,20 @@
+target,kind,verdict,field,severity,document,source
+BkCo-5,bib-entry,partial,year,medium,2018,2019
+DMM-5,bib-entry,mismatch,title,medium,Performance vs. competence in human{\textendash}machine comparisons,Performance vs. competence in human–machine comparisons
+Enrn-4,bib-entry,partial,year,medium,2009,2013
+EuroParl-example3,bib-entry,partial,year,medium,2017,2018
+GPT3,bib-entry,partial,authors,high,"Brown, Tom B and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, Jared and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, Girish and Askell, Amanda and others",Sourav Malakar
+GPT3,bib-entry,partial,year,medium,2020,2026
+PG19-3,bib-entry,partial,authors,high,Stephen Roller and Emily Dinan and Naman Goyal and Da Ju and Mary Williamson and Yinhan Liu and Jing Xu and Myle Ott and Kurt Shuster and Eric M. Smith and Y-Lan Boureau and Jason Weston,Stephen Roller and Emily Dinan and Naman Goyal and Da Ju and Mary Williamson and Yinhan Liu and Jing Xu and Myle Ott and Eric Michael Smith and Y-Lan Boureau and Jason Weston
+PG19-3,bib-entry,partial,year,medium,2020,2021
+PG19-4,bib-entry,mismatch,title,medium,Pop Music Transformer: Beat-Based Modeling and Generation of Expressive Pop Piano Compositions,Pop Music Transformer
+PG19-5,bib-entry,mismatch,title,medium,How Much Self-Attention Do We Need? Trading Attention for Feed-Forward Layers,How Much Self-Attention Do We Needƒ Trading Attention for Feed-Forward Layers
+christian2020alignment,bib-entry,partial,year,medium,2020,2021
+datasheets,bib-entry,partial,year,medium,2018,2021
+lda,bib-entry,partial,year,medium,2003,2002
+lowe2016ubuntu,bib-entry,partial,year,medium,2016,2015
+monster,bib-entry,partial,year,medium,2020,2021
+overcomingtos,bib-entry,partial,year,medium,2019,2021
+pyrrhic-cv,bib-entry,partial,year,medium,2020,2021
+taylor2016alignment,bib-entry,partial,year,medium,2016,2020
+wiki-detox,bib-entry,mismatch,title,medium,Wikipedia Detox,Wikipedia Talk Labels: Personal Attacks

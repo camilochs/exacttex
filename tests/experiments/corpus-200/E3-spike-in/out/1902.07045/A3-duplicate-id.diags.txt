@@ -1,0 +1,3 @@
+planted=schema sites=[('manuscript.xtex', 83), ('manuscript.xtex', 53)]
+xtex new=[('XT1001', 'schema', 'manuscript.xtex', 83), ('XT1020', 'schema', 'manuscript.xtex', 86)]
+texlab new=[('ERROR', 'manuscript.tex', 53, 'Duplicate label'), ('ERROR', 'manuscript.tex', 83, 'Duplicate label')]

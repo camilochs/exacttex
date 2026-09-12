@@ -1,0 +1,89 @@
+{
+ "paper": "2304.08622",
+ "main": "multiscale.tex",
+ "files": [
+  {
+   "file": "multiscale.tex",
+   "chars_before": 63629,
+   "chars_after": 63599,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 63629,
+ "chars_after": 63599,
+ "delta_pct": -0.047148312876204246,
+ "unrepaired": {
+  "chars_after": 63599,
+  "chars_before": 63629,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.027956,
+  "bibliography": {
+   "state": "complete",
+   "entries": 344
+  },
+  "errors": 2,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.047148312876204246
+ },
+ "stats": {
+  "cite_cmds_live": 84,
+  "cite_keys_live": 141,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 11,
+  "other_cite_cmds": 0,
+  "labels_live": 10,
+  "labels_outside_grammar": 0,
+  "refs_live": 0,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 9,
+  "cite_cmds_annotated": 71,
+  "cite_keys_annotated": 98,
+  "ids_annotated": 10,
+  "refs_annotated": 0,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 2,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [
+  {
+   "code": "XT1005",
+   "name": "banigan2017",
+   "file": "multiscale.xtex",
+   "line": 353,
+   "message": "citation key `banigan2017` is not in the bibliography \u2014 did you mean `banigan17`?",
+   "classification": "real: key absent from every .bib in the paper",
+   "reverted": true
+  },
+  {
+   "code": "XT1005",
+   "name": "banigan2017",
+   "file": "multiscale.xtex",
+   "line": 357,
+   "message": "citation key `banigan2017` is not in the bibliography \u2014 did you mean `banigan17`?",
+   "classification": "real: key absent from every .bib in the paper",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.026856,
+ "bibliography": {
+  "state": "complete",
+  "entries": 344
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

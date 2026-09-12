@@ -1,0 +1,231 @@
+{
+ "paper": "2212.14129",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 2163,
+   "chars_after": 2243,
+   "emitted": true,
+   "identity": "import-ext-only",
+   "lines_differing": 10
+  },
+  {
+   "file": "abs.tex",
+   "chars_before": 864,
+   "chars_after": 864,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "intro.tex",
+   "chars_before": 13256,
+   "chars_after": 13244,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "bg.tex",
+   "chars_before": 10087,
+   "chars_after": 10084,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "design.tex",
+   "chars_before": 16131,
+   "chars_after": 16110,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "host.tex",
+   "chars_before": 36026,
+   "chars_after": 35990,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "embed.tex",
+   "chars_before": 17691,
+   "chars_after": 17667,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "impl.tex",
+   "chars_before": 3926,
+   "chars_after": 3923,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "eval.tex",
+   "chars_before": 2787,
+   "chars_after": 2784,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "rel.tex",
+   "chars_before": 3299,
+   "chars_after": 3296,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "concl.tex",
+   "chars_before": 891,
+   "chars_after": 888,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 11,
+ "chars_before": 107121,
+ "chars_after": 107093,
+ "delta_pct": -0.026138665621120043,
+ "unrepaired": {
+  "chars_after": 107093,
+  "chars_before": 107121,
+  "converted_files": 11,
+  "check_exit": 1,
+  "coverage": 0.018215,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "the document declares no bibliography"
+  },
+  "errors": 8,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.026138665621120043
+ },
+ "stats": {
+  "cite_cmds_live": 45,
+  "cite_keys_live": 49,
+  "cite_with_optarg_or_star": 1,
+  "cite_keys_outside_grammar": 2,
+  "other_cite_cmds": 0,
+  "labels_live": 36,
+  "labels_outside_grammar": 0,
+  "refs_live": 9,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 32,
+  "float_envs": 6,
+  "cite_cmds_annotated": 42,
+  "cite_keys_annotated": 45,
+  "ids_annotated": 36,
+  "refs_annotated": 2,
+  "inputs_root": 10,
+  "inputs_imported": 10,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 7,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [
+  {
+   "code": "XT1004",
+   "name": "sec:host:c",
+   "file": "host.xtex",
+   "line": 64,
+   "message": "reference `sec:host:c` requires section, but its target is equation",
+   "classification": "prefix-class mismatch on a real document [target classed as equation]: `sec:` prefix",
+   "reverted": true
+  },
+  {
+   "code": "XT1004",
+   "name": "sec:host:ml:element",
+   "file": "host.xtex",
+   "line": 69,
+   "message": "reference `sec:host:ml:element` requires section, but its target is equation",
+   "classification": "prefix-class mismatch on a real document [target classed as equation]: `sec:` prefix",
+   "reverted": true
+  },
+  {
+   "code": "XT1004",
+   "name": "sec:host:ml:attr",
+   "file": "host.xtex",
+   "line": 73,
+   "message": "reference `sec:host:ml:attr` requires section, but its target is equation",
+   "classification": "prefix-class mismatch on a real document [target classed as equation]: `sec:` prefix",
+   "reverted": true
+  },
+  {
+   "code": "XT1004",
+   "name": "sec:host:ml:section",
+   "file": "host.xtex",
+   "line": 77,
+   "message": "reference `sec:host:ml:section` requires section, but its target is equation",
+   "classification": "prefix-class mismatch on a real document [target classed as equation]: `sec:` prefix",
+   "reverted": true
+  },
+  {
+   "code": "XT1004",
+   "name": "sec:host:uri",
+   "file": "host.xtex",
+   "line": 82,
+   "message": "reference `sec:host:uri` requires section, but its target is equation",
+   "classification": "prefix-class mismatch on a real document [target classed as equation]: `sec:` prefix",
+   "reverted": true
+  },
+  {
+   "code": "XT1004",
+   "name": "sec:host:uri",
+   "file": "host.xtex",
+   "line": 86,
+   "message": "reference `sec:host:uri` requires section, but its target is equation",
+   "classification": "prefix-class mismatch on a real document [target classed as equation]: `sec:` prefix",
+   "reverted": true
+  },
+  {
+   "code": "XT1004",
+   "name": "tab:unmatched-matchers",
+   "file": "intro.xtex",
+   "line": 246,
+   "message": "reference `tab:unmatched-matchers` requires table, but its target is equation",
+   "classification": "prefix-class mismatch on a real document [target classed as equation]: `tab:` prefix",
+   "reverted": true
+  },
+  {
+   "code": "XT1020",
+   "name": "tab:unmatched-matchers",
+   "file": "intro.xtex",
+   "line": 246,
+   "message": "prose says `Table` but `tab:unmatched-matchers` is an equation",
+   "classification": "prose-word mismatch on a real document [target classed as equation]: `tab:` prefix",
+   "reverted": false
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.016796,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "the document declares no bibliography"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "rel.xtex",
+    "offset": 122,
+    "length": 18,
+    "line": 6,
+    "column": 30
+   },
+   "message": "citation checking unavailable: the document declares no bibliography",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

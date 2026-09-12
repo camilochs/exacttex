@@ -1,0 +1,152 @@
+exit=2
+lines=543
+unique_findings=142
+he colony, is also present at the cell level in \textit{Gonium}.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+Warning 24 in Gonium.tex line 490: Delete this space to maintain correct pagereferences.
+\label{adapmodel}  
+^
+Warning 2 in Gonium.tex line 494: Non-breaking space (`~') should have been used.
+\cite{drescher2010fidelity} we considered the direct effect of changes in flagellar beating on the local fluid \textit{velocity} on the surface, adopting a perpsective very much like that in Lighthill's squirmer model \cite{Lighthill1952}, here we model the effect of light stimulation on the {\it force} developed by a peripheral flagella at an angle $\alpha$ as  
+^
+Warning 2 in Gonium.tex line 494: Non-breaking space (`~') should have been used.
+\cite{drescher2010fidelity} we considered the direct effect of changes in flagellar beating on the local fluid \textit{velocity} on the surface, adopting a perpsective very much like that in Lighthill's squirmer model \cite{Lighthill1952}, here we model the effect of light stimulation on the {\it force} developed by a peripheral flagella at an angle $\alpha$ as  
+                                                                                                                                                                                                                         ^
+Warning 6 in Gonium.tex line 494: No italic correction (`\/') found.
+\cite{drescher2010fidelity} we considered the direct effect of changes in flagellar beating on the local fluid \textit{velocity} on the surface, adopting a perpsective very much like that in Lighthill's squirmer model \cite{Lighthill1952}, here we model the effect of light stimulation on the {\it force} developed by a peripheral flagella at an angle $\alpha$ as  
+                                                                                                                                                                                                                                                                                                               ^
+Warning 2 in Gonium.tex line 500: Non-breaking space (`~') should have been used.
+work on \textit{Chlamydomonas} \cite{leptos2018adaptive}.  
+                              ^
+Warning 2 in Gonium.tex line 502: Non-breaking space (`~') should have been used.
+The drop-and-recovery flagella response suggests using an adaptive model, which has found application in the description of sperm chemotaxis \cite{friedrich2007chemotaxis} and in phototaxis of both {\it Volvox} \cite{drescher2010fidelity} and \textit{Chlamydomonas} \cite{leptos2018adaptive}: we assume that $p(t)$ follows the light stimulation on a rapid timescale $\tau_r$, and is inhibited by an internal chemical process on a slower timescale $\tau_a$ described by a hidden variable $h(t)$. The phototactic response is assumed proportional to the light intensity, so we restrict ourselves to the linear regime at low $s_0$. The two quantities $h$ and $p$ obey a set of coupled ODEs,  
+                                                                                                                                            ^
+Warning 6 in Gonium.tex line 502: No italic correction (`\/') found.
+The drop-and-recovery flagella response suggests using an adaptive model, which has found application in the description of sperm chemotaxis \cite{friedrich2007chemotaxis} and in phototaxis of both {\it Volvox} \cite{drescher2010fidelity} and \textit{Chlamydomonas} \cite{leptos2018adaptive}: we assume that $p(t)$ follows the light stimulation on a rapid timescale $\tau_r$, and is inhibited by an internal chemical process on a slower timescale $\tau_a$ described by a hidden variable $h(t)$. The phototactic response is assumed proportional to the light intensity, so we restrict ourselves to the linear regime at low $s_0$. The two quantities $h$ and $p$ obey a set of coupled ODEs,  
+                                                                                                                                                                                                                 ^
+Warning 2 in Gonium.tex line 502: Non-breaking space (`~') should have been used.
+The drop-and-recovery flagella response suggests using an adaptive model, which has found application in the description of sperm chemotaxis \cite{friedrich2007chemotaxis} and in phototaxis of both {\it Volvox} \cite{drescher2010fidelity} and \textit{Chlamydomonas} \cite{leptos2018adaptive}: we assume that $p(t)$ follows the light stimulation on a rapid timescale $\tau_r$, and is inhibited by an internal chemical process on a slower timescale $\tau_a$ described by a hidden variable $h(t)$. The phototactic response is assumed proportional to the light intensity, so we restrict ourselves to the linear regime at low $s_0$. The two quantities $h$ and $p$ obey a set of coupled ODEs,  
+                                                                                                                                                                                                                  ^
+Warning 2 in Gonium.tex line 502: Non-breaking space (`~') should have been used.
+The drop-and-recovery flagella response suggests using an adaptive model, which has found application in the description of sperm chemotaxis \cite{friedrich2007chemotaxis} and in phototaxis of both {\it Volvox} \cite{drescher2010fidelity} and \textit{Chlamydomonas} \cite{leptos2018adaptive}: we assume that $p(t)$ follows the light stimulation on a rapid timescale $\tau_r$, and is inhibited by an internal chemical process on a slower timescale $\tau_a$ described by a hidden variable $h(t)$. The phototactic response is assumed proportional to the light intensity, so we restrict ourselves to the linear regime at low $s_0$. The two quantities $h$ and $p$ obey a set of coupled ODEs,  
+                                                                                                                                                                                                                                                                         ^
+Warning 36 in Gonium.tex line 515: You should put a space in front of parenthesis.
+with $\rho = \tau_r / \tau_a$. This phototactic response (\ref{eq:fppa2})-(\ref{eq:pt}), plotted as thin lines in Fig. \ref{fig:flowVel} in the case $s_0 \approx 1$~lux, provides a reasonable description of the velocity and beating frequency, with $\tau_r \simeq 0.4 \pm 0.1$~s and $\tau_a \simeq 1.5 \pm 0.5$~s.  
+                                                                          ^
+Warning 12 in Gonium.tex line 515: Interword spacing (`\ ') should perhaps be used.
+with $\rho = \tau_r / \tau_a$. This phototactic response (\ref{eq:fppa2})-(\ref{eq:pt}), plotted as thin lines in Fig. \ref{fig:flowVel} in the case $s_0 \approx 1$~lux, provides a reasonable description of the velocity and beating frequency, with $\tau_r \simeq 0.4 \pm 0.1$~s and $\tau_a \simeq 1.5 \pm 0.5$~s.  
+                                                                                                                      ^
+Warning 2 in Gonium.tex line 515: Non-breaking space (`~') should have been used.
+with $\rho = \tau_r / \tau_a$. This phototactic response (\ref{eq:fppa2})-(\ref{eq:pt}), plotted as thin lines in Fig. \ref{fig:flowVel} in the case $s_0 \approx 1$~lux, provides a reasonable description of the velocity and beating frequency, with $\tau_r \simeq 0.4 \pm 0.1$~s and $\tau_a \simeq 1.5 \pm 0.5$~s.  
+                                                                                                                      ^
+Warning 6 in Gonium.tex line 518: No italic correction (`\/') found.
+and 0.8$\pm 0.1$~lux$^{-1}$ for the {\it cis} and {\it trans} flagella respectively.   
+                                            ^
+Warning 6 in Gonium.tex line 518: No italic correction (`\/') found.
+and 0.8$\pm 0.1$~lux$^{-1}$ for the {\it cis} and {\it trans} flagella respectively.   
+                                                            ^
+Warning 2 in Gonium.tex line 532: Non-breaking space (`~') should have been used.
+According to Eq.~(\ref{eq:rt}), the response to this light variation is band-pass filtered between $\tau_a$ and $\tau_r$: an efficient response (\textit{i.e.}, a short colony reorientation time) is naturally expected for $\tau_r \ll \omega_3^{-1} \ll \tau_a$. As shown in Appendix \ref{app:optimum},   
+                                                                                                                                                                                                                                                                                        ^
+Warning 12 in Gonium.tex line 534: Interword spacing (`\ ') should perhaps be used.
+From our data, shown in Fig. \ref{fig:gamma}, this behaviour has apparently not been selected by evolution,  
+                            ^
+Warning 2 in Gonium.tex line 534: Non-breaking space (`~') should have been used.
+From our data, shown in Fig. \ref{fig:gamma}, this behaviour has apparently not been selected by evolution,  
+                            ^
+Warning 2 in Gonium.tex line 536: Non-breaking space (`~') should have been used.
+Note that in \textit{Chlamydomonas}, whose eye-spot is located at 45$^\circ$ from the $cis-$flagellum \cite{ruffer1985high}, an additional delay $\tau_d$ associated with body rotation is needed between the light detection by the eye-spot and activation of the flagellum.  
+                                                                                                     ^
+Warning 2 in Gonium.tex line 542: Non-breaking space (`~') should have been used.
+Background color shows the gain function ${\cal G}$ defined in Appendix \ref{app:adap-model}, Eq.~(\ref{eq:gamma}).   
+                                                                       ^
+Warning 36 in Gonium.tex line 559: You should put a space in front of parenthesis.
+From Eq.~(\ref{eq:rt}), at a given time $t$, each flagellum labeled by the angle $\alpha$ has a phototactic response $p_\alpha(t)$ resulting from the light $s(t')$ perceived at all times $t' < t$. This light intensity depends on its orientation, as described by Eq.~(\ref{eq:st})-(\ref{eq:eler}): it originates both from the (fast) body spin $\dot \psi = \omega_3$ and the (slow) reorientation angular velocity $\dot \phi$.   
+                                                                                                                                                                                                                                                                                        ^
+Warning 2 in Gonium.tex line 560: Non-breaking space (`~') should have been used.
+For simplicity, the computation of $p_\alpha$ (given in Appendix \ref{app:adap-model}) assumes $\dot \psi \gg \dot \phi$, which is a valid approximation in the linear regime ($s_0<1$~lux). Using the force (\ref{eq:fppa2}), the  reorientational torque is  
+                                                                ^
+Warning 2 in Gonium.tex line 576: Non-breaking space (`~') should have been used.
+introduced a gain function ${\cal G}(\omega_3\tau_r,\omega_3 \tau_a) \in [0, 1]$ associated with the adaptive response, which is function of the non-dimensional relaxation times $\omega_3 \tau_a$ and $\omega_3 \tau_r$, and described in Appendix \ref{app:adap-model}. This gain function is such that ${\cal G} \rightarrow 1$ in the optimal case $\omega_3 \tau_r \rightarrow 0$ and $\omega_3 \tau_a \rightarrow \infty$ (no adaptive filtering), yielding the fastest reorientation time.  
+                                                                                                                                                                                                                                                    ^
+Warning 6 in Gonium.tex line 601: No italic correction (`\/') found.
+To study how far {\it Gonium} colonies are from the optimum gain ${\cal G}=1$, we plot in Fig.~\ref{fig:gamma} the adaptive timescales $(\tau_r, \tau_a)$ measured for a set of colonies under illumination intensity $s_0 \approx 1$~lux.  These data were obtained by averaging the response times of the beating frequency of each flagellum. The measurements are centered around $(\tau_r, \tau_a) \approx (0.1, 2)$~s, corresponding to values of ${\cal G}$ between $0.5$ and $0.7$, which is in the upper half, but somewhat far from the optimum expected for an ideal swimmer. The error bars highlight the variability in the response times among flagella within a colony, and this evidences how biological variations divert \textit{Gonium} from its physical optimum.    
+                            ^
+Warning 6 in Gonium.tex line 626: No italic correction (`\/') found.
+therefore successfully capture the main features of the phototactic reorientation dynamics observed in {\it Gonium} colonies.  
+                                                                                                                  ^
+Warning 2 in Gonium.tex line 656: Non-breaking space (`~') should have been used.
+As with other green algae \cite{drescher2010fidelity,leptos2018adaptive}, the response and adaptation dynamics   
+                         ^
+Warning 2 in Gonium.tex line 665: Non-breaking space (`~') should have been used.
+Taken together, these experimental and theoretical observations lend support to a growing body of evidence \cite{jekely2009evolution}   
+                                                                                                          ^
+Warning 29 in Gonium.tex line 693: $\times$ may look prettier here.
+9x9~mm, BIO-RAD Laboratories). They were subsequently mounted on a Nikon TE2000-U inverted microscope for  
+ ^
+Warning 2 in Gonium.tex line 700: Non-breaking space (`~') should have been used.
+absorption maximum rhodopsin \cite{hubbard1958action}, the protein in the eyespot responsible   
+                            ^
+Warning 2 in Gonium.tex line 701: Non-breaking space (`~') should have been used.
+for light detection \cite{foster1980light}.  
+                   ^
+Warning 3 in Gonium.tex line 748: You should enclose the previous parenthesis with `{}'.
+v_{3D} &= \frac{1}{T} \int_0^\lambda\!\! \sqrt{1+( k A)^2} dz   
+                                                      ^
+Warning 12 in Gonium.tex line 767: Interword spacing (`\ ') should perhaps be used.
+of flagellar forces.  The geometry is shown in Fig. \ref{fig:GoniumPic}d, with ${\bf \hat e}_3$   
+                                                   ^
+Warning 2 in Gonium.tex line 767: Non-breaking space (`~') should have been used.
+of flagellar forces.  The geometry is shown in Fig. \ref{fig:GoniumPic}d, with ${\bf \hat e}_3$   
+                                                   ^
+Warning 6 in Gonium.tex line 768: No italic correction (`\/') found.
+the symmetry axis of the {\it Gonium} body. In this geometry, the rotation vector ${\bf \Omega}$   
+                                    ^
+Warning 6 in Gonium.tex line 771: No italic correction (`\/') found.
+${\bf U}$ and ${\bf \hat e}_z$. The symmetry axis of the {\it Gonium} body describes a cone around   
+                                                                    ^
+Warning 26 in Gonium.tex line 774: You ought to remove spaces in front of punctuation.
+$\dot \psi = 0$ . The frictional torque (\ref{eq:lv}) is thus  
+               ^
+Warning 12 in Gonium.tex line 876: Interword spacing (`\ ') should perhaps be used.
+\caption{\label{fig:app-num} Properties of wavy helical trajectories.  (a) Amplitude   
+                                                                     ^
+Warning 12 in Gonium.tex line 878: Interword spacing (`\ ') should perhaps be used.
+parameter $\xi$. (b) Pitch angle $\chi$ and swimming efficiency $v_m/v$ as a function of the defect parameter $\xi$. The dashed line shows the theoretical prediction for $\chi$ as a function of $\xi$, obtained from Eq.~(\ref{eq:th0}).  
+                ^
+Warning 12 in Gonium.tex line 883: Interword spacing (`\ ') should perhaps be used.
+from the computed wavy trajectories. We use the geometry shown in Fig. \ref{fig:geometry}b   
+                                                                      ^
+Warning 2 in Gonium.tex line 883: Non-breaking space (`~') should have been used.
+from the computed wavy trajectories. We use the geometry shown in Fig. \ref{fig:geometry}b   
+                                                                      ^
+Warning 2 in Gonium.tex line 911: Non-breaking space (`~') should have been used.
+Itoh \textit{et al.} \cite{Itoh2019}; here we solve Eq.~(\ref{vel_bem}) in a similar manner.   
+                    ^
+Warning 12 in Gonium.tex line 915: Interword spacing (`\ ') should perhaps be used.
+strength $\xi$ of the imbalance (Fig. \ref{fig:app-num}), while the wavelength $\lambda$ is   
+                                     ^
+Warning 2 in Gonium.tex line 915: Non-breaking space (`~') should have been used.
+strength $\xi$ of the imbalance (Fig. \ref{fig:app-num}), while the wavelength $\lambda$ is   
+                                     ^
+Warning 12 in Gonium.tex line 919: Interword spacing (`\ ') should perhaps be used.
+$v_m/v = \cos \chi$, as plotted in Fig. \ref{fig:GpSwimming}c.  
+                                       ^
+Warning 2 in Gonium.tex line 919: Non-breaking space (`~') should have been used.
+$v_m/v = \cos \chi$, as plotted in Fig. \ref{fig:GpSwimming}c.  
+                                       ^
+Warning 3 in Gonium.tex line 931: You should enclose the previous parenthesis with `{}'.
+occurs at $s^*= -(1-\rho)^{-1}\ln\rho$, with the magnitude $p^*_{step}=p_{step}(s^*)$ given by the  
+                        ^
+Warning 12 in Gonium.tex line 937: Interword spacing (`\ ') should perhaps be used.
+As shown in Fig. \ref{fig:stepresponse}, this has a maximum at $\rho=0$, confirming  
+                ^
+Warning 2 in Gonium.tex line 937: Non-breaking space (`~') should have been used.
+As shown in Fig. \ref{fig:stepresponse}, this has a maximum at $\rho=0$, confirming  
+                ^
+Warning 12 in Gonium.tex line 938: Interword spacing (`\ ') should perhaps be used.
+the statement in Sec. \ref{adapmodel} that the maximum amplitude response is found  
+                     ^
+Warning 2 in Gonium.tex line 938: Non-breaking space (`~') should have been used.
+the statement in Sec. \ref{adapmodel} that the maximum amplitude response is found  
+                     ^

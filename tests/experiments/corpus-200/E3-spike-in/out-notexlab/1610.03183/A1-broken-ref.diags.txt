@@ -1,0 +1,3 @@
+planted=fig:gap__ghost sites=[('paper.xtex', 157)]
+xtex new=[('XT1003', 'fig:gap__ghost', 'paper.xtex', 157)]
+texlab new=[]

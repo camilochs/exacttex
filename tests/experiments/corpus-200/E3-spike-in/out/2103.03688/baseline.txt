@@ -1,0 +1,24 @@
+tectonic pdf bytes=430279
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'DT_exact_plain.tex', 153, 'Undefined reference'), ('ERROR', 'DT_exact_plain.tex', 179, 'Undefined reference'), ('ERROR', 'DT_exact_plain.tex', 184, 'Undefined reference'), ('ERROR', 'DT_exact_plain.tex', 186, 'Undefined reference'), ('ERROR', 'DT_exact_plain.tex', 192, 'Undefined reference'), ('ERROR', 'DT_exact_plain.tex', 194, 'Undefined reference'), ('ERROR', 'DT_exact_plain.tex', 206, 'Undefined reference'), ('ERROR', 'DT_exact_plain.tex', 208, 'Undefined reference'), ('ERROR', 'DT_exact_plain.tex', 210, 'Undefined reference'), ('ERROR', 'DT_exact_plain.tex', 276, 'Undefined reference'), ('ERROR', 'DT_exact_plain.tex', 306, 'Undefined reference'), ('info', 'DT_exact_plain.tex', 132, 'Unused label'), ('info', 'DT_exact_plain.tex', 145, 'Unused label'), ('info', 'DT_exact_plain.tex', 218, 'Unused label'), ('info', 'DT_exact_plain.tex', 260, 'Unused label')]
+tectonic exit=0 warnings=[] secs=3
+ll \hbox (3.66pt too wide) in paragraph at lines 206--207
+warning: DT_exact_plain.tex:247: Overfull \hbox (307.80719pt too wide) has occurred while \output is active
+warning: DT_exact_plain.tex:341: Underfull \hbox (badness 2894) in paragraph at lines 341--341
+warning: DT_exact_plain.tex:346: Overfull \hbox (307.80719pt too wide) has occurred while \output is active
+warning: DT_exact_plain.tex:351: Overfull \hbox (307.80719pt too wide) has occurred while \output is active
+warning: lineno.sty:296: Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+warning: DT_exact_plain.tex:125: Overfull \hbox (1.30043pt too wide) in paragraph at lines 124--125
+warning: DT_exact_plain.tex:188: Overfull \hbox (307.80719pt too wide) has occurred while \output is active
+warning: DT_exact_plain.tex:248: Overfull \hbox (307.80719pt too wide) has occurred while \output is active
+warning: DT_exact_plain.tex:341: Underfull \hbox (badness 2894) in paragraph at lines 341--341
+warning: DT_exact_plain.tex:346: Overfull \hbox (307.80719pt too wide) has occurred while \output is active
+warning: DT_exact_plain.tex:351: Overfull \hbox (307.80719pt too wide) has occurred while \output is active
+warning: lineno.sty:296: Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+warning: DT_exact_plain.tex:125: Overfull \hbox (1.30043pt too wide) in paragraph at lines 124--125
+warning: DT_exact_plain.tex:188: Overfull \hbox (307.80719pt too wide) has occurred while \output is active
+warning: DT_exact_plain.tex:248: Overfull \hbox (307.80719pt too wide) has occurred while \output is active
+warning: DT_exact_plain.tex:341: Underfull \hbox (badness 2894) in paragraph at lines 341--341
+warning: DT_exact_plain.tex:346: Overfull \hbox (307.80719pt too wide) has occurred while \output is active
+warning: DT_exact_plain.tex:351: Overfull \hbox (307.80719pt too wide) has occurred while \output is active
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

@@ -1,0 +1,24 @@
+tectonic pdf bytes=2399239
+xtex exit=0 errors=[]
+texlab=[('ERROR', '221_v2.tex', 38, 'Undefined reference'), ('ERROR', '221_v2.tex', 40, 'Undefined reference'), ('ERROR', '221_v2.tex', 42, 'Undefined reference'), ('ERROR', '221_v2.tex', 45, 'Undefined reference'), ('ERROR', '221_v2.tex', 47, 'Undefined reference'), ('ERROR', '221_v2.tex', 53, 'Undefined reference'), ('ERROR', '221_v2.tex', 57, 'Undefined reference'), ('ERROR', '221_v2.tex', 61, 'Undefined reference'), ('ERROR', '221_v2.tex', 161, 'Duplicate label'), ('ERROR', '221_v2.tex', 165, 'Duplicate label'), ('ERROR', '221_v2.tex', 178, 'Duplicate label'), ('ERROR', '221_v2.tex', 182, 'Duplicate label'), ('ERROR', '221_v2.tex', 238, 'Undefined reference'), ('info', '221_v2.tex', 99, 'Unused label'), ('info', '221_v2.tex', 135, 'Unused label'), ('info', '221_v2.tex', 139, 'Unused label'), ('info', '221_v2.tex', 152, 'Unused label'), ('info', '221_v2.tex', 156, 'Unused label'), ('info', '221_v2.tex', 161, 'Unused label'), ('info', '221_v2.tex', 165, 'Unused label'), ('info', '221_v2.tex', 178, 'Unused label'), ('info', '221_v2.tex', 182, 'Unused label'), ('info', '221_v2.tex', 206, 'Unused entry'), ('info', '221_v2.tex', 209, 'Unused entry'), ('info', '221_v2.tex', 215, 'Unused entry'), ('info', '221_v2.tex', 218, 'Unused entry'), ('info', '221_v2.tex', 221, 'Unused entry'), ('info', '221_v2.tex', 224, 'Unused entry'), ('info', '221_v2.tex', 227, 'Unused entry'), ('info', '221_v2.tex', 249, 'Unused entry'), ('info', '221_v2.tex', 252, 'Unused entry'), ('info', '221_v2.tex', 255, 'Unused entry')]
+tectonic exit=0 warnings=['LastBibItem', 'fig:Band_structure', 'fig:QO', 'fig:pockets'] secs=4
+warning: 221_v2.tex:41: Underfull \hbox (badness 1259) in paragraph at lines 40--41
+warning: 221_v2.tex:46: Underfull \hbox (badness 2600) in paragraph at lines 45--46
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: 221_v2.bbl:325: Underfull \hbox (badness 1715) in paragraph at lines 314--325
+warning: errors were issued by BibTeX, but were ignored; use --print and/or --keep-logs for details.
+warning: 221_v2.tex:41: Underfull \hbox (badness 1259) in paragraph at lines 40--41
+warning: 221_v2.tex:46: Underfull \hbox (badness 2600) in paragraph at lines 45--46
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: 221_v2.tex:41: Underfull \hbox (badness 1259) in paragraph at lines 40--41
+warning: 221_v2.tex:46: Underfull \hbox (badness 2600) in paragraph at lines 45--46
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).
+warning: Trying to include PDF file with version (1.6), which is newer than current output PDF setting (1.5).

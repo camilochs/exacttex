@@ -1,0 +1,3 @@
+planted=tb:example sites=[('2ndrevGR.xtex', 410), ('2ndrevGR.xtex', 60)]
+xtex new=[('XT1001', 'tb:example', '2ndrevGR.xtex', 410), ('XT1020', 'tb:example', '2ndrevGR.xtex', 406)]
+texlab new=[('ERROR', '2ndrevGR.tex', 60, 'Duplicate label'), ('ERROR', '2ndrevGR.tex', 410, 'Duplicate label')]

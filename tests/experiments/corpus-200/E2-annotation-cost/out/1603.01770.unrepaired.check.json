@@ -1,0 +1,25 @@
+{
+ "coverage": 0.013126,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`iccc2016.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "./evaluation.xtex",
+    "offset": 1133,
+    "length": 24,
+    "line": 11,
+    "column": 132
+   },
+   "message": "citation checking unavailable: `iccc2016.bib` could not be read",
+   "related": []
+  }
+ ]
+}

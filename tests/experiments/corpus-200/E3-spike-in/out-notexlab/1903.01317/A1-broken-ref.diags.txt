@@ -1,0 +1,3 @@
+planted=sample__ghost sites=[('68886_rev2.xtex', 150)]
+xtex new=[('XT1003', 'sample__ghost', '68886_rev2.xtex', 150)]
+texlab new=[]

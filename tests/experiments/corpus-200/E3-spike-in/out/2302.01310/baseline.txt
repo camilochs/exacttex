@@ -1,0 +1,31 @@
+tectonic pdf bytes=1076539
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'appendix.tex', 705, 'Duplicate label'), ('ERROR', 'appendix.tex', 711, 'Duplicate label'), ('ERROR', 'appendix.tex', 717, 'Duplicate label'), ('ERROR', 'paper.tex', 339, 'Duplicate label'), ('ERROR', 'paper.tex', 345, 'Duplicate label'), ('ERROR', 'paper.tex', 351, 'Duplicate label'), ('ERROR', 'paper.tex', 368, 'Duplicate label'), ('ERROR', 'paper.tex', 391, 'Duplicate label'), ('ERROR', 'paper.tex', 480, 'Duplicate label'), ('ERROR', 'paper.tex', 486, 'Duplicate label'), ('ERROR', 'paper.tex', 492, 'Duplicate label'), ('ERROR', 'paper.tex', 498, 'Duplicate label'), ('ERROR', 'paper.tex', 534, 'Duplicate label'), ('ERROR', 'paper.tex', 540, 'Duplicate label'), ('ERROR', 'paper.tex', 546, 'Duplicate label'), ('ERROR', 'paper.tex', 551, 'Duplicate label'), ('info', 'appendix.tex', 17, 'Unused label'), ('info', 'appendix.tex', 35, 'Unused label'), ('info', 'appendix.tex', 37, 'Unused label'), ('info', 'appendix.tex', 38, 'Unused label'), ('info', 'appendix.tex', 44, 'Unused label'), ('info', 'appendix.tex', 705, 'Unused label'), ('info', 'appendix.tex', 711, 'Unused label'), ('info', 'appendix.tex', 727, 'Unused label'), ('info', 'appendix.tex', 733, 'Unused label'), ('info', 'appendix.tex', 753, 'Unused label'), ('info', 'paper.tex', 87, 'Unused label'), ('info', 'paper.tex', 118, 'Unused label'), ('info', 'paper.tex', 152, 'Unused label'), ('info', 'paper.tex', 155, 'Unused label'), ('info', 'paper.tex', 189, 'Unused label'), ('info', 'paper.tex', 200, 'Unused label'), ('info', 'paper.tex', 229, 'Unused label'), ('info', 'paper.tex', 233, 'Unused label'), ('info', 'paper.tex', 238, 'Unused label'), ('info', 'paper.tex', 240, 'Unused label'), ('info', 'paper.tex', 241, 'Unused label'), ('info', 'paper.tex', 248, 'Unused label'), ('info', 'paper.tex', 262, 'Unused label'), ('info', 'paper.tex', 295, 'Unused label'), ('info', 'paper.tex', 327, 'Unused label'), ('info', 'paper.tex', 339, 'Unused label'), ('info', 'paper.tex', 345, 'Unused label'), ('info', 'paper.tex', 480, 'Unused label'), ('info', 'paper.tex', 486, 'Unused label'), ('info', 'paper.tex', 534, 'Unused label'), ('info', 'paper.tex', 540, 'Unused label'), ('info', 'paper.tex', 556, 'Unused label'), ('info', 'references.bib', 88, 'Unused entry'), ('info', 'references.bib', 119, 'Unused entry'), ('info', 'references.bib', 133, 'Unused entry'), ('info', 'references.bib', 405, 'Unused entry'), ('info', 'references.bib', 457, 'Unused entry'), ('info', 'references.bib', 472, 'Unused entry'), ('info', 'references.bib', 524, 'Unused entry'), ('info', 'references.bib', 548, 'Unused entry'), ('info', 'references.bib', 561, 'Unused entry'), ('info', 'references.bib', 598, 'Unused entry')]
+tectonic exit=0 warnings=[] secs=2
+ (badness 4686) in paragraph at lines 206--212
+warning: paper.bbl:212: Underfull \hbox (badness 1325) in paragraph at lines 206--212
+warning: paper.bbl:212: Underfull \hbox (badness 6380) in paragraph at lines 206--212
+warning: paper.bbl:212: Underfull \hbox (badness 5133) in paragraph at lines 206--212
+warning: paper.bbl:227: Underfull \hbox (badness 2245) in paragraph at lines 224--227
+warning: paper.bbl:234: Underfull \hbox (badness 2573) in paragraph at lines 229--234
+warning: appendix:565: Underfull \vbox (badness 1515) has occurred while \output is active
+warning: paper.tex:80: Overfull \hbox (2.45737pt too wide) in paragraph at lines 78--80
+warning: paper.bbl:57: 
+Missing character: There is no ��� ("2013) in font ec-lmr9!
+warning: could not represent character "–" (0x2013) in font "ec-lmr9"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: paper.bbl:175: Underfull \hbox (badness 3439) in paragraph at lines 172--175
+warning: paper.bbl:212: Underfull \hbox (badness 4686) in paragraph at lines 206--212
+warning: paper.bbl:212: Underfull \hbox (badness 1325) in paragraph at lines 206--212
+warning: paper.bbl:212: Underfull \hbox (badness 6380) in paragraph at lines 206--212
+warning: paper.bbl:212: Underfull \hbox (badness 5133) in paragraph at lines 206--212
+warning: paper.bbl:227: Underfull \hbox (badness 2245) in paragraph at lines 224--227
+warning: paper.bbl:234: Underfull \hbox (badness 2573) in paragraph at lines 229--234
+warning: appendix:565: Underfull \vbox (badness 1515) has occurred while \output is active
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: Object @equation.A.1.1 already defined.
+warning: Object @equation.A.1.2 already defined.
+warning: Object @equation.A.1.1 already defined.
+warning: Object @equation.A.1.2 already defined.
+warning: Object @lemma.1 already defined.

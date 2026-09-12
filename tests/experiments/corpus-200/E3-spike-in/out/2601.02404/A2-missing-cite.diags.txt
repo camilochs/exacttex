@@ -1,0 +1,3 @@
+planted=chung2021physical__ghost sites=[('main.xtex', 202)]
+xtex new=[('XT1005', 'chung2021physical__ghost', 'main.xtex', 202)]
+texlab new=[('ERROR', 'main.tex', 202, 'Undefined reference')]

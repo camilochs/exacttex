@@ -1,0 +1,25 @@
+{
+ "coverage": 0.02635,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`citation_rev.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "2ndrevGR.xtex",
+    "offset": 4303,
+    "length": 18,
+    "line": 64,
+    "column": 1048
+   },
+   "message": "citation checking unavailable: `citation_rev.bib` could not be read",
+   "related": []
+  }
+ ]
+}

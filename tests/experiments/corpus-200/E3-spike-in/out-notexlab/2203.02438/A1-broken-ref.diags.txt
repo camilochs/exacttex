@@ -1,0 +1,3 @@
+planted=eq:3.4__ghost sites=[('eibump.xtex', 221)]
+xtex new=[('XT1003', 'eq:3.4__ghost', 'eibump.xtex', 221)]
+texlab new=[]

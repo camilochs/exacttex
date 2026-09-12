@@ -1,0 +1,14 @@
+target,kind,verdict,field,severity,document,source
+Awodey2010,bib-entry,partial,year,medium,2010,2006
+Bernardi2019,bib-entry,mismatch,title,medium,{150 successful machine learning models: 6 lessons learned at Booking.com},150 Successful Machine Learning Models
+Clements2011,bib-entry,partial,authors,high,"Clements, Paul and Bachmann, Felix and Bass, Len and Garlan, David and Ivers, James and Little, Reed and Nord, Robert and Stafford, Judith",P. Clements and D. Garlan and R. Little and R. Nord and J. Stafford
+Clements2011,bib-entry,partial,year,medium,2011,2003
+Fenn2016,bib-entry,partial,year,medium,2016,2015
+Knauss2016,bib-entry,partial,year,medium,2016,2015
+Martinez2021,bib-entry,partial,year,medium,2021,2022
+Mendhurwar2021,bib-entry,partial,year,medium,2021,2019
+Ray2018,bib-entry,partial,year,medium,2018,2016
+Thilakarathne2020,bib-entry,partial,authors,high,"Thilakarathne, Navod Neranjan and Kagita, Mohan Krishna and Lanka, Dr and Ahmad, Hussain and others",Navod Neranjan .. and Rohan .. and Mohan Krishna .. and Surekha .. and Hussain Ahmad
+Thilakarathne2020,bib-entry,partial,year,medium,2020,2021
+Wan2020,bib-entry,partial,year,medium,2020,2019
+Weyrich2016,bib-entry,partial,year,medium,2016,2015

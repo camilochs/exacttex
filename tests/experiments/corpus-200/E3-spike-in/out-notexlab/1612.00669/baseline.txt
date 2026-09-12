@@ -1,0 +1,28 @@
+tectonic pdf bytes=329293
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=['fig:evaluation/results', 'sec:appendix/motivation/', 'sec:appendix/results', 'sec:example', 'sec:primer/isolation'] secs=11
+ing: main.tex:299: Underfull \hbox (badness 4353) in paragraph at lines 295--299
+warning: main.tex:316: Underfull \hbox (badness 1112) in paragraph at lines 312--316
+warning: appendix.example:81: Underfull \vbox (badness 3179) has occurred while \output is active
+warning: appendix.example:911: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: appendix.semantics:111: Underfull \vbox (badness 1895) has occurred while \output is active
+warning: mathpartir.sty:3: 
+Invalid UTF-8 byte or sequence at line 3 replaced by U+FFFD.
+warning: body:523: Underfull \hbox (badness 10000) in paragraph at lines 523--523
+warning: body:523: Underfull \hbox (badness 1472) in paragraph at lines 523--523
+warning: main.tex:299: Underfull \hbox (badness 4353) in paragraph at lines 295--299
+warning: main.tex:316: Underfull \hbox (badness 1112) in paragraph at lines 312--316
+warning: appendix.example:81: Underfull \vbox (badness 3179) has occurred while \output is active
+warning: appendix.example:911: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: appendix.semantics:111: Underfull \vbox (badness 1895) has occurred while \output is active
+warning: mathpartir.sty:3: 
+Invalid UTF-8 byte or sequence at line 3 replaced by U+FFFD.
+warning: body:523: Underfull \hbox (badness 10000) in paragraph at lines 523--523
+warning: body:523: Underfull \hbox (badness 1472) in paragraph at lines 523--523
+warning: main.tex:299: Underfull \hbox (badness 4353) in paragraph at lines 295--299
+warning: main.tex:316: Underfull \hbox (badness 1112) in paragraph at lines 312--316
+warning: appendix.example:81: Underfull \vbox (badness 3179) has occurred while \output is active
+warning: appendix.example:911: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: appendix.semantics:111: Underfull \vbox (badness 1895) has occurred while \output is active
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

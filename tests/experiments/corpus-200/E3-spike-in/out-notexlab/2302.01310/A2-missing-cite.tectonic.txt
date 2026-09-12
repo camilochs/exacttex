@@ -1,0 +1,40 @@
+aragraph at lines 112--113
+warning: paper.bbl:113: Underfull \hbox (badness 5133) in paragraph at lines 112--113
+warning: paper.bbl:122: Underfull \hbox (badness 2245) in paragraph at lines 121--122
+warning: paper.bbl:125: Underfull \hbox (badness 2573) in paragraph at lines 124--125
+warning: appendix:519: Overfull \hbox (65.96591pt too wide) in paragraph at lines 516--519
+warning: appendix:753: Underfull \vbox (badness 1184) has occurred while \output is active
+warning: paper.tex:80: Overfull \hbox (2.45737pt too wide) in paragraph at lines 78--80
+warning: paper.bbl:57: 
+Missing character: There is no ��� ("2013) in font ec-lmr9!
+warning: could not represent character "–" (0x2013) in font "ec-lmr9"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: paper.bbl:170: Underfull \hbox (badness 3439) in paragraph at lines 167--170
+warning: paper.bbl:207: Underfull \hbox (badness 4686) in paragraph at lines 201--207
+warning: paper.bbl:207: Underfull \hbox (badness 1325) in paragraph at lines 201--207
+warning: paper.bbl:207: Underfull \hbox (badness 6380) in paragraph at lines 201--207
+warning: paper.bbl:207: Underfull \hbox (badness 5133) in paragraph at lines 201--207
+warning: paper.bbl:222: Underfull \hbox (badness 2245) in paragraph at lines 219--222
+warning: paper.bbl:229: Underfull \hbox (badness 2573) in paragraph at lines 224--229
+warning: appendix:565: Underfull \vbox (badness 1515) has occurred while \output is active
+warning: paper.tex:80: Overfull \hbox (2.45737pt too wide) in paragraph at lines 78--80
+warning: paper.bbl:57: 
+Missing character: There is no ��� ("2013) in font ec-lmr9!
+warning: could not represent character "–" (0x2013) in font "ec-lmr9"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: paper.bbl:170: Underfull \hbox (badness 3439) in paragraph at lines 167--170
+warning: paper.bbl:207: Underfull \hbox (badness 4686) in paragraph at lines 201--207
+warning: paper.bbl:207: Underfull \hbox (badness 1325) in paragraph at lines 201--207
+warning: paper.bbl:207: Underfull \hbox (badness 6380) in paragraph at lines 201--207
+warning: paper.bbl:207: Underfull \hbox (badness 5133) in paragraph at lines 201--207
+warning: paper.bbl:222: Underfull \hbox (badness 2245) in paragraph at lines 219--222
+warning: paper.bbl:229: Underfull \hbox (badness 2573) in paragraph at lines 224--229
+warning: appendix:565: Underfull \vbox (badness 1515) has occurred while \output is active
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: Object @equation.A.1.1 already defined.
+warning: Object @equation.A.1.2 already defined.
+warning: Object @equation.A.1.1 already defined.
+warning: Object @equation.A.1.2 already defined.
+warning: Object @lemma.1 already defined.

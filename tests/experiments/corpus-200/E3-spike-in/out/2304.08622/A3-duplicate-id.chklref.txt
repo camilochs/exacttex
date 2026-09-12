@@ -1,0 +1,547 @@
+pdf=1
+exit=0
+lines=1041
+unique_findings=16
+input line
+ 512.
+
+
+Package natbib Warning: Citation `stephens19' on page 6 undefined on input line
+ 513.
+
+
+Package natbib Warning: Citation `Berg2022' on page 6 undefined on input line 5
+14.
+
+
+Package natbib Warning: Citation `bronshtein15' on page 6 undefined on input li
+ne 515.
+
+
+Package natbib Warning: Citation `cisse13' on page 6 undefined on input line 52
+3.
+
+
+Package natbib Warning: Citation `nagashima19' on page 6 undefined on input lin
+e 523.
+
+
+Package natbib Warning: Citation `erdel20' on page 6 undefined on input line 52
+4.
+
+
+Package natbib Warning: Citation `banigan17' on page 6 undefined on input line 
+526.
+
+
+Package natbib Warning: Citation `stephens17' on page 6 undefined on input line
+ 526.
+
+
+Package natbib Warning: Citation `belaghzal19' on page 6 undefined on input lin
+e 527.
+
+
+Package natbib Warning: Citation `banigan17' on page 6 undefined on input line 
+529.
+
+
+Package natbib Warning: Citation `stephens17' on page 6 undefined on input line
+ 529.
+
+
+Package natbib Warning: Citation `lionetti20' on page 6 undefined on input line
+ 529.
+
+
+Package natbib Warning: Citation `banigan17' on page 6 undefined on input line 
+561.
+
+
+Package natbib Warning: Citation `stephens17' on page 6 undefined on input line
+ 561.
+
+
+Package natbib Warning: Citation `lionetti20' on page 6 undefined on input line
+ 561.
+
+
+Package natbib Warning: Citation `shimi15' on page 6 undefined on input line 56
+1.
+
+
+Package natbib Warning: Citation `mahamid16' on page 6 undefined on input line 
+561.
+
+
+Package natbib Warning: Citation `turgay17' on page 6 undefined on input line 5
+61.
+
+[6]
+
+Package natbib Warning: Citation `Berg2023' on page 7 undefined on input line 5
+79.
+
+
+Package natbib Warning: Citation `Gupta2021' on page 7 undefined on input line 
+602.
+
+[7 <./Figures/Fig6_MultiscaleModelingBrainOrganoidsv3.pdf>]
+
+Package natbib Warning: Citation `Zhang2022' on page 8 undefined on input line 
+624.
+
+
+Package natbib Warning: Citation `Eres2019' on page 8 undefined on input line 7
+12.
+
+
+Package natbib Warning: Citation `Stephens2017' on page 8 undefined on input li
+ne 740.
+
+
+Package natbib Warning: Citation `Maeshima2018' on page 8 undefined on input li
+ne 740.
+
+
+Package natbib Warning: Citation `Sanders2022' on page 8 undefined on input lin
+e 740.
+
+
+Package natbib Warning: Citation `Stephens2017' on page 8 undefined on input li
+ne 740.
+
+
+Package natbib Warning: Citation `Sanders2022' on page 8 undefined on input lin
+e 740.
+
+
+Package natbib Warning: Citation `Wintner2020' on page 8 undefined on input lin
+e 740.
+
+
+Package natbib Warning: Citation `Liu2021' on page 8 undefined on input line 74
+0.
+
+[8] [9 <./Figures/Fig7_MultiscalemodelingBrainOrganoid.pdf>] [10 <./Figures/Fig
+6.pdf>]
+
+Package natbib Warning: Citation `Lancaster2021' on page 11 undefined on input 
+line 838.
+
+
+Package natbib Warning: Citation `Zhang2022' on page 11 undefined on input line
+ 844.
+
+
+Package natbib Warning: Citation `banigan17' on page 11 undefined on input line
+ 853.
+
+
+Package natbib Warning: Citation `Liu2021' on page 11 undefined on input line 8
+53.
+
+
+Package natbib Warning: Citation `Berg2023' on page 11 undefined on input line 
+853.
+
+
+Package natbib Warning: Citation `saintillan18' on page 11 undefined on input l
+ine 858.
+
+
+Package natbib Warning: Citation `Mahajan2022' on page 11 undefined on input li
+ne 858.
+
+
+Package natbib Warning: Citation `Shi2018' on page 11 undefined on input line 8
+58.
+
+
+Package natbib Warning: Citation `Katava2022' on page 11 undefined on input lin
+e 858.
+
+
+Package natbib Warning: Citation `Shi2023' on page 11 undefined on input line 8
+58.
+
+
+Package natbib Warning: Citation `Eres2019' on page 11 undefined on input line 
+863.
+
+
+Package natbib Warning: Citation `Mota2015' on page 11 undefined on input line 
+881.
+
+
+Package natbib Warning: Citation `Heuer2023' on page 11 undefined on input line
+ 881.
+
+[11 <./Figures/Dis_diff.pdf> <./Figures/total_average_displacement_difference.p
+df
+
+pdfTeX warning: pdflatex (file ./Figures/total_average_displacement_difference.
+pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+
+Package natbib Warning: Citation `Lomakin2020' on page 12 undefined on input li
+ne 892.
+
+
+Package natbib Warning: Citation `Lomakin2020' on page 12 undefined on input li
+ne 895.
+
+
+Package natbib Warning: Citation `Strom2021' on page 12 undefined on input line
+ 900.
+
+
+Package natbib Warning: Citation `Hoencamp2021' on page 12 undefined on input l
+ine 903.
+
+
+Package natbib Warning: Citation `Marchal2022' on page 12 undefined on input li
+ne 904.
+
+
+Package natbib Warning: Citation `Shi2021' on page 12 undefined on input line 9
+04.
+
+
+Package natbib Warning: Citation `Kim2022' on page 12 undefined on input line 9
+18.
+
+
+Package natbib Warning: Citation `Runser2024' on page 12 undefined on input lin
+e 920.
+
+
+Package natbib Warning: Citation `Engstrom2018' on page 12 undefined on input l
+ine 923.
+
+
+Package natbib Warning: Citation `Gandikota2021' on page 12 undefined on input 
+line 923.
+
+
+Package natbib Warning: Citation `Borzou2022' on page 12 undefined on input lin
+e 923.
+
+[12 <./Figures/Strain_Maps_New.pdf>]
+Underfull \hbox (badness 1400) in paragraph at lines 928--935
+\OT1/cmr/m/n/10 by the Med-i-cal Re-search Coun-cil (MC[]UP[]1201/9).
+(./multiscale.bbl
+
+LaTeX Warning: Reference `LastBibItem' on page 13 undefined on input line 9.
+
+[13 <./Figures/contact_map.pdf>]
+Underfull \hbox (badness 1721) in paragraph at lines 103--104
+ []\OT1/cmr/m/n/9 W. Winick-Ng, A. Kukalev, I. Harab-ula, L. Zea-
+
+Underfull \hbox (badness 4024) in paragraph at lines 151--152
+ []\OT1/cmr/m/n/9 S. Sri-vatsa, S. Parthasarathy, Z. Moln^^Sar,  and
+[14]
+Underfull \hbox (badness 2573) in paragraph at lines 316--317
+ []\OT1/cmr/m/n/9 A. Lo-makin, C. Cat-tin, D. Cu-ve-lier, Z. Al-raies,
+
+Underfull \hbox (badness 7631) in paragraph at lines 322--323
+ []\OT1/cmr/m/n/9 C. Hoen-camp, O. Dud-chenko, A. M. El-batsh,
+)
+
+Package natbib Warning: There were undefined citations.
+
+[15] (./multiscale.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `multiscale.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbx7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebre
+w/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
+0.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/homebrew/Cellar/texlive/2026030
+1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cell
+ar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><
+/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/texlive/20260301/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texliv
+e/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/homeb
+rew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy6.pfb></opt/homebrew/Cellar/texlive/202603
+01/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/homebrew/Cel
+lar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmti9.pfb>
+Output written on multiscale.pdf (15 pages, 10167197 bytes).
+Transcript written on multiscale.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./multiscale.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/revtex4-1/rev
+tex4-1.cls
+Document Class: revtex4-1 2020/09/30 4.1s (http://publish.aps.org/revtex4/ for 
+documentation)
+ltxutil[2020/09/30 4.1s utilities package (portions licensed from W. E. Baxter 
+web at superscript.com)]
+ltxfront[2020/09/30 4.1s frontmatter package (AO,DPC)]
+ltxgrid[2020/09/30 4.1s page grid package (portions licensed from W. E. Baxter 
+web at superscript.com)]
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/revtex4-1/aps
+4-1.rtx)
+
+Class revtex4-1 Warning: No type size specified, using default 10.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/revtex4-1/aps
+10pt4-1.rtx)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/textcase/text
+case.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/url/url.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/natbib/natbib
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/revtex4-1/rev
+symb4-1.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/dcolumn
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/array.s
+ty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/bm.sty)
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hype
+rref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iftex
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/kvdefinekey
+s/kvdefinekeys.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdfescape/p
+dfescape.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdftexcmds/
+pdftexcmds.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/infwarerr/i
+nfwarerr.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hycolor/hycol
+or.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/name
+ref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/refcount/refc
+ount.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/gettitlestr
+ing/gettitlestring.sty)
+
+Package nameref Warning: The definition of \label has changed! 
+(nameref)                Check your packages! 
+(nameref)                Replacing it with the kernel definition on input line 
+161.
+
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/etoolbox/etoo
+lbox.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/stringenc/s
+tringenc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/pd1e
+nc.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/intcalc/int
+calc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/puen
+c.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bitset/bits
+et.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bigintcalc/
+bigintcalc.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hpdf
+tex.def
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/rerunfilechec
+k/rerunfilecheck.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/uniquecount
+er/uniquecounter.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/colo
+r.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/epsf/epsf.s
+ty
+This is `epsf.tex' v2.7.4 <14 February 2011>
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/epsf
+ig.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/enumera
+te.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def) (./multiscale.aux
+
+LaTeX Warning: Label `fig:brain_organoid' multiply defined.
+
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg)) (./multiscale.out) (./multiscale.out)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 122.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 122.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[2 <./Figures/Fig1_MultiscaleModelingBrainOrganoid_v2.pdf>] [3 <./Figures/Fig_M
+ultiscale_Hypothesis_Schematic.pdf>]
+
+Package natbib Warning: Citation `banigan2017' on page 4 undefined on input lin
+e 353.
+
+
+Package natbib Warning: Citation `banigan2017' on page 4 undefined on input lin
+e 357.
+
+[4] [5 <./Figures/Fig2_MultiscaleModelingBrainOrganoid.pdf>] [6] [7 <./Figures/
+Fig6_MultiscaleModelingBrainOrganoidsv3.pdf>] [8] [9 <./Figures/Fig7_Multiscale
+modelingBrainOrganoid.pdf>] [10 <./Figures/Fig6.pdf>] [11 <./Figures/Dis_diff.p
+df> <./Figures/total_average_displacement_difference.pdf
+
+pdfTeX warning: pdflatex (file ./Figures/total_average_displacement_difference.
+pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [12 <./Figures/Strain_Maps_New.pdf>]
+Underfull \hbox (badness 1400) in paragraph at lines 928--935
+\OT1/cmr/m/n/10 by the Med-i-cal Re-search Coun-cil (MC[]UP[]1201/9).
+(./multiscale.bbl [13 <./Figures/contact_map.pdf>]
+Underfull \hbox (badness 4266) in paragraph at lines 151--152
+ []\OT1/cmr/m/n/9 S. Sri-vatsa, S. Parthasarathy, Z. Moln^^Sar,  and
+[14]
+Underfull \hbox (badness 2753) in paragraph at lines 316--317
+ []\OT1/cmr/m/n/9 A. Lo-makin, C. Cat-tin, D. Cu-ve-lier, Z. Al-raies,
+
+Underfull \hbox (badness 8075) in paragraph at lines 322--323
+ []\OT1/cmr/m/n/9 C. Hoen-camp, O. Dud-chenko, A. M. El-batsh,
+) 
+
+Package natbib Warning: There were undefined citations.
+
+[15] (./multiscale.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbx7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebre
+w/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
+0.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/homebrew/Cellar/texlive/2026030
+1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cell
+ar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><
+/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/texlive/20260301/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texliv
+e/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/homeb
+rew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy6.pfb></opt/homebrew/Cellar/texlive/202603
+01/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/homebrew/Cel
+lar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmti9.pfb>
+Output written on multiscale.pdf (15 pages, 10172652 bytes).
+Transcript written on multiscale.log.
+************************************
+** Labels in starred environments **
+************************************
+-- multiscale.tex       line  540: consider using a STAR environment
+-- multiscale.tex       line  569: consider using a STAR environment
+-- multiscale.tex       line  782: consider using a STAR environment
+
+*******************
+** Unused Labels **
+*******************
+-- multiscale.tex       line  182: remove label fig:multiscale_hypothesis
+-- multiscale.tex       line  335: remove label fig:multiscale_modeling
+-- multiscale.tex       line  393: remove label eq:energy
+-- multiscale.tex       line  452: remove label eq:dyn
+-- multiscale.tex       line  502: remove label fig:organoid_compression
+-- multiscale.tex       line  655: remove label fig:chromatin_compression
+-- multiscale.tex       line  691: remove label fig:differences_displacement_maps
+-- multiscale.tex       line  728: remove label fig:total_average_displacement_difference
+-- multiscale.tex       line  737: remove label fig:strain
+-- multiscale.tex       line  798: remove label fig:contact
+-- multiscale.tex       line   90: remove label FirstPage
+-- multiscale.tex       line   91: remove label fig:brain_organoid
+-- multiscale.tex       line   98: remove label fig:brain_organoid
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

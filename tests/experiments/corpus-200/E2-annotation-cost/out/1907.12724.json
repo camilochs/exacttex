@@ -1,0 +1,87 @@
+{
+ "paper": "1907.12724",
+ "main": "spikequantum.tex",
+ "files": [
+  {
+   "file": "spikequantum.tex",
+   "chars_before": 147501,
+   "chars_after": 147300,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 147501,
+ "chars_after": 147300,
+ "delta_pct": -0.136270262574491,
+ "unrepaired": {
+  "chars_after": 147300,
+  "chars_before": 147501,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.02294,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`spike-ref.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.136270262574491
+ },
+ "stats": {
+  "cite_cmds_live": 40,
+  "cite_keys_live": 49,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 67,
+  "labels_outside_grammar": 0,
+  "refs_live": 118,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 0,
+  "cite_cmds_annotated": 40,
+  "cite_keys_annotated": 49,
+  "ids_annotated": 67,
+  "refs_annotated": 118,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.02294,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`spike-ref.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "spikequantum.xtex",
+    "offset": 2549,
+    "length": 15,
+    "line": 74,
+    "column": 125
+   },
+   "message": "citation checking unavailable: `spike-ref.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

@@ -1,0 +1,3 @@
+planted=perturb1__ghost sites=[('main_jk.xtex', 68)]
+xtex new=[('XT1003', 'perturb1__ghost', 'main_jk.xtex', 68)]
+texlab new=[]

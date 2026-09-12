@@ -1,0 +1,152 @@
+{
+ "paper": "2203.03745",
+ "main": "decay_quasi_new.tex",
+ "files": [
+  {
+   "file": "decay_quasi_new.tex",
+   "chars_before": 4454,
+   "chars_after": 4510,
+   "emitted": true,
+   "identity": "import-ext-only",
+   "lines_differing": 7
+  },
+  {
+   "file": "abstract.tex",
+   "chars_before": 1379,
+   "chars_after": 1379,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "main_text.tex",
+   "chars_before": 56183,
+   "chars_after": 56108,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "examples_spinchain.tex",
+   "chars_before": 14605,
+   "chars_after": 14581,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "examples_qinfo.tex",
+   "chars_before": 7647,
+   "chars_after": 7641,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "conclusion.tex",
+   "chars_before": 3380,
+   "chars_after": 3377,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "acknowledge.tex",
+   "chars_before": 462,
+   "chars_after": 462,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "appendix_zeno.tex",
+   "chars_before": 20567,
+   "chars_after": 20501,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 8,
+ "chars_before": 108677,
+ "chars_after": 108559,
+ "delta_pct": -0.10857863209326721,
+ "unrepaired": {
+  "chars_after": 108559,
+  "chars_before": 108677,
+  "converted_files": 8,
+  "check_exit": 0,
+  "coverage": 0.022137,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`Drift.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.10857863209326721
+ },
+ "stats": {
+  "cite_cmds_live": 55,
+  "cite_keys_live": 80,
+  "cite_with_optarg_or_star": 15,
+  "cite_keys_outside_grammar": 14,
+  "other_cite_cmds": 0,
+  "labels_live": 58,
+  "labels_outside_grammar": 0,
+  "refs_live": 83,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 32,
+  "float_envs": 5,
+  "cite_cmds_annotated": 26,
+  "cite_keys_annotated": 26,
+  "ids_annotated": 58,
+  "refs_annotated": 81,
+  "inputs_root": 7,
+  "inputs_imported": 7,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 2,
+  "defects_reverted": 0,
+  "leaks_reverted": 2,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "main_text.tex",
+   "line": 278,
+   "token": "@ref(prop:main1intro)",
+   "wrapper": "?",
+   "context": "\\begin{prop}[Technical Version of Prop \\ref{prop:main1intro}] \\label{prop:decayhaml}"
+  },
+  {
+   "file": "main_text.tex",
+   "line": 488,
+   "token": "@ref(thm:zvscmlsiintro)",
+   "wrapper": "?",
+   "context": "\\begin{theorem}[Self-Restricting Noise, Technical Version of Theorem \\ref{thm:zvscmlsiintro}] \\label{thm:zvscmlsi}"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.022137,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`Drift.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "conclusion.xtex",
+    "offset": 707,
+    "length": 21,
+    "line": 6,
+    "column": 114
+   },
+   "message": "citation checking unavailable: `Drift.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

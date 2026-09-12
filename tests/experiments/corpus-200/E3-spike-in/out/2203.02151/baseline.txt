@@ -1,0 +1,24 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'bib.bib', 85, 'Duplicate entry key'), ('ERROR', 'bib.bib', 131, 'Duplicate entry key'), ('ERROR', 'bib.bib', 331, 'Duplicate entry key'), ('ERROR', 'bib.bib', 516, 'Duplicate entry key'), ('ERROR', 'bib.bib', 603, 'Duplicate entry key'), ('ERROR', 'bib.bib', 706, 'Duplicate entry key'), ('ERROR', 'bib.bib', 1051, 'Duplicate entry key'), ('ERROR', 'bib.bib', 1122, 'Duplicate entry key'), ('ERROR', 'bib.bib', 1179, 'Duplicate entry key'), ('ERROR', 'bib.bib', 1190, 'Duplicate entry key'), ('ERROR', 'bib.bib', 1565, 'Duplicate entry key'), ('ERROR', 'bib.bib', 1576, 'Duplicate entry key'), ('ERROR', 'bib.bib', 1611, 'Duplicate entry key'), ('ERROR', 'bib.bib', 1705, 'Duplicate entry key'), ('ERROR', 'bib.bib', 1983, 'Duplicate entry key'), ('ERROR', 'bib.bib', 1995, 'Duplicate entry key'), ('ERROR', 'bib.bib', 2122, 'Duplicate entry key'), ('ERROR', 'bib.bib', 2167, 'Duplicate entry key'), ('ERROR', 'elife.cls', 157, 'Undefined reference'), ('info', 'bib.bib', 64, 'Unused entry'), ('info', 'bib.bib', 199, 'Unused entry'), ('info', 'bib.bib', 378, 'Unused entry'), ('info', 'bib.bib', 729, 'Unused entry'), ('info', 'bib.bib', 839, 'Unused entry'), ('info', 'bib.bib', 1040, 'Unused entry'), ('info', 'bib.bib', 1064, 'Unused entry'), ('info', 'bib.bib', 1086, 'Unused entry'), ('info', 'bib.bib', 1214, 'Unused entry'), ('info', 'bib.bib', 1225, 'Unused entry'), ('info', 'bib.bib', 1236, 'Unused entry'), ('info', 'bib.bib', 1247, 'Unused entry'), ('info', 'bib.bib', 1257, 'Unused entry'), ('info', 'bib.bib', 1269, 'Unused entry'), ('info', 'bib.bib', 1432, 'Unused entry'), ('info', 'bib.bib', 1443, 'Unused entry'), ('info', 'bib.bib', 1454, 'Unused entry'), ('info', 'bib.bib', 1463, 'Unused entry'), ('info', 'bib.bib', 1796, 'Unused entry'), ('info', 'bib.bib', 1807, 'Unused entry'), ('info', 'bib.bib', 1820, 'Unused entry'), ('info', 'bib.bib', 1831, 'Unused entry'), ('info', 'bib.bib', 2111, 'Unused entry'), ('info', 'bib.bib', 2211, 'Unused entry'), ('info', 'bib.bib', 2222, 'Unused entry'), ('info', 'bib.bib', 2301, 'Unused entry'), ('info', 'bib.bib', 2312, 'Unused entry'), ('info', 'bib.bib', 2441, 'Unused entry'), ('info', 'bib.bib', 2490, 'Unused entry'), ('info', 'bib.bib', 2547, 'Unused entry'), ('info', 'bib.bib', 2556, 'Unused entry'), ('info', 'bib.bib', 2567, 'Unused entry'), ('info', 'bib.bib', 2578, 'Unused entry'), ('info', 'bib.bib', 2584, 'Unused entry'), ('info', 'bib.bib', 2595, 'Unused entry'), ('info', 'bib.bib', 2606, 'Unused entry'), ('info', 'bib.bib', 2621, 'Unused entry'), ('info', 'bib.bib', 2636, 'Unused entry'), ('info', 'bib.bib', 2651, 'Unused entry'), ('info', 'main_elife.tex', 44, 'Unused label'), ('info', 'main_elife.tex', 413, 'Unused label')]
+tectonic exit=-11 warnings=[] secs=2
+warning: lineno.sty:296: Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+warning: opensans.sty:115: 
+Requested font "[OpenSans-Regular.ttf]/OT" at 8.99997pt
+warning: opensans.sty:115: Requested font "[OpenSans-Regular.ttf]/OT" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-Light.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-LightItalic.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSansCondensed-Light.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSansCondensed-LightItalic.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-SemiBold.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-SemiBoldItalic.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-Bold.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-BoldItalic.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSansCondensed-Bold.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-ExtraBold.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-ExtraBoldItalic.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-Regular.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-Italic.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:151: Requested font "[OpenSans-Regular.ttf]/OT:script=latn;language=dflt;+liga;+tnum;+lnum;mapping=tex-text;" at 9.0pt
+warning: elife.cls:55: 
+Requested font "Latin Modern Mono" at 8.99997pt

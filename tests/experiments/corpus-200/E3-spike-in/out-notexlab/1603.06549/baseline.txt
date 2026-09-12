@@ -1,0 +1,12 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=['874730', 'SPE:SPE2289', 'arxiv:0901.3751', 'colantonio:2010:ccn:1824821.1824857', 'netfli', 'sec:relwork', 'wu2008breaking'] secs=2
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: algorithmic.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: RunRoaringBitmap.tex:161: Underfull \hbox (badness 10000) has occurred while \output is active
+warning: RunRoaringBitmap.tex:161: Underfull \hbox (badness 10000) has occurred while \output is active
+error: RunRoaringBitmap.tex:161: Undefined control sequence
+error: halted on potentially-recoverable error as specified

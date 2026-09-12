@@ -1,0 +1,379 @@
+{
+ "paper": "2106.01193",
+ "main": "QuantSup_PowerEff_PRR_V22.tex",
+ "files": [
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "chars_before": 110134,
+   "chars_after": 110134,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 110134,
+ "chars_after": 110134,
+ "delta_pct": 0.0,
+ "unrepaired": {
+  "chars_after": 110092,
+  "chars_before": 110134,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.0,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "the document declares no bibliography"
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.03813536237674106
+ },
+ "stats": {
+  "cite_cmds_live": 29,
+  "cite_keys_live": 95,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 10,
+  "other_cite_cmds": 0,
+  "labels_live": 14,
+  "labels_outside_grammar": 0,
+  "refs_live": 11,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 30,
+  "float_envs": 4,
+  "cite_cmds_annotated": 0,
+  "cite_keys_annotated": 0,
+  "ids_annotated": 0,
+  "refs_annotated": 0,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 44,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 136,
+   "token": "@cite(Brandner17)",
+   "wrapper": "?",
+   "context": "In general, the laws of thermodynamics cannot be directly applied to the engines that use working fluids made up of few particles. In that case, the conventiona"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 136,
+   "token": "@cite(Holubec16a)",
+   "wrapper": "?",
+   "context": "In general, the laws of thermodynamics cannot be directly applied to the engines that use working fluids made up of few particles. In that case, the conventiona"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 136,
+   "token": "@cite(Esposito10a)",
+   "wrapper": "?",
+   "context": "In general, the laws of thermodynamics cannot be directly applied to the engines that use working fluids made up of few particles. In that case, the conventiona"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 136,
+   "token": "@cite(Ma18a)",
+   "wrapper": "?",
+   "context": "In general, the laws of thermodynamics cannot be directly applied to the engines that use working fluids made up of few particles. In that case, the conventiona"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 136,
+   "token": "@cite(Pietzonka18)",
+   "wrapper": "?",
+   "context": "In general, the laws of thermodynamics cannot be directly applied to the engines that use working fluids made up of few particles. In that case, the conventiona"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 136,
+   "token": "@cite(Brandner20)",
+   "wrapper": "?",
+   "context": "In general, the laws of thermodynamics cannot be directly applied to the engines that use working fluids made up of few particles. In that case, the conventiona"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 136,
+   "token": "@cite(Miller20)",
+   "wrapper": "?",
+   "context": "In general, the laws of thermodynamics cannot be directly applied to the engines that use working fluids made up of few particles. In that case, the conventiona"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 140,
+   "token": "@cite(MLBera21)",
+   "wrapper": "?",
+   "context": "Here we introduce quantum heat engines operating in the one-shot finite-size regime and study the power and efficiency of heat-to-work conversion. We show that "
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 142,
+   "token": "@ref(sec:EngOp)",
+   "wrapper": "?",
+   "context": "The article is organized as follows. In Section~\\ref{sec:EngOp}, we briefly describe the thermodynamical transformation with which a quantum heat engine operate"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 142,
+   "token": "@cite(MLBera21)",
+   "wrapper": "?",
+   "context": "The article is organized as follows. In Section~\\ref{sec:EngOp}, we briefly describe the thermodynamical transformation with which a quantum heat engine operate"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 142,
+   "token": "@ref(sec:MaxPMaxE)",
+   "wrapper": "?",
+   "context": "The article is organized as follows. In Section~\\ref{sec:EngOp}, we briefly describe the thermodynamical transformation with which a quantum heat engine operate"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 142,
+   "token": "@ref(sec:QObasedHE)",
+   "wrapper": "?",
+   "context": "The article is organized as follows. In Section~\\ref{sec:EngOp}, we briefly describe the thermodynamical transformation with which a quantum heat engine operate"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 142,
+   "token": "@ref(sec:MaxPMaxE)",
+   "wrapper": "?",
+   "context": "The article is organized as follows. In Section~\\ref{sec:EngOp}, we briefly describe the thermodynamical transformation with which a quantum heat engine operate"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 142,
+   "token": "@ref(sec:QObasedHE)",
+   "wrapper": "?",
+   "context": "The article is organized as follows. In Section~\\ref{sec:EngOp}, we briefly describe the thermodynamical transformation with which a quantum heat engine operate"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 142,
+   "token": "@ref(sec:Disc)",
+   "wrapper": "?",
+   "context": "The article is organized as follows. In Section~\\ref{sec:EngOp}, we briefly describe the thermodynamical transformation with which a quantum heat engine operate"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 146,
+   "token": "@id(sec:EngOp)",
+   "wrapper": "section",
+   "context": "\\section{Engine operating in one-step cycle \\label{sec:EngOp}}"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 149,
+   "token": "@cite(MLBera21)",
+   "wrapper": "?",
+   "context": "The engine lets the baths interact with the working system and the batteries via a global unitary evolution ($U$) where the composite $S_1S_{W_1}$ semi-locally "
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 150,
+   "token": "@id(eqmt:slto-Stinespring)",
+   "wrapper": "?",
+   "context": "\\begin{align} \\label{eqmt:slto-Stinespring}"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 161,
+   "token": "@cite(MLBera21)",
+   "wrapper": "?",
+   "context": "The relation~\\eqref{eqmt:slto-commutationTemp} ensures strict weighted energy conservation. We may place two arguments to justify why quantum heat engines must "
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 161,
+   "token": "@cite(MLBera21)",
+   "wrapper": "?",
+   "context": "The relation~\\eqref{eqmt:slto-commutationTemp} ensures strict weighted energy conservation. We may place two arguments to justify why quantum heat engines must "
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 166,
+   "token": "@id(fig:OneStepCycle)",
+   "wrapper": "?",
+   "context": "\\label{fig:OneStepCycle}}"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 169,
+   "token": "@ref(fig:OneStepCycle)",
+   "wrapper": "?",
+   "context": "In an engine operating in cycles, the system $S_{12}$ mediates the heat transfer from $B_1$ to $B_2$, while a part of that is converted into work and stored in "
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 180,
+   "token": "@cite(MLBera21)",
+   "wrapper": "?",
+   "context": "This involves two simultaneous sub-transformations. One is $(\\rho, \\ H) \\to (\\sigma, \\ H^\\prime)$ via a semi-local interaction with $B_1$, which can be understo"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 182,
+   "token": "@id(sec:MaxPMaxE)",
+   "wrapper": "section",
+   "context": "\\section{Maximum power with Carnot efficiency \\label{sec:MaxPMaxE}}"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 189,
+   "token": "@cite(MLBera21)",
+   "wrapper": "?",
+   "context": "using a semi-local thermal operation \\cite{MLBera21}, where the subsystems $S_1$ and $S_2$ swap their states without changing the Hamiltonians, and the batterie"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 191,
+   "token": "@ref(fig:QHEcopy)",
+   "wrapper": "?",
+   "context": "For simplicity, we may consider the working system and the battery to be the parts of single system $S \\equiv S_1S_2S_{W_1}S_{W_2}$ with the Hamiltonian $H_{S}="
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 205,
+   "token": "@id(fig:QHEcopy)",
+   "wrapper": "?",
+   "context": "\\label{fig:QHEcopy}}"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 251,
+   "token": "@id(fig:Geodesic)",
+   "wrapper": "?",
+   "context": "\\label{fig:Geodesic}}"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 256,
+   "token": "@cite(Anandan90)",
+   "wrapper": "?",
+   "context": "Contrary to the traditional understanding, the reversible (one-step) engine cycle via semi-local thermal operation requires finite time. Not only that, as we ar"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 260,
+   "token": "@cite(Anandan90)",
+   "wrapper": "?",
+   "context": "where $ds=\\frac{1}{2}(1-|\\braket{\\psi(t) | \\psi(t + dt)}|^2)$ and energy uncertainty $\\Delta H_{in} = \\sqrt{\\braket{\\psi(t)|H_{in}^2|\\psi(t)}  - \\braket{\\psi(t)"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 260,
+   "token": "@ref(fig:Geodesic)",
+   "wrapper": "?",
+   "context": "where $ds=\\frac{1}{2}(1-|\\braket{\\psi(t) | \\psi(t + dt)}|^2)$ and energy uncertainty $\\Delta H_{in} = \\sqrt{\\braket{\\psi(t)|H_{in}^2|\\psi(t)}  - \\braket{\\psi(t)"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 262,
+   "token": "@id(sec:QObasedHE)",
+   "wrapper": "section",
+   "context": "\\section{A quantum optics based heat engine \\label{sec:QObasedHE}}"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 263,
+   "token": "@ref(fig:Lambda_system)",
+   "wrapper": "?",
+   "context": "Here we discuss a physically realizable quantum heat engine transferring maximum power with Carnot efficiency following the theoretical framework presented abov"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 287,
+   "token": "@id(fig:Lambda_system)",
+   "wrapper": "?",
+   "context": "\\label{fig:Lambda_system}}"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 303,
+   "token": "@ref(fig:Lambda_system)",
+   "wrapper": "?",
+   "context": "for $Z_{B_1} \\to \\infty$, which is true for low inverse temperature $\\beta_1$ of bath $B_1$, or $|B_1| \\to \\infty$. In each cycle, the the system $S$ undergoes "
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 307,
+   "token": "@id(sec:Disc)",
+   "wrapper": "section",
+   "context": "\\section{Discussion \\label{sec:Disc}}"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 308,
+   "token": "@cite(Curzon75)",
+   "wrapper": "?",
+   "context": "For finite-time classical engines, it is known that the maximum power at maximum heat-to-work conversion efficiency is impossible \\cite{Curzon75}. For quantum e"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 331,
+   "token": "@id(app:BathProp)",
+   "wrapper": "section",
+   "context": "\\section{Properties of large baths \\label{app:BathProp}}"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 337,
+   "token": "@id(eq:BathTypicality)",
+   "wrapper": "?",
+   "context": "\\begin{align}\\label{eq:BathTypicality}"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 340,
+   "token": "@cite(MLBera21)",
+   "wrapper": "?",
+   "context": "where $P_{\\mathcal{E}_{B_{12}}}$ is a projector that spans over the space corresponding to the set $\\mathcal{E}_{B_{12}}$ and $\\delta > 0$. With this, the prope"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 352,
+   "token": "@id(eq:OveralAllTrans)",
+   "wrapper": "?",
+   "context": "\\begin{align}\\label{eq:OveralAllTrans}"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 356,
+   "token": "@id(eq:E12Block)",
+   "wrapper": "?",
+   "context": "\\begin{align}\\label{eq:E12Block}"
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 367,
+   "token": "@cite(MLBera21)",
+   "wrapper": "?",
+   "context": "Note, similar transformations will follow in the other total weighted-energy blocks with identical initial and final battery states. The reduced transformation "
+  },
+  {
+   "file": "QuantSup_PowerEff_PRR_V22.tex",
+   "line": 368,
+   "token": "@id(eq:SdCarnotMax)",
+   "wrapper": "?",
+   "context": "\\begin{align}\\label{eq:SdCarnotMax}"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.0,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "the document declares no bibliography"
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

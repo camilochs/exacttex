@@ -1,0 +1,36 @@
+{
+ "coverage": 0.024287,
+ "bibliography": {
+  "state": "complete",
+  "entries": 74
+ },
+ "diagnostics": [
+  {
+   "code": "XT1020",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "section",
+   "name": "tab:03_challenges",
+   "span": {
+    "file": "04_framework.xtex",
+    "offset": 3296,
+    "length": 7,
+    "line": 32,
+    "column": 18
+   },
+   "message": "prose says `Section` but `tab:03_challenges` is a table",
+   "related": [
+    {
+     "message": "table declared here",
+     "span": {
+      "file": "03_challenges.xtex",
+      "offset": 20290,
+      "length": 17,
+      "line": 146,
+      "column": 5
+     }
+    }
+   ]
+  }
+ ]
+}

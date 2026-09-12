@@ -1,0 +1,288 @@
+exit=2
+lines=7770
+unique_findings=1264
+ning 1 in Main_SI_combined.tex line 1457: Command terminated with space.
+  {Plotkin}},\ }\bibfield  {title} {\bibinfo {title} {{Inferring the shape of  
+                         ^
+Warning 1 in Main_SI_combined.tex line 1457: Command terminated with space.
+  {Plotkin}},\ }\bibfield  {title} {\bibinfo {title} {{Inferring the shape of  
+                                            ^
+Warning 1 in Main_SI_combined.tex line 1458: Command terminated with space.
+  global epistasis.}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  
+                                   ^
+Warning 1 in Main_SI_combined.tex line 1458: Command terminated with space.
+  global epistasis.}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  
+                                                 ^
+Warning 1 in Main_SI_combined.tex line 1458: Command terminated with space.
+  global epistasis.}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  
+                                                                      ^
+Warning 1 in Main_SI_combined.tex line 1459: Command terminated with space.
+  {journal} {Proc. Natl. Acad. Sci. U.S.A.}\ }\textbf {\bibinfo {volume}  
+                                                               ^
+Warning 1 in Main_SI_combined.tex line 1460: Command terminated with space.
+  {115}},\ \bibinfo {pages} {E7550} (\bibinfo {year} {2018})}\BibitemShut  
+                   ^
+Warning 1 in Main_SI_combined.tex line 1460: Command terminated with space.
+  {115}},\ \bibinfo {pages} {E7550} (\bibinfo {year} {2018})}\BibitemShut  
+                                             ^
+Warning 1 in Main_SI_combined.tex line 1460: Command terminated with space.
+  {115}},\ \bibinfo {pages} {E7550} (\bibinfo {year} {2018})}\BibitemShut  
+                                                                         ^
+Warning 1 in Main_SI_combined.tex line 1462: Command terminated with space.
+\bibitem [{\citenamefont {Otwinowski}(2018)}]{Otwinowski:2018jb}%  
+        ^
+Warning 1 in Main_SI_combined.tex line 1463: Command terminated with space.
+  \BibitemOpen  
+              ^
+Warning 1 in Main_SI_combined.tex line 1464: Command terminated with space.
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont  
+           ^
+Warning 1 in Main_SI_combined.tex line 1464: Command terminated with space.
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont  
+                               ^
+Warning 1 in Main_SI_combined.tex line 1464: Command terminated with space.
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont  
+                                                       ^
+Warning 1 in Main_SI_combined.tex line 1464: Command terminated with space.
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont  
+                                                                         ^
+Warning 1 in Main_SI_combined.tex line 1465: Command terminated with space.
+  {Otwinowski}},\ }\bibfield  {title} {\bibinfo {title} {{Biophysical inference  
+                            ^
+Warning 1 in Main_SI_combined.tex line 1465: Command terminated with space.
+  {Otwinowski}},\ }\bibfield  {title} {\bibinfo {title} {{Biophysical inference  
+                                               ^
+Warning 1 in Main_SI_combined.tex line 1467: Command terminated with space.
+  function.}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Mol.  
+                           ^
+Warning 1 in Main_SI_combined.tex line 1467: Command terminated with space.
+  function.}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Mol.  
+                                         ^
+Warning 1 in Main_SI_combined.tex line 1467: Command terminated with space.
+  function.}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Mol.  
+                                                              ^
+Warning 1 in Main_SI_combined.tex line 1468: Command terminated with space.
+  Biol. Evol.}\ }\textbf {\bibinfo {volume} {5}},\ \bibinfo {pages} {e23156.}  
+                                  ^
+Warning 1 in Main_SI_combined.tex line 1468: Command terminated with space.
+  Biol. Evol.}\ }\textbf {\bibinfo {volume} {5}},\ \bibinfo {pages} {e23156.}  
+                                                           ^
+Warning 1 in Main_SI_combined.tex line 1469: Command terminated with space.
+  (\bibinfo {year} {2018})}\BibitemShut {NoStop}%  
+           ^
+Warning 1 in Main_SI_combined.tex line 1469: Command terminated with space.
+  (\bibinfo {year} {2018})}\BibitemShut {NoStop}%  
+                                       ^
+Warning 1 in Main_SI_combined.tex line 1470: Command terminated with space.
+\bibitem [{\citenamefont {Husain}\ and\ \citenamefont  
+        ^
+Warning 36 in Main_SI_combined.tex line 1471: You should put a space in front of parenthesis.
+  {Murugan}(2020)}]{Husain:2020js}%  
+           ^
+Warning 1 in Main_SI_combined.tex line 1472: Command terminated with space.
+  \BibitemOpen  
+              ^
+Warning 1 in Main_SI_combined.tex line 1473: Command terminated with space.
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont  
+           ^
+Warning 1 in Main_SI_combined.tex line 1473: Command terminated with space.
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont  
+                               ^
+Warning 1 in Main_SI_combined.tex line 1473: Command terminated with space.
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont  
+                                                       ^
+Warning 1 in Main_SI_combined.tex line 1473: Command terminated with space.
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont  
+                                                                         ^
+Warning 1 in Main_SI_combined.tex line 1474: Command terminated with space.
+  {Husain}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont  
+                          ^
+Warning 1 in Main_SI_combined.tex line 1474: Command terminated with space.
+  {Husain}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont  
+                                                  ^
+Warning 1 in Main_SI_combined.tex line 1474: Command terminated with space.
+  {Husain}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont  
+                                                                    ^
+Warning 1 in Main_SI_combined.tex line 1475: Command terminated with space.
+  {Murugan}},\ }\bibfield  {title} {\bibinfo {title} {{Physical Constraints on  
+                         ^
+Warning 1 in Main_SI_combined.tex line 1475: Command terminated with space.
+  {Murugan}},\ }\bibfield  {title} {\bibinfo {title} {{Physical Constraints on  
+                                            ^
+Warning 1 in Main_SI_combined.tex line 1476: Command terminated with space.
+  Epistasis}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Mol.  
+                           ^
+Warning 1 in Main_SI_combined.tex line 1476: Command terminated with space.
+  Epistasis}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Mol.  
+                                         ^
+Warning 1 in Main_SI_combined.tex line 1476: Command terminated with space.
+  Epistasis}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Mol.  
+                                                              ^
+Warning 1 in Main_SI_combined.tex line 1477: Command terminated with space.
+  Biol. Evol.}\ }\textbf {\bibinfo {volume} {37}},\ \bibinfo {pages} {2865}  
+                                  ^
+Warning 1 in Main_SI_combined.tex line 1477: Command terminated with space.
+  Biol. Evol.}\ }\textbf {\bibinfo {volume} {37}},\ \bibinfo {pages} {2865}  
+                                                            ^
+Warning 1 in Main_SI_combined.tex line 1478: Command terminated with space.
+  (\bibinfo {year} {2020})}\BibitemShut {NoStop}%  
+           ^
+Warning 1 in Main_SI_combined.tex line 1478: Command terminated with space.
+  (\bibinfo {year} {2020})}\BibitemShut {NoStop}%  
+                                       ^
+Warning 1 in Main_SI_combined.tex line 1479: Command terminated with space.
+\bibitem [{\citenamefont {Blundell}\ and\ \citenamefont  
+        ^
+Warning 36 in Main_SI_combined.tex line 1480: You should put a space in front of parenthesis.
+  {Levy}(2014)}]{Blundell:2014if}%  
+        ^
+Warning 1 in Main_SI_combined.tex line 1481: Command terminated with space.
+  \BibitemOpen  
+              ^
+Warning 1 in Main_SI_combined.tex line 1482: Command terminated with space.
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~R.}\ \bibnamefont  
+           ^
+Warning 1 in Main_SI_combined.tex line 1482: Command terminated with space.
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~R.}\ \bibnamefont  
+                               ^
+Warning 1 in Main_SI_combined.tex line 1482: Command terminated with space.
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~R.}\ \bibnamefont  
+                                                       ^
+Warning 1 in Main_SI_combined.tex line 1482: Command terminated with space.
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~R.}\ \bibnamefont  
+                                                                             ^
+Warning 1 in Main_SI_combined.tex line 1483: Command terminated with space.
+  {Blundell}}\ and\ \bibinfo {author} {\bibfnamefont {S.~F.}\ \bibnamefont  
+                            ^
+Warning 1 in Main_SI_combined.tex line 1483: Command terminated with space.
+  {Blundell}}\ and\ \bibinfo {author} {\bibfnamefont {S.~F.}\ \bibnamefont  
+                                                    ^
+Warning 1 in Main_SI_combined.tex line 1483: Command terminated with space.
+  {Blundell}}\ and\ \bibinfo {author} {\bibfnamefont {S.~F.}\ \bibnamefont  
+                                                                          ^
+Warning 1 in Main_SI_combined.tex line 1484: Command terminated with space.
+  {Levy}},\ }\bibfield  {title} {\bibinfo {title} {{Beyond genome sequencing:  
+                      ^
+Warning 1 in Main_SI_combined.tex line 1484: Command terminated with space.
+  {Levy}},\ }\bibfield  {title} {\bibinfo {title} {{Beyond genome sequencing:  
+                                         ^
+Warning 1 in Main_SI_combined.tex line 1486: Command terminated with space.
+  and cancer.}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}  
+                             ^
+Warning 1 in Main_SI_combined.tex line 1486: Command terminated with space.
+  and cancer.}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}  
+                                           ^
+Warning 1 in Main_SI_combined.tex line 1486: Command terminated with space.
+  and cancer.}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}  
+                                                                ^
+Warning 1 in Main_SI_combined.tex line 1487: Command terminated with space.
+  {Genomics}\ }\textbf {\bibinfo {volume} {104}},\ \bibinfo {pages} {417}  
+                                ^
+Warning 1 in Main_SI_combined.tex line 1487: Command terminated with space.
+  {Genomics}\ }\textbf {\bibinfo {volume} {104}},\ \bibinfo {pages} {417}  
+                                                           ^
+Warning 1 in Main_SI_combined.tex line 1488: Command terminated with space.
+  (\bibinfo {year} {2014})}\BibitemShut {NoStop}%  
+           ^
+Warning 1 in Main_SI_combined.tex line 1488: Command terminated with space.
+  (\bibinfo {year} {2014})}\BibitemShut {NoStop}%  
+                                       ^
+Warning 1 in Main_SI_combined.tex line 1489: Command terminated with space.
+\bibitem [{\citenamefont {Risken}\ \emph {et~al.}(1966)\citenamefont {Risken},  
+        ^
+Warning 36 in Main_SI_combined.tex line 1489: You should put a space in front of parenthesis.
+\bibitem [{\citenamefont {Risken}\ \emph {et~al.}(1966)\citenamefont {Risken},  
+                                                 ^
+Warning 1 in Main_SI_combined.tex line 1490: Command terminated with space.
+  \citenamefont {Schmid},\ and\ \citenamefont {Weidlich}}]{Risken:1966bi}%  
+               ^
+Warning 1 in Main_SI_combined.tex line 1490: Command terminated with space.
+  \citenamefont {Schmid},\ and\ \citenamefont {Weidlich}}]{Risken:1966bi}%  
+                                             ^
+Warning 1 in Main_SI_combined.tex line 1491: Command terminated with space.
+  \BibitemOpen  
+              ^
+Warning 1 in Main_SI_combined.tex line 1492: Command terminated with space.
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont  
+           ^
+Warning 1 in Main_SI_combined.tex line 1492: Command terminated with space.
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont  
+                               ^
+Warning 1 in Main_SI_combined.tex line 1492: Command terminated with space.
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont  
+                                                       ^
+Warning 1 in Main_SI_combined.tex line 1492: Command terminated with space.
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont  
+                                                                         ^
+Warning 1 in Main_SI_combined.tex line 1493: Command terminated with space.
+  {Risken}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Schmid}},\  
+                     ^
+Warning 1 in Main_SI_combined.tex line 1493: Command terminated with space.
+  {Risken}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Schmid}},\  
+                                             ^
+Warning 1 in Main_SI_combined.tex line 1493: Command terminated with space.
+  {Risken}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Schmid}},\  
+                                                               ^
+Warning 1 in Main_SI_combined.tex line 1494: Command terminated with space.
+  and\ \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Weidlich}},\  
+               ^
+Warning 1 in Main_SI_combined.tex line 1494: Command terminated with space.
+  and\ \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Weidlich}},\  
+                                       ^
+Warning 1 in Main_SI_combined.tex line 1494: Command terminated with space.
+  and\ \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Weidlich}},\  
+                                                         ^
+Warning 1 in Main_SI_combined.tex line 1495: Command terminated with space.
+  }\bibfield  {title} {\bibinfo {title} {{Fokker-Planck equation, distribution  
+            ^
+Warning 1 in Main_SI_combined.tex line 1495: Command terminated with space.
+  }\bibfield  {title} {\bibinfo {title} {{Fokker-Planck equation, distribution  
+                               ^
+Warning 1 in Main_SI_combined.tex line 1496: Command terminated with space.
+  and correlation functions for laser noise}},\ }\href@noop {} {\bibfield  
+                                                           ^
+Warning 1 in Main_SI_combined.tex line 1496: Command terminated with space.
+  and correlation functions for laser noise}},\ }\href@noop {} {\bibfield  
+                                                                         ^
+Warning 1 in Main_SI_combined.tex line 1497: Command terminated with space.
+  {journal} {\bibinfo  {journal} {Z. Physik}\ }\textbf {\bibinfo {volume}  
+                     ^
+Warning 1 in Main_SI_combined.tex line 1497: Command terminated with space.
+  {journal} {\bibinfo  {journal} {Z. Physik}\ }\textbf {\bibinfo {volume}  
+                                                                ^
+Warning 1 in Main_SI_combined.tex line 1498: Command terminated with space.
+  {194}},\ \bibinfo {pages} {337} (\bibinfo {year} {1966})}\BibitemShut  
+                   ^
+Warning 1 in Main_SI_combined.tex line 1498: Command terminated with space.
+  {194}},\ \bibinfo {pages} {337} (\bibinfo {year} {1966})}\BibitemShut  
+                                           ^
+Warning 1 in Main_SI_combined.tex line 1498: Command terminated with space.
+  {194}},\ \bibinfo {pages} {337} (\bibinfo {year} {1966})}\BibitemShut  
+                                                                       ^
+Warning 24 in Main_SI_combined.tex line 1512: Delete this space to maintain correct pagereferences.
+\label{Fig:3} }  
+^
+Warning 24 in Main_SI_combined.tex line 1521: Delete this space to maintain correct pagereferences.
+\label{Fig:S3} }  
+^
+Warning 24 in Main_SI_combined.tex line 1529: Delete this space to maintain correct pagereferences.
+\label{Fig:S1} }  
+^
+Warning 24 in Main_SI_combined.tex line 1537: Delete this space to maintain correct pagereferences.
+\label{Fig:S2} }  
+^
+Warning 7 in Main_SI_combined.tex line 1542: Accent command `\"' needs use of `\i'.
+\caption{{{\bf Optimal controller versus na\"{i}ve controllers.} {\bf (A)} The distribution of phenotypes at the end point of optimal artificial selection protocol compared to the phenotypic distribution under natural selection, proportional control, and proportional control with exponential weights. {\bf (B)} The distribution of logarithm of the total costs $\log(J(\mathbf{x}_0,0))$ for natural selection, optimal artificial selection protocol, proportional control, and proportional control with exponential weights. Evolutionary parameters are $c_x= 5$, $c_y=5$, $c_{xy}=0$; $x^*=3$, $y^*=0$; $k_x=0.05$; $k_y=0.05$; $k_{xy}=0$; $g_x=g_y=3$; $\lambda=0.01$. We let $\kappa_{x,t}=k_x g_x/\lambda=15$,  $\kappa_{y,t}= k_y g_y/\lambda=15$ and $\delta = 0.1$ in eq. (E1) for proportional control. Similarly, the exponential weights are set as  $\kappa_{x,t}= 2.5\exp(1-\tau)$,  $\kappa_{y,t}=2.5\exp(1-\tau)$ where $\tau$ denotes the remaining time. The proportional control gains are set so that the ensemble mean of the phenotype $x$ at the end point matches that of the optimal artificial selection protocol.}}\label{Fig:S5}  
+                                           ^^
+Warning 12 in Main_SI_combined.tex line 1548: Interword spacing (`\ ') should perhaps be used.
+\caption{{{\bf Alternative artificial selection protocols.} Ensemble mean of control actions for 2D phenotypes ($x,\,y$) under optimal artificial selection $u_x^{opt},\,u_y^{opt}$, proportional control $u_x^{p},\,u_y^{p}$, and proportional control with exponential weights $u_x^{pe},\,u_y^{pe}$ are shown as a function time to the target. Evolutionary and artificial selection parameters are similar to Fig. \ref{Fig:S5}.}}\label{Fig:S6}  
+                                                                                                                                                                                                                                                                                                                                                                                                                       ^
+Warning 2 in Main_SI_combined.tex line 1548: Non-breaking space (`~') should have been used.
+\caption{{{\bf Alternative artificial selection protocols.} Ensemble mean of control actions for 2D phenotypes ($x,\,y$) under optimal artificial selection $u_x^{opt},\,u_y^{opt}$, proportional control $u_x^{p},\,u_y^{p}$, and proportional control with exponential weights $u_x^{pe},\,u_y^{pe}$ are shown as a function time to the target. Evolutionary and artificial selection parameters are similar to Fig. \ref{Fig:S5}.}}\label{Fig:S6}  
+                                                                                                                                                                                                                                                                                                                                                                                                                       ^
+Warning 17 in Main_SI_combined.tex line 1563: Number of `(' doesn't match the number of `)'!
+
+
+Warning 17 in Main_SI_combined.tex line 1563: Number of `[' doesn't match the number of `]'!
+
+

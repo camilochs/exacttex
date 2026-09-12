@@ -1,0 +1,25 @@
+{
+ "coverage": 0.026478,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`geomixed.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "geomixed_sp_preprint.xtex",
+    "offset": 8177,
+    "length": 28,
+    "line": 165,
+    "column": 157
+   },
+   "message": "citation checking unavailable: `geomixed.bib` could not be read",
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,534 @@
+pdf=1
+exit=0
+lines=882
+unique_findings=32
+ig9.pdf, page is rotated 90 degrees> <./fig10.pdf, page is rotated 90
+ degrees>]
+
+LaTeX Warning: Reference `a2' on page 8 undefined on input line 311.
+
+
+Package natbib Warning: Citation `Lien16' on page 8 undefined on input line 311
+.
+
+
+LaTeX Warning: Reference `t5' on page 8 undefined on input line 312.
+
+
+Package natbib Warning: Citation `Zhang13' on page 8 undefined on input line 31
+4.
+
+
+LaTeX Warning: Reference `t5' on page 8 undefined on input line 316.
+
+
+Package natbib Warning: Citation `Zhang13' on page 8 undefined on input line 31
+6.
+
+
+LaTeX Warning: Reference `fig20' on page 8 undefined on input line 316.
+
+
+Package natbib Warning: Citation `Zhang13' on page 8 undefined on input line 31
+6.
+
+
+LaTeX Warning: Reference `fig20' on page 8 undefined on input line 316.
+
+
+LaTeX Warning: Reference `t5' on page 8 undefined on input line 318.
+
+
+Package natbib Warning: Citation `Zhang13' on page 8 undefined on input line 33
+6.
+
+
+Package natbib Warning: Citation `Zhang13' on page 8 undefined on input line 34
+1.
+
+
+Package natbib Warning: Citation `Zhang13' on page 8 undefined on input line 34
+4.
+
+
+Package natbib Warning: Citation `Crawford87a' on page 8 undefined on input lin
+e 349.
+
+
+Package natbib Warning: Citation `Crawford87b' on page 8 undefined on input lin
+e 349.
+
+
+Package natbib Warning: Citation `Crawford91' on page 8 undefined on input line
+ 349.
+
+
+Package natbib Warning: Citation `Crawford93' on page 8 undefined on input line
+ 349.
+
+
+Package natbib Warning: Citation `Crawford95a' on page 8 undefined on input lin
+e 349.
+
+
+Package natbib Warning: Citation `Crawford95b' on page 8 undefined on input lin
+e 349.
+
+
+Package natbib Warning: Citation `Crawford99' on page 8 undefined on input line
+ 349.
+
+
+Package natbib Warning: Citation `Crawford06' on page 8 undefined on input line
+ 349.
+
+
+Package natbib Warning: Citation `Crawford09a' on page 8 undefined on input lin
+e 349.
+
+
+Package natbib Warning: Citation `Crawford09b' on page 8 undefined on input lin
+e 349.
+
+
+Package natbib Warning: Citation `Crawford10' on page 8 undefined on input line
+ 349.
+
+
+Package natbib Warning: Citation `Crawford10' on page 8 undefined on input line
+ 349.
+
+[8 <./fig20.pdf, page is rotated 90 degrees>]
+
+Package natbib Warning: Citation `Crawford10' on page 9 undefined on input line
+ 362.
+
+
+Package natbib Warning: Citation `Misner73' on page 9 undefined on input line 3
+62.
+
+
+LaTeX Warning: Reference `c3' on page 9 undefined on input line 390.
+
+[9]
+
+Package natbib Warning: Citation `Eotvos22' on page 10 undefined on input line 
+400.
+
+
+Package natbib Warning: Citation `Dicke64' on page 10 undefined on input line 4
+00.
+
+
+Package natbib Warning: Citation `Braginskii71' on page 10 undefined on input l
+ine 400.
+
+
+LaTeX Warning: Reference `c4' on page 10 undefined on input line 409.
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 409--410
+[]\OT1/cmr/m/n/10 Including Cur-va-ture Pres-sure into the Fried-mann
+
+Package natbib Warning: Citation `Tolman34' on page 10 undefined on input line 
+421.
+
+
+Package natbib Warning: Citation `Ellis84' on page 10 undefined on input line 4
+21.
+
+
+LaTeX Warning: Reference `c7' on page 10 undefined on input line 427.
+
+
+Package natbib Warning: Citation `Giacconi62' on page 10 undefined on input lin
+e 430.
+
+
+Package natbib Warning: Citation `Mather90' on page 10 undefined on input line 
+444.
+
+[10]
+
+Package natbib Warning: Citation `Zwicky37' on page 11 undefined on input line 
+452.
+
+[11]
+
+LaTeX Warning: Reference `s8.2' on page 12 undefined on input line 512.
+
+
+LaTeX Warning: Reference `s8.6' on page 12 undefined on input line 513.
+
+
+LaTeX Warning: Reference `s8.5' on page 12 undefined on input line 528.
+
+
+LaTeX Warning: Reference `s8.5' on page 12 undefined on input line 529.
+
+
+LaTeX Warning: Reference `s8.6' on page 12 undefined on input line 531.
+
+
+LaTeX Warning: Reference `s8.3' on page 12 undefined on input line 532.
+
+
+LaTeX Warning: Reference `s8.4' on page 12 undefined on input line 533.
+
+
+LaTeX Warning: Reference `s8.7' on page 12 undefined on input line 535.
+
+
+LaTeX Warning: Reference `t6' on page 12 undefined on input line 541.
+
+
+LaTeX Warning: Reference `s4' on page 12 undefined on input line 566.
+
+
+LaTeX Warning: Reference `s5' on page 12 undefined on input line 566.
+
+[12]
+
+Package natbib Warning: Citation `Kessler09' on page 13 undefined on input line
+ 584.
+
+
+LaTeX Warning: Reference `t7' on page 13 undefined on input line 584.
+
+
+Underfull \hbox (badness 2310) in paragraph at lines 584--603
+[]\OT1/cmr/m/n/10 All of the orig-i-nal type Ia su-per-novae ob-ser-va-
+
+Underfull \hbox (badness 3746) in paragraph at lines 584--603
+\OT1/cmr/m/n/10 tions were re-trieved from the SNANA (\OT1/cmr/bx/n/10 ?\OT1/cm
+r/m/n/10 ) in
+
+Underfull \hbox (badness 1292) in paragraph at lines 584--603
+\OT1/cmr/m/n/10 the down-load pack-age $\OML/cmm/m/it/10 snana:tar:gz$ \OT1/cmr
+/m/n/10 on the web-site
+
+Underfull \hbox (badness 1226) in paragraph at lines 584--603
+\OT1/cmr/m/n/10 http://www.snana.uchicago.edu us-ing the in-dex files
+
+Underfull \hbox (badness 1845) in paragraph at lines 604--605
+\OT1/cmr/m/n/10 Light-curve Anal-y-sis) anal-y-sis was taken from the
+
+Underfull \hbox (badness 1755) in paragraph at lines 604--605
+\OT1/cmr/m/n/10 SNANA web-site in the di-rec-tory $\OML/cmm/m/it/10 models=SALT
+\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 -
+
+Underfull \hbox (badness 10000) in paragraph at lines 606--607
+\OT1/cmr/m/n/10 site https://archive.stsci.edu/prepds/ps1cosmo/jones
+
+LaTeX Warning: Reference `t8' on page 13 undefined on input line 608.
+
+
+Package natbib Warning: Citation `Zhang13' on page 13 undefined on input line 6
+34.
+
+
+Underfull \hbox (badness 4072) in paragraph at lines 633--635
+[]\OT1/cmr/m/n/10 The raw GRB data was taken from $\OML/cmm/m/it/10 https \OT1/
+cmr/m/n/10 :
+
+Package natbib Warning: Citation `Hogg99' on page 13 undefined on input line 63
+7.
+
+
+Package natbib Warning: Citation `Goliath01' on page 13 undefined on input line
+ 637.
+
+
+Package natbib Warning: Citation `Barboza08' on page 13 undefined on input line
+ 637.
+
+
+Package natbib Warning: Citation `Conley11' on page 13 undefined on input line 
+653.
+
+
+Package natbib Warning: Citation `Sullivan11' on page 13 undefined on input lin
+e 653.
+
+[13]
+No file msf.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+[14] 
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(./msf.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package lastpage Warning: Rerun to get the references right on input line 900.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmcsc10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/
+20260301/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></opt/h
+omebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi6.pfb></opt/homebrew/Cellar/texlive/20260301/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/2
+0260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/homebre
+w/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
+.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/texlive/20260301/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/t
+exlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/
+homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></opt/homebrew/Cellar/texlive/2
+0260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/homebre
+w/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
+.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti8.pfb></opt/homebrew/Cellar/texlive/2026030
+1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></opt/homebrew/Cell
+ar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+</opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmtt8.pfb>
+Output written on msf.pdf (14 pages, 1206585 bytes).
+Transcript written on msf.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./msf.tex (./openjournal.cls
+Document Class: openjournal 
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/revtex4-1/rev
+tex4-1.cls
+Document Class: revtex4-1 2020/09/30 4.1s (http://publish.aps.org/revtex4/ for 
+documentation)
+ltxutil[2020/09/30 4.1s utilities package (portions licensed from W. E. Baxter 
+web at superscript.com)]
+ltxfront[2020/09/30 4.1s frontmatter package (AO,DPC)]
+ltxgrid[2020/09/30 4.1s page grid package (portions licensed from W. E. Baxter 
+web at superscript.com)]
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/revtex4-1/aps
+4-1.rtx)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/revtex4-1/aps
+10pt4-1.rtx)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/textcase/text
+case.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/url/url.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/natbib/natbib
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/revtex4-1/rev
+symb4-1.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/latexsym
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amss
+ymb.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amsf
+onts.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/longtab
+le.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/epsf/epsf.s
+ty
+This is `epsf.tex' v2.7.4 <14 February 2011>
+))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lastpage/last
+page.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lastpage/last
+page2e.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lastpage/last
+pagemodern.sty) 
+))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/xcolor/xcolor
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def) (./msf.aux)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ulasy.fd
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+
+Package natbib Warning: Citation `Crawford10__ghost' on page 1 undefined on inp
+ut line 51.
+
+[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}] [2] [3] [4 <./fig1.pdf, page is rotated 90 degrees>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 200.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 200.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[5 <./fig2.pdf, page is rotated 90 degrees> <./fig3.pdf, page is rotated 90 deg
+rees>] [6 <./fig4.pdf, page is rotated 90 degrees> <./fig5.pdf, page is rotated
+ 90 degrees> <./fig6.pdf, page is rotated 90 degrees>] [7] [8 <./fig7.pdf, page
+ is rotated 90 degrees> <./fig8.pdf, page is rotated 90 degrees> <./fig9.pdf, p
+age is rotated 90 degrees> <./fig10.pdf, page is rotated 90 degrees> <./fig20.p
+df, page is rotated 90 degrees>] [9]
+Underfull \hbox (badness 1354) in paragraph at lines 409--410
+[]\OT1/cmr/m/n/10 Including Cur-va-ture Pres-sure into the Fried-mann
+[10] [11] [12]
+Underfull \hbox (badness 1845) in paragraph at lines 604--605
+\OT1/cmr/m/n/10 Light-curve Anal-y-sis) anal-y-sis was taken from the
+
+Underfull \hbox (badness 1755) in paragraph at lines 604--605
+\OT1/cmr/m/n/10 SNANA web-site in the di-rec-tory $\OML/cmm/m/it/10 models=SALT
+\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 -
+
+Underfull \hbox (badness 10000) in paragraph at lines 606--607
+\OT1/cmr/m/n/10 site https://archive.stsci.edu/prepds/ps1cosmo/jones
+
+Underfull \hbox (badness 4072) in paragraph at lines 633--635
+[]\OT1/cmr/m/n/10 The raw GRB data was taken from $\OML/cmm/m/it/10 https \OT1/
+cmr/m/n/10 :
+[13] 
+No file msf.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+[14] 
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(./msf.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmcsc10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/
+20260301/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></opt/h
+omebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi6.pfb></opt/homebrew/Cellar/texlive/20260301/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/2
+0260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/homebre
+w/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
+.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/texlive/20260301/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/t
+exlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/
+homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></opt/homebrew/Cellar/texlive/2
+0260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/homebre
+w/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
+.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti8.pfb></opt/homebrew/Cellar/texlive/2026030
+1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></opt/homebrew/Cell
+ar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+</opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmtt8.pfb>
+Output written on msf.pdf (14 pages, 1206960 bytes).
+Transcript written on msf.log.
+************************************
+** Labels in starred environments **
+************************************
+-- msf.tex              line  208: consider using a STAR environment
+-- msf.tex              line  411: remove label c5 
+
+*******************
+** Unused Labels **
+*******************
+-- msf.tex              line  115: remove label s4.1
+-- msf.tex              line  133: remove label e3
+-- msf.tex              line  143: remove label e5
+-- msf.tex              line  166: remove label s5.2
+-- msf.tex              line  186: remove label s5.1
+-- msf.tex              line  189: remove label s5.3
+-- msf.tex              line  215: remove label s5.4
+-- msf.tex              line  229: remove label e6
+-- msf.tex              line  234: remove label e7
+-- msf.tex              line  245: remove label f5
+-- msf.tex              line  250: remove label s5.5
+-- msf.tex              line  275: remove label s5.7
+-- msf.tex              line  353: remove label s8.1
+-- msf.tex              line  364: remove label c1
+-- msf.tex              line  370: remove label c2
+-- msf.tex              line  411: remove label c5
+-- msf.tex              line  417: remove label c6
+-- msf.tex              line  471: remove label s8.8
+-- msf.tex              line  474: remove label s8.9
+-- msf.tex              line  477: remove label e12
+-- msf.tex              line  484: remove label e8
+-- msf.tex              line  489: remove label e9
+-- msf.tex              line   49: remove label FirstPage
+-- msf.tex              line  494: remove label c8
+-- msf.tex              line   50: remove label s1
+-- msf.tex              line  561: remove label s9
+-- msf.tex              line  579: remove label s11
+-- msf.tex              line  640: remove label eeb1
+-- msf.tex              line  645: remove label eb2
+-- msf.tex              line  650: remove label eb3
+-- msf.tex              line  654: remove label lastpage
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

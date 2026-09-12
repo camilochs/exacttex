@@ -1,0 +1,27 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=['eq:ACM1', 'eq:H1', 'eq:H2', 'eq:M', 'eq:bayes', 'eq:chi.cond', 'eq:est_eq', 'eq:eta.g', 'eq:eta_2l', 'eq:eta_2lhat', 'eq:eta_ex1', 'eq:eta_single', 'eq:etahat.g', 'eq:etahat_single', 'eq:g.H', 'eq:g.H1', 'eq:info', 'eq:mar.f', 'eq:phi', 'eq:phix', 'eq:ratio', 'eq:ratio2', 'eq:res.Ident', 'eq:simple', 'eq:summary', 'eq:trans.res', 'eq:trans.res_ex2', 'eq:varphi', 'eq:z', 'fig:LVD', 'fig:fdr', 'fig:power', 'fig:pw', 'fig:real_LD_new', 'fig:real_MV1', 'fig:real_MV2', 'fig:std2', 'fig:type1', 'fig:type1_2', 'tb:MVtypes', 'tb:SB1', 'tb:SB2', 'tb:SB_real', 'tb:example'] secs=3
+tems.tex:443: Invalid UTF-8 byte or sequence at line 443 replaced by U+FFFD.
+warning: listofitems.tex:446: Invalid UTF-8 byte or sequence at line 446 replaced by U+FFFD.
+warning: listofitems.tex:446: Invalid UTF-8 byte or sequence at line 446 replaced by U+FFFD.
+warning: listofitems.tex:446: Invalid UTF-8 byte or sequence at line 446 replaced by U+FFFD.
+warning: listofitems.tex:448: Invalid UTF-8 byte or sequence at line 448 replaced by U+FFFD.
+warning: listofitems.tex:448: Invalid UTF-8 byte or sequence at line 448 replaced by U+FFFD.
+warning: listofitems.tex:451: Invalid UTF-8 byte or sequence at line 451 replaced by U+FFFD.
+warning: listofitems.tex:455: Invalid UTF-8 byte or sequence at line 455 replaced by U+FFFD.
+warning: listofitems.tex:455: Invalid UTF-8 byte or sequence at line 455 replaced by U+FFFD.
+warning: listofitems.tex:458: Invalid UTF-8 byte or sequence at line 458 replaced by U+FFFD.
+warning: listofitems.tex:458: Invalid UTF-8 byte or sequence at line 458 replaced by U+FFFD.
+warning: listofitems.tex:472: Invalid UTF-8 byte or sequence at line 472 replaced by U+FFFD.
+warning: listofitems.tex:475: Invalid UTF-8 byte or sequence at line 475 replaced by U+FFFD.
+warning: listofitems.tex:492: Invalid UTF-8 byte or sequence at line 492 replaced by U+FFFD.
+warning: listofitems.tex:508: Invalid UTF-8 byte or sequence at line 508 replaced by U+FFFD.
+warning: listofitems.tex:508: Invalid UTF-8 byte or sequence at line 508 replaced by U+FFFD.
+warning: listofitems.tex:509: Invalid UTF-8 byte or sequence at line 509 replaced by U+FFFD.
+warning: listofitems.tex:509: Invalid UTF-8 byte or sequence at line 509 replaced by U+FFFD.
+warning: listofitems.tex:519: Invalid UTF-8 byte or sequence at line 519 replaced by U+FFFD.
+warning: listofitems.tex:541: Invalid UTF-8 byte or sequence at line 541 replaced by U+FFFD.
+warning: listofitems.tex:541: Invalid UTF-8 byte or sequence at line 541 replaced by U+FFFD.
+error: can't open path `citation_rev.bib`
+caused by: not found

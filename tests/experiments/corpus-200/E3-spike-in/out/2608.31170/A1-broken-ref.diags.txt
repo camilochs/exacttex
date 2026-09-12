@@ -1,0 +1,3 @@
+planted=tab:earnings_results__ghost sites=[('main.xtex', 275)]
+xtex new=[('XT1003', 'tab:earnings_results__ghost', 'main.xtex', 275)]
+texlab new=[('ERROR', 'main.tex', 275, 'Undefined reference'), ('info', 'main.tex', 261, 'Unused label')]

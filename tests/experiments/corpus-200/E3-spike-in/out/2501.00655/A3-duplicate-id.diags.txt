@@ -1,0 +1,3 @@
+planted=fig:motivation sites=[('sections/introduction.xtex', 9), ('sections/introduction.xtex', 1)]
+xtex new=[('XT1001', 'fig:motivation', 'sections/introduction.xtex', 9), ('XT1004', 'fig:motivation', 'sections/methodology.xtex', 15), ('XT1020', 'fig:motivation', 'sections/methodology.xtex', 15)]
+texlab new=[('ERROR', 'sections/introduction.tex', 1, 'Duplicate label'), ('ERROR', 'sections/introduction.tex', 9, 'Duplicate label')]

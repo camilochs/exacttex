@@ -1,0 +1,3 @@
+planted=sec-newpars sites=[('brentnallcuzick-arXiv.xtex', 158), ('brentnallcuzick-arXiv.xtex', 53)]
+xtex new=[('XT1001', 'sec-newpars', 'brentnallcuzick-arXiv.xtex', 158)]
+texlab new=[('ERROR', 'brentnallcuzick-arXiv.tex', 53, 'Duplicate label'), ('ERROR', 'brentnallcuzick-arXiv.tex', 158, 'Duplicate label'), ('info', 'brentnallcuzick-arXiv.tex', 53, 'Unused label')]

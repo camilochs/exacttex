@@ -1,0 +1,52 @@
+{
+ "coverage": 0.047267,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`referencias.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT1020",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "Eq_bayesLamdas",
+   "span": {
+    "file": "propose.xtex",
+    "offset": 11380,
+    "length": 6,
+    "line": 164,
+    "column": 55
+   },
+   "message": "prose says `Figure` but `Eq_bayesLamdas` is an equation",
+   "related": [
+    {
+     "message": "equation declared here",
+     "span": {
+      "file": "propose.xtex",
+      "offset": 11636,
+      "length": 14,
+      "line": 167,
+      "column": 5
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "Results.xtex",
+    "offset": 130,
+    "length": 18,
+    "line": 3,
+    "column": 112
+   },
+   "message": "citation checking unavailable: `referencias.bib` could not be read",
+   "related": []
+  }
+ ]
+}

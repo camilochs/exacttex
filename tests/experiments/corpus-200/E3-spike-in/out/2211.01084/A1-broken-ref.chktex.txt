@@ -1,0 +1,313 @@
+exit=2
+lines=336
+unique_findings=99
+                        ^
+Warning 2 in main.tex line 76: Non-breaking space (`~') should have been used.
+{Wainwright-Ellis}, \cite{Coley-Book}.  
+                   ^
+Warning 11 in main.tex line 80: You should use \cdots or \ldots to achieve an ellipsis.
+denote spacetime indices $a,b,...=0,1,2,3$ and we use geometrized units such  
+                              ^^^
+Warning 18 in main.tex line 96: Use either `` or '' as an alternative to `"'.
+Killing Vector (SCKV) when $\psi _{;ab}=0$ (where "$;$" stands for the  
+                                                  ^
+Warning 40 in main.tex line 96: You should put punctuation outside inner math mode.
+Killing Vector (SCKV) when $\psi _{;ab}=0$ (where "$;$" stands for the  
+                                                    ^
+Warning 18 in main.tex line 96: Use either `` or '' as an alternative to `"'.
+Killing Vector (SCKV) when $\psi _{;ab}=0$ (where "$;$" stands for the  
+                                                      ^
+Warning 2 in main.tex line 107: Non-breaking space (`~') should have been used.
+\cite{ChoquetBruhat}.  
+^
+Warning 12 in main.tex line 111: Interword spacing (`\ ') should perhaps be used.
+foliated by spherically symmetric 2d hypersurfaces i.e. with constant and  
+                                                       ^
+Warning 3 in main.tex line 197: You should enclose the previous parenthesis with `{}'.
+ds^{2}=\mathcal{C}\left( t,r\right) ^{2}\left[ -dt^{2}+dr^{2}+r^{2}\left(  
+                                   ^
+Warning 2 in main.tex line 212: Non-breaking space (`~') should have been used.
+geodesics ($n^{a}n_{a}=0$, $n_{a;b}n^{b}=0$) \cite{Maartens-Maharaj1}:   
+                                            ^
+Warning 2 in main.tex line 246: Non-breaking space (`~') should have been used.
+surface terms which are not alter the resulting field equations) \cite%  
+                                                                ^
+Warning 2 in main.tex line 247: Non-breaking space (`~') should have been used.
+{Winstanley:2002jt}, \cite{Sotiriou:2008rp}:   
+                    ^
+Warning 13 in main.tex line 281: Intersentence spacing (`\@') should perhaps be used.
+of a proper CVF.  
+               ^
+Warning 2 in main.tex line 285: Non-breaking space (`~') should have been used.
+dynamics \cite{Exact-Solutions-Book}, \cite{Eisenhart} $\mathcal{L}_{\mathbf{%  
+        ^
+Warning 2 in main.tex line 285: Non-breaking space (`~') should have been used.
+dynamics \cite{Exact-Solutions-Book}, \cite{Eisenhart} $\mathcal{L}_{\mathbf{%  
+                                     ^
+Warning 3 in main.tex line 291: You should enclose the previous parenthesis with `{}'.
+B_{\,0}^{0} &=&0=V\left( w\right) \mathcal{C}\left( w\right) ^{4}-2\mathcal{C%  
+                                                            ^
+Warning 3 in main.tex line 292: You should enclose the previous parenthesis with `{}'.
+}\left( w\right) ^{2}\{4r^{2}\xi \phi \left( w\right) \phi \left( w\right)  
+                ^
+Warning 3 in main.tex line 294: You should enclose the previous parenthesis with `{}'.
+&&+\phi \left( w\right) ^{\prime }\left[ \left( 4\xi  
+                       ^
+Warning 3 in main.tex line 295: You should enclose the previous parenthesis with `{}'.
+r^{2}-r^{2}-t^{2}\right) \phi \left( w\right) ^{\prime }+6\xi \phi \left(  
+                                             ^
+Warning 3 in main.tex line 297: You should enclose the previous parenthesis with `{}'.
+&&-4\mathcal{C}\left( w\right) \{2r^{2}\mathcal{C}\left( w\right) ^{\prime  
+                                                                 ^
+Warning 3 in main.tex line 298: You should enclose the previous parenthesis with `{}'.
+\prime }[\xi \phi \left( w\right) ^{2}-1]+  \nonumber \\  
+                                 ^
+Warning 3 in main.tex line 299: You should enclose the previous parenthesis with `{}'.
+&&+\mathcal{C}\left( w\right) ^{\prime }\left[ 2\xi \left(  
+                             ^
+Warning 3 in main.tex line 300: You should enclose the previous parenthesis with `{}'.
+r^{2}-3t^{2}\right) \phi \left( w\right) \phi \left( w\right) ^{\prime  
+                                                             ^
+Warning 3 in main.tex line 301: You should enclose the previous parenthesis with `{}'.
+}+3\left( \xi \phi \left( w\right) ^{2}-1\right) \right] \}+  \nonumber \\  
+                                  ^
+Warning 3 in main.tex line 302: You should enclose the previous parenthesis with `{}'.
+&&+4\left( r^{2}+3t^{2}\right) \mathcal{C}\left( w\right) ^{\prime 2}\left[  
+                                                         ^
+Warning 3 in main.tex line 303: You should enclose the previous parenthesis with `{}'.
+\xi \phi \left( w\right) ^{2}-1\right]  \label{EFE00}  
+                        ^
+Warning 3 in main.tex line 306: You should enclose the previous parenthesis with `{}'.
+B_{\,1}^{0} &=&0=\mathcal{C}\left( w\right) ^{2}\left[ 2\xi \phi \left(  
+                                           ^
+Warning 3 in main.tex line 307: You should enclose the previous parenthesis with `{}'.
+w\right) ^{\prime }\phi \left( w\right) ^{\prime \prime }+\left( 2\xi  
+        ^
+Warning 3 in main.tex line 307: You should enclose the previous parenthesis with `{}'.
+w\right) ^{\prime }\phi \left( w\right) ^{\prime \prime }+\left( 2\xi  
+                                       ^
+Warning 3 in main.tex line 308: You should enclose the previous parenthesis with `{}'.
+-1\right) \phi \left( w\right) ^{\prime 2}\right] +  \nonumber \\  
+                              ^
+Warning 3 in main.tex line 309: You should enclose the previous parenthesis with `{}'.
+&&+2\mathcal{C}\left( w\right) \left[ \mathcal{C}\left( w\right) ^{\prime  
+                                                                ^
+Warning 3 in main.tex line 310: You should enclose the previous parenthesis with `{}'.
+\prime }\left( \xi \phi \left( w\right) ^{2}-1\right) -2\xi \phi \left(  
+                                       ^
+Warning 3 in main.tex line 311: You should enclose the previous parenthesis with `{}'.
+w\right) \phi \left( w\right) ^{\prime }\mathcal{C}\left( w\right) ^{\prime }%  
+                             ^
+Warning 3 in main.tex line 311: You should enclose the previous parenthesis with `{}'.
+w\right) \phi \left( w\right) ^{\prime }\mathcal{C}\left( w\right) ^{\prime }%  
+                                                                  ^
+Warning 3 in main.tex line 313: You should enclose the previous parenthesis with `{}'.
+&&+4\mathcal{C}\left( w\right) ^{\prime 2}\left[ 1-\xi \phi \left( w\right)  
+                              ^
+Warning 3 in main.tex line 317: You should enclose the previous parenthesis with `{}'.
+B_{\,2}^{2} &=&0=V\left( w\right) \mathcal{C}\left( w\right) ^{4}+2\mathcal{C%  
+                                                            ^
+Warning 3 in main.tex line 318: You should enclose the previous parenthesis with `{}'.
+}\left( w\right) ^{2}\{4t^{2}\xi \phi \left( w\right) \phi \left( w\right)  
+                ^
+Warning 3 in main.tex line 320: You should enclose the previous parenthesis with `{}'.
+&&-\phi \left( w\right) ^{\prime }\left[ \left( t^{2}+r^{2}-4\xi  
+                       ^
+Warning 3 in main.tex line 321: You should enclose the previous parenthesis with `{}'.
+t^{2}\right) \phi \left( w\right) ^{\prime }+6\xi \phi \left( w\right) %  
+                                 ^
+Warning 3 in main.tex line 323: You should enclose the previous parenthesis with `{}'.
+&&+4\mathcal{C}\left( w\right) \{2t^{2}\mathcal{C}\left( w\right) ^{\prime  
+                                                                 ^
+Warning 3 in main.tex line 324: You should enclose the previous parenthesis with `{}'.
+\prime }[\xi \phi \left( w\right) ^{2}-1]-  \nonumber \\  
+                                 ^
+Warning 3 in main.tex line 325: You should enclose the previous parenthesis with `{}'.
+&&-\mathcal{C}\left( w\right) ^{\prime }\left[ 2\xi \left(  
+                             ^
+Warning 3 in main.tex line 326: You should enclose the previous parenthesis with `{}'.
+3r^{2}-t^{2}\right) \phi \left( w\right) \phi \left( w\right) ^{\prime  
+                                                             ^
+Warning 3 in main.tex line 327: You should enclose the previous parenthesis with `{}'.
+}+3\left( \xi \phi \left( w\right) ^{2}-1\right) \right] \}+  \nonumber \\  
+                                  ^
+Warning 3 in main.tex line 328: You should enclose the previous parenthesis with `{}'.
+&&+4\left( t^{2}+3r^{2}\right) \mathcal{C}\left( w\right) ^{\prime 2}\left[  
+                                                         ^
+Warning 3 in main.tex line 329: You should enclose the previous parenthesis with `{}'.
+1-\xi \phi \left( w\right) ^{2}\right]  \label{EFE22}  
+                          ^
+Warning 3 in main.tex line 333: You should enclose the previous parenthesis with `{}'.
+^{4}-2\mathcal{C}\left( w\right) ^{2}\{4\left( r^{2}-t^{2}\right) \xi \phi  
+                                ^
+Warning 3 in main.tex line 334: You should enclose the previous parenthesis with `{}'.
+\left( w\right) \phi \left( w\right) ^{\prime \prime }+  \nonumber \\  
+                                    ^
+Warning 3 in main.tex line 335: You should enclose the previous parenthesis with `{}'.
+&&+\phi \left( w\right) ^{\prime }\left[ \left( r^{2}-t^{2}\right) \left(  
+                       ^
+Warning 3 in main.tex line 336: You should enclose the previous parenthesis with `{}'.
+4\xi -1\right) \phi \left( w\right) ^{\prime }+6\xi \phi \left( w\right) %  
+                                   ^
+Warning 3 in main.tex line 339: You should enclose the previous parenthesis with `{}'.
+\left( w\right) ^{\prime \prime }[\xi \phi \left( w\right) ^{2}-1]+   
+               ^
+Warning 3 in main.tex line 339: You should enclose the previous parenthesis with `{}'.
+\left( w\right) ^{\prime \prime }[\xi \phi \left( w\right) ^{2}-1]+   
+                                                          ^
+Warning 3 in main.tex line 341: You should enclose the previous parenthesis with `{}'.
+&&+\mathcal{C}\left( w\right) ^{\prime }\left[ 2\xi \left(  
+                             ^
+Warning 3 in main.tex line 342: You should enclose the previous parenthesis with `{}'.
+r^{2}-t^{2}\right) \phi \left( w\right) \phi \left( w\right) ^{\prime  
+                                                            ^
+Warning 3 in main.tex line 343: You should enclose the previous parenthesis with `{}'.
+}+3\left( \xi \phi \left( w\right) ^{2}-1\right) \right] \}+  \nonumber \\  
+                                  ^
+Warning 3 in main.tex line 344: You should enclose the previous parenthesis with `{}'.
+&&+4\left( r^{2}-t^{2}\right) \mathcal{C}\left( w\right) ^{\prime 2}\left[  
+                                                        ^
+Warning 3 in main.tex line 345: You should enclose the previous parenthesis with `{}'.
+\xi \phi \left( w\right) ^{2}-1\right]  \label{EFE33}  
+                        ^
+Warning 1 in main.tex line 347: Command terminated with space.
+where a prime \textquotedblright $^{\prime }$\textquotedblright\ denotes  
+                                ^
+Warning 12 in main.tex line 350: Interword spacing (`\ ') should perhaps be used.
+From eq. (\ref{EFE01}) it follows%  
+        ^
+Warning 3 in main.tex line 352: You should enclose the previous parenthesis with `{}'.
+2\xi \phi \left( w\right) \mathcal{C}\left( w\right) ^{2}\phi \left(  
+                                                    ^
+Warning 3 in main.tex line 353: You should enclose the previous parenthesis with `{}'.
+w\right) ^{\prime \prime }+\left( 2\xi -1\right) \phi \left( w\right)  
+        ^
+Warning 3 in main.tex line 354: You should enclose the previous parenthesis with `{}'.
+^{\prime 2}\mathcal{C}\left( w\right) ^{2}+   
+                                     ^
+Warning 3 in main.tex line 357: You should enclose the previous parenthesis with `{}'.
++2\mathcal{C}\left( w\right) \left[ \mathcal{C}\left( w\right) ^{\prime  
+                                                              ^
+Warning 3 in main.tex line 358: You should enclose the previous parenthesis with `{}'.
+\prime }\left( \xi \phi \left( w\right) ^{2}-1\right) -2\xi \phi \left(  
+                                       ^
+Warning 3 in main.tex line 359: You should enclose the previous parenthesis with `{}'.
+w\right) \phi \left( w\right) ^{\prime }\mathcal{C}\left( w\right) ^{\prime }%  
+                             ^
+Warning 3 in main.tex line 359: You should enclose the previous parenthesis with `{}'.
+w\right) \phi \left( w\right) ^{\prime }\mathcal{C}\left( w\right) ^{\prime }%  
+                                                                  ^
+Warning 3 in main.tex line 360: You should enclose the previous parenthesis with `{}'.
+\right] +4\mathcal{C}\left( w\right) ^{\prime 2}\left( 1-\xi \phi \left(  
+                                    ^
+Warning 3 in main.tex line 361: You should enclose the previous parenthesis with `{}'.
+w\right) ^{2}\right) =0.  \label{GeneratorEquation1}  
+        ^
+Warning 3 in main.tex line 363: You should enclose the previous parenthesis with `{}'.
+Replacing $\mathcal{C}\left( w\right) ^{\prime \prime }$ to the remaining  
+                                     ^
+Warning 3 in main.tex line 367: You should enclose the previous parenthesis with `{}'.
+V\left( w\right) &=&2\{\mathcal{C}\left( w\right) ^{2}\phi \left( w\right)  
+                                                 ^
+Warning 3 in main.tex line 368: You should enclose the previous parenthesis with `{}'.
+^{\prime }\left[ w\phi \left( w\right) ^{\prime }+6\xi \phi \left( w\right) %  
+                                      ^
+Warning 3 in main.tex line 370: You should enclose the previous parenthesis with `{}'.
+&&+6\mathcal{C}\left( w\right) \mathcal{C}\left( w\right) ^{\prime }\left[  
+                                                         ^
+Warning 3 in main.tex line 371: You should enclose the previous parenthesis with `{}'.
+2\xi w\phi \left( w\right) ^{\prime }\phi \left( w\right) +\xi \phi \left(  
+                          ^
+Warning 3 in main.tex line 372: You should enclose the previous parenthesis with `{}'.
+w\right) ^{2}-1\right] +  \nonumber \\  
+        ^
+Warning 3 in main.tex line 373: You should enclose the previous parenthesis with `{}'.
+&&+6w\mathcal{C}\left( w\right) ^{\prime 2}\left[ \xi \phi \left( w\right)  
+                               ^
+Warning 3 in main.tex line 374: You should enclose the previous parenthesis with `{}'.
+^{2}-1\right] \}\mathcal{C}\left( w\right) ^{-4}.  \label{Potential2}  
+                                          ^
+Warning 36 in main.tex line 378: You should put a space in front of parenthesis.
+family of solutions of the system (\ref{EFE00})-(\ref{EFE33}). We note that  
+                                                ^
+Warning 3 in main.tex line 386: You should enclose the previous parenthesis with `{}'.
+ds^{2}=\frac{c_{2}^{2}}{\left( c_{1}+w\right) ^{2}}\left[  
+                                             ^
+Warning 12 in main.tex line 399: Interword spacing (`\ ') should perhaps be used.
+scalar field $\xi =0$, eq. (\ref{GeneratorEquation1}) implies that $\phi  
+                          ^
+Warning 12 in main.tex line 400: Interword spacing (`\ ') should perhaps be used.
+\left( w\right) =$const. and the potential $V(w)=\frac{12c_{1}}{c_{2}^{2}}$.  
+                        ^
+Warning 2 in main.tex line 409: Non-breaking space (`~') should have been used.
+complicated setup and reconstruct a recently found solution \cite%  
+                                                           ^
+Warning 3 in main.tex line 416: You should enclose the previous parenthesis with `{}'.
+1+w/c_{2}^{2}\right) ^{2}}\right] ^{1/2}  \label{NikosMetricFunction1}  
+                    ^
+Warning 3 in main.tex line 416: You should enclose the previous parenthesis with `{}'.
+1+w/c_{2}^{2}\right) ^{2}}\right] ^{1/2}  \label{NikosMetricFunction1}  
+                                 ^
+Warning 18 in main.tex line 422: Use either `` or '' as an alternative to `"'.
+1\right) $. In addition, an apparent horizon "protects" the spacetime from  
+                                             ^
+Warning 18 in main.tex line 422: Use either `` or '' as an alternative to `"'.
+1\right) $. In addition, an apparent horizon "protects" the spacetime from  
+                                                      ^
+Warning 12 in main.tex line 425: Interword spacing (`\ ') should perhaps be used.
+geodesics) and $n_{;a}^{a}m_{;k}^{k}=0$ (see e.g. \cite{Hawking-EllisBook},   
+                                                 ^
+Warning 2 in main.tex line 425: Non-breaking space (`~') should have been used.
+geodesics) and $n_{;a}^{a}m_{;k}^{k}=0$ (see e.g. \cite{Hawking-EllisBook},   
+                                                 ^
+Warning 2 in main.tex line 426: Non-breaking space (`~') should have been used.
+\cite{Krasinski}, \cite{Hellaby:2002nx}, \cite{Apostolopoulos:2016xnm}). We  
+^
+Warning 2 in main.tex line 426: Non-breaking space (`~') should have been used.
+\cite{Krasinski}, \cite{Hellaby:2002nx}, \cite{Apostolopoulos:2016xnm}). We  
+                 ^
+Warning 2 in main.tex line 426: Non-breaking space (`~') should have been used.
+\cite{Krasinski}, \cite{Hellaby:2002nx}, \cite{Apostolopoulos:2016xnm}). We  
+                                        ^
+Warning 2 in main.tex line 427: Non-breaking space (`~') should have been used.
+refer the reader to \cite{Strumia:2022kez} for a discussion regarding the  
+                   ^
+Warning 12 in main.tex line 430: Interword spacing (`\ ') should perhaps be used.
+Substituting eq. (\ref{NikosMetricFunction1}) in (\ref{GeneratorEquation1})  
+                ^
+Warning 3 in main.tex line 439: You should enclose the previous parenthesis with `{}'.
+V\left( w\right) =c_{4}\frac{c_{1}^{4}\left( 1+w/c_{2}^{2}\right) ^{-4}}{%  
+                                                                 ^
+Warning 3 in main.tex line 440: You should enclose the previous parenthesis with `{}'.
+\left[ c_{1}^{2}\left( 1+w/c_{2}^{2}\right) ^{-2}-1\right] ^{2}}%  
+                                           ^
+Warning 3 in main.tex line 440: You should enclose the previous parenthesis with `{}'.
+\left[ c_{1}^{2}\left( 1+w/c_{2}^{2}\right) ^{-2}-1\right] ^{2}}%  
+                                                          ^
+Warning 2 in main.tex line 446: Non-breaking space (`~') should have been used.
+\xi =1/6$) scalar field with potential proposed recently in \cite{Sotiriou:2008rp}:   
+                                                           ^
+Warning 12 in main.tex line 475: Interword spacing (`\ ') should perhaps be used.
+(e.g. being conformally and, in certain cases, asymptotically flat like the  
+     ^
+Warning 36 in main.tex line 494: You should put a space in front of parenthesis.
+General Relativity }(World Scientific Lecture Notes in Physics: Volume 46,  
+                    ^
+Warning 36 in main.tex line 498: You should put a space in front of parenthesis.
+and Riemannian Manifolds }(Kluwer, Academic Publishers 1999).  
+                          ^
+Warning 36 in main.tex line 521: You should put a space in front of parenthesis.
+Dynamical Systems in Cosmology }(Cambridge University Press, Cambridge 1997).  
+                                ^
+Warning 8 in main.tex line 532: Wrong length of dash may have been used.
+Found. Phys. \textbf{33} (2003), 111-143 doi:10.1023/A:1022871809835  
+                                    ^
+Warning 8 in main.tex line 538: Wrong length of dash may have been used.
+Rev. Mod. Phys. \textbf{82} (2010), 451-497 doi:10.1103/RevModPhys.82.451  
+                                       ^
+Warning 8 in main.tex line 544: Wrong length of dash may have been used.
+Prog. Theor. Phys. \textbf{110} (2003), 269-283 doi:10.1143/PTP.110.269  
+                                           ^
+Warning 8 in main.tex line 574: Wrong length of dash may have been used.
+doi:10.1088/1361-6382/aa66df [arXiv:1611.04569 [gr-qc]].   
+                ^

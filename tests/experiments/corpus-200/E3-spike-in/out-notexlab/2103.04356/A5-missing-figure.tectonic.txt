@@ -1,0 +1,35 @@
+h at lines 39--39
+warning: discussion:39: Underfull \hbox (badness 10000) in paragraph at lines 39--39
+warning: discussion:39: Underfull \hbox (badness 10000) in paragraph at lines 39--39
+warning: discussion:39: Underfull \hbox (badness 10000) in paragraph at lines 39--39
+warning: discussion:43: Overfull \hbox (4.91335pt too wide) in paragraph at lines 43--43
+warning: discussion:84: Underfull \hbox (badness 2435) in paragraph at lines 84--84
+warning: discussion:84: Underfull \hbox (badness 4013) in paragraph at lines 84--84
+warning: discussion:84: Underfull \hbox (badness 7012) in paragraph at lines 84--84
+warning: JPEG: Inconsistent resolution may have been specified in Exif and JFIF: 0x0 - 96x96
+warning: discussion:88: Underfull \hbox (badness 892) in paragraph at lines 88--88
+warning: discussion:88: Underfull \hbox (badness 1888) in paragraph at lines 88--88
+warning: discussion:88: Underfull \hbox (badness 1596) in paragraph at lines 88--88
+warning: JPEG: Inconsistent resolution may have been specified in Exif and JFIF: 0x0 - 96x96
+warning: JPEG: Inconsistent resolution may have been specified in Exif and JFIF: 0x0 - 96x96
+warning: JPEG: Inconsistent resolution may have been specified in Exif and JFIF: 0x0 - 96x96
+warning: discussion:118: Underfull \hbox (badness 10000) in paragraph at lines 118--118
+warning: discussion:119: Underfull \hbox (badness 10000) in paragraph at lines 119--119
+warning: discussion:120: Underfull \hbox (badness 10000) in paragraph at lines 120--120
+warning: discussion:121: Underfull \hbox (badness 10000) in paragraph at lines 121--121
+warning: discussion:123: Underfull \hbox (badness 10000) in paragraph at lines 123--123
+warning: discussion:124: Underfull \hbox (badness 10000) in paragraph at lines 124--124
+warning: discussion:125: Underfull \hbox (badness 10000) in paragraph at lines 125--125
+warning: discussion:130: Underfull \hbox (badness 10000) in paragraph at lines 130--130
+warning: discussion:130: Overfull \hbox (1.33737pt too wide) in paragraph at lines 130--130
+warning: discussion:130: Underfull \hbox (badness 10000) in paragraph at lines 130--130
+warning: discussion:130: Overfull \hbox (1.33737pt too wide) in paragraph at lines 130--130
+warning: discussion:131: Underfull \hbox (badness 10000) in paragraph at lines 131--131
+warning: discussion:131: Overfull \hbox (1.33737pt too wide) in paragraph at lines 131--131
+warning: discussion:131: Underfull \hbox (badness 10000) in paragraph at lines 131--131
+warning: discussion:131: Overfull \hbox (1.33737pt too wide) in paragraph at lines 131--131
+warning: discussion:134: Overfull \hbox (8.35034pt too wide) in paragraph at lines 134--134
+warning: discussion:134: Overfull \hbox (8.35034pt too wide) in paragraph at lines 134--134
+warning: discussion:137: Overfull \hbox (5.91975pt too wide) in paragraph at lines 116--137
+error: bmc_article.tex:295: Unable to load picture or PDF file 'figures/planted_ghost.pdf'
+error: halted on potentially-recoverable error as specified

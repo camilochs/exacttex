@@ -1,0 +1,25 @@
+{
+ "coverage": 0.028352,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`library.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "CSP_Reoptimization.xtex",
+    "offset": 2669,
+    "length": 14,
+    "line": 55,
+    "column": 164
+   },
+   "message": "citation checking unavailable: `library.bib` could not be read",
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+x:257: Overfull \hbox (11.75584pt too wide) in paragraph at lines 254--257
+warning: NeuroP2P.tex:305: Overfull \hbox (18.24396pt too wide) in paragraph at lines 297--305
+warning: NeuroP2P.tex:313: Overfull \hbox (1.40584pt too wide) in paragraph at lines 311--313
+warning: NeuroP2P.tex:313: Overfull \hbox (2.35583pt too wide) in paragraph at lines 311--313
+warning: NeuroP2P.tex:313: Overfull \hbox (5.23584pt too wide) in paragraph at lines 311--313
+warning: NeuroP2P.tex:344: Underfull \vbox (badness 4279) has occurred while \output is active
+warning: NeuroP2P.tex:385: Overfull \hbox (15.28583pt too wide) in paragraph at lines 383--385
+warning: NeuroP2P.tex:385: Overfull \hbox (5.21585pt too wide) in paragraph at lines 383--385
+warning: NeuroP2P.tex:389: Overfull \hbox (1.76582pt too wide) in paragraph at lines 387--389
+warning: NeuroP2P.tex:397: Overfull \hbox (14.99583pt too wide) in paragraph at lines 396--397
+warning: NeuroP2P.tex:397: Underfull \vbox (badness 7504) has occurred while \output is active
+warning: NeuroP2P.tex:429: Overfull \hbox (11.42587pt too wide) in paragraph at lines 428--429
+warning: NeuroP2P.tex:429: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: NeuroP2P.tex:433: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: NeuroP2P.tex:441: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: NeuroP2P.tex:485: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: NeuroP2P.tex:503: Overfull \hbox (34.17491pt too wide) in paragraph at lines 501--503
+warning: NeuroP2P.tex:511: Overfull \hbox (8.57204pt too wide) in paragraph at lines 510--511
+warning: NeuroP2P.tex:511: Underfull \hbox (badness 1033) in paragraph at lines 511--511
+warning: NeuroP2P.tex:511: Underfull \hbox (badness 1057) in paragraph at lines 511--511
+warning: NeuroP2P.tex:517: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: NeuroP2P.tex:532: Overfull \hbox (3.45152pt too wide) in paragraph at lines 525--532
+warning: NeuroP2P.tex:538: Overfull \hbox (0.55585pt too wide) in paragraph at lines 537--538
+warning: NeuroP2P.tex:580: Overfull \hbox (34.17491pt too wide) in paragraph at lines 578--580
+warning: NeuroP2P.tex:589: Overfull \hbox (8.56593pt too wide) in paragraph at lines 588--589
+warning: NeuroP2P.tex:599: Overfull \hbox (34.17491pt too wide) in paragraph at lines 598--599
+warning: NeuroP2P.tex:607: Overfull \hbox (4.84584pt too wide) in paragraph at lines 606--607
+warning: NeuroP2P.tex:607: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: NeuroP2P.tex:609: Overfull \hbox (4.25584pt too wide) in paragraph at lines 608--609
+warning: NeuroP2P.tex:660: Overfull \hbox (2.62543pt too wide) in paragraph at lines 657--660
+warning: NeuroP2P.tex:704: Overfull \hbox (12.98586pt too wide) in paragraph at lines 703--704
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

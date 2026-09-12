@@ -1,0 +1,25 @@
+{
+ "coverage": 0.040794,
+ "bibliography": {
+  "state": "complete",
+  "entries": 173
+ },
+ "diagnostics": [
+  {
+   "code": "XT1005",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "citation",
+   "name": "paperno2016Lambada",
+   "span": {
+    "file": "acl_latex.xtex",
+    "offset": 7560,
+    "length": 18,
+    "line": 118,
+    "column": 84
+   },
+   "message": "citation key `paperno2016Lambada` is not in the bibliography \u2014 did you mean `paperno2016lambada`?",
+   "related": []
+  }
+ ]
+}

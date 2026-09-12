@@ -1,0 +1,95 @@
+{
+ "paper": "2405.15204",
+ "main": "2ndrevGR.tex",
+ "files": [
+  {
+   "file": "2ndrevGR.tex",
+   "chars_before": 91923,
+   "chars_after": 91878,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 91923,
+ "chars_after": 91878,
+ "delta_pct": -0.04895401586110114,
+ "unrepaired": {
+  "chars_after": 91878,
+  "chars_before": 91923,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.02635,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`citation_rev.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.04895401586110114
+ },
+ "stats": {
+  "cite_cmds_live": 52,
+  "cite_keys_live": 61,
+  "cite_with_optarg_or_star": 8,
+  "cite_keys_outside_grammar": 1,
+  "other_cite_cmds": 0,
+  "labels_live": 15,
+  "labels_outside_grammar": 0,
+  "refs_live": 89,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 15,
+  "cite_cmds_annotated": 42,
+  "cite_keys_annotated": 42,
+  "ids_annotated": 15,
+  "refs_annotated": 89,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 1,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "2ndrevGR.tex",
+   "line": 52,
+   "token": "@parencite(haberman2013gr)",
+   "wrapper": "abstract",
+   "context": "\\abstract{Assessing fit in common factor models solely through the lens of mean and covariance structures, as is commonly done with conventional goodness-of-fit"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.02635,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`citation_rev.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "2ndrevGR.xtex",
+    "offset": 4303,
+    "length": 18,
+    "line": 64,
+    "column": 1048
+   },
+   "message": "citation checking unavailable: `citation_rev.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

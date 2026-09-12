@@ -1,0 +1,3 @@
+planted=sec:robotics__ghost sites=[('thesis.xtex', 419)]
+xtex new=[('XT1003', 'sec:robotics__ghost', 'thesis.xtex', 419)]
+texlab new=[('ERROR', 'thesis.tex', 419, 'Undefined reference'), ('info', 'thesis.tex', 1869, 'Unused label')]

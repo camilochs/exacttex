@@ -1,0 +1,317 @@
+exit=2
+lines=408
+unique_findings=126
+plying equation \eqref{eq:supp0u} by $\varphi_{i}(t), i=1,2,\ldots,n$, integrating by parts and using Simpson's rule to approximate the definite integrals, hypothesis {\bf (H5)} becomes  
+                         ^
+Warning 2 in VersionIPSE.tex line 223: Non-breaking space (`~') should have been used.
+for $i=1,2,\ldots,n-1$. Theorem 14 in \cite{fraguela2013uniqueness} establishes that the inverse problem has  
+                                     ^
+Warning 2 in VersionIPSE.tex line 224: Non-breaking space (`~') should have been used.
+an unique solution if the temperature $T$ is solution of problem \eqref{eq:pb_unid_1} and hypotheses  
+                                                                ^
+Warning 2 in VersionIPSE.tex line 229: Non-breaking space (`~') should have been used.
+In Subsection \ref{sec:stat_inv} we shall use the above notation to introduce a two tiered formulation  
+             ^
+Warning 24 in VersionIPSE.tex line 233: Delete this space to maintain correct pagereferences.
+\label{sec:stat_inv}  
+^
+Warning 2 in VersionIPSE.tex line 235: Non-breaking space (`~') should have been used.
+In this Subsection we shall use the optimality property of Bayes formula as a learning process, see Zellner \cite{zellner1988optimal}, to incorporate Fraguela et al \cite{fraguela2013uniqueness} uniqueness  
+                                                                                                           ^
+Warning 2 in VersionIPSE.tex line 235: Non-breaking space (`~') should have been used.
+In this Subsection we shall use the optimality property of Bayes formula as a learning process, see Zellner \cite{zellner1988optimal}, to incorporate Fraguela et al \cite{fraguela2013uniqueness} uniqueness  
+                                                                                                                                                                    ^
+Warning 11 in VersionIPSE.tex line 244: You should use \ldots to achieve an ellipsis.
+Let ${\bf \hat{U}}=({\bf U}_{0},...,{\bf U}_{n})$ denote the coefficients in equation~\eqref{eq:discrete_k} and  
+                                ^^^
+Warning 11 in VersionIPSE.tex line 245: You should use \ldots to achieve an ellipsis.
+${\bf\Sigma}_{2}$ its standard deviation, which we assume is the same for all ${\bf U}_{i}$, $i=0,...,n.$  
+                                                                                                  ^^^
+Warning 40 in VersionIPSE.tex line 245: You should put punctuation outside inner math mode.
+${\bf\Sigma}_{2}$ its standard deviation, which we assume is the same for all ${\bf U}_{i}$, $i=0,...,n.$  
+                                                                                                       ^
+Warning 11 in VersionIPSE.tex line 256: You should use \ldots to achieve an ellipsis.
+where we denote $\hat{u}=(u_{0},u_{1},\cdots,u_{n})^{T}$. First, we define the indicator function  
+                                      ^^^^^^
+Warning 3 in VersionIPSE.tex line 256: You should enclose the previous parenthesis with `{}'.
+where we denote $\hat{u}=(u_{0},u_{1},\cdots,u_{n})^{T}$. First, we define the indicator function  
+                                                  ^
+Warning 3 in VersionIPSE.tex line 296: You should enclose the previous parenthesis with `{}'.
+\det(2\pi\hat{\Sigma})^{-1/2}\exp\left(-\frac{1}{2}\hat{u}^{T}\hat{A}\hat{u}\right)  
+                     ^
+Warning 11 in VersionIPSE.tex line 322: You should use \ldots to achieve an ellipsis.
+Now, letting $u=(u_{1},...,u_{n})$ we are ready to set  
+                       ^^^
+Warning 3 in VersionIPSE.tex line 326: You should enclose the previous parenthesis with `{}'.
+h(u,\sigma_{2})=\det(2\pi\Sigma)^{-1/2}\exp\left(-\frac{1}{2}(u-\mu)^{T}A(u-\mu)\right),  
+                               ^
+Warning 3 in VersionIPSE.tex line 326: You should enclose the previous parenthesis with `{}'.
+h(u,\sigma_{2})=\det(2\pi\Sigma)^{-1/2}\exp\left(-\frac{1}{2}(u-\mu)^{T}A(u-\mu)\right),  
+                                                                   ^
+Warning 2 in VersionIPSE.tex line 330: Non-breaking space (`~') should have been used.
+Therefore, our prior probability density in equation \eqref{eq:prior1} can be written as  
+                                                    ^
+Warning 11 in VersionIPSE.tex line 341: You should use \ldots to achieve an ellipsis.
+$u=(u_1,...,u_n)$, assuming $u_{0}=\log(k(0))$ is known. Let us denote  
+        ^^^
+Warning 3 in VersionIPSE.tex line 342: You should enclose the previous parenthesis with `{}'.
+$G(u)_{j}=\exp\left(\sum_{l=0}^{n}u_{l}\varphi_{l}(t_j)\right)$. We assume that data satisfies  
+    ^
+Warning 3 in VersionIPSE.tex line 346: You should enclose the previous parenthesis with `{}'.
+T_{ij}=F(G(u)_{j})_{i}+\xi_{ij}  
+            ^
+Warning 3 in VersionIPSE.tex line 346: You should enclose the previous parenthesis with `{}'.
+T_{ij}=F(G(u)_{j})_{i}+\xi_{ij}  
+                 ^
+Warning 3 in VersionIPSE.tex line 350: You should enclose the previous parenthesis with `{}'.
+and times $t_{j}$, while $F\left(G(u)_{j}\right)_{i}$ is the forward  
+                                    ^
+Warning 3 in VersionIPSE.tex line 350: You should enclose the previous parenthesis with `{}'.
+and times $t_{j}$, while $F\left(G(u)_{j}\right)_{i}$ is the forward  
+                                               ^
+Warning 2 in VersionIPSE.tex line 351: Non-breaking space (`~') should have been used.
+mapping \eqref{eq:forward_mapping} acting on a instance  
+       ^
+Warning 3 in VersionIPSE.tex line 361: You should enclose the previous parenthesis with `{}'.
+\prod_{i,j}\frac{1}{(\sqrt{2\pi}\sigma_{1})^{2n}}\exp\left(-\frac{1}{2\sigma_{1}^{2}}  
+                                          ^
+Warning 3 in VersionIPSE.tex line 362: You should enclose the previous parenthesis with `{}'.
+\left(T_{ij}-F\left(G(u)_{j}\right)_{i}\right)^{2}\right)  
+                       ^
+Warning 3 in VersionIPSE.tex line 362: You should enclose the previous parenthesis with `{}'.
+\left(T_{ij}-F\left(G(u)_{j}\right)_{i}\right)^{2}\right)  
+                                  ^
+Warning 3 in VersionIPSE.tex line 362: You should enclose the previous parenthesis with `{}'.
+\left(T_{ij}-F\left(G(u)_{j}\right)_{i}\right)^{2}\right)  
+                                             ^
+Warning 3 in VersionIPSE.tex line 366: You should enclose the previous parenthesis with `{}'.
+$T_{ij}\sim\mathcal{N}\left(F\left(G(u)_{j}\right)_{i},\sigma_{1}^{2}\right)$,  
+                                      ^
+Warning 3 in VersionIPSE.tex line 366: You should enclose the previous parenthesis with `{}'.
+$T_{ij}\sim\mathcal{N}\left(F\left(G(u)_{j}\right)_{i},\sigma_{1}^{2}\right)$,  
+                                                 ^
+Warning 6 in VersionIPSE.tex line 381: No italic correction (`\/') found.
+examples in Section~\ref{sec:res&disc} we shall use the probability transition kernel known as {\it twalk}   
+                                                                                                         ^
+Warning 2 in VersionIPSE.tex line 382: Non-breaking space (`~') should have been used.
+of Christen and Fox \cite{christen2010general}). Let us denote  
+                   ^
+Warning 2 in VersionIPSE.tex line 385: Non-breaking space (`~') should have been used.
+is given by Algorithm \ref{alg:mh}  
+                     ^
+Warning 11 in VersionIPSE.tex line 389: You should use \ldots to achieve an ellipsis.
+ \KwResult{Samples $\{\theta_{1},...,\theta_{N}\}$ of the posterior distribution~(\ref{eq:posterior})}  
+                                 ^^^
+Warning 11 in VersionIPSE.tex line 391: You should use \ldots to achieve an ellipsis.
+ \For{$m=0,1,\cdots,N-1$}{  
+             ^^^^^^
+Warning 2 in VersionIPSE.tex line 408: Non-breaking space (`~') should have been used.
+Of note, quotient \eqref{SMHquotient} has to be calculated through equation \eqref{eq:prior2},  
+                 ^
+Warning 2 in VersionIPSE.tex line 408: Non-breaking space (`~') should have been used.
+Of note, quotient \eqref{SMHquotient} has to be calculated through equation \eqref{eq:prior2},  
+                                                                           ^
+Warning 2 in VersionIPSE.tex line 416: Non-breaking space (`~') should have been used.
+of the ratio \eqref{SMHquotient}. Here $\theta=(u,\sigma_{2})$ and $x$ denotes a sample drawn  
+            ^
+Warning 2 in VersionIPSE.tex line 418: Non-breaking space (`~') should have been used.
+equations \eqref{eq:prior2} and~\eqref{eq:posterior} allow us to write\\  
+         ^
+Warning 11 in VersionIPSE.tex line 440: You should use \ldots to achieve an ellipsis.
+ \KwResult{Samples $\{\theta_{1},...,\theta_{N}\}$ of the posterior distribution~(\ref{eq:posterior})}  
+                                 ^^^
+Warning 11 in VersionIPSE.tex line 442: You should use \ldots to achieve an ellipsis.
+ \For{$m=0,1,\cdots,N-1$}{  
+             ^^^^^^
+Warning 24 in VersionIPSE.tex line 471: Delete this space to maintain correct pagereferences.
+\label{sec:res&disc}  
+^
+Warning 2 in VersionIPSE.tex line 478: Non-breaking space (`~') should have been used.
+setting in \cite{Smith2014}. We have solved the direct problem~\eqref{eq:pb_unid_1} approximating the polar  
+          ^
+Warning 2 in VersionIPSE.tex line 483: Non-breaking space (`~') should have been used.
+with a grid 100 times more fine in time. Observations of temperature at both, the center and a point of the boundary of the ball, are assumed to be poluted with noise according to likelihood \eqref{eq:likelihood}, where we have chosen the noise standard deviation $\sigma_{1}$ such that the signal to noise ratio (SNR) satisfies  
+                                                                                                                                                                                              ^
+Warning 44 in VersionIPSE.tex line 499: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+ \hline  
+ ^^^^^^
+Warning 44 in VersionIPSE.tex line 509: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+ \hline  
+ ^^^^^^
+Warning 24 in VersionIPSE.tex line 513: Delete this space to maintain correct pagereferences.
+\label{tab:pars}  
+^
+Warning 24 in VersionIPSE.tex line 542: Delete this space to maintain correct pagereferences.
+\label{fig:unc_prop}  
+^
+Warning 2 in VersionIPSE.tex line 547: Non-breaking space (`~') should have been used.
+\ref{alg:sea}, we have used the proposal $q(\theta^{'}|\theta)$ given by the {\it twalk} of Christen  
+^
+Warning 6 in VersionIPSE.tex line 547: No italic correction (`\/') found.
+\ref{alg:sea}, we have used the proposal $q(\theta^{'}|\theta)$ given by the {\it twalk} of Christen  
+                                                                                       ^
+Warning 2 in VersionIPSE.tex line 548: Non-breaking space (`~') should have been used.
+and Fox \cite{christen2010general}. Our choice was based on the facts that the {\it twalk} proposal  
+       ^
+Warning 6 in VersionIPSE.tex line 548: No italic correction (`\/') found.
+and Fox \cite{christen2010general}. Our choice was based on the facts that the {\it twalk} proposal  
+                                                                                         ^
+Warning 6 in VersionIPSE.tex line 551: No italic correction (`\/') found.
+in {\it github} (https://github.com/MarcosACapistran/diffusion)  
+              ^
+Warning 2 in VersionIPSE.tex line 557: Non-breaking space (`~') should have been used.
+Table \ref{tab:pars} and thermal conductivity is given by the function  
+     ^
+Warning 2 in VersionIPSE.tex line 572: Non-breaking space (`~') should have been used.
+Figures \ref{fig:example1} and \ref{fig:example2} show the results of  
+       ^
+Warning 2 in VersionIPSE.tex line 572: Non-breaking space (`~') should have been used.
+Figures \ref{fig:example1} and \ref{fig:example2} show the results of  
+                              ^
+Warning 24 in VersionIPSE.tex line 591: Delete this space to maintain correct pagereferences.
+\label{fig:example1}  
+^
+Warning 24 in VersionIPSE.tex line 600: Delete this space to maintain correct pagereferences.
+\label{fig:example2}  
+^
+Warning 24 in VersionIPSE.tex line 605: Delete this space to maintain correct pagereferences.
+\label{sec:concl}  
+^
+Warning 8 in VersionIPSE.tex line 629: Wrong length of dash may have been used.
+M. A. C. acknowledges partially founding from ONRG, RDECOM and CONACYT CB-2017-284451 grants. J. A. I. R. acknowledges the financial support of the Spanish Ministry of Economy and Competitiveness under the project MTM2015-64865-P and the research group MOMAT (Ref.910480) supported by {\it Universidad Complutense de Madrid}.  
+                                                                              ^
+Warning 8 in VersionIPSE.tex line 629: Wrong length of dash may have been used.
+M. A. C. acknowledges partially founding from ONRG, RDECOM and CONACYT CB-2017-284451 grants. J. A. I. R. acknowledges the financial support of the Spanish Ministry of Economy and Competitiveness under the project MTM2015-64865-P and the research group MOMAT (Ref.910480) supported by {\it Universidad Complutense de Madrid}.  
+                                                                                                                                                                                                                             ^
+Warning 1 in VersionIPSE.tex line 637: Command terminated with space.
+\newblock Enzyme inactivation during heat processing of food-stuffs.  
+         ^
+Warning 1 in VersionIPSE.tex line 638: Command terminated with space.
+\newblock {\em International journal of food science \& technology},  
+         ^
+Warning 1 in VersionIPSE.tex line 643: Command terminated with space.
+\newblock Gaussian markov random field priors for inverse problems.  
+         ^
+Warning 1 in VersionIPSE.tex line 644: Command terminated with space.
+\newblock {\em Inverse Problems and Imaging}, 7(2):397--416, 2013.  
+         ^
+Warning 1 in VersionIPSE.tex line 648: Command terminated with space.
+\newblock A new model to describe enzyme inactivation.  
+         ^
+Warning 1 in VersionIPSE.tex line 649: Command terminated with space.
+\newblock {\em Biotechnology and bioengineering}, 20(9):1471--1477, 1978.  
+         ^
+Warning 1 in VersionIPSE.tex line 653: Command terminated with space.
+\newblock A general purpose sampling algorithm for continuous distributions  
+         ^
+Warning 1 in VersionIPSE.tex line 655: Command terminated with space.
+\newblock {\em Bayesian Analysis}, 5(2):263--281, 2010.  
+         ^
+Warning 1 in VersionIPSE.tex line 659: Command terminated with space.
+\newblock A modeling approach for evaluating process uniformity during batch  
+         ^
+Warning 1 in VersionIPSE.tex line 662: Command terminated with space.
+\newblock {\em Innovative Food Science \& Emerging Technologies}, 1(1):5--19,  
+         ^
+Warning 1 in VersionIPSE.tex line 667: Command terminated with space.
+\newblock A uniqueness result for the identification of a time-dependent  
+         ^
+Warning 1 in VersionIPSE.tex line 669: Command terminated with space.
+\newblock {\em Inverse Problems}, 29(12):125009, 2013.  
+         ^
+Warning 1 in VersionIPSE.tex line 673: Command terminated with space.
+\newblock Effects of high pressure on enzymes related to food quality.  
+         ^
+Warning 1 in VersionIPSE.tex line 674: Command terminated with space.
+\newblock {\em Trends in Food Science \& Technology}, 9(5):197--203, 1998.  
+         ^
+Warning 1 in VersionIPSE.tex line 678: Command terminated with space.
+\newblock On the identification of a thermal expansion coefficient.  
+         ^
+Warning 1 in VersionIPSE.tex line 679: Command terminated with space.
+\newblock {\em Inverse Problems in Science and Engineering}, 23(8):1405--1424,  
+         ^
+Warning 1 in VersionIPSE.tex line 684: Command terminated with space.
+\newblock On the modelling and simulation of high pressure processes and  
+         ^
+Warning 1 in VersionIPSE.tex line 686: Command terminated with space.
+\newblock {\em Mathematical Models and Methods in Applied Sciences},  
+         ^
+Warning 1 in VersionIPSE.tex line 691: Command terminated with space.
+\newblock {\em Inverse problems for partial differential equations}, volume  
+         ^
+Warning 1 in VersionIPSE.tex line 693: Command terminated with space.
+\newblock Springer, 2006.  
+         ^
+Warning 1 in VersionIPSE.tex line 697: Command terminated with space.
+\newblock The bayesian framework for inverse problems in heat transfer.  
+         ^
+Warning 1 in VersionIPSE.tex line 698: Command terminated with space.
+\newblock {\em Heat Transfer Engineering}, 32(9):718--753, 2011.  
+         ^
+Warning 1 in VersionIPSE.tex line 702: Command terminated with space.
+\newblock Coupled mcmc with a randomized acceptance probability.  
+         ^
+Warning 1 in VersionIPSE.tex line 703: Command terminated with space.
+\newblock {\em arXiv preprint arXiv:1205.6857}, 2012.  
+         ^
+Warning 1 in VersionIPSE.tex line 707: Command terminated with space.
+\newblock Recent advances in the use of high pressure as an effective  
+         ^
+Warning 1 in VersionIPSE.tex line 709: Command terminated with space.
+\newblock {\em Food and Bioprocess Technology}, 1(1):2--34, 2008.  
+         ^
+Warning 1 in VersionIPSE.tex line 713: Command terminated with space.
+\newblock Modeling thermophysical properties of food under high pressure.  
+         ^
+Warning 1 in VersionIPSE.tex line 714: Command terminated with space.
+\newblock {\em Critical reviews in food science and nutrition}, 50(4):344--368,  
+         ^
+Warning 1 in VersionIPSE.tex line 719: Command terminated with space.
+\newblock A model to design high-pressure processes towards an uniform  
+         ^
+Warning 1 in VersionIPSE.tex line 721: Command terminated with space.
+\newblock {\em Journal of Food Engineering}, 78(4):1463--1470, 2007.  
+         ^
+Warning 1 in VersionIPSE.tex line 725: Command terminated with space.
+\newblock High-pressure processing: kinetic models for microbial and enzyme  
+         ^
+Warning 1 in VersionIPSE.tex line 727: Command terminated with space.
+\newblock {\em Food Engineering Reviews}, 6(3):56--88, 2014.  
+         ^
+Warning 1 in VersionIPSE.tex line 731: Command terminated with space.
+\newblock Analysis and simplification of a mathematical model for high-pressure  
+         ^
+Warning 1 in VersionIPSE.tex line 733: Command terminated with space.
+\newblock {\em Applied Mathematics and Computation}, 226:20 -- 37, 2014.  
+         ^
+Warning 8 in VersionIPSE.tex line 733: Wrong length of dash may have been used.
+\newblock {\em Applied Mathematics and Computation}, 226:20 -- 37, 2014.  
+                                                            ^^
+Warning 1 in VersionIPSE.tex line 737: Command terminated with space.
+\newblock A bayesian inference approach to the inverse heat conduction problem.  
+         ^
+Warning 1 in VersionIPSE.tex line 738: Command terminated with space.
+\newblock {\em International Journal of Heat and Mass Transfer},  
+         ^
+Warning 8 in VersionIPSE.tex line 739: Wrong length of dash may have been used.
+  47(17-18):3927--3941, 2004.  
+       ^
+Warning 1 in VersionIPSE.tex line 743: Command terminated with space.
+\newblock Hierarchical bayesian models for inverse problems in heat conduction.  
+         ^
+Warning 1 in VersionIPSE.tex line 744: Command terminated with space.
+\newblock {\em Inverse Problems}, 21(1):183, 2004.  
+         ^
+Warning 1 in VersionIPSE.tex line 748: Command terminated with space.
+\newblock Optimal information processing and bayes's theorem.  
+         ^
+Warning 1 in VersionIPSE.tex line 749: Command terminated with space.
+\newblock {\em The American Statistician}, 42(4):278--280, 1988.  
+         ^
+Warning 17 in VersionIPSE.tex line 753: Number of `(' doesn't match the number of `)'!
+
+
+Warning 17 in VersionIPSE.tex line 753: Number of `[' doesn't match the number of `]'!
+
+

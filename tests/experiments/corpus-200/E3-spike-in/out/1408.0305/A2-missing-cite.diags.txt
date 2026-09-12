@@ -1,0 +1,3 @@
+planted=littlewood__ghost sites=[('sigma18-019.xtex', 93)]
+xtex new=[('XT1005', 'littlewood__ghost', 'sigma18-019.xtex', 93)]
+texlab new=[('ERROR', 'sigma18-019.tex', 93, 'Undefined reference')]

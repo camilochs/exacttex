@@ -1,0 +1,25 @@
+{
+ "coverage": 0.067049,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`mycite.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "cvpr_person.xtex",
+    "offset": 3322,
+    "length": 15,
+    "line": 73,
+    "column": 100
+   },
+   "message": "citation checking unavailable: `mycite.bib` could not be read",
+   "related": []
+  }
+ ]
+}

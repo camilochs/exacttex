@@ -1,0 +1,3 @@
+planted=fig:GoniumPic__ghost sites=[('Gonium.xtex', 176)]
+xtex new=[('XT1003', 'fig:GoniumPic__ghost', 'Gonium.xtex', 176)]
+texlab new=[]

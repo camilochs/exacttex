@@ -1,0 +1,3 @@
+planted=1__ghost sites=[('pyov_arxiv.xtex', 74)]
+xtex new=[('XT1005', '1__ghost', 'pyov_arxiv.xtex', 74)]
+texlab new=[('ERROR', 'pyov_arxiv.tex', 74, 'Undefined reference'), ('info', 'pyov_arxiv.tex', 695, 'Unused entry')]

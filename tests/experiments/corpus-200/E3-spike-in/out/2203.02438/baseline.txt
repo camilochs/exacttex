@@ -1,0 +1,10 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[('info', 'eibump.tex', 142, 'Unused label'), ('info', 'eibump.tex', 181, 'Unused label'), ('info', 'eibump.tex', 238, 'Unused label'), ('info', 'eibump.tex', 308, 'Unused label'), ('info', 'eibump.tex', 332, 'Unused label'), ('info', 'eibump.tex', 594, 'Unused label'), ('info', 'eibump.tex', 742, 'Unused label')]
+tectonic exit=1 warnings=[] secs=2
+error: hypdvips.sty:43: Package hypdvips Error: Wrong hyperref driver `hxetex.def' selected!
+(hypdvips)                Please switch to hdvips.def before loading hypdvips.
+
+See the hypdvips package documentation for explanation.
+Type  H <return>  for immediate help
+error: halted on potentially-recoverable error as specified

@@ -1,0 +1,3 @@
+planted=assmp__ghost sites=[('spikequantum.xtex', 166)]
+xtex new=[('XT1003', 'assmp__ghost', 'spikequantum.xtex', 166)]
+texlab new=[]

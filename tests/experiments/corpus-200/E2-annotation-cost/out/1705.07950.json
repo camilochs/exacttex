@@ -1,0 +1,123 @@
+{
+ "paper": "1705.07950",
+ "main": "EJS1402-Accepted.tex",
+ "files": [
+  {
+   "file": "EJS1402-Accepted.tex",
+   "chars_before": 113046,
+   "chars_after": 112998,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 113046,
+ "chars_after": 112998,
+ "delta_pct": -0.04246059126373335,
+ "unrepaired": {
+  "chars_after": 112998,
+  "chars_before": 113046,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.027558,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`varselection.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.04246059126373335
+ },
+ "stats": {
+  "cite_cmds_live": 112,
+  "cite_keys_live": 116,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 2,
+  "other_cite_cmds": 0,
+  "labels_live": 23,
+  "labels_outside_grammar": 7,
+  "refs_live": 105,
+  "refs_outside_grammar": 9,
+  "other_ref_cmds": 0,
+  "float_envs": 7,
+  "cite_cmds_annotated": 110,
+  "cite_keys_annotated": 112,
+  "ids_annotated": 16,
+  "refs_annotated": 91,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 5,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "EJS1402-Accepted.tex",
+   "line": 704,
+   "token": "@ref(theorem4)",
+   "wrapper": "?",
+   "context": "\\begin{proof} [Proof of Theorem \\ref{theorem4}]"
+  },
+  {
+   "file": "EJS1402-Accepted.tex",
+   "line": 750,
+   "token": "@ref(theorem6)",
+   "wrapper": "?",
+   "context": "\\begin{proof} [Proof of Theorem \\ref{theorem6}]"
+  },
+  {
+   "file": "EJS1402-Accepted.tex",
+   "line": 814,
+   "token": "@ref(cor1)",
+   "wrapper": "?",
+   "context": "\\begin{proof} [Proof of Corollary \\ref{cor1}]"
+  },
+  {
+   "file": "EJS1402-Accepted.tex",
+   "line": 824,
+   "token": "@ref(theorem7)",
+   "wrapper": "?",
+   "context": "\\begin{proof} [Proof of Theorem \\ref{theorem7}]"
+  },
+  {
+   "file": "EJS1402-Accepted.tex",
+   "line": 857,
+   "token": "@ref(lem3)",
+   "wrapper": "?",
+   "context": "\\begin{proof} [Proof of Lemma \\ref{lem3}]"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.027558,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`varselection.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "EJS1402-Accepted.xtex",
+    "offset": 3214,
+    "length": 9,
+    "line": 111,
+    "column": 479
+   },
+   "message": "citation checking unavailable: `varselection.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

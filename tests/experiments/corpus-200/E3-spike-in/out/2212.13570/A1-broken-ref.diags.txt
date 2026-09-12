@@ -1,0 +1,3 @@
+planted=fig:02_cycle__ghost sites=[('02_researchmethod.xtex', 22)]
+xtex new=[('XT1003', 'fig:02_cycle__ghost', '02_researchmethod.xtex', 22)]
+texlab new=[('ERROR', '02_researchmethod.tex', 22, 'Undefined reference')]

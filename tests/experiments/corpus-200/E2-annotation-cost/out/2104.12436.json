@@ -1,0 +1,127 @@
+{
+ "paper": "2104.12436",
+ "main": "manuscript.tex",
+ "files": [
+  {
+   "file": "manuscript.tex",
+   "chars_before": 95887,
+   "chars_after": 95755,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 95887,
+ "chars_after": 95755,
+ "delta_pct": -0.13766203969255478,
+ "unrepaired": {
+  "chars_after": 95737,
+  "chars_before": 95887,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.018978,
+  "bibliography": {
+   "state": "complete",
+   "entries": 122
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.15643413601426678
+ },
+ "stats": {
+  "cite_cmds_live": 49,
+  "cite_keys_live": 77,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 50,
+  "labels_outside_grammar": 0,
+  "refs_live": 14,
+  "refs_outside_grammar": 14,
+  "other_ref_cmds": 97,
+  "float_envs": 8,
+  "cite_cmds_annotated": 47,
+  "cite_keys_annotated": 75,
+  "ids_annotated": 44,
+  "refs_annotated": 0,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 8,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "manuscript.tex",
+   "line": 263,
+   "token": "@cite(Katz15)",
+   "wrapper": "?",
+   "context": "\\begin{definition}[negligible function~\\cite{Katz15}]"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 490,
+   "token": "@id(fig:sic)",
+   "wrapper": "?",
+   "context": "\\subfigure[Sample identifying-complexity curve.]{\\includegraphics[scale=1]{./fig/sample_identifying_complexity_2.pdf}\\label{fig:sic}}%"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 491,
+   "token": "@id(fig:sdt)",
+   "wrapper": "?",
+   "context": "\\subfigure[Sample deciphering-time curve.]{\\includegraphics[scale=1]{./fig/sample_deciphering_time.pdf}\\label{fig:sdt}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 539,
+   "token": "@cite(Hoffstein08)",
+   "wrapper": "?",
+   "context": "\\begin{definition}[discrete logarithm problem~\\cite{Hoffstein08}]"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 931,
+   "token": "@id(fig:be_A11)",
+   "wrapper": "?",
+   "context": "\\subfigure[$\\hat{A}_{11}=\\hat{\\mu}_{1}$.]{\\includegraphics[scale=.5]{./fig/Bayesian_estimation_A11_2.pdf}\\label{fig:be_A11}}%"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 932,
+   "token": "@id(fig:be_A12)",
+   "wrapper": "?",
+   "context": "\\subfigure[$\\hat{A}_{12}=\\hat{\\mu}_{3}$.]{\\includegraphics[scale=.5]{./fig/Bayesian_estimation_A12_2.pdf}\\label{fig:be_A12}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 933,
+   "token": "@id(fig:be_A21)",
+   "wrapper": "?",
+   "context": "\\subfigure[$\\hat{A}_{21}=\\hat{\\mu}_{2}$.]{\\includegraphics[scale=.5]{./fig/Bayesian_estimation_A21_2.pdf}\\label{fig:be_A21}}%"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 934,
+   "token": "@id(fig:be_A22)",
+   "wrapper": "?",
+   "context": "\\subfigure[$\\hat{A}_{22}=\\hat{\\mu}_{4}$.]{\\includegraphics[scale=.5]{./fig/Bayesian_estimation_A22_2.pdf}\\label{fig:be_A22}}"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.018975,
+ "bibliography": {
+  "state": "complete",
+  "entries": 122
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

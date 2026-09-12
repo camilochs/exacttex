@@ -1,0 +1,4 @@
+warning: lineno.sty:296: Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+warning: DT_exact_plain.tex:125: Overfull \hbox (1.30043pt too wide) in paragraph at lines 124--125
+error: DT_exact_plain.tex:132: Illegal unit of measure (pt inserted)
+error: halted on potentially-recoverable error as specified

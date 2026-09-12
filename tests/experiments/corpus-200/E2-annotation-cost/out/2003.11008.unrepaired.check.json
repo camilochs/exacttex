@@ -1,0 +1,25 @@
+{
+ "coverage": 0.046276,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`nilab_malformation.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "nilab_malformation.xtex",
+    "offset": 4118,
+    "length": 18,
+    "line": 131,
+    "column": 36
+   },
+   "message": "citation checking unavailable: `nilab_malformation.bib` could not be read",
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+tectonic pdf bytes=557224
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=[] secs=5
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: mgrit_cg_selection.tex:92: Underfull \hbox (badness 4084) in paragraph at lines 92--92
+warning: mgrit_cg_selection.tex:92: Overfull \hbox (346.99213pt too wide) in paragraph at lines 92--92
+warning: mgrit_cg_selection.tex:106: Overfull \vbox (6.46347pt too high) has occurred while \output is active
+warning: mgrit_cg_selection.tex:1147: Underfull \hbox (badness 10000) in paragraph at lines 1147--1147
+warning: mgrit_cg_selection.bbl:190: Underfull \hbox (badness 1354) in paragraph at lines 186--190
+warning: errors were issued by BibTeX, but were ignored; use --print and/or --keep-logs for details.
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: mgrit_cg_selection.tex:92: Underfull \hbox (badness 4084) in paragraph at lines 92--92
+warning: mgrit_cg_selection.tex:92: Overfull \hbox (346.99213pt too wide) in paragraph at lines 92--92
+warning: mgrit_cg_selection.tex:106: Overfull \vbox (6.46347pt too high) has occurred while \output is active
+warning: mgrit_cg_selection.tex:1147: Underfull \hbox (badness 10000) in paragraph at lines 1147--1147
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: mgrit_cg_selection.tex:92: Underfull \hbox (badness 4084) in paragraph at lines 92--92
+warning: mgrit_cg_selection.tex:92: Overfull \hbox (346.99213pt too wide) in paragraph at lines 92--92
+warning: mgrit_cg_selection.tex:106: Overfull \vbox (6.46347pt too high) has occurred while \output is active
+warning: mgrit_cg_selection.tex:1147: Underfull \hbox (badness 10000) in paragraph at lines 1147--1147
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

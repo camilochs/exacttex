@@ -1,0 +1,8 @@
+warning: algorithm2e.sty:284: 
+Invalid UTF-8 byte or sequence at line 284 replaced by U+FFFD.
+warning: algorithm2e.sty:299: Invalid UTF-8 byte or sequence at line 299 replaced by U+FFFD.
+warning: algorithm2e.sty:550: Invalid UTF-8 byte or sequence at line 550 replaced by U+FFFD.
+warning: NeuroP2P.tex:69: Overfull \hbox (1.72585pt too wide) in paragraph at lines 68--69
+warning: NeuroP2P.tex:72: Overfull \hbox (2.46585pt too wide) in paragraph at lines 70--72
+error: NeuroP2P.tex:78: Unable to load picture or PDF file 'figures/planted_ghost.pdf'
+error: halted on potentially-recoverable error as specified

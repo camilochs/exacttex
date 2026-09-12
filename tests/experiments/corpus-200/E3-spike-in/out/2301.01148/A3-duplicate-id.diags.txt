@@ -1,0 +1,3 @@
+planted=sec:framework sites=[('content/manuscript/framework.xtex', 2), ('content/manuscript/framework.xtex', 1)]
+xtex new=[('XT1001', 'sec:framework', 'content/manuscript/framework.xtex', 2)]
+texlab new=[('ERROR', 'content/manuscript/framework.tex', 1, 'Duplicate label'), ('ERROR', 'content/manuscript/framework.tex', 2, 'Duplicate label')]

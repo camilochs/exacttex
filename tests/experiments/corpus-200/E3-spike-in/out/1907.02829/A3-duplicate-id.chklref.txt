@@ -1,0 +1,431 @@
+pdf=1
+exit=0
+lines=1246
+unique_findings=20
+ in paragraph at lines 1581--1596
+[]\OT1/cmr/m/sc/10 Wang, C.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Brent-nall, A. R.
+\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Cuz-ick, J.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/1
+0 Hark-ness, E. F.\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 5711) in paragraph at lines 1657--1680
+[]\OT1/cmr/m/sc/10 Zhang, X.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Rice, M.\OT1/cmr
+/m/n/10 , \OT1/cmr/m/sc/10 Tworoger, S. S.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Ro
+s-ner, B. A.\OT1/cmr/m/n/10 ,
+)
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 455.
+
+
+Overfull \hbox (88.87419pt too wide) in paragraph at lines 456--502
+ [][] 
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 506.
+
+
+Overfull \hbox (6.84717pt too wide) in paragraph at lines 507--524
+ [][] 
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 531.
+
+
+LaTeX Warning: Citation `2019-brentnallharveyetal' on page 31 undefined on inpu
+t line 531.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 531.
+
+
+LaTeX Warning: Citation `2019-brentnallharveyetal' on page 31 undefined on inpu
+t line 531.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (1.89867pt too wide) in paragraph at lines 539--540
+ [] 
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 540.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 540.
+
+
+LaTeX Warning: Float too large for page by 59.40358pt on input line 543.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[31] [32] [33 <./fig1-eps-converted-to.pdf>] [34 <./fig-overallcalib-eps-conver
+ted-to.pdf>] (./brentnallcuzick-arXiv.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbx8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></opt/homebrew/Cellar/texlive
+/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></opt/hom
+ebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mex10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew
+/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.
+pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmib10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/2026030
+1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></opt/homebrew/Cella
+r/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></o
+pt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20260301/share/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive
+/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/homeb
+rew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+i10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmti8.pfb>
+Output written on brentnallcuzick-arXiv.pdf (34 pages, 903498 bytes).
+Transcript written on brentnallcuzick-arXiv.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./brentnallcuzick-arXiv.tex (./imsart.cls
+Document Class: imsart 2010/04/27 driver class for package imsart.sty
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/article.
+cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/size10.c
+lo)) (./imsart.sty
+No file imsart.cnf.
+No file imsart-generic.cnf.
+))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amscls/amsthm
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsma
+th.sty
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amste
+xt.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsge
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsbs
+y.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsop
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def) (./brentnallcuzick-arXiv.aux
+
+LaTeX Warning: Label `sec-newpars' multiply defined.
+
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}] [2]
+Overfull \hbox (27.12788pt too wide) in alignment at lines 87--88
+ [][][] []
+[3] [4]
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/omscmr.f
+d) [5] [6] [7] [8] [9] [10] [11] [12] [13]
+Overfull \hbox (2.99593pt too wide) in alignment at lines 265--268
+ [][][] []
+[14] [15] [16] [17] [18] [19] [20] [21] [22]
+Overfull \hbox (2.36192pt too wide) in paragraph at lines 447--448
+\OT1/cmr/m/n/10 N01-CN-67009, N01-PC-35142, HHSN261201000029C, and HHSN26120130
+0012I
+(./brentnallcuzick-arXiv.bbl [23]
+Underfull \hbox (badness 2469) in paragraph at lines 133--150
+[]\OT1/cmr/m/sc/10 Banegas, M.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Gail, M.\OT1/c
+mr/m/n/10 , \OT1/cmr/m/sc/10 LaCroix, A.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Thom
+p-son, B.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Mar-
+
+Underfull \hbox (badness 2469) in paragraph at lines 176--194
+[]\OT1/cmr/m/sc/10 Boughey, J. C.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Hart-mann, 
+L. C.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 An-der-son, S. S.\OT1/cmr/m/n/10 , \OT1
+/cmr/m/sc/10 Deg-
+[24] [25]
+Underfull \hbox (badness 1024) in paragraph at lines 517--541
+\OT1/cmr/m/sc/10 Couch, F. J.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Southey, M.\OT1
+/cmr/m/n/10 , \OT1/cmr/m/sc/10 Goldgar, D. E.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10
+ Evans, D. G.\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 1810) in paragraph at lines 544--569
+[]\OT1/cmr/m/sc/10 Easton, D. F.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Pharoah, P. 
+D. P.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 An-to-niou, A. C.\OT1/cmr/m/n/10 , \OT1
+/cmr/m/sc/10 Tis-
+
+Underfull \hbox (badness 2717) in paragraph at lines 544--569
+\OT1/cmr/m/sc/10 Meindl, A.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Couch, F. J.\OT1/
+cmr/m/n/10 , \OT1/cmr/m/sc/10 Southey, M.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Gol
+dgar, D. E.\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 1215) in paragraph at lines 592--638
+\OT1/cmr/m/sc/10 Dev-ilee, P.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Bishop, D. T.\O
+T1/cmr/m/n/10 , \OT1/cmr/m/sc/10 We-ber, B.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 L
+enoir, G.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Chang-
+[26]
+Underfull \hbox (badness 1708) in paragraph at lines 641--657
+[]\OT1/cmr/m/sc/10 Gail, M. H.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Brin-ton, L. A
+.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Byar, D. P.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/
+10 Corle, D. K.\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 3019) in paragraph at lines 808--1086
+\OT1/cmr/m/sc/10 Wilson, A.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Brucker, S. Y.\OT
+1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Br[]uning, T.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10
+ Bur-winkel, B.\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 1348) in paragraph at lines 808--1086
+\OT1/cmr/m/sc/10 Gago-Dominguez, M.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Gap-stur,
+ S. M.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Garc[]^^Pa-S[]aenz, J. A.\OT1/cmr/m/n/
+10 ,
+
+Underfull \hbox (badness 1147) in paragraph at lines 808--1086
+\OT1/cmr/m/sc/10 Glen-don, G.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Gold-berg, M. S
+.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Goldgar, D. E.\OT1/cmr/m/n/10 , \OT1/cmr/m/
+sc/10 Gonz[]alez-
+
+Underfull \hbox (badness 1112) in paragraph at lines 808--1086
+\OT1/cmr/m/sc/10 M.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Koutros, S.\OT1/cmr/m/n/1
+0 , \OT1/cmr/m/sc/10 Kris-tensen, V. N.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Kr[]u
+ger, U.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 K[]uhl, T.\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 1975) in paragraph at lines 808--1086
+\OT1/cmr/m/sc/10 Mar-tinez, M. E.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Mavroudis, 
+D.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 McLean, C.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/
+10 Meindl, A.\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 1910) in paragraph at lines 808--1086
+\OT1/cmr/m/sc/10 P[]erez-Barrios, C.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Pe-ter-l
+ongo, P.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Peto, J.\OT1/cmr/m/n/10 , \OT1/cmr/m
+/sc/10 Pinchev, M.\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 4266) in paragraph at lines 808--1086
+\OT1/cmr/m/sc/10 Schmut-zler, R. K.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Schneewei
+ss, A.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Schoe-maker, M. J.\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 1496) in paragraph at lines 808--1086
+\OT1/cmr/m/sc/10 low, A. J.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Tamimi, R. M.\OT1
+/cmr/m/n/10 , \OT1/cmr/m/sc/10 Tap-per, W. J.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10
+ Tay-lor, J. A.\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 1062) in paragraph at lines 808--1086
+\OT1/cmr/m/sc/10 Chang-Claude, J.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Schmidt, M.
+ K.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Hall, P.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/1
+0 Milne, R. L.\OT1/cmr/m/n/10 ,
+[27] [28]
+
+! LaTeX Error: Unicode character   (U+2008)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1125   epidemiological studies}
+                                 .
+
+Underfull \hbox (badness 1383) in paragraph at lines 1166--1222
+\OT1/cmr/m/sc/10 son, K. C.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Kotchen, J. M.\OT
+1/cmr/m/n/10 , \OT1/cmr/m/sc/10 LaCroix, A. Z.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/1
+0 Lane, D. S.\OT1/cmr/m/n/10 ,
+[29]
+Underfull \hbox (badness 5637) in paragraph at lines 1347--1406
+\OT1/cmr/m/sc/10 Bern-stein, L.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Bertrand, K. 
+A.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Boutron-Ruault, M.-C.\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 2495) in paragraph at lines 1347--1406
+\OT1/cmr/m/sc/10 sus, L.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Eliassen, A. H.\OT1/
+cmr/m/n/10 , \OT1/cmr/m/sc/10 Giles, G. G.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Ha
+n-k-in-son, S. E.\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 2012) in paragraph at lines 1347--1406
+\OT1/cmr/m/sc/10 vanathan, K.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Wei-der-pass, E
+.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Wil-lett, W. C.\OT1/cmr/m/n/10 , \OT1/cmr/m
+/sc/10 Wolk, A.\OT1/cmr/m/n/10 ,
+[30]
+Underfull \hbox (badness 1681) in paragraph at lines 1453--1468
+[]\OT1/cmr/m/sc/10 Tice, J. A.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Miglioretti, D
+. L.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Li, C.-S.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc
+/10 Va-chon, C. M.\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 1354) in paragraph at lines 1543--1578
+\OT1/cmr/m/sc/10 cobs, K. B.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Thomas, G. D.\OT
+1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Hoover, R. N.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10
+ Gail, M. H.\OT1/cmr/m/n/10 ,
+
+Underfull \hbox (badness 1748) in paragraph at lines 1581--1596
+[]\OT1/cmr/m/sc/10 Wang, C.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Brent-nall, A. R.
+\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Cuz-ick, J.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/1
+0 Hark-ness, E. F.\OT1/cmr/m/n/10 ,
+[31]
+Underfull \hbox (badness 5711) in paragraph at lines 1657--1680
+[]\OT1/cmr/m/sc/10 Zhang, X.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Rice, M.\OT1/cmr
+/m/n/10 , \OT1/cmr/m/sc/10 Tworoger, S. S.\OT1/cmr/m/n/10 , \OT1/cmr/m/sc/10 Ro
+s-ner, B. A.\OT1/cmr/m/n/10 ,
+)
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 455.
+
+
+Overfull \hbox (88.87419pt too wide) in paragraph at lines 456--502
+ [][] 
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 506.
+
+
+Overfull \hbox (6.84717pt too wide) in paragraph at lines 507--524
+ [][] 
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 531.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 531.
+
+
+Overfull \hbox (1.89867pt too wide) in paragraph at lines 539--540
+ [] 
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 540.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/scit' undefined
+(Font)              using `OT1/cmr/m/sc' instead on input line 540.
+
+
+LaTeX Warning: Float too large for page by 59.40358pt on input line 543.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[32 <./fig1-eps-converted-to.pdf>] [33] [34] [35 <./fig-overallcalib-eps-conver
+ted-to.pdf>] (./brentnallcuzick-arXiv.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbx8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></opt/homebrew/Cellar/texlive
+/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></opt/hom
+ebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mex10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew
+/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.
+pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmib10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/2026030
+1/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></opt/homebrew/Cella
+r/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></o
+pt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20260301/share/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive
+/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/homeb
+rew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+i10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmti8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on brentnallcuzick-arXiv.pdf (35 pages, 908987 bytes).
+Transcript written on brentnallcuzick-arXiv.log.
+************************************
+** Labels in starred environments **
+************************************
+-- brentnallcuzick-arXiv.tex line  111: remove label eqn_ass2 
+-- brentnallcuzick-arXiv.tex line  148: consider using a STAR environment
+-- brentnallcuzick-arXiv.tex line  152: consider using a STAR environment
+-- brentnallcuzick-arXiv.tex line  195: remove label eqn_mod1 
+-- brentnallcuzick-arXiv.tex line  316: remove label eqn:riskcalib 
+-- brentnallcuzick-arXiv.tex line  324: remove label eqn:possreg2 
+-- brentnallcuzick-arXiv.tex line  363: remove label eqn-netrisk 
+
+*******************
+** Unused Labels **
+*******************
+-- brentnallcuzick-arXiv.tex line  111: remove label eqn_ass2
+-- brentnallcuzick-arXiv.tex line  124: remove label eqn_baselinesurv
+-- brentnallcuzick-arXiv.tex line  158: remove label sec-newpars
+-- brentnallcuzick-arXiv.tex line  195: remove label eqn_mod1
+-- brentnallcuzick-arXiv.tex line  224: remove label sec:oeoverall
+-- brentnallcuzick-arXiv.tex line  240: remove label eqn:neta
+-- brentnallcuzick-arXiv.tex line  258: remove label eqn:crudefix0
+-- brentnallcuzick-arXiv.tex line  262: remove label eqn:crude
+-- brentnallcuzick-arXiv.tex line  267: remove label eqn:absrisk22b
+-- brentnallcuzick-arXiv.tex line  276: remove label sec:basiccalib
+-- brentnallcuzick-arXiv.tex line  301: remove label sec:recoA
+-- brentnallcuzick-arXiv.tex line  316: remove label eqn:riskcalib
+-- brentnallcuzick-arXiv.tex line  324: remove label eqn:possreg2
+-- brentnallcuzick-arXiv.tex line  339: remove label eqn:nelsona
+-- brentnallcuzick-arXiv.tex line  363: remove label eqn-netrisk
+-- brentnallcuzick-arXiv.tex line  382: remove label eqn:cif2a
+-- brentnallcuzick-arXiv.tex line  417: remove label sec:data:calib2
+-- brentnallcuzick-arXiv.tex line   53: remove label sec-newpars
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

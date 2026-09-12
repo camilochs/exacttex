@@ -1,0 +1,3 @@
+planted=fig:CGAN sites=[('thesis_arxiv.xtex', 332), ('thesis_arxiv.xtex', 106)]
+xtex new=[('XT1001', 'fig:CGAN', 'thesis_arxiv.xtex', 332), ('XT1004', 'fig:CGAN', 'thesis_arxiv.xtex', 301)]
+texlab new=[('ERROR', 'thesis_arxiv.tex', 106, 'Duplicate label'), ('ERROR', 'thesis_arxiv.tex', 332, 'Duplicate label')]

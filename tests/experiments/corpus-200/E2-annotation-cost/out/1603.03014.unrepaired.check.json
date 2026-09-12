@@ -1,0 +1,25 @@
+{
+ "coverage": 0.011274,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`sigproc.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "final.xtex",
+    "offset": 2320,
+    "length": 7,
+    "line": 56,
+    "column": 35
+   },
+   "message": "citation checking unavailable: `sigproc.bib` could not be read",
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,3 @@
+planted=GoldmanRakic1995__ghost sites=[('eibump.xtex', 143)]
+xtex new=[('XT1005', 'GoldmanRakic1995__ghost', 'eibump.xtex', 143)]
+texlab new=[]

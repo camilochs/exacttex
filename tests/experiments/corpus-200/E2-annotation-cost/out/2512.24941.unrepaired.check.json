@@ -1,0 +1,657 @@
+{
+ "coverage": 0.008281,
+ "bibliography": {
+  "state": "complete",
+  "entries": 77
+ },
+ "diagnostics": [
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 13454,
+    "length": 10,
+    "line": 132,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 14494,
+    "length": 10,
+    "line": 147,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 15241,
+    "length": 10,
+    "line": 156,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 16669,
+    "length": 10,
+    "line": 165,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 17765,
+    "length": 10,
+    "line": 184,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 18367,
+    "length": 10,
+    "line": 193,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 19575,
+    "length": 10,
+    "line": 207,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 23232,
+    "length": 10,
+    "line": 291,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 26236,
+    "length": 10,
+    "line": 318,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 27347,
+    "length": 10,
+    "line": 347,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 34201,
+    "length": 10,
+    "line": 408,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 34589,
+    "length": 10,
+    "line": 423,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 35705,
+    "length": 10,
+    "line": 446,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 35926,
+    "length": 10,
+    "line": 453,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 36690,
+    "length": 10,
+    "line": 472,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 37593,
+    "length": 10,
+    "line": 489,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 38136,
+    "length": 10,
+    "line": 505,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 39783,
+    "length": 10,
+    "line": 523,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 43902,
+    "length": 10,
+    "line": 541,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 45247,
+    "length": 10,
+    "line": 555,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 47172,
+    "length": 10,
+    "line": 569,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 48342,
+    "length": 10,
+    "line": 578,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:1",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 51255,
+    "length": 10,
+    "line": 614,
+    "column": 9
+   },
+   "message": "identifier `fig:1` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 12432,
+      "length": 10,
+      "line": 118,
+      "column": 9
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:train_query",
+   "span": {
+    "file": "openwork.xtex",
+    "offset": 55243,
+    "length": 20,
+    "line": 669,
+    "column": 1
+   },
+   "message": "identifier `tab:train_query` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "openwork.xtex",
+      "offset": 54444,
+      "length": 20,
+      "line": 638,
+      "column": 1
+     }
+    }
+   ]
+  }
+ ]
+}

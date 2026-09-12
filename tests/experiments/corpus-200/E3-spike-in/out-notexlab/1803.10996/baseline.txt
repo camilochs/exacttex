@@ -1,0 +1,6 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=[] secs=3
+error: thesis_arxiv.bbl:21: Undefined control sequence
+error: halted on potentially-recoverable error as specified

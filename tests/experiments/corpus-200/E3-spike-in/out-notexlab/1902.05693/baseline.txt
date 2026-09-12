@@ -1,0 +1,30 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=[] secs=2
+at line 11 replaced by U+FFFD.
+warning: main_jk.tex:112: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: main_jk.tex:228: Overfull \hbox (6.0pt too wide) in paragraph at lines 218--228
+warning: main_jk.tex:228: Overfull \hbox (6.0pt too wide) in paragraph at lines 218--228
+warning: main_jk.tex:238: Underfull \vbox (badness 4096) has occurred while \output is active
+warning: main_jk.tex:253: Overfull \hbox (6.0pt too wide) in paragraph at lines 243--253
+warning: main_jk.tex:253: Overfull \hbox (6.0pt too wide) in paragraph at lines 243--253
+warning: main_jk.tex:268: Overfull \hbox (6.0pt too wide) in paragraph at lines 258--268
+warning: main_jk.tex:268: Overfull \hbox (6.0pt too wide) in paragraph at lines 258--268
+warning: errors were issued by BibTeX, but were ignored; use --print and/or --keep-logs for details.
+warning: algorithmic.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: main_jk.tex:126: Underfull \vbox (badness 2460) has occurred while \output is active
+warning: main_jk.tex:228: Overfull \hbox (6.0pt too wide) in paragraph at lines 218--228
+warning: main_jk.tex:228: Overfull \hbox (6.0pt too wide) in paragraph at lines 218--228
+warning: main_jk.tex:238: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: main_jk.tex:253: Overfull \hbox (6.0pt too wide) in paragraph at lines 243--253
+warning: main_jk.tex:253: Overfull \hbox (6.0pt too wide) in paragraph at lines 243--253
+warning: main_jk.tex:268: Overfull \hbox (6.0pt too wide) in paragraph at lines 258--268
+warning: main_jk.tex:268: Overfull \hbox (6.0pt too wide) in paragraph at lines 258--268
+warning: main_jk.tex:273: Underfull \vbox (badness 10000) has occurred while \output is active
+error: main_jk.bbl:24: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+error: halted on potentially-recoverable error as specified

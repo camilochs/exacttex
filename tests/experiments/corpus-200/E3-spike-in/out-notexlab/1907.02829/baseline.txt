@@ -1,0 +1,7 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=['1842-RigoniStern', '1969-macmahon', '1976_Wolfe', '1982-boyd', '1983-pike', '1987-destavola', '1989_Gailetal', '1991-steel', '1993-claus', '2001_Crowder', '2004_TyrerCuzick', '2006_McCormackSilva', '2007_Boydetal', '2008_Antoniouetal', '2010_FH01', '2012_collabovmenop', '2015-eastonpharoah', '2018-snp313', 'e1@', 'e2@'] secs=2
+warning: brentnallcuzick-arXiv.tex:58: Underfull \hbox (badness 10000) has occurred while \output is active
+error: brentnallcuzick-arXiv.tex:71: Extra }, or forgotten \endgroup
+error: halted on potentially-recoverable error as specified

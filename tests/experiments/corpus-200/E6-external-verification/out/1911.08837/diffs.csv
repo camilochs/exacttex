@@ -1,0 +1,8 @@
+target,kind,verdict,field,severity,document,source
+Josef2005,bib-entry,mismatch,title,medium,{Ciliary behavior of a negatively phototactic \textit{Chlamydomonas reinhardtii.}},Ciliary behavior of a negatively phototactic Chlamydomonas reinhardtii
+Josef2006,bib-entry,mismatch,title,medium,{Linear systems analysis of the ciliary steering behavior associated with negative-phototaxis in \textit{Chlamydomonas reinhardtii.}},Linear systems analysis of the ciliary steering behavior associated with negative‐phototaxis in Chlamydomonas reinhardtii
+Kirkbook1998,bib-entry,partial,authors,high,"Kirk, D.L.",Annette W. Coleman
+Schaller1997,bib-entry,mismatch,title,medium,{How \textit{Chlamydomonas} keeps track of the light once it has reached the right phototactic orientation.},How Chlamydomonas keeps track of the light once it has reached the right phototactic orientation
+Yoshimura2001,bib-entry,mismatch,title,medium,{The sensitivity of \textit{Chlamydomonas} photoreceptor is optimized for the frequency of cell body rotation},The Sensitivity of Chlamydomonas Photoreceptor is Optimized for the Frequency of Cell Body Rotation
+symon1971chapter,bib-entry,partial,authors,high,"Symon, K. R.",Keith R. Symon and B. James Raz
+symon1971chapter,bib-entry,partial,year,medium,1971,1961

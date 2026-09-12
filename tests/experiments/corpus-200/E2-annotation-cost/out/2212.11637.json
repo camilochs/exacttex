@@ -1,0 +1,172 @@
+{
+ "paper": "2212.11637",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 101168,
+   "chars_after": 101159,
+   "emitted": true,
+   "identity": "import-ext-only",
+   "lines_differing": 12
+  },
+  {
+   "file": "macros.tex",
+   "chars_before": 10398,
+   "chars_after": 10398,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "Figures/gp2/label-grammar.tex",
+   "chars_before": 350,
+   "chars_after": 347,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "Figures/gp2/program-syntax.tex",
+   "chars_before": 698,
+   "chars_after": 695,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "Figures/gp2/core-semantics.tex",
+   "chars_before": 1817,
+   "chars_after": 1814,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "Figures/Examples/working-tape.tex",
+   "chars_before": 219,
+   "chars_after": 216,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "Figures/Examples/example.tex",
+   "chars_before": 743,
+   "chars_after": 740,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "Figures/Simulation/simulation.tex",
+   "chars_before": 1339,
+   "chars_after": 1336,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "Figures/Simulation/transitions.tex",
+   "chars_before": 6137,
+   "chars_after": 6134,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "Figures/Block/block.tex",
+   "chars_before": 1278,
+   "chars_after": 1275,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "Figures/Encode/encode.tex",
+   "chars_before": 4440,
+   "chars_after": 4437,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "Figures/Decode/decode.tex",
+   "chars_before": 1329,
+   "chars_after": 1326,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "Figures/FlagOps/restart.tex",
+   "chars_before": 2659,
+   "chars_after": 2656,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 13,
+ "chars_before": 132575,
+ "chars_after": 132533,
+ "delta_pct": -0.03168018102960588,
+ "unrepaired": {
+  "chars_after": 132533,
+  "chars_before": 132575,
+  "converted_files": 13,
+  "check_exit": 0,
+  "coverage": 0.02293,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`generic.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.03168018102960588
+ },
+ "stats": {
+  "cite_cmds_live": 21,
+  "cite_keys_live": 22,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 46,
+  "labels_outside_grammar": 0,
+  "refs_live": 60,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 22,
+  "cite_cmds_annotated": 21,
+  "cite_keys_annotated": 22,
+  "ids_annotated": 46,
+  "refs_annotated": 60,
+  "inputs_root": 12,
+  "inputs_imported": 12,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.02293,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`generic.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "main.xtex",
+    "offset": 1311,
+    "length": 14,
+    "line": 31,
+    "column": 377
+   },
+   "message": "citation checking unavailable: `generic.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

@@ -1,0 +1,42 @@
+ (badness 10000) has occurred while \output is active
+warning: 04_Experimental_setup:42: Underfull \hbox (badness 10000) has occurred while \output is active
+warning: 04_Experimental_setup:97: Underfull \hbox (badness 10000) has occurred while \output is active
+warning: 04_Experimental_setup:110: Underfull \hbox (badness 2293) in paragraph at lines 107--110
+warning: 04_Experimental_setup:146: Underfull \hbox (badness 10000) has occurred while \output is active
+warning: 05_Results:32: Underfull \hbox (badness 10000) has occurred while \output is active
+warning: 05_Results:69: Underfull \hbox (badness 10000) has occurred while \output is active
+warning: 05_Results:93: Underfull \hbox (badness 1622) in paragraph at lines 86--93
+warning: 05_Results:93: Underfull \hbox (badness 1565) in paragraph at lines 86--93
+warning: 05_Results:107: Underfull \hbox (badness 10000) has occurred while \output is active
+warning: 06_Conclusion:10: Underfull \hbox (badness 10000) has occurred while \output is active
+warning: 07_acknowledgement:1: Overfull \hbox (0.70552pt too wide) in paragraph at lines 11--1
+warning: 07_acknowledgement:2: Missing character: There is no ��� ("2019) in font t1-stixgeneral!
+warning: could not represent character "’" (0x2019) in font "t1-stixgeneral"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: 00_main.tex:17: Underfull \hbox (badness 1048) in paragraph at lines 2--17
+warning: 00_main.tex:17: Underfull \hbox (badness 1067) in paragraph at lines 2--17
+warning: 00_main.bbl:4: 
+Missing character: There is no ��� ("2019) in font t1-stixgeneral!
+warning: could not represent character "’" (0x2019) in font "t1-stixgeneral"
+warning: 00_main.bbl:10: Underfull \hbox (badness 1783) in paragraph at lines 4--10
+warning: 00_main.bbl:26: Underfull \hbox (badness 1024) in paragraph at lines 23--26
+warning: 00_main.bbl:123: Underfull \hbox (badness 10000) has occurred while \output is active
+warning: 00_main.tex:24: Underfull \hbox (badness 10000) has occurred while \output is active
+warning: 00_main.tex:24: 
+runsystem(makeindex -s 00_main.ist -t 00_main.alg -o 00_main.acr 00_main.acn)...disabled.
+warning: 00_main.tex:24: Underfull \hbox (badness 10000) has occurred while \output is active
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: Object @figure.1 already defined.
+warning: Object @table.1 already defined.
+warning: Object @figure.2 already defined.
+warning: Object @table.2 already defined.
+warning: Object @table.3 already defined.
+warning: Object @figure.3 already defined.
+warning: Object @figure.4 already defined.
+warning: Object @figure.5 already defined.
+warning: Object @figure.6 already defined.
+warning: Object @figure.7 already defined.
+warning: Object @figure.8 already defined.
+warning: Object @figure.9 already defined.
+warning: Object @figure.10 already defined.

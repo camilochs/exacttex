@@ -1,0 +1,3 @@
+planted=table:summary__ghost sites=[('CSP_Reoptimization.xtex', 86)]
+xtex new=[('XT1003', 'table:summary__ghost', 'CSP_Reoptimization.xtex', 86)]
+texlab new=[('ERROR', 'CSP_Reoptimization.tex', 86, 'Undefined reference')]

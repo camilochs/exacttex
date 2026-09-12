@@ -1,0 +1,25 @@
+{
+ "coverage": 0.01869,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`bib/RoaringBitmap.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "RunRoaringBitmap.xtex",
+    "offset": 5094,
+    "length": 11,
+    "line": 138,
+    "column": 84
+   },
+   "message": "citation checking unavailable: `bib/RoaringBitmap.bib` could not be read",
+   "related": []
+  }
+ ]
+}

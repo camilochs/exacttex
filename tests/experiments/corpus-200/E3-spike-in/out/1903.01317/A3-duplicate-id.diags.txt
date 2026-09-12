@@ -1,0 +1,3 @@
+planted=relation sites=[('68886_rev2.xtex', 191), ('68886_rev2.xtex', 88)]
+xtex new=[('XT1001', 'relation', '68886_rev2.xtex', 191)]
+texlab new=[('ERROR', '68886_rev2.tex', 88, 'Duplicate label'), ('ERROR', '68886_rev2.tex', 191, 'Duplicate label')]

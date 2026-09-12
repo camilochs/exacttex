@@ -1,0 +1,3 @@
+planted=sec:Intro sites=[('Gonium.xtex', 119), ('Gonium.xtex', 216)]
+xtex new=[('XT1001', 'sec:Intro', 'Gonium.xtex', 216)]
+texlab new=[('ERROR', 'Gonium.tex', 119, 'Duplicate label'), ('ERROR', 'Gonium.tex', 216, 'Duplicate label'), ('info', 'Gonium.tex', 216, 'Unused label')]

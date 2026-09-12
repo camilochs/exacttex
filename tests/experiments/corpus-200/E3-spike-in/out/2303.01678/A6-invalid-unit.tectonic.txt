@@ -1,0 +1,8 @@
+warning: anyfontsize.sty:3: 
+Invalid UTF-8 byte or sequence at line 3 replaced by U+FFFD.
+warning: anyfontsize.sty:3: Invalid UTF-8 byte or sequence at line 3 replaced by U+FFFD.
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: preprint.tex:48: Underfull \hbox (badness 10000) in paragraph at lines 48--48
+error: preprint.tex:50: Illegal unit of measure (pt inserted)
+error: halted on potentially-recoverable error as specified

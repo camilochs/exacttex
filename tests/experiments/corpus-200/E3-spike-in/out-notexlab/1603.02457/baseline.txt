@@ -1,0 +1,25 @@
+tectonic pdf bytes=105349
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=['Bilo2011', 'Bilo2012', 'Bockenhauer2008', 'Bodlaender1995', 'Boria2012', 'Brejova2006', 'Dondi2013', 'Evans2003', 'Garey1979', 'Lanctot1998', 'Li1999', 'Li2010', 'Ma2000', 'Ma2008', 'Pevzner2000', 'Schaffter1997', 'Wang2008', 'Zaslavsky2006', 'Zych2012'] secs=3
+:234: Underfull \hbox (badness 10000) in paragraph at lines 233--234
+warning: CSP_Reoptimization.tex:238: Underfull \hbox (badness 10000) in paragraph at lines 236--238
+warning: CSP_Reoptimization.tex:253: Overfull \hbox (10.0196pt too wide) in paragraph at lines 252--253
+warning: CSP_Reoptimization.tex:253: Overfull \hbox (15.42427pt too wide) in paragraph at lines 252--253
+warning: CSP_Reoptimization.tex:389: Underfull \hbox (badness 10000) in paragraph at lines 387--389
+warning: CSP_Reoptimization.tex:423: Overfull \hbox (1.03485pt too wide) in paragraph at lines 422--423
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: CSP_Reoptimization.tex:65: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: CSP_Reoptimization.tex:106: Overfull \hbox (9.48047pt too wide) in paragraph at lines 90--106
+warning: CSP_Reoptimization.tex:152: Overfull \hbox (7.70741pt too wide) in paragraph at lines 151--152
+warning: CSP_Reoptimization.tex:175: Underfull \hbox (badness 10000) in paragraph at lines 174--175
+warning: CSP_Reoptimization.tex:184: Overfull \hbox (14.34569pt too wide) in paragraph at lines 176--184
+warning: CSP_Reoptimization.tex:209: Overfull \hbox (18.51764pt too wide) in paragraph at lines 208--209
+warning: CSP_Reoptimization.tex:234: Underfull \hbox (badness 10000) in paragraph at lines 233--234
+warning: CSP_Reoptimization.tex:238: Underfull \hbox (badness 10000) in paragraph at lines 236--238
+warning: CSP_Reoptimization.tex:253: Overfull \hbox (10.0196pt too wide) in paragraph at lines 252--253
+warning: CSP_Reoptimization.tex:253: Overfull \hbox (15.42427pt too wide) in paragraph at lines 252--253
+warning: CSP_Reoptimization.tex:389: Underfull \hbox (badness 10000) in paragraph at lines 387--389
+warning: CSP_Reoptimization.tex:423: Overfull \hbox (1.03485pt too wide) in paragraph at lines 422--423
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

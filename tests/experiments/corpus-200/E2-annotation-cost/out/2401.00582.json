@@ -1,0 +1,80 @@
+{
+ "paper": "2401.00582",
+ "main": "templateArxiv.tex",
+ "files": [
+  {
+   "file": "templateArxiv.tex",
+   "chars_before": 44588,
+   "chars_after": 44564,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 44588,
+ "chars_after": 44564,
+ "delta_pct": -0.05382614156275231,
+ "unrepaired": {
+  "chars_after": 44564,
+  "chars_before": 44588,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.011399,
+  "bibliography": {
+   "state": "complete",
+   "entries": 12
+  },
+  "errors": 1,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.05382614156275231
+ },
+ "stats": {
+  "cite_cmds_live": 12,
+  "cite_keys_live": 12,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 11,
+  "labels_outside_grammar": 3,
+  "refs_live": 11,
+  "refs_outside_grammar": 3,
+  "other_ref_cmds": 0,
+  "float_envs": 5,
+  "cite_cmds_annotated": 12,
+  "cite_keys_annotated": 12,
+  "ids_annotated": 8,
+  "refs_annotated": 8,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 1,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [
+  {
+   "code": "XT1020",
+   "name": "tab:Carbon",
+   "file": "templateArxiv.xtex",
+   "line": 235,
+   "message": "prose says `Figure` but `tab:Carbon` is a table",
+   "classification": "prose-word mismatch on a real document [target classed as table]: `tab:` prefix",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.01104,
+ "bibliography": {
+  "state": "complete",
+  "entries": 12
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

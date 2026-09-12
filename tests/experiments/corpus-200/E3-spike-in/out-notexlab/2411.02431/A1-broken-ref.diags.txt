@@ -1,0 +1,3 @@
+planted=preliminaries__ghost sites=[('elsarticle-template-harv.xtex', 138)]
+xtex new=[('XT1003', 'preliminaries__ghost', 'elsarticle-template-harv.xtex', 138)]
+texlab new=[]

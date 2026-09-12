@@ -1,0 +1,25 @@
+{
+ "coverage": 0.040315,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`bib.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "apo.xtex",
+    "offset": 3330,
+    "length": 33,
+    "line": 79,
+    "column": 407
+   },
+   "message": "citation checking unavailable: `bib.bib` could not be read",
+   "related": []
+  }
+ ]
+}

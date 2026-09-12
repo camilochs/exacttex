@@ -1,0 +1,3 @@
+planted=Dd__ghost sites=[('manuscript.xtex', 82)]
+xtex new=[('XT1003', 'Dd__ghost', 'manuscript.xtex', 82)]
+texlab new=[]

@@ -1,0 +1,25 @@
+{
+ "coverage": 0.023728,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`NeuroP2P.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "NeuroP2P.xtex",
+    "offset": 4433,
+    "length": 15,
+    "line": 80,
+    "column": 270
+   },
+   "message": "citation checking unavailable: `NeuroP2P.bib` could not be read",
+   "related": []
+  }
+ ]
+}

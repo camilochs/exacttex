@@ -1,0 +1,7 @@
+target,kind,verdict,field,severity,document,source
+b-bit,bib-entry,mismatch,title,medium,Theory and applications of \emph{b}-bit minwise hashing,Theory and applications of b -bit minwise hashing
+count_sketch,bib-entry,partial,year,medium,2004,2003
+fung2011service,bib-entry,partial,year,medium,2011,2012
+georgiou2020survey,bib-entry,partial,year,medium,2020,2019
+haastad1990tensor,bib-entry,partial,authors,high,"H{\aa}stad, Johan",Johan Håstad
+koga2007fast,bib-entry,partial,year,medium,2007,2006

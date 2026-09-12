@@ -1,0 +1,52 @@
+{
+ "coverage": 0.013958,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`main.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT1020",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "tab:matched_set",
+   "span": {
+    "file": "main.xtex",
+    "offset": 19411,
+    "length": 6,
+    "line": 208,
+    "column": 1027
+   },
+   "message": "prose says `Figure` but `tab:matched_set` is a table",
+   "related": [
+    {
+     "message": "table declared here",
+     "span": {
+      "file": "main.xtex",
+      "offset": 20756,
+      "length": 15,
+      "line": 243,
+      "column": 5
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "main.xtex",
+    "offset": 6077,
+    "length": 10,
+    "line": 118,
+    "column": 801
+   },
+   "message": "citation checking unavailable: `main.bib` could not be read",
+   "related": []
+  }
+ ]
+}

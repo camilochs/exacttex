@@ -1,0 +1,318 @@
+exit=2
+lines=756
+unique_findings=232
+ex line 603: Non-breaking space (`~') should have been used.
+\textit{Pseudomonas} \cite{76}. The resulting \textit{P. putida} strain KP1 was verified by PCR amplification of  
+                    ^
+Warning 13 in pyov_arxiv.tex line 615: Intersentence spacing (`\@') should perhaps be used.
+production was analyzed under iron limitation (KB/1 mM DP; KB/100 μM FeCl$_3$/1 mM DP)  
+                                                         ^
+Warning 13 in pyov_arxiv.tex line 616: Intersentence spacing (`\@') should perhaps be used.
+and iron replete conditions (KB; KB/100 $\mu$M FeCl$_3$). Each individual experiment was  
+                               ^
+Warning 1 in pyov_arxiv.tex line 626: Command terminated with space.
+reader (Infinite \textregistered M200 from Tecan Trading AG). The measurement was controlled and  
+                                ^
+Warning 2 in pyov_arxiv.tex line 638: Non-breaking space (`~') should have been used.
+described protocol \cite{77} and added to the medium at concentrations of between 0 and 20 $\mu$M.  
+                  ^
+Warning 12 in pyov_arxiv.tex line 682: Interword spacing (`\ ') should perhaps be used.
+combinations, we assign the appropriate probability to them, i.e. the number of ways to  
+                                                                 ^
+Warning 26 in pyov_arxiv.tex line 684: You ought to remove spaces in front of punctuation.
+combinatorics, one can compute the total number of triplets (6 ! = 216), and the multiplicities  
+                                                              ^
+Warning 26 in pyov_arxiv.tex line 689: You ought to remove spaces in front of punctuation.
+each triplet, using the weighted average described above. After setting $n_0$ , $\alpha$, and $s$, the  
+                                                                             ^
+Warning 8 in pyov_arxiv.tex line 699: Wrong length of dash may have been used.
+\textit{Nat Rev Microbiol} \textbf{13}, 497-508 (2015).  
+                                           ^
+Warning 8 in pyov_arxiv.tex line 709: Wrong length of dash may have been used.
+\textit{FEMS Microbiol Rev} \textbf{40}, 738-752 (2016).  
+                                            ^
+Warning 8 in pyov_arxiv.tex line 714: Wrong length of dash may have been used.
+\textit{Nature} \textbf{441}, 300-302 (2006).  
+                                 ^
+Warning 8 in pyov_arxiv.tex line 719: Wrong length of dash may have been used.
+\textit{Nat Rev Microbiol} \textbf{14}, 576-588 (2016).  
+                                           ^
+Warning 8 in pyov_arxiv.tex line 723: Wrong length of dash may have been used.
+\textit{Annu Rev Microbiol} \textbf{62}, 193-210 (2008).  
+                                            ^
+Warning 8 in pyov_arxiv.tex line 728: Wrong length of dash may have been used.
+\textit{Proc Natl Acad Sci USA} \textbf{105}, 20269-20273 (2008).  
+                                                   ^
+Warning 8 in pyov_arxiv.tex line 733: Wrong length of dash may have been used.
+\textit{Nature} \textbf{425}, 72-74 (2003).  
+                                ^
+Warning 8 in pyov_arxiv.tex line 738: Wrong length of dash may have been used.
+\textit{Annu Rev Ecol Evol Syst} \textbf{38}, 53-77 (2007).  
+                                                ^
+Warning 8 in pyov_arxiv.tex line 748: Wrong length of dash may have been used.
+\textit{Science} \textbf{323}, 272-275 (2009).  
+                                  ^
+Warning 8 in pyov_arxiv.tex line 778: Wrong length of dash may have been used.
+\textit{Ann Hum Genet} \textbf{35}, 485-490 (1972).  
+                                       ^
+Warning 8 in pyov_arxiv.tex line 783: Wrong length of dash may have been used.
+\textit{Annu Rev Microbiol} \textbf{41}, 435-464 (1987).  
+                                            ^
+Warning 8 in pyov_arxiv.tex line 792: Wrong length of dash may have been used.
+\textit{Physica A} \textbf{389}, 4265-4298 (2010).  
+                                     ^
+Warning 8 in pyov_arxiv.tex line 797: Wrong length of dash may have been used.
+\textit{Nature} \textbf{459}, 253-256 (2009).  
+                                 ^
+Warning 8 in pyov_arxiv.tex line 807: Wrong length of dash may have been used.
+\textit{B Am Math Soc} \textbf{40}, 479-519 (2003).  
+                                       ^
+Warning 8 in pyov_arxiv.tex line 812: Wrong length of dash may have been used.
+\textit{Nature} \textbf{448}, 1046-1049 (2007).  
+                                  ^
+Warning 8 in pyov_arxiv.tex line 817: Wrong length of dash may have been used.
+\textit{Science} \textbf{211}, 1390-1396 (1981).  
+                                   ^
+Warning 8 in pyov_arxiv.tex line 822: Wrong length of dash may have been used.
+\textit{J Theor Biol} \textbf{299}, 31-41 (2012).  
+                                      ^
+Warning 8 in pyov_arxiv.tex line 832: Wrong length of dash may have been used.
+\textit{I. J Theor Biol} \textbf{7}, 1-16 (1964).  
+                                      ^
+Warning 8 in pyov_arxiv.tex line 837: Wrong length of dash may have been used.
+\textit{Nature} \textbf{430}, 1024-1027 (2004).  
+                                  ^
+Warning 8 in pyov_arxiv.tex line 842: Wrong length of dash may have been used.
+\textit{Evolution} \textbf{63}, 939-949 (2009).  
+                                   ^
+Warning 8 in pyov_arxiv.tex line 847: Wrong length of dash may have been used.
+\textit{Science} \textbf{314}, 1560-1563 (2006).  
+                                   ^
+Warning 8 in pyov_arxiv.tex line 852: Wrong length of dash may have been used.
+\textit{Proc Natl Acad Sci USA} \textbf{110}, 12577-12582 (2013).  
+                                                   ^
+Warning 8 in pyov_arxiv.tex line 857: Wrong length of dash may have been used.
+\textit{Ecol Lett} \textbf{17}, 1536-1544 (2014).  
+                                    ^
+Warning 8 in pyov_arxiv.tex line 862: Wrong length of dash may have been used.
+\textit{J Evol Biol} \textbf{27}, 1869-1877 (2014).  
+                                      ^
+Warning 18 in pyov_arxiv.tex line 871: Use either `` or '' as an alternative to `"'.
+A mixture of "cheats" and "co-operators" can enable maximal group benefit.  
+             ^
+Warning 18 in pyov_arxiv.tex line 871: Use either `` or '' as an alternative to `"'.
+A mixture of "cheats" and "co-operators" can enable maximal group benefit.  
+                    ^
+Warning 18 in pyov_arxiv.tex line 871: Use either `` or '' as an alternative to `"'.
+A mixture of "cheats" and "co-operators" can enable maximal group benefit.  
+                          ^
+Warning 18 in pyov_arxiv.tex line 871: Use either `` or '' as an alternative to `"'.
+A mixture of "cheats" and "co-operators" can enable maximal group benefit.  
+                                       ^
+Warning 8 in pyov_arxiv.tex line 877: Wrong length of dash may have been used.
+\textit{Evolution} \textbf{71}, 1443-1455 (2017).  
+                                    ^
+Warning 8 in pyov_arxiv.tex line 882: Wrong length of dash may have been used.
+\textit{ISME J} \textbf{10}, 2557-2568 (2016).  
+                                 ^
+Warning 8 in pyov_arxiv.tex line 887: Wrong length of dash may have been used.
+\textit{Cell Rep} \textbf{7}, 1104-1115 (2014).  
+                                  ^
+Warning 8 in pyov_arxiv.tex line 892: Wrong length of dash may have been used.
+\textit{FEMS Microbiol Ecol} \textbf{62}, 135-141 (2007).  
+                                             ^
+Warning 8 in pyov_arxiv.tex line 897: Wrong length of dash may have been used.
+\textit{J Evol Biol} \textbf{22}, 589-598 (2009).  
+                                     ^
+Warning 8 in pyov_arxiv.tex line 902: Wrong length of dash may have been used.
+\textit{Evolution} \textbf{67}, 3161-3174 (2013).  
+                                    ^
+Warning 8 in pyov_arxiv.tex line 907: Wrong length of dash may have been used.
+\textit{Trends Microbiol} \textbf{15}, 22-30 (2007).  
+                                         ^
+Warning 8 in pyov_arxiv.tex line 912: Wrong length of dash may have been used.
+\textit{Proc Natl Acad Sci USA} \textbf{106}, 20440-20445 (2009).  
+                                                   ^
+Warning 8 in pyov_arxiv.tex line 917: Wrong length of dash may have been used.
+\textit{J Inorg Biochem} \textbf{148}, 27-34 (2015).  
+                                         ^
+Warning 8 in pyov_arxiv.tex line 922: Wrong length of dash may have been used.
+\textit{J Bacteriol} \textbf{192}, 1212-1220 (2010).  
+                                       ^
+Warning 8 in pyov_arxiv.tex line 927: Wrong length of dash may have been used.
+\textit{Biometals} \textbf{22}, 951-964 (2009).  
+                                   ^
+Warning 8 in pyov_arxiv.tex line 932: Wrong length of dash may have been used.
+\textit{Protein Cell} \textbf{6}, 26-41 (2015).  
+                                    ^
+Warning 8 in pyov_arxiv.tex line 937: Wrong length of dash may have been used.
+\textit{Environ Microbiol} \textbf{6}, 1264-1286 (2004).  
+                                           ^
+Warning 8 in pyov_arxiv.tex line 942: Wrong length of dash may have been used.
+\textit{Appl Microbiol Biotechnol} \textbf{91}, 1399-1408 (2011).  
+                                                    ^
+Warning 8 in pyov_arxiv.tex line 947: Wrong length of dash may have been used.
+\textit{Biometals} \textbf{22}, 15-22 (2009).  
+                                  ^
+Warning 12 in pyov_arxiv.tex line 951: Interword spacing (`\ ') should perhaps be used.
+Characterization of the PvdS-regulated promoter motif in \textit{Pseudomonas syringae} pv. tomato DC3000 reveals regulon members and insights regarding PvdS function in other pseudomonads.  
+                                                                                          ^
+Warning 8 in pyov_arxiv.tex line 952: Wrong length of dash may have been used.
+\textit{Mol Microbiol} \textbf{68}, 871-889 (2008).  
+                                       ^
+Warning 8 in pyov_arxiv.tex line 962: Wrong length of dash may have been used.
+\textit{Proc Natl Acad Sci USA} \textbf{85}, 8973-8977 (1988).  
+                                                 ^
+Warning 8 in pyov_arxiv.tex line 967: Wrong length of dash may have been used.
+\textit{Nucleic Acids Res} \textbf{34}, 4960-4967 (2006).  
+                                            ^
+Warning 8 in pyov_arxiv.tex line 972: Wrong length of dash may have been used.
+\textit{J Bacteriol} \textbf{180}, 6689-6696 (1998).  
+                                       ^
+Warning 8 in pyov_arxiv.tex line 977: Wrong length of dash may have been used.
+\textit{J Gen Microbiol} \textbf{107}, 319-328 (1978).  
+                                          ^
+Warning 8 in pyov_arxiv.tex line 982: Wrong length of dash may have been used.
+\textit{Nature} \textbf{227}, 520-521 (1970).  
+                                 ^
+Warning 8 in pyov_arxiv.tex line 987: Wrong length of dash may have been used.
+\textit{J Evol Biol} \textbf{29}, 1728-1736 (2016).  
+                                      ^
+Warning 8 in pyov_arxiv.tex line 1002: Wrong length of dash may have been used.
+\textit{Science} \textbf{338}, 264-266 (2012).  
+                                  ^
+Warning 8 in pyov_arxiv.tex line 1012: Wrong length of dash may have been used.
+\textit{J Bacteriol} \textbf{197}, 3154-3159 (2015).  
+                                       ^
+Warning 8 in pyov_arxiv.tex line 1017: Wrong length of dash may have been used.
+\textit{Nature} \textbf{514}, 376-379 (2014).  
+                                 ^
+Warning 8 in pyov_arxiv.tex line 1022: Wrong length of dash may have been used.
+\textit{Proc Natl Acad Sci USA} \textbf{107}, 18921-18926 (2010).  
+                                                   ^
+Warning 8 in pyov_arxiv.tex line 1032: Wrong length of dash may have been used.
+\textit{J Evol Biol} \textbf{23}, 738-747 (2010).  
+                                     ^
+Warning 8 in pyov_arxiv.tex line 1037: Wrong length of dash may have been used.
+\textit{J Theor Biol} \textbf{388}, 61-71 (2016).  
+                                      ^
+Warning 8 in pyov_arxiv.tex line 1042: Wrong length of dash may have been used.
+\textit{ISME J} \textbf{10}, 1413-1423 (2016).  
+                                 ^
+Warning 8 in pyov_arxiv.tex line 1047: Wrong length of dash may have been used.
+\textit{Evolution} \textbf{68}, 3337-3343 (2014).  
+                                    ^
+Warning 8 in pyov_arxiv.tex line 1052: Wrong length of dash may have been used.
+\textit{J Evol Biol} \textbf{27}, 551-556 (2014).  
+                                     ^
+Warning 8 in pyov_arxiv.tex line 1057: Wrong length of dash may have been used.
+\textit{Evolution} \textbf{68}, 3344-3355 (2014).  
+                                    ^
+Warning 8 in pyov_arxiv.tex line 1067: Wrong length of dash may have been used.
+\textit{Environ Microbiol} \textbf{6}, 726-732 (2004).  
+                                          ^
+Warning 8 in pyov_arxiv.tex line 1072: Wrong length of dash may have been used.
+\textit{Nat Prot} \textbf{1}, 153-161 (2006).  
+                                 ^
+Warning 8 in pyov_arxiv.tex line 1077: Wrong length of dash may have been used.
+\textit{Microbiology} \textbf{144}, 3119-3126 (1998).  
+                                        ^
+Warning 8 in pyov_arxiv.tex line 1082: Wrong length of dash may have been used.
+\textit{J Bacteriol} \textbf{181}, 1415-1428 (1999).  
+                                       ^
+Warning 8 in pyov_arxiv.tex line 1087: Wrong length of dash may have been used.
+\textit{FEMS Microbiol Rev} \textbf{27}, 215-237 (2003).  
+                                            ^
+Warning 13 in pyov_arxiv.tex line 1112: Intersentence spacing (`\@') should perhaps be used.
+the concentration of PVD-Fe complexes (which we take to be the same as that of PVD; see  
+                                                                                  ^
+Warning 13 in pyov_arxiv.tex line 1114: Intersentence spacing (`\@') should perhaps be used.
+concentration of PVD. So at time $t$ after its birth, the cell has accumulated $kpt$ iron ions. Its  
+                    ^
+Warning 2 in pyov_arxiv.tex line 1132: Non-breaking space (`~') should have been used.
+The iron content of a bacterial cell ranges from$\sim 10^5$ to $10^6$ atoms per cell \cite{S1,S2}. In our  
+                                                                                    ^
+Warning 18 in pyov_arxiv.tex line 1157: Use either `` or '' as an alternative to `"'.
+"Simpson's paradox" setting much like the one we presented in the case of constitutive  
+^
+Warning 18 in pyov_arxiv.tex line 1157: Use either `` or '' as an alternative to `"'.
+"Simpson's paradox" setting much like the one we presented in the case of constitutive  
+                  ^
+Warning 24 in pyov_arxiv.tex line 1175: Delete this space to maintain correct pagereferences.
+\label{fig:FigS1}  
+^
+Warning 24 in pyov_arxiv.tex line 1196: Delete this space to maintain correct pagereferences.
+\label{fig:FigS2}  
+^
+Warning 24 in pyov_arxiv.tex line 1209: Delete this space to maintain correct pagereferences.
+\label{fig:FigS3}  
+^
+Warning 44 in pyov_arxiv.tex line 1214: User Regex: -2:Vertical rules in tables are ugly.
+\begin{tabular}{|c|c|c|c|c|}  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in pyov_arxiv.tex line 1215: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline \rule[-2ex]{0pt}{5.5ex} \textbf{Growth  
+^^^^^^
+Warning 44 in pyov_arxiv.tex line 1220: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline \rule[-2ex]{0pt}{5.5ex} KB$^a$ & 0.797 & 0.776 & 0.736 & 1.054 \\   
+^^^^^^
+Warning 44 in pyov_arxiv.tex line 1221: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline \rule[-2ex]{0pt}{5.5ex} KB/100 $\mu$M FeCl$_3~^a$ & 0.766 & 0.749 & 0.692 & 1.082 \\   
+^^^^^^
+Warning 44 in pyov_arxiv.tex line 1222: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline \rule[-2ex]{0pt}{5.5ex} KB/DP$^a$ & 0.489 & 0.004 & 0.588 & 0.007 \\   
+^^^^^^
+Warning 44 in pyov_arxiv.tex line 1223: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline \rule[-2ex]{0pt}{5.5ex} KB/100 $\mu$M FeCl$_3$$^a$ & 0.657 & 0.030 & 0.610 & 0.049 \\   
+^^^^^^
+Warning 44 in pyov_arxiv.tex line 1224: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline \rule[-2ex]{0pt}{5.5ex} KB/100 $\mu$M FeCl$_3~^b$ & 1.237 & 1.238 & 1.201 & 1.031 \\   
+^^^^^^
+Warning 44 in pyov_arxiv.tex line 1225: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline \rule[-2ex]{0pt}{5.5ex} KB/100 $\mu$M FeCl$_3~^c$ & n.d. & 1.182 & 1.077 & 1.097 \\   
+^^^^^^
+Warning 44 in pyov_arxiv.tex line 1226: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline   
+^^^^^^
+Warning 2 in pyov_arxiv.tex line 1232: Non-breaking space (`~') should have been used.
+$^a$ The specific growth rate $\mu$ was calculated from the growth curves shown in Fig \ref{fig:Fig1}(c). Cells  
+                                                                                      ^
+Warning 11 in pyov_arxiv.tex line 1246: You should use \cdots or \ldots to achieve an ellipsis.
+\textbf{Name} & \textbf{Sequence (5'...3')} \\ \hline   
+                                    ^^^
+Warning 44 in pyov_arxiv.tex line 1246: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\textbf{Name} & \textbf{Sequence (5'...3')} \\ \hline   
+                                               ^^^^^^
+Warning 35 in pyov_arxiv.tex line 1249: You should perhaps use `\mod' instead.
+$P_{A1_04_03}$ mod2 & TTCCGCCATGCTTAATTTCTCCTCTTT \\   
+               ^^^
+Warning 35 in pyov_arxiv.tex line 1250: You should perhaps use `\mod' instead.
+\textit{pfrI} start mod2 &AAATTAAGCATGGCGGAACAACTATCC \\   
+                    ^^^
+Warning 35 in pyov_arxiv.tex line 1251: You should perhaps use `\mod' instead.
+\textit{pfrI} end mod2 & TGCGGCGTTGGATCCGCTGCGAGTTATTGGCCG \\   
+                  ^^^
+Warning 1 in pyov_arxiv.tex line 1263: Command terminated with space.
+\subsection*{Movie: Temporal evolution of $\bar x$ in a metapopulation.} The evolution of $\bar x$ was obtained by  
+                                               ^
+Warning 1 in pyov_arxiv.tex line 1263: Command terminated with space.
+\subsection*{Movie: Temporal evolution of $\bar x$ in a metapopulation.} The evolution of $\bar x$ was obtained by  
+                                                                                               ^
+Warning 25 in pyov_arxiv.tex line 1266: You might wish to put this between a pair of `{}'
+\url{https://static-content.springer.com/esm/art\%3A10.1038\%2Fs41598-018-22306-9/MediaObjects/41598_2018_22306_MOESM2_ESM.mp4}  
+                                                                                                     ^^^^
+Warning 25 in pyov_arxiv.tex line 1266: You might wish to put this between a pair of `{}'
+\url{https://static-content.springer.com/esm/art\%3A10.1038\%2Fs41598-018-22306-9/MediaObjects/41598_2018_22306_MOESM2_ESM.mp4}  
+                                                                                                          ^^^^^
+Warning 25 in pyov_arxiv.tex line 1266: You might wish to put this between a pair of `{}'
+\url{https://static-content.springer.com/esm/art\%3A10.1038\%2Fs41598-018-22306-9/MediaObjects/41598_2018_22306_MOESM2_ESM.mp4}  
+                                                                                                                ^^^^^
+Warning 25 in pyov_arxiv.tex line 1266: You might wish to put this between a pair of `{}'
+\url{https://static-content.springer.com/esm/art\%3A10.1038\%2Fs41598-018-22306-9/MediaObjects/41598_2018_22306_MOESM2_ESM.mp4}  
+                                                                                                                       ^^^
+Warning 16 in pyov_arxiv.tex line 1269: Mathmode still on at end of LaTeX file.
+
+
+Warning 17 in pyov_arxiv.tex line 1269: Number of `(' doesn't match the number of `)'!
+
+

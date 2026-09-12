@@ -1,0 +1,2 @@
+error: main.tex:71: Undefined control sequence
+error: halted on potentially-recoverable error as specified

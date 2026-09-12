@@ -1,0 +1,3 @@
+planted=Pelliccione2017__ghost sites=[('01_introduction.xtex', 2)]
+xtex new=[('XT1005', 'Pelliccione2017__ghost', '01_introduction.xtex', 2)]
+texlab new=[]

@@ -1,0 +1,3 @@
+planted=sec:Introduction sites=[('01_Introduction.xtex', 2), ('01_Introduction.xtex', 1)]
+xtex new=[('XT1001', 'sec:Introduction', '01_Introduction.xtex', 2)]
+texlab new=[('ERROR', '01_Introduction.tex', 1, 'Duplicate label'), ('ERROR', '01_Introduction.tex', 2, 'Duplicate label')]

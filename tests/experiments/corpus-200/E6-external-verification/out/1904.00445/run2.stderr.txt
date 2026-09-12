@@ -1,0 +1,4 @@
+3 claims: 2 fresh and carried over, 1 to verify
+climb4kc.org · settled
+network: 2 requests (http 2) · 1 retries · 0 bytes down · 0 fetched, 2 carried over, 1 unanswered
+record: 3 claims → .xtexverified

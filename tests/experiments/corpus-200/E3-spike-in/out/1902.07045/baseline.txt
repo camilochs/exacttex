@@ -1,0 +1,6 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[('info', 'manuscript.tex', 71, 'Unused label'), ('info', 'manuscript.tex', 199, 'Unused label'), ('info', 'manuscript.tex', 410, 'Unused entry')]
+tectonic exit=1 warnings=[] secs=1
+error: manuscript.tex:3: ! LaTeX Error: File `elsart.cls' not found.
+error: halted on potentially-recoverable error as specified

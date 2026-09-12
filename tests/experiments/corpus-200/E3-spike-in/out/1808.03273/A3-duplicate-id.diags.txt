@@ -1,0 +1,3 @@
+planted=fig:bar_training_lengths sites=[('main.xtex', 195), ('main.xtex', 117)]
+xtex new=[('XT1001', 'fig:bar_training_lengths', 'main.xtex', 195), ('XT1004', 'fig:bar_training_lengths', 'main.xtex', 183), ('XT1020', 'fig:bar_training_lengths', 'main.xtex', 183)]
+texlab new=[('ERROR', 'main.tex', 117, 'Duplicate label'), ('ERROR', 'main.tex', 195, 'Duplicate label')]

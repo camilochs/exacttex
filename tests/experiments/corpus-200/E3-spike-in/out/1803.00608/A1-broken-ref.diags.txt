@@ -1,0 +1,3 @@
+planted=TDS-schematic__ghost sites=[('CTR-Spectr-arXive.xtex', 97)]
+xtex new=[('XT1003', 'TDS-schematic__ghost', 'CTR-Spectr-arXive.xtex', 97)]
+texlab new=[('ERROR', 'CTR-Spectr-arXive.tex', 97, 'Undefined reference'), ('info', 'CTR-Spectr-arXive.tex', 92, 'Unused label')]

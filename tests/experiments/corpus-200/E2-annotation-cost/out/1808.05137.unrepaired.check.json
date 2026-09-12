@@ -1,0 +1,153 @@
+{
+ "coverage": 0.023277,
+ "bibliography": {
+  "state": "complete",
+  "entries": 24
+ },
+ "diagnostics": [
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "layout",
+   "span": {
+    "file": "eye-ghost-imaging.xtex",
+    "offset": 11316,
+    "length": 6,
+    "line": 86,
+    "column": 81
+   },
+   "message": "identifier `layout` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "einstein",
+   "span": {
+    "file": "eye-ghost-imaging.xtex",
+    "offset": 13809,
+    "length": 8,
+    "line": 99,
+    "column": 237
+   },
+   "message": "identifier `einstein` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "einstein",
+   "span": {
+    "file": "eye-ghost-imaging.xtex",
+    "offset": 14531,
+    "length": 8,
+    "line": 99,
+    "column": 959
+   },
+   "message": "identifier `einstein` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "diagram",
+   "span": {
+    "file": "eye-ghost-imaging.xtex",
+    "offset": 15945,
+    "length": 7,
+    "line": 117,
+    "column": 39
+   },
+   "message": "identifier `diagram` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "decomp",
+   "span": {
+    "file": "eye-ghost-imaging.xtex",
+    "offset": 16466,
+    "length": 6,
+    "line": 117,
+    "column": 560
+   },
+   "message": "identifier `decomp` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "decomp",
+   "span": {
+    "file": "eye-ghost-imaging.xtex",
+    "offset": 16547,
+    "length": 6,
+    "line": 117,
+    "column": 641
+   },
+   "message": "identifier `decomp` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "decomp",
+   "span": {
+    "file": "eye-ghost-imaging.xtex",
+    "offset": 16653,
+    "length": 6,
+    "line": 117,
+    "column": 747
+   },
+   "message": "identifier `decomp` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "diagram",
+   "span": {
+    "file": "eye-ghost-imaging.xtex",
+    "offset": 18449,
+    "length": 7,
+    "line": 130,
+    "column": 211
+   },
+   "message": "identifier `diagram` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "letters",
+   "span": {
+    "file": "eye-ghost-imaging.xtex",
+    "offset": 19145,
+    "length": 7,
+    "line": 132,
+    "column": 13
+   },
+   "message": "identifier `letters` is not declared",
+   "related": []
+  }
+ ]
+}

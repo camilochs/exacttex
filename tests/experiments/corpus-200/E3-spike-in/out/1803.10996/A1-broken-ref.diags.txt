@@ -1,0 +1,3 @@
+planted=dataset__ghost sites=[('thesis_arxiv.xtex', 150)]
+xtex new=[('XT1003', 'dataset__ghost', 'thesis_arxiv.xtex', 150)]
+texlab new=[]

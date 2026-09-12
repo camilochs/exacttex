@@ -1,0 +1,6 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[('info', 'main.tex', 79, 'Unused label'), ('info', 'qListColoring.bbl.bib', 18, 'Unused entry'), ('info', 'qListColoring.bbl.bib', 77, 'Unused entry'), ('info', 'qListColoring.bbl.bib', 95, 'Unused entry'), ('info', 'qListColoring.bbl.bib', 450, 'Unused entry')]
+tectonic exit=1 warnings=[] secs=2
+error: ieeeaccess.cls:128: Undefined control sequence
+error: halted on potentially-recoverable error as specified

@@ -1,0 +1,3 @@
+planted=fig:front_image sites=[('main.xtex', 189), ('main.xtex', 192)]
+xtex new=[('XT1001', 'fig:front_image', 'main.xtex', 192)]
+texlab new=[('ERROR', 'main.tex', 189, 'Duplicate label'), ('ERROR', 'main.tex', 192, 'Duplicate label')]

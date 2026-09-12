@@ -1,0 +1,25 @@
+{
+ "coverage": 0.016457,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "the document declares no bibliography"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "SGS-100728.xtex",
+    "offset": 4791,
+    "length": 13,
+    "line": 108,
+    "column": 148
+   },
+   "message": "citation checking unavailable: the document declares no bibliography",
+   "related": []
+  }
+ ]
+}

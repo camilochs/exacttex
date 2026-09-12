@@ -1,0 +1,2 @@
+error: ws-acs.tex:82: Illegal unit of measure (pt inserted)
+error: halted on potentially-recoverable error as specified

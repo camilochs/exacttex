@@ -1,0 +1,25 @@
+{
+ "coverage": 0.04803,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`phdbib.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "ParetiWebSci15.xtex",
+    "offset": 2677,
+    "length": 29,
+    "line": 67,
+    "column": 160
+   },
+   "message": "citation checking unavailable: `phdbib.bib` could not be read",
+   "related": []
+  }
+ ]
+}

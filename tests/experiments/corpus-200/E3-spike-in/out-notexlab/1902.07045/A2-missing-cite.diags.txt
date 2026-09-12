@@ -1,0 +1,3 @@
+planted=kociak2014a__ghost sites=[('manuscript.xtex', 54)]
+xtex new=[('XT1005', 'kociak2014a__ghost', 'manuscript.xtex', 54)]
+texlab new=[]

@@ -1,0 +1,3 @@
+planted=sec:main sites=[('main.xtex', 71), ('main.xtex', 70)]
+xtex new=[('XT1001', 'sec:main', 'main.xtex', 71)]
+texlab new=[('ERROR', 'main.tex', 70, 'Duplicate label'), ('ERROR', 'main.tex', 71, 'Duplicate label')]

@@ -1,0 +1,3 @@
+planted=european2020impact__ghost sites=[('01_Introduction.xtex', 5)]
+xtex new=[('XT1005', 'european2020impact__ghost', '01_Introduction.xtex', 5)]
+texlab new=[]

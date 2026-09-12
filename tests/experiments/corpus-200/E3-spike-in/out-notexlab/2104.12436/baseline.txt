@@ -1,0 +1,26 @@
+tectonic pdf bytes=1805344
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=[] secs=3
+cript.tex:1079: Overfull \vbox (7.29552pt too high) has occurred while \output is active
+warning: manuscript.tex:1095: Underfull \hbox (badness 1442) in paragraph at lines 1087--1095
+warning: manuscript.tex:1156: Underfull \hbox (badness 2735) in paragraph at lines 1153--1156
+warning: manuscript.tex:1156: Underfull \hbox (badness 3039) in paragraph at lines 1153--1156
+warning: manuscript.tex:1198: Overfull \vbox (5.0pt too high) has occurred while \output is active
+warning: manuscript.tex:1246: Underfull \hbox (badness 1424) in paragraph at lines 1242--1246
+warning: manuscript.tex:1290: Overfull \vbox (7.29552pt too high) has occurred while \output is active
+warning: manuscript.tex:1364: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: manuscript.tex:1378: Underfull \hbox (badness 10000) in paragraph at lines 1375--1378
+warning: manuscript.tex:1378: Underfull \hbox (badness 5924) in paragraph at lines 1375--1378
+warning: manuscript.tex:1378: Underfull \hbox (badness 10000) in paragraph at lines 1375--1378
+warning: manuscript.tex:1378: Underfull \hbox (badness 2512) in paragraph at lines 1375--1378
+warning: manuscript.tex:1378: Underfull \hbox (badness 3343) in paragraph at lines 1375--1378
+warning: manuscript.tex:1378: Underfull \hbox (badness 1565) in paragraph at lines 1375--1378
+warning: manuscript.tex:1415: Overfull \vbox (5.0pt too high) has occurred while \output is active
+warning: manuscript.bbl:148: Underfull \hbox (badness 1571) in paragraph at lines 144--148
+warning: manuscript.bbl:236: Overfull \vbox (7.29552pt too high) has occurred while \output is active
+warning: manuscript.tex:1429: Underfull \hbox (badness 1571) in paragraph at lines 1423--1429
+warning: manuscript.tex:1448: Overfull \vbox (5.0pt too high) has occurred while \output is active
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: Color stack underflow. Just ignore.
+warning: Color stack underflow. Just ignore.

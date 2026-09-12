@@ -1,0 +1,3 @@
+planted=sec:equations__ghost sites=[('draft_final_version.xtex', 247)]
+xtex new=[('XT1003', 'sec:equations__ghost', 'draft_final_version.xtex', 247)]
+texlab new=[('ERROR', 'draft_final_version.tex', 247, 'Undefined reference'), ('info', 'draft_final_version.tex', 263, 'Unused label')]

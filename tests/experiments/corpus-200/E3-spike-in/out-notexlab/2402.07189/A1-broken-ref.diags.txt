@@ -1,0 +1,3 @@
+planted=def:cp_tensor__ghost sites=[('writeup.xtex', 246)]
+xtex new=[('XT1003', 'def:cp_tensor__ghost', 'writeup.xtex', 246)]
+texlab new=[]

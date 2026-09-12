@@ -1,0 +1,70 @@
+{
+ "paper": "2301.00688",
+ "main": "MTT_reveyrand.tex",
+ "files": [
+  {
+   "file": "MTT_reveyrand.tex",
+   "chars_before": 60706,
+   "chars_after": 60682,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 60706,
+ "chars_after": 60682,
+ "delta_pct": -0.03953480710308701,
+ "unrepaired": {
+  "chars_after": 60682,
+  "chars_before": 60706,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.036563,
+  "bibliography": {
+   "state": "complete",
+   "entries": 237
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.03953480710308701
+ },
+ "stats": {
+  "cite_cmds_live": 74,
+  "cite_keys_live": 74,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 13,
+  "labels_outside_grammar": 5,
+  "refs_live": 15,
+  "refs_outside_grammar": 6,
+  "other_ref_cmds": 1,
+  "float_envs": 10,
+  "cite_cmds_annotated": 74,
+  "cite_keys_annotated": 74,
+  "ids_annotated": 8,
+  "refs_annotated": 9,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.036563,
+ "bibliography": {
+  "state": "complete",
+  "entries": 237
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

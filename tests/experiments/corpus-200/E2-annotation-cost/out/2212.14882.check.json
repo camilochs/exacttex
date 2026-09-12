@@ -1,0 +1,25 @@
+{
+ "coverage": 0.031882,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`main.bbl.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "main.xtex",
+    "offset": 4653,
+    "length": 7,
+    "line": 128,
+    "column": 78
+   },
+   "message": "citation checking unavailable: `main.bbl.bib` could not be read",
+   "related": []
+  }
+ ]
+}

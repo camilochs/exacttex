@@ -1,0 +1,3 @@
+planted=fig:sdlc sites=[('sample-sigplan.xtex', 69), ('sample-sigplan.xtex', 48)]
+xtex new=[('XT1001', 'fig:sdlc', 'sample-sigplan.xtex', 69), ('XT1004', 'fig:sdlc', 'sample-sigplan.xtex', 51), ('XT1020', 'fig:sdlc', 'sample-sigplan.xtex', 51)]
+texlab new=[('ERROR', 'sample-sigplan.tex', 48, 'Duplicate label'), ('ERROR', 'sample-sigplan.tex', 69, 'Duplicate label')]

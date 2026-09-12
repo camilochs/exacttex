@@ -1,0 +1,109 @@
+{
+ "paper": "2402.02482",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 182349,
+   "chars_after": 182229,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 182349,
+ "chars_after": 182229,
+ "delta_pct": -0.06580787391211358,
+ "unrepaired": {
+  "chars_after": 182226,
+  "chars_before": 182349,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.022838,
+  "bibliography": {
+   "state": "complete",
+   "entries": 62
+  },
+  "errors": 1,
+  "advisories": 0,
+  "build_exit": 1,
+  "build_emitted": false,
+  "delta_pct": -0.06745307075991643
+ },
+ "stats": {
+  "cite_cmds_live": 113,
+  "cite_keys_live": 126,
+  "cite_with_optarg_or_star": 12,
+  "cite_keys_outside_grammar": 7,
+  "other_cite_cmds": 5,
+  "labels_live": 42,
+  "labels_outside_grammar": 1,
+  "refs_live": 63,
+  "refs_outside_grammar": 3,
+  "other_ref_cmds": 31,
+  "float_envs": 4,
+  "cite_cmds_annotated": 94,
+  "cite_keys_annotated": 95,
+  "ids_annotated": 40,
+  "refs_annotated": 56,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 1,
+  "leaks_reverted": 4,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "main.tex",
+   "line": 498,
+   "token": "@ref(sec_techdet)",
+   "wrapper": "?",
+   "context": "As $r$ is of fixed dimension, the spectral density $\\BS f_f(\\omega)$ (or its inverse) can be estimated by classical methods such as non-parametric lag-window es"
+  },
+  {
+   "file": "main.tex",
+   "line": 957,
+   "token": "@ref(lemma.spectral.density.factor)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Lemma~\\ref{lemma.spectral.density.factor}]"
+  },
+  {
+   "file": "main.tex",
+   "line": 988,
+   "token": "@ref(lem.rate.spectral.var)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Lemma~\\ref{lem.rate.spectral.var}]"
+  },
+  {
+   "file": "main.tex",
+   "line": 1012,
+   "token": "@ref(thm.spectral.density)",
+   "wrapper": "?",
+   "context": "\\begin{proof}[Proof of Theorem~\\ref{thm.spectral.density}]"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1001",
+   "name": "eq.LASSO.beta.j",
+   "file": "main.xtex",
+   "line": 629,
+   "message": "identifier `eq.LASSO.beta.j` is already declared",
+   "classification": "real: \\label{eq.LASSO.beta.j} appears 2x in the sources",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.022727,
+ "bibliography": {
+  "state": "complete",
+  "entries": 62
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

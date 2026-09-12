@@ -1,0 +1,3 @@
+planted=LL16__ghost sites=[('paperQuantum.xtex', 76)]
+xtex new=[]
+texlab new=[]

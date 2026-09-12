@@ -1,0 +1,246 @@
+{
+ "paper": "2401.00515",
+ "main": "sample-sigconf.tex",
+ "files": [
+  {
+   "file": "sample-sigconf.tex",
+   "chars_before": 233797,
+   "chars_after": 233746,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 233797,
+ "chars_after": 233746,
+ "delta_pct": -0.02181379572877325,
+ "unrepaired": {
+  "chars_after": 233746,
+  "chars_before": 233797,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.006342,
+  "bibliography": {
+   "state": "complete",
+   "entries": 98
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.02181379572877325
+ },
+ "stats": {
+  "cite_cmds_live": 67,
+  "cite_keys_live": 78,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 2,
+  "other_cite_cmds": 0,
+  "labels_live": 18,
+  "labels_outside_grammar": 1,
+  "refs_live": 19,
+  "refs_outside_grammar": 1,
+  "other_ref_cmds": 0,
+  "float_envs": 8,
+  "cite_cmds_annotated": 48,
+  "cite_keys_annotated": 55,
+  "ids_annotated": 17,
+  "refs_annotated": 10,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 25,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "sample-sigconf.tex",
+   "line": 371,
+   "token": "@cite(dependabot_update)",
+   "wrapper": "chengwei",
+   "context": "After indexing patch versions after one month, $109$ dependents performed the fixing by either upgrading \\textit{etcd} or migrating to other modules. \\chengwei{"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 371,
+   "token": "@cite(dependab41:online,dependab81:online)",
+   "wrapper": "?",
+   "context": "After indexing patch versions after one month, $109$ dependents performed the fixing by either upgrading \\textit{etcd} or migrating to other modules. \\chengwei{"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 469,
+   "token": "@ref(algorithm:Lags)",
+   "wrapper": "?",
+   "context": "\\chengwei{\\emph{Lead Time} is the time interval between $T_{fix}$ and $T_{ver}$. To obtain $T_{fix}$ and $T_{ver}$, we first downloaded repositories of vulnerab"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 482,
+   "token": "@cite(Quartile6:online)",
+   "wrapper": "?",
+   "context": "Specifically, the process retrieves the time interval between each pair of adjacent tags on the commit tree. Based on this, The quartile formula~\\cite{Quartile6"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 528,
+   "token": "@ref(algorithm:Lags)",
+   "wrapper": "?",
+   "context": "\\jc{For each dependent, we retrieved the git commit history of the \\textit{go.sum} lock file, which specifies dependencies and their versions. Our goal was to l"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 529,
+   "token": "@ref(algorithm:Lags)",
+   "wrapper": "?",
+   "context": "\\chengwei{Note that the fix commit may have removed the vulnerable dependency or upgraded the vulnerable versions to clean versions.} Based on Algorithm~\\ref{al"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 921,
+   "token": "@cite(osv)",
+   "wrapper": "chengwei",
+   "context": "\\chengwei{To substantiate the representativeness of our vulnerability dataset (1,837), we further compare the vulnerabilities with OSV~\\cite{osv} (1,659) and Gi"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 921,
+   "token": "@cite(githubadvisory)",
+   "wrapper": "?",
+   "context": "\\chengwei{To substantiate the representativeness of our vulnerability dataset (1,837), we further compare the vulnerabilities with OSV~\\cite{osv} (1,659) and Gi"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 923,
+   "token": "@cite(osinsightdata)",
+   "wrapper": "chengwei",
+   "context": "\\chengwei{Subsequently, we utilized the dataset from Open Source Insight~\\cite{osinsightdata}, which maintained package and dependency data from various sources"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 925,
+   "token": "@cite(librariesio)",
+   "wrapper": "?",
+   "context": "As a result, $725,286$ modules and $7,892,152$ versions are captured till May 2023, and $475,638,176$ dependency relations associated with the 1,837 vulnerabili"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 966,
+   "token": "@ref(fig:exist_vul)",
+   "wrapper": "chengwei",
+   "context": "From the time perspective, the proportion of affected downstream dependents increases over the years as well. \\chengwei{In Figure~\\ref{fig:exist_vul}, the histo"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 994,
+   "token": "@ref(fig:2019_vul)",
+   "wrapper": "chengwei",
+   "context": "\\chengwei{To demonstrate the impact of vulnerabilities occurring after 2019, we depicted the distribution of affected dependents in Figure~\\ref{fig:2019_vul}."
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 1038,
+   "token": "@ref(fig:lag_ver)",
+   "wrapper": "?",
+   "context": "\\chengwei{Moreover, the distribution of $LT_{ver}$ by time intervals is presented in Figure~\\ref{fig:lag_ver}. Notably, almost $47.64\\%$ of vulnerabilities are "
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 1073,
+   "token": "@ref(fig:lag_ver)",
+   "wrapper": "?",
+   "context": "\\chengwei{To unveil the reasons for delayed patch version releases, we assessed $Lag_{ver}$ within these vulnerable modules. After excluding vulnerabilities who"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 1268,
+   "token": "@ref(fig:rq3-fig2)",
+   "wrapper": "?",
+   "context": "\\jc{into 4 periods related to $T_{dept}$: \\textit{Before $T_{fix}$}, \\textit{Between $T_{fix}$ and $T_{index}$}, \\textit{Within one month after $T_{index}$}, an"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 1335,
+   "token": "@cite(dataset)",
+   "wrapper": "?",
+   "context": "The detailed query structures are available on our website~\\cite{dataset}.}"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 1399,
+   "token": "@cite(dataset)",
+   "wrapper": "?",
+   "context": "Apart from these, there are still 40 cases we are unable to identify explicit reasons, and we will continue to update the feedback from maintainers on our websi"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 1477,
+   "token": "@cite(GoModule7:online)",
+   "wrapper": "?",
+   "context": "We found 4 repositories (6 vulnerabilities) stated that they were applications, not third-party modules, implying no intent to index patch versions. Additionall"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 1557,
+   "token": "@cite(godepmanage)",
+   "wrapper": "chengwei",
+   "context": "\\chengwei{As an early adopter of decentralized package management, Golang originally encouraged direct repository imports as dependencies by commit hashes (i.e."
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 1557,
+   "token": "@cite(Semanticgo)",
+   "wrapper": "?",
+   "context": "\\chengwei{As an early adopter of decentralized package management, Golang originally encouraged direct repository imports as dependencies by commit hashes (i.e."
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 1621,
+   "token": "@cite(osinsightdata)",
+   "wrapper": "chengwei",
+   "context": "\\chengwei{1) Since Golang Index only record modules that are ever imported as dependencies, we are unable to find Golang modules if they are not never used by o"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 1653,
+   "token": "@cite(decan2018impact)",
+   "wrapper": "?",
+   "context": "Decan et al.~\\cite{decan2018impact} conducted an empirical study to unveil the severity of vulnerability propagation in the NPM ecosystem.}"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 1657,
+   "token": "@cite(wu2023understanding)",
+   "wrapper": "?",
+   "context": "Wu et al.~\\cite{wu2023understanding} studied the reachability of Maven vulnerabilities and found 73\\% of vulnerabilities are not reachable and safe for downstre"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 1658,
+   "token": "@cite(reid2022extent)",
+   "wrapper": "?",
+   "context": "Reid et al.~\\cite{reid2022extent} leveraged a file-level code reuse detector to locate the extensive vulnerable reused code in software projects in multiple lan"
+  },
+  {
+   "file": "sample-sigconf.tex",
+   "line": 1659,
+   "token": "@cite(fitzgerald2019towards)",
+   "wrapper": "?",
+   "context": "Fitzgerald et al.~\\cite{fitzgerald2019towards} proposed a knowledge flow graph that connects libraries, files, projects, authors, and code instances together to"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.006342,
+ "bibliography": {
+  "state": "complete",
+  "entries": 98
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

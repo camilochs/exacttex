@@ -1,0 +1,3 @@
+planted=Minkowski1__ghost sites=[('main.xtex', 105)]
+xtex new=[('XT1003', 'Minkowski1__ghost', 'main.xtex', 105)]
+texlab new=[('ERROR', 'main.tex', 105, 'Undefined reference')]

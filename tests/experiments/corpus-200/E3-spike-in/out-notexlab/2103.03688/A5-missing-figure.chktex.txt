@@ -1,0 +1,108 @@
+exit=2
+lines=105
+unique_findings=33
+Warning 24 in DT_exact_plain.tex line 133: Delete this space to maintain correct pagereferences.
+\label{intro}  
+^
+Warning 8 in DT_exact_plain.tex line 152: Wrong length of dash may have been used.
+where $\bzeta$ are marginal parameters for the mean vector, and cdf $G_i$ has mean parameter $\mu_i$ and other parameters $\bpsi$. In this scheme the mean vector $\bmu=(\mu_1,\dots,\mu_n)'$ carries the dependence structure of $\momega$, and the outcomes $Y_i$, which have marginal distributions $G_i$, are dependent because the marginal parameters $\mu_i$ are dependent. For example, a familiar hierarchical formulation for Poisson outcomes is the Gaussian-copula version of the gamma--Poisson model. For this model $\bmu$ would be a gamma random field, and $Y_i\sim\poi(\mu_i)\;(i=1,\dots,n)$, where $\poi$ denotes a Poisson distribution.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^^
+Warning 2 in DT_exact_plain.tex line 158: Non-breaking space (`~') should have been used.
+The rest of this article is organized as follows. In Section~\ref{continuous} we present the likelihood for direct Gaussian copula models with continuous margins since the CE and DT objective functions are reminiscent of the likelihood for continuous outcomes. In Section~\ref{discrete} we present the likelihood for discrete outcomes, and explain why said likelihood is computationally intractable. In Sections~\ref{ce} and \ref{dt} we describe the CE and DT approximations, respectively, to the true likelihood for discrete marginals. In Section~\ref{simstudy} we verify by simulation that the DT approximation is effectively exact for some special cases of the model. In Section~\ref{realdata} we provide a means of discerning model misspecification for a given dataset. We conclude in Section~\ref{conclusion}.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                        ^
+Warning 24 in DT_exact_plain.tex line 161: Delete this space to maintain correct pagereferences.
+\label{continuous}  
+^
+Warning 24 in DT_exact_plain.tex line 171: Delete this space to maintain correct pagereferences.
+\label{discrete}  
+^
+Warning 3 in DT_exact_plain.tex line 176: You should enclose the previous parenthesis with `{}'.
+L(\bs{\theta}\mid\bY) &= \sum_{j_1=0}^1\dots\sum_{j_n=0}^1(-1)^kC_{\momega}(U_{1j_1},\dots,U_{nj_n}),  
+                                                             ^
+Warning 25 in DT_exact_plain.tex line 176: You might wish to put this between a pair of `{}'
+L(\bs{\theta}\mid\bY) &= \sum_{j_1=0}^1\dots\sum_{j_n=0}^1(-1)^kC_{\momega}(U_{1j_1},\dots,U_{nj_n}),  
+                                                               ^^
+Warning 25 in DT_exact_plain.tex line 178: You might wish to put this between a pair of `{}'
+where $k=\sum_{i=1}^nj_i$, $U_{i0}=F_i(Y_i)$, and $U_{i1}=\lim_{y\nearrow Y_i}F_i(y)=F_i(Y_i^-)=F_i(Y_i-1)$. (Note that the last equality holds when the marginals have integer support, as they do in the remainder of this article.)  
+                    ^^
+Warning 24 in DT_exact_plain.tex line 183: Delete this space to maintain correct pagereferences.
+\label{ce}  
+^
+Warning 12 in DT_exact_plain.tex line 187: Interword spacing (`\ ') should perhaps be used.
+To see how this can be accomplished, first suppose that $Y\sim F$ is a discrete random variable, and let $f$ be the pmf corresponding to $F$. Let $W$ be a continuous random variable supported on the unit interval, and suppose that $W$ has distribution function $G$, density function $g$, and is independent of $Y$. Then the continuation of $Y$ is the continuous random variable $Y^*=Y+(W-1)$. \citet{Denuit:2005p951} showed that $Y^*$ has distribution function $F^*(y)=F([y])+G(y-[y])f([y+1])$ and pdf $f^*(y)=g(y-[y])f([y+1])$, where $[\bull]$ returns the integer part of its argument. If we take $W$ to be standard uniform, $Y^*=Y-W$ and the distribution and density functions simplify to $F^*(y)=F([y])+(y-[y])f([y+1])$ and $f^*(y)=f([y+1])$, respectively.  
+                                                                                                                                                                                                                                                                                                                                                                                                        ^
+Warning 3 in DT_exact_plain.tex line 189: You should enclose the previous parenthesis with `{}'.
+For a direct Gaussian copula model with discrete margins we continue $\bY=(Y_1,\dots,Y_n)^\prime$ using $n$ independent standard uniforms $\bW=(W_1,\dots,W_n)^\prime$ and form the expected likelihood  
+                                                                                        ^
+Warning 3 in DT_exact_plain.tex line 189: You should enclose the previous parenthesis with `{}'.
+For a direct Gaussian copula model with discrete margins we continue $\bY=(Y_1,\dots,Y_n)^\prime$ using $n$ independent standard uniforms $\bW=(W_1,\dots,W_n)^\prime$ and form the expected likelihood  
+                                                                                                                                                             ^
+Warning 25 in DT_exact_plain.tex line 191: You might wish to put this between a pair of `{}'
+L(\btheta\mid \bY) &\propto \e_{\bW}\left[\vert\momega\vert^{-1/2}\exp\left\{-\frac{1}{2}\bZ^{*\prime}(\momega^{-1}-\id)\bZ^*\right\}\prod_{i=1}^nf_i(Y_i)\right],  
+                                                                                                                                                 ^^
+Warning 3 in DT_exact_plain.tex line 193: You should enclose the previous parenthesis with `{}'.
+where $\bZ^*=(\Phi^{-1}\{F_1^*(Y_1^*)\},\dots,\Phi^{-1}\{F_n^*(Y_n^*)\})^\prime$. Using a result proved by \citeauthor{Madsen:2010p1266}, one can show that this expectation is equal to the true likelihood given in (\ref{discretelike}).  
+                                                                       ^
+Warning 3 in DT_exact_plain.tex line 195: You should enclose the previous parenthesis with `{}'.
+We estimate the expectation using a sample-based approach. Let $m$ be a positive integer, and simulate a vector of independent standard uniforms, which \citeauthor{Madsen:2009p949} calls `jitters', $\bW_j=(W_{j,1},\dots,W_{j,n})^\prime$ for $j=1,2,\dots,m$. Then use the jitters to estimate the expected likelihood as  
+                                                                                                                                                                                                                                   ^
+Warning 25 in DT_exact_plain.tex line 198: You might wish to put this between a pair of `{}'
+L_\ce(\btheta\mid \bY) &= \frac{1}{m}\sum_{j=1}^m\vert\momega\vert^{-1/2}\exp\left\{-\frac{1}{2}\bZ_j^{*\prime}(\momega^{-1}-\id)\bZ_j^*\right\}\prod_{i=1}^nf_i(Y_i),  
+                                                                                                                                                            ^^
+Warning 24 in DT_exact_plain.tex line 205: Delete this space to maintain correct pagereferences.
+\label{dt}  
+^
+Warning 18 in DT_exact_plain.tex line 209: Use either `` or '' as an alternative to `"'.
+It is well known that if $Y\sim F$ is continuous, $F(Y)$ has a standard uniform distribution. But if $Y$ is discrete, $F(Y)$ tends to be stochastically larger, and $F(Y^-)$ tends to be stochastically smaller, than a standard uniform random variable. This can be remedied by stochastically ``smoothing" $F$ at its jumps, a technique that goes at least as far back as \citet{Ferguson:1969p1279}, who used it in connection with hypothesis tests. More recently, the DT has been applied to stochastic ordering \citep{ruschendorf1981stochastically}, conditional value at risk \citep{burgert2006optimal}, and the extension of limit theorems for the empirical copula process to general distributions \citep{Ruschendorf:2009p1281}, for example.  
+                                                                                                                                                                                                                                                                                                            ^
+Warning 25 in DT_exact_plain.tex line 215: You might wish to put this between a pair of `{}'
+G_i(W_i,Y_i)=(1-W_i)F_i(Y_i^-)+W_iF_i(Y_i),  
+                                 ^^
+Warning 25 in DT_exact_plain.tex line 224: You might wish to put this between a pair of `{}'
+L_\dt(\bs{\theta}\mid\bY) &= c_{\momega}(U_1,\dots,U_n)\prod_{i=1}^nf_i(Y_i),  
+                                                                   ^^
+Warning 24 in DT_exact_plain.tex line 236: Delete this space to maintain correct pagereferences.
+\label{simstudy}  
+^
+Warning 36 in DT_exact_plain.tex line 240: You should put a space in front of parenthesis.
+\subsection{AR(1) process with negative binomial marginals}  
+              ^
+Warning 36 in DT_exact_plain.tex line 242: You should put a space in front of parenthesis.
+One model for which $L_\dt=L$ is a Gaussian-copula version of an AR(1) process with negative binomial marginals. Specifically, let $1,\dots,200$ be the time indices at which we observe $Y_1,\dots,Y_{200}$, where $Y_i\;(i=1,\dots,200)$ is negative binomial with mean $\mu=12$. Let the dispersion parameter $k$ equal 7 so that $\var Y_i=\mu+\mu^2/k\approx 32.6$, where $\var$ denotes variance. For the AR(1) dependence structure we need $\momega_{ij}=\rho^{\vert i-j\vert}$ for time indices $i$ and $j$. For our simulation experiment we took $\rho=0.6$.  
+                                                                   ^
+Warning 36 in DT_exact_plain.tex line 242: You should put a space in front of parenthesis.
+One model for which $L_\dt=L$ is a Gaussian-copula version of an AR(1) process with negative binomial marginals. Specifically, let $1,\dots,200$ be the time indices at which we observe $Y_1,\dots,Y_{200}$, where $Y_i\;(i=1,\dots,200)$ is negative binomial with mean $\mu=12$. Let the dispersion parameter $k$ equal 7 so that $\var Y_i=\mu+\mu^2/k\approx 32.6$, where $\var$ denotes variance. For the AR(1) dependence structure we need $\momega_{ij}=\rho^{\vert i-j\vert}$ for time indices $i$ and $j$. For our simulation experiment we took $\rho=0.6$.  
+                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+Warning 8 in DT_exact_plain.tex line 246: Wrong length of dash may have been used.
+If either objective function is exact, we should expect its likelihood ratios to be $\chi^2(3)$ distributed. We used a Kolmogorov--Smirnov test to test this hypothesis for each procedure. The p-value for the DT ratios was 0.64, and the p-value for the CE ratios was 0.69. And so we fail to reject the null in both cases, i.e., the data are consistent with the hypothesis that they are $\chi^2(3)$ distributed. To provide further confirmation we carried out maximum likelihood estimation for both the two-parameter gamma distribution and the central $\chi^2$ distribution. For the DT ratios the gamma fit yielded an AIC of 4,104.6, the $\chi^2$ fit an AIC of 4,103.2. For the CE ratios the AIC values were 4,092.8 and 4,091.6. Additionally, the maximum likelihood estimates of the $\chi^2$ parameter were 3.05 for the DT ratios and 3.03 for the CE ratios, and the Wald confidence intervals were narrow and covered 3 for both datasets. Thus we choose the $\chi^2$ model in both cases.  
+                                                                                                                                 ^^
+Warning 36 in DT_exact_plain.tex line 253: You should put a space in front of parenthesis.
+   \caption{A plot of DT likelihood ratios versus CE likelihood ratios for 1,000 datasets simulated from an AR(1) model with negative binomial marginals. The line $y=x$ is shown in orange.}  
+                                                                                                              ^
+Warning 24 in DT_exact_plain.tex line 254: Delete this space to maintain correct pagereferences.
+   \label{fig:ratiosar}  
+  ^
+Warning 24 in DT_exact_plain.tex line 288: Delete this space to maintain correct pagereferences.
+   \label{fig:like}  
+  ^
+Warning 24 in DT_exact_plain.tex line 295: Delete this space to maintain correct pagereferences.
+   \label{fig:ratiosrater}  
+  ^
+Warning 24 in DT_exact_plain.tex line 299: Delete this space to maintain correct pagereferences.
+\label{realdata}  
+^
+Warning 44 in DT_exact_plain.tex line 335: User Regex: -2:Vertical rules in tables are ugly.
+   \begin{tabular}{c|cccc}  
+   ^^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in DT_exact_plain.tex line 336: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+     \backslashbox{$\lambda$}{$\omega$}    &  0.6 & 0.7 & 0.8 & 0.9\\\hline  
+                                                                     ^^^^^^
+Warning 24 in DT_exact_plain.tex line 343: Delete this space to maintain correct pagereferences.
+   \label{tab:kappa}  
+  ^
+Warning 24 in DT_exact_plain.tex line 349: Delete this space to maintain correct pagereferences.
+\label{conclusion}  
+^
+Warning 36 in DT_exact_plain.tex line 351: You should put a space in front of parenthesis.
+In this article we showed that the distributional transform-based objective function for direct Gaussian copula models with discrete margins is sometimes effectively exact, in which case true Bayesian inference is possible. We demonstrated said exactness for two interesting variants of the model: an AR(1) process with negative binomial marginals, and a one-way mixed-effects ANOVA model with Poisson marginals. Then we developed a diagnostic quantity based on Bartlett's second identity. This quantity, which can be used to assess the exactness of the DT-based objective function for experimentally observed datasets, is intuitive and can be computed in embarrassingly parallel fashion. This diagnostic procedure will allow practitioners to determine whether $L_\dt$ can be used to do genuine Bayesian inference or ordinary maximum likelihood inference for a given dataset.  
+                                                                                                                                                                                                                                                                                                               ^

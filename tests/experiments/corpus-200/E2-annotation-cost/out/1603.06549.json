@@ -1,0 +1,276 @@
+{
+ "paper": "1603.06549",
+ "main": "RunRoaringBitmap.tex",
+ "files": [
+  {
+   "file": "RunRoaringBitmap.tex",
+   "chars_before": 102674,
+   "chars_after": 102620,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 102674,
+ "chars_after": 102620,
+ "delta_pct": -0.05259364590840914,
+ "unrepaired": {
+  "chars_after": 102590,
+  "chars_before": 102674,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.020782,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`bib/RoaringBitmap.bib` could not be read"
+  },
+  "errors": 13,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.08181233807974755
+ },
+ "stats": {
+  "cite_cmds_live": 43,
+  "cite_keys_live": 51,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 28,
+  "labels_outside_grammar": 0,
+  "refs_live": 34,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 6,
+  "cite_cmds_annotated": 43,
+  "cite_keys_annotated": 51,
+  "ids_annotated": 18,
+  "refs_annotated": 21,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 13,
+  "leaks_reverted": 10,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "RunRoaringBitmap.tex",
+   "line": 917,
+   "token": "@id(tab:iustat)",
+   "wrapper": "?",
+   "context": "\\subfloat[\\label{tab:iustat}Statistics regarding intersections and unions"
+  },
+  {
+   "file": "RunRoaringBitmap.tex",
+   "line": 935,
+   "token": "@id(tab:comp)",
+   "wrapper": "?",
+   "context": "\\subfloat[\\label{tab:comp}Compressed sizes (bits/int), best results in bold]{\\small"
+  },
+  {
+   "file": "RunRoaringBitmap.tex",
+   "line": 1087,
+   "token": "@id(tab:rand)",
+   "wrapper": "?",
+   "context": "\\subfloat[\\label{tab:rand}Random value access]{\\small"
+  },
+  {
+   "file": "RunRoaringBitmap.tex",
+   "line": 1102,
+   "token": "@id(tab:si)",
+   "wrapper": "?",
+   "context": "\\subfloat[\\label{tab:si}successive intersections]{\\small"
+  },
+  {
+   "file": "RunRoaringBitmap.tex",
+   "line": 1116,
+   "token": "@id(tab:su)",
+   "wrapper": "?",
+   "context": "\\subfloat[\\label{tab:su}successive unions]{\\small"
+  },
+  {
+   "file": "RunRoaringBitmap.tex",
+   "line": 1130,
+   "token": "@id(tab:eu)",
+   "wrapper": "?",
+   "context": "\\subfloat[\\label{tab:eu}Entire unions (na\\\"ive)]{\\small"
+  },
+  {
+   "file": "RunRoaringBitmap.tex",
+   "line": 1144,
+   "token": "@id(tab:eupq)",
+   "wrapper": "?",
+   "context": "\\subfloat[\\label{tab:eupq}Entire unions (priority queue)]{\\small"
+  },
+  {
+   "file": "RunRoaringBitmap.tex",
+   "line": 1209,
+   "token": "@id(tab:inmemmaprand)",
+   "wrapper": "?",
+   "context": "\\subfloat[\\label{tab:inmemmaprand}Random value access]{\\small"
+  },
+  {
+   "file": "RunRoaringBitmap.tex",
+   "line": 1252,
+   "token": "@id(tab:inmemmapeu)",
+   "wrapper": "?",
+   "context": "\\subfloat[\\label{tab:inmemmapeu}Entire unions (na\\\"ive)]{\\small"
+  },
+  {
+   "file": "RunRoaringBitmap.tex",
+   "line": 1266,
+   "token": "@id(tab:inmemmapeupq)",
+   "wrapper": "?",
+   "context": "\\subfloat[\\label{tab:inmemmapeupq}Entire unions (priority queue)]{\\small"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1003",
+   "name": "tab:iustat",
+   "file": "RunRoaringBitmap.xtex",
+   "line": 886,
+   "message": "identifier `tab:iustat` is not declared",
+   "classification": "compiler-unreachable: \\label{tab:iustat} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "tab:comp",
+   "file": "RunRoaringBitmap.xtex",
+   "line": 954,
+   "message": "identifier `tab:comp` is not declared",
+   "classification": "compiler-unreachable: \\label{tab:comp} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "tab:rand",
+   "file": "RunRoaringBitmap.xtex",
+   "line": 1040,
+   "message": "identifier `tab:rand` is not declared",
+   "classification": "compiler-unreachable: \\label{tab:rand} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "tab:si",
+   "file": "RunRoaringBitmap.xtex",
+   "line": 1048,
+   "message": "identifier `tab:si` is not declared \u2014 did you mean `tab:ser`?",
+   "classification": "compiler-unreachable: \\label{tab:si} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "tab:su",
+   "file": "RunRoaringBitmap.xtex",
+   "line": 1048,
+   "message": "identifier `tab:su` is not declared \u2014 did you mean `tab:ser`?",
+   "classification": "compiler-unreachable: \\label{tab:su} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "tab:eu",
+   "file": "RunRoaringBitmap.xtex",
+   "line": 1062,
+   "message": "identifier `tab:eu` is not declared \u2014 did you mean `tab:ser`?",
+   "classification": "compiler-unreachable: \\label{tab:eu} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "tab:eupq",
+   "file": "RunRoaringBitmap.xtex",
+   "line": 1062,
+   "message": "identifier `tab:eupq` is not declared",
+   "classification": "compiler-unreachable: \\label{tab:eupq} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "tab:eupq",
+   "file": "RunRoaringBitmap.xtex",
+   "line": 1064,
+   "message": "identifier `tab:eupq` is not declared",
+   "classification": "compiler-unreachable: \\label{tab:eupq} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "tab:inmemmaprand",
+   "file": "RunRoaringBitmap.xtex",
+   "line": 1184,
+   "message": "identifier `tab:inmemmaprand` is not declared",
+   "classification": "compiler-unreachable: \\label{tab:inmemmaprand} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "tab:inmemmapeu",
+   "file": "RunRoaringBitmap.xtex",
+   "line": 1188,
+   "message": "identifier `tab:inmemmapeu` is not declared \u2014 did you mean `tab:inmemmap`?",
+   "classification": "compiler-unreachable: \\label{tab:inmemmapeu} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "tab:inmemmapeupq",
+   "file": "RunRoaringBitmap.xtex",
+   "line": 1188,
+   "message": "identifier `tab:inmemmapeupq` is not declared",
+   "classification": "compiler-unreachable: \\label{tab:inmemmapeupq} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "tab:inmemmapeu",
+   "file": "RunRoaringBitmap.xtex",
+   "line": 1197,
+   "message": "identifier `tab:inmemmapeu` is not declared \u2014 did you mean `tab:inmemmap`?",
+   "classification": "compiler-unreachable: \\label{tab:inmemmapeu} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "tab:inmemmapeupq",
+   "file": "RunRoaringBitmap.xtex",
+   "line": 1197,
+   "message": "identifier `tab:inmemmapeupq` is not declared",
+   "classification": "compiler-unreachable: \\label{tab:inmemmapeupq} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.01869,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`bib/RoaringBitmap.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "RunRoaringBitmap.xtex",
+    "offset": 5094,
+    "length": 11,
+    "line": 138,
+    "column": 84
+   },
+   "message": "citation checking unavailable: `bib/RoaringBitmap.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

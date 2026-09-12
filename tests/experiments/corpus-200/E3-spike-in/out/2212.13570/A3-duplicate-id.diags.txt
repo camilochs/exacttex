@@ -1,0 +1,3 @@
+planted=fig:02_cycle sites=[('02_researchmethod.xtex', 8), ('02_researchmethod.xtex', 1)]
+xtex new=[('XT1001', 'fig:02_cycle', '02_researchmethod.xtex', 8), ('XT1004', 'fig:02_cycle', '02_researchmethod.xtex', 22), ('XT1004', 'fig:02_cycle', '04_framework.xtex', 2), ('XT1020', 'fig:02_cycle', '02_researchmethod.xtex', 22), ('XT1020', 'fig:02_cycle', '04_framework.xtex', 2)]
+texlab new=[('ERROR', '02_researchmethod.tex', 1, 'Duplicate label'), ('ERROR', '02_researchmethod.tex', 8, 'Duplicate label')]

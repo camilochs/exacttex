@@ -1,0 +1,164 @@
+{
+ "coverage": 0.038575,
+ "bibliography": {
+  "state": "complete",
+  "entries": 20
+ },
+ "diagnostics": [
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "section",
+   "name": "sec:intro",
+   "span": {
+    "file": "VersionIPSE.xtex",
+    "offset": 7595,
+    "length": 14,
+    "line": 123,
+    "column": 1
+   },
+   "message": "identifier `sec:intro` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "VersionIPSE.xtex",
+      "offset": 3360,
+      "length": 14,
+      "line": 71,
+      "column": 1
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:pars",
+   "span": {
+    "file": "VersionIPSE.xtex",
+    "offset": 26245,
+    "length": 8,
+    "line": 476,
+    "column": 36
+   },
+   "message": "identifier `tab:pars` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:pars",
+   "span": {
+    "file": "VersionIPSE.xtex",
+    "offset": 31088,
+    "length": 8,
+    "line": 556,
+    "column": 12
+   },
+   "message": "identifier `tab:pars` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:trace1",
+   "span": {
+    "file": "VersionIPSE.xtex",
+    "offset": 31698,
+    "length": 10,
+    "line": 573,
+    "column": 14
+   },
+   "message": "identifier `fig:trace1` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:trace2",
+   "span": {
+    "file": "VersionIPSE.xtex",
+    "offset": 31719,
+    "length": 10,
+    "line": 573,
+    "column": 35
+   },
+   "message": "identifier `fig:trace2` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:hyperpar1",
+   "span": {
+    "file": "VersionIPSE.xtex",
+    "offset": 31874,
+    "length": 13,
+    "line": 574,
+    "column": 88
+   },
+   "message": "identifier `fig:hyperpar1` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:hyperpar2",
+   "span": {
+    "file": "VersionIPSE.xtex",
+    "offset": 31898,
+    "length": 13,
+    "line": 574,
+    "column": 112
+   },
+   "message": "identifier `fig:hyperpar2` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:estimators1",
+   "span": {
+    "file": "VersionIPSE.xtex",
+    "offset": 32044,
+    "length": 15,
+    "line": 575,
+    "column": 61
+   },
+   "message": "identifier `fig:estimators1` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:estimators2",
+   "span": {
+    "file": "VersionIPSE.xtex",
+    "offset": 32070,
+    "length": 15,
+    "line": 575,
+    "column": 87
+   },
+   "message": "identifier `fig:estimators2` is not declared",
+   "related": []
+  }
+ ]
+}

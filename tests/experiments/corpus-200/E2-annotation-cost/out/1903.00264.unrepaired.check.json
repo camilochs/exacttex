@@ -1,0 +1,117 @@
+{
+ "coverage": 0.015585,
+ "bibliography": {
+  "state": "complete",
+  "entries": 20
+ },
+ "diagnostics": [
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "geometry",
+   "span": {
+    "file": "hetero-tangencial.xtex",
+    "offset": 11941,
+    "length": 13,
+    "line": 279,
+    "column": 1
+   },
+   "message": "identifier `geometry` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "hetero-tangencial.xtex",
+      "offset": 6422,
+      "length": 13,
+      "line": 170,
+      "column": 1
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "geometry",
+   "span": {
+    "file": "hetero-tangencial.xtex",
+    "offset": 16370,
+    "length": 13,
+    "line": 382,
+    "column": 1
+   },
+   "message": "identifier `geometry` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "hetero-tangencial.xtex",
+      "offset": 6422,
+      "length": 13,
+      "line": 170,
+      "column": 1
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "geometry",
+   "span": {
+    "file": "hetero-tangencial.xtex",
+    "offset": 19336,
+    "length": 13,
+    "line": 458,
+    "column": 1
+   },
+   "message": "identifier `geometry` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "hetero-tangencial.xtex",
+      "offset": 6422,
+      "length": 13,
+      "line": 170,
+      "column": 1
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "geometry",
+   "span": {
+    "file": "hetero-tangencial.xtex",
+    "offset": 21083,
+    "length": 13,
+    "line": 502,
+    "column": 1
+   },
+   "message": "identifier `geometry` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "hetero-tangencial.xtex",
+      "offset": 6422,
+      "length": 13,
+      "line": 170,
+      "column": 1
+     }
+    }
+   ]
+  }
+ ]
+}

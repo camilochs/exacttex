@@ -1,0 +1,3 @@
+planted=fig:planted_unit sites=[('2018_Feb8_ANN_Nuclear_Physics_camera_ready.xtex', 606)]
+xtex new=[('XT1007', '', '2018_Feb8_ANN_Nuclear_Physics_camera_ready.xtex', 606)]
+texlab new=[]

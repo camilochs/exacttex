@@ -1,0 +1,25 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'acmart.cls', 2738, 'Undefined reference'), ('ERROR', 'acmart.cls', 2745, 'Undefined reference')]
+tectonic exit=1 warnings=[] secs=2
+rfull \hbox (22.64424pt too wide) in paragraph at lines 110--111
+warning: sample-sigplan.tex:115: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: sample-sigplan.tex:117: Overfull \hbox (1.70837pt too wide) in paragraph at lines 116--117
+warning: sample-sigplan.tex:117: Overfull \hbox (1.58922pt too wide) in paragraph at lines 116--117
+warning: sample-sigplan.tex:119: Overfull \hbox (6.4584pt too wide) in paragraph at lines 118--119
+warning: sample-sigplan.tex:123: Overfull \hbox (4.71089pt too wide) in paragraph at lines 122--123
+warning: sample-sigplan.tex:124: Overfull \hbox (8.94171pt too wide) in paragraph at lines 123--124
+warning: sample-sigplan.tex:125: Overfull \hbox (15.8392pt too wide) in paragraph at lines 124--125
+warning: sample-sigplan.tex:125: Overfull \hbox (11.39922pt too wide) in paragraph at lines 124--125
+warning: sample-sigplan.tex:125: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: sample-sigplan.tex:126: Overfull \hbox (3.56505pt too wide) in paragraph at lines 125--126
+warning: sample-sigplan.tex:126: Overfull \hbox (5.44836pt too wide) in paragraph at lines 125--126
+warning: sample-sigplan.tex:127: Overfull \hbox (15.35838pt too wide) in paragraph at lines 126--127
+warning: sample-sigplan.tex:132: Overfull \hbox (5.18839pt too wide) in paragraph at lines 131--132
+warning: sample-sigplan.tex:144: Overfull \hbox (5.31505pt too wide) in paragraph at lines 143--144
+warning: sample-sigplan.tex:146: Overfull \hbox (3.03671pt too wide) in paragraph at lines 145--146
+warning: sample-sigplan.tex:152: Overfull \hbox (1.36421pt too wide) in paragraph at lines 151--152
+warning: sample-sigplan.tex:156: Overfull \hbox (15.13087pt too wide) in paragraph at lines 155--156
+warning: sample-sigplan.tex:171: Overfull \hbox (2.38672pt too wide) in paragraph at lines 170--171
+error: sample-sigplan.tex:174: Illegal unit of measure (pt inserted)
+error: halted on potentially-recoverable error as specified

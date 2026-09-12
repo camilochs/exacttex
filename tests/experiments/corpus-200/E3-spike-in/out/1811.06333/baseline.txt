@@ -1,0 +1,34 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'wright.tex', 27, 'Undefined reference'), ('ERROR', 'wright.tex', 29, 'Undefined reference'), ('ERROR', 'wright.tex', 35, 'Undefined reference'), ('ERROR', 'wright.tex', 39, 'Undefined reference'), ('ERROR', 'wright.tex', 44, 'Undefined reference'), ('ERROR', 'wright.tex', 48, 'Undefined reference'), ('ERROR', 'wright.tex', 52, 'Undefined reference'), ('ERROR', 'wright.tex', 54, 'Undefined reference'), ('ERROR', 'wright.tex', 59, 'Undefined reference'), ('ERROR', 'wright.tex', 66, 'Undefined reference'), ('ERROR', 'wright.tex', 70, 'Undefined reference'), ('ERROR', 'wright.tex', 72, 'Undefined reference'), ('ERROR', 'wright.tex', 76, 'Undefined reference'), ('ERROR', 'wright.tex', 81, 'Undefined reference'), ('ERROR', 'wright.tex', 88, 'Undefined reference'), ('ERROR', 'wright.tex', 94, 'Undefined reference'), ('ERROR', 'wright.tex', 96, 'Undefined reference'), ('ERROR', 'wright.tex', 100, 'Undefined reference'), ('ERROR', 'wright.tex', 102, 'Undefined reference'), ('ERROR', 'wright.tex', 104, 'Undefined reference'), ('ERROR', 'wright.tex', 106, 'Undefined reference'), ('ERROR', 'wright.tex', 108, 'Undefined reference'), ('ERROR', 'wright.tex', 112, 'Undefined reference'), ('ERROR', 'wright.tex', 114, 'Undefined reference'), ('ERROR', 'wright.tex', 116, 'Undefined reference')]
+tectonic exit=1 warnings=[] secs=7
+rning: wright.tex:23: Requested font "[LinLibertine_R.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 7.0pt
+warning: wright.tex:23: Requested font "cmex7" at 7.0pt
+warning: wright.tex:23:  -> cmex7
+warning: wright.tex:23: Requested font "lasy10" at 10.0pt
+warning: wright.tex:23:  -> lasy10
+warning: wright.tex:23: Requested font "lasy7" at 7.0pt
+warning: wright.tex:23:  -> lasy7
+warning: wright.tex:23: Requested font "msam10" at 10.0pt
+warning: wright.tex:23:  -> msam10
+warning: wright.tex:23: Requested font "msam7" at 7.0pt
+warning: wright.tex:23:  -> msam7
+warning: wright.tex:23: Requested font "msbm10" at 10.0pt
+warning: wright.tex:23:  -> msbm10
+warning: wright.tex:23: Requested font "msbm7" at 7.0pt
+warning: wright.tex:23:  -> msbm7
+warning: wright.tex:36: Underfull \vbox (badness 6445) has occurred while \output is active
+warning: wright.tex:44: Overfull \hbox (4.73347pt too wide) in paragraph at lines 43--44
+warning: wright.tex:49: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: wright.tex:59: Overfull \hbox (9.27121pt too wide) in paragraph at lines 58--59
+warning: wright.tex:71: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: wright.tex:71: Requested font "ecrm0700" at 7.0pt
+warning: wright.tex:71:  -> ecrm0700
+warning: wright.tex:73: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: wright.tex:75: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: wright.tex:117: Underfull \hbox (badness 1077) in paragraph at lines 116--117
+warning: wright.tex:121: Underfull \vbox (badness 3118) has occurred while \output is active
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: sorry, PostScript images are not supported by Tectonic
+warning: for details, please see https://github.com/tectonic-typesetting/tectonic/issues/27
+error: pdf: image inclusion failed for "parameters.eps" (page=1).

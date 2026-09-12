@@ -1,0 +1,85 @@
+{
+ "paper": "2109.10718",
+ "main": "manuscript.tex",
+ "files": [
+  {
+   "file": "manuscript.tex",
+   "chars_before": 79993,
+   "chars_after": 79912,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 79993,
+ "chars_after": 79912,
+ "delta_pct": -0.10125886015026314,
+ "unrepaired": {
+  "chars_after": 79906,
+  "chars_before": 79993,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.015919,
+  "bibliography": {
+   "state": "complete",
+   "entries": 144
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.10875951645769005
+ },
+ "stats": {
+  "cite_cmds_live": 36,
+  "cite_keys_live": 59,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 29,
+  "labels_outside_grammar": 0,
+  "refs_live": 14,
+  "refs_outside_grammar": 14,
+  "other_ref_cmds": 61,
+  "float_envs": 11,
+  "cite_cmds_annotated": 36,
+  "cite_keys_annotated": 59,
+  "ids_annotated": 27,
+  "refs_annotated": 0,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 2,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "manuscript.tex",
+   "line": 1044,
+   "token": "@id(fig:h1)",
+   "wrapper": "?",
+   "context": "\\subfigure[Water level in tank~$1$.]{\\includegraphics[scale=.95]{./fig/h1.pdf}\\label{fig:h1}}"
+  },
+  {
+   "file": "manuscript.tex",
+   "line": 1045,
+   "token": "@id(fig:h2)",
+   "wrapper": "?",
+   "context": "\\subfigure[Water level in tank~$2$.]{\\includegraphics[scale=.95]{./fig/h2.pdf}\\label{fig:h2}}"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.015917,
+ "bibliography": {
+  "state": "complete",
+  "entries": 144
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

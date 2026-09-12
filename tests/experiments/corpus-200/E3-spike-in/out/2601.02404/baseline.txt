@@ -1,0 +1,9 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'main.tex', 737, 'Duplicate label'), ('ERROR', 'main.tex', 815, 'Duplicate label'), ('info', 'iclr2026_conference.bib', 124, 'Unused entry'), ('info', 'iclr2026_conference.bib', 143, 'Unused entry'), ('info', 'iclr2026_conference.bib', 150, 'Unused entry'), ('info', 'iclr2026_conference.bib', 157, 'Unused entry'), ('info', 'iclr2026_conference.bib', 166, 'Unused entry'), ('info', 'iclr2026_conference.bib', 175, 'Unused entry'), ('info', 'iclr2026_conference.bib', 192, 'Unused entry'), ('info', 'iclr2026_conference.bib', 199, 'Unused entry'), ('info', 'iclr2026_conference.bib', 206, 'Unused entry'), ('info', 'iclr2026_conference.bib', 254, 'Unused entry'), ('info', 'iclr2026_conference.bib', 261, 'Unused entry'), ('info', 'iclr2026_conference.bib', 298, 'Unused entry'), ('info', 'iclr2026_conference.bib', 315, 'Unused entry'), ('info', 'iclr2026_conference.bib', 322, 'Unused entry'), ('info', 'iclr2026_conference.bib', 329, 'Unused entry'), ('info', 'iclr2026_conference.bib', 352, 'Unused entry'), ('info', 'iclr2026_conference.bib', 382, 'Unused entry'), ('info', 'main.tex', 459, 'Unused label'), ('info', 'main.tex', 862, 'Unused label'), ('info', 'main.tex', 955, 'Unused label'), ('info', 'main.tex', 1592, 'Unused label'), ('info', 'main.tex', 1613, 'Unused label'), ('info', 'main.tex', 1625, 'Unused label'), ('info', 'main.tex', 1633, 'Unused label'), ('info', 'natbib.sty', 1022, 'Unused entry'), ('info', 'natbib.sty', 1024, 'Unused entry')]
+tectonic exit=1 warnings=[] secs=2
+error: main.tex:20: LaTeX Error: Option clash for package xcolor.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+error: halted on potentially-recoverable error as specified

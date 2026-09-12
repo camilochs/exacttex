@@ -1,0 +1,25 @@
+{
+ "coverage": 0.019158,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`absabook.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "absabook.xtex",
+    "offset": 2281,
+    "length": 14,
+    "line": 39,
+    "column": 654
+   },
+   "message": "citation checking unavailable: `absabook.bib` could not be read",
+   "related": []
+  }
+ ]
+}

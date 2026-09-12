@@ -1,0 +1,3 @@
+planted=ATIC2006__ghost sites=[('ms.xtex', 287)]
+xtex new=[('XT1005', 'ATIC2006__ghost', 'ms.xtex', 287)]
+texlab new=[]

@@ -1,0 +1,25 @@
+{
+ "coverage": 0.034399,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`references.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "projectq.xtex",
+    "offset": 5315,
+    "length": 12,
+    "line": 122,
+    "column": 779
+   },
+   "message": "citation checking unavailable: `references.bib` could not be read",
+   "related": []
+  }
+ ]
+}

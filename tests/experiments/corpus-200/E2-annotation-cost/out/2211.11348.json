@@ -1,0 +1,89 @@
+{
+ "paper": "2211.11348",
+ "main": "CASE_ver2.tex",
+ "files": [
+  {
+   "file": "CASE_ver2.tex",
+   "chars_before": 34287,
+   "chars_after": 34221,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 34287,
+ "chars_after": 34221,
+ "delta_pct": -0.19249278152069296,
+ "unrepaired": {
+  "chars_after": 34215,
+  "chars_before": 34287,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.021554,
+  "bibliography": {
+   "state": "complete",
+   "entries": 24
+  },
+  "errors": 2,
+  "advisories": 0,
+  "build_exit": 1,
+  "build_emitted": false,
+  "delta_pct": -0.20999212529530142
+ },
+ "stats": {
+  "cite_cmds_live": 28,
+  "cite_keys_live": 28,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 24,
+  "labels_outside_grammar": 0,
+  "refs_live": 22,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 7,
+  "cite_cmds_annotated": 28,
+  "cite_keys_annotated": 28,
+  "ids_annotated": 22,
+  "refs_annotated": 22,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 2,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [
+  {
+   "code": "XT1001",
+   "name": "eq4",
+   "file": "CASE_ver2.xtex",
+   "line": 117,
+   "message": "identifier `eq4` is already declared",
+   "classification": "real: \\label{eq4} appears 3x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "eq4",
+   "file": "CASE_ver2.xtex",
+   "line": 153,
+   "message": "identifier `eq4` is already declared",
+   "classification": "real: \\label{eq4} appears 3x in the sources",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.021083,
+ "bibliography": {
+  "state": "complete",
+  "entries": 24
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

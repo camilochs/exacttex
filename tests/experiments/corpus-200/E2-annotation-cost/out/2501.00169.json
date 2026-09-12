@@ -1,0 +1,87 @@
+{
+ "paper": "2501.00169",
+ "main": "DeepLL.tex",
+ "files": [
+  {
+   "file": "DeepLL.tex",
+   "chars_before": 41159,
+   "chars_after": 41141,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 41159,
+ "chars_after": 41141,
+ "delta_pct": -0.043732840933939116,
+ "unrepaired": {
+  "chars_after": 41141,
+  "chars_before": 41159,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.010452,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`DeepLL.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.043732840933939116
+ },
+ "stats": {
+  "cite_cmds_live": 8,
+  "cite_keys_live": 13,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 2,
+  "other_cite_cmds": 0,
+  "labels_live": 6,
+  "labels_outside_grammar": 0,
+  "refs_live": 7,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 5,
+  "cite_cmds_annotated": 6,
+  "cite_keys_annotated": 9,
+  "ids_annotated": 6,
+  "refs_annotated": 7,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.010452,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`DeepLL.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "DeepLL.xtex",
+    "offset": 9919,
+    "length": 47,
+    "line": 338,
+    "column": 44
+   },
+   "message": "citation checking unavailable: `DeepLL.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

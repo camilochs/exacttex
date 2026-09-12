@@ -1,0 +1,3 @@
+planted=intro sites=[('DT_exact_plain.xtex', 132), ('DT_exact_plain.xtex', 131)]
+xtex new=[('XT1001', 'intro', 'DT_exact_plain.xtex', 132)]
+texlab new=[]

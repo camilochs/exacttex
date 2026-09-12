@@ -1,0 +1,101 @@
+exit=2
+lines=609
+unique_findings=144
+lso known to affect risk \cite{Prentice2006, Wu2013}, but identification of the key factors and simple accurate measures of these currently present difficulties. Levels of oestrogens and testosterone may also be important especially for postmenopausal women, but these require a blood sample and are not routinely available \cite{Zhang2018}. Ethnic differences in breast cancer risk are also well documented - notably in the US lower risks in Hispanics and Asians \cite{Banegas2017}. However it is unclear as to how these are related to differences in the known risk factors in the model, so would not need model recalibration, or whether there are intrinsic ethnic differences which require use of a separate baseline hazard function, and possibly separate risks for the known factors. Differences between recent migrants and established individuals are also known to exist and complicate any model adjustments \cite{John2005}. Adding breast density has substantially improved the model, and might be extended by considering longitudinal measurements of density and features in the mammogram other than simply breast density, where more complex algorithms may be able to extract more risk information \cite{Wang2017}. The polygenic (SNP) risk score is steadily being improved as more SNPs are added, but this is easily accommodated as all that is required is the relative risk. A bigger challenge is to accurately account for interactions between risk factors. Our model was developed by synthesizing risks for individual factors from large overviews of many studies, and large datasets which contain all the factors will be needed to fully explore interactions. These are not currently available but are likely to be so soon, as the risk factors used in our model are currently being collected in several large cohorts of patients.   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
+Warning 2 in brentnallcuzick-arXiv.tex line 441: Non-breaking space (`~') should have been used.
+There are opportunities to refine and improve the current risk model. Other factors are known to affect the risk of breast cancer, but most have some difficulties for inclusion in a relatively simple model. Using weight change from age 20 or weight at a young age in addition to current weight does appear to improve risk assessment to some extent \cite{Hidayat2018}, but requires accurate recall of previous weight. Alcohol consumption is a well documented risk factor \cite{2002-collaborativeover}, but underestimation of consumption is well known and it is not clear how best to allow for this. The differing roles of weight in the pre- and postmenopausal periods also needs further investigation \cite{Schoemaker2018}. Physical activity and dietary factors are also known to affect risk \cite{Prentice2006, Wu2013}, but identification of the key factors and simple accurate measures of these currently present difficulties. Levels of oestrogens and testosterone may also be important especially for postmenopausal women, but these require a blood sample and are not routinely available \cite{Zhang2018}. Ethnic differences in breast cancer risk are also well documented - notably in the US lower risks in Hispanics and Asians \cite{Banegas2017}. However it is unclear as to how these are related to differences in the known risk factors in the model, so would not need model recalibration, or whether there are intrinsic ethnic differences which require use of a separate baseline hazard function, and possibly separate risks for the known factors. Differences between recent migrants and established individuals are also known to exist and complicate any model adjustments \cite{John2005}. Adding breast density has substantially improved the model, and might be extended by considering longitudinal measurements of density and features in the mammogram other than simply breast density, where more complex algorithms may be able to extract more risk information \cite{Wang2017}. The polygenic (SNP) risk score is steadily being improved as more SNPs are added, but this is easily accommodated as all that is required is the relative risk. A bigger challenge is to accurately account for interactions between risk factors. Our model was developed by synthesizing risks for individual factors from large overviews of many studies, and large datasets which contain all the factors will be needed to fully explore interactions. These are not currently available but are likely to be so soon, as the risk factors used in our model are currently being collected in several large cohorts of patients.   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
+Warning 2 in brentnallcuzick-arXiv.tex line 441: Non-breaking space (`~') should have been used.
+There are opportunities to refine and improve the current risk model. Other factors are known to affect the risk of breast cancer, but most have some difficulties for inclusion in a relatively simple model. Using weight change from age 20 or weight at a young age in addition to current weight does appear to improve risk assessment to some extent \cite{Hidayat2018}, but requires accurate recall of previous weight. Alcohol consumption is a well documented risk factor \cite{2002-collaborativeover}, but underestimation of consumption is well known and it is not clear how best to allow for this. The differing roles of weight in the pre- and postmenopausal periods also needs further investigation \cite{Schoemaker2018}. Physical activity and dietary factors are also known to affect risk \cite{Prentice2006, Wu2013}, but identification of the key factors and simple accurate measures of these currently present difficulties. Levels of oestrogens and testosterone may also be important especially for postmenopausal women, but these require a blood sample and are not routinely available \cite{Zhang2018}. Ethnic differences in breast cancer risk are also well documented - notably in the US lower risks in Hispanics and Asians \cite{Banegas2017}. However it is unclear as to how these are related to differences in the known risk factors in the model, so would not need model recalibration, or whether there are intrinsic ethnic differences which require use of a separate baseline hazard function, and possibly separate risks for the known factors. Differences between recent migrants and established individuals are also known to exist and complicate any model adjustments \cite{John2005}. Adding breast density has substantially improved the model, and might be extended by considering longitudinal measurements of density and features in the mammogram other than simply breast density, where more complex algorithms may be able to extract more risk information \cite{Wang2017}. The polygenic (SNP) risk score is steadily being improved as more SNPs are added, but this is easily accommodated as all that is required is the relative risk. A bigger challenge is to accurately account for interactions between risk factors. Our model was developed by synthesizing risks for individual factors from large overviews of many studies, and large datasets which contain all the factors will be needed to fully explore interactions. These are not currently available but are likely to be so soon, as the risk factors used in our model are currently being collected in several large cohorts of patients.   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ^
+Warning 13 in brentnallcuzick-arXiv.tex line 447: Intersentence spacing (`\@') should perhaps be used.
+This study was supported by grant C569/A16891 from Cancer Research UK. We thank Diana Buist and Erin Bowles for substantial contributions to acquisition and interpretation of data. Our use in this paper of data from Kaiser Permanente Washington Health Research Institute was supported by research specialist award R50CA211115 from the National Cancer Institute (NCI) (Ms Bowles); grants HHSN261201100031C and P01CA154292 from the NCI-funded Breast Cancer Surveillance Consortium (Dr Buist); and contracts N01-CN-005230, N01-CN-67009, N01-PC-35142, HHSN261201000029C, and HHSN261201300012I from the Cancer Surveillance System of the Fred Hutchinson Cancer Research Center, funded by the Surveillance, Epidemiology and End Results Program of the NCI with additional support from the Fred Hutchinson Cancer Research Center and the State of Washington.  
+                                                                     ^
+Warning 12 in brentnallcuzick-arXiv.tex line 455: Interword spacing (`\ ') should perhaps be used.
+      \caption{Summary of risk factor parameters in model. \label{ref-tbl1}}  
+                                                          ^
+Warning 24 in brentnallcuzick-arXiv.tex line 455: Delete this space to maintain correct pagereferences.
+      \caption{Summary of risk factor parameters in model. \label{ref-tbl1}}  
+                                                          ^
+Warning 44 in brentnallcuzick-arXiv.tex line 457: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 44 in brentnallcuzick-arXiv.tex line 459: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+       \hline  
+       ^^^^^^
+Warning 8 in brentnallcuzick-arXiv.tex line 461: Wrong length of dash may have been used.
+      \hspace{1em} Menopause age (y)& per 5y &1.14&1.08&45-49y\\  
+                                                          ^
+Warning 8 in brentnallcuzick-arXiv.tex line 472: Wrong length of dash may have been used.
+        &1.6-1.7&1.05+2*(height-1.6)&&\\  
+            ^
+Warning 36 in brentnallcuzick-arXiv.tex line 472: You should put a space in front of parenthesis.
+        &1.6-1.7&1.05+2*(height-1.6)&&\\  
+                        ^
+Warning 8 in brentnallcuzick-arXiv.tex line 480: Wrong length of dash may have been used.
+       childbirth (y)    &$<$17-19&0.74&&\\  
+                               ^
+Warning 8 in brentnallcuzick-arXiv.tex line 481: Wrong length of dash may have been used.
+           &20-24&0.77&&\\  
+              ^
+Warning 8 in brentnallcuzick-arXiv.tex line 482: Wrong length of dash may have been used.
+           &25-29&0.87&&\\  
+              ^
+Warning 8 in brentnallcuzick-arXiv.tex line 483: Wrong length of dash may have been used.
+           &30-34&1.01&&\\  
+              ^
+Warning 44 in brentnallcuzick-arXiv.tex line 499: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 24 in brentnallcuzick-arXiv.tex line 506: Delete this space to maintain correct pagereferences.
+      \caption{Calibration assessment: univariate and Poisson regression (adjusted for variables listed) calibration coefficient estimates with 95\% Wald confidence intervals.} \label{tbl:calib}  
+                                                                                                                                                                                ^
+Warning 44 in brentnallcuzick-arXiv.tex line 508: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+              \hline  
+              ^^^^^^
+Warning 44 in brentnallcuzick-arXiv.tex line 510: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                  \hline  
+                  ^^^^^^
+Warning 8 in brentnallcuzick-arXiv.tex line 511: Wrong length of dash may have been used.
+                   Overall (intercept) & 132139 & 2699 & 2757 & 0.98 & 1.05 (0.94-1.16) \\  
+                                                                                 ^
+Warning 8 in brentnallcuzick-arXiv.tex line 513: Wrong length of dash may have been used.
+           { }                      Year 1 & 132139 & 87 & 178 & 0.49 & 0.50 (0.40-0.63) \\  
+                                                                                  ^
+Warning 8 in brentnallcuzick-arXiv.tex line 514: Wrong length of dash may have been used.
+           { }                         Year 2+ (time) & 123830 & 2612 & 2579 & 1.01 & 1.00 (0.99-1.01) \\  
+                                                                                                ^
+Warning 8 in brentnallcuzick-arXiv.tex line 517: Wrong length of dash may have been used.
+                                { }$<$2\% &53436 &  641 & 548 & 1.12 & 1.17 (1.00-1.25) \\  
+                                                                                 ^
+Warning 8 in brentnallcuzick-arXiv.tex line 519: Wrong length of dash may have been used.
+                                { }  3 to $<$5\% & 29477 & 779 & 784 & 0.99 & 0.96 (0.86-1.07) \\  
+                                                                                        ^
+Warning 8 in brentnallcuzick-arXiv.tex line 520: Wrong length of dash may have been used.
+                                  { }   5 to $<$8\%& 11312 & 379 & 473 & 0.80 & 0.78 (0.68-0.88) \\  
+                                                                                          ^
+Warning 8 in brentnallcuzick-arXiv.tex line 521: Wrong length of dash may have been used.
+                                    { }    8\%+ & 4645 & 273 & 349 & 0.78 & 0.76 (0.66-0.88) \\  
+                                                                                      ^
+Warning 44 in brentnallcuzick-arXiv.tex line 522: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                                            \hline  
+                                            ^^^^^^
+Warning 2 in brentnallcuzick-arXiv.tex line 531: Non-breaking space (`~') should have been used.
+                          \caption{Volumetric percentage density vs age and body mass index (BMI), with joint non-parametric smooths (line ---). Taken from \cite{2019-brentnallharveyetal}.}  
+                                                                                                                                                           ^
+Warning 24 in brentnallcuzick-arXiv.tex line 532: Delete this space to maintain correct pagereferences.
+                                    \label{fig_volpara}  
+                                   ^
+Warning 12 in brentnallcuzick-arXiv.tex line 540: Interword spacing (`\ ') should perhaps be used.
+                          \caption{Overall calibration of the breast cancer risk model. (a) Observed (95\%CI) vs expected number of breast cancers diagnosed for each year of follow-up, (b) cumulative observed (95\%CI) vs expected number of breast cancers diagnosed; (c) observed (Nelson-Aalan, 95\%CI) vs expected cumulative hazards; (d) observed (Kaplan-Meier, 95\%CI) vs expected (obtained via two methods) net risks; (e) Observed divided by Expected cumulative hazard (95\%CI); (f) Observed divided by expected net risk (obtained via two methods) with 95\%CI only for the expected risk based on baseline risk assessment. }  
+                                                                                       ^
+Warning 24 in brentnallcuzick-arXiv.tex line 541: Delete this space to maintain correct pagereferences.
+                                    \label{fig_calib1}  
+                                   ^
+Warning 48 in brentnallcuzick-arXiv.tex line 7: No match found for `localdefs' (ConTeXt).
+\startlocaldefs  
+      ^^^^^^^^^
+Warning 17 in brentnallcuzick-arXiv.tex line 548: Number of `(' doesn't match the number of `)'!
+
+

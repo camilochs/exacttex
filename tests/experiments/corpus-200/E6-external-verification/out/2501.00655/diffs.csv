@@ -1,0 +1,13 @@
+target,kind,verdict,field,severity,document,source
+llm-codegen-survey,bib-entry,partial,year,medium,2024,2026
+llm-swe-agents-survey,bib-entry,partial,year,medium,2024,2026
+llm-swe-survey,bib-entry,partial,year,medium,2023,2024
+llm-vectorizer,bib-entry,partial,year,medium,2024,2025
+llms-for-swe,bib-entry,partial,year,medium,2023,2024
+prioritysampling,bib-entry,partial,authors,high,Dejan Grubisic and Chris Cummins and Volker Seeker and Hugh Leather,Dejan Grubisic and Volker Seeker and Gabriel Synnaeve and Hugh Leather and John Mellor-Crummey and Chris Cummins
+qian2022limitations,bib-entry,partial,year,medium,2022,2023
+search-based-llms-for-opt,bib-entry,partial,year,medium,2024,2025
+sun2022length,bib-entry,partial,year,medium,2022,2023
+tang2020compiler,bib-entry,partial,year,medium,2020,2019
+transcoder,bib-entry,partial,authors,high,"Lachaux, Marie-Anne and Roziere, Baptiste and Chanussot, Lowik and Lample, Guillaume",Baptiste Roziere
+transformer,bib-entry,partial,year,medium,2017,2025

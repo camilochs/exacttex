@@ -1,0 +1,3 @@
+planted=intro sites=[('NeuroP2P.xtex', 78), ('NeuroP2P.xtex', 77)]
+xtex new=[('XT1001', 'intro', 'NeuroP2P.xtex', 78)]
+texlab new=[]

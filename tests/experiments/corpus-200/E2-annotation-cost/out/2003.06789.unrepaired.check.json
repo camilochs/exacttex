@@ -1,0 +1,25 @@
+{
+ "coverage": 0.046343,
+ "bibliography": {
+  "state": "complete",
+  "entries": 81
+ },
+ "diagnostics": [
+  {
+   "code": "XT1005",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "citation",
+   "name": "Deluca2018",
+   "span": {
+    "file": "MT_kinetochore_dynamics.xtex",
+    "offset": 139016,
+    "length": 44,
+    "line": 3045,
+    "column": 12
+   },
+   "message": "citation key `Deluca2018` is not in the bibliography \u2014 did you mean `DeLuca2018`?",
+   "related": []
+  }
+ ]
+}

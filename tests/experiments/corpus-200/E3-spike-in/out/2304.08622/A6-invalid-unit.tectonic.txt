@@ -1,0 +1,2 @@
+error: multiscale.tex:92: Illegal unit of measure (pt inserted)
+error: halted on potentially-recoverable error as specified

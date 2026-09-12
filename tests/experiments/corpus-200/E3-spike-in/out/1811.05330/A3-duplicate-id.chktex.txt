@@ -1,0 +1,152 @@
+exit=2
+lines=492
+unique_findings=134
+se from  the sets before 2008. The preferred lines 3-6 have been used here, and the results differ notably from the SOFIN observations between 2008 and 2017, where different lines had to be used. In Fig. \ref{Mfs}, all SOFIN sets where lines 3-6 could be used are highlighted, and most of the other SOFIN sets clearly differ from these.  
+                                                                                                                                                                                                                                                                                                                                                        ^
+Warning 2 in V889Her_arxiv.tex line 531: Non-breaking space (`~') should have been used.
+The FIES and HARPS observations between 2013 and 2016, where the full visible spectrum was available, yield    $f_S$ values comparable to those from  the sets before 2008. The preferred lines 3-6 have been used here, and the results differ notably from the SOFIN observations between 2008 and 2017, where different lines had to be used. In Fig. \ref{Mfs}, all SOFIN sets where lines 3-6 could be used are highlighted, and most of the other SOFIN sets clearly differ from these.  
+                                                                                                                                                                                                                                                                                                                                                        ^
+Warning 8 in V889Her_arxiv.tex line 531: Wrong length of dash may have been used.
+The FIES and HARPS observations between 2013 and 2016, where the full visible spectrum was available, yield    $f_S$ values comparable to those from  the sets before 2008. The preferred lines 3-6 have been used here, and the results differ notably from the SOFIN observations between 2008 and 2017, where different lines had to be used. In Fig. \ref{Mfs}, all SOFIN sets where lines 3-6 could be used are highlighted, and most of the other SOFIN sets clearly differ from these.  
+                                                                                                                                                                                                                                                                                                                                                                                                ^
+Warning 12 in V889Her_arxiv.tex line 534: Interword spacing (`\ ') should perhaps be used.
+Using only a single line causes more noise, but should reduce systematic differences related to different spectral regions. In Fig. \ref{SOFIN_FIES} we compare the filling factors from Fig. \ref{Mfs} to those where only the Ca I line was used. The data from the different instruments are shown separately.  
+                                                                                                                                   ^
+Warning 2 in V889Her_arxiv.tex line 534: Non-breaking space (`~') should have been used.
+Using only a single line causes more noise, but should reduce systematic differences related to different spectral regions. In Fig. \ref{SOFIN_FIES} we compare the filling factors from Fig. \ref{Mfs} to those where only the Ca I line was used. The data from the different instruments are shown separately.  
+                                                                                                                                   ^
+Warning 12 in V889Her_arxiv.tex line 534: Interword spacing (`\ ') should perhaps be used.
+Using only a single line causes more noise, but should reduce systematic differences related to different spectral regions. In Fig. \ref{SOFIN_FIES} we compare the filling factors from Fig. \ref{Mfs} to those where only the Ca I line was used. The data from the different instruments are shown separately.  
+                                                                                                                                                                                             ^
+Warning 2 in V889Her_arxiv.tex line 534: Non-breaking space (`~') should have been used.
+Using only a single line causes more noise, but should reduce systematic differences related to different spectral regions. In Fig. \ref{SOFIN_FIES} we compare the filling factors from Fig. \ref{Mfs} to those where only the Ca I line was used. The data from the different instruments are shown separately.  
+                                                                                                                                                                                             ^
+Warning 12 in V889Her_arxiv.tex line 545: Interword spacing (`\ ') should perhaps be used.
+The differences in $f_S$ in Fig. \ref{Mfs} could be explained solely from the use of different lines, but in Fig. \ref{SOFIN_FIES} there is a notable difference between the SOFIN observations during and before 2013 and the following HARPS and FIES observations, even when only the Ca I line was used. In principle there should be no differences due to instrumentation.  
+                                ^
+Warning 2 in V889Her_arxiv.tex line 545: Non-breaking space (`~') should have been used.
+The differences in $f_S$ in Fig. \ref{Mfs} could be explained solely from the use of different lines, but in Fig. \ref{SOFIN_FIES} there is a notable difference between the SOFIN observations during and before 2013 and the following HARPS and FIES observations, even when only the Ca I line was used. In principle there should be no differences due to instrumentation.  
+                                ^
+Warning 12 in V889Her_arxiv.tex line 545: Interword spacing (`\ ') should perhaps be used.
+The differences in $f_S$ in Fig. \ref{Mfs} could be explained solely from the use of different lines, but in Fig. \ref{SOFIN_FIES} there is a notable difference between the SOFIN observations during and before 2013 and the following HARPS and FIES observations, even when only the Ca I line was used. In principle there should be no differences due to instrumentation.  
+                                                                                                                 ^
+Warning 2 in V889Her_arxiv.tex line 545: Non-breaking space (`~') should have been used.
+The differences in $f_S$ in Fig. \ref{Mfs} could be explained solely from the use of different lines, but in Fig. \ref{SOFIN_FIES} there is a notable difference between the SOFIN observations during and before 2013 and the following HARPS and FIES observations, even when only the Ca I line was used. In principle there should be no differences due to instrumentation.  
+                                                                                                                 ^
+Warning 8 in V889Her_arxiv.tex line 547: Wrong length of dash may have been used.
+We calculated a Pearson correlation coefficient for the mean magnitudes and $f_S$ values retrieved from the combined lines as $r = 0.18$, which implies a weak correlation. When using only those $f_S$ values where the preferred lines 3-6 could be used  
+                                                                                                                                                                                                                                          ^
+Warning 12 in V889Her_arxiv.tex line 559: Interword spacing (`\ ') should perhaps be used.
+We also calculated the mean temperature of each Doppler map. Large spots should have a cooling effect on the temperature, and thus also lower the luminosity of the star. The photometric mean magnitudes are plotted against the spectroscopic mean temperatures in Fig. \ref{mtemp}. A much clearer correlation is seen here, suggesting that the decreasing luminosity of V889 Her is indeed caused by decreasing surface temperature, most likely in the form of increasing spottedness, although this is not clearly seen from the spot filling factors. The Doppler imaging method   
+                                                                                                                                                                                                                                                                         ^
+Warning 2 in V889Her_arxiv.tex line 559: Non-breaking space (`~') should have been used.
+We also calculated the mean temperature of each Doppler map. Large spots should have a cooling effect on the temperature, and thus also lower the luminosity of the star. The photometric mean magnitudes are plotted against the spectroscopic mean temperatures in Fig. \ref{mtemp}. A much clearer correlation is seen here, suggesting that the decreasing luminosity of V889 Her is indeed caused by decreasing surface temperature, most likely in the form of increasing spottedness, although this is not clearly seen from the spot filling factors. The Doppler imaging method   
+                                                                                                                                                                                                                                                                         ^
+Warning 8 in V889Her_arxiv.tex line 570: Wrong length of dash may have been used.
+      \caption{Mean magnitudes of each independent set in the CPS analysis (blue dots) and spot filling factors (red stars). The sets where the preferred lines at 6411-6439 Å were used are highlighted with a circle.  
+                                                                                                                                                                       ^
+Warning 24 in V889Her_arxiv.tex line 572: Delete this space to maintain correct pagereferences.
+         \label{Mfs}  
+        ^
+Warning 24 in V889Her_arxiv.tex line 581: Delete this space to maintain correct pagereferences.
+         \label{SOFIN_FIES}  
+        ^
+Warning 24 in V889Her_arxiv.tex line 592: Delete this space to maintain correct pagereferences.
+         \label{mtemp}  
+        ^
+Warning 12 in V889Her_arxiv.tex line 598: Interword spacing (`\ ') should perhaps be used.
+In Figs. \ref{lat} and \ref{lon} we show the averaged  surface temperature distribution of V889 Her over each latitude and longitude, respectively, to study changes in the average spot locations. The   
+        ^
+Warning 2 in V889Her_arxiv.tex line 598: Non-breaking space (`~') should have been used.
+In Figs. \ref{lat} and \ref{lon} we show the averaged  surface temperature distribution of V889 Her over each latitude and longitude, respectively, to study changes in the average spot locations. The   
+        ^
+Warning 2 in V889Her_arxiv.tex line 598: Non-breaking space (`~') should have been used.
+In Figs. \ref{lat} and \ref{lon} we show the averaged  surface temperature distribution of V889 Her over each latitude and longitude, respectively, to study changes in the average spot locations. The   
+                      ^
+Warning 12 in V889Her_arxiv.tex line 602: Interword spacing (`\ ') should perhaps be used.
+distribution could reveal active longitudes. However, no clear trends are revealed from our data. In Fig. \ref{lat} the mean spot latitude remains fairly constant.  
+                                                                                                         ^
+Warning 2 in V889Her_arxiv.tex line 602: Non-breaking space (`~') should have been used.
+distribution could reveal active longitudes. However, no clear trends are revealed from our data. In Fig. \ref{lat} the mean spot latitude remains fairly constant.  
+                                                                                                         ^
+Warning 12 in V889Her_arxiv.tex line 604: Interword spacing (`\ ') should perhaps be used.
+In Fig. \ref{lon}, there  is some evolution in the   
+       ^
+Warning 2 in V889Her_arxiv.tex line 604: Non-breaking space (`~') should have been used.
+In Fig. \ref{lon}, there  is some evolution in the   
+       ^
+Warning 2 in V889Her_arxiv.tex line 608: Non-breaking space (`~') should have been used.
+Figure \ref{lon} also shows the phases of the photometric minima, which should coincide with the dominating spot regions. This can be used as an independent check of the reliability of the spot longitudes. There is certainly not a perfect match between them, but in many cases they are located close to each other, suggesting that the spot longitudes are still fairly reliable. Photometric minima are also concentrated in most cases close to phase 0, although there is a great deal of  scatter. \cite{jetsu2018} showed that phases of photometric minima are accurate only if there is one dominating spot region.  
+      ^
+Warning 12 in V889Her_arxiv.tex line 608: Interword spacing (`\ ') should perhaps be used.
+Figure \ref{lon} also shows the phases of the photometric minima, which should coincide with the dominating spot regions. This can be used as an independent check of the reliability of the spot longitudes. There is certainly not a perfect match between them, but in many cases they are located close to each other, suggesting that the spot longitudes are still fairly reliable. Photometric minima are also concentrated in most cases close to phase 0, although there is a great deal of  scatter. \cite{jetsu2018} showed that phases of photometric minima are accurate only if there is one dominating spot region.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+Warning 2 in V889Her_arxiv.tex line 608: Non-breaking space (`~') should have been used.
+Figure \ref{lon} also shows the phases of the photometric minima, which should coincide with the dominating spot regions. This can be used as an independent check of the reliability of the spot longitudes. There is certainly not a perfect match between them, but in many cases they are located close to each other, suggesting that the spot longitudes are still fairly reliable. Photometric minima are also concentrated in most cases close to phase 0, although there is a great deal of  scatter. \cite{jetsu2018} showed that phases of photometric minima are accurate only if there is one dominating spot region.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+Warning 24 in V889Her_arxiv.tex line 621: Delete this space to maintain correct pagereferences.
+         \label{lat}  
+        ^
+Warning 24 in V889Her_arxiv.tex line 634: Delete this space to maintain correct pagereferences.
+         \label{lon}  
+        ^
+Warning 2 in V889Her_arxiv.tex line 643: Non-breaking space (`~') should have been used.
+\caption{Filling factors $f_S$ and mean temperatures $T_{\mathrm{mean}}$ for each set of spectral observations. The lines used in each set are numbered as in Table \ref{lin}.}  
+                                                                                                                                                                   ^
+Warning 24 in V889Her_arxiv.tex line 644: Delete this space to maintain correct pagereferences.
+\label{f-factors}  
+^
+Warning 44 in V889Her_arxiv.tex line 646: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline\hline  
+^^^^^^
+Warning 44 in V889Her_arxiv.tex line 646: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline\hline  
+      ^^^^^^
+Warning 44 in V889Her_arxiv.tex line 648: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 8 in V889Her_arxiv.tex line 650: Wrong length of dash may have been used.
+Jul -- Aug 1999 & 3,4,5,6 & 0.0725 & 5796\\   
+    ^^
+Warning 8 in V889Her_arxiv.tex line 653: Wrong length of dash may have been used.
+Jul -- Aug 2001 & 3,4,5,6 & 0.0489 & 5774\\  
+    ^^
+Warning 8 in V889Her_arxiv.tex line 655: Wrong length of dash may have been used.
+Jul -- Aug 2004 & 1,2,6 & 0.0523 & 5857\\  
+    ^^
+Warning 8 in V889Her_arxiv.tex line 657: Wrong length of dash may have been used.
+Aug -- Sep 2006 & 1,2,6 & 0.0693 & 5764\\  
+    ^^
+Warning 8 in V889Her_arxiv.tex line 660: Wrong length of dash may have been used.
+Aug -- Sep 2009 & 1,2,6,7 & 0.1067 & 5778\\  
+    ^^
+Warning 8 in V889Her_arxiv.tex line 662: Wrong length of dash may have been used.
+Aug -- Sep 2012 & 1,2,6,7 & 0.1228 & 5743\\  
+    ^^
+Warning 44 in V889Her_arxiv.tex line 669: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 2 in V889Her_arxiv.tex line 687: Non-breaking space (`~') should have been used.
+\noindent where $F_{\lambda}$ is the intensity at wavelength $\lambda$; $F_c$ is the continuum intensity, which is here normalised to 1; and $\Delta\lambda$ is the interval between wavelength points. The line strength is integrated over the line, which we have defined as the region between $\lambda_1 = 6560$ Å and $\lambda_2 = 6566$ Å. We have calculated this for every spectrum in each set, and taken the average value as the indicator for the chromospheric activity of the set. The EW values are shown in Table \ref{halpha}.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+Warning 24 in V889Her_arxiv.tex line 695: Delete this space to maintain correct pagereferences.
+\label{halpha}  
+^
+Warning 44 in V889Her_arxiv.tex line 697: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline\hline  
+^^^^^^
+Warning 44 in V889Her_arxiv.tex line 697: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline\hline  
+      ^^^^^^
+Warning 44 in V889Her_arxiv.tex line 699: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 44 in V889Her_arxiv.tex line 704: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 12 in V889Her_arxiv.tex line 745: Interword spacing (`\ ') should perhaps be used.
+surface areas could be generated by magnetic activity, but could also be of non-magnetic origin. \cite{kapyla2011} showed that both cooler and hotter regions may arise from large-scale vortices generated by  
+                                                                                                ^
+Warning 2 in V889Her_arxiv.tex line 745: Non-breaking space (`~') should have been used.
+surface areas could be generated by magnetic activity, but could also be of non-magnetic origin. \cite{kapyla2011} showed that both cooler and hotter regions may arise from large-scale vortices generated by  
+                                                                                                ^

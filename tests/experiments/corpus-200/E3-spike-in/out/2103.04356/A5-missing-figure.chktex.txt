@@ -1,0 +1,110 @@
+exit=2
+lines=450
+unique_findings=88
+ ]{\includegraphics[width=0.45\textwidth]{discussion2/DI2_k_means.jpg}\label{fig:mit_DI2_single_without_nobordervalues}}  
+                               ^
+Warning 18 in discussion.tex line 88: Use either `` or '' as an alternative to `"'.
+    \subfigure[\small Variable "mit" categories distribution after DI2 single column discretization, Kolmogorov-Smirnov outlier removal and no border values (blue columns) and after k-means discretization (pink columns). ]{\includegraphics[width=0.45\textwidth]{discussion2/DI2_k_means.jpg}\label{fig:mit_DI2_single_without_nobordervalues}}  
+                                   ^
+Warning 18 in discussion.tex line 91: Use either `` or '' as an alternative to `"'.
+    \subfigure[\small Variable "mit" categories distribution after DI2 discretization with different settings without border values. Single column discretization without Kolmogorov-Smirnov outlier removal (dark blue columns), whole dataset discretization with Kolmogorov-Smirnov outlier removal (light purple columns), whole discretization without Kolmogorov-Smirnov outlier removal (dark purple columns). ]{\includegraphics[width=0.9\textwidth]{discussion2/DI2_rest.jpg}\label{fig:mit_DI2_single_with_bordervalues}}  
+                               ^
+Warning 18 in discussion.tex line 91: Use either `` or '' as an alternative to `"'.
+    \subfigure[\small Variable "mit" categories distribution after DI2 discretization with different settings without border values. Single column discretization without Kolmogorov-Smirnov outlier removal (dark blue columns), whole dataset discretization with Kolmogorov-Smirnov outlier removal (light purple columns), whole discretization without Kolmogorov-Smirnov outlier removal (dark purple columns). ]{\includegraphics[width=0.9\textwidth]{discussion2/DI2_rest.jpg}\label{fig:mit_DI2_single_with_bordervalues}}  
+                                   ^
+Warning 18 in discussion.tex line 93: Use either `` or '' as an alternative to `"'.
+    \caption{Variable "mit" distribution, IV.a., categories distribution after DI2, IV.b. and IV.c., and after k-means discretization, IV.b.}  
+                      ^
+Warning 18 in discussion.tex line 93: Use either `` or '' as an alternative to `"'.
+    \caption{Variable "mit" distribution, IV.a., categories distribution after DI2, IV.b. and IV.c., and after k-means discretization, IV.b.}  
+                          ^
+Warning 12 in discussion.tex line 93: Interword spacing (`\ ') should perhaps be used.
+    \caption{Variable "mit" distribution, IV.a., categories distribution after DI2, IV.b. and IV.c., and after k-means discretization, IV.b.}  
+                                                                                         ^
+Warning 24 in discussion.tex line 94: Delete this space to maintain correct pagereferences.
+    \label{discretizations1}  
+   ^
+Warning 18 in discussion.tex line 105: Use either `` or '' as an alternative to `"'.
+    \caption{Variable "mit" categories distribution after DI2 discretization with different settings with border values. Single column discretization with Kolmogorov-Smirnov outlier removal (light blue columns), single column discretization without Kolmogorov-Smirnov outlier removal (dark blue columns), whole dataset discretization with Kolmogorov-Smirnov outlier removal (light purple columns), whole discretization without Kolmogorov-Smirnov outlier removal (dark purple columns).}  
+                      ^
+Warning 18 in discussion.tex line 105: Use either `` or '' as an alternative to `"'.
+    \caption{Variable "mit" categories distribution after DI2 discretization with different settings with border values. Single column discretization with Kolmogorov-Smirnov outlier removal (light blue columns), single column discretization without Kolmogorov-Smirnov outlier removal (dark blue columns), whole dataset discretization with Kolmogorov-Smirnov outlier removal (light purple columns), whole discretization without Kolmogorov-Smirnov outlier removal (dark purple columns).}  
+                          ^
+Warning 24 in discussion.tex line 106: Delete this space to maintain correct pagereferences.
+    \label{discretizations2}  
+   ^
+Warning 44 in discussion.tex line 116: User Regex: -2:Vertical rules in tables are ugly.
+    \begin{tabular}{p{1.3cm}|p{1.3cm}p{0.9cm}p{0.8cm}p{0.9cm}|p{1.3cm}p{0.9cm}p{0.8cm}p{0.9cm}p{1cm}p{1cm}}  
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 1 in discussion.tex line 120: Command terminated with space.
+        p-value \textless 0.05 &   
+                         ^
+Warning 1 in discussion.tex line 124: Command terminated with space.
+        p-value \textless 0.05 &  
+                         ^
+Warning 24 in discussion.tex line 136: Delete this space to maintain correct pagereferences.
+    \label{fitting2}  
+   ^
+Warning 2 in discussion.tex line 144: Non-breaking space (`~') should have been used.
+To test the impact DI2 has when discretizing data we considered the \textit{yeast dataset}, 5 categories per variable, and six supervised classification methods: Naive Bayes \cite{John1995}, Random Forest \cite{Breiman2001}, SMO \cite{platt1998sequential}(Sequential Minimal Optimization), C4.5 \cite{quinlan2014c4}, MLRM \cite{leCessie1992}(Multinomial Logistic Regression Model), and FleBiC \cite{HENRIQUES2021107900}.   
+                                                                                                                                                                             ^
+Warning 2 in discussion.tex line 144: Non-breaking space (`~') should have been used.
+To test the impact DI2 has when discretizing data we considered the \textit{yeast dataset}, 5 categories per variable, and six supervised classification methods: Naive Bayes \cite{John1995}, Random Forest \cite{Breiman2001}, SMO \cite{platt1998sequential}(Sequential Minimal Optimization), C4.5 \cite{quinlan2014c4}, MLRM \cite{leCessie1992}(Multinomial Logistic Regression Model), and FleBiC \cite{HENRIQUES2021107900}.   
+                                                                                                                                                                                                            ^
+Warning 2 in discussion.tex line 144: Non-breaking space (`~') should have been used.
+To test the impact DI2 has when discretizing data we considered the \textit{yeast dataset}, 5 categories per variable, and six supervised classification methods: Naive Bayes \cite{John1995}, Random Forest \cite{Breiman2001}, SMO \cite{platt1998sequential}(Sequential Minimal Optimization), C4.5 \cite{quinlan2014c4}, MLRM \cite{leCessie1992}(Multinomial Logistic Regression Model), and FleBiC \cite{HENRIQUES2021107900}.   
+                                                                                                                                                                                                                                    ^
+Warning 36 in discussion.tex line 144: You should put a space in front of parenthesis.
+To test the impact DI2 has when discretizing data we considered the \textit{yeast dataset}, 5 categories per variable, and six supervised classification methods: Naive Bayes \cite{John1995}, Random Forest \cite{Breiman2001}, SMO \cite{platt1998sequential}(Sequential Minimal Optimization), C4.5 \cite{quinlan2014c4}, MLRM \cite{leCessie1992}(Multinomial Logistic Regression Model), and FleBiC \cite{HENRIQUES2021107900}.   
+                                                                                                                                                                                                                                                               ^
+Warning 2 in discussion.tex line 144: Non-breaking space (`~') should have been used.
+To test the impact DI2 has when discretizing data we considered the \textit{yeast dataset}, 5 categories per variable, and six supervised classification methods: Naive Bayes \cite{John1995}, Random Forest \cite{Breiman2001}, SMO \cite{platt1998sequential}(Sequential Minimal Optimization), C4.5 \cite{quinlan2014c4}, MLRM \cite{leCessie1992}(Multinomial Logistic Regression Model), and FleBiC \cite{HENRIQUES2021107900}.   
+                                                                                                                                                                                                                                                                                                      ^
+Warning 2 in discussion.tex line 144: Non-breaking space (`~') should have been used.
+To test the impact DI2 has when discretizing data we considered the \textit{yeast dataset}, 5 categories per variable, and six supervised classification methods: Naive Bayes \cite{John1995}, Random Forest \cite{Breiman2001}, SMO \cite{platt1998sequential}(Sequential Minimal Optimization), C4.5 \cite{quinlan2014c4}, MLRM \cite{leCessie1992}(Multinomial Logistic Regression Model), and FleBiC \cite{HENRIQUES2021107900}.   
+                                                                                                                                                                                                                                                                                                                                 ^
+Warning 36 in discussion.tex line 144: You should put a space in front of parenthesis.
+To test the impact DI2 has when discretizing data we considered the \textit{yeast dataset}, 5 categories per variable, and six supervised classification methods: Naive Bayes \cite{John1995}, Random Forest \cite{Breiman2001}, SMO \cite{platt1998sequential}(Sequential Minimal Optimization), C4.5 \cite{quinlan2014c4}, MLRM \cite{leCessie1992}(Multinomial Logistic Regression Model), and FleBiC \cite{HENRIQUES2021107900}.   
+                                                                                                                                                                                                                                                                                                                                                     ^
+Warning 2 in discussion.tex line 144: Non-breaking space (`~') should have been used.
+To test the impact DI2 has when discretizing data we considered the \textit{yeast dataset}, 5 categories per variable, and six supervised classification methods: Naive Bayes \cite{John1995}, Random Forest \cite{Breiman2001}, SMO \cite{platt1998sequential}(Sequential Minimal Optimization), C4.5 \cite{quinlan2014c4}, MLRM \cite{leCessie1992}(Multinomial Logistic Regression Model), and FleBiC \cite{HENRIQUES2021107900}.   
+                                                                                                                                                                                                                                                                                                                                                                                                        ^
+Warning 2 in discussion.tex line 146: Non-breaking space (`~') should have been used.
+In Figure \ref{models_accuracy} the results for the aforementioned models are presented, with the exception of FleBiC which will be discussed later on. Each bar represents the average accuracy achieved with each discretization method, and the small bracket the standard deviation of the accuracy. In each model, DI2, with configurations of single column discretization and outlier removal, matched with the highest accuracy achieved by other discretization methods, and for the C4.5 model, DI2, with configurations of combined column discretization, achieved the highest accuracy compared with other discretization methods.   
+         ^
+Warning 12 in discussion.tex line 151: Interword spacing (`\ ') should perhaps be used.
+    \caption{Average accuracy per classifier and discretization method available without border values. From left to right in each group of bars: K-means, Quartile, Uniform, DI2 (single, kol. correction), DI2 (single), DI2 (whole, kol. correction), DI2 (whole).  
+                                                                                                                                                                                               ^
+Warning 12 in discussion.tex line 151: Interword spacing (`\ ') should perhaps be used.
+    \caption{Average accuracy per classifier and discretization method available without border values. From left to right in each group of bars: K-means, Quartile, Uniform, DI2 (single, kol. correction), DI2 (single), DI2 (whole, kol. correction), DI2 (whole).  
+                                                                                                                                                                                                                                           ^
+Warning 24 in discussion.tex line 153: Delete this space to maintain correct pagereferences.
+    \label{models_accuracy}  
+   ^
+Warning 2 in discussion.tex line 156: Non-breaking space (`~') should have been used.
+In order to fully test out the potential of DI2, we now consider border values. From the aforementioned supervised classification methods only FleBiC is able to test this feature. FleBiC can be executed normally or with Random Forests (weight of decision 50\% FleBiC, 50\% Random Forests), which we will designate as FleBiC Hybrid. In Figure \ref{FleBiC} the results of executing FleBiC and FleBiC Hybrid are presented. In terms of average accuracy, Figure \ref{FleBiC}.a., both FleBiC and FleBiC Hybrid predict with a higher average accuracy when using DI2 method than when using other discretization methods. Within the different settings of DI2, FleBiC Hybrid presents a higher accuracy when the predictive model considers border values. Finally in terms of sensitivity, Figure \ref{FleBiC}b., we can see how considering border values affects the prediction of class NUC, making it possible to break through a ceiling on the prediction of class NUC when other discretization methods couldn't.  
+                                                                                                                                                                                                                                                                                                                                                     ^
+Warning 2 in discussion.tex line 156: Non-breaking space (`~') should have been used.
+In order to fully test out the potential of DI2, we now consider border values. From the aforementioned supervised classification methods only FleBiC is able to test this feature. FleBiC can be executed normally or with Random Forests (weight of decision 50\% FleBiC, 50\% Random Forests), which we will designate as FleBiC Hybrid. In Figure \ref{FleBiC} the results of executing FleBiC and FleBiC Hybrid are presented. In terms of average accuracy, Figure \ref{FleBiC}.a., both FleBiC and FleBiC Hybrid predict with a higher average accuracy when using DI2 method than when using other discretization methods. Within the different settings of DI2, FleBiC Hybrid presents a higher accuracy when the predictive model considers border values. Finally in terms of sensitivity, Figure \ref{FleBiC}b., we can see how considering border values affects the prediction of class NUC, making it possible to break through a ceiling on the prediction of class NUC when other discretization methods couldn't.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ^
+Warning 2 in discussion.tex line 156: Non-breaking space (`~') should have been used.
+In order to fully test out the potential of DI2, we now consider border values. From the aforementioned supervised classification methods only FleBiC is able to test this feature. FleBiC can be executed normally or with Random Forests (weight of decision 50\% FleBiC, 50\% Random Forests), which we will designate as FleBiC Hybrid. In Figure \ref{FleBiC} the results of executing FleBiC and FleBiC Hybrid are presented. In terms of average accuracy, Figure \ref{FleBiC}.a., both FleBiC and FleBiC Hybrid predict with a higher average accuracy when using DI2 method than when using other discretization methods. Within the different settings of DI2, FleBiC Hybrid presents a higher accuracy when the predictive model considers border values. Finally in terms of sensitivity, Figure \ref{FleBiC}b., we can see how considering border values affects the prediction of class NUC, making it possible to break through a ceiling on the prediction of class NUC when other discretization methods couldn't.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+Warning 12 in discussion.tex line 165: Interword spacing (`\ ') should perhaps be used.
+    \caption{Accuracy when executing different FleBiC versions, and Sensitivity of when predicting class NUC, with multiple discretization methods. From left to right the bars are: K-means, Quartile, Uniform, DI2 (single, kol. correction), DI2 (single), DI2 (border values, single, kol. correction), DI2 (border values, single).}  
+                                                                                                                                                                                                                                  ^
+Warning 12 in discussion.tex line 165: Interword spacing (`\ ') should perhaps be used.
+    \caption{Accuracy when executing different FleBiC versions, and Sensitivity of when predicting class NUC, with multiple discretization methods. From left to right the bars are: K-means, Quartile, Uniform, DI2 (single, kol. correction), DI2 (single), DI2 (border values, single, kol. correction), DI2 (border values, single).}  
+                                                                                                                                                                                                                                                                                              ^
+Warning 24 in discussion.tex line 166: Delete this space to maintain correct pagereferences.
+    \label{FleBiC}  
+   ^
+Warning 15 in discussion.tex line 24: No match found for `{'.
+    \caption{Distribution matching of DA variable from breast-tissue againt two statistical distributions (\textit{recipinvgauss} in V.a and \textit{chi2} in V.b, as well as the corresponding discretization boundaries and border values (V.c).}  
+            ^
+Warning 48 in bmc_article.tex line 89: No match found for `localdefs' (ConTeXt).
+\startlocaldefs  
+      ^^^^^^^^^
+Warning 17 in bmc_article.tex line 426: Number of `(' doesn't match the number of `)'!
+
+

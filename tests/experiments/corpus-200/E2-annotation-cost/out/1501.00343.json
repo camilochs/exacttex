@@ -1,0 +1,184 @@
+{
+ "paper": "1501.00343",
+ "main": "BicoloringCover_journal_19.02.15.tex",
+ "files": [
+  {
+   "file": "BicoloringCover_journal_19.02.15.tex",
+   "chars_before": 178120,
+   "chars_after": 177964,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 178120,
+ "chars_after": 177964,
+ "delta_pct": -0.08758140579384685,
+ "unrepaired": {
+  "chars_after": 177964,
+  "chars_before": 178120,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.020453,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`REFERENCES.bib` could not be read"
+  },
+  "errors": 9,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.08758140579384685
+ },
+ "stats": {
+  "cite_cmds_live": 22,
+  "cite_keys_live": 24,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 52,
+  "labels_outside_grammar": 0,
+  "refs_live": 113,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 4,
+  "cite_cmds_annotated": 22,
+  "cite_keys_annotated": 24,
+  "ids_annotated": 52,
+  "refs_annotated": 102,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 9,
+  "leaks_reverted": 2,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "BicoloringCover_journal_19.02.15.tex",
+   "line": 3885,
+   "token": "@ref(generalKol)",
+   "wrapper": "?",
+   "context": "Thm \\ref{generalKol} & - & $2^{|X|(k-1)-3} $ & $\\mathbb{E}(O(|X|(n+mk)))$ & $|X|$\\\\\\hline"
+  },
+  {
+   "file": "BicoloringCover_journal_19.02.15.tex",
+   "line": 3887,
+   "token": "@ref(thm:genlocallemma)",
+   "wrapper": "?",
+   "context": "Thm  \\ref{thm:genlocallemma}& -  & $\\frac{2^{|X|(k-1)}}{e}-1$& $ \\mathbb{E}(O(|X|(n+mk)))$ & $|X|$\\\\\\hline"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1003",
+   "name": "cor:kncover",
+   "file": "BicoloringCover_journal_19.02.15.xtex",
+   "line": 1047,
+   "message": "identifier `cor:kncover` is not declared",
+   "classification": "compiler-unreachable: \\label{cor:kncover} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "thm:complete",
+   "file": "BicoloringCover_journal_19.02.15.xtex",
+   "line": 1205,
+   "message": "identifier `thm:complete` is not declared",
+   "classification": "compiler-unreachable: \\label{thm:complete} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "thm:complete",
+   "file": "BicoloringCover_journal_19.02.15.xtex",
+   "line": 1294,
+   "message": "identifier `thm:complete` is not declared",
+   "classification": "compiler-unreachable: \\label{thm:complete} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "cor:cgraph",
+   "file": "BicoloringCover_journal_19.02.15.xtex",
+   "line": 1710,
+   "message": "identifier `cor:cgraph` is not declared",
+   "classification": "compiler-unreachable: \\label{cor:cgraph} exists (2x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "thm:complete",
+   "file": "BicoloringCover_journal_19.02.15.xtex",
+   "line": 1879,
+   "message": "identifier `thm:complete` is not declared",
+   "classification": "compiler-unreachable: \\label{thm:complete} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "thm:complete",
+   "file": "BicoloringCover_journal_19.02.15.xtex",
+   "line": 2183,
+   "message": "identifier `thm:complete` is not declared",
+   "classification": "compiler-unreachable: \\label{thm:complete} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "thm:complete",
+   "file": "BicoloringCover_journal_19.02.15.xtex",
+   "line": 2455,
+   "message": "identifier `thm:complete` is not declared",
+   "classification": "compiler-unreachable: \\label{thm:complete} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "thm:complete",
+   "file": "BicoloringCover_journal_19.02.15.xtex",
+   "line": 2719,
+   "message": "identifier `thm:complete` is not declared",
+   "classification": "compiler-unreachable: \\label{thm:complete} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "thm:complete",
+   "file": "BicoloringCover_journal_19.02.15.xtex",
+   "line": 3089,
+   "message": "identifier `thm:complete` is not declared",
+   "classification": "compiler-unreachable: \\label{thm:complete} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.01956,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`REFERENCES.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "BicoloringCover_journal_19.02.15.xtex",
+    "offset": 10463,
+    "length": 8,
+    "line": 259,
+    "column": 24
+   },
+   "message": "citation checking unavailable: `REFERENCES.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

@@ -1,0 +1,25 @@
+{
+ "coverage": 0.033934,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`bib.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "ising.xtex",
+    "offset": 3380,
+    "length": 20,
+    "line": 68,
+    "column": 58
+   },
+   "message": "citation checking unavailable: `bib.bib` could not be read",
+   "related": []
+  }
+ ]
+}

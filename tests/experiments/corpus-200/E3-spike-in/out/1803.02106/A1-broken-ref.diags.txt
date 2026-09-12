@@ -1,0 +1,3 @@
+planted=Payload__ghost sites=[('galaxies-273475-english.xtex', 154)]
+xtex new=[('XT1003', 'Payload__ghost', 'galaxies-273475-english.xtex', 154)]
+texlab new=[('ERROR', 'galaxies-273475-english.tex', 154, 'Undefined reference'), ('info', 'galaxies-273475-english.tex', 161, 'Unused label')]

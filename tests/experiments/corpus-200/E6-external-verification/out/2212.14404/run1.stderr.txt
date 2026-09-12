@@ -1,0 +1,45 @@
+42 claims: 0 fresh and carried over, 42 to verify
+XU201959 · settled
+amasaki_cross-version_2018 · settled
+bansiya_hierarchical_2002 · settled
+bennin_empirical_2016 · settled
+bennin_significant_2017 · settled
+breiman_random_2001 · settled
+chidamber_metrics_1994 · settled
+dambros_extensive_2010 · settled
+demsar_statistical_2006 · settled
+fan_software_2019 · settled
+fenton_software_2014 · settled
+github · settled
+goyal_graph_2017 · settled
+grover_node2vec_2016 · settled
+hall_systematic_2012 · settled
+henderson-sellers_object-oriented_1996 · settled
+jureczko_towards_2010 · settled
+kamei_defect_2016-1 · settled
+ma_empirical_2016 · settled
+martin_oo_1994 · settled
+mccabe_complexity_1976 · settled
+mikolov_efficient_2013 · settled
+nam_survey_2014 · settled
+noauthor_java_nodate · settled
+node2vec · settled
+openne · settled
+perozzi_deepwalk_2014 · settled
+premraj_network_2011 · settled
+qu_node2defect_2018 · settled
+qu_using_2019 · settled
+schonemann_generalized_1966 · settled
+shukla_multi-objective_2018 · settled
+smith_offline_2017 · settled
+subelj_community_2011 · settled
+tang_empirical_1999 · settled
+tang_line_2015 · settled
+xing_normalized_2015 · settled
+xu_cross-version_2018 · settled
+xu_cross_2018 · settled
+yang_ridge_2018 · settled
+zimmermann_predicting_2007 · settled
+zimmermann_predicting_2008-1 · settled
+network: 18 requests (crossref 17, openalex 1) · 0 retries · 2411816 bytes down · 26 fetched, 0 carried over, 16 unanswered
+record: 42 claims → .xtexverified

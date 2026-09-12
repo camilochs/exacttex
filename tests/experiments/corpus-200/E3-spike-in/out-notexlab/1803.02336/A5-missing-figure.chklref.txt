@@ -1,0 +1,540 @@
+pdf=1
+exit=0
+lines=628
+unique_findings=2
+/map/pdftex/updmap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301/share/te
+xmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+! Undefined control sequence.
+l.71 \begin{figure}\centering\includegraphics
+                                             [width=0.5\linewidth]{figures/p...
+
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.71 ...ering\includegraphics[width=0.5\linewidth]
+                                                  {figures/planted_ghost.pdf...
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.71 ...ering\includegraphics[width=0.5\linewidth]
+                                                  {figures/planted_ghost.pdf...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.71 ...hics[width=0.5\linewidth]{figures/planted_
+                                                  ghost.pdf}\caption{Planted...
+
+! Extra }, or forgotten $.
+l.71 ...=0.5\linewidth]{figures/planted_ghost.pdf}
+                                                  \caption{Planted figure}\e...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.71 ...planted_ghost.pdf}\caption{Planted figure}
+                                                  \end{figure}
+! Missing } inserted.
+<inserted text> 
+                }
+l.71 ...t.pdf}\caption{Planted figure}\end{figure}
+                                                  
+
+LaTeX Warning: Citation `sosoa' on page 2 undefined on input line 75.
+
+
+LaTeX Warning: Citation `sosoa' on page 2 undefined on input line 76.
+
+
+LaTeX Warning: Reference `thm:betadef' on page 2 undefined on input line 79.
+
+
+LaTeX Warning: Reference `thm:betadef2' on page 2 undefined on input line 79.
+
+
+LaTeX Warning: Citation `sosoa' on page 2 undefined on input line 81.
+
+[2]
+
+LaTeX Warning: Reference `thm:betadef' on page 3 undefined on input line 167.
+
+
+LaTeX Warning: Citation `icm74' undefined on input line 168.
+
+
+LaTeX Warning: Citation `f-icm' on page 3 undefined on input line 168.
+
+
+LaTeX Warning: Reference `thm:betadef' on page 3 undefined on input line 169.
+
+
+LaTeX Warning: Reference `thm:betadef' on page 3 undefined on input line 172.
+
+
+LaTeX Warning: Reference `thm:betadef2' on page 3 undefined on input line 188.
+
+
+LaTeX Warning: Reference `thm:betadef' on page 3 undefined on input line 188.
+
+
+LaTeX Warning: Reference `thm:betadef' on page 3 undefined on input line 191.
+
+
+LaTeX Warning: Reference `thm:betadef' on page 3 undefined on input line 208.
+
+
+LaTeX Warning: Reference `thm:betadef2' on page 3 undefined on input line 211.
+
+[3]
+
+LaTeX Warning: Reference `thm:betadef2' on page 4 undefined on input line 249.
+
+
+LaTeX Warning: Reference `lem:betadef' on page 4 undefined on input line 250.
+
+
+LaTeX Warning: Reference `lem:gen2' on page 4 undefined on input line 250.
+
+
+LaTeX Warning: Reference `sec:main' on page 4 undefined on input line 255.
+
+
+LaTeX Warning: Reference `thm:betadef2' on page 4 undefined on input line 257.
+
+
+LaTeX Warning: Citation `sosoa' on page 4 undefined on input line 262.
+
+
+LaTeX Warning: Citation `sosoa' on page 4 undefined on input line 263.
+
+
+LaTeX Warning: Reference `sec:main' on page 4 undefined on input line 272.
+
+
+LaTeX Warning: Reference `thm:betadef2' on page 4 undefined on input line 278.
+
+
+LaTeX Warning: Reference `sec:main' on page 4 undefined on input line 283.
+
+
+LaTeX Warning: Reference `lem:pres' on page 4 undefined on input line 302.
+
+
+LaTeX Warning: Reference `lem:pres' on page 4 undefined on input line 303.
+
+
+LaTeX Warning: Reference `lem:star' on page 4 undefined on input line 322.
+
+
+LaTeX Warning: Reference `lem:pres' on page 4 undefined on input line 322.
+
+[4]
+
+LaTeX Warning: Citation `sosoa' on page 5 undefined on input line 336.
+
+
+LaTeX Warning: Citation `sosoa' on page 5 undefined on input line 338.
+
+
+LaTeX Warning: Reference `lem:ordrec' on page 5 undefined on input line 354.
+
+
+LaTeX Warning: Citation `sosoa' on page 5 undefined on input line 359.
+
+
+LaTeX Warning: Reference `lem:ordrec' on page 5 undefined on input line 368.
+
+
+LaTeX Warning: Reference `thm:atrstar' on page 5 undefined on input line 386.
+
+
+LaTeX Warning: Reference `thm:tistar' on page 5 undefined on input line 386.
+
+
+LaTeX Warning: Reference `sec:main' on page 5 undefined on input line 395.
+
+
+LaTeX Warning: Reference `sec:cons' on page 5 undefined on input line 395.
+
+
+LaTeX Warning: Citation `sosoa' on page 5 undefined on input line 399.
+
+
+LaTeX Warning: Reference `thm:betadef' on page 5 undefined on input line 406.
+
+
+LaTeX Warning: Reference `thm:betadef' on page 5 undefined on input line 417.
+
+[5]
+
+LaTeX Warning: Reference `thm:wkldef' on page 6 undefined on input line 422.
+
+
+LaTeX Warning: Citation `f-sosoa' on page 6 undefined on input line 423.
+
+
+LaTeX Warning: Citation `f-icm' on page 6 undefined on input line 423.
+
+
+LaTeX Warning: Citation `rm2001' undefined on input line 424.
+
+
+LaTeX Warning: Citation `pizowkl' on page 6 undefined on input line 424.
+
+
+LaTeX Warning: Citation `sty' on page 6 undefined on input line 425.
+
+
+LaTeX Warning: Reference `thm:wkldef' on page 6 undefined on input line 426.
+
+
+LaTeX Warning: Reference `thm:betadef2' on page 6 undefined on input line 431.
+
+
+LaTeX Warning: Reference `thm:betadef2' on page 6 undefined on input line 443.
+
+
+LaTeX Warning: Reference `thm:atrstar' on page 6 undefined on input line 447.
+
+
+LaTeX Warning: Reference `thm:tistar' on page 6 undefined on input line 448.
+
+
+LaTeX Warning: Reference `sec:cons' on page 6 undefined on input line 455.
+
+
+LaTeX Warning: Reference `thm:wkldef2' on page 6 undefined on input line 459.
+
+
+LaTeX Warning: Reference `thm:wklstar' on page 6 undefined on input line 459.
+
+
+LaTeX Warning: Citation `pizowkl' on page 6 undefined on input line 460.
+
+
+LaTeX Warning: Citation `pizowkl' on page 6 undefined on input line 461.
+
+
+LaTeX Warning: Citation `sosoa' on page 6 undefined on input line 480.
+
+
+LaTeX Warning: Citation `sacks-hrt' on page 6 undefined on input line 480.
+
+
+LaTeX Warning: Reference `lem:s12p' on page 6 undefined on input line 507.
+
+
+LaTeX Warning: Reference `lem:s11p' on page 6 undefined on input line 507.
+
+[6]
+
+LaTeX Warning: Citation `f-bi' on page 7 undefined on input line 519.
+
+
+LaTeX Warning: Citation `sosoa' on page 7 undefined on input line 519.
+
+
+LaTeX Warning: Reference `lem:s12p' on page 7 undefined on input line 523.
+
+
+LaTeX Warning: Reference `lem:s12p' on page 7 undefined on input line 525.
+
+
+LaTeX Warning: Reference `lem:s11p' on page 7 undefined on input line 529.
+
+
+LaTeX Warning: Reference `thm:s12p' on page 7 undefined on input line 534.
+
+
+LaTeX Warning: Reference `thm:s12p' on page 7 undefined on input line 541.
+
+
+LaTeX Warning: Reference `thm:s12p' on page 7 undefined on input line 545.
+
+
+LaTeX Warning: Reference `thm:s12p' on page 7 undefined on input line 552.
+
+
+LaTeX Warning: Reference `lem:s11p' on page 7 undefined on input line 555.
+
+
+LaTeX Warning: Reference `thm:s12p' on page 7 undefined on input line 560.
+
+
+LaTeX Warning: Reference `thm:s12' on page 7 undefined on input line 560.
+
+
+LaTeX Warning: Reference `cor:s12p' on page 7 undefined on input line 561.
+
+
+LaTeX Warning: Citation `f-icm' on page 7 undefined on input line 562.
+
+
+LaTeX Warning: Reference `cor:s12p' on page 7 undefined on input line 563.
+
+
+LaTeX Warning: Citation `f-icm' on page 7 undefined on input line 564.
+
+
+LaTeX Warning: Citation `pizowkl' on page 7 undefined on input line 565.
+
+
+LaTeX Warning: Reference `thm:s12' on page 7 undefined on input line 566.
+
+
+LaTeX Warning: Citation `sty' on page 7 undefined on input line 567.
+
+
+LaTeX Warning: Citation `f-sosoa' on page 7 undefined on input line 576.
+
+
+LaTeX Warning: Citation `sty' on page 7 undefined on input line 584.
+
+(./main.brf) [7]
+
+LaTeX Warning: Citation `icm74' on page 8 undefined on input line 608.
+
+
+LaTeX Warning: Citation `rm2001' on page 8 undefined on input line 640.
+
+[8] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+
+Package rerunfilecheck Warning: File `main.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbx9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/2
+0260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebr
+ew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/202603
+01/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></opt/homebrew/Cel
+lar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr5.pfb></opt/homebrew/Cellar/texlive/20260301/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/home
+brew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmss10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></opt/homebrew/C
+ellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fo
+nts/type1/public/amsfonts/symbols/msam10.pfb></opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></opt/homebrew/C
+ellar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pf
+b></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm
+-super/sfrm1000.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1200.pfb>
+Output written on main.pdf (8 pages, 315464 bytes).
+Transcript written on main.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./main.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/article.
+cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/size10.c
+lo))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hype
+rref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iftex
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/kvdefinekey
+s/kvdefinekeys.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdfescape/p
+dfescape.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdftexcmds/
+pdftexcmds.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/infwarerr/i
+nfwarerr.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hycolor/hycol
+or.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/name
+ref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/refcount/refc
+ount.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/gettitlestr
+ing/gettitlestring.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/etoolbox/etoo
+lbox.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/stringenc/s
+tringenc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/pd1e
+nc.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/intcalc/int
+calc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/puen
+c.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/back
+ref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/rerunfilechec
+k/rerunfilecheck.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/uniquecount
+er/uniquecounter.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bigintcalc/
+bigintcalc.sty))))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/url/url.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bitset/bits
+et.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hpdf
+tex.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amss
+ymb.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amsf
+onts.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amscls/amsthm
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def) (./main.aux)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/colo
+r.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx)) (./main.out) (./main.out)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd) (./main.toc) [1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fon
+ts/map/pdftex/updmap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301/share/te
+xmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+! Undefined control sequence.
+l.71 \begin{figure}\centering\includegraphics
+                                             [width=0.5\linewidth]{figures/p...
+
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.71 ...ering\includegraphics[width=0.5\linewidth]
+                                                  {figures/planted_ghost.pdf...
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.71 ...ering\includegraphics[width=0.5\linewidth]
+                                                  {figures/planted_ghost.pdf...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.71 ...hics[width=0.5\linewidth]{figures/planted_
+                                                  ghost.pdf}\caption{Planted...
+
+! Extra }, or forgotten $.
+l.71 ...=0.5\linewidth]{figures/planted_ghost.pdf}
+                                                  \caption{Planted figure}\e...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.71 ...planted_ghost.pdf}\caption{Planted figure}
+                                                  \end{figure}
+! Missing } inserted.
+<inserted text> 
+                }
+l.71 ...t.pdf}\caption{Planted figure}\end{figure}
+                                                  
+[2] [3] [4] [5] [6] (./main.brf) [7]  [8] (./main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbx9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/2
+0260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebr
+ew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/202603
+01/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></opt/homebrew/Cel
+lar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr5.pfb></opt/homebrew/Cellar/texlive/20260301/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/home
+brew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmss10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></opt/homebrew/C
+ellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fo
+nts/type1/public/amsfonts/symbols/msam10.pfb></opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></opt/homebrew/C
+ellar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pf
+b></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm
+-super/sfrm1000.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1200.pfb>
+Output written on main.pdf (8 pages, 316930 bytes).
+Transcript written on main.log.
+************************************
+** Labels in starred environments **
+************************************
+
+*******************
+** Unused Labels **
+*******************
+-- main.tex             line  393: remove label sec:wkl
+-- main.tex             line  465: remove label sec:friedman
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

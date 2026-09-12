@@ -1,0 +1,14 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'EHFS.tex', 148, 'Undefined reference'), ('ERROR', 'EHFS.tex', 152, 'Undefined reference'), ('ERROR', 'EHFS.tex', 154, 'Undefined reference'), ('ERROR', 'EHFS.tex', 156, 'Undefined reference'), ('ERROR', 'EHFS.tex', 158, 'Undefined reference'), ('ERROR', 'EHFS.tex', 186, 'Undefined reference'), ('ERROR', 'EHFS.tex', 187, 'Undefined reference'), ('ERROR', 'EHFS.tex', 189, 'Undefined reference'), ('ERROR', 'EHFS.tex', 198, 'Undefined reference'), ('ERROR', 'EHFS.tex', 217, 'Undefined reference'), ('ERROR', 'EHFS.tex', 239, 'Undefined reference'), ('ERROR', 'EHFS.tex', 249, 'Duplicate label'), ('ERROR', 'EHFS.tex', 259, 'Duplicate label'), ('ERROR', 'EHFS.tex', 275, 'Undefined reference'), ('ERROR', 'EHFS.tex', 340, 'Undefined reference'), ('ERROR', 'EHFS.tex', 406, 'Undefined reference'), ('ERROR', 'EHFS.tex', 437, 'Undefined reference'), ('ERROR', 'EHFS.tex', 449, 'Undefined reference'), ('ERROR', 'EHFS.tex', 460, 'Undefined reference'), ('ERROR', 'EHFS.tex', 545, 'Undefined reference'), ('info', 'EHFS.tex', 147, 'Unused label'), ('info', 'EHFS.tex', 220, 'Unused label'), ('info', 'EHFS.tex', 225, 'Unused label'), ('info', 'EHFS.tex', 231, 'Unused label'), ('info', 'EHFS.tex', 249, 'Unused label'), ('info', 'EHFS.tex', 253, 'Unused label'), ('info', 'EHFS.tex', 259, 'Unused label'), ('info', 'EHFS.tex', 289, 'Unused label')]
+tectonic exit=1 warnings=[] secs=1
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: algorithmic.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+error: EHFS.tex:110: Package subcaption Error: This package can't be used in cooperation
+(subcaption)                with the subfig package.
+
+See the subcaption package documentation for explanation.
+Type  H <return>  for immediate help
+error: halted on potentially-recoverable error as specified

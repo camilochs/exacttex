@@ -1,0 +1,3 @@
+planted=fig:XRD sites=[('221_v2.xtex', 69), ('221_v2.xtex', 37)]
+xtex new=[('XT1001', 'fig:XRD', '221_v2.xtex', 69), ('XT1004', 'fig:XRD', '221_v2.xtex', 45), ('XT1004', 'fig:XRD', '221_v2.xtex', 61), ('XT1004', 'fig:XRD', '221_v2.xtex', 63), ('XT1020', 'fig:XRD', '221_v2.xtex', 45), ('XT1020', 'fig:XRD', '221_v2.xtex', 61), ('XT1020', 'fig:XRD', '221_v2.xtex', 63)]
+texlab new=[]

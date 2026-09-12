@@ -1,0 +1,3 @@
+planted=figure:pca_plotly_annotation sites=[('tang.xtex', 137), ('tang.xtex', 16)]
+xtex new=[('XT1001', 'figure:pca_plotly_annotation', 'tang.xtex', 137), ('XT1020', 'figure:pca_plotly_annotation', 'tang.xtex', 144)]
+texlab new=[('ERROR', 'tang.tex', 16, 'Duplicate label'), ('ERROR', 'tang.tex', 137, 'Duplicate label')]

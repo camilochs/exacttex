@@ -1,0 +1,3 @@
+planted=fig:sdlc__ghost sites=[('sample-sigplan.xtex', 51)]
+xtex new=[('XT1003', 'fig:sdlc__ghost', 'sample-sigplan.xtex', 51)]
+texlab new=[]

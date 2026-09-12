@@ -1,0 +1,70 @@
+{
+ "paper": "1911.08837",
+ "main": "Gonium.tex",
+ "files": [
+  {
+   "file": "Gonium.tex",
+   "chars_before": 90235,
+   "chars_after": 90160,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 90235,
+ "chars_after": 90160,
+ "delta_pct": -0.08311630741951571,
+ "unrepaired": {
+  "chars_after": 90160,
+  "chars_before": 90235,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.035912,
+  "bibliography": {
+   "state": "complete",
+   "entries": 69
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.08311630741951571
+ },
+ "stats": {
+  "cite_cmds_live": 43,
+  "cite_keys_live": 64,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 7,
+  "other_cite_cmds": 0,
+  "labels_live": 25,
+  "labels_outside_grammar": 0,
+  "refs_live": 113,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 13,
+  "cite_cmds_annotated": 36,
+  "cite_keys_annotated": 42,
+  "ids_annotated": 25,
+  "refs_annotated": 113,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.035912,
+ "bibliography": {
+  "state": "complete",
+  "entries": 69
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

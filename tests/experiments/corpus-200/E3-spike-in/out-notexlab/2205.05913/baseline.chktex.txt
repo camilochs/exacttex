@@ -1,0 +1,222 @@
+exit=2
+lines=822
+unique_findings=230
+n draft_final_version.tex line 1256: Non-breaking space (`~') should have been used.
+The sensitivity of the nonlinear behavior to the time step size is studied in Figs.~\ref{fig:nonlinearIterCurve_spe10_top_layer} and \ref{fig:nonlinearIterCurve_spe10_top_layer_with_adaptive_tolerance}.  
+                                                                                                                                    ^
+Warning 2 in draft_final_version.tex line 1260: Non-breaking space (`~') should have been used.
+As in Section \ref{subsec:spe10_bottom_layer}, the number of Newton iterations stagnates for CFL numbers larger than 69, while the number of outer iterations required by FSMSN-$u_T$, FSMSN-$p$, and MSPIN-$p$ reduce for the range of time step sizes considered here.  
+             ^
+Warning 1 in draft_final_version.tex line 1263: Command terminated with space.
+\pgfplotstableread  
+                  ^
+Warning 1 in draft_final_version.tex line 1273: Command terminated with space.
+}\CFLSPETenTopLayerHighInjectionData  
+                                    ^
+Warning 1 in draft_final_version.tex line 1276: Command terminated with space.
+\pgfplotstableread  
+                  ^
+Warning 1 in draft_final_version.tex line 1286: Command terminated with space.
+}\CFLSPETenTopLayerHighInjectionAdaptivetoleranceData  
+                                                     ^
+Warning 1 in draft_final_version.tex line 1292: Command terminated with space.
+\pgfplotstableread  
+                  ^
+Warning 1 in draft_final_version.tex line 1302: Command terminated with space.
+}\CFLSPETenTopLayerLowInjectionData  
+                                   ^
+Warning 1 in draft_final_version.tex line 1305: Command terminated with space.
+\pgfplotstableread  
+                  ^
+Warning 1 in draft_final_version.tex line 1315: Command terminated with space.
+}\CFLSPETenTopLayerLowInjectionAdaptivetoleranceData  
+                                                    ^
+Warning 24 in draft_final_version.tex line 1354: Delete this space to maintain correct pagereferences.
+  \label{fig:nonlinearIterCurve_spe10_top_layerHighInjection.pdf}  
+ ^
+Warning 24 in draft_final_version.tex line 1388: Delete this space to maintain correct pagereferences.
+    \label{fig:nonlinearIterCurve_spe10_top_layerLowInjection.pdf}  
+   ^
+Warning 24 in draft_final_version.tex line 1391: Delete this space to maintain correct pagereferences.
+  \label{fig:nonlinearIterCurve_spe10_top_layer}  
+ ^
+Warning 24 in draft_final_version.tex line 1429: Delete this space to maintain correct pagereferences.
+  \label{fig:nonlinearIterCurve_spe10_top_layerHighInjection_adaptive_tolerance}  
+ ^
+Warning 24 in draft_final_version.tex line 1463: Delete this space to maintain correct pagereferences.
+    \label{fig:nonlinearIterCurve_spe10_top_layerLowInjection_adaptive_tolerance}  
+   ^
+Warning 24 in draft_final_version.tex line 1466: Delete this space to maintain correct pagereferences.
+  \label{fig:nonlinearIterCurve_spe10_top_layer_with_adaptive_tolerance}  
+ ^
+Warning 24 in draft_final_version.tex line 1471: Delete this space to maintain correct pagereferences.
+\label{sec:lock_exchange}  
+^
+Warning 2 in draft_final_version.tex line 1486: Non-breaking space (`~') should have been used.
+The nonlinear behavior of the schemes is summarized in Fig.~\ref{fig:nonlinearIterCurve_lockExchange} and in Tables \ref{tab:lockExchange_dt10} and \ref{tab:lockExchange_dt25}.  
+                                                                                                                   ^
+Warning 2 in draft_final_version.tex line 1486: Non-breaking space (`~') should have been used.
+The nonlinear behavior of the schemes is summarized in Fig.~\ref{fig:nonlinearIterCurve_lockExchange} and in Tables \ref{tab:lockExchange_dt10} and \ref{tab:lockExchange_dt25}.  
+                                                                                                                                                   ^
+Warning 2 in draft_final_version.tex line 1494: Non-breaking space (`~') should have been used.
+Figure \ref{fig:nonlinearIterCurve_lockExchange} shows that both MSPIN-$p$ and FSMSN-$p$ fail to converge beyond a certain time step size (10 days for MSPIN-$p$ and 50 days for FSMSN-$u_T$).   
+      ^
+Warning 2 in draft_final_version.tex line 1498: Non-breaking space (`~') should have been used.
+Using an adaptive tolerance in the subproblems does not alter these conclusions as shown for two different time step sizes by Tables \ref{tab:adaptiveTolerance_lockExchange_dt10} and \ref{tab:adaptiveTolerance_lockExchange_dt25}.  
+                                                                                                                                    ^
+Warning 2 in draft_final_version.tex line 1498: Non-breaking space (`~') should have been used.
+Using an adaptive tolerance in the subproblems does not alter these conclusions as shown for two different time step sizes by Tables \ref{tab:adaptiveTolerance_lockExchange_dt10} and \ref{tab:adaptiveTolerance_lockExchange_dt25}.  
+                                                                                                                                                                                      ^
+Warning 24 in draft_final_version.tex line 1507: Delete this space to maintain correct pagereferences.
+\label{fig:lockExchangeHomoRelPerm_wetting_phase_t75}  
+^
+Warning 24 in draft_final_version.tex line 1512: Delete this space to maintain correct pagereferences.
+\label{fig:lockExchangeHomoRelPerm_wetting_phase_t150}  
+^
+Warning 24 in draft_final_version.tex line 1517: Delete this space to maintain correct pagereferences.
+\label{fig:lockExchangeHomoRelPerm_wetting_phase_t300}  
+^
+Warning 24 in draft_final_version.tex line 1522: Delete this space to maintain correct pagereferences.
+\label{fig:lockExchangeHomoRelPerm_wetting_phase_t450}  
+^
+Warning 24 in draft_final_version.tex line 1525: Delete this space to maintain correct pagereferences.
+\label{fig:lockExchangeHomoRelPerm_wetting_phase}  
+^
+Warning 1 in draft_final_version.tex line 1531: Command terminated with space.
+\pgfplotstableread  
+                  ^
+Warning 1 in draft_final_version.tex line 1543: Command terminated with space.
+}\TimestepLockExchangeData  
+                          ^
+Warning 1 in draft_final_version.tex line 1546: Command terminated with space.
+\pgfplotstableread  
+                  ^
+Warning 1 in draft_final_version.tex line 1557: Command terminated with space.
+}\TimestepLockExchangeAdaptivetoleranceData  
+                                           ^
+Warning 24 in draft_final_version.tex line 1595: Delete this space to maintain correct pagereferences.
+  \label{fig:nonlinearIterCurve_lockExchange_fixedTolerance}  
+ ^
+Warning 24 in draft_final_version.tex line 1628: Delete this space to maintain correct pagereferences.
+    \label{fig:nonlinearIterCurve_lockExchange_adaptiveTolerance}  
+   ^
+Warning 24 in draft_final_version.tex line 1631: Delete this space to maintain correct pagereferences.
+  \label{fig:nonlinearIterCurve_lockExchange}  
+ ^
+Warning 24 in draft_final_version.tex line 1664: Delete this space to maintain correct pagereferences.
+  \label{tab:lockExchange_dt10}  
+ ^
+Warning 44 in draft_final_version.tex line 1671: User Regex: -2:Vertical rules in tables are ugly.
+  \begin{tabular}{l      j      j      j      c      j      j      j      c      j      j      j      c      j      j      j}   
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 24 in draft_final_version.tex line 1687: Delete this space to maintain correct pagereferences.
+\label{tab:adaptiveTolerance_lockExchange_dt10}  
+^
+Warning 12 in draft_final_version.tex line 1718: Interword spacing (`\ ') should perhaps be used.
+  \caption{Gravity segregation: nonlinear behavior of the schemes with a fixed subproblem tolerance of $10^{-6}$. We simulate 500 days with 20 time steps. d.n.c. denotes lack of convergence.}  
+                                                                                                                                                          ^
+Warning 12 in draft_final_version.tex line 1718: Interword spacing (`\ ') should perhaps be used.
+  \caption{Gravity segregation: nonlinear behavior of the schemes with a fixed subproblem tolerance of $10^{-6}$. We simulate 500 days with 20 time steps. d.n.c. denotes lack of convergence.}  
+                                                                                                                                                                 ^
+Warning 24 in draft_final_version.tex line 1719: Delete this space to maintain correct pagereferences.
+  \label{tab:lockExchange_dt25}  
+ ^
+Warning 44 in draft_final_version.tex line 1729: User Regex: -2:Vertical rules in tables are ugly.
+  \begin{tabular}{l      j      j      j      c      j      j      j      c      j      j      j      c      j      j      j}   
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 12 in draft_final_version.tex line 1744: Interword spacing (`\ ') should perhaps be used.
+  \caption{Gravity segregation: nonlinear behavior of the schemes with an adaptive subproblem tolerance computed using the strategies $(A_1)$, $(A_2)$, and $(A_3)$ of Section~\ref{sec:adaptive_tolerance}. We simulate 500 days with 20 time steps. d.n.c. denotes lack of convergence.}  
+                                                                                                                                                                                                                                                     ^
+Warning 12 in draft_final_version.tex line 1744: Interword spacing (`\ ') should perhaps be used.
+  \caption{Gravity segregation: nonlinear behavior of the schemes with an adaptive subproblem tolerance computed using the strategies $(A_1)$, $(A_2)$, and $(A_3)$ of Section~\ref{sec:adaptive_tolerance}. We simulate 500 days with 20 time steps. d.n.c. denotes lack of convergence.}  
+                                                                                                                                                                                                                                                            ^
+Warning 24 in draft_final_version.tex line 1745: Delete this space to maintain correct pagereferences.
+\label{tab:adaptiveTolerance_lockExchange_dt25}  
+^
+Warning 8 in draft_final_version.tex line 1754: Wrong length of dash may have been used.
+We consider a two-dimensional $x$-$z$ domain with a channelized permeability field--the channels can be seen as fractures modeled by contiguous cells with a very large permeability.  
+                                                                                  ^^
+Warning 2 in draft_final_version.tex line 1766: Non-breaking space (`~') should have been used.
+The results with fixed subproblem tolerance and adaptive tolerance are in Tables \ref{tab:subtol1_frac_dt100} and \ref{tab:adaptiveTolerance_2D_fractured_media_cfl209}, respectively.  
+                                                                                ^
+Warning 2 in draft_final_version.tex line 1766: Non-breaking space (`~') should have been used.
+The results with fixed subproblem tolerance and adaptive tolerance are in Tables \ref{tab:subtol1_frac_dt100} and \ref{tab:adaptiveTolerance_2D_fractured_media_cfl209}, respectively.  
+                                                                                                                 ^
+Warning 2 in draft_final_version.tex line 1770: Non-breaking space (`~') should have been used.
+Although all the solution strategies converge well in this case, the results confirm the observations made in Sections~\ref{subsec:spe10_bottom_layer} and \ref{subsec:spe10_top_layer}.  
+                                                                                                                                                          ^
+Warning 24 in draft_final_version.tex line 1800: Delete this space to maintain correct pagereferences.
+    \label{fig:frac_perm_map}  
+   ^
+Warning 24 in draft_final_version.tex line 1805: Delete this space to maintain correct pagereferences.
+    \label{fig:frac_sat_map_T300}  
+   ^
+Warning 24 in draft_final_version.tex line 1810: Delete this space to maintain correct pagereferences.
+    \label{fig:frac_sat_map_T600}  
+   ^
+Warning 24 in draft_final_version.tex line 1815: Delete this space to maintain correct pagereferences.
+    \label{fig:frac_sat_map_T900}  
+   ^
+Warning 24 in draft_final_version.tex line 1820: Delete this space to maintain correct pagereferences.
+    \label{fig:frac_sat_map_T1500}  
+   ^
+Warning 24 in draft_final_version.tex line 1825: Delete this space to maintain correct pagereferences.
+    \label{fig:frac_sat_map_T1200}  
+   ^
+Warning 24 in draft_final_version.tex line 1828: Delete this space to maintain correct pagereferences.
+  \label{fig:fracturedMedia2D}  
+ ^
+Warning 1 in draft_final_version.tex line 1832: Command terminated with space.
+\pgfplotstableread  
+                  ^
+Warning 1 in draft_final_version.tex line 1842: Command terminated with space.
+}\CFLFracHeteroData  
+                   ^
+Warning 1 in draft_final_version.tex line 1845: Command terminated with space.
+\pgfplotstableread  
+                  ^
+Warning 1 in draft_final_version.tex line 1855: Command terminated with space.
+}\CFLFracHeteroAdaptiveToleranceData  
+                                    ^
+Warning 24 in draft_final_version.tex line 1920: Delete this space to maintain correct pagereferences.
+  \label{fig:frac_nonlinear_iter_curves}  
+ ^
+Warning 44 in draft_final_version.tex line 1930: User Regex: -2:Vertical rules in tables are ugly.
+  \begin{tabular}{l     c      c      c     c     c     c     c}             
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 24 in draft_final_version.tex line 1945: Delete this space to maintain correct pagereferences.
+  \label{tab:subtol1_frac_dt100}  
+ ^
+Warning 44 in draft_final_version.tex line 1954: User Regex: -2:Vertical rules in tables are ugly.
+  \begin{tabular}{l      j      j      j      c      j      j      j      c      j      j      j      c      j      j      j}   
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 24 in draft_final_version.tex line 1969: Delete this space to maintain correct pagereferences.
+\label{tab:adaptiveTolerance_2D_fractured_media_cfl209}  
+^
+Warning 24 in draft_final_version.tex line 1977: Delete this space to maintain correct pagereferences.
+\label{sec:conclude}  
+^
+Warning 2 in draft_final_version.tex line 2000: Non-breaking space (`~') should have been used.
+Second, we will substitute the direct solvers used in this work with inexact Krylov-type iterative solution strategies \cite{GMRES_Saad_1986,HybridKrylovMethods_BrwonSaad_1990,AcceleratedInexatNewtonSchemesForLargeSystemsOfNonlinearEquations_FokkemaSleijpenVanderVorst}. This will reduce the overhead caused by the preconditioning step by leveraging the efficiency of specialized solvers for the subproblems, like Algebraic MultiGrid (AMG) for the pressure problem and an optimized ordering-based solver for transport \cite{PotentialBasedReducedNewtonAlgorithmForNonlinearMultiphaseFlowInPorousMedia_KwokTchelepi}. Switching to iterative solvers will also enable the use of an adaptive linear tolerance \cite{eisenstat94} in these subproblems. These improvements will enhance the efficiency of FSMSN without compromising its robust nonlinear behavior.  
+                                                                                                                      ^
+Warning 2 in draft_final_version.tex line 2000: Non-breaking space (`~') should have been used.
+Second, we will substitute the direct solvers used in this work with inexact Krylov-type iterative solution strategies \cite{GMRES_Saad_1986,HybridKrylovMethods_BrwonSaad_1990,AcceleratedInexatNewtonSchemesForLargeSystemsOfNonlinearEquations_FokkemaSleijpenVanderVorst}. This will reduce the overhead caused by the preconditioning step by leveraging the efficiency of specialized solvers for the subproblems, like Algebraic MultiGrid (AMG) for the pressure problem and an optimized ordering-based solver for transport \cite{PotentialBasedReducedNewtonAlgorithmForNonlinearMultiphaseFlowInPorousMedia_KwokTchelepi}. Switching to iterative solvers will also enable the use of an adaptive linear tolerance \cite{eisenstat94} in these subproblems. These improvements will enhance the efficiency of FSMSN without compromising its robust nonlinear behavior.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^
+Warning 2 in draft_final_version.tex line 2000: Non-breaking space (`~') should have been used.
+Second, we will substitute the direct solvers used in this work with inexact Krylov-type iterative solution strategies \cite{GMRES_Saad_1986,HybridKrylovMethods_BrwonSaad_1990,AcceleratedInexatNewtonSchemesForLargeSystemsOfNonlinearEquations_FokkemaSleijpenVanderVorst}. This will reduce the overhead caused by the preconditioning step by leveraging the efficiency of specialized solvers for the subproblems, like Algebraic MultiGrid (AMG) for the pressure problem and an optimized ordering-based solver for transport \cite{PotentialBasedReducedNewtonAlgorithmForNonlinearMultiphaseFlowInPorousMedia_KwokTchelepi}. Switching to iterative solvers will also enable the use of an adaptive linear tolerance \cite{eisenstat94} in these subproblems. These improvements will enhance the efficiency of FSMSN without compromising its robust nonlinear behavior.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+Warning 15 in draft_final_version.tex line 731: No match found for `['.
+    \STATE{Given $\epsilon^{k-1}_s \in [0,1[$ the tolerance used at outer-loop iteration $k-1$ ($\epsilon^0 = 1$)}  
+                                       ^
+Warning 15 in draft_final_version.tex line 731: No match found for `{'.
+    \STATE{Given $\epsilon^{k-1}_s \in [0,1[$ the tolerance used at outer-loop iteration $k-1$ ($\epsilon^0 = 1$)}  
+          ^
+Warning 15 in draft_final_version.tex line 705: No match found for `['.
+The parameter $\eta^k \in [0,1[$ depends on the outer iteration number and is used to control the subproblem tolerance.  
+                              ^
+Warning 15 in draft_final_version.tex line 705: No match found for `['.
+The parameter $\eta^k \in [0,1[$ depends on the outer iteration number and is used to control the subproblem tolerance.  
+                          ^
+Warning 17 in draft_final_version.tex line 2016: Number of `[' doesn't match the number of `]'!
+
+

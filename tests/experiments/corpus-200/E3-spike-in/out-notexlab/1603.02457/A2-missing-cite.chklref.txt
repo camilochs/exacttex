@@ -1,0 +1,589 @@
+pdf=1
+exit=0
+lines=675
+unique_findings=1
+/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ae/t1aer.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def)
+
+LaTeX Warning: Unused global option(s):
+    [journal].
+
+No file CSP_Reoptimization.aux.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ulasy.fd
+)
+
+LaTeX Warning: Citation `Bodlaender1995__ghost' on page \thepage  undefined on 
+input line 55.
+
+
+LaTeX Warning: Citation `Dondi2013' on page \thepage  undefined on input line 5
+5.
+
+
+LaTeX Warning: Citation `Li2010' on page \thepage  undefined on input line 55.
+
+
+LaTeX Warning: Citation `Garey1979' on page \thepage  undefined on input line 5
+7.
+
+
+LaTeX Warning: Citation `Evans2003' on page \thepage  undefined on input line 5
+7.
+
+
+LaTeX Warning: Citation `Lanctot1998' on page \thepage  undefined on input line
+ 57.
+
+
+LaTeX Warning: Citation `Li1999' on page \thepage  undefined on input line 57.
+
+
+LaTeX Warning: Citation `Li1999' on page \thepage  undefined on input line 57.
+
+
+LaTeX Warning: Citation `Ma2000' on page \thepage  undefined on input line 57.
+
+
+LaTeX Warning: Citation `Ma2008' on page \thepage  undefined on input line 57.
+
+
+LaTeX Warning: Citation `Bockenhauer2008' on page \thepage  undefined on input 
+line 59.
+
+
+LaTeX Warning: Citation `Bilo2012' on page \thepage  undefined on input line 59
+.
+
+
+LaTeX Warning: Citation `Bilo2011' on page \thepage  undefined on input line 59
+.
+
+
+LaTeX Warning: Citation `Boria2012' on page \thepage  undefined on input line 5
+9.
+
+
+LaTeX Warning: Citation `Wang2008' on page \thepage  undefined on input line 63
+.
+
+
+LaTeX Warning: Citation `Garey1979' on page \thepage  undefined on input line 6
+6.
+
+[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc
+/dvips/base/8r.enc}]
+
+LaTeX Warning: Citation `Pevzner2000' on page \thepage  undefined on input line
+ 76.
+
+
+LaTeX Warning: Citation `Zaslavsky2006' on page \thepage  undefined on input li
+ne 76.
+
+
+LaTeX Warning: Citation `Lanctot1998' on page \thepage  undefined on input line
+ 80.
+
+
+LaTeX Warning: Citation `Li1999' on page \thepage  undefined on input line 80.
+
+
+LaTeX Warning: Citation `Bodlaender1995' on page \thepage  undefined on input l
+ine 82.
+
+
+LaTeX Warning: Citation `Brejova2006' on page \thepage  undefined on input line
+ 82.
+
+
+LaTeX Warning: Citation `Evans2003' on page \thepage  undefined on input line 8
+2.
+
+
+LaTeX Warning: Reference `table:summary' on page \thepage  undefined on input l
+ine 86.
+
+
+Overfull \hbox (9.48047pt too wide) in paragraph at lines 90--106
+ [][] 
+
+LaTeX Warning: Reference `table:summary' on page \thepage  undefined on input l
+ine 110.
+
+
+LaTeX Warning: Citation `Li1999' on page \thepage  undefined on input line 113.
+
+
+
+LaTeX Warning: Reference `alg:ptas_csp' on page \thepage  undefined on input li
+ne 113.
+
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 117.
+
+
+LaTeX Warning: Reference `alg:ptas_csp' on page \thepage  undefined on input li
+ne 117.
+
+[2]
+
+LaTeX Warning: Citation `Zych2012' on page \thepage  undefined on input line 14
+9.
+
+
+LaTeX Warning: Citation `Zych2012' on page \thepage  undefined on input line 15
+1.
+
+
+Overfull \hbox (7.70741pt too wide) in paragraph at lines 151--152
+[]\T1/aer/m/n/9 A prob-lem $\OT1/cmr/m/n/9 ^^E$ \T1/aer/m/n/9 is said to be \T1
+/aer/m/it/9 self-reducible \T1/aer/m/n/9 if there is a polynomial-
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
+
+
+Overfull \hbox (14.34569pt too wide) in paragraph at lines 176--184
+[][]
+
+LaTeX Warning: Citation `Pevzner2000' on page \thepage  undefined on input line
+ 189.
+
+
+LaTeX Warning: Citation `Garey1979' on page \thepage  undefined on input line 1
+91.
+
+
+LaTeX Warning: Citation `Zych2012' on page \thepage  undefined on input line 19
+1.
+
+[3]
+Overfull \hbox (18.51764pt too wide) in paragraph at lines 208--209
+[]\T1/aer/m/n/9 Given that $\OML/cmm/m/it/9 A \OMS/cmsy/m/n/9 ^^T[] \OML/cmm/m/
+it/9 B$\T1/aer/m/n/9 , then by def-i-ni-tion, there ex-ists a polynomial-
+
+LaTeX Warning: Reference `thm:gen_selfreduc' on page \thepage  undefined on inp
+ut line 227.
+
+
+LaTeX Warning: Citation `Schaffter1997' on page \thepage  undefined on input li
+ne 231.
+
+
+LaTeX Warning: Citation `Bockenhauer2008' on page \thepage  undefined on input 
+line 231.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 236--238
+
+
+Overfull \hbox (10.0196pt too wide) in paragraph at lines 252--253
+[]\T1/aer/m/n/9 Towards con-tra-dic-tion, as-sume that $\OML/cmm/m/it/9 Reopt$\
+T1/aer/m/n/9 -$\OML/cmm/m/it/9 CSP[]$
+
+Overfull \hbox (15.42427pt too wide) in paragraph at lines 252--253
+\T1/aer/m/n/9 is polynomial-time solv-able. We will make use of the polynomial-
+
+[4]
+
+LaTeX Warning: Reference `alg:best_align' on page \thepage  undefined on input 
+line 286.
+
+
+LaTeX Warning: Reference `alg:best_align' on page \thepage  undefined on input 
+line 288.
+
+
+LaTeX Warning: Reference `alg:best_align' on page \thepage  undefined on input 
+line 288.
+
+
+LaTeX Warning: Reference `alg:best_align' on page \thepage  undefined on input 
+line 288.
+
+
+LaTeX Warning: Reference `alg:best_align' on page \thepage  undefined on input 
+line 289.
+
+
+LaTeX Warning: Reference `alg:best_align' on page \thepage  undefined on input 
+line 305.
+
+
+LaTeX Warning: Reference `alg:best_align' on page \thepage  undefined on input 
+line 305.
+
+
+LaTeX Warning: Reference `alg:best_align' on page \thepage  undefined on input 
+line 308.
+
+
+LaTeX Warning: Reference `alg:best_align' on page \thepage  undefined on input 
+line 325.
+
+
+LaTeX Warning: Reference `alg:best_align' on page \thepage  undefined on input 
+line 330.
+
+
+LaTeX Warning: Citation `Lanctot1998' on page \thepage  undefined on input line
+ 330.
+
+[5]
+
+LaTeX Warning: Reference `alg:best_align' on page \thepage  undefined on input 
+line 343.
+
+
+LaTeX Warning: Reference `alg:k_best_align' on page \thepage  undefined on inpu
+t line 372.
+
+
+LaTeX Warning: Reference `alg:ptas_csp' on page \thepage  undefined on input li
+ne 372.
+
+
+LaTeX Warning: Citation `Li1999' on page \thepage  undefined on input line 372.
+
+
+
+LaTeX Warning: Reference `alg:ptas_csp' on page \thepage  undefined on input li
+ne 378.
+
+
+LaTeX Warning: Reference `thm:imptas' on page \thepage  undefined on input line
+ 378.
+
+
+LaTeX Warning: Reference `alg:ptas_csp' on page \thepage  undefined on input li
+ne 381.
+
+
+LaTeX Warning: Reference `alg:k_best_align' on page \thepage  undefined on inpu
+t line 384.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--389
+
+
+LaTeX Warning: Reference `alg:imptas' on page \thepage  undefined on input line
+ 416.
+
+
+LaTeX Warning: Reference `alg:imptas' on page \thepage  undefined on input line
+ 420.
+
+
+LaTeX Warning: Reference `alg:ptas_csp' on page \thepage  undefined on input li
+ne 420.
+
+
+LaTeX Warning: Citation `Li1999' on page \thepage  undefined on input line 420.
+
+
+
+LaTeX Warning: Reference `alg:imptas' on page \thepage  undefined on input line
+ 420.
+
+
+LaTeX Warning: Reference `alg:best_align' on page \thepage  undefined on input 
+line 420.
+
+
+LaTeX Warning: Reference `alg:imptas' on page \thepage  undefined on input line
+ 420.
+
+
+LaTeX Warning: Reference `alg:imptas' on page \thepage  undefined on input line
+ 422.
+
+
+LaTeX Warning: Reference `alg:imptas' on page \thepage  undefined on input line
+ 422.
+
+
+Overfull \hbox (1.03485pt too wide) in paragraph at lines 422--423
+\T1/aer/m/n/9 Get-ting the best align-ment for each sam-ple will re-quire $\OML
+/cmm/m/it/9 O\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 tn\OT1/cmr/m/n/9 )$
+[6]
+
+LaTeX Warning: Reference `thm:hard' on page \thepage  undefined on input line 4
+27.
+
+
+LaTeX Warning: Reference `ex:1' on page \thepage  undefined on input line 433.
+
+(./CSP_Reoptimization.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active [7])
+[8] (./CSP_Reoptimization.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></opt/hom
+ebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mcsc10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cmextra/cmex9.pfb></opt/homebrew/Cellar/texlive/20260301/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/hom
+ebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/texlive/202603
+01/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></opt/homebrew/Cell
+ar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
+/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti9.pfb></opt/homebrew/Cellar/texlive/20260301/share
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></opt/homebrew/Cella
+r/texlive/20260301/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></opt/h
+omebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8
+a.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/t
+imes/utmb8a.pfb>
+Output written on CSP_Reoptimization.pdf (8 pages, 244026 bytes).
+Transcript written on CSP_Reoptimization.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./CSP_Reoptimization.tex (./acm_proc_article-sp.cls
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/epsf
+ig.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def))))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amss
+ymb.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amsf
+onts.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsma
+th.sty
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amste
+xt.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsge
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsbs
+y.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsop
+n.sty))
+Document Class 'acm_proc_article-sp' <22nd. April '09>. Modified by G.K.M. Tobi
+n
+Based in part upon document Style `acmconf' <22 May 89>. Hacked 4/91 by
+shivers@cs.cmu.edu, 4/93 by theobald@cs.mcgill.ca
+Excerpts were taken from (Journal Style) 'esub2acm.cls'.
+****** Bugs/comments/suggestions to Gerry Murray -- murray@hq.acm.org ******
+Document Class: acm_proc_article-sp 2009/04/22 - V3.2SP - based on esub2acm.sty
+ <23 April 96>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/latexsym
+.sty)
+
+LaTeX Warning: Command `\thepart' already defined -- not changed on input line 
+978.
+
+
+LaTeX Warning: Command `\thesection' already defined -- not changed on input li
+ne 979.
+
+
+LaTeX Warning: Command `\thesubsection' already defined -- not changed on input
+ line 980.
+
+Using 'Abbrev' bibliography style
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fontenc.
+sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/algorithms/al
+gorithm.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/float/float.s
+ty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ifthen.s
+ty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/algorithmicx/
+algpseudocode.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/algorithmicx/
+algorithmicx.sty
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/mathtools/mat
+htools.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/calc.st
+y)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/mathtools/mhs
+etup.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/xspace.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/xcolor/xcolor
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ae/t1aer.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def)
+
+LaTeX Warning: Unused global option(s):
+    [journal].
+
+(./CSP_Reoptimization.aux)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ulasy.fd
+)
+
+LaTeX Warning: Citation `Bodlaender1995__ghost' on page \thepage  undefined on 
+input line 55.
+
+[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc
+/dvips/base/8r.enc}]
+Overfull \hbox (9.48047pt too wide) in paragraph at lines 90--106
+ [][] 
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 117.
+
+[2]
+Overfull \hbox (7.70741pt too wide) in paragraph at lines 151--152
+[]\T1/aer/m/n/9 A prob-lem $\OT1/cmr/m/n/9 ^^E$ \T1/aer/m/n/9 is said to be \T1
+/aer/m/it/9 self-reducible \T1/aer/m/n/9 if there is a polynomial-
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
+
+
+Overfull \hbox (14.34569pt too wide) in paragraph at lines 176--184
+[][]
+[3]
+Overfull \hbox (18.51764pt too wide) in paragraph at lines 208--209
+[]\T1/aer/m/n/9 Given that $\OML/cmm/m/it/9 A \OMS/cmsy/m/n/9 ^^T[] \OML/cmm/m/
+it/9 B$\T1/aer/m/n/9 , then by def-i-ni-tion, there ex-ists a polynomial-
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 236--238
+
+
+Overfull \hbox (10.0196pt too wide) in paragraph at lines 252--253
+[]\T1/aer/m/n/9 Towards con-tra-dic-tion, as-sume that $\OML/cmm/m/it/9 Reopt$\
+T1/aer/m/n/9 -$\OML/cmm/m/it/9 CSP[]$
+
+Overfull \hbox (15.42427pt too wide) in paragraph at lines 252--253
+\T1/aer/m/n/9 is polynomial-time solv-able. We will make use of the polynomial-
+
+[4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 387--389
+
+[6]
+Overfull \hbox (1.03485pt too wide) in paragraph at lines 422--423
+\T1/aer/m/n/9 Get-ting the best align-ment for each sam-ple will re-quire $\OML
+/cmm/m/it/9 O\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 tn\OT1/cmr/m/n/9 )$
+(./CSP_Reoptimization.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active [7]) 
+[8] (./CSP_Reoptimization.aux) )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></opt/hom
+ebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mcsc10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cmextra/cmex9.pfb></opt/homebrew/Cellar/texlive/20260301/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/hom
+ebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/texlive/202603
+01/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></opt/homebrew/Cell
+ar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
+/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti9.pfb></opt/homebrew/Cellar/texlive/20260301/share
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></opt/homebrew/Cella
+r/texlive/20260301/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></opt/h
+omebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8
+a.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/t
+imes/utmb8a.pfb>
+Output written on CSP_Reoptimization.pdf (8 pages, 244170 bytes).
+Transcript written on CSP_Reoptimization.log.
+************************************
+** Labels in starred environments **
+************************************
+
+*******************
+** Unused Labels **
+*******************
+-- CSP_Reoptimization.tex line  148: remove label sec:selfreducibility
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

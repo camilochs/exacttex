@@ -1,0 +1,52 @@
+{
+ "coverage": 0.024285,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`biblio.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "table",
+   "name": "tab:comparison",
+   "span": {
+    "file": "wiki16v1.xtex",
+    "offset": 48905,
+    "length": 19,
+    "line": 731,
+    "column": 79
+   },
+   "message": "identifier `tab:comparison` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "wiki16v1.xtex",
+      "offset": 48858,
+      "length": 19,
+      "line": 731,
+      "column": 32
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "wiki16v1.xtex",
+    "offset": 4025,
+    "length": 10,
+    "line": 104,
+    "column": 54
+   },
+   "message": "citation checking unavailable: `biblio.bib` could not be read",
+   "related": []
+  }
+ ]
+}

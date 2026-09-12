@@ -1,0 +1,95 @@
+{
+ "paper": "1809.06792",
+ "main": "GOE_sq.tex",
+ "files": [
+  {
+   "file": "GOE_sq.tex",
+   "chars_before": 55385,
+   "chars_after": 55298,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 55385,
+ "chars_after": 55298,
+ "delta_pct": -0.1570822424844272,
+ "unrepaired": {
+  "chars_after": 55298,
+  "chars_before": 55385,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.036367,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`GOE_sq.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.1570822424844272
+ },
+ "stats": {
+  "cite_cmds_live": 83,
+  "cite_keys_live": 104,
+  "cite_with_optarg_or_star": 7,
+  "cite_keys_outside_grammar": 13,
+  "other_cite_cmds": 0,
+  "labels_live": 29,
+  "labels_outside_grammar": 0,
+  "refs_live": 51,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 30,
+  "float_envs": 4,
+  "cite_cmds_annotated": 62,
+  "cite_keys_annotated": 63,
+  "ids_annotated": 29,
+  "refs_annotated": 51,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 1,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "GOE_sq.tex",
+   "line": 377,
+   "token": "@cite(gre)",
+   "wrapper": "?",
+   "context": "\\begin{thm}[Greene~\\cite{gre}]\\label{thm:greene}"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.036367,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`GOE_sq.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "GOE_sq.xtex",
+    "offset": 2642,
+    "length": 4,
+    "line": 56,
+    "column": 128
+   },
+   "message": "citation checking unavailable: `GOE_sq.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

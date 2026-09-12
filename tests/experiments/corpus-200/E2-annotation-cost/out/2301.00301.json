@@ -1,0 +1,275 @@
+{
+ "paper": "2301.00301",
+ "main": "aistats_main.tex",
+ "files": [
+  {
+   "file": "aistats_main.tex",
+   "chars_before": 6295,
+   "chars_after": 6341,
+   "emitted": true,
+   "identity": "import-ext-only",
+   "lines_differing": 8
+  },
+  {
+   "file": "introduction.tex",
+   "chars_before": 7040,
+   "chars_after": 7037,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "relatedwork.tex",
+   "chars_before": 7883,
+   "chars_after": 7880,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "preliminary.tex",
+   "chars_before": 14897,
+   "chars_after": 14888,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "genPTR.tex",
+   "chars_before": 20363,
+   "chars_after": 20339,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "applications.tex",
+   "chars_before": 527,
+   "chars_after": 518,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "conclusion.tex",
+   "chars_before": 1997,
+   "chars_after": 1997,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "appendix.tex",
+   "chars_before": 32568,
+   "chars_after": 32553,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "pate_appendix.tex",
+   "chars_before": 23964,
+   "chars_after": 23952,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 9,
+ "chars_before": 115534,
+ "chars_after": 115505,
+ "delta_pct": -0.025100836117506534,
+ "unrepaired": {
+  "chars_after": 115490,
+  "chars_before": 115534,
+  "converted_files": 9,
+  "check_exit": 1,
+  "coverage": 0.016817,
+  "bibliography": {
+   "state": "complete",
+   "entries": 31
+  },
+  "errors": 10,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.03808402721276854
+ },
+ "stats": {
+  "cite_cmds_live": 47,
+  "cite_keys_live": 58,
+  "cite_with_optarg_or_star": 4,
+  "cite_keys_outside_grammar": 5,
+  "other_cite_cmds": 0,
+  "labels_live": 48,
+  "labels_outside_grammar": 12,
+  "refs_live": 57,
+  "refs_outside_grammar": 26,
+  "other_ref_cmds": 4,
+  "float_envs": 3,
+  "cite_cmds_annotated": 32,
+  "cite_keys_annotated": 36,
+  "ids_annotated": 31,
+  "refs_annotated": 24,
+  "inputs_root": 8,
+  "inputs_imported": 8,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 6,
+  "defects_reverted": 10,
+  "leaks_reverted": 8,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "preliminary.tex",
+   "line": 14,
+   "token": "@citep(dwork2006calibrating)",
+   "wrapper": "?",
+   "context": "\\begin{definition}[Differential privacy \\citep{dwork2006calibrating}] \\label{def:dp}"
+  },
+  {
+   "file": "appendix.tex",
+   "line": 62,
+   "token": "@id(fig:gap)",
+   "wrapper": "?",
+   "context": "\\includegraphics[width=0.47\\textwidth]{img/gap.pdf}\\label{fig:gap}}\t\\subfigure[ Privacy-utility tradeoff between three approaches. ]{"
+  },
+  {
+   "file": "appendix.tex",
+   "line": 63,
+   "token": "@id(fig:comp)",
+   "wrapper": "?",
+   "context": "\\includegraphics[width=0.50\\textwidth]{img/comp.pdf}\\label{fig:comp}}"
+  },
+  {
+   "file": "appendix.tex",
+   "line": 102,
+   "token": "@citep(bach2010self)",
+   "wrapper": "?",
+   "context": "\\begin{definition}[Generalized self-concordance {\\citep{bach2010self}}]"
+  },
+  {
+   "file": "appendix.tex",
+   "line": 393,
+   "token": "@citep(wang2018revisiting)",
+   "wrapper": "?",
+   "context": "\\begin{lemma}[Lemma 12~\\citep{wang2018revisiting}]\\label{lem: adaops_ls}"
+  },
+  {
+   "file": "pate_appendix.tex",
+   "line": 3,
+   "token": "@citep(mironov2017renyi)",
+   "wrapper": "?",
+   "context": "\\begin{definition}[Renyi DP \\citep{mironov2017renyi}]"
+  },
+  {
+   "file": "pate_appendix.tex",
+   "line": 12,
+   "token": "@citep(papernot2018scalable)",
+   "wrapper": "?",
+   "context": "\\begin{definition}[Data-dependent Renyi DP \\citep{papernot2018scalable}]"
+  },
+  {
+   "file": "pate_appendix.tex",
+   "line": 91,
+   "token": "@citet(papernot2018scalable)",
+   "wrapper": "?",
+   "context": "\\begin{theorem}[data-dependent RDP ~\\citet{papernot2018scalable}]"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1001",
+   "name": "lem:selfconcordant-hessian",
+   "file": "appendix.xtex",
+   "line": 111,
+   "message": "identifier `lem:selfconcordant-hessian` is already declared",
+   "classification": "real: \\label{lem:selfconcordant-hessian} appears 4x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "stability",
+   "file": "appendix.xtex",
+   "line": 120,
+   "message": "identifier `stability` is already declared",
+   "classification": "real: \\label{stability} appears 4x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "prop:generalnorm",
+   "file": "appendix.xtex",
+   "line": 276,
+   "message": "identifier `prop:generalnorm` is already declared",
+   "classification": "real: \\label{prop:generalnorm} appears 4x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "lem:determinant",
+   "file": "pate_appendix.xtex",
+   "line": 160,
+   "message": "identifier `lem:determinant` is not declared",
+   "classification": "real: no \\label with this name anywhere in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "lem:tailbound2DP",
+   "file": "pate_appendix.xtex",
+   "line": 227,
+   "message": "identifier `lem:tailbound2DP` is not declared",
+   "classification": "real: no \\label with this name anywhere in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "fig:gap",
+   "file": "appendix.xtex",
+   "line": 33,
+   "message": "identifier `fig:gap` is not declared",
+   "classification": "compiler-unreachable: \\label{fig:gap} exists (2x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "fig:gap",
+   "file": "appendix.xtex",
+   "line": 64,
+   "message": "identifier `fig:gap` is not declared",
+   "classification": "compiler-unreachable: \\label{fig:gap} exists (2x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "fig:comp",
+   "file": "appendix.xtex",
+   "line": 64,
+   "message": "identifier `fig:comp` is not declared",
+   "classification": "compiler-unreachable: \\label{fig:comp} exists (2x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "fig:comp",
+   "file": "appendix.xtex",
+   "line": 70,
+   "message": "identifier `fig:comp` is not declared",
+   "classification": "compiler-unreachable: \\label{fig:comp} exists (2x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "fig:comp",
+   "file": "appendix.xtex",
+   "line": 73,
+   "message": "identifier `fig:comp` is not declared",
+   "classification": "compiler-unreachable: \\label{fig:comp} exists (2x) in a region the inventory does not read",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.015628,
+ "bibliography": {
+  "state": "complete",
+  "entries": 31
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

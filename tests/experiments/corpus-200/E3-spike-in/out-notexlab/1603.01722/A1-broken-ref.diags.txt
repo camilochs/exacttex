@@ -1,0 +1,3 @@
+planted=problem_definition__ghost sites=[('ParetiWebSci15.xtex', 72)]
+xtex new=[('XT1003', 'problem_definition__ghost', 'ParetiWebSci15.xtex', 72)]
+texlab new=[]

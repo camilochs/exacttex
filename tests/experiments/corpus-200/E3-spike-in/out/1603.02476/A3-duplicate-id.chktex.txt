@@ -1,0 +1,170 @@
+exit=2
+lines=303
+unique_findings=92
+mal placement of items in knapsacks is reduced to such an instance of our scheduling problem. Since the problem is obviously an NP problem, this shows that our scheduling problem presented in the Section~\ref{optmodel} is NP-complete.  
+                                                                                ^
+Warning 2 in EHFS.tex line 340: Non-breaking space (`~') should have been used.
+Maximising the collected data presented in Section~\ref{optmodel} is a typical 0-1 Multiple Knapsack Problem (MKP) \cite{martello1990knapsack}. We reduce an instance of a MKP to our scheduling optimisation problem by assigning $\Delta T_{i}$ to each knapsack. Therefore, the capacity of the knapsack is equal to $\Delta T_{i}$. The items to be put in knapsacks are data packets whose size is prorated by $q_{i}^{f}$. The parameters of the energy and fairness conditions (constraint (\ref{cons1}) and (\ref{cons2})) are chosen so that they are satisfied by any placement of items. In this way, optimal placement of items in knapsacks is reduced to such an instance of our scheduling problem. Since the problem is obviously an NP problem, this shows that our scheduling problem presented in the Section~\ref{optmodel} is NP-complete.  
+                                                                                                                  ^
+Warning 24 in EHFS.tex line 361: Delete this space to maintain correct pagereferences.
+\label{heu1}  
+^
+Warning 1 in EHFS.tex line 370: Command terminated with space.
+\ELSE  
+     ^
+Warning 1 in EHFS.tex line 372: Command terminated with space.
+\ENDIF  
+      ^
+Warning 1 in EHFS.tex line 380: Command terminated with space.
+\ELSE  
+     ^
+Warning 1 in EHFS.tex line 383: Command terminated with space.
+\ENDIF  
+      ^
+Warning 1 in EHFS.tex line 386: Command terminated with space.
+\ELSE  
+     ^
+Warning 1 in EHFS.tex line 388: Command terminated with space.
+\ENDIF  
+      ^
+Warning 1 in EHFS.tex line 389: Command terminated with space.
+\ENDIF  
+      ^
+Warning 13 in EHFS.tex line 395: Intersentence spacing (`\@') should perhaps be used.
+Once the node $i$ meets the fairness of data reception (constraint (\ref{cons2})), it transfers to the NA state. The benefit of NA state is to reduce the channel competition since the number of nodes competing for the channel is decreased. Certainly, after the first step, all the nodes have at least $\kappa \cdot \lambda_{i}$ data packets being transmitted successfully and the fair reception of data is achieved. At the second step, all the nodes change the state from NA to AD. Then, the BS schedules the node with largest $\eta_{i}^{f}$ to transmit first. To maximise data reception, node $i$ remains in AD state until either constraint (\ref{cons1}) or (\ref{cons3}) no longer holds. Moreover, if the constraint of (\ref{cons1}) or (\ref{cons3}) is not fulfilled by the node $i$, it transitions to ND state. By using this approach, the number of data packets collected by the BS is maximised, meanwhile, the energy and fairness requirements are both achieved.   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^
+Warning 24 in EHFS.tex line 398: Delete this space to maintain correct pagereferences.
+\label{evaluation}  
+^
+Warning 24 in EHFS.tex line 403: Delete this space to maintain correct pagereferences.
+\label{testbed}  
+^
+Warning 13 in EHFS.tex line 406: Intersentence spacing (`\@') should perhaps be used.
+In Sensor-WPT, each sensor node is equipped with a rechargeable battery and consumes energy on sensing and data transmission activities. A Powercast~\cite{wptTx} wireless charger transmits power to the sensor nodes by WPT. Since WPT charging is carried out in the 915 MHz band while sensor nodes communicate in the 2.4 GHz band, our network achieves simultaneous wireless information and power transfer. The isotropic radiated power of WPT transmitter with 8 dBi integrated antenna gain is 3W. The sensor node is connected to a P2110 powerharvesting board with a 1 dBi omni-directional antenna~\cite{P2110dataseet}. The hardware setup is shown in Figure~\ref{fig_hardware}.   
+                                                                                                                                                                                                                             ^
+Warning 24 in EHFS.tex line 412: Delete this space to maintain correct pagereferences.
+\label{fig_hardware}  
+^
+Warning 13 in EHFS.tex line 415: Intersentence spacing (`\@') should perhaps be used.
+In the first experiment, we measure the WPT efficiency factor on distance, $\delta_{i}(d)$ in Equation~(\ref{eq_wptenergy}). As shown in Figure~\ref{fig_wpt_distance}, the effective amount of power that can be captured by a sensor node varies with the distance between the node and the BS. Due to radiation exposure protection, the distance between WPT transmitter and P2110 powerharvesting board has to be further than 20 cm.   
+                                                                                                                                                                                                                                                                                                ^
+Warning 13 in EHFS.tex line 423: Intersentence spacing (`\@') should perhaps be used.
+\caption{Received power at the sensor by WPT. The error bars show the standard deviation over 250 packets.}  
+                                            ^
+Warning 24 in EHFS.tex line 424: Delete this space to maintain correct pagereferences.
+\label{fig_wpt_distance}  
+^
+Warning 24 in EHFS.tex line 430: Delete this space to maintain correct pagereferences.
+\label{fig_wpt_orientation}  
+^
+Warning 24 in EHFS.tex line 436: Delete this space to maintain correct pagereferences.
+\label{simulation}  
+^
+Warning 24 in EHFS.tex line 455: Delete this space to maintain correct pagereferences.
+\label{elevel}  
+^
+Warning 44 in EHFS.tex line 484: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+    \begin{tabular} {|p{1.0cm}|p{1.3cm} p{1.3cm}|p{1.3cm} p{1.3cm}|} \hline  
+                                                                     ^^^^^^
+Warning 44 in EHFS.tex line 485: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+        \bf{Nodes} & \multicolumn{2}{c|}{\bf{AMPL (Cplex)}} &\multicolumn{2}{c|}{ \bf{EHFS }} \\ \hline  
+                                                                                                 ^^^^^^
+Warning 44 in EHFS.tex line 486: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+        \bf{} & \bf{Packets} & \bf{Runtime} & \bf{Packets} & \bf{Runtime} \\ \hline   
+                                                                             ^^^^^^
+Warning 44 in EHFS.tex line 487: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                1 &  2499 & 1 s & 2491 & 0.07 s \\ \hline  
+                                                   ^^^^^^
+Warning 44 in EHFS.tex line 488: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+        2 &  4999 & 12 s & 4981 & 0.1 s \\ \hline  
+                                           ^^^^^^
+Warning 44 in EHFS.tex line 489: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                3 &  7499 & 28 s & 7475 & 0.04 s \\ \hline  
+                                                    ^^^^^^
+Warning 44 in EHFS.tex line 490: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                4 &  9998 & 63 s & 9954 & 0.06 s \\ \hline  
+                                                    ^^^^^^
+Warning 44 in EHFS.tex line 491: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                5 &  12498 & 1 m 27 s & 12484 & 0.06 s \\ \hline   
+                                                          ^^^^^^
+Warning 44 in EHFS.tex line 492: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+        6 &  14998 & 5 m 15 s & 14465 & 0.06 s \\ \hline  
+                                                  ^^^^^^
+Warning 44 in EHFS.tex line 493: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+        7 &  17498 & 1h 3 m & 17353 & 0.08 s \\ \hline  
+                                                ^^^^^^
+Warning 44 in EHFS.tex line 494: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+        8 &  19997 & 6 h 53 m & 19808 & 0.08 s \\ \hline  
+                                                  ^^^^^^
+Warning 44 in EHFS.tex line 495: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+        9 &  22499 & 19 h 12 m & 21793 & 0.22 s \\ \hline  
+                                                   ^^^^^^
+Warning 44 in EHFS.tex line 496: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+        10 &  24998 & 36 h 29 m & 24583 & 0.22 s \\ \hline  
+                                                    ^^^^^^
+Warning 24 in EHFS.tex line 498: Delete this space to maintain correct pagereferences.
+\label{ampl}  
+^
+Warning 13 in EHFS.tex line 502: Intersentence spacing (`\@') should perhaps be used.
+Figure~\ref{dynamic_datagraph} and~\ref{dynamic_fairnodes} show the performance of the aforementioned four scheduling algorithms on the data reception and fairness. When there are only 10 nodes in the network, they have pretty similar performance. However, FCFS, LE and HP collect 75.6\%, 45.7\% and 41.3\% less data packets than our algorithm when N = 300. With WPT energy harvesting, it is observed that more data packets are collected with more nodes. The number of fair nodes of our algorithm is more than the ones of FCFS, LE and HP for 200, 180, 155 nodes when $\kappa$ = 50\% and N = 300. The reason is that LE scheduling fails when the low energy nodes have poor link quality. The nodes with high PRR are not scheduled, however, they still consume energy on channel competitions in RCAP. For HP scheduling, the nodes with high PRR occupy the SDTP for multiple super frames until they finish the transmissions. This leads to a large number of dead nodes. However, those nodes could have potentially gained higher data reception. In contrast, our algorithm makes the schedule based on $\eta_{i}^{f}$ which considers both remaining energy and link quality. Moreover, it also achieves the fairness of data collection.   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^
+Warning 24 in EHFS.tex line 508: Delete this space to maintain correct pagereferences.
+\label{dynamic_datagraph}  
+^
+Warning 24 in EHFS.tex line 515: Delete this space to maintain correct pagereferences.
+\label{dynamic_fairnodes}  
+^
+Warning 24 in EHFS.tex line 524: Delete this space to maintain correct pagereferences.
+\label{dynamic_deadnodes}  
+^
+Warning 13 in EHFS.tex line 530: Intersentence spacing (`\@') should perhaps be used.
+Based on the preceding simulations, it is observed that different $\kappa$ affects the performance of our algorithm. Essentially, the $\kappa$ decides the fairness level in EHFS. In this experiment, we analyse the impact of $\kappa$ in the NOP scenario with 300 nodes. Specifically, the $\kappa$ is varied from 10\% to 100\%. The performance of data reception, fair nodes and dead nodes are shown in Figure~\ref{optfair}.  
+                                                                                                                                                                                 ^
+Warning 24 in EHFS.tex line 536: Delete this space to maintain correct pagereferences.
+\label{optfair}  
+^
+Warning 2 in EHFS.tex line 545: Non-breaking space (`~') should have been used.
+In this set of experiments, we test the scheduling algorithms when nodes arrive at the data collecting point with a specific arrival rate. We assume the inter-arrival time of nodes is exponentially distributed which is typically used to model situations involving the random time between arrivals to a service facility \cite{willkomm2009}.   
+                                                                                                                                                                                                                                                                                                                              ^
+Warning 13 in EHFS.tex line 547: Intersentence spacing (`\@') should perhaps be used.
+From Figure~\ref{lambda_datagraph} we find that the EHFS algorithm has up to 2.3 times as many collected data packets as FCFS. It outperforms LE and HP by nearly 1.7 times as well. The reason is the newly arrived nodes fail to transmit since the transmitting node have not finished the transmission due to retransmissions. From Figure~\ref{lambda_fairnodes}, we observe the difference of fairness which is achieved by different $\kappa$ is smaller than the one in NOP scenario. That is because the BS schedules a small number of nodes in one super frame in NAP scenario. The first step of EHFS algorithm is completed faster, hence more nodes achieve fairness in NAP scenario. Likewise, the number of dead nodes in our algorithm has small difference in Figure~\ref{lambda_deadnodes}. Due to the increase of $\lambda_{i}$ in this application, there are 12 dead nodes with the $\kappa$ = 90\% in our algorithm at the maximum.   
+                                                                                                                             ^
+Warning 13 in EHFS.tex line 553: Intersentence spacing (`\@') should perhaps be used.
+\caption{Data packets collected by the BS. $N$ is from 10 to 300.}  
+                                         ^
+Warning 24 in EHFS.tex line 554: Delete this space to maintain correct pagereferences.
+\label{lambda_datagraph}  
+^
+Warning 24 in EHFS.tex line 561: Delete this space to maintain correct pagereferences.
+\label{lambda_fairnodes}  
+^
+Warning 24 in EHFS.tex line 568: Delete this space to maintain correct pagereferences.
+\label{lambda_deadnodes}  
+^
+Warning 13 in EHFS.tex line 572: Intersentence spacing (`\@') should perhaps be used.
+According to Equation~(\ref{eq_wptenergy}) and the experiments in Section~\ref{testbed}, it is observed that $\delta_{i}(\theta)$ and $\delta_{i}(d)$ jointly affect harvested energy $\Delta E_{i,f}$ of the sensor node and the performance of scheduling algorithm. Figure~\ref{wpt_disorientation} illustrates the impact of the WPT efficiency on the data packets reception of EHFS given that the number of nodes is 50 and $\kappa$ is 50\%. Data reception increases by increasing $\delta_{i}(\theta)$ and $\delta_{i}(d)$ since the nodes harvest more energy via WPT. Specifically, when the nodes are close to the WPT transmitter ($\delta_{i}(d) = 1$) with WPT receiver antenna alignment ($\delta_{i}(\theta) = 1$), the data reception has the maximum value which is about 56250 packets. Even in the worst case ($\delta_{i}(d), \delta_{i}(\theta) = 0.1$), EHFS algorithm can still achieve the reception of 3251 packets.   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^
+Warning 24 in EHFS.tex line 578: Delete this space to maintain correct pagereferences.
+\label{wpt_disorientation}  
+^
+Warning 24 in EHFS.tex line 583: Delete this space to maintain correct pagereferences.
+\label{conclusion}  
+^
+Warning 13 in EHFS.tex line 584: Intersentence spacing (`\@') should perhaps be used.
+In this paper, we have proposed and evaluated a fair link scheduling optimisation model with the objective of maximising the data reception in the data collection of energy harvesting MSN. The super frame structure is developed for the BS to collect data from the sensor nodes. We have proved that the scheduling optimisation is an NP-complete problem. Therefore, the EHFS algorithm is proposed to approximate the optimal solutions in polynomial time. Our algorithm schedules the transmissions of the nodes based on $\eta_{i}^{f}$ and three working states in two steps.   
+                                                                                                                                                                                           ^
+Warning 13 in EHFS.tex line 585: Intersentence spacing (`\@') should perhaps be used.
+With the wildlife monitoring application and our Sensor-WPT testbed, we have shown the numerical performance of the EHFS algorithm based on the solar energy, WPT charging efficiency, and RSSI. We have compared our algorithm with the optimal schedules of the optimisation model and presented extensive simulations incorporating both node on the pasture and node arriving pasture scenario. Specifically, the EHFS algorithm provides a near-optimal scheduling to the data collection in the energy harvesting MSN.   
+                                                                                                                                                                                               ^
+Warning 13 in EHFS.tex line 585: Intersentence spacing (`\@') should perhaps be used.
+With the wildlife monitoring application and our Sensor-WPT testbed, we have shown the numerical performance of the EHFS algorithm based on the solar energy, WPT charging efficiency, and RSSI. We have compared our algorithm with the optimal schedules of the optimisation model and presented extensive simulations incorporating both node on the pasture and node arriving pasture scenario. Specifically, the EHFS algorithm provides a near-optimal scheduling to the data collection in the energy harvesting MSN.   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+Warning 1 in EHFS.tex line 587: Command terminated with space.
+\ifCLASSOPTIONcaptionsoff  
+                         ^
+Warning 17 in EHFS.tex line 596: Number of `(' doesn't match the number of `)'!
+
+
+Warning 17 in EHFS.tex line 596: Number of `[' doesn't match the number of `]'!
+
+

@@ -1,0 +1,24 @@
+tectonic pdf bytes=545189
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'VersionIPSE.tex', 71, 'Duplicate label'), ('ERROR', 'VersionIPSE.tex', 123, 'Duplicate label'), ('info', 'VersionIPSE.tex', 135, 'Unused label'), ('info', 'VersionIPSE.tex', 169, 'Unused label'), ('info', 'VersionIPSE.tex', 344, 'Unused label'), ('info', 'VersionIPSE.tex', 566, 'Unused label')]
+tectonic exit=0 warnings=['sec:intro'] secs=2
+warning: algorithm2e.sty:284: 
+Invalid UTF-8 byte or sequence at line 284 replaced by U+FFFD.
+warning: algorithm2e.sty:299: Invalid UTF-8 byte or sequence at line 299 replaced by U+FFFD.
+warning: algorithm2e.sty:550: Invalid UTF-8 byte or sequence at line 550 replaced by U+FFFD.
+warning: VersionIPSE.tex:418: Underfull \hbox (badness 10000) in paragraph at lines 414--418
+warning: VersionIPSE.tex:578: Missing character: There is no ^^8d ("8D) in font cmr10!
+warning: could not represent character "" (0x8d) in font "cmr10"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: algorithm2e.sty:284: 
+Invalid UTF-8 byte or sequence at line 284 replaced by U+FFFD.
+warning: algorithm2e.sty:299: Invalid UTF-8 byte or sequence at line 299 replaced by U+FFFD.
+warning: algorithm2e.sty:550: Invalid UTF-8 byte or sequence at line 550 replaced by U+FFFD.
+warning: VersionIPSE.tex:418: Underfull \hbox (badness 10000) in paragraph at lines 414--418
+warning: VersionIPSE.tex:578: 
+Missing character: There is no ^^8d ("8D) in font cmr10!
+warning: could not represent character "" (0x8d) in font "cmr10"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

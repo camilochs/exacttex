@@ -1,0 +1,41 @@
+{
+ "coverage": 0.062032,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`references3.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "equation",
+   "name": "eq:logi-setup",
+   "span": {
+    "file": "diversity_final3.xtex",
+    "offset": 108354,
+    "length": 13,
+    "line": 2412,
+    "column": 13
+   },
+   "message": "identifier `eq:logi-setup` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "diversity_final3.xtex",
+    "offset": 6809,
+    "length": 80,
+    "line": 205,
+    "column": 15
+   },
+   "message": "citation checking unavailable: `references3.bib` could not be read",
+   "related": []
+  }
+ ]
+}

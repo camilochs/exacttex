@@ -1,0 +1,47 @@
+
+warning: clintraj.tex:72: Requested font "eusm10" at 9.0pt
+warning: clintraj.tex:72:  -> eusm10
+warning: clintraj.tex:72: Requested font "eusm7" at 7.0pt
+warning: clintraj.tex:72:  -> eusm7
+warning: clintraj.tex:72: Requested font "eusm5" at 5.0pt
+warning: clintraj.tex:72:  -> eusm5
+warning: clintraj.tex:72: Requested font "euex9" at 9.0pt
+warning: clintraj.tex:72:  -> euex9
+warning: clintraj.tex:72: Requested font "euex7" at 7.0pt
+warning: clintraj.tex:72:  -> euex7
+warning: clintraj.tex:72: Requested font "euex7" at 5.0pt
+warning: clintraj.tex:72:  -> euex7
+warning: clintraj.tex:72: Requested font "[Merriweather-Italic.otf]/OT:script=latn;language=dflt;+pnum;+onum;mapping=tex-text;" at 9.0pt
+warning: clintraj.tex:72: Requested font "[Merriweather-Italic.otf]/OT:script=latn;language=dflt;+pnum;+onum;mapping=tex-text;" at 7.0pt
+warning: clintraj.tex:72: Requested font "[Merriweather-Italic.otf]/OT:script=latn;language=dflt;+pnum;+onum;mapping=tex-text;" at 5.0pt
+warning: clintraj.tex:72: Requested font "[Merriweather-Regular.otf]/OT:script=latn;language=dflt;+pnum;+onum;mapping=tex-text;" at 6.5pt
+warning: clintraj.tex:72: Overfull \hbox (54.64pt too wide) in paragraph at lines 72--72
+warning: clintraj.tex:72: Requested font "[Merriweather-Bold.otf]/OT:script=latn;language=dflt;+pnum;+onum;mapping=tex-text;" at 10.0pt
+warning: clintraj.tex:72: Requested font "[Merriweather-Regular.otf]/OT:script=latn;language=dflt;+pnum;+onum;mapping=tex-text;" at 6.0pt
+warning: clintraj.tex:72: Requested font "eurm10" at 8.0pt
+warning: clintraj.tex:72:  -> eurm10
+warning: clintraj.tex:72: Requested font "eurm7" at 6.0pt
+warning: clintraj.tex:72:  -> eurm7
+warning: clintraj.tex:72: Requested font "cmsy8" at 8.0pt
+warning: clintraj.tex:72:  -> cmsy8
+warning: clintraj.tex:72: Requested font "eufm10" at 8.0pt
+warning: clintraj.tex:72:  -> eufm10
+warning: clintraj.tex:72: Requested font "eufm7" at 6.0pt
+warning: clintraj.tex:72:  -> eufm7
+warning: clintraj.tex:72: Requested font "eusm10" at 8.0pt
+warning: clintraj.tex:72:  -> eusm10
+warning: clintraj.tex:72: Requested font "eusm7" at 6.0pt
+warning: clintraj.tex:72:  -> eusm7
+warning: clintraj.tex:72: Requested font "euex8" at 8.0pt
+warning: clintraj.tex:72:  -> euex8
+warning: clintraj.tex:72: Requested font "euex7" at 6.0pt
+warning: clintraj.tex:72:  -> euex7
+warning: clintraj.tex:72: Requested font "cmmi8" at 8.0pt
+warning: clintraj.tex:72:  -> cmmi8
+warning: clintraj.tex:72: Requested font "[Merriweather-Italic.otf]/OT:script=latn;language=dflt;+pnum;+onum;mapping=tex-text;" at 6.0pt
+warning: clintraj.tex:72: Requested font "cmr8" at 8.0pt
+warning: clintraj.tex:72:  -> cmr8
+warning: clintraj.tex:72: Overfull \hbox (54.64pt too wide) in paragraph at lines 72--72
+warning: clintraj.tex:75: Requested font "[Merriweather-Bold.otf]/OT:script=latn;language=dflt;+pnum;+onum;mapping=tex-text;" at 8.2pt
+error: clintraj.tex:93: Illegal unit of measure (pt inserted)
+error: halted on potentially-recoverable error as specified

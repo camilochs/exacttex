@@ -1,0 +1,30 @@
+target,kind,verdict,field,severity,document,source
+Bair2004,bib-entry,partial,authors,high,"Bair, Eric AND Tibshirani, Robert",Eric Bair and Robert Tibshirani
+Blanche2019,bib-entry,partial,year,medium,2019,2018
+Bommert2022,bib-entry,partial,year,medium,2022,2021
+Bradburn2003,bib-entry,mismatch,title,medium,Survival Analysis Part {II}: Multivariate data analysis {\textendash} an introduction to concepts and methods,Survival Analysis Part II: Multivariate data analysis – an introduction to concepts and methods
+Cairns2011,bib-entry,partial,authors,high,RA Carins and IS Harris and TW Mak,Rob A. Cairns and Isaac S. Harris and Tak W. Mak
+Chu2022,bib-entry,partial,year,medium,2022,2021
+DeBin2014,bib-entry,partial,authors,high,"De Bin,  Riccardo and Sauerbrei,  Willi and Boulesteix,  Anne-Laure",Riccardo De Bin and Willi Sauerbrei and Anne‐Laure Boulesteix
+Deliu2023,bib-entry,partial,year,medium,2023,2022
+Fu2017,bib-entry,partial,year,medium,2017,2016
+Ha2014,bib-entry,partial,year,medium,2014,2013
+Hasin2017,bib-entry,partial,authors,high,Yehudit Hasin and Marcus Seldin and Aldons Lusis,Yehudit Hasin-Brumshtein and Marcus Seldin and Aldons J. Lusis
+Heinze2018,bib-entry,mismatch,title,medium,Variable selection {\textendash} A review and recommendations for the practicing statistician,Variable selection – A review and recommendations for the practicing statistician
+Herrmann2021,bib-entry,partial,year,medium,2021,2020
+Hothorn2006,bib-entry,partial,year,medium,2006,2005
+Hrydziuszko2012,bib-entry,partial,year,medium,2012,2011
+Ickstadt2018,bib-entry,partial,year,medium,2018,2017
+Kalousis2007,bib-entry,partial,year,medium,2007,2006
+Kang2022,bib-entry,partial,year,medium,2022,2021
+Karimi2022,bib-entry,partial,year,medium,2022,2021
+Kim2012,bib-entry,partial,authors,high,Jinseog   Kim  and  Insuk   Sohn  and  Sin-Ho   Jung  and  {others},Jin‐Seog Kim and Insuk Sohn and Sin‐Ho Jung and Sujong Kim and Changyi Park
+Ma2006,bib-entry,partial,year,medium,2006,2005
+Ng2023,bib-entry,partial,year,medium,2023,2022
+Rahnenfuhrer2023,bib-entry,partial,authors,high,"Rahnenf\""{u}hrer,  J\""{o}rg and De Bin,  Riccardo and Benner,  Axel and Ambrogi,  Federico and Lusa,  Lara and Boulesteix,  Anne-Laure and Migliavacca,  Eugenia and Binder,  Harald and Michiels,  Stef",Jörg Rahnenführer and Riccardo De Bin and Axel Benner and Federico Ambrogi and Lara Lusa and Anne‐Laure Boulesteix and Eugenia Migliavacca and Harald Binder and Stefan Michiels and Willi Sauerbrei and
+Simon2013,bib-entry,partial,year,medium,2013,2012
+Song2020,bib-entry,partial,year,medium,2020,2019
+Taylor2022,bib-entry,partial,year,medium,2022,2021
+Vinga2021,bib-entry,partial,year,medium,2021,2020
+Yan2018,bib-entry,partial,year,medium,2018,2017
+Zhang2020,bib-entry,partial,year,medium,2020,2019

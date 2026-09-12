@@ -1,0 +1,287 @@
+{
+ "paper": "2512.24941",
+ "main": "openwork.tex",
+ "files": [
+  {
+   "file": "openwork.tex",
+   "chars_before": 76031,
+   "chars_after": 76022,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 76031,
+ "chars_after": 76022,
+ "delta_pct": -0.011837276900211757,
+ "unrepaired": {
+  "chars_after": 75950,
+  "chars_before": 76031,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.008281,
+  "bibliography": {
+   "state": "complete",
+   "entries": 77
+  },
+  "errors": 24,
+  "advisories": 0,
+  "build_exit": 1,
+  "build_emitted": false,
+  "delta_pct": -0.1065354921019058
+ },
+ "stats": {
+  "cite_cmds_live": 37,
+  "cite_keys_live": 37,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 27,
+  "labels_outside_grammar": 0,
+  "refs_live": 0,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 2,
+  "cite_cmds_annotated": 37,
+  "cite_keys_annotated": 37,
+  "ids_annotated": 3,
+  "refs_annotated": 0,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 24,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 132,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 147,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 156,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 165,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 184,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 193,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 207,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 291,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 318,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 347,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 408,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 423,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 446,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 453,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 472,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 489,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 505,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 523,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 541,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 555,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 569,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 578,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "fig:1",
+   "file": "openwork.xtex",
+   "line": 614,
+   "message": "identifier `fig:1` is already declared",
+   "classification": "real: \\label{fig:1} appears 24x in the sources",
+   "reverted": true
+  },
+  {
+   "code": "XT1001",
+   "name": "tab:train_query",
+   "file": "openwork.xtex",
+   "line": 669,
+   "message": "identifier `tab:train_query` is already declared",
+   "classification": "real: \\label{tab:train_query} appears 2x in the sources",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.004995,
+ "bibliography": {
+  "state": "complete",
+  "entries": 77
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

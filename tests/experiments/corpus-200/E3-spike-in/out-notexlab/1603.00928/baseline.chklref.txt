@@ -1,0 +1,502 @@
+pdf=1
+exit=0
+lines=683
+unique_findings=0
+nd/l3b
+ackend-pdftex.def)
+No file trainyard.aux.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lm/t1lmss.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lm/omllmm.fd)
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lm/omslmsy.fd
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lm/omxlmex.fd
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lm/t1lmtt.fd)
+
+LaTeX Warning: Citation `Eppstein' on page 1 undefined on input line 78.
+
+
+LaTeX Warning: Citation `CondonFLS97' on page 1 undefined on input line 78.
+
+
+LaTeX Warning: Citation `culberson1999sokoban' on page 1 undefined on input lin
+e 78.
+
+
+LaTeX Warning: Citation `GualaLN14' on page 1 undefined on input line 78.
+
+
+LaTeX Warning: Citation `Mehta14a' on page 1 undefined on input line 78.
+
+
+LaTeX Warning: Citation `ToP' on page 1 undefined on input line 85.
+
+
+LaTeX Warning: Citation `Story' on page 1 undefined on input line 87.
+
+
+LaTeX Warning: Citation `Week' on page 1 undefined on input line 87.
+
+
+LaTeX Warning: Citation `CasualReport' on page 1 undefined on input line 88.
+
+
+LaTeX Warning: Citation `Eppstein' on page 1 undefined on input line 88.
+
+
+LaTeX Warning: Citation `CondonFLS97' on page 1 undefined on input line 97.
+
+
+LaTeX Warning: Citation `RatnerW90' on page 1 undefined on input line 97.
+
+
+LaTeX Warning: Citation `FlakeB02' on page 1 undefined on input line 97.
+
+
+LaTeX Warning: Citation `culberson1999sokoban' on page 1 undefined on input lin
+e 97.
+
+
+LaTeX Warning: Citation `AloupisDGV15' on page 1 undefined on input line 97.
+
+
+LaTeX Warning: Citation `GualaLN14' on page 1 undefined on input line 97.
+
+
+LaTeX Warning: Citation `Mehta14a' on page 1 undefined on input line 97.
+
+
+LaTeX Warning: Citation `KendallPS08' on page 1 undefined on input line 97.
+
+
+LaTeX Warning: Citation `hearn2009games' on page 1 undefined on input line 97.
+
+
+LaTeX Warning: Citation `Viglietta14' on page 1 undefined on input line 97.
+
+[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc
+/dvips/lm/lm-ec.enc}]
+
+LaTeX Warning: Reference `sec:results' on page 2 undefined on input line 99.
+
+
+LaTeX Warning: Reference `sec:reduction' on page 2 undefined on input line 99.
+
+
+LaTeX Warning: Reference `fig:tiles' on page 2 undefined on input line 108.
+
+
+LaTeX Warning: Reference `fig:rails' on page 2 undefined on input line 109.
+
+[2 <./tiles/spawn.png> <./tiles/arrival.png> <./tiles/rock.png> <./tiles/painte
+r.png> <./tiles/splitter.png>]
+
+LaTeX Warning: Reference `fig:rails' on page 3 undefined on input line 138.
+
+
+LaTeX Warning: Reference `fig:rails' on page 3 undefined on input line 140.
+
+
+LaTeX Warning: Reference `fig:rails' on page 3 undefined on input line 141.
+
+
+LaTeX Warning: Reference `fig:rails' on page 3 undefined on input line 143.
+
+
+LaTeX Warning: Reference `fig:rails' on page 3 undefined on input line 145.
+
+
+LaTeX Warning: Reference `fig:tiles' on page 3 undefined on input line 162.
+
+
+LaTeX Warning: Reference `fig:tiles' on page 3 undefined on input line 163.
+
+
+LaTeX Warning: Reference `fig:tiles' on page 3 undefined on input line 165.
+
+
+LaTeX Warning: Reference `fig:tiles' on page 3 undefined on input line 167.
+
+[3{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/lm/lm
+-mathit.enc}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/d
+vips/lm/lm-rm.enc} <./tiles/rail-straight.png> <./tiles/rail-turn.png> <./tiles
+/rail-leftright.png> <./tiles/rail-cross.png> <./tiles/rail-switch.png> <./tile
+s/rail-switch2.png>]
+
+LaTeX Warning: Reference `fig:tiles' on page 4 undefined on input line 183.
+
+
+LaTeX Warning: Reference `fig:rails' on page 4 undefined on input line 183.
+
+
+LaTeX Font Warning: Font shape `T1/lmr/m/scit' undefined
+(Font)              using `T1/lmr/m/scsl' instead on input line 188.
+
+[4{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/lm/lm
+-mathsy.enc} <./example2.png> <./example.png>]
+
+LaTeX Warning: Reference `fig:overview' on page 5 undefined on input line 215.
+
+
+LaTeX Warning: Reference `fig:overview' on page 5 undefined on input line 218.
+
+[5{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/lm/lm
+-mathex.enc} <./overview.pdf>]
+
+LaTeX Warning: Reference `fig:lane' on page 6 undefined on input line 246.
+
+[6]
+
+LaTeX Warning: Reference `fig:terminus' on page 7 undefined on input line 258.
+
+
+LaTeX Warning: Reference `fig:oneway' on page 7 undefined on input line 279.
+
+[7 <./gadgets/lane.png> <./gadgets/terminus.png> <./gadgets/oneway.png>]
+
+LaTeX Warning: Reference `fig:onetimepass' on page 8 undefined on input line 28
+3.
+
+
+LaTeX Warning: Reference `fig:ignore' on page 8 undefined on input line 296.
+
+[8 <./gadgets/onetimepass.png>]
+
+LaTeX Warning: Reference `fig:satisfy' on page 9 undefined on input line 326.
+
+
+LaTeX Warning: Reference `fig:satisfy' on page 9 undefined on input line 327.
+
+[9 <./gadgets/ignore.png> <./gadgets/satisfy2.png> <./gadgets/satisfy1.png>]
+
+LaTeX Warning: Reference `fig:and' on page 10 undefined on input line 345.
+
+
+LaTeX Warning: Reference `fig:and' on page 10 undefined on input line 347.
+
+[10 <./gadgets/and.png>]
+
+LaTeX Warning: Reference `fig:replicator' on page 11 undefined on input line 35
+3.
+
+
+LaTeX Warning: Reference `fig:overview' on page 11 undefined on input line 364.
+
+
+
+LaTeX Warning: Reference `thm:ty_is_np_hard' on page 11 undefined on input line
+ 364.
+
+
+LaTeX Warning: Reference `thm:ty_is_np_hard' on page 11 undefined on input line
+ 367.
+
+[11 <./gadgets/replicator.png>]
+
+LaTeX Warning: Reference `fig:instance' on page 12 undefined on input line 375.
+
+
+(./trainyard.bbl) [12]
+No complaints by nag.
+[13 <./instance.png>]
+
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(./trainyard.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `trainyard.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+
+Package lastpage Warning: Rerun to get the references right on input line 397.
+
+ )</opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20260301/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/t
+exlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></op
+t/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmtt9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/typ
+e1/public/lm/lmbx10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist
+/fonts/type1/public/lm/lmbx12.pfb></opt/homebrew/Cellar/texlive/20260301/share/
+texmf-dist/fonts/type1/public/lm/lmbx8.pfb></opt/homebrew/Cellar/texlive/202603
+01/share/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></opt/homebrew/Cellar/tex
+live/20260301/share/texmf-dist/fonts/type1/public/lm/lmcsco10.pfb></opt/homebre
+w/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></o
+pt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmmi
+10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/publ
+ic/lm/lmmi7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/t
+ype1/public/lm/lmmi9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dis
+t/fonts/type1/public/lm/lmr10.pfb></opt/homebrew/Cellar/texlive/20260301/share/
+texmf-dist/fonts/type1/public/lm/lmr6.pfb></opt/homebrew/Cellar/texlive/2026030
+1/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb></opt/homebrew/Cellar/texlive
+/20260301/share/texmf-dist/fonts/type1/public/lm/lmr9.pfb></opt/homebrew/Cellar
+/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></opt/homeb
+rew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmss10.pfb><
+/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lm
+ssbx10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/lm/lmsso10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/f
+onts/type1/public/lm/lmsy10.pfb></opt/homebrew/Cellar/texlive/20260301/share/te
+xmf-dist/fonts/type1/public/lm/lmsy7.pfb></opt/homebrew/Cellar/texlive/20260301
+/share/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></opt/homebrew/Cellar/texlive
+/20260301/share/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></opt/homebrew/Cell
+ar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></opt/hom
+ebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmtt9.pfb>
+</opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsf
+onts/symbols/msam10.pfb>
+Output written on trainyard.pdf (13 pages, 2451549 bytes).
+Transcript written on trainyard.log.
+sh: line 1: 29409 Filesize limit exceeded: 25   pdflatex -interaction nonstopmode --jobname "trainyard" '\RequirePackage{chklref}\input' "{trainyard.tex}" 2>&1
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./trainyard.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/nag/nag.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/nag/nag-l2tab
+u.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/nag/nag-ortho
+dox.cfg)) (./lipics-v2016.cls
+Document Class: lipics-v2016 2016/02/16 v1.1 LIPIcs articles
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/article.
+cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fleqn.cl
+o)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/size10.c
+lo))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/inputenc
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lm/lmodern.st
+y)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fontenc.
+sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lm/t1lmr.fd))
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/textcomp
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/euca
+l.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amss
+ymb.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amsf
+onts.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/soul/soul.s
+ty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/soul/soul-o
+ri.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/infwarerr/i
+nfwarerr.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/etexcmds/et
+excmds.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iftex
+.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/colo
+r.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/babel/babel
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/babel/txtba
+bel.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/babel/local
+e/en/babel-ukenglish.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/babel-engli
+sh/UKenglish.ldf
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/babel-engli
+sh/english.ldf)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsma
+th.sty
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amste
+xt.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsge
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsbs
+y.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsop
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amscls/amsthm
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/array.s
+ty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/multirow/mult
+irow.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/tabular
+x.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/threeparttabl
+e/threeparttable.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/listings/list
+ings.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/listings/lstp
+atch.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/listings/lstm
+isc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/listings/list
+ings.cfg))
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lastpage/last
+page.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lastpage/last
+page2e.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lastpage/last
+pagemodern.sty) 
+))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/doi/doi.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hype
+rref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/kvdefinekey
+s/kvdefinekeys.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdfescape/p
+dfescape.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdftexcmds/
+pdftexcmds.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hycolor/hycol
+or.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/name
+ref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/refcount/refc
+ount.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/gettitlestr
+ing/gettitlestring.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/etoolbox/etoo
+lbox.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/stringenc/s
+tringenc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/pd1e
+nc.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/intcalc/int
+calc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/puen
+c.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/url/url.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bitset/bits
+et.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bigintcalc/
+bigintcalc.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hpdf
+tex.def
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/rerunfilechec
+k/rerunfilecheck.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/uniquecount
+er/uniquecounter.sty))))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/capti
+on.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/capti
+on3.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/rota
+ting.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ifthen.s
+ty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/subca
+ption.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/preprint/auth
+blk.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/cite/cite.sty
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/xspace.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/placeins/plac
+eins.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/float/float.s
+ty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def) (./trainyard.aux)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg)) (./trainyard.out) (./trainyard.out)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lm/t1lmss.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lm/omllmm.fd)
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lm/omslmsy.fd
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lm/omxlmex.fd
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lm/t1lmtt.fd)
+[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc
+/dvips/lm/lm-ec.enc}]************************************
+** Labels in starred environments **
+************************************
+
+*******************
+** Unused Labels **
+*******************
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

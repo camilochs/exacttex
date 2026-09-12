@@ -1,0 +1,125 @@
+exit=2
+lines=336
+unique_findings=82
+2}{(M_v-M_u)^2}t\\  
+                                                                                 ^
+Warning 3 in eibump.tex line 669: You should enclose the previous parenthesis with `{}'.
+        &-2\frac{e^{-(M_v-M_u)t}-1}{(M_v-M_u)^3}[D_cM_v^2-D_uM_v^2+D_cM_uM_v-D_vM_uM_v]\\  
+                                            ^
+Warning 25 in eibump.tex line 669: You might wish to put this between a pair of `{}'
+        &-2\frac{e^{-(M_v-M_u)t}-1}{(M_v-M_u)^3}[D_cM_v^2-D_uM_v^2+D_cM_uM_v-D_vM_uM_v]\\  
+                                                   ^^
+Warning 25 in eibump.tex line 669: You might wish to put this between a pair of `{}'
+        &-2\frac{e^{-(M_v-M_u)t}-1}{(M_v-M_u)^3}[D_cM_v^2-D_uM_v^2+D_cM_uM_v-D_vM_uM_v]\\  
+                                                            ^^
+Warning 25 in eibump.tex line 669: You might wish to put this between a pair of `{}'
+        &-2\frac{e^{-(M_v-M_u)t}-1}{(M_v-M_u)^3}[D_cM_v^2-D_uM_v^2+D_cM_uM_v-D_vM_uM_v]\\  
+                                                                     ^^
+Warning 25 in eibump.tex line 669: You might wish to put this between a pair of `{}'
+        &-2\frac{e^{-(M_v-M_u)t}-1}{(M_v-M_u)^3}[D_cM_v^2-D_uM_v^2+D_cM_uM_v-D_vM_uM_v]\\  
+                                                                        ^^
+Warning 25 in eibump.tex line 669: You might wish to put this between a pair of `{}'
+        &-2\frac{e^{-(M_v-M_u)t}-1}{(M_v-M_u)^3}[D_cM_v^2-D_uM_v^2+D_cM_uM_v-D_vM_uM_v]\\  
+                                                                               ^^
+Warning 25 in eibump.tex line 669: You might wish to put this between a pair of `{}'
+        &-2\frac{e^{-(M_v-M_u)t}-1}{(M_v-M_u)^3}[D_cM_v^2-D_uM_v^2+D_cM_uM_v-D_vM_uM_v]\\  
+                                                                                  ^^
+Warning 3 in eibump.tex line 670: You should enclose the previous parenthesis with `{}'.
+        &-M_v^2\frac{e^{-2(M_v-M_u)t}-1}{2(M_v-M_u)^3}[D_u+D_v-2D_c].  
+                                                  ^
+Warning 3 in eibump.tex line 676: You should enclose the previous parenthesis with `{}'.
+        \langle\Delta_u(t)^2\rangle=\langle\Delta_v(t)^2\rangle=\frac{D_vM_u^2-2D_cM_uM_v+D_uM_v^2}{(M_v-M_u)^2}t,  
+                         ^
+Warning 3 in eibump.tex line 676: You should enclose the previous parenthesis with `{}'.
+        \langle\Delta_u(t)^2\rangle=\langle\Delta_v(t)^2\rangle=\frac{D_vM_u^2-2D_cM_uM_v+D_uM_v^2}{(M_v-M_u)^2}t,  
+                                                     ^
+Warning 25 in eibump.tex line 676: You might wish to put this between a pair of `{}'
+        \langle\Delta_u(t)^2\rangle=\langle\Delta_v(t)^2\rangle=\frac{D_vM_u^2-2D_cM_uM_v+D_uM_v^2}{(M_v-M_u)^2}t,  
+                                                                        ^^
+Warning 25 in eibump.tex line 676: You might wish to put this between a pair of `{}'
+        \langle\Delta_u(t)^2\rangle=\langle\Delta_v(t)^2\rangle=\frac{D_vM_u^2-2D_cM_uM_v+D_uM_v^2}{(M_v-M_u)^2}t,  
+                                                                                  ^^
+Warning 25 in eibump.tex line 676: You might wish to put this between a pair of `{}'
+        \langle\Delta_u(t)^2\rangle=\langle\Delta_v(t)^2\rangle=\frac{D_vM_u^2-2D_cM_uM_v+D_uM_v^2}{(M_v-M_u)^2}t,  
+                                                                                     ^^
+Warning 25 in eibump.tex line 676: You might wish to put this between a pair of `{}'
+        \langle\Delta_u(t)^2\rangle=\langle\Delta_v(t)^2\rangle=\frac{D_vM_u^2-2D_cM_uM_v+D_uM_v^2}{(M_v-M_u)^2}t,  
+                                                                                            ^^
+Warning 3 in eibump.tex line 676: You should enclose the previous parenthesis with `{}'.
+        \langle\Delta_u(t)^2\rangle=\langle\Delta_v(t)^2\rangle=\frac{D_vM_u^2-2D_cM_uM_v+D_uM_v^2}{(M_v-M_u)^2}t,  
+                                                                                                            ^
+Warning 45 in eibump.tex line 679: Use \[ ... \] instead of $$ ... $$.
+$$\mathcal{B}=\frac{w_{ei}(a_u-a_v)-w_{ei}(a_u+a_v)}{w_{ie}(a_u-a_v)-w_{ie}(a_u+a_v)}=\frac{\alpha_u M_u}{\tau\alpha_v M_v}.$$  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 24 in eibump.tex line 690: Delete this space to maintain correct pagereferences.
+  \label{fig:4}  
+ ^
+Warning 36 in eibump.tex line 699: You should put a space in front of parenthesis.
+The dynamics of the I bump vary with firing rate thresholds and timescales. At higher firing rate thresholds, the I bump wanders more than the E bump, and the two bumps tend to be more weakly coupled. As the timescale increases, the I bump center of mass relaxes to wander slightly away from that of the E bump, while the E bump variance scales linearly in time like pure diffusion (\cref{fig:4}C,D). Since the I bump is sustained by input from the E population, the I bump appears to weakly track the input(see \cref{fig:EIWANDER} for single simulation of such activity), which can be estimated by OU processes~\cite{Kilpatrick13WandBumpSIAD,bressloff2015nonlinear}. Hence, the I bump variance can be higher than that of the E population.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+Warning 24 in eibump.tex line 707: Delete this space to maintain correct pagereferences.
+  \label{fig:5}  
+ ^
+Warning 24 in eibump.tex line 723: Delete this space to maintain correct pagereferences.
+  \label{fig:6}  
+ ^
+Warning 2 in eibump.tex line 727: Non-breaking space (`~') should have been used.
+The impact of noise correlations on neural circuit codes for delayed estimates are varied. Correlated noise within a neural subpopulation can improve working memory coding \cite{leavitt2017correlated}, but cross-population noise correlations can lead to an increase in bump attractor wandering that degrades memory~\cite{Kilpatrick13FrontiersMultiArea}. We find in the subsequent investigation that cross-population noise correlations between E and I populations lead to less bump wandering than uncorrelated noise.   
+                                                                                                                                                                           ^
+Warning 13 in eibump.tex line 737: Intersentence spacing (`\@') should perhaps be used.
+We also considered the effects of two small additive Gaussian inputs, more akin to the noisy kicks arising in stochastic simulations. When the position of these kicks was strongly correlated (\cref{fig:6}E; i.e. the same application to each population), the E and I bumps stayed together and relaxed back to their original position. Uncorrelated kicks led to different perturbations in the position and profile of the E and I bumps (e.g., \cref{fig:6}F), with a relaxation where the I bump was attracted the E bump, but the E bump was repelled by the I bump.  
+                                                                                                                                                                                                             ^
+Warning 12 in eibump.tex line 737: Interword spacing (`\ ') should perhaps be used.
+We also considered the effects of two small additive Gaussian inputs, more akin to the noisy kicks arising in stochastic simulations. When the position of these kicks was strongly correlated (\cref{fig:6}E; i.e. the same application to each population), the E and I bumps stayed together and relaxed back to their original position. Uncorrelated kicks led to different perturbations in the position and profile of the E and I bumps (e.g., \cref{fig:6}F), with a relaxation where the I bump was attracted the E bump, but the E bump was repelled by the I bump.  
+                                                                                                                                                                                                                   ^
+Warning 24 in eibump.tex line 742: Delete this space to maintain correct pagereferences.
+\label{sec:conclusions}  
+^
+Warning 2 in eibump.tex line 746: Non-breaking space (`~') should have been used.
+Our asymptotic analysis aimed at predicting the stochastic motion of bumps subject to noise moved beyond the standard single center-of-mass approximation often used to estimate the stochastic motion of bumps~\cite{Laing2001,Compte2000,Kilpatrick13WandBumpSIAD}. While a single center-of-mass approximation works reasonably well across some parts of parameter space, at high firing rate threshold, close to the discontinuous saddle-node bifurcation, we find this breaks down and is better captured by a stochastic interface based approximation previously developed in \cite{Krishnan18}. In particular, the I bump diffuses more than the E bump, which is well captured by the nonlinear Langevin approximation derived by approximating the motion of bump interfaces. The amplitude of bump wandering changes non-monotonically in most network parameters, due to the change in bump half-width amplitudes, well captured by our Interface-based approximation. Notably, inter-population noise correlations reduced bump wandering. Uncoordinated E and I bump motion, arising in networks with uncorrelated inter-population noise, lead to additional bump drift during relaxation periods while the I bump `chased' the E bump.   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+Warning 2 in eibump.tex line 748: Non-breaking space (`~') should have been used.
+There are several possible extensions of our analysis of bump stochastic motion in the E/I network. It is important to note that we made multiple approximations to collapse our stochastically evolving bump interface equations to a pair of SDEs describing the coupling between the E and I bump. Alternatively, we could have retained a higher order approximation of the bump interface gradients in order to obtain a more accurate approximation~\cite{Faye2018}. Recall, the Interface Based approximation begins as a fully nonlinear description and can be used to describe dynamics near the oscillatory (Hopf) bifurcation or the discontinuous saddle node. Alternatively, such near-bifurcation approximations could also be determined by choosing a scaling for a bifurcation parameter similar to the weak noise amplitude as in \cite{kilpatrick2014pulse,kilpatrick2016ghosts}.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+Warning 39 in eibump.tex line 750: Double space found.
+Our analysis of bump position variance across multiple parametric axes helped identify a number of ways to reduce bump wandering via network architectural tuning. We largely chose parameters roughly assuming $80\%$ E and $20\%$ I neurons present in the prefrontal cortex~\cite{abeles1991corticonics}, but we could certainly explore broader ranges of parameter space beyond this typical fraction. Another natural extension for this work would be to consider more complex mechanisms for synaptic tuning, such as short term plasticity in the E and I populations, to reduce the propensity for bumps to wander. Recent studies in mean field reductions of spiking networks have demonstrated that short term facilitation (depression) on the E population with global inhibition tends to decrease (increase) bump drift and diffusion~\cite{Seeholzer19}, ultimately improving parametric working memory. Extensions of our model and present analysis could be used to further investigate how the introduction of different forms of short term plasticity into either the E or I population would impact bump wandering. Not only could short term plasticity reduce the effect of stochastic perturbations on bumps, but also make them more robust to distraction inputs~ \cite{Lorenc21}.   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ^
+Warning 2 in eibump.tex line 750: Non-breaking space (`~') should have been used.
+Our analysis of bump position variance across multiple parametric axes helped identify a number of ways to reduce bump wandering via network architectural tuning. We largely chose parameters roughly assuming $80\%$ E and $20\%$ I neurons present in the prefrontal cortex~\cite{abeles1991corticonics}, but we could certainly explore broader ranges of parameter space beyond this typical fraction. Another natural extension for this work would be to consider more complex mechanisms for synaptic tuning, such as short term plasticity in the E and I populations, to reduce the propensity for bumps to wander. Recent studies in mean field reductions of spiking networks have demonstrated that short term facilitation (depression) on the E population with global inhibition tends to decrease (increase) bump drift and diffusion~\cite{Seeholzer19}, ultimately improving parametric working memory. Extensions of our model and present analysis could be used to further investigate how the introduction of different forms of short term plasticity into either the E or I population would impact bump wandering. Not only could short term plasticity reduce the effect of stochastic perturbations on bumps, but also make them more robust to distraction inputs~ \cite{Lorenc21}.   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ^
+Warning 13 in eibump.tex line 818: Intersentence spacing (`\@') should perhaps be used.
+  networks with axo-dendritic synaptic interactions}, Physica D: Nonlinear  
+                                                               ^
+Warning 8 in eibump.tex line 829: Wrong length of dash may have been used.
+  pp.~1--27, \url{https://doi.org/DOI:10.1186/2190-8567-2-9}.  
+                                                  ^
+Warning 8 in eibump.tex line 829: Wrong length of dash may have been used.
+  pp.~1--27, \url{https://doi.org/DOI:10.1186/2190-8567-2-9}.  
+                                                       ^
+Warning 8 in eibump.tex line 829: Wrong length of dash may have been used.
+  pp.~1--27, \url{https://doi.org/DOI:10.1186/2190-8567-2-9}.  
+                                                         ^
+Warning 12 in eibump.tex line 966: Interword spacing (`\ ') should perhaps be used.
+  synaptically coupled neuronal networks: Ii. lateral inhibition and standing  
+                                             ^
+Warning 24 in eibump.tex line 1016: Delete this space to maintain correct pagereferences.
+  \label{fig:EIWANDER}  
+ ^
+Warning 24 in eibump.tex line 1024: Delete this space to maintain correct pagereferences.
+  \label{fig:supp3A}  
+ ^
+Warning 24 in eibump.tex line 1032: Delete this space to maintain correct pagereferences.
+  \label{fig:supp5Aiinonzero}  
+ ^
+Warning 36 in eibump.tex line 1038: You should put a space after parenthesis.
+  \caption{\textbf{Predicted and simulated bump position variances for correlated and uncorrelated noise.} Noise amplitude is set to $\epsilon=0.001$ and we take $A_{ii}=0$. (A)Bump position variance as a function of $\theta_u=\theta_v=\theta$.  (B) Bump position variance as a function $A_{ei}=A$ with $\theta_u=\theta_v=0.25$. (C) $\theta_u=\theta_v=0.2$ and $\sigma_{ie}=3$. Bump position variance as a function of $\sigma_{ei}=\sigma_{ii}$. (D) Bump position variance as a function of $\theta_v$. We take $\theta_u = 0.2$. Other parameters are as in \cref{tableparam}.  
+                                                                                                                                                                                 ^
+Warning 24 in eibump.tex line 1040: Delete this space to maintain correct pagereferences.
+  \label{fig:supp6}  
+ ^
+Warning 15 in eibump.tex line 60: No match found for `{'.
+\author{Heather L Cihak\thanks{Department of Applied Mathematics, University of Colorado Boulder, Boulder, CO   
+       ^
+Warning 17 in eibump.tex line 1044: Number of `(' doesn't match the number of `)'!
+
+

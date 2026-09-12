@@ -1,0 +1,190 @@
+exit=2
+lines=402
+unique_findings=103
+                                                                                                                                                                                    ^
+Warning 3 in elsarticle-template-harv.tex line 449: You should enclose the previous parenthesis with `{}'.
+        \mathcal{L}=\frac{1}{N}\sum_{i=1}^N (y_i-\hat{y}_i)^2+\lambda\|W_{\text{ridge}}\|_2^2,  
+                                                          ^
+Warning 12 in elsarticle-template-harv.tex line 453: Interword spacing (`\ ') should perhaps be used.
+The multiscale operator captures the hierarchical spatial structures in the data by learning both coarse and fine grid features through separate pathways, followed by channel fusion. \hyperref[fig_network structure]{Figure.\ref{fig_network structure}}-(B) illustrates the multiscale structure for learning multiscale basis functions. This approach allows the model to adapt to details at different scales, thereby enhancing its ability to generalize to solutions of different types of basis functions.  
+                                                                                                                                                                                      ^
+Warning 36 in elsarticle-template-harv.tex line 453: You should put a space in front of parenthesis.
+The multiscale operator captures the hierarchical spatial structures in the data by learning both coarse and fine grid features through separate pathways, followed by channel fusion. \hyperref[fig_network structure]{Figure.\ref{fig_network structure}}-(B) illustrates the multiscale structure for learning multiscale basis functions. This approach allows the model to adapt to details at different scales, thereby enhancing its ability to generalize to solutions of different types of basis functions.  
+                                                                                                                                                                                                                                                            ^
+Warning 3 in elsarticle-template-harv.tex line 464: You should enclose the previous parenthesis with `{}'.
+        \text{MSE}=\frac{1}{N}\sum_{i=1}^N(y_i-\hat{y}_i)^2  
+                                                        ^
+Warning 3 in elsarticle-template-harv.tex line 474: You should enclose the previous parenthesis with `{}'.
+        \text{R}^2=1-\frac{\sum_{i=1}^N (y_i-\hat{y}_i)^2}{\sum_{i=1}^N (y_i -\bar{y})^2}  
+                                                      ^
+Warning 3 in elsarticle-template-harv.tex line 474: You should enclose the previous parenthesis with `{}'.
+        \text{R}^2=1-\frac{\sum_{i=1}^N (y_i-\hat{y}_i)^2}{\sum_{i=1}^N (y_i -\bar{y})^2}  
+                                                                                     ^
+Warning 24 in elsarticle-template-harv.tex line 481: Delete this space to maintain correct pagereferences.
+\label{theorem}  
+^
+Warning 13 in elsarticle-template-harv.tex line 484: Intersentence spacing (`\@') should perhaps be used.
+In this section we will compute and compare the time and space complexity of our proposed method, machine learning-based method (CNN for instance), and mixed GMsFEM.  
+                                                                                                                                                                    ^
+Warning 2 in elsarticle-template-harv.tex line 551: Non-breaking space (`~') should have been used.
+                        2D CNN \cite{choubineh2022innovative} & \( \mathcal{O}(L \times K^2 \times N^2) + \mathcal{O}(N^2 \times F) \) & \( \mathcal{O}(L \times K^2 \times N^2) + \mathcal{O}(N^2 \times F) \) \\  
+                              ^
+Warning 2 in elsarticle-template-harv.tex line 552: Non-breaking space (`~') should have been used.
+                        Mixed GMsFEM \cite{chen2020generalized} & \( \mathcal{O}(N_c \times N_f^3) \) & \( \mathcal{O}(N_c \times N_f^2) \) \\  
+                                    ^
+Warning 24 in elsarticle-template-harv.tex line 555: Delete this space to maintain correct pagereferences.
+                \label{tab_complexity_comparison}  
+               ^
+Warning 2 in elsarticle-template-harv.tex line 570: Non-breaking space (`~') should have been used.
+\begin{lem}[Lipschitz Continuity of Neural Operator \cite{kovachki2023neural,shang2022lipschitz}]  
+                                                   ^
+Warning 24 in elsarticle-template-harv.tex line 577: Delete this space to maintain correct pagereferences.
+        \label{lem_continuity_neural_operator}  
+       ^
+Warning 24 in elsarticle-template-harv.tex line 586: Delete this space to maintain correct pagereferences.
+        \label{th_error_bound}  
+       ^
+Warning 9 in elsarticle-template-harv.tex line 603: `)' expected, found `}'.
+                \| \mathcal{N}(\mathcal{F(\kappa}))-\mathcal{N}(\hat{\mathcal{F}}(\kappa))+\mathcal{N}(\hat{\mathcal{F}}(\kappa)) - \hat{\mathcal{N}}(\hat{\mathcal{F}}(\kappa))\|_{H^1} \notag \\ &\leq   
+                                                ^
+Warning 9 in elsarticle-template-harv.tex line 603: `}' expected, found `)'.
+                \| \mathcal{N}(\mathcal{F(\kappa}))-\mathcal{N}(\hat{\mathcal{F}}(\kappa))+\mathcal{N}(\hat{\mathcal{F}}(\kappa)) - \hat{\mathcal{N}}(\hat{\mathcal{F}}(\kappa))\|_{H^1} \notag \\ &\leq   
+                                                 ^
+Warning 2 in elsarticle-template-harv.tex line 618: Non-breaking space (`~') should have been used.
+        By the universal approximation theorem of neural operator \cite{cybenko1989approximations,hornik1991approximation}, $\forall~\varepsilon_{\mathcal{F}>0}$, we can derive from \eqref{eq_sobolev_embed} that  
+                                                                 ^
+Warning 2 in elsarticle-template-harv.tex line 618: Non-breaking space (`~') should have been used.
+        By the universal approximation theorem of neural operator \cite{cybenko1989approximations,hornik1991approximation}, $\forall~\varepsilon_{\mathcal{F}>0}$, we can derive from \eqref{eq_sobolev_embed} that  
+                                                                                                                                                                                     ^
+Warning 12 in elsarticle-template-harv.tex line 636: Interword spacing (`\ ') should perhaps be used.
+        where $C_1=C_{\text{embed}}^2L_{\mathcal{N}}$, $C_2=C_{\text{embed}}$. \solidqed  
+                                                                              ^
+Warning 1 in elsarticle-template-harv.tex line 636: Command terminated with space.
+        where $C_1=C_{\text{embed}}^2L_{\mathcal{N}}$, $C_2=C_{\text{embed}}$. \solidqed  
+                                                                                        ^
+Warning 24 in elsarticle-template-harv.tex line 643: Delete this space to maintain correct pagereferences.
+        \label{th_stability}   
+       ^
+Warning 2 in elsarticle-template-harv.tex line 652: Non-breaking space (`~') should have been used.
+        By the perturbation theory of linear operator \cite{kato2013perturbation}, the change of eigenfunctions satisfies:  
+                                                     ^
+Warning 3 in elsarticle-template-harv.tex line 679: You should enclose the previous parenthesis with `{}'.
+                \sum_{T_i \in \mathcal{T}^H}\left(L^{(i)}_{\text{local}}\right)^2 \| \kappa_1 - \kappa_2 \|^2_{L^{\infty}(T_i)} \\ & \leq  
+                                                                              ^
+Warning 3 in elsarticle-template-harv.tex line 680: You should enclose the previous parenthesis with `{}'.
+                \left(\sum_{T_i \in \mathcal{T}^H}L_{\text{global}}\| \kappa_1 - \kappa_2\|_{L^{\infty}(T_i)}\right)^2 \notag  
+                                                                                                                   ^
+Warning 2 in elsarticle-template-harv.tex line 704: Non-breaking space (`~') should have been used.
+    Then we can rewrite \eqref{eq_th_stability} as  
+                       ^
+Warning 1 in elsarticle-template-harv.tex line 708: Command terminated with space.
+    \solidqed  
+             ^
+Warning 24 in elsarticle-template-harv.tex line 719: Delete this space to maintain correct pagereferences.
+        \label{coro_convergence}  
+       ^
+Warning 2 in elsarticle-template-harv.tex line 728: Non-breaking space (`~') should have been used.
+        By the universal approximation theorem \cite{cybenko1989approximations}, for any $\varepsilon>0$, there exists a neural operator and corresponding parameterization $\theta^*$ such that:  
+                                              ^
+Warning 2 in elsarticle-template-harv.tex line 735: Non-breaking space (`~') should have been used.
+        The preconditioner $\mathcal{F}$ maps $\kappa$ to a low-dimensional spectral representation. From the spectral gap assumption, the preconditioner's truncation error \cite{adler2009random} decays exponentially:  
+                                                                                                                                                                            ^
+Warning 1 in elsarticle-template-harv.tex line 750: Command terminated with space.
+    \solidqed  
+             ^
+Warning 24 in elsarticle-template-harv.tex line 754: Delete this space to maintain correct pagereferences.
+\label{results}  
+^
+Warning 36 in elsarticle-template-harv.tex line 757: You should put a space in front of parenthesis.
+Our numerical experiments were conducted in an environment equipped with an NVIDIA Tesla V100 PCIE GPU, utilizing the PyTorch deep learning framework, and an Intel(R) Xeon(R) Silver 4210 CPU for numerical computation.  
+                                                                                                                                                                   ^
+Warning 36 in elsarticle-template-harv.tex line 757: You should put a space in front of parenthesis.
+Our numerical experiments were conducted in an environment equipped with an NVIDIA Tesla V100 PCIE GPU, utilizing the PyTorch deep learning framework, and an Intel(R) Xeon(R) Silver 4210 CPU for numerical computation.  
+                                                                                                                                                                           ^
+Warning 44 in elsarticle-template-harv.tex line 788: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                        \hline  
+                        ^^^^^^
+Warning 44 in elsarticle-template-harv.tex line 790: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                        \hline  
+                        ^^^^^^
+Warning 44 in elsarticle-template-harv.tex line 795: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                        \hline  
+                        ^^^^^^
+Warning 44 in elsarticle-template-harv.tex line 800: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                        \hline  
+                        ^^^^^^
+Warning 44 in elsarticle-template-harv.tex line 805: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                        \hline  
+                        ^^^^^^
+Warning 44 in elsarticle-template-harv.tex line 810: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                        \hline  
+                        ^^^^^^
+Warning 24 in elsarticle-template-harv.tex line 813: Delete this space to maintain correct pagereferences.
+        \label{tab_criteria}  
+       ^
+Warning 24 in elsarticle-template-harv.tex line 820: Delete this space to maintain correct pagereferences.
+        \label{fig_criteria}  
+       ^
+Warning 18 in elsarticle-template-harv.tex line 832: Use either `` or '' as an alternative to `"'.
+                (\textbf{Column 1}) High-contrast permeability field $\kappa$. The caption "No.n" means that the data is the n-th sample of corresponding dataset.   
+                                                                                           ^
+Warning 18 in elsarticle-template-harv.tex line 832: Use either `` or '' as an alternative to `"'.
+                (\textbf{Column 1}) High-contrast permeability field $\kappa$. The caption "No.n" means that the data is the n-th sample of corresponding dataset.   
+                                                                                                ^
+Warning 18 in elsarticle-template-harv.tex line 833: Use either `` or '' as an alternative to `"'.
+                (\textbf{Column 2}) Selected example coarse grid. The caption "No.m" means the m-th coarse grid of the permeability field. The yellow in the grid represents the fracture and the blue represents the matrix, where the numbers are the corresponding permeability (millidarcy). (\textbf{Column 3}) Numerical results of mixed GMsFEM. (\textbf{Column 4}) Deep learning results of the full model.   
+                                                                              ^
+Warning 18 in elsarticle-template-harv.tex line 833: Use either `` or '' as an alternative to `"'.
+                (\textbf{Column 2}) Selected example coarse grid. The caption "No.m" means the m-th coarse grid of the permeability field. The yellow in the grid represents the fracture and the blue represents the matrix, where the numbers are the corresponding permeability (millidarcy). (\textbf{Column 3}) Numerical results of mixed GMsFEM. (\textbf{Column 4}) Deep learning results of the full model.   
+                                                                                   ^
+Warning 13 in elsarticle-template-harv.tex line 833: Intersentence spacing (`\@') should perhaps be used.
+                (\textbf{Column 2}) Selected example coarse grid. The caption "No.m" means the m-th coarse grid of the permeability field. The yellow in the grid represents the fracture and the blue represents the matrix, where the numbers are the corresponding permeability (millidarcy). (\textbf{Column 3}) Numerical results of mixed GMsFEM. (\textbf{Column 4}) Deep learning results of the full model.   
+                                                                                                                                                                                                                                                                                                                                                      ^
+Warning 24 in elsarticle-template-harv.tex line 837: Delete this space to maintain correct pagereferences.
+        \label{fig_results}  
+       ^
+Warning 24 in elsarticle-template-harv.tex line 844: Delete this space to maintain correct pagereferences.
+        \label{fig_stability_mse}  
+       ^
+Warning 8 in elsarticle-template-harv.tex line 847: Wrong length of dash may have been used.
+The prediction results are shown in Figure.\ref{fig_results}, which demonstrates the contour plots of both fractured and non-fractured coarse grids. In these grids, blue and yellow represent matrix and fracture, respectively. Column 4-7 show the predictions generated by different models. It can be seen that there exists significantly different plots in Ablation 1 and 3 (column 5 and 7), especially for the grid with fractures. This figure, together with performance metrics, can show the effectiveness of the preconditioner and multiscale network. For homogenized permeability fields, this architecture demonstrates outstanding performance, which assists a single CNN model in extracting feature efficiently.  
+                                                                                                                                                                                                                                          ^
+Warning 24 in elsarticle-template-harv.tex line 858: Delete this space to maintain correct pagereferences.
+        \label{fig_stability_mae}  
+       ^
+Warning 24 in elsarticle-template-harv.tex line 868: Delete this space to maintain correct pagereferences.
+        \label{fig_stability_r2}  
+       ^
+Warning 36 in elsarticle-template-harv.tex line 873: You should put a space in front of parenthesis.
+In Figure.\ref{fig_learning_curve}-(A), our proposed model shows a consistent trend between training and validation losses, maintaining stability throughout the training process.   
+                                   ^
+Warning 24 in elsarticle-template-harv.tex line 880: Delete this space to maintain correct pagereferences.
+        \label{fig_learning_curve}  
+       ^
+Warning 36 in elsarticle-template-harv.tex line 883: You should put a space in front of parenthesis.
+In contrast, the Ablation 1 model, shown as Figure.\ref{fig_learning_curve}-(B), exihibits a significant outlier in the validation loss, reaching as high as near 3.0, indicating severe overfitting or instability on the validation set, thus reflecting poor generalization capability.   
+                                                                            ^
+Warning 36 in elsarticle-template-harv.tex line 884: You should put a space in front of parenthesis.
+The Ablation 2 model in Figure.\ref{fig_learning_curve}-(C) and Ablation 3 model in Figure.\ref{fig_learning_curve}-(D) both show some level of fluctuation in the validation loss.   
+                                                        ^
+Warning 36 in elsarticle-template-harv.tex line 884: You should put a space in front of parenthesis.
+The Ablation 2 model in Figure.\ref{fig_learning_curve}-(C) and Ablation 3 model in Figure.\ref{fig_learning_curve}-(D) both show some level of fluctuation in the validation loss.   
+                                                                                                                    ^
+Warning 24 in elsarticle-template-harv.tex line 902: Delete this space to maintain correct pagereferences.
+        \label{tab_time}  
+       ^
+Warning 24 in elsarticle-template-harv.tex line 908: Delete this space to maintain correct pagereferences.
+\label{discussion}  
+^
+Warning 2 in elsarticle-template-harv.tex line 918: Non-breaking space (`~') should have been used.
+Importantly, the evaluation on the testing set shows that our model achieves an MSE of 0.0036 and $\text{R}^2$ of 0.9716, while the corresponding results from traditional CNN model of the previous research were 0.0446 and 0.8083, respectively \cite{choubineh2022innovative}. These outcomes clearly indicate that our model surpasses existing models in terms of accuracy. The introduction of preconditioner and multiscale parallel learning strategy allow our model to capture more features and effectively predict the basis functions.   
+                                                                                                                                                                                                                                                  ^
+Warning 24 in elsarticle-template-harv.tex line 927: Delete this space to maintain correct pagereferences.
+\label{conclusion}  
+^
+Warning 15 in elsarticle-template-harv.tex line 499: No match found for `('.
+Since FFT and IFFT operations require storing the frequency-domain representations, the space complexity of these is $\mathcal{O}(N^2)$. The space complexity for storing the weights and activations of each convolution layer is $\mathcal{O}(L\times N^2$. Thus the overall space complexity of our proposed model is  
+                                                                                                                                                                                                                                               ^
+Warning 17 in elsarticle-template-harv.tex line 958: Number of `(' doesn't match the number of `)'!
+
+

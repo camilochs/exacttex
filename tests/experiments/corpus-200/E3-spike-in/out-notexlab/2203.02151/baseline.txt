@@ -1,0 +1,24 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=-11 warnings=[] secs=2
+warning: lineno.sty:296: Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+warning: opensans.sty:115: 
+Requested font "[OpenSans-Regular.ttf]/OT" at 8.99997pt
+warning: opensans.sty:115: Requested font "[OpenSans-Regular.ttf]/OT" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-Light.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-LightItalic.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSansCondensed-Light.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSansCondensed-LightItalic.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-SemiBold.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-SemiBoldItalic.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-Bold.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-BoldItalic.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSansCondensed-Bold.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-ExtraBold.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-ExtraBoldItalic.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-Regular.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:115: Requested font "[OpenSans-Italic.ttf]/OT:script=latn;language=dflt;" at 9.00003pt
+warning: opensans.sty:151: Requested font "[OpenSans-Regular.ttf]/OT:script=latn;language=dflt;+liga;+tnum;+lnum;mapping=tex-text;" at 9.0pt
+warning: elife.cls:55: 
+Requested font "Latin Modern Mono" at 8.99997pt

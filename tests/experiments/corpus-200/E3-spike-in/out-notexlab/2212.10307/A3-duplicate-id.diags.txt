@@ -1,0 +1,3 @@
+planted=sec_bg sites=[('intro.xtex', 62), ('intro.xtex', 8)]
+xtex new=[('XT1001', 'sec_bg', 'intro.xtex', 62)]
+texlab new=[]

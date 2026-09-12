@@ -1,0 +1,29 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'V889Her_arxiv.tex', 120, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 121, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 124, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 127, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 128, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 150, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 159, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 160, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 168, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 201, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 257, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 279, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 287, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 339, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 340, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 341, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 343, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 344, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 345, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 353, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 354, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 356, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 385, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 387, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 414, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 434, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 505, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 515, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 517, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 554, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 608, 'Undefined reference'), ('ERROR', 'V889Her_arxiv.tex', 745, 'Undefined reference'), ('ERROR', 'aa.cls', 419, 'Undefined reference'), ('info', 'V889Her_arxiv.tex', 522, 'Unused label')]
+tectonic exit=1 warnings=[] secs=4
+txmi"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: V889Her_arxiv.tex:609: Underfull \vbox (badness 1783) has occurred while \output is active
+warning: V889Her_arxiv.tex:685: Missing character: There is no �� ("C5) in font txmi!
+warning: could not represent character "Å" (0xc5) in font "txmi"
+warning: V889Her_arxiv.tex:685: Missing character: There is no �� ("C5) in font txmi!
+warning: could not represent character "Å" (0xc5) in font "txmi"
+warning: V889Her_arxiv.tex:691: Underfull \hbox (badness 10000) in paragraph at lines 689--691
+warning: V889Her_arxiv.tex:112: Underfull \hbox (badness 1540) in paragraph at lines 112--112
+warning: V889Her_arxiv.tex:138: Underfull \vbox (badness 2762) has occurred while \output is active
+warning: V889Her_arxiv.tex:397: Missing character: There is no �� ("C5) in font txmi!
+warning: could not represent character "Å" (0xc5) in font "txmi"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: V889Her_arxiv.tex:609: Underfull \vbox (badness 1783) has occurred while \output is active
+warning: V889Her_arxiv.tex:685: Missing character: There is no �� ("C5) in font txmi!
+warning: could not represent character "Å" (0xc5) in font "txmi"
+warning: V889Her_arxiv.tex:685: Missing character: There is no �� ("C5) in font txmi!
+warning: could not represent character "Å" (0xc5) in font "txmi"
+warning: V889Her_arxiv.tex:691: Underfull \hbox (badness 10000) in paragraph at lines 689--691
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: sorry, PostScript images are not supported by Tectonic
+warning: for details, please see https://github.com/tectonic-typesetting/tectonic/issues/27
+error: pdf: image inclusion failed for "V889Her_julaug1999.eps" (page=1).

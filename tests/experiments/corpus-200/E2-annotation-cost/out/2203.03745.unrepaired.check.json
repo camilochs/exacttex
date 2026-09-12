@@ -1,0 +1,25 @@
+{
+ "coverage": 0.022137,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`Drift.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "conclusion.xtex",
+    "offset": 707,
+    "length": 21,
+    "line": 6,
+    "column": 114
+   },
+   "message": "citation checking unavailable: `Drift.bib` could not be read",
+   "related": []
+  }
+ ]
+}

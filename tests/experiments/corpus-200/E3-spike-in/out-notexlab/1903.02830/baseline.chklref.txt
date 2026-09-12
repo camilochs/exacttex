@@ -1,0 +1,568 @@
+pdf=1
+exit=0
+lines=782
+unique_findings=6
+arning: Reference `sec:res&disc' on page 2 undefined on input line 118.
+
+
+LaTeX Warning: Reference `sec:concl' on page 2 undefined on input line 119.
+
+
+Package natbib Warning: Citation `infante2009modelling' on page 2 undefined on 
+input line 126.
+
+
+Package natbib Warning: Citation `fraguela2013uniqueness' on page 2 undefined o
+n input line 129.
+
+
+Package natbib Warning: Citation `Smith2014' on page 2 undefined on input line 
+136.
+
+[2]
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 143.
+
+
+LaTeX Warning: Reference `eq:pb_unid_1' on page 3 undefined on input line 156.
+
+
+LaTeX Warning: Reference `eq:forward_mapping' on page 3 undefined on input line
+ 163.
+
+
+Package natbib Warning: Citation `fraguela2013uniqueness' on page 3 undefined o
+n input line 173.
+
+[3]
+
+LaTeX Warning: Reference `eq:discrete_k' on page 4 undefined on input line 205.
+
+
+
+LaTeX Warning: Reference `eq:supp0' on page 4 undefined on input line 212.
+
+
+LaTeX Warning: Reference `eq:supp0u' on page 4 undefined on input line 218.
+
+
+Package natbib Warning: Citation `fraguela2013uniqueness' on page 4 undefined o
+n input line 222.
+
+
+LaTeX Warning: Reference `eq:pb_unid_1' on page 4 undefined on input line 223.
+
+
+LaTeX Warning: Reference `eq:kexpu' on page 4 undefined on input line 226.
+
+
+LaTeX Warning: Reference `eq:supp1' on page 4 undefined on input line 227.
+
+
+LaTeX Warning: Reference `eq:supp2' on page 4 undefined on input line 227.
+
+
+LaTeX Warning: Reference `sec:stat_inv' on page 4 undefined on input line 228.
+
+
+Package natbib Warning: Citation `zellner1988optimal' on page 4 undefined on in
+put line 234.
+
+
+Package natbib Warning: Citation `fraguela2013uniqueness' on page 4 undefined o
+n input line 234.
+
+
+LaTeX Warning: Reference `eq:discrete_k' on page 4 undefined on input line 236.
+
+
+
+LaTeX Warning: Reference `eq:forward_mapping' on page 4 undefined on input line
+ 237.
+
+[4]
+
+LaTeX Warning: Reference `eq:discrete_k' on page 5 undefined on input line 243.
+
+
+
+LaTeX Warning: Reference `eq:supp1' on page 5 undefined on input line 260.
+
+
+LaTeX Warning: Reference `eq:supp2' on page 5 undefined on input line 260.
+
+
+Package natbib Warning: Citation `bardsley2013gaussian' on page 5 undefined on 
+input line 292.
+
+[5]
+
+LaTeX Warning: Reference `eq:prior1' on page 6 undefined on input line 329.
+
+
+LaTeX Warning: Reference `eq:forward_mapping' on page 6 undefined on input line
+ 350.
+
+
+LaTeX Warning: Reference `eq:likelihood' on page 6 undefined on input line 364.
+
+
+
+LaTeX Warning: Reference `eq:likelihood' on page 6 undefined on input line 366.
+
+
+
+LaTeX Warning: Reference `eq:prior2' on page 6 undefined on input line 367.
+
+
+LaTeX Warning: Reference `eq:posterior' on page 6 undefined on input line 375.
+
+[6]
+
+LaTeX Warning: Reference `sec:res&disc' on page 7 undefined on input line 380.
+
+
+Package natbib Warning: Citation `christen2010general' on page 7 undefined on i
+nput line 381.
+
+
+LaTeX Warning: Reference `alg:mh' on page 7 undefined on input line 384.
+
+
+LaTeX Warning: Reference `eq:posterior' on page 7 undefined on input line 388.
+
+
+LaTeX Warning: Reference `SMHquotient' on page 7 undefined on input line 407.
+
+
+LaTeX Warning: Reference `eq:prior2' on page 7 undefined on input line 407.
+
+
+Package natbib Warning: Citation `nicholls2012coupled' on page 7 undefined on i
+nput line 410.
+
+
+LaTeX Warning: Reference `SMHquotient' on page 7 undefined on input line 415.
+
+
+LaTeX Warning: Reference `eq:prior2' on page 7 undefined on input line 417.
+
+
+LaTeX Warning: Reference `eq:posterior' on page 7 undefined on input line 417.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--418
+
+
+LaTeX Warning: Reference `eq:proposal' on page 7 undefined on input line 434.
+
+
+LaTeX Warning: Reference `alg:sea' on page 7 undefined on input line 435.
+
+
+LaTeX Warning: Reference `eq:posterior' on page 7 undefined on input line 439.
+
+
+LaTeX Warning: Reference `alg:sea' on page 7 undefined on input line 463.
+
+
+Package natbib Warning: Citation `nicholls2012coupled' on page 7 undefined on i
+nput line 464.
+
+
+LaTeX Warning: Reference `eq:proposal' on page 7 undefined on input line 466.
+
+[7]
+
+LaTeX Warning: Reference `eq:posterior' on page 8 undefined on input line 473.
+
+
+LaTeX Warning: Reference `alg:sea' on page 8 undefined on input line 474.
+
+
+LaTeX Warning: Reference `tab:pars' on page 8 undefined on input line 476.
+
+
+Package natbib Warning: Citation `Smith2014' on page 8 undefined on input line 
+477.
+
+
+LaTeX Warning: Reference `eq:pb_unid_1' on page 8 undefined on input line 477.
+
+
+LaTeX Warning: Reference `eq:likelihood' on page 8 undefined on input line 482.
+
+
+
+LaTeX Warning: Reference `eq:snr' on page 8 undefined on input line 491.
+
+[8]
+
+Package natbib Warning: Citation `Smith2014' on page 9 undefined on input line 
+513.
+
+
+LaTeX Warning: Reference `fig:unc_prop' on page 9 undefined on input line 518.
+
+
+LaTeX Warning: Reference `eq:example1' on page 9 undefined on input line 519.
+
+
+LaTeX Warning: Reference `eq:forward_mapping' on page 9 undefined on input line
+ 522.
+
+
+Package natbib Warning: Citation `kaipio2011bayesian' on page 9 undefined on in
+put line 523.
+
+
+LaTeX Warning: Reference `fig:unc_prop' on page 9 undefined on input line 528.
+
+
+LaTeX Warning: Reference `eq:example1' on page 9 undefined on input line 540.
+
+
+LaTeX Warning: Reference `eq:forward_mapping' on page 9 undefined on input line
+ 540.
+
+
+LaTeX Warning: Reference `eq:example1' on page 9 undefined on input line 540.
+
+
+LaTeX Warning: Reference `eq:forward_mapping' on page 9 undefined on input line
+ 540.
+
+
+LaTeX Warning: Reference `alg:sea' on page 9 undefined on input line 546.
+
+
+Package natbib Warning: Citation `christen2010general' on page 9 undefined on i
+nput line 547.
+
+
+LaTeX Warning: Reference `tab:pars' on page 9 undefined on input line 556.
+
+[9]
+
+LaTeX Warning: Reference `fig:example1' on page 10 undefined on input line 571.
+
+
+
+LaTeX Warning: Reference `fig:example2' on page 10 undefined on input line 571.
+
+
+
+LaTeX Warning: Reference `fig:trace1' on page 10 undefined on input line 573.
+
+
+LaTeX Warning: Reference `fig:trace2' on page 10 undefined on input line 573.
+
+
+LaTeX Warning: Reference `fig:hyperpar1' on page 10 undefined on input line 574
+.
+
+
+LaTeX Warning: Reference `fig:hyperpar2' on page 10 undefined on input line 574
+.
+
+
+LaTeX Warning: Reference `fig:estimators1' on page 10 undefined on input line 5
+75.
+
+
+LaTeX Warning: Reference `fig:estimators2' on page 10 undefined on input line 5
+75.
+
+
+LaTeX Warning: Reference `eq:forward_mapping' on page 10 undefined on input lin
+e 577.
+
+
+LaTeX Warning: Reference `eq:kexpu' on page 10 undefined on input line 578.
+
+
+LaTeX Warning: Reference `eq:discrete_k' on page 10 undefined on input line 578
+.
+
+
+! LaTeX Error: Invalid UTF-8 byte "8D.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.578 ...:discrete_k} with $n=10$ in both cases, �
+                                                  
+[10 <./uncertainty_propagation.png>] [11 <./trace_plot1.png> <./hyper_parameter
+1.png> <./true_vs_estimators1.png>] [12 <./trace_plot2.png> <./hyper_parameter2
+.png> <./true_vs_estimators2.png>] [13]
+
+Package natbib Warning: There were undefined citations.
+
+[14] (./VersionIPSE.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 2.25pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbx5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></opt/homebrew
+/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti
+10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></opt/homebrew/C
+ellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr5.pfb></opt/homebrew/Cellar/texlive/20260301/sha
+re/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/tex
+live/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></opt/homebrew/C
+ellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
+b></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmti8.pfb></opt/homebrew/Cellar/texlive/20260301/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></opt/homebrew/Cellar/
+texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
+b>
+Output written on VersionIPSE.pdf (14 pages, 759433 bytes).
+Transcript written on VersionIPSE.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./VersionIPSE.tex (./interact.cls
+Document Class: interact 2017/07/31 v1.05 Interact LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/article.
+cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/size11.c
+lo))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsma
+th.sty
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amste
+xt.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsge
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsbs
+y.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsop
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amss
+ymb.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amsf
+onts.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amscls/amsthm
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/booktabs/book
+tabs.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/epsf
+ig.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def))))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/rota
+ting.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ifthen.s
+ty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/geometry/geom
+etry.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/ifvte
+x.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iftex
+.sty))))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/subfig/subfig
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/capti
+on3.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/algorithm2e/a
+lgorithm2e.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ifoddpage/ifo
+ddpage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/xspace.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/relsize/relsi
+ze.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/natbib/natbib
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def) (./VersionIPSE.aux
+
+LaTeX Warning: Label `sec:intro' multiply defined.
+
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/infwarerr/i
+nfwarerr.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/grfext/grfext
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/kvdefinekey
+s/kvdefinekeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdftexcmds/
+pdftexcmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <13> not available
+(Font)              size <12> substituted on input line 49.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <13> not available
+(Font)              size <12> substituted on input line 49.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 49.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 49.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 49.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd) [1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex
+/updmap/pdftex.map}] [2]
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 143.
+
+[3] [4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 414--418
+
+[7] [8] [9]
+
+! LaTeX Error: Invalid UTF-8 byte "8D.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.578 ...:discrete_k} with $n=10$ in both cases, �
+                                                  
+[10 <./uncertainty_propagation.png>] [11 <./trace_plot1.png> <./hyper_parameter
+1.png> <./true_vs_estimators1.png>] [12 <./trace_plot2.png> <./hyper_parameter2
+.png> <./true_vs_estimators2.png>] [13]  [14] (./VersionIPSE.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 2.25pt have occurred.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbx5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></opt/homebrew
+/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti
+10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></opt/homebrew/C
+ellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr5.pfb></opt/homebrew/Cellar/texlive/20260301/sha
+re/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/tex
+live/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr9.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></opt/homebrew/C
+ellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
+b></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmti8.pfb></opt/homebrew/Cellar/texlive/20260301/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></opt/homebrew/Cellar/
+texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pf
+b>
+Output written on VersionIPSE.pdf (14 pages, 758615 bytes).
+Transcript written on VersionIPSE.log.
+************************************
+** Labels in starred environments **
+************************************
+
+*******************
+** Unused Labels **
+*******************
+-- VersionIPSE.tex      line  135: remove label sec:dir_prob
+-- VersionIPSE.tex      line  169: remove label sec:inv_prob
+-- VersionIPSE.tex      line  344: remove label eq:regression
+-- VersionIPSE.tex      line  346: remove label eq:regression
+-- VersionIPSE.tex      line  566: remove label eq:example2
+-- VersionIPSE.tex      line  568: remove label eq:example2
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

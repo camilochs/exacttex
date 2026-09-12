@@ -1,0 +1,135 @@
+{
+ "paper": "2301.00303",
+ "main": "00-root.tex",
+ "files": [
+  {
+   "file": "00-root.tex",
+   "chars_before": 6286,
+   "chars_after": 6338,
+   "emitted": true,
+   "identity": "import-ext-only",
+   "lines_differing": 6
+  },
+  {
+   "file": "01-introduction.tex",
+   "chars_before": 3126,
+   "chars_after": 3123,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "02-related-work.tex",
+   "chars_before": 4186,
+   "chars_after": 4186,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "03-framework.tex",
+   "chars_before": 4886,
+   "chars_after": 4883,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "04-experiments.tex",
+   "chars_before": 10183,
+   "chars_after": 10162,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "05-analysis.tex",
+   "chars_before": 13307,
+   "chars_after": 13283,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "06-conclusion.tex",
+   "chars_before": 716,
+   "chars_after": 716,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "07-appendix.tex",
+   "chars_before": 12407,
+   "chars_after": 12380,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 8,
+ "chars_before": 55097,
+ "chars_after": 55071,
+ "delta_pct": -0.04718950215075231,
+ "unrepaired": {
+  "chars_after": 55065,
+  "chars_before": 55097,
+  "converted_files": 8,
+  "check_exit": 0,
+  "coverage": 0.058068,
+  "bibliography": {
+   "state": "complete",
+   "entries": 73
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.05807938726246438
+ },
+ "stats": {
+  "cite_cmds_live": 73,
+  "cite_keys_live": 84,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 6,
+  "other_cite_cmds": 0,
+  "labels_live": 28,
+  "labels_outside_grammar": 0,
+  "refs_live": 30,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 10,
+  "cite_cmds_annotated": 67,
+  "cite_keys_annotated": 67,
+  "ids_annotated": 26,
+  "refs_annotated": 30,
+  "inputs_root": 7,
+  "inputs_imported": 7,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 2,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "05-analysis.tex",
+   "line": 80,
+   "token": "@id(fig:answer-accuracy-model-size)",
+   "wrapper": "?",
+   "context": "\\label{fig:answer-accuracy-model-size}}"
+  },
+  {
+   "file": "05-analysis.tex",
+   "line": 85,
+   "token": "@id(fig:reason-factuality-model-size)",
+   "wrapper": "?",
+   "context": "\\label{fig:reason-factuality-model-size}}"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.058062,
+ "bibliography": {
+  "state": "complete",
+  "entries": 73
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

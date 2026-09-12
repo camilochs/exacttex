@@ -1,0 +1,3 @@
+planted=ssec:queryAlg sites=[('paperQuantum.xtex', 143), ('paperQuantum.xtex', 83)]
+xtex new=[('XT1001', 'ssec:queryAlg', 'paperQuantum.xtex', 143)]
+texlab new=[('ERROR', 'paperQuantum.tex', 83, 'Duplicate label'), ('ERROR', 'paperQuantum.tex', 143, 'Duplicate label'), ('info', 'paperQuantum.tex', 83, 'Unused label')]

@@ -1,0 +1,3 @@
+planted=sec:results__ghost sites=[('trainyard.xtex', 99)]
+xtex new=[('XT1003', 'sec:results__ghost', 'trainyard.xtex', 99)]
+texlab new=[('ERROR', 'trainyard.tex', 99, 'Undefined reference'), ('info', 'trainyard.tex', 180, 'Unused label')]

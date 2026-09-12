@@ -1,0 +1,105 @@
+{
+ "paper": "1803.08424",
+ "main": "RJwrapper.tex",
+ "files": [
+  {
+   "file": "RJwrapper.tex",
+   "chars_before": 542,
+   "chars_after": 550,
+   "emitted": true,
+   "identity": "import-ext-only",
+   "lines_differing": 1
+  },
+  {
+   "file": "tang.tex",
+   "chars_before": 18792,
+   "chars_after": 18768,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 2,
+ "chars_before": 19334,
+ "chars_after": 19318,
+ "delta_pct": -0.08275576704251578,
+ "unrepaired": {
+  "chars_after": 19318,
+  "chars_before": 19334,
+  "converted_files": 2,
+  "check_exit": 1,
+  "coverage": 0.03929,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`tang.bib` could not be read"
+  },
+  "errors": 1,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.08275576704251578
+ },
+ "stats": {
+  "cite_cmds_live": 18,
+  "cite_keys_live": 18,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 8,
+  "labels_outside_grammar": 0,
+  "refs_live": 8,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 8,
+  "cite_cmds_annotated": 18,
+  "cite_keys_annotated": 18,
+  "ids_annotated": 8,
+  "refs_annotated": 7,
+  "inputs_root": 1,
+  "inputs_imported": 1,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 1,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [
+  {
+   "code": "XT1003",
+   "name": "figure:dlm_caption",
+   "file": "tang.xtex",
+   "line": 266,
+   "message": "identifier `figure:dlm_caption` is not declared \u2014 did you mean `figure:lm_caption`?",
+   "classification": "compiler-unreachable: \\label{figure:dlm_caption} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.038047,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`tang.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "tang.xtex",
+    "offset": 641,
+    "length": 7,
+    "line": 19,
+    "column": 17
+   },
+   "message": "citation checking unavailable: `tang.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

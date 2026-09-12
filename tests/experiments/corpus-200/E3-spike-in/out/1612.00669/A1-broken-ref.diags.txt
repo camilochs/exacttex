@@ -1,0 +1,3 @@
+planted=sec:primer__ghost sites=[('body.xtex', 76)]
+xtex new=[]
+texlab new=[('ERROR', 'body.tex', 76, 'Undefined reference')]

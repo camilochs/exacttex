@@ -1,0 +1,27 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[('ERROR', '2ndrevGR.tex', 52, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 64, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 66, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 73, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 76, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 87, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 149, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 151, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 192, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 196, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 197, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 236, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 242, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 243, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 307, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 358, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 431, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 466, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 477, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 620, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 622, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 624, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 646, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 664, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 677, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 687, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 689, 'Undefined reference'), ('ERROR', '2ndrevGR.tex', 691, 'Undefined reference'), ('info', '2ndrevGR.tex', 90, 'Unused label'), ('info', '2ndrevGR.tex', 102, 'Unused label'), ('info', '2ndrevGR.tex', 130, 'Unused label'), ('info', '2ndrevGR.tex', 247, 'Unused label'), ('info', '2ndrevGR.tex', 281, 'Unused label'), ('info', '2ndrevGR.tex', 295, 'Unused label'), ('info', '2ndrevGR.tex', 303, 'Unused label'), ('info', '2ndrevGR.tex', 315, 'Unused label'), ('info', '2ndrevGR.tex', 361, 'Unused label'), ('info', '2ndrevGR.tex', 370, 'Unused label'), ('info', '2ndrevGR.tex', 385, 'Unused label'), ('info', '2ndrevGR.tex', 393, 'Unused label')]
+tectonic exit=1 warnings=['eq:ACM1', 'eq:H1', 'eq:H2', 'eq:M', 'eq:bayes', 'eq:chi.cond', 'eq:est_eq', 'eq:eta.g', 'eq:eta_2l', 'eq:eta_2lhat', 'eq:eta_ex1', 'eq:eta_single', 'eq:etahat.g', 'eq:etahat_single', 'eq:g.H', 'eq:g.H1', 'eq:info', 'eq:mar.f', 'eq:phi', 'eq:phix', 'eq:ratio', 'eq:ratio2', 'eq:res.Ident', 'eq:simple', 'eq:summary', 'eq:trans.res', 'eq:trans.res_ex2', 'eq:varphi', 'eq:z', 'fig:LVD', 'fig:fdr', 'fig:power', 'fig:pw', 'fig:real_LD_new', 'fig:real_MV1', 'fig:real_MV2', 'fig:std2', 'fig:type1', 'fig:type1_2', 'tb:MVtypes', 'tb:SB1', 'tb:SB2', 'tb:SB_real', 'tb:example'] secs=2
+tems.tex:443: Invalid UTF-8 byte or sequence at line 443 replaced by U+FFFD.
+warning: listofitems.tex:446: Invalid UTF-8 byte or sequence at line 446 replaced by U+FFFD.
+warning: listofitems.tex:446: Invalid UTF-8 byte or sequence at line 446 replaced by U+FFFD.
+warning: listofitems.tex:446: Invalid UTF-8 byte or sequence at line 446 replaced by U+FFFD.
+warning: listofitems.tex:448: Invalid UTF-8 byte or sequence at line 448 replaced by U+FFFD.
+warning: listofitems.tex:448: Invalid UTF-8 byte or sequence at line 448 replaced by U+FFFD.
+warning: listofitems.tex:451: Invalid UTF-8 byte or sequence at line 451 replaced by U+FFFD.
+warning: listofitems.tex:455: Invalid UTF-8 byte or sequence at line 455 replaced by U+FFFD.
+warning: listofitems.tex:455: Invalid UTF-8 byte or sequence at line 455 replaced by U+FFFD.
+warning: listofitems.tex:458: Invalid UTF-8 byte or sequence at line 458 replaced by U+FFFD.
+warning: listofitems.tex:458: Invalid UTF-8 byte or sequence at line 458 replaced by U+FFFD.
+warning: listofitems.tex:472: Invalid UTF-8 byte or sequence at line 472 replaced by U+FFFD.
+warning: listofitems.tex:475: Invalid UTF-8 byte or sequence at line 475 replaced by U+FFFD.
+warning: listofitems.tex:492: Invalid UTF-8 byte or sequence at line 492 replaced by U+FFFD.
+warning: listofitems.tex:508: Invalid UTF-8 byte or sequence at line 508 replaced by U+FFFD.
+warning: listofitems.tex:508: Invalid UTF-8 byte or sequence at line 508 replaced by U+FFFD.
+warning: listofitems.tex:509: Invalid UTF-8 byte or sequence at line 509 replaced by U+FFFD.
+warning: listofitems.tex:509: Invalid UTF-8 byte or sequence at line 509 replaced by U+FFFD.
+warning: listofitems.tex:519: Invalid UTF-8 byte or sequence at line 519 replaced by U+FFFD.
+warning: listofitems.tex:541: Invalid UTF-8 byte or sequence at line 541 replaced by U+FFFD.
+warning: listofitems.tex:541: Invalid UTF-8 byte or sequence at line 541 replaced by U+FFFD.
+error: can't open path `citation_rev.bib`
+caused by: not found

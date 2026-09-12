@@ -1,0 +1,3 @@
+planted=koehler2021-elevate-imgproc__ghost sites=[('declaration.xtex', 9)]
+xtex new=[('XT1005', 'koehler2021-elevate-imgproc__ghost', 'declaration.xtex', 9)]
+texlab new=[]

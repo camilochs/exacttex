@@ -1,0 +1,360 @@
+exit=2
+lines=771
+unique_findings=253
+arning 1 in main.tex line 275: Command terminated with space.
+\newblock In W.~Li, W.~Susilo, U.~K. Tupakula, R.~Safavi-Naini, and   
+         ^
+Warning 13 in main.tex line 277: Intersentence spacing (`\@') should perhaps be used.
+  Mar. 2009. ACM.   
+                ^
+Warning 1 in main.tex line 281: Command terminated with space.
+\newblock {ADsafety}: Type-based verification of {JavaScript} sandboxing.   
+         ^
+Warning 1 in main.tex line 282: Command terminated with space.
+\newblock In {\em 20th {USENIX} Security Symposium, San Francisco, CA, USA,   
+         ^
+Warning 8 in main.tex line 283: Wrong length of dash may have been used.
+  August 8-12, 2011, Proceedings}. {USENIX} Association, 2011.   
+          ^
+Warning 1 in main.tex line 287: Command terminated with space.
+\newblock Flexible access control for {JavaScript}.   
+         ^
+Warning 1 in main.tex line 288: Command terminated with space.
+\newblock In A.~L. Hosking, P.~T. Eugster, and C.~V. Lopes, editors, {\em   
+         ^
+Warning 8 in main.tex line 291: Wrong length of dash may have been used.
+  of {SPLASH} 2013, Indianapolis, IN, USA, October 26-31, 2013}, pages   
+                                                     ^
+Warning 1 in main.tex line 296: Command terminated with space.
+\newblock   
+         ^
+Warning 1 in main.tex line 302: Command terminated with space.
+\newblock \url{https://code.google.com/p/es-lab/wiki/SecureEcmaScript}, 2015.   
+         ^
+Warning 1 in main.tex line 306: Command terminated with space.
+\newblock Software transactional memory.   
+         ^
+Warning 1 in main.tex line 307: Command terminated with space.
+\newblock In {\em Proceedings of the 14th {ACM} {SIGPLAN} Symposium on   
+         ^
+Warning 13 in main.tex line 309: Intersentence spacing (`\@') should perhaps be used.
+  Canada, 1995. ACM Press, New York, NY, USA.   
+                                            ^
+Warning 1 in main.tex line 313: Command terminated with space.
+\newblock   
+         ^
+Warning 1 in main.tex line 319: Command terminated with space.
+\newblock Chaperones and impersonators: Run-time support for reasonable   
+         ^
+Warning 1 in main.tex line 321: Command terminated with space.
+\newblock In G.~T. Leavens and M.~B. Dwyer, editors, {\em OOPSLA}, pages   
+         ^
+Warning 1 in main.tex line 326: Command terminated with space.
+\newblock {JavaScript} in {JavaScript} (js.js): Sandboxing third-party scripts.   
+         ^
+Warning 1 in main.tex line 327: Command terminated with space.
+\newblock In E.~M. Maximilien, editor, {\em 3rd {USENIX} Conference on Web   
+         ^
+Warning 1 in main.tex line 333: Command terminated with space.
+\newblock Proxies: Design principles for robust object-oriented intercession   
+         ^
+Warning 1 in main.tex line 335: Command terminated with space.
+\newblock In W.~D. Clinger, editor, {\em DLS}, pages 59--72. ACM, 2010.   
+         ^
+Warning 1 in main.tex line 339: Command terminated with space.
+\newblock Trustworthy proxies - virtualizing objects with invariants.   
+         ^
+Warning 8 in main.tex line 339: Wrong length of dash may have been used.
+\newblock Trustworthy proxies - virtualizing objects with invariants.   
+                              ^
+Warning 1 in main.tex line 340: Command terminated with space.
+\newblock In G.~Castagna, editor, {\em ECOOP}, volume 7920 of {\em Lecture   
+         ^
+Warning 1 in main.tex line 346: Command terminated with space.
+\newblock Compartmental memory management in a modern web browser.   
+         ^
+Warning 1 in main.tex line 347: Command terminated with space.
+\newblock In H.~Boehm and D.~F. Bacon, editors, {\em Proceedings of the 10th   
+         ^
+Warning 8 in main.tex line 349: Wrong length of dash may have been used.
+  June 04 - 05, 2011}, pages 119--128. {ACM}, 2011.   
+          ^
+Warning 1 in main.tex line 353: Command terminated with space.
+\newblock Statically scoped object adaptation with expanders.   
+         ^
+Warning 1 in main.tex line 354: Command terminated with space.
+\newblock In {\em Proceedings of the 21th {ACM} {SIGPLAN} Conference on Object   
+         ^
+Warning 1 in main.tex line 360: Command terminated with space.
+\newblock {\em Transactional information systems: theory, algorithms, and the   
+         ^
+Warning 1 in main.tex line 362: Command terminated with space.
+\newblock Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 2001.   
+         ^
+Warning 24 in appendix.example.tex line 9: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/motivation}  
+^
+Warning 13 in appendix.example.tex line 30: Intersentence spacing (`\@') should perhaps be used.
+browser's DOM.  
+             ^
+Warning 24 in appendix.example.tex line 38: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/motivation/issues}  
+^
+Warning 24 in appendix.example.tex line 65: Delete this space to maintain correct pagereferences.
+  \label{fig:appendix/motivation/normal}  
+ ^
+Warning 24 in appendix.example.tex line 105: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/motivation/isolation}  
+^
+Warning 24 in appendix.example.tex line 137: Delete this space to maintain correct pagereferences.
+  \label{fig:appendix/motivation/sandbox}  
+ ^
+Warning 11 in appendix.example.tex line 163: You should use \ldots to achieve an ellipsis.
+Section~\ref{sec:appendix/motivation/dom}. The \lstinline{<!-- ... -->} comment is a  
+                                                               ^^^
+Warning 26 in appendix.example.tex line 163: You ought to remove spaces in front of punctuation.
+Section~\ref{sec:appendix/motivation/dom}. The \lstinline{<!-- ... -->} comment is a  
+                                                              ^
+Warning 24 in appendix.example.tex line 208: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/motivation/commit}  
+^
+Warning 24 in appendix.example.tex line 445: Delete this space to maintain correct pagereferences.
+  \label{fig:appendix/motivation/example/tree}  
+ ^
+Warning 24 in appendix.example.tex line 483: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/motivation/dom}  
+^
+Warning 24 in appendix.example.tex line 518: Delete this space to maintain correct pagereferences.
+  \label{fig:appendix/motivation/withdom}  
+ ^
+Warning 24 in appendix.example.tex line 539: Delete this space to maintain correct pagereferences.
+  \label{fig:appendix/motivation/template}  
+ ^
+Warning 13 in appendix.example.tex line 550: Intersentence spacing (`\@') should perhaps be used.
+needs access to the browser's DOM. Calls to the native DOM interface  
+                                 ^
+Warning 24 in appendix.example.tex line 600: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/motivation/transactions}  
+^
+Warning 24 in appendix.example.tex line 629: Delete this space to maintain correct pagereferences.
+  \label{fig:appendix/overview/example2}  
+ ^
+Warning 24 in appendix.example.tex line 658: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/appendix/motivation/full}  
+^
+Warning 24 in appendix.example.tex line 733: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/appendix/motivation/effects}  
+^
+Warning 1 in appendix.tex line 3: Command terminated with space.
+\cleardoublepage  
+                ^
+Warning 24 in appendix.scenarios.tex line 17: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/application}  
+^
+Warning 24 in appendix.scenarios.tex line 29: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/application/treatjs}  
+^
+Warning 24 in appendix.scenarios.tex line 82: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/application/treatjsonline}  
+^
+Warning 2 in appendix.scenarios.tex line 86: Non-breaking space (`~') should have been used.
+} \cite{KeilThiemann:TreatJSOnline} is a web frontend for experimentation with  
+ ^
+Warning 24 in appendix.scenarios.tex line 115: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/application/observer}  
+^
+Warning 24 in appendix.scenarios.tex line 146: Delete this space to maintain correct pagereferences.
+  \label{fig:observer}  
+ ^
+Warning 12 in appendix.scenarios.tex line 161: Interword spacing (`\ ') should perhaps be used.
+compare the results. \lstinline{observerOf} checks whether the sandboxed result  
+                    ^
+Warning 1 in appendix.tex line 6: Command terminated with space.
+\cleardoublepage  
+                ^
+Warning 24 in appendix.semantics.tex line 19: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/semantics}  
+^
+Warning 24 in appendix.semantics.tex line 30: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/semantics/syntax}  
+^
+Warning 24 in appendix.semantics.tex line 50: Delete this space to maintain correct pagereferences.
+  \label{fig:syntax_lj}  
+ ^
+Warning 24 in appendix.semantics.tex line 63: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/semantics/domains}  
+^
+Warning 24 in appendix.semantics.tex line 80: Delete this space to maintain correct pagereferences.
+  \label{fig:domains_lj}  
+ ^
+Warning 24 in appendix.semantics.tex line 121: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/semantics/evaluation}  
+^
+Warning 24 in appendix.semantics.tex line 141: Delete this space to maintain correct pagereferences.
+  \label{fig:terms_lj}  
+ ^
+Warning 24 in appendix.semantics.tex line 324: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/semantics/extension}  
+^
+Warning 24 in appendix.semantics.tex line 339: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/semantics/sandbox}  
+^
+Warning 24 in appendix.semantics.tex line 393: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/semantics/sandbox/wrap}  
+^
+Warning 24 in appendix.semantics.tex line 499: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/semantics/sandbox/trap}  
+^
+Warning 1 in appendix.tex line 9: Command terminated with space.
+\cleardoublepage  
+                ^
+Warning 24 in appendix.technicalresults.tex line 10: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/technicalresults}  
+^
+Warning 24 in appendix.technicalresults.tex line 31: Delete this space to maintain correct pagereferences.
+\label{sec:equivalence}  
+^
+Warning 1 in appendix.technicalresults.tex line 41: Command terminated with space.
+    \Leftrightarrow  
+                   ^
+Warning 1 in appendix.technicalresults.tex line 42: Command terminated with space.
+    \ljConst=\ljConst  
+                     ^
+Warning 1 in appendix.technicalresults.tex line 51: Command terminated with space.
+    \Leftrightarrow  
+                   ^
+Warning 36 in appendix.technicalresults.tex line 52: You should put a space in front of parenthesis.
+    \eqstore{(\ljStore, \ljStore(\ljLoc))}{(\ljStore', \ljStore'(\ljLoc'))}  
+                                                                ^
+Warning 1 in appendix.technicalresults.tex line 63: Command terminated with space.
+    \wedge  
+          ^
+Warning 1 in appendix.technicalresults.tex line 65: Command terminated with space.
+    \wedge  
+          ^
+Warning 1 in appendix.technicalresults.tex line 77: Command terminated with space.
+    \wedge  
+          ^
+Warning 36 in appendix.technicalresults.tex line 78: You should put a space in front of parenthesis.
+    \forall\ljConst\in\dom\ljDic.\eqstore{(\ljStore, \ljDic(\ljConst))}{(\ljStore', \ljDic'(\ljConst))}  
+                                                                                           ^
+Warning 1 in appendix.technicalresults.tex line 91: Command terminated with space.
+    \wedge  
+          ^
+Warning 1 in appendix.technicalresults.tex line 92: Command terminated with space.
+    \ljAbs\ljVarx\ljExpe=\ljAbs\ljVarx\ljExpf  
+                                             ^
+Warning 1 in appendix.technicalresults.tex line 103: Command terminated with space.
+    \wedge  
+          ^
+Warning 1 in appendix.technicalresults.tex line 115: Command terminated with space.
+    \wedge  
+          ^
+Warning 1 in appendix.technicalresults.tex line 117: Command terminated with space.
+    \wedge  
+          ^
+Warning 1 in appendix.technicalresults.tex line 131: Command terminated with space.
+    \wedge  
+          ^
+Warning 1 in appendix.technicalresults.tex line 132: Command terminated with space.
+    \ljSbx\ljVarx\ljExpe=\ljSbx\ljVarx\ljExpf  
+                                             ^
+Warning 1 in appendix.technicalresults.tex line 142: Command terminated with space.
+    \eqenv{\ljStore}{\ljStore'} \Leftrightarrow \forall\ljVar\in\dom\ljEnv.  
+                                               ^
+Warning 40 in appendix.technicalresults.tex line 152: You should put punctuation outside inner math mode.
+  $.$ $\ljEnv_j \entails \langle \ljStore_j,\ljExp \rangle \eval \langle  
+   ^
+Warning 1 in appendix.tex line 12: Command terminated with space.
+\cleardoublepage  
+                ^
+Warning 24 in appendix.relatedwork.tex line 9: Delete this space to maintain correct pagereferences.
+\label{sec:relatedwork}  
+^
+Warning 12 in appendix.relatedwork.tex line 58: Interword spacing (`\ ') should perhaps be used.
+execution environments. Values that are defined and used inside, e.g. local  
+                                                                     ^
+Warning 12 in appendix.relatedwork.tex line 61: Interword spacing (`\ ') should perhaps be used.
+Patil et al. \cite{PatilDongLiLiangJiang2011} present \emph{JCShadow}, a  
+            ^
+Warning 2 in appendix.relatedwork.tex line 61: Non-breaking space (`~') should have been used.
+Patil et al. \cite{PatilDongLiLiangJiang2011} present \emph{JCShadow}, a  
+            ^
+Warning 2 in appendix.relatedwork.tex line 73: Non-breaking space (`~') should have been used.
+(e.g., \cite{GoogleCaja,MillerSamuelLaurieAwadStay:caja_safe,FaecbookJS,ADsafe})  
+      ^
+Warning 2 in appendix.relatedwork.tex line 114: Non-breaking space (`~') should have been used.
+contracts. It comes with an algorithm \cite{HeideggerThiemann2011} that infers a  
+                                     ^
+Warning 2 in appendix.relatedwork.tex line 132: Non-breaking space (`~') should have been used.
+JSConTest2 \cite{KeilThiemann2013-Proxy} monitors read and write operations on  
+          ^
+Warning 1 in appendix.tex line 15: Command terminated with space.
+\cleardoublepage  
+                ^
+Warning 24 in appendix.evaluation.tex line 9: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/evaluation}  
+^
+Warning 26 in appendix.evaluation.tex line 22: You ought to remove spaces in front of punctuation.
+Each benchmark is complex and demanding .  
+                                       ^
+Warning 24 in appendix.evaluation.tex line 38: Delete this space to maintain correct pagereferences.
+\label{sec:evaluation/testingprocedure}  
+^
+Warning 24 in appendix.evaluation.tex line 59: Delete this space to maintain correct pagereferences.
+\label{sec:evaluation/results}  
+^
+Warning 44 in appendix.evaluation.tex line 64: User Regex: -2:Vertical rules in tables are ugly.
+  \begin{tabular}{l || r || r | r || r | r}  
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 24 in appendix.evaluation.tex line 215: Delete this space to maintain correct pagereferences.
+  \label{fig:DecentJS/Evaluation/Results/Timings}  
+ ^
+Warning 44 in appendix.evaluation.tex line 221: User Regex: -2:Vertical rules in tables are ugly.
+  \begin{tabular}{l || r || r || r | r | r}  
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 24 in appendix.evaluation.tex line 367: Delete this space to maintain correct pagereferences.
+    \label{fig:DecentJS/Evaluation/Results/Statisics}  
+   ^
+Warning 36 in appendix.evaluation.tex line 393: You should put a space in front of parenthesis.
+\mbox{\lstinline{new Object()}} and \mbox{\lstinline{Object.create()}}, but not to those  
+                           ^
+Warning 36 in appendix.evaluation.tex line 393: You should put a space in front of parenthesis.
+\mbox{\lstinline{new Object()}} and \mbox{\lstinline{Object.create()}}, but not to those  
+                                                                  ^
+Warning 24 in appendix.evaluation.tex line 439: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/results/score}  
+^
+Warning 44 in appendix.evaluation.tex line 446: User Regex: -2:Vertical rules in tables are ugly.
+  \begin{tabular}{ l || r | r || r}  
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 24 in appendix.evaluation.tex line 542: Delete this space to maintain correct pagereferences.
+  \label{fig:appendix/benchmarks/scores}  
+ ^
+Warning 24 in appendix.evaluation.tex line 551: Delete this space to maintain correct pagereferences.
+\label{sec:appendix/results/memory}  
+^
+Warning 44 in appendix.evaluation.tex line 556: User Regex: -2:Vertical rules in tables are ugly.
+  \begin{tabular}{ l || r || r || r || r}  
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 24 in appendix.evaluation.tex line 640: Delete this space to maintain correct pagereferences.
+  \label{fig:DecentJS/Evaluation/Memory/Baseline}  
+ ^
+Warning 44 in appendix.evaluation.tex line 646: User Regex: -2:Vertical rules in tables are ugly.
+  \begin{tabular}{ l || r | r || r | r || r | r || r | r}  
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 8 in appendix.evaluation.tex line 735: Wrong length of dash may have been used.
+    Memory usage of a raw sandbox run without effect logging. Column \textbf{Virtual} shows the virtual memory size, column \textbf{Resident} shows the resident set size, column \textbf{Text/Data} shows the Text/Data segment size, and column \textbf{Text/Data} shows the Text/Data segment size. Sub-column \textit{size} shows the size in MByte and sub-column \textit{diff.} shows the difference to the baseline (Sandbox size - Baseline size) in MByte.}  
+                                                                                                                                                                                                                                                                                                                                                                                                                                         ^
+Warning 24 in appendix.evaluation.tex line 736: Delete this space to maintain correct pagereferences.
+  \label{fig:DecentJS/Evaluation/Memory/SandboxWithoutEffects}  
+ ^
+Warning 44 in appendix.evaluation.tex line 742: User Regex: -2:Vertical rules in tables are ugly.
+  \begin{tabular}{ l || r | r || r | r || r | r || r | r}  
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 8 in appendix.evaluation.tex line 831: Wrong length of dash may have been used.
+    Memory usage of a full run with fine-grained effect logging. Column \textbf{Virtual} shows the virtual memory size, column \textbf{Resident} shows the resident set size, column \textbf{Text/Data} shows the Text/Data segment size, and column \textbf{Text/Data} shows the Text/Data segment size. Sub-column \textit{size} shows the size in MByte and sub-column \textit{diff.} shows the difference to the baseline (Sandbox size - Baseline size) in MByte.}  
+                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+Warning 24 in appendix.evaluation.tex line 832: Delete this space to maintain correct pagereferences.
+  \label{fig:DecentJS/Evaluation/Memory/SandboxWithEffects}  
+ ^

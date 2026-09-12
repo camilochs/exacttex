@@ -1,0 +1,3 @@
+planted=Bloch__ghost sites=[('QCC_arxiv.xtex', 236)]
+xtex new=[('XT1003', 'Bloch__ghost', 'QCC_arxiv.xtex', 236)]
+texlab new=[]

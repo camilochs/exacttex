@@ -1,0 +1,3 @@
+planted=tab:models sites=[('MT_kinetochore_dynamics.xtex', 407), ('MT_kinetochore_dynamics.xtex', 131)]
+xtex new=[('XT1001', 'tab:models', 'MT_kinetochore_dynamics.xtex', 407), ('XT1004', 'tab:models', 'MT_kinetochore_dynamics.xtex', 175), ('XT1004', 'tab:models', 'MT_kinetochore_dynamics.xtex', 449), ('XT1004', 'tab:models', 'MT_kinetochore_dynamics.xtex', 687)]
+texlab new=[]

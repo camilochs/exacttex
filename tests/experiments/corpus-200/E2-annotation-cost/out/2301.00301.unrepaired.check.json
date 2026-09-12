@@ -1,0 +1,202 @@
+{
+ "coverage": 0.016817,
+ "bibliography": {
+  "state": "complete",
+  "entries": 31
+ },
+ "diagnostics": [
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "lem:selfconcordant-hessian",
+   "span": {
+    "file": "appendix.xtex",
+    "offset": 10552,
+    "length": 31,
+    "line": 111,
+    "column": 118
+   },
+   "message": "identifier `lem:selfconcordant-hessian` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "pate_appendix.xtex",
+      "offset": 23210,
+      "length": 31,
+      "line": 285,
+      "column": 118
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "stability",
+   "span": {
+    "file": "appendix.xtex",
+    "offset": 11173,
+    "length": 14,
+    "line": 120,
+    "column": 12
+   },
+   "message": "identifier `stability` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "pate_appendix.xtex",
+      "offset": 23783,
+      "length": 14,
+      "line": 294,
+      "column": 12
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "prop:generalnorm",
+   "span": {
+    "file": "appendix.xtex",
+    "offset": 22135,
+    "length": 21,
+    "line": 276,
+    "column": 20
+   },
+   "message": "identifier `prop:generalnorm` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "pate_appendix.xtex",
+      "offset": 19946,
+      "length": 21,
+      "line": 256,
+      "column": 20
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "lem:determinant",
+   "span": {
+    "file": "pate_appendix.xtex",
+    "offset": 13868,
+    "length": 15,
+    "line": 160,
+    "column": 30
+   },
+   "message": "identifier `lem:determinant` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "unknown-open",
+   "name": "lem:tailbound2DP",
+   "span": {
+    "file": "pate_appendix.xtex",
+    "offset": 18413,
+    "length": 16,
+    "line": 227,
+    "column": 59
+   },
+   "message": "identifier `lem:tailbound2DP` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:gap",
+   "span": {
+    "file": "appendix.xtex",
+    "offset": 2165,
+    "length": 7,
+    "line": 33,
+    "column": 16
+   },
+   "message": "identifier `fig:gap` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:gap",
+   "span": {
+    "file": "appendix.xtex",
+    "offset": 5848,
+    "length": 7,
+    "line": 64,
+    "column": 26
+   },
+   "message": "identifier `fig:gap` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:comp",
+   "span": {
+    "file": "appendix.xtex",
+    "offset": 5926,
+    "length": 8,
+    "line": 64,
+    "column": 104
+   },
+   "message": "identifier `fig:comp` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:comp",
+   "span": {
+    "file": "appendix.xtex",
+    "offset": 6947,
+    "length": 8,
+    "line": 70,
+    "column": 41
+   },
+   "message": "identifier `fig:comp` is not declared",
+   "related": []
+  },
+  {
+   "code": "XT1003",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "figure",
+   "name": "fig:comp",
+   "span": {
+    "file": "appendix.xtex",
+    "offset": 7171,
+    "length": 8,
+    "line": 73,
+    "column": 16
+   },
+   "message": "identifier `fig:comp` is not declared",
+   "related": []
+  }
+ ]
+}

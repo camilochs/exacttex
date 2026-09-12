@@ -1,0 +1,106 @@
+{
+ "paper": "2301.00304",
+ "main": "New_IEEEtran_how-to.tex",
+ "files": [
+  {
+   "file": "New_IEEEtran_how-to.tex",
+   "chars_before": 87168,
+   "chars_after": 87066,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 87168,
+ "chars_after": 87066,
+ "delta_pct": -0.11701541850220264,
+ "unrepaired": {
+  "chars_after": 87066,
+  "chars_before": 87168,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.040257,
+  "bibliography": {
+   "state": "complete",
+   "entries": 113
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.11701541850220264
+ },
+ "stats": {
+  "cite_cmds_live": 101,
+  "cite_keys_live": 124,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 8,
+  "other_cite_cmds": 0,
+  "labels_live": 34,
+  "labels_outside_grammar": 0,
+  "refs_live": 30,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 4,
+  "float_envs": 12,
+  "cite_cmds_annotated": 88,
+  "cite_keys_annotated": 99,
+  "ids_annotated": 34,
+  "refs_annotated": 30,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 5,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "New_IEEEtran_how-to.tex",
+   "line": 139,
+   "token": "@cite(gulati2020conformer)",
+   "wrapper": "makecell",
+   "context": "\\cite{google21domain, selftrainASRDUST, selftrainSoft1} & \\makecell{Teacher-Student   \\\\ Hard and soft labels} & \\makecell{Conformer RNN-T \\cite{gulati2020confo"
+  },
+  {
+   "file": "New_IEEEtran_how-to.tex",
+   "line": 139,
+   "token": "@cite(rnnt)",
+   "wrapper": "?",
+   "context": "\\cite{google21domain, selftrainASRDUST, selftrainSoft1} & \\makecell{Teacher-Student   \\\\ Hard and soft labels} & \\makecell{Conformer RNN-T \\cite{gulati2020confo"
+  },
+  {
+   "file": "New_IEEEtran_how-to.tex",
+   "line": 143,
+   "token": "@cite(lstmrnn)",
+   "wrapper": "makecell",
+   "context": "\\cite{selftrainASRSoftFirst, selftrainSoftpovey} & \\makecell{Teacher-Student \\\\ Soft labels}  & \\makecell{TDNN-LSTM\\cite{lstmrnn}}& \\makecell{Noise, Far-field} "
+  },
+  {
+   "file": "New_IEEEtran_how-to.tex",
+   "line": 155,
+   "token": "@cite(peddinti2015time,Povey_ASRU2011)",
+   "wrapper": "makecell",
+   "context": "\\cite{adverserialASR1, adverserialASR2, adverserialASR3} & \\makecell{Domain Adversarial Training}  &\\makecell{TDNN Kaldi \\cite{peddinti2015time,Povey_ASRU2011} "
+  },
+  {
+   "file": "New_IEEEtran_how-to.tex",
+   "line": 173,
+   "token": "@cite(conneau21_interspeech)",
+   "wrapper": "makecell",
+   "context": "\\cite{dehaven2022improving,NOWAKOWSKI2023103149} & \\makecell{Continual Pre-Training } & \\makecell{XLSR-53 \\cite{conneau21_interspeech} \\\\ wav2vec2}& \\makecell{L"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.040257,
+ "bibliography": {
+  "state": "complete",
+  "entries": 113
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

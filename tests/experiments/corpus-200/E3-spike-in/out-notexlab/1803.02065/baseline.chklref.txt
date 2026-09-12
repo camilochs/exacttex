@@ -1,0 +1,526 @@
+pdf=1
+exit=0
+lines=663
+unique_findings=0
+rocessing
+(ucs)             load ucs package to force utf8x processing.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/utf8.def
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/omsenc.d
+fu)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ot1enc.d
+fu)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/t1enc.df
+u)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ts1enc.d
+fu))))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/psnfss/t1phv.
+fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def)
+No file main.aux.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/grfext/grfext
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/psnfss/ot1phv
+.fd)
+Overfull \hbox (12.7316pt too wide) in paragraph at lines 100--100
+[][] 
+
+Overfull \hbox (280.04623pt too wide) in paragraph at lines 100--100
+[][][]  
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/psnfss/ts1phv
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/microtype/mt-
+cmr.cfg)
+
+LaTeX Warning: Citation `Teitelman1966' on page 1 undefined on input line 119.
+
+
+LaTeX Warning: Citation `Steele1996' on page 1 undefined on input line 119.
+
+[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc
+/dvips/base/8r.enc}]
+
+LaTeX Warning: Citation `jameson2014choice' on page 2 undefined on input line 1
+23.
+
+
+LaTeX Warning: Citation `Pommeranz2012' on page 2 undefined on input line 125.
+
+
+LaTeX Warning: Citation `Pommeranz2012' on page 2 undefined on input line 125.
+
+
+LaTeX Warning: Citation `Ng2000' on page 2 undefined on input line 127.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--127
+[][][]\T1/phv/m/n/8/-25ls (+8) Talk at TED2017 [][]$\T1/phv/m/n/9/-25ls (+8) ht
+tps : / / www . ted . com / talks / stuart _ russell _ how _ ai _
+
+LaTeX Warning: Citation `Evans2016' on page 2 undefined on input line 127.
+
+
+LaTeX Warning: Citation `Tversky1974' on page 2 undefined on input line 127.
+
+
+LaTeX Warning: Citation `Kahneman1991' on page 2 undefined on input line 127.
+
+
+LaTeX Warning: Citation `Evans2016' on page 2 undefined on input line 127.
+
+
+LaTeX Warning: Citation `Armstrong2018' on page 2 undefined on input line 129.
+
+
+LaTeX Warning: Citation `Pu2009' on page 2 undefined on input line 133.
+
+
+LaTeX Warning: Citation `Pommeranz2012' on page 2 undefined on input line 133.
+
+
+LaTeX Warning: Citation `Aloysius2006' on page 2 undefined on input line 133.
+
+
+LaTeX Warning: Citation `Chen2004' on page 2 undefined on input line 133.
+
+
+LaTeX Warning: Citation `Cook1994' on page 2 undefined on input line 133.
+
+
+LaTeX Warning: Citation `Kay1997' on page 2 undefined on input line 133.
+
+
+LaTeX Warning: Citation `Pu2009' on page 2 undefined on input line 133.
+
+
+LaTeX Warning: Citation `Kay1995' on page 2 undefined on input line 133.
+
+
+LaTeX Warning: Citation `Pommeranz2012' on page 2 undefined on input line 135.
+
+
+LaTeX Warning: Citation `Kahneman2005' on page 2 undefined on input line 135.
+
+
+LaTeX Warning: Citation `Redelmeier1996a' on page 2 undefined on input line 135
+.
+
+[2]
+
+LaTeX Warning: Citation `ritter2014user' on page 3 undefined on input line 137.
+
+
+
+LaTeX Warning: Citation `ritter2014user' on page 3 undefined on input line 137.
+
+
+
+LaTeX Warning: Citation `bentham1996collected' on page 3 undefined on input lin
+e 141.
+
+
+LaTeX Warning: Citation `parfit2012makes' on page 3 undefined on input line 141
+.
+
+
+LaTeX Warning: Citation `hurka1993perfectionism' on page 3 undefined on input l
+ine 141.
+
+
+LaTeX Warning: Citation `McFadden1999' on page 3 undefined on input line 145.
+
+
+LaTeX Warning: Citation `Tversky1974' on page 3 undefined on input line 145.
+
+
+LaTeX Warning: Citation `Kahneman1991' on page 3 undefined on input line 145.
+
+
+LaTeX Warning: Citation `Seligman2005' on page 3 undefined on input line 145.
+
+
+LaTeX Warning: Citation `Diener2002' on page 3 undefined on input line 145.
+
+
+Overfull \hbox (0.10715pt too wide) in paragraph at lines 145--146
+\T1/phv/m/n/10/-25ls (+2) by com-mon views within clas-si-cal eco-nomics and ra
+-tio-nal ac-tor 
+[3] [4]
+Overfull \hbox (0.11427pt too wide) in paragraph at lines 242--243
+\T1/phv/m/n/10/-25ls (+8) them-selves watch-ing cat videos, we should stop the 
+cat videos 
+[5]
+Overfull \hbox (0.11655pt too wide) in paragraph at lines 263--264
+\T1/phv/m/n/10/-25ls (+17) orig-i-nal ques-tion to you all. Given ev-ery-thing 
+you've said, what 
+
+Overfull \hbox (0.11198pt too wide) in paragraph at lines 269--271
+\T1/phv/m/n/10/-25ls (+14) want to be do-ing given their op-tions. We get re-sp
+onses across 
+[6]
+
+LaTeX Warning: Citation `Ekstrand2016' on page 7 undefined on input line 375.
+
+
+LaTeX Warning: Citation `Ekstrand2015' on page 7 undefined on input line 375.
+
+
+LaTeX Warning: Citation `Kay1995' on page 7 undefined on input line 375.
+
+
+LaTeX Warning: Citation `Kay1997' on page 7 undefined on input line 375.
+
+
+Overfull \hbox (5.95032pt too wide) in paragraph at lines 375--376
+\T1/phv/m/n/10/-25ls (-20) be-haviourist ten-dency in rec-om-mender sys-tems is
+ well-articulated 
+
+Overfull \hbox (0.11633pt too wide) in paragraph at lines 375--376
+\T1/phv/m/n/10/-25ls (+13) by Ek-strand & Willem-sen [\T1/phv/b/n/10/-25ls (+13
+) ?\T1/phv/m/n/10/-25ls (+13) ]. They sug-gest one promis-ing cor- 
+
+LaTeX Warning: Citation `slovak2017reflective' on page 7 undefined on input lin
+e 377.
+
+
+LaTeX Warning: Citation `Seligman2005' on page 7 undefined on input line 377.
+
+
+LaTeX Warning: Citation `Diener2002' on page 7 undefined on input line 377.
+
+
+LaTeX Warning: Citation `Buss2000' on page 7 undefined on input line 377.
+
+[7]
+
+LaTeX Warning: Citation `Mekler2016' on page 8 undefined on input line 379.
+
+
+LaTeX Warning: Citation `Zimmerman2009' on page 8 undefined on input line 379.
+
+
+LaTeX Warning: Citation `hagman2015public' on page 8 undefined on input line 38
+1.
+
+
+LaTeX Warning: Citation `Bauman2014' on page 8 undefined on input line 385.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
+[][][]\T1/phv/m/n/8/-25ls (+20) Facebook post on 4th Jan-uary 2018 [][]$\T1/phv
+/m/n/9/-25ls (+20) https : / / www . facebook .
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
+\T1/phv/m/n/9/-25ls (+20) com / zuck ? hc _ ref = ARQqfRj278TDWekby2TLyI0A0meA4
+ \
+
+Underfull \hbox (badness 10000) in paragraph at lines 386--386
+[][][]\T1/phv/m/n/8/-25ls (+20) Facebook post on 11th Jan-uary 2018 [][]$\T1/ph
+v/m/n/9/-25ls (+20) https : / / www . facebook . com /
+
+Underfull \hbox (badness 10000) in paragraph at lines 386--386
+\T1/phv/m/n/9/-25ls (+20) zuck ? hc _ ref = ARTYPggwbi _ dcIl5f8M8r1dGZYZGhpWmA
+Xwj _
+[8] (./main.bbl [9{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts
+/enc/dvips/cm-super/cm-super-t1.enc}]) [10] (./main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></opt/hom
+ebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.
+pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/hel
+vetic/uhvb8ac.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts
+/type1/urw/helvetic/uhvbo8a.pfb></opt/homebrew/Cellar/texlive/20260301/share/te
+xmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></opt/homebrew/Cell
+ar/texlive/20260301/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (10 pages, 132916 bytes).
+Transcript written on main.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./main.tex (./sigchi-ext.cls
+Document Class: sigchi-ext 2015/1/05, David A. Shamma
+CHI Extended Abstracts template
+- updated by David A. Shamma.
+- refactored by Luis A. Leiva
+- original by Manas Tungare
+
+Available at https://github.com/sigchi.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/article.
+cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/size10.c
+lo)) (./acmcopyright.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/xkeyval/xkeyv
+al.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/xkeyval/xke
+yval.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/xkeyval/xkv
+utils.tex))))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/titlesec/titl
+esec.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/capti
+on.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/capti
+on3.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/url/url.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ragged2e/ragg
+ed2e.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/enumitem/enum
+item.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/footmisc/foot
+misc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/colo
+r.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hype
+rref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iftex
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/kvdefinekey
+s/kvdefinekeys.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdfescape/p
+dfescape.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdftexcmds/
+pdftexcmds.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/infwarerr/i
+nfwarerr.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hycolor/hycol
+or.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/name
+ref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/refcount/refc
+ount.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/gettitlestr
+ing/gettitlestring.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/etoolbox/etoo
+lbox.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/stringenc/s
+tringenc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/pd1e
+nc.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/intcalc/int
+calc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/puen
+c.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bitset/bits
+et.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bigintcalc/
+bigintcalc.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hpdf
+tex.def
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/rerunfilechec
+k/rerunfilecheck.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/uniquecount
+er/uniquecounter.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/placeins/plac
+eins.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/comment/comme
+nt.sty Excluding comment 'comment') Excluding comment 'CCSXML'
+Using 'Abbrev' bibliography style
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fontenc.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/textcomp
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/psnfss/helvet
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/preprint/bala
+nce.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/booktabs/book
+tabs.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ccicons/ccico
+ns.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/savetrees/sav
+etrees.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/ifpdf
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iflua
+tex.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/microtype/mic
+rotype.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/microtype/mic
+rotype-pdftex.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/microtype/mic
+rotype.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/inputenc
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ucs/utf8x.def
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/utf8.def
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/omsenc.d
+fu)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ot1enc.d
+fu)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/t1enc.df
+u)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ts1enc.d
+fu))))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/psnfss/t1phv.
+fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def) (./main.aux)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/grfext/grfext
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg)) (./main.out) (./main.out)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/psnfss/ot1phv
+.fd)
+Overfull \hbox (12.7316pt too wide) in paragraph at lines 100--100
+[][] 
+
+Overfull \hbox (280.04623pt too wide) in paragraph at lines 100--100
+[][][]  
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/psnfss/ts1phv
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/microtype/mt-
+cmr.cfg) [1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pd
+ftex/updmap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/
+fonts/enc/dvips/base/8r.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 127--127
+[][][]\T1/phv/m/n/8/-25ls (+8) Talk at TED2017 [][]$\T1/phv/m/n/9/-25ls (+8) ht
+tps : / / www . ted . com / talks / stuart _ russell _ how _ ai _
+[2]
+Overfull \hbox (0.10715pt too wide) in paragraph at lines 145--146
+\T1/phv/m/n/10/-25ls (+2) by com-mon views within clas-si-cal eco-nomics and ra
+-tio-nal ac-tor 
+[3] [4]
+Overfull \hbox (0.11427pt too wide) in paragraph at lines 242--243
+\T1/phv/m/n/10/-25ls (+8) them-selves watch-ing cat videos, we should stop the 
+cat videos 
+[5]
+Overfull \hbox (0.11655pt too wide) in paragraph at lines 263--264
+\T1/phv/m/n/10/-25ls (+17) orig-i-nal ques-tion to you all. Given ev-ery-thing 
+you've said, what 
+
+Overfull \hbox (0.11198pt too wide) in paragraph at lines 269--271
+\T1/phv/m/n/10/-25ls (+14) want to be do-ing given their op-tions. We get re-sp
+onses across 
+[6]
+Overfull \hbox (5.95032pt too wide) in paragraph at lines 375--376
+\T1/phv/m/n/10/-25ls (-20) be-haviourist ten-dency in rec-om-mender sys-tems is
+ well-articulated 
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
+[][][]\T1/phv/m/n/8/-25ls (+20) Facebook post on 4th Jan-uary 2018 [][]$\T1/phv
+/m/n/9/-25ls (+20) https : / / www . facebook .
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
+\T1/phv/m/n/9/-25ls (+20) com / zuck ? hc _ ref = ARQqfRj278TDWekby2TLyI0A0meA4
+ \
+
+Underfull \hbox (badness 10000) in paragraph at lines 386--386
+[][][]\T1/phv/m/n/8/-25ls (+20) Facebook post on 11th Jan-uary 2018 [][]$\T1/ph
+v/m/n/9/-25ls (+20) https : / / www . facebook . com /
+
+Underfull \hbox (badness 10000) in paragraph at lines 386--386
+\T1/phv/m/n/9/-25ls (+20) zuck ? hc _ ref = ARTYPggwbi _ dcIl5f8M8r1dGZYZGhpWmA
+Xwj _
+[8] (./main.bbl [9{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts
+/enc/dvips/cm-super/cm-super-t1.enc}])  [10] (./main.aux) )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></opt/hom
+ebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.
+pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/hel
+vetic/uhvb8ac.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts
+/type1/urw/helvetic/uhvbo8a.pfb></opt/homebrew/Cellar/texlive/20260301/share/te
+xmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></opt/homebrew/Cell
+ar/texlive/20260301/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (10 pages, 135770 bytes).
+Transcript written on main.log.
+************************************
+** Labels in starred environments **
+************************************
+
+*******************
+** Unused Labels **
+*******************
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

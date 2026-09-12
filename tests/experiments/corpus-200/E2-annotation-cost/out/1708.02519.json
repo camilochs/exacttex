@@ -1,0 +1,70 @@
+{
+ "paper": "1708.02519",
+ "main": "sigma18-018.tex",
+ "files": [
+  {
+   "file": "sigma18-018.tex",
+   "chars_before": 164810,
+   "chars_after": 164750,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 164810,
+ "chars_after": 164750,
+ "delta_pct": -0.03640555791517505,
+ "unrepaired": {
+  "chars_after": 164750,
+  "chars_before": 164810,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.006452,
+  "bibliography": {
+   "state": "complete",
+   "entries": 41
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.03640555791517505
+ },
+ "stats": {
+  "cite_cmds_live": 68,
+  "cite_keys_live": 76,
+  "cite_with_optarg_or_star": 17,
+  "cite_keys_outside_grammar": 5,
+  "other_cite_cmds": 0,
+  "labels_live": 40,
+  "labels_outside_grammar": 20,
+  "refs_live": 60,
+  "refs_outside_grammar": 45,
+  "other_ref_cmds": 259,
+  "float_envs": 7,
+  "cite_cmds_annotated": 46,
+  "cite_keys_annotated": 47,
+  "ids_annotated": 20,
+  "refs_annotated": 15,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.006452,
+ "bibliography": {
+  "state": "complete",
+  "entries": 41
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

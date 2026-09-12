@@ -1,0 +1,3 @@
+planted=parameters__ghost sites=[('wright.xtex', 48)]
+xtex new=[('XT1003', 'parameters__ghost', 'wright.xtex', 48)]
+texlab new=[]

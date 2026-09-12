@@ -1,0 +1,3 @@
+planted=fig:planted_wrongclass sites=[('nilab_malformation.xtex', 404)]
+xtex new=[('XT1004', 'fig:planted_wrongclass', 'nilab_malformation.xtex', 394)]
+texlab new=[]

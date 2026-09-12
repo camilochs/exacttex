@@ -1,0 +1,3 @@
+planted=equal_freq__ghost sites=[('background.xtex', 6)]
+xtex new=[('XT1003', 'equal_freq__ghost', 'background.xtex', 6)]
+texlab new=[]

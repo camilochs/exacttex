@@ -1,0 +1,80 @@
+{
+ "paper": "2301.00068",
+ "main": "acl_latex.tex",
+ "files": [
+  {
+   "file": "acl_latex.tex",
+   "chars_before": 37385,
+   "chars_after": 37334,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 37385,
+ "chars_after": 37334,
+ "delta_pct": -0.13641834960545673,
+ "unrepaired": {
+  "chars_after": 37334,
+  "chars_before": 37385,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.040794,
+  "bibliography": {
+   "state": "complete",
+   "entries": 173
+  },
+  "errors": 1,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.13641834960545673
+ },
+ "stats": {
+  "cite_cmds_live": 30,
+  "cite_keys_live": 34,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 3,
+  "other_cite_cmds": 0,
+  "labels_live": 18,
+  "labels_outside_grammar": 1,
+  "refs_live": 29,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 7,
+  "cite_cmds_annotated": 26,
+  "cite_keys_annotated": 27,
+  "ids_annotated": 17,
+  "refs_annotated": 29,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 1,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [
+  {
+   "code": "XT1005",
+   "name": "paperno2016Lambada",
+   "file": "acl_latex.xtex",
+   "line": 118,
+   "message": "citation key `paperno2016Lambada` is not in the bibliography \u2014 did you mean `paperno2016lambada`?",
+   "classification": "real: key absent from every .bib in the paper",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.040124,
+ "bibliography": {
+  "state": "complete",
+  "entries": 173
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

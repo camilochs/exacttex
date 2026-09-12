@@ -1,0 +1,3 @@
+planted=ref1__ghost sites=[('CASE_ver2.xtex', 33)]
+xtex new=[('XT1005', 'ref1__ghost', 'CASE_ver2.xtex', 33)]
+texlab new=[('ERROR', 'CASE_ver2.tex', 33, 'Undefined reference'), ('info', 'CASE_ver2.tex', 259, 'Unused entry')]

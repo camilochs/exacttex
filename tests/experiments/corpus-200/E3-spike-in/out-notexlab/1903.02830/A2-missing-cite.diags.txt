@@ -1,0 +1,3 @@
+planted=fraguela2013uniqueness__ghost sites=[('VersionIPSE.xtex', 56)]
+xtex new=[('XT1005', 'fraguela2013uniqueness__ghost', 'VersionIPSE.xtex', 56)]
+texlab new=[]

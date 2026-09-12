@@ -1,0 +1,239 @@
+{
+ "paper": "1812.09227",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 95132,
+   "chars_after": 95078,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 95132,
+ "chars_after": 95078,
+ "delta_pct": -0.056763234242946645,
+ "unrepaired": {
+  "chars_after": 95063,
+  "chars_before": 95132,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.020734,
+  "bibliography": {
+   "state": "complete",
+   "entries": 97
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.07253079931043183
+ },
+ "stats": {
+  "cite_cmds_live": 131,
+  "cite_keys_live": 160,
+  "cite_with_optarg_or_star": 9,
+  "cite_keys_outside_grammar": 18,
+  "other_cite_cmds": 0,
+  "labels_live": 23,
+  "labels_outside_grammar": 0,
+  "refs_live": 0,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 41,
+  "float_envs": 16,
+  "cite_cmds_annotated": 85,
+  "cite_keys_annotated": 85,
+  "ids_annotated": 18,
+  "refs_annotated": 0,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 24,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "main.tex",
+   "line": 105,
+   "token": "@id(table:best_candidates)",
+   "wrapper": "tablecaption",
+   "context": "\\tablecaption{\\label{table:best_candidates} All \\textit{K2} targets analyzed for the phase curves with various relevant parameters.}"
+  },
+  {
+   "file": "main.tex",
+   "line": 200,
+   "token": "@citet(mocnik2018)",
+   "wrapper": "?",
+   "context": "\\tablenotetext{}{References for optical phase curves in (a) \\citet{mocnik2018}, (b) \\citet{malavolta2018}, and (c) \\citet{dai2017b}}"
+  },
+  {
+   "file": "main.tex",
+   "line": 200,
+   "token": "@citet(malavolta2018)",
+   "wrapper": "?",
+   "context": "\\tablenotetext{}{References for optical phase curves in (a) \\citet{mocnik2018}, (b) \\citet{malavolta2018}, and (c) \\citet{dai2017b}}"
+  },
+  {
+   "file": "main.tex",
+   "line": 200,
+   "token": "@citet(dai2017b)",
+   "wrapper": "?",
+   "context": "\\tablenotetext{}{References for optical phase curves in (a) \\citet{mocnik2018}, (b) \\citet{malavolta2018}, and (c) \\citet{dai2017b}}"
+  },
+  {
+   "file": "main.tex",
+   "line": 270,
+   "token": "@id(table:InjectionTesttargets)",
+   "wrapper": "tablecaption",
+   "context": "\\tablecaption{\\label{table:InjectionTesttargets} Targets used for Signal Injection Test}"
+  },
+  {
+   "file": "main.tex",
+   "line": 347,
+   "token": "@id(table:phasefit_param0)",
+   "wrapper": "tablecaption",
+   "context": "\\tablecaption{\\label{table:phasefit_param0} Stellar and Planetary Parameters for Qatar-2b, K2-141b, and WASP-104b}"
+  },
+  {
+   "file": "main.tex",
+   "line": 391,
+   "token": "@citet(bryan2012)",
+   "wrapper": "?",
+   "context": "\\tablenotetext{a}{Adopted from \\citet{bryan2012}}"
+  },
+  {
+   "file": "main.tex",
+   "line": 392,
+   "token": "@citet(malavolta2018)",
+   "wrapper": "?",
+   "context": "\\tablenotetext{b}{Adopted from \\citet{malavolta2018}}"
+  },
+  {
+   "file": "main.tex",
+   "line": 393,
+   "token": "@citet(smith2014)",
+   "wrapper": "?",
+   "context": "\\tablenotetext{c}{Adopted from \\citet{smith2014}}"
+  },
+  {
+   "file": "main.tex",
+   "line": 394,
+   "token": "@citet(maxted2015)",
+   "wrapper": "?",
+   "context": "\\tablenotetext{d}{Adopted from \\citet{maxted2015}}"
+  },
+  {
+   "file": "main.tex",
+   "line": 395,
+   "token": "@citet(claret2011)",
+   "wrapper": "?",
+   "context": "\\tablenotetext{e}{Linear limb-darkening ($u$) and gravity-darkening ($g$) coefficients interpolated from \\citet{claret2011}}"
+  },
+  {
+   "file": "main.tex",
+   "line": 396,
+   "token": "@citet(dai2017b)",
+   "wrapper": "?",
+   "context": "\\tablenotetext{f}{Adopted from \\citet{dai2017b}}"
+  },
+  {
+   "file": "main.tex",
+   "line": 397,
+   "token": "@citet(mocnik2018)",
+   "wrapper": "?",
+   "context": "\\tablenotetext{g}{Adopted from \\citet{mocnik2018}}"
+  },
+  {
+   "file": "main.tex",
+   "line": 405,
+   "token": "@id(table:phasefit_param)",
+   "wrapper": "tablecaption",
+   "context": "\\tablecaption{\\label{table:phasefit_param} Stellar and Planetary Parameters for K2-31b, HATS-9b, HATS-12b, and K2-107b}"
+  },
+  {
+   "file": "main.tex",
+   "line": 449,
+   "token": "@citet(grziwa2016)",
+   "wrapper": "?",
+   "context": "\\tablenotetext{a}{Adopted from \\citet{grziwa2016}}"
+  },
+  {
+   "file": "main.tex",
+   "line": 450,
+   "token": "@citet(brahm2015)",
+   "wrapper": "?",
+   "context": "\\tablenotetext{b}{Adopted from \\citet{brahm2015}}"
+  },
+  {
+   "file": "main.tex",
+   "line": 451,
+   "token": "@citet(rabus2016)",
+   "wrapper": "?",
+   "context": "\\tablenotetext{c}{Adopted from \\citet{rabus2016}}"
+  },
+  {
+   "file": "main.tex",
+   "line": 452,
+   "token": "@citet(eigmuller2017)",
+   "wrapper": "?",
+   "context": "\\tablenotetext{d}{Adopted from \\citet{eigmuller2017}}"
+  },
+  {
+   "file": "main.tex",
+   "line": 453,
+   "token": "@citet(claret2011)",
+   "wrapper": "?",
+   "context": "\\tablenotetext{e}{Linear limb-darkening ($u$) and gravity-darkening ($g$) coefficients interpolated from \\citet{claret2011}}"
+  },
+  {
+   "file": "main.tex",
+   "line": 562,
+   "token": "@id(table:secondaryeclp_param)",
+   "wrapper": "tablecaption",
+   "context": "\\tablecaption{\\label{table:secondaryeclp_param} Stellar and Planetary Parameters for K2-131b, K2-106b, and HATS-11b}"
+  },
+  {
+   "file": "main.tex",
+   "line": 606,
+   "token": "@citet(dai2017a)",
+   "wrapper": "?",
+   "context": "\\tablenotetext{a}{Adopted from \\citet{dai2017a}}"
+  },
+  {
+   "file": "main.tex",
+   "line": 607,
+   "token": "@citet(sinukoff2017)",
+   "wrapper": "?",
+   "context": "\\tablenotetext{b}{Adopted from \\citet{sinukoff2017}}"
+  },
+  {
+   "file": "main.tex",
+   "line": 608,
+   "token": "@citet(rabus2016)",
+   "wrapper": "?",
+   "context": "\\tablenotetext{c}{Adopted from \\citet{rabus2016}}"
+  },
+  {
+   "file": "main.tex",
+   "line": 609,
+   "token": "@citet(claret2011)",
+   "wrapper": "?",
+   "context": "\\tablenotetext{d}{Interpolated from \\citet{claret2011}}"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.02073,
+ "bibliography": {
+  "state": "complete",
+  "entries": 97
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

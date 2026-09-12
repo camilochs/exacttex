@@ -1,0 +1,277 @@
+exit=2
+lines=2040
+unique_findings=508
+                                           ^
+Warning 1 in main.tex line 1085: Command terminated with space.
+JPMorgan Chase \& Co & US & 2180 & 2.416 & jpm.us & jpm& \checkmark \\         
+                                                                   ^
+Warning 1 in main.tex line 1086: Command terminated with space.
+Deutsche Bank & Germany & 498 & 2.224 & dbk.de & dbk.xe& \checkmark \\ \hline  
+                                                                   ^
+Warning 44 in main.tex line 1086: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+Deutsche Bank & Germany & 498 & 2.224 & dbk.de & dbk.xe& \checkmark \\ \hline  
+                                                                       ^^^^^^
+Warning 1 in main.tex line 1087: Command terminated with space.
+Barclays & UK & 682 & 2.174 & barc.gb & barc.ln& \checkmark \\   
+                                                           ^
+Warning 1 in main.tex line 1088: Command terminated with space.
+Credit Agricole & France & 367 & 2.119 & aca.fr & aca.fr& \checkmark \\   
+                                                                    ^
+Warning 1 in main.tex line 1089: Command terminated with space.
+Bank of America & US & 1770 & 2.102 & bac.us & bac& \checkmark \\   
+                                                              ^
+Warning 1 in main.tex line 1090: Command terminated with space.
+Citigroup & US & 1500 & 1.880 & c.us & c& \checkmark \\   
+                                                    ^
+Warning 1 in main.tex line 1091: Command terminated with space.
+Mizuho Financial Group & Japan & 497 & 1.706 & mzh.jp & 8411.to& \checkmark \\ \hline  
+                                                                           ^
+Warning 44 in main.tex line 1091: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+Mizuho Financial Group & Japan & 497 & 1.706 & mzh.jp & 8411.to& \checkmark \\ \hline  
+                                                                               ^^^^^^
+Warning 1 in main.tex line 1092: Command terminated with space.
+Societe Generale & France & 516 & 1.703 & gle.fr & gle.fr& \checkmark \\   
+                                                                     ^
+Warning 1 in main.tex line 1093: Command terminated with space.
+Royal Bank of Scotland Group & UK & 356 & 1.703 & rbs.gb & rbs.ln & \xmark \\   
+                                                                          ^
+Warning 1 in main.tex line 1094: Command terminated with space.
+Sumitomo Mitsui Financial Group & Japan & 643 & 1.567 & smtm.jp & 8316.to& \checkmark \\   
+                                                                                     ^
+Warning 1 in main.tex line 1095: Command terminated with space.
+Banco Santander & Spain & 1030 & 1.538 & san.es & san.mc& \checkmark \\   
+                                                                    ^
+Warning 44 in main.tex line 1096: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+Wells Fargo & US & 2430 & 1.527 & wfc.us & wfc & \checkmark\\ \hline  
+                                                              ^^^^^^
+Warning 1 in main.tex line 1097: Command terminated with space.
+ING Groep & Netherland & 557 & 1.490 & inga.nl & inga.ae& \checkmark \\   
+                                                                    ^
+Warning 1 in main.tex line 1098: Command terminated with space.
+Lloyds Banking Group & UK & 961 & 1.403 & lloy.gb & lloy.ln& \checkmark \\   
+                                                                       ^
+Warning 1 in main.tex line 1099: Command terminated with space.
+Unicredit & Italy & 477 & 1.166 & ucg.it & ucg.mi& \checkmark \\   
+                                                             ^
+Warning 1 in main.tex line 1100: Command terminated with space.
+UBS & Switzerland & 802 & 1.138 & ubsn.ch & ubsn.vx& \checkmark \\   
+                                                               ^
+Warning 1 in main.tex line 1101: Command terminated with space.
+Credit Suisse Group & Switzerland & 503 & 983 & csgn.ch & csgn.vx& \checkmark \\ \hline  
+                                                                             ^
+Warning 44 in main.tex line 1101: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+Credit Suisse Group & Switzerland & 503 & 983 & csgn.ch & csgn.vx& \checkmark \\ \hline  
+                                                                                 ^^^^^^
+Warning 1 in main.tex line 1102: Command terminated with space.
+Goldman Sachs Group & US & 742 & 912 & gs.us & gs& \checkmark \\   
+                                                             ^
+Warning 1 in main.tex line 1103: Command terminated with space.
+Nordea Bank & Sweden & 556 & 870 & nor.se & ndasek.sk& \checkmark \\   
+                                                                 ^
+Warning 1 in main.tex line 1104: Command terminated with space.
+Intesa Sanpaolo & Italy & 458 & 864 & isp.it & isp.mi& \checkmark \\   
+                                                                 ^
+Warning 1 in main.tex line 1105: Command terminated with space.
+Morgan Stanley & US & 577 & 833 & ms.us & ms& \checkmark \\   
+                                                        ^
+Warning 44 in main.tex line 1106: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+Toronto-Dominion Bank & Canada & 827 & 827 & td.ca & td.t & \checkmark\\ \hline  
+                                                                         ^^^^^^
+Warning 1 in main.tex line 1108: Command terminated with space.
+Banco Bilbao Vizcaya Argentaria & Spain & 708 & 803 & bbva.es & bbva.mc& \checkmark \\   
+                                                                                   ^
+Warning 1 in main.tex line 1109: Command terminated with space.
+Commerzbank & Germany & 206 & 759 & cbk.de & cbk.xe& \checkmark \\   
+                                                               ^
+Warning 1 in main.tex line 1110: Command terminated with space.
+National Australia Bank & Australia & 724 & 755 & nab.au & nab.au& \checkmark \\   
+                                                                             ^
+Warning 1 in main.tex line 1111: Command terminated with space.
+Bank of Nova Scotia & Canada & 698 & 713 & bns.ca & bns.t& \checkmark \\ \hline  
+                                                                     ^
+Warning 44 in main.tex line 1111: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+Bank of Nova Scotia & Canada & 698 & 713 & bns.ca & bns.t& \checkmark \\ \hline  
+                                                                         ^^^^^^
+Warning 1 in main.tex line 1115: Command terminated with space.
+Australia and New Zealand Banking Group & Australia & 776 & 656 & anz.au & anz.au& \xmark \\   
+                                                                                         ^
+Warning 1 in main.tex line 1116: Command terminated with space.
+Westpac Banking & Australia & 918 & 650 & wbc.au & wbc.au& \checkmark \\ \hline  
+                                                                     ^
+Warning 44 in main.tex line 1116: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+Westpac Banking & Australia & 918 & 650 & wbc.au & wbc.au& \checkmark \\ \hline  
+                                                                         ^^^^^^
+Warning 1 in main.tex line 1117: Command terminated with space.
+Shanghai Pudong Development Bank & China & 295 & 608 & shgp.cn & 600000.sh & \xmark \\   
+                                                                                   ^
+Warning 44 in main.tex line 1121: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+Bank of Montreal & Canada & 419 & 515 & bmo.ca & bmo.t & \checkmark\\ \hline  
+                                                                      ^^^^^^
+Warning 1 in main.tex line 1122: Command terminated with space.
+Itau Unibanco Holding & Brazil & 332 & 435 & itub4.br & itub4.br& \checkmark \\   
+                                                                            ^
+Warning 1 in main.tex line 1123: Command terminated with space.
+Resona Holdings & Japan & 122 & 434 & rsnh.jp & 8308.to& \checkmark \\   
+                                                                   ^
+Warning 1 in main.tex line 1124: Command terminated with space.
+Nomura Holdings & Japan & 256 & 422 & nmrh.jp & 8604.to& \checkmark \\   
+                                                                   ^
+Warning 1 in main.tex line 1125: Command terminated with space.
+Sumitomo Mitsui Trust Holdings & Japan & 184 & 406 & smtm.jp & 8309.to& \checkmark \\   
+                                                                                  ^
+Warning 1 in main.tex line 1126: Command terminated with space.
+State Bank of India & India & 165 & 400 & sbin.in & sbin.in& \checkmark \\ \hline  
+                                                                       ^
+Warning 44 in main.tex line 1126: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+State Bank of India & India & 165 & 400 & sbin.in & sbin.in& \checkmark \\ \hline  
+                                                                           ^^^^^^
+Warning 1 in main.tex line 1127: Command terminated with space.
+DNB ASA & Norway & 289 & 396 & dnb.no & dnb.os& \checkmark \\   
+                                                          ^
+Warning 1 in main.tex line 1128: Command terminated with space.
+Svenska Handelsbanken & Sweden & 309 & 388 & shba.se & shba.sk& \checkmark \\   
+                                                                          ^
+Warning 1 in main.tex line 1131: Command terminated with space.
+Bank of New York Mellon & US & 363 & 374 & bk.us & bk.us& \checkmark \\ \hline  
+                                                                    ^
+Warning 44 in main.tex line 1131: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+Bank of New York Mellon & US & 363 & 374 & bk.us & bk.us& \checkmark \\ \hline  
+                                                                        ^^^^^^
+Warning 1 in main.tex line 1132: Command terminated with space.
+U.S. Bancorp & US & 745 & 364 & usb.us & usb& \checkmark \\   
+                                                        ^
+Warning 1 in main.tex line 1133: Command terminated with space.
+Banco Bradesco & Brazil & 235 & 355 & bbdc4.br & bbdc4.br& \checkmark \\   
+                                                                     ^
+Warning 1 in main.tex line 1134: Command terminated with space.
+KBC Groupe & Belgium & 260 & 333 & kbc.be & kbc.bt& \checkmark \\   
+                                                              ^
+Warning 1 in main.tex line 1135: Command terminated with space.
+PNC Financial Services Group & US & 435 & 320 & pnc.us & pnc.us& \checkmark \\   
+                                                                           ^
+Warning 44 in main.tex line 1136: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+DBS Group Holdings & Singapore & 320 & 318 & d05.sg & d05.sg & \checkmark\\ \hline  
+                                                                            ^^^^^^
+Warning 1 in main.tex line 1137: Command terminated with space.
+Ping An Bank & China & 190 & 313 & pab.cn & 000001.sz& \checkmark \\   
+                                                                 ^
+Warning 1 in main.tex line 1138: Command terminated with space.
+Woori Finance Holdings & Korea & 84 & 309 & wrfh.kr & 053000.se& \xmark \\   
+                                                                       ^
+Warning 1 in main.tex line 1140: Command terminated with space.
+Capital One Financial & US & 415 & 297 & cof.us & cof& \checkmark \\   
+                                                                 ^
+Warning 44 in main.tex line 1141: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+Shinhan Financial Group & Korea & 188 & 295 & shf.kr & 055550.se & \checkmark\\ \hline  
+                                                                                ^^^^^^
+Warning 1 in main.tex line 1142: Command terminated with space.
+Swedbank & Sweden & 308 & 284 & swe.se & sweda.sk& \checkmark \\   
+                                                             ^
+Warning 1 in main.tex line 1143: Command terminated with space.
+Hua Xia Bank & China & 124 & 276 & hxb.cn & 600015.sh& \checkmark \\   
+                                                                 ^
+Warning 1 in main.tex line 1144: Command terminated with space.
+Erste Group Bank & Austria & 168 & 276 & ebs.at & ebs.vi& \checkmark \\   
+                                                                    ^
+Warning 1 in main.tex line 1145: Command terminated with space.
+Banca Monte dei Paschi di Siena & Italy & 29 & 275 & bmps.it & bmps.mi& \checkmark \\   
+                                                                                  ^
+Warning 1 in main.tex line 1146: Command terminated with space.
+State Street Corporation & US & 30 & 243 & stt.us & stt.us& \checkmark \\ \hline  
+                                                                      ^
+Warning 44 in main.tex line 1146: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+State Street Corporation & US & 30 & 243 & stt.us & stt.us& \checkmark \\ \hline  
+                                                                          ^^^^^^
+Warning 1 in main.tex line 1147: Command terminated with space.
+Banco de Sabadell & Spain & 131 & 225 & sab.es & sab.mc& \checkmark \\   
+                                                                   ^
+Warning 1 in main.tex line 1148: Command terminated with space.
+United Overseas Bank & Singapore & 251 & 225 & uob.sg & u11.sg& \checkmark \\   
+                                                                          ^
+Warning 1 in main.tex line 1149: Command terminated with space.
+Banco Popular Espanol & Spain & 13 & 204 & pop.es & pop.mc& \xmark \\   
+                                                                  ^
+Warning 1 in main.tex line 1151: Command terminated with space.
+BB\&T Corp & US & 266 & 183 & bbt.us & bbt& \xmark \\ \hline  
+                                                  ^
+Warning 44 in main.tex line 1151: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+BB\&T Corp & US & 266 & 183 & bbt.us & bbt& \xmark \\ \hline  
+                                                      ^^^^^^
+Warning 1 in main.tex line 1152: Command terminated with space.
+Bank of Ireland & Ireland & 146 & 182 & bir.ie & bir.db& \checkmark \\   
+                                                                   ^
+Warning 1 in main.tex line 1153: Command terminated with space.
+National Bank of Canada & Canada & 131 & 180 & na.ca & na.t& \checkmark \\   
+                                                                       ^
+Warning 1 in main.tex line 1154: Command terminated with space.
+SunTrust Banks & US & 203 & 175 & sti.us & sti.us& \checkmark \\   
+                                                             ^
+Warning 1 in main.tex line 1155: Command terminated with space.
+Banco Popolare & Italy & 36 & 174 & bp.it & bp.mi& \xmark \\   
+                                                         ^
+Warning 1 in main.tex line 1156: Command terminated with space.
+Malayan Banking Berhad & Malaysia & 263 & 171 & may.my & maybank.ku& \checkmark \\ \hline  
+                                                                               ^
+Warning 44 in main.tex line 1156: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+Malayan Banking Berhad & Malaysia & 263 & 171 & may.my & maybank.ku& \checkmark \\ \hline  
+                                                                                   ^^^^^^
+Warning 1 in main.tex line 1157: Command terminated with space.
+Allied Irish Banks & Ireland & 999 & 162 & aib.ie & aib.db& \xmark \\   
+                                                                  ^
+Warning 1 in main.tex line 1158: Command terminated with space.
+Standard Bank Group & South Africa & 177 & 161 & sbk.za & sbk.jo& \checkmark \\   
+                                                                            ^
+Warning 1 in main.tex line 1160: Command terminated with space.
+National Bank of Greece & Greece & 121 & 153 & ete.gr & ete.at& \checkmark \\   
+                                                                          ^
+Warning 1 in main.tex line 1161: Command terminated with space.
+Macquarie Group & Australia & 160 & 143 & mqg.au & mqg.au& \checkmark \\ \hline  
+                                                                     ^
+Warning 44 in main.tex line 1161: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+Macquarie Group & Australia & 160 & 143 & mqg.au & mqg.au& \checkmark \\ \hline  
+                                                                         ^^^^^^
+Warning 1 in main.tex line 1162: Command terminated with space.
+Fukuoka Financial Group & Japan & 33 & 137 & ffg.jp & 8354.to& \checkmark \\   
+                                                                         ^
+Warning 1 in main.tex line 1163: Command terminated with space.
+Bank Of Yokohama & Japan & 63 & 134 & boy.jp & 8332.to & \xmark \\   
+                                                               ^
+Warning 1 in main.tex line 1164: Command terminated with space.
+Pohjola Bank & Finland & 58 & 132 & poh.fi & poh1s.he& \xmark \\   
+                                                             ^
+Warning 1 in main.tex line 1165: Command terminated with space.
+Fifth Third Bancorp & US & 185 & 130 & fitb.us & fitb.us& \checkmark \\   
+                                                                    ^
+Warning 44 in main.tex line 1166: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+Regions Financial & US & 143 & 117 & rf.us & rf.us & \checkmark\\ \hline  
+                                                                  ^^^^^^
+Warning 1 in main.tex line 1167: Command terminated with space.
+Chiba Bank & Japan & 52 & 117 & cbb.jp & 8331.to& \checkmark \\   
+                                                            ^
+Warning 1 in main.tex line 1168: Command terminated with space.
+Unipol Gruppo Finanziario & Italy & 28 & 116 & uni.it & uni.mi& \checkmark \\   
+                                                                          ^
+Warning 44 in main.tex line 1171: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+Bank of Baroda & India & 37 & 113 & bob.in & bankbaroda.in & \checkmark\\ \hline  
+                                                                          ^^^^^^
+Warning 1 in main.tex line 1172: Command terminated with space.
+Turkiye Is Bankasi & Turkey & 89 & 112 & isctr.tr & isctr.is& \checkmark \\   
+                                                                        ^
+Warning 1 in main.tex line 1176: Command terminated with space.
+Mediobanca Banca di Credito Finanziario & Italy & 85 &  95 & mb.it & mb.mi& \checkmark \\ \hline  
+                                                                                      ^
+Warning 44 in main.tex line 1176: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+Mediobanca Banca di Credito Finanziario & Italy & 85 &  95 & mb.it & mb.mi& \checkmark \\ \hline  
+                                                                                          ^^^^^^
+Warning 1 in main.tex line 1177: Command terminated with space.
+Yamaguchi Financial Group & Japan & 23 &  93 & yfg.jp & 8418.to   & \checkmark           
+                                                                              ^
+Warning 24 in main.tex line 1178: Delete this space to maintain correct pagereferences.
+\label{Bank List}  
+^
+Warning 17 in main.tex line 1186: Number of `(' doesn't match the number of `)'!
+
+
+Warning 17 in main.tex line 1186: Number of `[' doesn't match the number of `]'!
+
+

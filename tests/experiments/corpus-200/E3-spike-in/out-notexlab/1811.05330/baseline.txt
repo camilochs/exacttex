@@ -1,0 +1,29 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=1 warnings=[] secs=3
+txmi"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: V889Her_arxiv.tex:609: Underfull \vbox (badness 1783) has occurred while \output is active
+warning: V889Her_arxiv.tex:685: Missing character: There is no �� ("C5) in font txmi!
+warning: could not represent character "Å" (0xc5) in font "txmi"
+warning: V889Her_arxiv.tex:685: Missing character: There is no �� ("C5) in font txmi!
+warning: could not represent character "Å" (0xc5) in font "txmi"
+warning: V889Her_arxiv.tex:691: Underfull \hbox (badness 10000) in paragraph at lines 689--691
+warning: V889Her_arxiv.tex:112: Underfull \hbox (badness 1540) in paragraph at lines 112--112
+warning: V889Her_arxiv.tex:138: Underfull \vbox (badness 2762) has occurred while \output is active
+warning: V889Her_arxiv.tex:397: Missing character: There is no �� ("C5) in font txmi!
+warning: could not represent character "Å" (0xc5) in font "txmi"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+warning: V889Her_arxiv.tex:609: Underfull \vbox (badness 1783) has occurred while \output is active
+warning: V889Her_arxiv.tex:685: Missing character: There is no �� ("C5) in font txmi!
+warning: could not represent character "Å" (0xc5) in font "txmi"
+warning: V889Her_arxiv.tex:685: Missing character: There is no �� ("C5) in font txmi!
+warning: could not represent character "Å" (0xc5) in font "txmi"
+warning: V889Her_arxiv.tex:691: Underfull \hbox (badness 10000) in paragraph at lines 689--691
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: sorry, PostScript images are not supported by Tectonic
+warning: for details, please see https://github.com/tectonic-typesetting/tectonic/issues/27
+error: pdf: image inclusion failed for "V889Her_julaug1999.eps" (page=1).

@@ -1,0 +1,213 @@
+{
+ "paper": "2402.07189",
+ "main": "writeup.tex",
+ "files": [
+  {
+   "file": "writeup.tex",
+   "chars_before": 150521,
+   "chars_after": 150428,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 150521,
+ "chars_after": 150428,
+ "delta_pct": -0.06178539871512945,
+ "unrepaired": {
+  "chars_after": 150422,
+  "chars_before": 150521,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.028582,
+  "bibliography": {
+   "state": "complete",
+   "entries": 64
+  },
+  "errors": 4,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.06577155347094425
+ },
+ "stats": {
+  "cite_cmds_live": 62,
+  "cite_keys_live": 98,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 8,
+  "other_cite_cmds": 0,
+  "labels_live": 33,
+  "labels_outside_grammar": 0,
+  "refs_live": 121,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 54,
+  "float_envs": 2,
+  "cite_cmds_annotated": 45,
+  "cite_keys_annotated": 64,
+  "ids_annotated": 31,
+  "refs_annotated": 113,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 4,
+  "leaks_reverted": 15,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "writeup.tex",
+   "line": 224,
+   "token": "@cite(datar2004locality,charikar2002similarity)",
+   "wrapper": "abstract",
+   "context": "\\abstract{Locality-sensitive hashing (LSH) is a fundamental algorithmic toolkit used by data scientists for approximate nearest neighbour search problems that h"
+  },
+  {
+   "file": "writeup.tex",
+   "line": 292,
+   "token": "@cite(datar2004locality)",
+   "wrapper": "?",
+   "context": "Naive Method (E2LSH)~\\cite{datar2004locality} & $O(d^N)$ & $O(Kd^N)$\\\\"
+  },
+  {
+   "file": "writeup.tex",
+   "line": 293,
+   "token": "@ref(def:cp_elsh)",
+   "wrapper": "?",
+   "context": "CP-E2LSH (Definition~\\ref{def:cp_elsh})  & $O(KNdR)$ & $\\begin{cases}"
+  },
+  {
+   "file": "writeup.tex",
+   "line": 303,
+   "token": "@ref(def:tt_elsh)",
+   "wrapper": "?",
+   "context": "TT-E2LSH (Definition~\\ref{def:tt_elsh}) & $O(KNdR^2)$ & $\\begin{cases}"
+  },
+  {
+   "file": "writeup.tex",
+   "line": 311,
+   "token": "@id(tab:e2lsh)",
+   "wrapper": "?",
+   "context": "\\label{tab:e2lsh}"
+  },
+  {
+   "file": "writeup.tex",
+   "line": 378,
+   "token": "@cite(charikar2002similarity)",
+   "wrapper": "?",
+   "context": "Naive Method (SRP)~\\cite{charikar2002similarity} & $O(d^N)$ & $O(Kd^N)$\\\\"
+  },
+  {
+   "file": "writeup.tex",
+   "line": 379,
+   "token": "@ref(def:CP_SRP)",
+   "wrapper": "?",
+   "context": "CP-SRP (Definition~\\ref{def:CP_SRP})  & $O(KNdR)$ & $\\begin{cases}"
+  },
+  {
+   "file": "writeup.tex",
+   "line": 389,
+   "token": "@ref(def:TT_SRP)",
+   "wrapper": "?",
+   "context": "TT-SRP (Definition~\\ref{def:TT_SRP}) & $O(KNdR^2)$ & $\\begin{cases}"
+  },
+  {
+   "file": "writeup.tex",
+   "line": 397,
+   "token": "@id(tab:srp)",
+   "wrapper": "?",
+   "context": "\\label{tab:srp}"
+  },
+  {
+   "file": "writeup.tex",
+   "line": 534,
+   "token": "@cite(kolda2009tensor)",
+   "wrapper": "?",
+   "context": "\\begin{definition}[CP Decomposition~\\cite{kolda2009tensor}] ~\\label{def:CP_Decomp}"
+  },
+  {
+   "file": "writeup.tex",
+   "line": 543,
+   "token": "@cite(oseledets2011tensor)",
+   "wrapper": "?",
+   "context": "\\begin{definition}[TT Decomposition~\\cite{oseledets2011tensor}] ~\\label{def:TT_Decomp}"
+  },
+  {
+   "file": "writeup.tex",
+   "line": 560,
+   "token": "@cite(rakhshan2021rademacher)",
+   "wrapper": "?",
+   "context": "\\begin{definition} [{CP-Rademacher Distributed Tensor}~\\cite{rakhshan2021rademacher}] \\label{def:cp_tensor}"
+  },
+  {
+   "file": "writeup.tex",
+   "line": 572,
+   "token": "@cite(rakhshan2021rademacher)",
+   "wrapper": "?",
+   "context": "\\begin{definition} [{TT-Rademacher Distributed Tensor}~\\cite{rakhshan2021rademacher}] \\label{def:tt_tensor}"
+  },
+  {
+   "file": "writeup.tex",
+   "line": 605,
+   "token": "@cite(rakhshan2020tensorized,rakhshan2021rademacher)",
+   "wrapper": "?",
+   "context": "\\begin{definition}[CP Rademacher Random Projection~\\cite{rakhshan2020tensorized,rakhshan2021rademacher}]~ \\label{def:cp_rp}"
+  },
+  {
+   "file": "writeup.tex",
+   "line": 618,
+   "token": "@cite(rakhshan2020tensorized,rakhshan2021rademacher)",
+   "wrapper": "?",
+   "context": "\\begin{definition}[TT  Radmecher Random Projection~\\cite{rakhshan2020tensorized,rakhshan2021rademacher}] ~\\label{def:tt_rp}"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1003",
+   "name": "tab:e2lsh",
+   "file": "writeup.xtex",
+   "line": 328,
+   "message": "identifier `tab:e2lsh` is not declared",
+   "classification": "compiler-unreachable: \\label{tab:e2lsh} exists (2x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "tab:srp",
+   "file": "writeup.xtex",
+   "line": 366,
+   "message": "identifier `tab:srp` is not declared",
+   "classification": "compiler-unreachable: \\label{tab:srp} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "tab:e2lsh",
+   "file": "writeup.xtex",
+   "line": 401,
+   "message": "identifier `tab:e2lsh` is not declared",
+   "classification": "compiler-unreachable: \\label{tab:e2lsh} exists (2x) in a region the inventory does not read",
+   "reverted": true
+  },
+  {
+   "code": "XT1003",
+   "name": "tab:srp",
+   "file": "writeup.xtex",
+   "line": 401,
+   "message": "identifier `tab:srp` is not declared",
+   "classification": "compiler-unreachable: \\label{tab:srp} exists (1x) in a region the inventory does not read",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.028209,
+ "bibliography": {
+  "state": "complete",
+  "entries": 64
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

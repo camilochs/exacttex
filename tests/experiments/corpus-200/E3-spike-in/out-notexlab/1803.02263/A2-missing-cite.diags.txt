@@ -1,0 +1,3 @@
+planted=nielsenetal2000_r2010__ghost sites=[('luca171228-pt_and_qt.xtex', 832)]
+xtex new=[]
+texlab new=[]

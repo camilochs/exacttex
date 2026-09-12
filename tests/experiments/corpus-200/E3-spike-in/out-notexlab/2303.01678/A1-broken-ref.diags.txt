@@ -1,0 +1,3 @@
+planted=P_theta__ghost sites=[('preprint.xtex', 59)]
+xtex new=[]
+texlab new=[]

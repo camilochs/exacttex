@@ -1,0 +1,333 @@
+exit=2
+lines=4710
+unique_findings=979
+d terminated with space.
+$r \ll 1$, and $r \ll \alpha$.\cite{Kokado1,[001]}    
+                     ^
+Warning 1 in 68886_rev2.tex line 3723: Command terminated with space.
+Here, we take into account $\Delta/H \ll 1$.    
+                                        ^
+Warning 1 in 68886_rev2.tex line 3727: Command terminated with space.
+\item[(1)] ${\mbox{\boldmath $I$}}//[100]$ \\   
+                            ^
+Warning 2 in 68886_rev2.tex line 3729: Non-breaking space (`~') should have been used.
+$C_2^{[100]}$ in Table \ref{table1} becomes   
+                      ^
+Warning 3 in 68886_rev2.tex line 3733: You should enclose the previous parenthesis with `{}'.
+\left[ - \left( \frac{\lambda}{H} \right)^2    
+                                        ^
+Warning 3 in 68886_rev2.tex line 3735: You should enclose the previous parenthesis with `{}'.
+\left( \frac{\lambda}{H} \right)^2    
+                               ^
+Warning 3 in 68886_rev2.tex line 3737: You should enclose the previous parenthesis with `{}'.
+&& \hspace*{1.1cm}\approx \frac{3}{8} \left( \frac{\lambda}{H} \right)^2    
+                                                                     ^
+Warning 36 in 68886_rev2.tex line 3741: You should put a space in front of parenthesis.
+AMR$^{[100]}(0)$ of Eq. (\ref{AMR^100})    
+            ^
+Warning 3 in 68886_rev2.tex line 3746: You should enclose the previous parenthesis with `{}'.
+\frac{3}{4} \left( \frac{\lambda}{H} \right)^2 (\alpha -1).   
+                                           ^
+Warning 1 in 68886_rev2.tex line 3751: Command terminated with space.
+\item[(2)]${\mbox{\boldmath $I$}}//[110]$ \\   
+                           ^
+Warning 2 in 68886_rev2.tex line 3753: Non-breaking space (`~') should have been used.
+$C_2^{[110]}$ and $C_6^{[110]}$ in Table \ref{table1} become   
+                                        ^
+Warning 3 in 68886_rev2.tex line 3757: You should enclose the previous parenthesis with `{}'.
+\left[ - \left( \frac{\lambda}{H} \right)^2    
+                                        ^
+Warning 3 in 68886_rev2.tex line 3759: You should enclose the previous parenthesis with `{}'.
+\left( \frac{\lambda}{H} \right)^2    
+                               ^
+Warning 3 in 68886_rev2.tex line 3761: You should enclose the previous parenthesis with `{}'.
+&& \hspace*{1.1cm}\approx \frac{3}{8} \left( \frac{\lambda}{H} \right)^2    
+                                                                     ^
+Warning 3 in 68886_rev2.tex line 3772: You should enclose the previous parenthesis with `{}'.
+\frac{3}{4} \left( \frac{\lambda}{H} \right)^2 (\alpha -1).   
+                                           ^
+Warning 6 in 68886_rev2.tex line 3806: No italic correction (`\/') found.
+{\it The Physics of Ferromagnetism}    
+                                  ^
+Warning 6 in 68886_rev2.tex line 3844: No italic correction (`\/') found.
+{\it Heusler Alloys: Properties, Growth, Applications}    
+                                                     ^
+Warning 6 in 68886_rev2.tex line 3913: No italic correction (`\/') found.
+R. Bozorth, {\it Ferromagnetism} (IEEE Press, New York, 1993) p. 764.   
+                               ^
+Warning 1 in 68886_rev2.tex line 3919: Command terminated with space.
+with the dominant $s$--$d$ scattering ``$s,- \to d,-$''    
+                                                ^
+Warning 1 in 68886_rev2.tex line 3928: Command terminated with space.
+with dominant $s$--$d$ scattering ``$s,- \to d,-$'',    
+                                            ^
+Warning 1 in 68886_rev2.tex line 3936: Command terminated with space.
+with the dominant $s$--$d$ scattering ``$s,+ \to d,-$''    
+                                                ^
+Warning 1 in 68886_rev2.tex line 3938: Command terminated with space.
+those with the $s$--$d$ scattering ``$s,+ \to d,-$ and $s,- \to d,-$'',    
+                                             ^
+Warning 1 in 68886_rev2.tex line 3938: Command terminated with space.
+those with the $s$--$d$ scattering ``$s,+ \to d,-$ and $s,- \to d,-$'',    
+                                                               ^
+Warning 6 in 68886_rev2.tex line 3946: No italic correction (`\/') found.
+K. Yosida, {\it Theory of Magnetism} (Springer Series, New York, 1998)    
+                                   ^
+Warning 6 in 68886_rev2.tex line 3950: No italic correction (`\/') found.
+{\it Modern Quantum Mechanics} (Addison-Wesley, New York, 1994) Sect. 5.2.    
+                             ^
+Warning 6 in 68886_rev2.tex line 3952: No italic correction (`\/') found.
+K. Motizuki, {\it Ryoshi Butsuri} (Quantum Physics) (Ohmsha, Tokyo, 1974), Sect. 6$\cdot$1 [in Japanese].   
+                                ^
+Warning 1 in 68886_rev2.tex line 3964: Command terminated with space.
+In the CFJ model, ${\mbox{\boldmath $I$}}$    
+                                   ^
+Warning 1 in 68886_rev2.tex line 3965: Command terminated with space.
+lies in a rotational plane of ${\mbox{\boldmath $M$}}$.    
+                                               ^
+Warning 1 in 68886_rev2.tex line 3967: Command terminated with space.
+the cases of ${\mbox{\boldmath $I$}}//[100]$    
+                              ^
+Warning 1 in 68886_rev2.tex line 3968: Command terminated with space.
+and ${\mbox{\boldmath $I$}}//[110]$ are comparable to the CFJ model,    
+                     ^
+Warning 1 in 68886_rev2.tex line 3969: Command terminated with space.
+whereas the case of ${\mbox{\boldmath $I$}}//[001]$    
+                                     ^
+Warning 36 in 68886_rev2.tex line 3972: You should put a space in front of parenthesis.
+The term with $\lambda^2/(H \Delta)$ in $C_2^{[110]}$    
+                         ^
+Warning 1 in 68886_rev2.tex line 3974: Command terminated with space.
+$\sum_{k (\ne m, m_i)} \sum_{n (\ne m, m_i)}   
+             ^
+Warning 1 in 68886_rev2.tex line 3974: Command terminated with space.
+$\sum_{k (\ne m, m_i)} \sum_{n (\ne m, m_i)}   
+                                   ^
+Warning 36 in 68886_rev2.tex line 3983: You should put a space in front of parenthesis.
+For $\rho_{4,\pm}^{[100],(2)}$ of    
+                         ^
+Warning 1 in 68886_rev2.tex line 3987: Command terminated with space.
+$\rho_{s,\pm \to m,+}=0$ and    
+            ^
+Warning 1 in 68886_rev2.tex line 3987: Command terminated with space.
+$\rho_{s,\pm \to m,+}=0$ and    
+                ^
+Warning 1 in 68886_rev2.tex line 3991: Command terminated with space.
+$r_{s,- \to \varepsilon 2,-} = r_{s,- \to \gamma,-}$    
+           ^
+Warning 1 in 68886_rev2.tex line 3991: Command terminated with space.
+$r_{s,- \to \varepsilon 2,-} = r_{s,- \to \gamma,-}$    
+                       ^
+Warning 1 in 68886_rev2.tex line 3991: Command terminated with space.
+$r_{s,- \to \varepsilon 2,-} = r_{s,- \to \gamma,-}$    
+                                         ^
+Warning 1 in 68886_rev2.tex line 3992: Command terminated with space.
+(i.e., $\rho_{s,- \to \varepsilon 2,-} = \rho_{s,- \to \gamma,-}$),    
+                     ^
+Warning 1 in 68886_rev2.tex line 3992: Command terminated with space.
+(i.e., $\rho_{s,- \to \varepsilon 2,-} = \rho_{s,- \to \gamma,-}$),    
+                                 ^
+Warning 1 in 68886_rev2.tex line 3992: Command terminated with space.
+(i.e., $\rho_{s,- \to \varepsilon 2,-} = \rho_{s,- \to \gamma,-}$),    
+                                                      ^
+Warning 36 in 68886_rev2.tex line 3994: You should put a space in front of parenthesis.
+$\rho_{0,\pm}^{[110],(0)}=   
+                     ^
+Warning 1 in 68886_rev2.tex line 3995: Command terminated with space.
+\rho_{s,-} + \frac{3}{4} \rho_{s,- \to \varepsilon 2,-} +    
+                                      ^
+Warning 1 in 68886_rev2.tex line 3995: Command terminated with space.
+\rho_{s,-} + \frac{3}{4} \rho_{s,- \to \varepsilon 2,-} +    
+                                                  ^
+Warning 1 in 68886_rev2.tex line 3996: Command terminated with space.
+\frac{1}{4} \rho_{s,- \to \gamma,-}$ of Eq. (\ref{rho_0-^110(0)}),    
+                         ^
+Warning 36 in 68886_rev2.tex line 3998: You should put a space in front of parenthesis.
+For this $\rho_{0,\pm}^{[110],(0)}$,    
+                              ^
+Warning 36 in 68886_rev2.tex line 4000: You should put a space in front of parenthesis.
+$\left| \frac{(3/4)(\rho_{s,- \to \varepsilon 2,-} - \rho_{s,- \to \gamma,-})}{\rho_{s,-}+ \rho_{s,- \to \gamma,-}} \right| \ll 1$.    
+                   ^
+Warning 1 in 68886_rev2.tex line 4000: Command terminated with space.
+$\left| \frac{(3/4)(\rho_{s,- \to \varepsilon 2,-} - \rho_{s,- \to \gamma,-})}{\rho_{s,-}+ \rho_{s,- \to \gamma,-}} \right| \ll 1$.    
+                                 ^
+Warning 1 in 68886_rev2.tex line 4000: Command terminated with space.
+$\left| \frac{(3/4)(\rho_{s,- \to \varepsilon 2,-} - \rho_{s,- \to \gamma,-})}{\rho_{s,-}+ \rho_{s,- \to \gamma,-}} \right| \ll 1$.    
+                                             ^
+Warning 8 in 68886_rev2.tex line 4000: Wrong length of dash may have been used.
+$\left| \frac{(3/4)(\rho_{s,- \to \varepsilon 2,-} - \rho_{s,- \to \gamma,-})}{\rho_{s,-}+ \rho_{s,- \to \gamma,-}} \right| \ll 1$.    
+                                                   ^
+Warning 1 in 68886_rev2.tex line 4000: Command terminated with space.
+$\left| \frac{(3/4)(\rho_{s,- \to \varepsilon 2,-} - \rho_{s,- \to \gamma,-})}{\rho_{s,-}+ \rho_{s,- \to \gamma,-}} \right| \ll 1$.    
+                                                                  ^
+Warning 1 in 68886_rev2.tex line 4000: Command terminated with space.
+$\left| \frac{(3/4)(\rho_{s,- \to \varepsilon 2,-} - \rho_{s,- \to \gamma,-})}{\rho_{s,-}+ \rho_{s,- \to \gamma,-}} \right| \ll 1$.    
+                                                                                                        ^
+Warning 1 in 68886_rev2.tex line 4000: Command terminated with space.
+$\left| \frac{(3/4)(\rho_{s,- \to \varepsilon 2,-} - \rho_{s,- \to \gamma,-})}{\rho_{s,-}+ \rho_{s,- \to \gamma,-}} \right| \ll 1$.    
+                                                                                                                               ^
+Warning 1 in 68886_rev2.tex line 4001: Command terminated with space.
+When $\rho_{s,- \to \varepsilon 2,-}$    
+                   ^
+Warning 1 in 68886_rev2.tex line 4001: Command terminated with space.
+When $\rho_{s,- \to \varepsilon 2,-}$    
+                               ^
+Warning 1 in 68886_rev2.tex line 4003: Command terminated with space.
+$\rho_{s,- \to \varepsilon 2,-}= \rho_{s,- \to \gamma,-} + (\rho_{s,- \to \varepsilon 2,-}- \rho_{s,- \to \gamma,-})$,    
+              ^
+Warning 1 in 68886_rev2.tex line 4003: Command terminated with space.
+$\rho_{s,- \to \varepsilon 2,-}= \rho_{s,- \to \gamma,-} + (\rho_{s,- \to \varepsilon 2,-}- \rho_{s,- \to \gamma,-})$,    
+                          ^
+Warning 1 in 68886_rev2.tex line 4003: Command terminated with space.
+$\rho_{s,- \to \varepsilon 2,-}= \rho_{s,- \to \gamma,-} + (\rho_{s,- \to \varepsilon 2,-}- \rho_{s,- \to \gamma,-})$,    
+                                              ^
+Warning 1 in 68886_rev2.tex line 4003: Command terminated with space.
+$\rho_{s,- \to \varepsilon 2,-}= \rho_{s,- \to \gamma,-} + (\rho_{s,- \to \varepsilon 2,-}- \rho_{s,- \to \gamma,-})$,    
+                                                                         ^
+Warning 1 in 68886_rev2.tex line 4003: Command terminated with space.
+$\rho_{s,- \to \varepsilon 2,-}= \rho_{s,- \to \gamma,-} + (\rho_{s,- \to \varepsilon 2,-}- \rho_{s,- \to \gamma,-})$,    
+                                                                                     ^
+Warning 1 in 68886_rev2.tex line 4003: Command terminated with space.
+$\rho_{s,- \to \varepsilon 2,-}= \rho_{s,- \to \gamma,-} + (\rho_{s,- \to \varepsilon 2,-}- \rho_{s,- \to \gamma,-})$,    
+                                                                                                         ^
+Warning 36 in 68886_rev2.tex line 4005: You should put a space in front of parenthesis.
+$\rho_{0,\pm}^{[110],(0)}=(\rho_{s,-}+ \rho_{s,- \to \gamma,-})   
+                     ^
+Warning 36 in 68886_rev2.tex line 4005: You should put a space in front of parenthesis.
+$\rho_{0,\pm}^{[110],(0)}=(\rho_{s,-}+ \rho_{s,- \to \gamma,-})   
+                          ^
+Warning 1 in 68886_rev2.tex line 4005: Command terminated with space.
+$\rho_{0,\pm}^{[110],(0)}=(\rho_{s,-}+ \rho_{s,- \to \gamma,-})   
+                                                    ^
+Warning 36 in 68886_rev2.tex line 4007: You should put a space in front of parenthesis.
+\frac{(3/4)(\rho_{s,- \to \varepsilon 2,-} - \rho_{s,- \to \gamma,-})}   
+           ^
+Warning 1 in 68886_rev2.tex line 4007: Command terminated with space.
+\frac{(3/4)(\rho_{s,- \to \varepsilon 2,-} - \rho_{s,- \to \gamma,-})}   
+                         ^
+Warning 1 in 68886_rev2.tex line 4007: Command terminated with space.
+\frac{(3/4)(\rho_{s,- \to \varepsilon 2,-} - \rho_{s,- \to \gamma,-})}   
+                                     ^
+Warning 8 in 68886_rev2.tex line 4007: Wrong length of dash may have been used.
+\frac{(3/4)(\rho_{s,- \to \varepsilon 2,-} - \rho_{s,- \to \gamma,-})}   
+                                           ^
+Warning 1 in 68886_rev2.tex line 4007: Command terminated with space.
+\frac{(3/4)(\rho_{s,- \to \varepsilon 2,-} - \rho_{s,- \to \gamma,-})}   
+                                                          ^
+Warning 1 in 68886_rev2.tex line 4008: Command terminated with space.
+{\rho_{s,-}+ \rho_{s,- \to \gamma,-}}\right]    
+                          ^
+Warning 1 in 68886_rev2.tex line 4009: Command terminated with space.
+\approx \rho_{s,-}   
+       ^
+Warning 1 in 68886_rev2.tex line 4010: Command terminated with space.
++ \rho_{s,- \to \gamma,-}$    
+               ^
+Warning 36 in 68886_rev2.tex line 4012: You should put a space in front of parenthesis.
+$\left| \frac{(3/4)(\rho_{s,- \to \varepsilon 2,-} - \rho_{s,- \to \gamma,-})}   
+                   ^
+Warning 1 in 68886_rev2.tex line 4012: Command terminated with space.
+$\left| \frac{(3/4)(\rho_{s,- \to \varepsilon 2,-} - \rho_{s,- \to \gamma,-})}   
+                                 ^
+Warning 1 in 68886_rev2.tex line 4012: Command terminated with space.
+$\left| \frac{(3/4)(\rho_{s,- \to \varepsilon 2,-} - \rho_{s,- \to \gamma,-})}   
+                                             ^
+Warning 8 in 68886_rev2.tex line 4012: Wrong length of dash may have been used.
+$\left| \frac{(3/4)(\rho_{s,- \to \varepsilon 2,-} - \rho_{s,- \to \gamma,-})}   
+                                                   ^
+Warning 1 in 68886_rev2.tex line 4012: Command terminated with space.
+$\left| \frac{(3/4)(\rho_{s,- \to \varepsilon 2,-} - \rho_{s,- \to \gamma,-})}   
+                                                                  ^
+Warning 1 in 68886_rev2.tex line 4013: Command terminated with space.
+{\rho_{s,-}+\rho_{s,- \to \gamma,-}}\right| \ll 1$.    
+                         ^
+Warning 1 in 68886_rev2.tex line 4013: Command terminated with space.
+{\rho_{s,-}+\rho_{s,- \to \gamma,-}}\right| \ll 1$.    
+                                               ^
+Warning 36 in 68886_rev2.tex line 4016: You should put a space in front of parenthesis.
+$\rho_{0,\pm}^{[100],(0)}=\rho_{0,\pm}^{[110],(0)}$    
+                     ^
+Warning 36 in 68886_rev2.tex line 4016: You should put a space in front of parenthesis.
+$\rho_{0,\pm}^{[100],(0)}=\rho_{0,\pm}^{[110],(0)}$    
+                                              ^
+Warning 36 in 68886_rev2.tex line 4018: You should put a space in front of parenthesis.
+Here, $\rho_{0,\pm}^{[100],(0)}$ of    
+                           ^
+Warning 36 in 68886_rev2.tex line 4022: You should put a space in front of parenthesis.
+$\rho_{0,\pm}^{[100],(0)} = \rho_{s,\pm} + \rho_{s,\pm \to \gamma,\pm}$,    
+                     ^
+Warning 1 in 68886_rev2.tex line 4022: Command terminated with space.
+$\rho_{0,\pm}^{[100],(0)} = \rho_{s,\pm} + \rho_{s,\pm \to \gamma,\pm}$,    
+                                                      ^
+Warning 1 in 68886_rev2.tex line 4022: Command terminated with space.
+$\rho_{0,\pm}^{[100],(0)} = \rho_{s,\pm} + \rho_{s,\pm \to \gamma,\pm}$,    
+                                                          ^
+Warning 1 in 68886_rev2.tex line 4032: Command terminated with space.
+is evaluated to be $\lambda=8.06 \times 10^{-2}$ eV    
+                                       ^
+Warning 36 in 68886_rev2.tex line 4033: You should put a space in front of parenthesis.
+from $\lambda=-(10-n) \lambda_0$,    
+               ^
+Warning 1 in 68886_rev2.tex line 4034: Command terminated with space.
+with $n$=8 and $\lambda_0 = -4.03 \times 10^{-2}$ eV for Ni$^{2+}$    
+                                        ^
+Warning 1 in 68886_rev2.tex line 4043: Command terminated with space.
+$6.94 \times 10^{-1} \le H \le 7.70 \times 10^{-1}$ eV\cite{Papa},    
+            ^
+Warning 1 in 68886_rev2.tex line 4043: Command terminated with space.
+$6.94 \times 10^{-1} \le H \le 7.70 \times 10^{-1}$ eV\cite{Papa},    
+                        ^
+Warning 1 in 68886_rev2.tex line 4043: Command terminated with space.
+$6.94 \times 10^{-1} \le H \le 7.70 \times 10^{-1}$ eV\cite{Papa},    
+                              ^
+Warning 1 in 68886_rev2.tex line 4043: Command terminated with space.
+$6.94 \times 10^{-1} \le H \le 7.70 \times 10^{-1}$ eV\cite{Papa},    
+                                          ^
+Warning 1 in 68886_rev2.tex line 4044: Command terminated with space.
+we obtain $1.05 \times 10^{-1} \le \lambda/H \le 1.16 \times 10^{-1}$.    
+                      ^
+Warning 1 in 68886_rev2.tex line 4044: Command terminated with space.
+we obtain $1.05 \times 10^{-1} \le \lambda/H \le 1.16 \times 10^{-1}$.    
+                                  ^
+Warning 1 in 68886_rev2.tex line 4044: Command terminated with space.
+we obtain $1.05 \times 10^{-1} \le \lambda/H \le 1.16 \times 10^{-1}$.    
+                                                ^
+Warning 1 in 68886_rev2.tex line 4044: Command terminated with space.
+we obtain $1.05 \times 10^{-1} \le \lambda/H \le 1.16 \times 10^{-1}$.    
+                                                            ^
+Warning 1 in 68886_rev2.tex line 4046: Command terminated with space.
+$\lambda/H = 1.10 \times 10^{-1}$,    
+                        ^
+Warning 1 in 68886_rev2.tex line 4059: Command terminated with space.
+were evaluated to be 6.94 $\times 10^{-1}$ eV    
+                                 ^
+Warning 1 in 68886_rev2.tex line 4060: Command terminated with space.
+and 7.70 $\times 10^{-1}$ eV, respectively.    
+                ^
+Warning 1 in 68886_rev2.tex line 4062: Command terminated with space.
+$6.94 \times 10^{-1} \le H \le 7.70 \times 10^{-1}$ eV in this study.    
+            ^
+Warning 1 in 68886_rev2.tex line 4062: Command terminated with space.
+$6.94 \times 10^{-1} \le H \le 7.70 \times 10^{-1}$ eV in this study.    
+                        ^
+Warning 1 in 68886_rev2.tex line 4062: Command terminated with space.
+$6.94 \times 10^{-1} \le H \le 7.70 \times 10^{-1}$ eV in this study.    
+                              ^
+Warning 1 in 68886_rev2.tex line 4062: Command terminated with space.
+$6.94 \times 10^{-1} \le H \le 7.70 \times 10^{-1}$ eV in this study.    
+                                          ^
+Warning 1 in 68886_rev2.tex line 4077: Command terminated with space.
+$C_6^{[110]} \cos 6 \phi'$ and $C_8^{[110]} \cos 8 \phi'$    
+                 ^
+Warning 1 in 68886_rev2.tex line 4077: Command terminated with space.
+$C_6^{[110]} \cos 6 \phi'$ and $C_8^{[110]} \cos 8 \phi'$    
+                                                ^
+Warning 6 in 68886_rev2.tex line 4086: No italic correction (`\/') found.
+S. Chikazumi, {\it Physics of Ferromagnetism} (Oxford University Press, Oxford, 1997) 2nd ed., Sects. 12.3 and 14.2.    
+                                            ^
+Warning 16 in 68886_rev2.tex line 4099: Mathmode still on at end of LaTeX file.
+
+
+Warning 17 in 68886_rev2.tex line 4099: Number of `(' doesn't match the number of `)'!
+
+

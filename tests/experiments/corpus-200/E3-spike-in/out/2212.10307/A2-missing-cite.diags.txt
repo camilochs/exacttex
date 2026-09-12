@@ -1,0 +1,3 @@
+planted=elliott2009beautiful__ghost sites=[('intro.xtex', 9)]
+xtex new=[]
+texlab new=[]

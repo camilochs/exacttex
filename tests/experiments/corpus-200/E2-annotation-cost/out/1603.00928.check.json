@@ -1,0 +1,25 @@
+{
+ "coverage": 0.028561,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`trainyard.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "trainyard.xtex",
+    "offset": 2915,
+    "length": 8,
+    "line": 78,
+    "column": 171
+   },
+   "message": "citation checking unavailable: `trainyard.bib` could not be read",
+   "related": []
+  }
+ ]
+}

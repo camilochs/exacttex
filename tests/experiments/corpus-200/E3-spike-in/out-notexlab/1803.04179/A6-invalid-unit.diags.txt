@@ -1,0 +1,3 @@
+planted=fig:planted_unit sites=[('pyov_arxiv.xtex', 70)]
+xtex new=[('XT1007', '', 'pyov_arxiv.xtex', 70)]
+texlab new=[]

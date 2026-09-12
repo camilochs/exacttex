@@ -1,0 +1,3 @@
+planted=Lag__ghost sites=[('main.xtex', 53)]
+xtex new=[('XT1003', 'Lag__ghost', 'main.xtex', 53)]
+texlab new=[]

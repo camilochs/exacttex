@@ -1,0 +1,87 @@
+{
+ "paper": "1803.01480",
+ "main": "williamson-doubling.tex",
+ "files": [
+  {
+   "file": "williamson-doubling.tex",
+   "chars_before": 6556,
+   "chars_after": 6553,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 6556,
+ "chars_after": 6553,
+ "delta_pct": -0.04575960951799878,
+ "unrepaired": {
+  "chars_after": 6553,
+  "chars_before": 6556,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.018312,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`williamson-doubling.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.04575960951799878
+ },
+ "stats": {
+  "cite_cmds_live": 6,
+  "cite_keys_live": 6,
+  "cite_with_optarg_or_star": 2,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 1,
+  "labels_outside_grammar": 0,
+  "refs_live": 1,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 0,
+  "cite_cmds_annotated": 4,
+  "cite_keys_annotated": 4,
+  "ids_annotated": 1,
+  "refs_annotated": 1,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.018312,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`williamson-doubling.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "williamson-doubling.xtex",
+    "offset": 1455,
+    "length": 22,
+    "line": 49,
+    "column": 27
+   },
+   "message": "citation checking unavailable: `williamson-doubling.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

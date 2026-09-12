@@ -1,0 +1,3 @@
+planted=figure:pca_plotly_annotation__ghost sites=[('tang.xtex', 144)]
+xtex new=[('XT1003', 'figure:pca_plotly_annotation__ghost', 'tang.xtex', 144)]
+texlab new=[]

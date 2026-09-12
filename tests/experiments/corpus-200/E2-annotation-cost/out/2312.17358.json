@@ -1,0 +1,70 @@
+{
+ "paper": "2312.17358",
+ "main": "sample-sigplan.tex",
+ "files": [
+  {
+   "file": "sample-sigplan.tex",
+   "chars_before": 50856,
+   "chars_after": 50850,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 50856,
+ "chars_after": 50850,
+ "delta_pct": -0.011798017932987258,
+ "unrepaired": {
+  "chars_after": 50850,
+  "chars_before": 50856,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.00861,
+  "bibliography": {
+   "state": "complete",
+   "entries": 30
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.011798017932987258
+ },
+ "stats": {
+  "cite_cmds_live": 29,
+  "cite_keys_live": 31,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 1,
+  "other_cite_cmds": 0,
+  "labels_live": 2,
+  "labels_outside_grammar": 0,
+  "refs_live": 2,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 2,
+  "cite_cmds_annotated": 28,
+  "cite_keys_annotated": 29,
+  "ids_annotated": 2,
+  "refs_annotated": 2,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.00861,
+ "bibliography": {
+  "state": "complete",
+  "entries": 30
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

@@ -1,0 +1,25 @@
+{
+ "coverage": 0.016521,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`SDSS_FG.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "FG_align.xtex",
+    "offset": 8130,
+    "length": 127,
+    "line": 210,
+    "column": 94
+   },
+   "message": "citation checking unavailable: `SDSS_FG.bib` could not be read",
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "coverage": 0.022853,
+ "bibliography": {
+  "state": "complete",
+  "entries": 14
+ },
+ "diagnostics": [
+  {
+   "code": "XT1001",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "section",
+   "name": "Sec:Intro",
+   "span": {
+    "file": "main.xtex",
+    "offset": 17474,
+    "length": 14,
+    "line": 368,
+    "column": 1
+   },
+   "message": "identifier `Sec:Intro` is already declared",
+   "related": [
+    {
+     "message": "first declared here",
+     "span": {
+      "file": "main.xtex",
+      "offset": 3121,
+      "length": 14,
+      "line": 79,
+      "column": 23
+     }
+    }
+   ]
+  },
+  {
+   "code": "XT1005",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "citation",
+   "name": "Lev:1991",
+   "span": {
+    "file": "main.xtex",
+    "offset": 5153,
+    "length": 30,
+    "line": 102,
+    "column": 442
+   },
+   "message": "citation key `Lev:1991` is not in the bibliography \u2014 did you mean `Lev:1992`?",
+   "related": []
+  },
+  {
+   "code": "XT1005",
+   "severity": "error",
+   "blame": "xtex-construct",
+   "entity": "citation",
+   "name": "Letac:2016",
+   "span": {
+    "file": "main.xtex",
+    "offset": 5153,
+    "length": 30,
+    "line": 102,
+    "column": 442
+   },
+   "message": "citation key `Letac:2016` is not in the bibliography",
+   "related": []
+  }
+ ]
+}

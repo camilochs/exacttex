@@ -1,0 +1,26 @@
+tectonic pdf bytes=287628
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=['B2016', 'BCK15', 'BerryEtAl2014', 'Carbery_2001', 'Demmel_2007', 'Hastings_2016mfmc', 'Hopkins_2016', 'Kraus_2013', 'LC16', 'Lesieur_2017', 'QSP', 'TS', 'Wecker_2015', 'Werner_1992', 'aaronson2017complexity', 'brassard2002quantum', 'hopkins2015tensor', 'kitaev2002classical', 'mehta2004random', 'richard2014statistical', 'tradeoff', 'tradeoff2', 'wein2019kikuchi'] secs=3
+full \hbox (35.55261pt too wide) in paragraph at lines 1617--1620
+warning: spikequantum.tex:1668: Overfull \hbox (31.96951pt too wide) in paragraph at lines 1662--1668
+warning: spikequantum.tex:1714: Overfull \hbox (15.14264pt too wide) detected at line 1714
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: spikequantum.tex:374: Overfull \hbox (10.17967pt too wide) in alignment at lines 367--374
+warning: spikequantum.tex:576: Overfull \hbox (36.99103pt too wide) detected at line 576
+warning: spikequantum.tex:586: Overfull \hbox (20.48897pt too wide) detected at line 586
+warning: spikequantum.tex:623: Overfull \hbox (35.98654pt too wide) in paragraph at lines 620--623
+warning: spikequantum.tex:741: Overfull \hbox (7.38347pt too wide) in alignment at lines 731--741
+warning: spikequantum.tex:862: Overfull \hbox (8.062pt too wide) in paragraph at lines 859--862
+warning: spikequantum.tex:884: Overfull \hbox (11.21193pt too wide) in paragraph at lines 879--884
+warning: spikequantum.tex:922: Overfull \hbox (17.7261pt too wide) detected at line 922
+warning: spikequantum.tex:1064: Overfull \hbox (1.67061pt too wide) in paragraph at lines 1050--1064
+warning: spikequantum.tex:1403: Overfull \hbox (34.0109pt too wide) in paragraph at lines 1400--1403
+warning: spikequantum.tex:1498: Overfull \hbox (37.74898pt too wide) in paragraph at lines 1492--1498
+warning: spikequantum.tex:1578: Overfull \hbox (35.43867pt too wide) in paragraph at lines 1573--1578
+warning: spikequantum.tex:1600: Overfull \hbox (2.3631pt too wide) in paragraph at lines 1596--1600
+warning: spikequantum.tex:1620: Overfull \hbox (35.55261pt too wide) in paragraph at lines 1617--1620
+warning: spikequantum.tex:1668: Overfull \hbox (31.96951pt too wide) in paragraph at lines 1662--1668
+warning: spikequantum.tex:1714: Overfull \hbox (15.14264pt too wide) detected at line 1714
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

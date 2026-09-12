@@ -1,0 +1,3 @@
+planted=prop1__ghost sites=[('uniquely_remotal_in_l_1.xtex', 147)]
+xtex new=[('XT1003', 'prop1__ghost', 'uniquely_remotal_in_l_1.xtex', 147)]
+texlab new=[('ERROR', 'uniquely_remotal_in_l_1.tex', 147, 'Undefined reference'), ('info', 'uniquely_remotal_in_l_1.tex', 92, 'Unused label')]

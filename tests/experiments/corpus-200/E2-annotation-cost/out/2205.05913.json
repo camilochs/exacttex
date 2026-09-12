@@ -1,0 +1,239 @@
+{
+ "paper": "2205.05913",
+ "main": "draft_final_version.tex",
+ "files": [
+  {
+   "file": "draft_final_version.tex",
+   "chars_before": 122670,
+   "chars_after": 122535,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 122670,
+ "chars_after": 122535,
+ "delta_pct": -0.11005135730007337,
+ "unrepaired": {
+  "chars_after": 122463,
+  "chars_before": 122670,
+  "converted_files": 1,
+  "check_exit": 0,
+  "coverage": 0.079175,
+  "bibliography": {
+   "state": "complete",
+   "entries": 89
+  },
+  "errors": 0,
+  "advisories": 0,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.16874541452677916
+ },
+ "stats": {
+  "cite_cmds_live": 33,
+  "cite_keys_live": 101,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 3,
+  "other_cite_cmds": 0,
+  "labels_live": 69,
+  "labels_outside_grammar": 0,
+  "refs_live": 51,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 53,
+  "float_envs": 21,
+  "cite_cmds_annotated": 30,
+  "cite_keys_annotated": 91,
+  "ids_annotated": 45,
+  "refs_annotated": 51,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 0,
+  "leaks_reverted": 24,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "draft_final_version.tex",
+   "line": 808,
+   "token": "@id(fig:permeabilityMap_spe10_bottom_layer.pdf)",
+   "wrapper": "?",
+   "context": "\\label{fig:permeabilityMap_spe10_bottom_layer.pdf}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 813,
+   "token": "@id(fig:spe10_bottom_layer_wettingPhase_t50)",
+   "wrapper": "?",
+   "context": "\\label{fig:spe10_bottom_layer_wettingPhase_t50}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 818,
+   "token": "@id(fig:spe10_bottom_layer_wettingPhase_t250)",
+   "wrapper": "?",
+   "context": "\\label{fig:spe10_bottom_layer_wettingPhase_t250}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 823,
+   "token": "@id(fig:spe10_bottom_layer_wettingPhase_t500)",
+   "wrapper": "?",
+   "context": "\\label{fig:spe10_bottom_layer_wettingPhase_t500}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 922,
+   "token": "@id(fig:cv_curve_secondTimestep_spe10_BottomLayer)",
+   "wrapper": "?",
+   "context": "\\label{fig:cv_curve_secondTimestep_spe10_BottomLayer}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 959,
+   "token": "@id(fig:fig:cv_curve_lastTimestep_spe10_BottomLayer)",
+   "wrapper": "?",
+   "context": "\\label{fig:fig:cv_curve_lastTimestep_spe10_BottomLayer}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 1089,
+   "token": "@id(fig:spe10_bottom_layer_cumulative_iter_vs_cfl_fixed_tolerance)",
+   "wrapper": "?",
+   "context": "\\label{fig:spe10_bottom_layer_cumulative_iter_vs_cfl_fixed_tolerance}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 1124,
+   "token": "@id(fig:spe10_bottom_layer_cumulative_iter_vs_cfl_adaptive_tolerance)",
+   "wrapper": "?",
+   "context": "\\label{fig:spe10_bottom_layer_cumulative_iter_vs_cfl_adaptive_tolerance}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 1354,
+   "token": "@id(fig:nonlinearIterCurve_spe10_top_layerHighInjection.pdf)",
+   "wrapper": "?",
+   "context": "\\label{fig:nonlinearIterCurve_spe10_top_layerHighInjection.pdf}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 1388,
+   "token": "@id(fig:nonlinearIterCurve_spe10_top_layerLowInjection.pdf)",
+   "wrapper": "?",
+   "context": "\\label{fig:nonlinearIterCurve_spe10_top_layerLowInjection.pdf}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 1429,
+   "token": "@id(fig:nonlinearIterCurve_spe10_top_layerHighInjection_adaptive_tolerance)",
+   "wrapper": "?",
+   "context": "\\label{fig:nonlinearIterCurve_spe10_top_layerHighInjection_adaptive_tolerance}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 1463,
+   "token": "@id(fig:nonlinearIterCurve_spe10_top_layerLowInjection_adaptive_tolerance)",
+   "wrapper": "?",
+   "context": "\\label{fig:nonlinearIterCurve_spe10_top_layerLowInjection_adaptive_tolerance}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 1507,
+   "token": "@id(fig:lockExchangeHomoRelPerm_wetting_phase_t75)",
+   "wrapper": "?",
+   "context": "\\label{fig:lockExchangeHomoRelPerm_wetting_phase_t75}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 1512,
+   "token": "@id(fig:lockExchangeHomoRelPerm_wetting_phase_t150)",
+   "wrapper": "?",
+   "context": "\\label{fig:lockExchangeHomoRelPerm_wetting_phase_t150}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 1517,
+   "token": "@id(fig:lockExchangeHomoRelPerm_wetting_phase_t300)",
+   "wrapper": "?",
+   "context": "\\label{fig:lockExchangeHomoRelPerm_wetting_phase_t300}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 1522,
+   "token": "@id(fig:lockExchangeHomoRelPerm_wetting_phase_t450)",
+   "wrapper": "?",
+   "context": "\\label{fig:lockExchangeHomoRelPerm_wetting_phase_t450}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 1595,
+   "token": "@id(fig:nonlinearIterCurve_lockExchange_fixedTolerance)",
+   "wrapper": "?",
+   "context": "\\label{fig:nonlinearIterCurve_lockExchange_fixedTolerance}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 1628,
+   "token": "@id(fig:nonlinearIterCurve_lockExchange_adaptiveTolerance)",
+   "wrapper": "?",
+   "context": "\\label{fig:nonlinearIterCurve_lockExchange_adaptiveTolerance}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 1800,
+   "token": "@id(fig:frac_perm_map)",
+   "wrapper": "?",
+   "context": "\\label{fig:frac_perm_map}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 1805,
+   "token": "@id(fig:frac_sat_map_T300)",
+   "wrapper": "?",
+   "context": "\\label{fig:frac_sat_map_T300}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 1810,
+   "token": "@id(fig:frac_sat_map_T600)",
+   "wrapper": "?",
+   "context": "\\label{fig:frac_sat_map_T600}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 1815,
+   "token": "@id(fig:frac_sat_map_T900)",
+   "wrapper": "?",
+   "context": "\\label{fig:frac_sat_map_T900}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 1820,
+   "token": "@id(fig:frac_sat_map_T1500)",
+   "wrapper": "?",
+   "context": "\\label{fig:frac_sat_map_T1500}"
+  },
+  {
+   "file": "draft_final_version.tex",
+   "line": 1825,
+   "token": "@id(fig:frac_sat_map_T1200)",
+   "wrapper": "?",
+   "context": "\\label{fig:frac_sat_map_T1200}"
+  }
+ ],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.079128,
+ "bibliography": {
+  "state": "complete",
+  "entries": 89
+ },
+ "diagnostics": [],
+ "check_stderr": "",
+ "build_stderr": ""
+}

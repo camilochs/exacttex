@@ -1,0 +1,6 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[('info', 'Manuscript1.tex', 40, 'Unused label'), ('info', 'Manuscript1.tex', 104, 'Unused label'), ('info', 'Manuscript1.tex', 106, 'Unused label'), ('info', 'Manuscript1.tex', 108, 'Unused label'), ('info', 'Manuscript1.tex', 110, 'Unused label'), ('info', 'Manuscript1.tex', 112, 'Unused label'), ('info', 'Manuscript1.tex', 122, 'Unused label'), ('info', 'Manuscript1.tex', 133, 'Unused label'), ('info', 'Manuscript1.tex', 135, 'Unused label'), ('info', 'Manuscript1.tex', 218, 'Unused label'), ('info', 'Manuscript1.tex', 227, 'Unused label'), ('info', 'Manuscript1.tex', 229, 'Unused label'), ('info', 'Manuscript1.tex', 236, 'Unused label'), ('info', 'Manuscript1.tex', 247, 'Unused label'), ('info', 'Manuscript1.tex', 274, 'Unused label'), ('info', 'Manuscript1.tex', 276, 'Unused label'), ('info', 'Manuscript1.tex', 281, 'Unused label'), ('info', 'Manuscript1.tex', 322, 'Unused label'), ('info', 'Manuscript1.tex', 324, 'Unused label'), ('info', 'Manuscript1.tex', 354, 'Unused label')]
+tectonic exit=1 warnings=[] secs=1
+error: svjour3.cls:131: ! LaTeX Error: File `svglov3.clo' not found.
+error: halted on potentially-recoverable error as specified

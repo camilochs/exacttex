@@ -1,0 +1,451 @@
+pdf=1
+exit=0
+lines=1916
+unique_findings=8
+/generic/pgf/pgf.rev
+ision.tex)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/basiclaye
+r/pgfcore.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/systemlay
+er/pgfsys.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/systeml
+ayer/pgfsys.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfkeys.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfkeyslibraryfiltered.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/systeml
+ayer/pgf.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/systeml
+ayer/pgfsys-pdftex.def
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/systeml
+ayer/pgfsys-common-pdf.def)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/systeml
+ayer/pgfsyssoftpath.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/systeml
+ayer/pgfsysprotocol.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/xcolor/xcolor
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcore.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmath.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathutil.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathparser.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.basic.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.trigonometric.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.random.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.comparison.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.base.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.round.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.misc.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfunctions.integerarithmetics.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathcalc.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmathfloat.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fint.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorepoints.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorepathconstruct.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorepathusage.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorescopes.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoregraphicstate.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoretransformations.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorequick.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoreobjects.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorepathprocessing.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorearrows.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoreshade.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoreimage.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoreexternal.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorelayers.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcoretransparency.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorepatterns.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/basicla
+yer/pgfcorerdf.code.tex)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/modules
+/pgfmoduleshapes.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/modules
+/pgfmoduleplot.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/compatibi
+lity/pgfcomp-version-0-65.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/compatibi
+lity/pgfcomp-version-1-18.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/utilities
+/pgffor.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/utilities
+/pgfkeys.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgfkeys.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/pgf/math/pgfm
+ath.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/math/pg
+fmath.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/utiliti
+es/pgffor.code.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/fronten
+dlayer/tikz/tikz.code.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/librari
+es/pgflibraryplothandlers.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/modules
+/pgfmodulematrix.code.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pgf/fronten
+dlayer/tikz/libraries/tikzlibrarytopaths.code.tex)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/verbati
+m.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/environ/envir
+on.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/trimspaces/tr
+imspaces.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/colortbl/colo
+rtbl.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/array.s
+ty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/tabular
+x.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/multirow/mult
+irow.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/stmaryrd/stma
+ryrd.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/lsca
+pe.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/setspace/sets
+pace.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/subca
+ption.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/capti
+on.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/capti
+on3.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/capti
+on-elsarticle.sto))))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/placeins/plac
+eins.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/changepage/ch
+angepage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/enumitem/enum
+item.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/longtab
+le.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/url/url.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/soul/soul.s
+ty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/soul/soul-o
+ri.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/infwarerr/i
+nfwarerr.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/etexcmds/et
+excmds.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lineno/lineno
+.sty) (./main.aux)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/ltcap
+tion.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/stmaryrd/Ustm
+ry.fd) (./01_introduction.tex
+Overfull \hbox (2.22221pt too wide) has occurred while \output is active
+[] 
+[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}]) (./02_researchmethod.tex [2{/opt/homebrew/Cellar/texlive/20260
+301/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./figures/Regu
+lative_Cycle.pdf>]
+
+LaTeX Warning: Reference `fig:02_cycle__ghost' on page 3 undefined on input lin
+e 22.
+
+) (./03_challenges.tex [3 <./figures/Content_Paper_2.pdf>]
+Overfull \hbox (5.23909pt too wide) in paragraph at lines 125--125
+[]|[]| 
+[4]
+Overfull \hbox (1.78284pt too wide) in paragraph at lines 151--151
+[]|\OT1/cmr/bx/n/8 ID| 
+
+Overfull \hbox (2.74802pt too wide) in paragraph at lines 151--151
+[]|\OT1/cmr/bx/n/8 L| 
+
+Overfull \hbox (6.82199pt too wide) in paragraph at lines 151--151
+[]|\OT1/cmr/bx/n/8 W| 
+
+Overfull \hbox (1.94405pt too wide) in paragraph at lines 152--152
+[]|\OT1/cmr/m/n/8 #1| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--152
+[]|\OT1/cmr/m/n/8 Additional views
+
+Underfull \hbox (badness 1303) in paragraph at lines 152--152
+\OT1/cmr/m/n/8 needed for de-scrib-ing
+
+Overfull \hbox (3.2525pt too wide) in paragraph at lines 152--153
+[]|[]| 
+
+Overfull \hbox (1.94405pt too wide) in paragraph at lines 153--153
+[]|\OT1/cmr/m/n/8 #2| 
+
+Underfull \hbox (badness 5288) in paragraph at lines 153--153
+\OT1/cmr/m/n/8 en-sur-ing the de-sired
+
+Overfull \hbox (3.53688pt too wide) in paragraph at lines 153--153
+[]|[]| 
+
+Overfull \hbox (3.2525pt too wide) in paragraph at lines 153--153
+[]|[]| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+[]|\OT1/cmr/m/n/8 Kondermann (2013);
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+\OT1/cmr/m/n/8 Ries et al. (2021);
+
+Overfull \hbox (1.94405pt too wide) in paragraph at lines 154--154
+[]|\OT1/cmr/m/n/8 #3| 
+
+Overfull \hbox (3.2525pt too wide) in paragraph at lines 154--154
+[]|[]| 
+
+Overfull \hbox (1.94405pt too wide) in paragraph at lines 155--155
+[]|\OT1/cmr/m/n/8 #4| 
+
+Overfull \hbox (3.53688pt too wide) in paragraph at lines 155--155
+[]|[]| 
+
+Underfull \hbox (badness 2818) in paragraph at lines 155--156
+[]|\OT1/cmr/m/n/8 Bosch et al. (2020);
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+\OT1/cmr/m/n/8 Muc-cini and Vaid-
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+\OT1/cmr/m/n/8 hyanathan (2021);
+
+Overfull \hbox (1.94405pt too wide) in paragraph at lines 156--156
+[]|\OT1/cmr/m/n/8 #5| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+[]|\OT1/cmr/m/n/8 Integration of ad-di-
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+\OT1/cmr/m/n/8 tional stake-hold-ers
+
+Underfull \hbox (badness 2213) in paragraph at lines 156--156
+\OT1/cmr/m/n/8 (e.g., data sci-en-tists,
+
+Overfull \hbox (3.53688pt too wide) in paragraph at lines 156--156
+[]|[]| 
+
+Underfull \hbox (badness 6316) in paragraph at lines 156--157
+\OT1/cmr/m/n/8 Vo-gel-sang and Borg
+
+Overfull \hbox (1.94405pt too wide) in paragraph at lines 157--157
+[]|\OT1/cmr/m/n/8 #6| 
+
+Overfull \hbox (3.53688pt too wide) in paragraph at lines 157--157
+[]|[]| 
+
+Overfull \hbox (1.94405pt too wide) in paragraph at lines 158--158
+[]|\OT1/cmr/m/n/8 #7| 
+
+Underfull \hbox (badness 5681) in paragraph at lines 158--158
+[]|\OT1/cmr/m/n/8 New qual-ity as-pects
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--158
+\OT1/cmr/m/n/8 (e.g., ex-plain-abil-ity,
+
+Overfull \hbox (3.53688pt too wide) in paragraph at lines 158--158
+[]|[]| 
+
+Overfull \hbox (3.2525pt too wide) in paragraph at lines 158--158
+[]|[]| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
+\OT1/cmr/m/n/8 (2018); Eu-ro-pean
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
+\OT1/cmr/m/n/8 Com-mis-sion (2020);
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
+\OT1/cmr/m/n/8 Habibul-lah and
+
+Overfull \hbox (1.94405pt too wide) in paragraph at lines 159--159
+[]|\OT1/cmr/m/n/8 #8| 
+
+Overfull \hbox (3.53688pt too wide) in paragraph at lines 159--159
+[]|[]| 
+
+Overfull \hbox (3.2525pt too wide) in paragraph at lines 159--159
+[]|[]| 
+
+Overfull \hbox (1.94405pt too wide) in paragraph at lines 160--160
+[]|\OT1/cmr/m/n/8 #9| 
+
+Overfull \hbox (3.53688pt too wide) in paragraph at lines 160--160
+[]|[]| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+\OT1/cmr/m/n/8 NATO (2020); Nu-
+
+Overfull \hbox (6.1941pt too wide) in paragraph at lines 161--161
+[]|\OT1/cmr/m/n/8 #10| 
+
+Overfull \hbox (3.53688pt too wide) in paragraph at lines 161--161
+[]|[]| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+[]|\OT1/cmr/m/n/8 Murugesan et al.
+) (./04_framework.tex
+Underfull \hbox (badness 2165) in paragraph at lines 1--1
+[]\OT1/cmr/bx/n/10 The con-cept of com-po-si-tional ar-chi-tec-tural
+[5] [6 <./figures/Arch-CoDesign.pdf>] [7 <./figures/Category_Product.pdf>])
+(./05_application.tex [8 <./figures/Architecture_Framework_UML.pdf>]
+Overfull \hbox (1.09358pt too wide) in paragraph at lines 104--173
+ [][] 
+[9 <./figures/Process_Architecture_Framework_Development.pdf>]
+Underfull \vbox (badness 3701) has occurred while \output is active [10]
+Underfull \vbox (badness 3919) has occurred while \output is active [11])
+(./06_demonstration.tex
+Underfull \hbox (badness 4995) in paragraph at lines 5--5
+[]\OT1/cmr/m/n/10 This sec-tion presents the re-sults from ap-ply-ing
+[12 <./figures/architecture_framework_v20.pdf>]
+Underfull \hbox (badness 4024) in paragraph at lines 42--42
+[]\OT1/cmr/m/it/10 Correspondences be-tween con-text, data strat-egy,
+[13 <./figures/HowToSteps_3.pdf>] [14 <./figures/Use_Case_2_BP.pdf>]
+Underfull \vbox (badness 4765) has occurred while \output is active
+Underfull \vbox (badness 10000) has occurred while \output is active [15 <./fig
+ures/Use_Case_2_CLAIB.pdf> <./figures/Safety_Example.pdf> <./figures/Safety_Exa
+mple_2.pdf>] [16]) (./07_discussion.tex [17 <./figures/Use_Case_2_CLAIB_relatio
+ns.pdf>] [18] [19]
+Underfull \vbox (badness 10000) has occurred while \output is active)
+(./main.bbl [20]
+Underfull \hbox (badness 2600) in paragraph at lines 36--44
+[]\OT1/cmr/m/n/8 Altarturi, H.H., Ng, K.Y., Ning-gal, M.I.H., Nazri, A.S.A.,
+
+Underfull \hbox (badness 1377) in paragraph at lines 134--139
+[]\OT1/cmr/m/n/8 European Com-mis-sion, 2020.  REG-U-LA-TION OF THE EU-
+
+Underfull \hbox (badness 1199) in paragraph at lines 363--373
+\OT1/cmr/m/n/8 si-fi-ca-tion of In-ter-net of Things Re-views.  IEEE Ac-cess 8,
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active [21]
+Underfull \vbox (badness 10000) has occurred while \output is active)
+(./_appendix.tex [22] [23] [24 <./figures/Overview_of_concerns_withIDs.pdf>]
+[25]
+Overfull \vbox (22.6839pt too high) detected at line 172
+
+Overfull \hbox (1.35391pt too wide) in paragraph at lines 172--172
+[][] 
+
+Overfull \hbox (1.42058pt too wide) in paragraph at lines 172--172
+[][] 
+
+Overfull \vbox (3.417pt too high) detected at line 172
+
+Overfull \vbox (60.07362pt too high) detected at line 172
+[26])  [27] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></opt/homebrew/Cellar/texlive/202
+60301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew
+/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
+pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20260301/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar
+/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></op
+t/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr6.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></opt/homebrew/
+Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy8.pfb></opt/homebrew/Cellar/texlive/20260301/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/homebrew/Cella
+r/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></
+opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti8.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmti9.pfb></opt/homebrew/Cellar/texlive/20260301/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></o
+pt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm-supe
+r/sfrm0900.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/ty
+pe1/public/cm-super/sfrm1000.pfb></opt/homebrew/Cellar/texlive/20260301/share/t
+exmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
+Output written on main.pdf (27 pages, 1635571 bytes).
+Transcript written on main.log.
+************************************
+** Labels in starred environments **
+************************************
+-- 05_application.tex   line  220: remove label 05:tab_VEDLIoTLevels 
+-- 07_discussion.tex    line  159: remove label tab:08_validation 
+-- _appendix.tex        line   75: remove label 05:tab_ArchiViews 
+
+*******************
+** Unused Labels **
+*******************
+-- 03_challenges.tex    line   10: remove label subsec:03_LitChallenges
+-- 06_demonstration.tex line   66: remove label subsec:SafetyExample
+-- 05_application.tex   line   72: remove label 04_subsec:Concerns
+-- 06_demonstration.tex line   83: remove label sub@fig:04_SafetyA
+-- 06_demonstration.tex line   89: remove label sub@fig:04_SafetyB
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

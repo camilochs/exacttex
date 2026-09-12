@@ -1,0 +1,28 @@
+tectonic pdf bytes=470665
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=['AMRR11', 'Ari15', 'BHT98', 'BR12', 'BT18', 'CMB16', 'ChK10', 'Cira06', 'DHHM04', 'Durr1996', 'Grover96', 'HK70', 'HLS07', 'ItoJeffery15', 'Kahn62', 'LL16', 'LMRS10', 'LMRSS11', 'RS12', 'Rei09', 'Shi02', 'Tarjan76', 'Zhang05'] secs=5
+ paragraph at lines 1152--1153
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:469: Underfull \hbox (badness 10000) in paragraph at lines 463--469
+warning: paperQuantum.tex:544: Overfull \hbox (0.6339pt too wide) in paragraph at lines 541--544
+warning: paperQuantum.tex:588: Overfull \hbox (14.98766pt too wide) detected at line 588
+warning: paperQuantum.tex:650: Overfull \hbox (26.09552pt too wide) in paragraph at lines 649--650
+warning: paperQuantum.tex:674: Overfull \hbox (13.42482pt too wide) in paragraph at lines 672--674
+warning: paperQuantum.tex:1153: Overfull \hbox (9.8789pt too wide) in paragraph at lines 1152--1153
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:469: Underfull \hbox (badness 10000) in paragraph at lines 463--469
+warning: paperQuantum.tex:544: Overfull \hbox (0.6339pt too wide) in paragraph at lines 541--544
+warning: paperQuantum.tex:588: Overfull \hbox (14.98766pt too wide) detected at line 588
+warning: paperQuantum.tex:650: Overfull \hbox (26.09552pt too wide) in paragraph at lines 649--650
+warning: paperQuantum.tex:674: Overfull \hbox (13.42482pt too wide) in paragraph at lines 672--674
+warning: paperQuantum.tex:1153: Overfull \hbox (9.8789pt too wide) in paragraph at lines 1152--1153
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

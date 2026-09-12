@@ -1,0 +1,338 @@
+exit=2
+lines=335
+unique_findings=106
+chktex: WARNING -- Unable to open the TeX file `glyphtounicode'.
+Warning 1 in luca171228-pt_and_qt.tex line 8: Command terminated with space.
+\newif\ifarxiv  
+              ^
+Warning 1 in luca171228-pt_and_qt.tex line 9: Command terminated with space.
+\arxivtrue  
+          ^
+Warning 1 in luca171228-pt_and_qt.tex line 11: Command terminated with space.
+\newif\ifafour  
+              ^
+Warning 1 in luca171228-pt_and_qt.tex line 12: Command terminated with space.
+\afourfalse % true = A4, false = A5  
+           ^
+Warning 1 in luca171228-pt_and_qt.tex line 13: Command terminated with space.
+\newif\iftypodisclaim % typographical disclaim on the side  
+                     ^
+Warning 1 in luca171228-pt_and_qt.tex line 14: Command terminated with space.
+\typodisclaimtrue  
+                 ^
+Warning 1 in luca171228-pt_and_qt.tex line 17: Command terminated with space.
+\documentclass[\ifafour a4paper,12pt,\else a5paper,10pt,\fi%extrafontsizes,%  
+                       ^
+Warning 1 in luca171228-pt_and_qt.tex line 21: Command terminated with space.
+\newif\ifpublic  
+               ^
+Warning 1 in luca171228-pt_and_qt.tex line 22: Command terminated with space.
+\publictrue % true = for publication, false = personal notes  
+           ^
+Warning 27 in luca171228-pt_and_qt.tex line 38: Could not execute LaTeX command.
+\input{glyphtounicode} \pdfgentounicode=1  
+^^^^^^
+Warning 1 in luca171228-pt_and_qt.tex line 122: Command terminated with space.
+    \let#1=\undefined  
+                     ^
+Warning 18 in luca171228-pt_and_qt.tex line 126: Use either `` or '' as an alternative to `"'.
+\re@DeclareMathSymbol{\bigoplusop}{\mathop}{largesymbols}{"4C}  
+                                                          ^
+Warning 18 in luca171228-pt_and_qt.tex line 127: Use either `` or '' as an alternative to `"'.
+\re@DeclareMathSymbol{\bigotimesop}{\mathop}{largesymbols}{"4E}  
+                                                           ^
+Warning 18 in luca171228-pt_and_qt.tex line 128: Use either `` or '' as an alternative to `"'.
+\re@DeclareMathSymbol{\sumop}{\mathop}{largesymbols}{"50}  
+                                                     ^
+Warning 18 in luca171228-pt_and_qt.tex line 129: Use either `` or '' as an alternative to `"'.
+\re@DeclareMathSymbol{\prodop}{\mathop}{largesymbols}{"51}  
+                                                      ^
+Warning 18 in luca171228-pt_and_qt.tex line 130: Use either `` or '' as an alternative to `"'.
+\re@DeclareMathSymbol{\bigcupop}{\mathop}{largesymbols}{"53}  
+                                                        ^
+Warning 18 in luca171228-pt_and_qt.tex line 131: Use either `` or '' as an alternative to `"'.
+\re@DeclareMathSymbol{\bigcapop}{\mathop}{largesymbols}{"54}  
+                                                        ^
+Warning 18 in luca171228-pt_and_qt.tex line 133: Use either `` or '' as an alternative to `"'.
+\re@DeclareMathSymbol{\bigwedgeop}{\mathop}{largesymbols}{"56}  
+                                                          ^
+Warning 18 in luca171228-pt_and_qt.tex line 134: Use either `` or '' as an alternative to `"'.
+\re@DeclareMathSymbol{\bigveeop}{\mathop}{largesymbols}{"57}  
+                                                        ^
+Warning 18 in luca171228-pt_and_qt.tex line 140: Use either `` or '' as an alternative to `"'.
+\re@DeclareMathSymbol{\bigtimesop}{\mathop}{largesymbolsPXA}{"10}  
+                                                             ^
+Warning 8 in luca171228-pt_and_qt.tex line 148: Wrong length of dash may have been used.
+\DeclareFontShape{U}{egreek}{m}{n}{<-6>s*[1]eurm5 <6-8>s*[1]eurm7 <8->s*[1]eurm10}{}%  
+                                                    ^
+Warning 8 in luca171228-pt_and_qt.tex line 150: Wrong length of dash may have been used.
+\DeclareFontShape{U}{egreek}{b}{n}{<-6>s*[1]eurb5 <6-8>s*[1]eurb7 <8->s*[1]eurb10}{}%  
+                                                    ^
+Warning 8 in luca171228-pt_and_qt.tex line 160: Wrong length of dash may have been used.
+    <7.5-8.5>s*[0.9]euex8%  
+        ^
+Warning 8 in luca171228-pt_and_qt.tex line 161: Wrong length of dash may have been used.
+    <8.5-9.5>s*[0.9]echktex: WARNING -- Unable to open the TeX file `undefinegreek.tex'.
+uex9%  
+        ^
+Warning 18 in luca171228-pt_and_qt.tex line 165: Use either `` or '' as an alternative to `"'.
+\DeclareMathSymbol{\sumop}{\mathop}{egreekx}{"50}  
+                                             ^
+Warning 18 in luca171228-pt_and_qt.tex line 166: Use either `` or '' as an alternative to `"'.
+\DeclareMathSymbol{\prodop}{\mathop}{egreekx}{"51}  
+                                              ^
+Warning 18 in luca171228-pt_and_qt.tex line 167: Use either `` or '' as an alternative to `"'.
+\DeclareMathSymbol{\coprodop}{\mathop}{egreekx}{"60}  
+                                                ^
+Warning 27 in luca171228-pt_and_qt.tex line 173: Could not execute LaTeX command.
+\ifarxiv\else\input{undefinegreek.tex}\fi% arxiv. to make sure no CMF greek letters sneak in  
+             ^^^^^^
+Warning 18 in luca171228-pt_and_qt.tex line 176: Use either `` or '' as an alternative to `"'.
+ \DeclareMathSymbol{\partialup}{\mathalpha}{egreekr}{"40}  
+                                                     ^
+Warning 18 in luca171228-pt_and_qt.tex line 181: Use either `` or '' as an alternative to `"'.
+ \DeclareMathSymbol{\epsilon}{\mathalpha}{egreeki}{"0F}  
+                                                   ^
+Warning 18 in luca171228-pt_and_qt.tex line 183: Use either `` or '' as an alternative to `"'.
+ \DeclareMathSymbol{\eta}{\mathalpha}{egreeki}{"11}  
+                                               ^
+Warning 18 in luca171228-pt_and_qt.tex line 184: Use either `` or '' as an alternative to `"'.
+ \DeclareMathSymbol{\theta}{\mathalpha}{egreeki}{"12}  
+                                                 ^
+Warning 18 in luca171228-pt_and_qt.tex line 186: Use either `` or '' as an alternative to `"'.
+ \DeclareMathSymbol{\kappa}{\mathalpha}{egreeki}{"14}  
+                                                 ^
+Warning 18 in luca171228-pt_and_qt.tex line 187: Use either `` or '' as an alternative to `"'.
+ \DeclareMathSymbol{\lambda}{\mathalpha}{egreeki}{"15}  
+                                                  ^
+Warning 18 in luca171228-pt_and_qt.tex line 188: Use either `` or '' as an alternative to `"'.
+ \DeclareMathSymbol{\mu}{\mathalpha}{egreeki}{"16}  
+                                              ^
+Warning 18 in luca171228-pt_and_qt.tex line 189: Use either `` or '' as an alternative to `"'.
+ \DeclareMathSymbol{\nu}{\mathalpha}{egreeki}{"17}  
+                                              ^
+Warning 18 in luca171228-pt_and_qt.tex line 193: Use either `` or '' as an alternative to `"'.
+ \DeclareMathSymbol{\rho}{\mathalpha}{egreeki}{"1A}  
+                                               ^
+Warning 18 in luca171228-pt_and_qt.tex line 194: Use either `` or '' as an alternative to `"'.
+ \DeclareMathSymbol{\sigma}{\mathalpha}{egreeki}{"1B}  
+                                                 ^
+Warning 18 in luca171228-pt_and_qt.tex line 199: Use either `` or '' as an alternative to `"'.
+ \DeclareMathSymbol{\psi}{\mathalpha}{egreeki}{"20}  
+                                               ^
+Warning 1 in luca171228-pt_and_qt.tex line 206: Command terminated with space.
+ \let\varkappa\kappa  
+                    ^
+Warning 18 in luca171228-pt_and_qt.tex line 212: Use either `` or '' as an alternative to `"'.
+ \DeclareMathSymbol{\varDelta}{\mathalpha}{egreeki}{"01}  
+                                                    ^
+Warning 18 in luca171228-pt_and_qt.tex line 213: Use either `` or '' as an alternative to `"'.
+ \DeclareMathSymbol{\varEpsilon}{\mathalpha}{egreeki}{"45}  
+                                                      ^
+Warning 18 in luca171228-pt_and_qt.tex line 217: Use either `` or '' as an alternative to `"'.
+ \DeclareMathSymbol{\varIota}{\mathalpha}{egreeki}{"49}  
+                                                   ^
+Warning 18 in luca171228-pt_and_qt.tex line 224: Use either `` or '' as an alternative to `"'.
+ \DeclareMathSymbol{\varPi}{\mathalpha}{egreeki}{"05}  
+                                                 ^
+Warning 18 in luca171228-pt_and_qt.tex line 227: Use either `` or '' as an alternative to `"'.
+ \DeclareMathSymbol{\varTau}{\mathalpha}{egreeki}{"54}  
+                                                  ^
+Warning 18 in luca171228-pt_and_qt.tex line 232: Use either `` or '' as an alternative to `"'.
+ \DeclareMathSymbol{\varOmega}{\mathalpha}{egreeki}{"0A}   
+                                                    ^
+Warning 18 in luca171228-pt_and_qt.tex line 262: Use either `` or '' as an alternative to `"'.
+ \DeclareMathSymbol{\deltaup}{\mathalpha}{egreekr}{"0E}  
+                                                   ^
+Warning 18 in luca171228-pt_and_qt.tex line 274: Use either `` or '' as an alternative to `"'.
+  \DeclareMathSymbol{\piup}{\mathalpha}{egreekr}{"19}  
+                                                 ^
+Warning 1 in luca171228-pt_and_qt.tex line 340: Command terminated with space.
+  \blx@blxinit  
+              ^
+Warning 1 in luca171228-pt_and_qt.tex line 341: Command terminated with space.
+  \blx@setsfcodes  
+                 ^
+Warning 1 in luca171228-pt_and_qt.tex line 342: Command terminated with space.
+  \blx@bibopenparen#1\blx@bibcloseparen  
+                                       ^
+Warning 9 in luca171228-pt_and_qt.tex line 371: `}' expected, found `]'.
+\newcommand*{\citein}[2][]{\textnormal{\textcite[#1]{#2}}%\addtocategory{extras}{#2}  
+                                                   ^
+Warning 10 in luca171228-pt_and_qt.tex line 372: Solo `}' found.
+}  
+^
+Warning 9 in luca171228-pt_and_qt.tex line 373: `}' expected, found `]'.
+\newcommand*{\citebi}[2][]{\textcite[#1]{#2}%\addtocategory{extras}{#2}  
+                                       ^
+Warning 10 in luca171228-pt_and_qt.tex line 374: Solo `}' found.
+}  
+^
+Warning 1 in luca171228-pt_and_qt.tex line 450: Command terminated with space.
+\fixpdflayout  
+             ^
+Warning 1 in luca171228-pt_and_qt.tex line 452: Command terminated with space.
+\pdfmapline{+dummy-space <dummy-space.pfb}\pdfinterwordspaceon  
+                                                              ^
+Warning 1 in luca171228-pt_and_qt.tex line 461: Command terminated with space.
+   \interlinepenalty \@M  
+                    ^
+Warning 1 in luca171228-pt_and_qt.tex line 461: Command terminated with space.
+   \interlinepenalty \@M  
+                        ^
+Warning 1 in luca171228-pt_and_qt.tex line 462: Command terminated with space.
+   \normalfont  
+              ^
+Warning 31 in luca171228-pt_and_qt.tex line 504: This text may be ignored.
+\end{picture}}}% A4  
+            
+Warning 31 in luca171228-pt_and_qt.tex line 509: This text may be ignored.
+\end{picture}}\fi%afourtrue  
+             ^^
+Warning 1 in luca171228-pt_and_qt.tex line 539: Command terminated with space.
+\lineskip  0.5em}  
+         ^
+Warning 1 in luca171228-pt_and_qt.tex line 559: Command terminated with space.
+\midsloppy  
+          ^
+Warning 1 in luca171228-pt_and_qt.tex line 564: Command terminated with space.
+\raggedbottom  
+             ^
+Warning 9 in luca171228-pt_and_qt.tex line 652: `]' expected, found `}'.
+\DeclarePairedDelimiter\clcl{[}{]}  
+                              ^
+Warning 9 in luca171228-pt_and_qt.tex line 652: `}' expected, found `]'.
+\DeclarePairedDelimiter\clcl{[}{]}  
+                                ^
+Warning 9 in luca171228-pt_and_qt.tex line 653: `]' expected, found `}'.
+\DeclarePairedDelimiter\clop{[}{[}  
+                              ^
+Warning 9 in luca171228-pt_and_qt.tex line 653: `]' expected, found `}'.
+\DeclarePairedDelimiter\clop{[}{[}  
+                                 ^
+Warning 1 in luca171228-pt_and_qt.tex line 756: Command terminated with space.
+\firmlists  
+          ^
+Warning 1 in luca171228-pt_and_qt.tex line 763: Command terminated with space.
+\ifpublic  
+         ^
+Warning 1 in luca171228-pt_and_qt.tex line 764: Command terminated with space.
+\abstractrunin  
+              ^
+Warning 1 in luca171228-pt_and_qt.tex line 770: Command terminated with space.
+\begin{abstract}\labelsep 0pt%  
+                         ^
+Warning 24 in luca171228-pt_and_qt.tex line 805: Delete this space to maintain correct pagereferences.
+\label{sec:intro}  
+^
+Warning 8 in luca171228-pt_and_qt.tex line 819: Wrong length of dash may have been used.
+  and experimental science: many of us have been apt -- perhaps too naively  
+                                                     ^^
+Warning 8 in luca171228-pt_and_qt.tex line 820: Wrong length of dash may have been used.
+  -- to assume that experiments can lead to conclusions only when worked up  
+  ^^
+Warning 2 in luca171228-pt_and_qt.tex line 827: Non-breaking space (`~') should have been used.
+\sourceatright{(B. O. Koopman, \cite*{koopman1957})}  
+                              ^
+Warning 8 in luca171228-pt_and_qt.tex line 832: Wrong length of dash may have been used.
+finite number of energy levels -- qubits, qutrits, \etc, very important in  
+                               ^^
+Warning 8 in luca171228-pt_and_qt.tex line 833: Wrong length of dash may have been used.
+today's chase for quantum computers \citep{nielsenetal2000_r2010} -- and if  
+                                                                  ^^
+Warning 24 in luca171228-pt_and_qt.tex line 839: Delete this space to maintain correct pagereferences.
+\label{sec:operational_approach}  
+^
+Warning 1 in luca171228-pt_and_qt.tex line 859: Command terminated with space.
+    simple logical demand, since the word \guillemotleft  
+                                                        ^
+Warning 44 in luca171228-pt_and_qt.tex line 894: User Regex: 1:Capitalize before references.
+appendix~\ref{sec:transformations}. For the moment let's keep the  
+^^^^^^^^^^^^^
+Warning 24 in luca171228-pt_and_qt.tex line 925: Delete this space to maintain correct pagereferences.
+\label{sec:convexity}  
+^
+Warning 8 in luca171228-pt_and_qt.tex line 995: Wrong length of dash may have been used.
+In an experiment with a physical system -- quantum or otherwise -- we can  
+                                        ^^
+Warning 8 in luca171228-pt_and_qt.tex line 995: Wrong length of dash may have been used.
+In an experiment with a physical system -- quantum or otherwise -- we can  
+                                                                ^^
+Warning 12 in luca171228-pt_and_qt.tex line 1027: Interword spacing (`\ ') should perhaps be used.
+more than two preparations. \iffalse\mynote{one author discussed this point  
+                           ^
+Warning 24 in luca171228-pt_and_qt.tex line 1036: Delete this space to maintain correct pagereferences.
+\label{sec:lattice}  
+^
+Warning 24 in luca171228-pt_and_qt.tex line 1093: Delete this space to maintain correct pagereferences.
+\label{sec:conclusion}  
+^
+Warning 12 in luca171228-pt_and_qt.tex line 1095: Interword spacing (`\ ') should perhaps be used.
+\enquote{Conclusion?} you might ask. \enquote{Wasn't all the above just the  
+                                    ^
+Warning 8 in luca171228-pt_and_qt.tex line 1128: Wrong length of dash may have been used.
+The notion that quantum systems require lattices of $\sigma$-algebras --  
+                                                                      ^^
+Warning 8 in luca171228-pt_and_qt.tex line 1129: Wrong length of dash may have been used.
+and therefore a generalization of the probability calculus -- arises when  
+                                                           ^^
+Warning 8 in luca171228-pt_and_qt.tex line 1162: Wrong length of dash may have been used.
+papers -- \eg\ those by Koopman \amp\ Pitman  
+       ^^
+Warning 24 in luca171228-pt_and_qt.tex line 1180: Delete this space to maintain correct pagereferences.
+\label{sec:quantum_exchangeability}  
+^
+Warning 2 in luca171228-pt_and_qt.tex line 1217: Non-breaking space (`~') should have been used.
+  \cite{hewittetal1955}}. The theorem leaves undetermined the distribution  
+ ^
+Warning 8 in luca171228-pt_and_qt.tex line 1229: Wrong length of dash may have been used.
+same -- but unknown -- preparation $\yS$. Hence the integral, with the  
+     ^^
+Warning 8 in luca171228-pt_and_qt.tex line 1229: Wrong length of dash may have been used.
+same -- but unknown -- preparation $\yS$. Hence the integral, with the  
+                    ^^
+Warning 9 in luca171228-pt_and_qt.tex line 1269: `}' expected, found `]'.
+\textcite[\chap~4]{bernardoetal1994_r2000}.  
+                 ^
+Warning 8 in luca171228-pt_and_qt.tex line 1300: Wrong length of dash may have been used.
+same -- but unknown -- preparation $(\eta_{\yM})$. Also in this case the  
+     ^^
+Warning 8 in luca171228-pt_and_qt.tex line 1300: Wrong length of dash may have been used.
+same -- but unknown -- preparation $(\eta_{\yM})$. Also in this case the  
+                    ^^
+Warning 8 in luca171228-pt_and_qt.tex line 1374: Wrong length of dash may have been used.
+its \emph{likelihood} and the space of parameters -- hence the support of  
+                                                  ^^
+Warning 8 in luca171228-pt_and_qt.tex line 1375: Wrong length of dash may have been used.
+the prior -- in the integral representation. This leads to interesting  
+          ^^
+Warning 1 in luca171228-pt_and_qt.tex line 1402: Command terminated with space.
+\iffalse  
+        ^
+Warning 1 in luca171228-pt_and_qt.tex line 1434: Command terminated with space.
+\iffalse ***cut text***  
+        ^
+Warning 1 in luca171228-pt_and_qt.tex line 1494: Command terminated with space.
+\ifpublic  
+         ^
+Warning 24 in luca171228-pt_and_qt.tex line 1512: Delete this space to maintain correct pagereferences.
+\label{sec:transformations}  
+^
+Warning 8 in luca171228-pt_and_qt.tex line 1532: Wrong length of dash may have been used.
+transformation $\yT$ -- not of the probability \eqref{eq:transformation}  
+                     ^^
+Warning 2 in luca171228-pt_and_qt.tex line 1532: Non-breaking space (`~') should have been used.
+transformation $\yT$ -- not of the probability \eqref{eq:transformation}  
+                                              ^
+Warning 24 in luca171228-pt_and_qt.tex line 1536: Delete this space to maintain correct pagereferences.
+\label{sec:traditional_qt}  
+^
+Warning 8 in luca171228-pt_and_qt.tex line 1596: Wrong length of dash may have been used.
+---------- cut text ----------------  
+                    ^^^^^^^^^^^^^^^^
+Warning 15 in luca171228-pt_and_qt.tex line 653: No match found for `{'.
+\DeclarePairedDelimiter\clop{[}{[}  
+                            ^
+Warning 17 in luca171228-pt_and_qt.tex line 1603: Number of `[' doesn't match the number of `]'!
+
+

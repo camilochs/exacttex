@@ -1,0 +1,487 @@
+pdf=1
+exit=0
+lines=948
+unique_findings=0
+nding objects on input line 219.
+
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 222.
+
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 225.
+
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 228.
+
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 231.
+
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 234.
+
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 237.
+
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 240.
+
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 243.
+
+
+Class acmart Warning: \vspace should only be used to provide space above/below 
+surrounding objects on input line 246.
+
+
+Package natbib Warning: Citation `sdlc8' on page 6 undefined on input line 253.
+
+
+
+Package natbib Warning: Citation `sec-sdlc4' on page 6 undefined on input line 
+253.
+
+
+Package natbib Warning: Citation `sdlc10' on page 6 undefined on input line 253
+.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active [6.6]
+
+Package natbib Warning: Citation `sec-sdlc5' on page 7 undefined on input line 
+257.
+
+
+Overfull \hbox (3.15906pt too wide) in paragraph at lines 258--259
+[]\T1/LinuxLibertineT-TLF/m/n/10 (-20) Risk Mit-i-ga-tion from the Start: Proac
+-tive se-cu-rity means
+
+Overfull \hbox (3.0388pt too wide) in paragraph at lines 265--266
+[]\T1/LinuxLibertineT-TLF/m/n/10 (-20) MAPE-K Loop for Learn-ing and Adap-ta-ti
+on: The MAPE-
+
+Overfull \hbox (1.01862pt too wide) in paragraph at lines 266--267
+[]\T1/LinuxLibertineT-TLF/m/n/10 (-20) Adaptive Se-cu-rity Strate-gies: Con-tin
+-u-ous im-prove-ment
+
+Overfull \hbox (4.24283pt too wide) in paragraph at lines 275--276
+[]\T1/LinuxLibertineT-TLF/m/n/10 (-20) Enhanced In-ci-dent Re-sponse: Re-duced 
+time-to-response
+
+Overfull \hbox (4.71947pt too wide) in paragraph at lines 282--283
+[]\T1/LinuxLibertineT-TLF/m/n/10 (-20) Evidence-Based Decision-Making: Knowl-ed
+ge ex-tracted
+
+Package natbib Warning: Citation `similarity' on page 7 undefined on input line
+ 283.
+
+[7.7]
+
+LaTeX Warning: Reference `tab:metrics' on page 8 undefined on input line 288.
+
+
+Package natbib Warning: Citation `sdlc6' on page 8 undefined on input line 288.
+
+
+
+Underfull \hbox (badness 2435) in paragraph at lines 322--323
+[]\T1/LinuxLibertineT-TLF/m/n/8 (+20) Markus C. Hueb-scher and Julie A. Mc-Cann
+, \T1/LinuxLibertineT-TLF/m/it/8 (+20) ^^PA sur-vey of au-
+
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
+\T1/LinuxLibertineT-TLF/m/it/8 (+20) to-nomic com-put-ing^^Vdegrees, mod-els, a
+nd ap-pli-ca-tions," \T1/LinuxLibertineT-TLF/m/n/8 (+20) ACM
+
+Underfull \hbox (badness 4193) in paragraph at lines 322--323
+\T1/LinuxLibertineT-TLF/m/n/8 (+20) Com-put-ing Sur-veys 40, 3, Ar-ti-cle 7 (Au
+-gust 2008), 28 pages.
+[8.8]
+Underfull \hbox (badness 1221) in paragraph at lines 345--346
+\T1/LinuxLibertineT-TLF/m/n/8 (+20) Frame-work for Self-Adaptive Sys-tems in Sa
+fety-Critical Ap-pli-ca-
+
+Underfull \hbox (badness 6016) in paragraph at lines 355--356
+[]\T1/LinuxLibertineT-TLF/m/n/8 (+20) Mehran Ali-doost Nia, Behnam Bahrak, Mehd
+i Kar-gahi, and
+
+Underfull \hbox (badness 2875) in paragraph at lines 355--356
+\T1/LinuxLibertineT-TLF/m/n/8 (+20) Ben-jamin Fabian, "De-tect-ing new gen-er-a
+-tions of threats us-ing
+
+Underfull \hbox (badness 1033) in paragraph at lines 369--370
+[]\T1/LinuxLibertineT-TLF/m/n/8 (+20) Mehran Ali-doost Nia, Reza Ebrahimi Atani
+, and An-to-nio Ruiz-
+
+Underfull \vbox (badness 10000) has occurred while \output is active [9.9]
+Underfull \hbox (badness 10000) in paragraph at lines 416--416
+[]|\T1/LinuxLibertineT-TLF/m/n/10 (+20) Dynamic Ac-cess
+
+Underfull \hbox (badness 1509) in paragraph at lines 416--416
+[]|\T1/LinuxLibertineT-TLF/m/n/10 (+20) Evaluates the ef-fec-tive-
+
+Underfull \hbox (badness 2913) in paragraph at lines 416--416
+\T1/LinuxLibertineT-TLF/m/n/10 (+20) just-ing ac-cess con-trols
+
+Underfull \hbox (badness 10000) in paragraph at lines 416--416
+[]|\T1/LinuxLibertineT-TLF/m/n/10 (+20) Adaptive Pol-icy
+
+Underfull \hbox (badness 1163) in paragraph at lines 416--416
+\T1/LinuxLibertineT-TLF/m/n/10 (+20) of adapt-ing and im-ple-
+
+Overfull \hbox (29.99226pt too wide) in alignment at lines 416--416
+ [] [] [] 
+[10.10]
+
+Package natbib Warning: There were undefined citations.
+
+
+Class acmart Warning: Some images may lack descriptions.
+
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/stringenc/s
+e-pdfdoc.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/stringenc/s
+e-utf8.def) [11.10] (./sample-sigplan.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+LaTeX Warning: Temporary extra page added at the end. Rerun to get it removed.
+
+
+Package rerunfilecheck Warning: File `sample-sigplan.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></op
+t/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/libertin
+e/LinLibertineT.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fon
+ts/type1/public/libertine/LinLibertineTB.pfb></opt/homebrew/Cellar/texlive/2026
+0301/share/texmf-dist/fonts/type1/public/libertine/LinLibertineTBI.pfb></opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/libertine/Li
+nLibertineTI.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/
+type1/public/newtx/txsys.pfb>
+Output written on sample-sigplan.pdf (11 pages, 562145 bytes).
+Transcript written on sample-sigplan.log.
+sh: line 1: 55918 Filesize limit exceeded: 25   pdflatex -interaction nonstopmode --jobname "sample-sigplan" '\RequirePackage{chklref}\input' "{sample-sigplan.tex}" 2>&1
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./sample-sigplan.tex (./acmart.cls
+Document Class: acmart 2023/06/11 v1.90a Typesetting articles for the Associati
+on for Computing Machinery
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/xkeyval/xkeyv
+al.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/xkeyval/xke
+yval.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/xkeyval/xkv
+utils.tex)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/xstring/xst
+ring.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/xstring/xst
+ring.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iftex
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amscls/amsart
+.cls
+Document Class: amsart 2020/05/29 v2.20.6
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsma
+th.sty
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amste
+xt.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsge
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsbs
+y.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsmath/amsop
+n.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amsf
+onts.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/microtype/mic
+rotype.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/etoolbox/etoo
+lbox.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/microtype/mic
+rotype-pdftex.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/microtype/mic
+rotype.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/booktabs/book
+tabs.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/refcount/refc
+ount.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/infwarerr/i
+nfwarerr.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/totpages/totp
+ages.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/everyshi/ever
+yshi.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/environ/envir
+on.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/trimspaces/tr
+imspaces.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/textcase/text
+case.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/natbib/natbib
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperxmp/hype
+rxmp.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdfescape/p
+dfescape.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdftexcmds/
+pdftexcmds.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/stringenc/s
+tringenc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/intcalc/int
+calc.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ifmtarg/ifmta
+rg.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ifthen.s
+ty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/oberdiek/ifdr
+aft.sty)
+
+! Package hyperxmp Error: hyperref must be loaded before hyperxmp.
+
+See the hyperxmp package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.279 }
+       
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iflua
+tex.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hype
+rref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/kvdefinekey
+s/kvdefinekeys.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hycolor/hycol
+or.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/name
+ref.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/gettitlestr
+ing/gettitlestring.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/pd1e
+nc.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/puen
+c.def)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/url/url.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bitset/bits
+et.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/bigintcalc/
+bigintcalc.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/hyperref/hpdf
+tex.def
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/rerunfilechec
+k/rerunfilecheck.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/uniquecount
+er/uniquecounter.sty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/xcolor/xcolor
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+color.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/math
+color.ltx))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/geometry/geom
+etry.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/ifvte
+x.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/many
+foot.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/nccf
+oots.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdftex/glyp
+htounicode.tex)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/cmap/cmap.sty
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fontenc.
+sty<<t1.cmap>>)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/libertine/lib
+ertine.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/ifxet
+ex.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/textcomp
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fontenc.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/fontaxes/font
+axes.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/figureversion
+s/figureversions.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/libertine/Lin
+Libertine_I.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/inconsolata/z
+i4.sty
+`inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/newtx/newtxma
+th.sty
+`newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/oberdiek/cent
+ernot.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/kastrup/bin
+hex.tex)
+amsthm NOT loaded
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/capti
+on.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/capti
+on3.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/capti
+on-ams-smf.sto)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/float/float.s
+ty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/comment/comme
+nt.sty Excluding comment 'comment') Excluding comment 'CCSXML'
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/fancyhdr/fanc
+yhdr.sty) Special comment 'acks'
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/libertine/T1L
+inuxLibertineT-TLF.fd))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/sttools/stflo
+ats.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lipsum/lipsum
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3packages/l3
+keys2e/l3keys2e.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3kernel/expl
+3.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/lipsum/lipsum
+.ltd.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/xtab/xtab.sty
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ltablex/ltabl
+ex.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/longtab
+le.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/tabular
+x.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tools/array.s
+ty)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/preprint/bala
+nce.sty) Include comment 'screenonly' Excluding comment 'printonly'
+Include comment 'anonsuppress' (./sample-sigplan.aux)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/newtx/omlnxlm
+i.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/newtx/untxexa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/newtx/lmsntxs
+y.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/newtx/lmxntxe
+xx.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/libertine/OT1
+LinuxLibertineT-TLF.fd)<<ot1.cmap>><<oml.cmap>>
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/newtx/untxmia
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/newtx/untxsym
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/newtx/untxsyc
+.fd) (./sample-sigplan.out) (./sample-sigplan.out)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/upquote/upquo
+te.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/ltcap
+tion.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/libertine/T1L
+inuxBiolinumT-TLF.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/microtype/mt-
+msa.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/microtype/mt-
+msb.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/libertine/TS1
+LinuxLibertineT-TLF.fd)
+
+Package natbib Warning: Citation `sdlc1__ghost' on page 1 undefined on input li
+ne 51.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active [1.1{/opt/
+homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updmap/pdfte
+x.map}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/l
+ibertine/lbtn_nh77jq.enc}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dis
+t/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{/opt/homebrew/Cellar/texlive/20260
+301/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/opt/homebrew/C
+ellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_ki75ao.e
+nc}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/libe
+rtine/lbtn_7grukw.enc}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/f
+onts/enc/dvips/libertine/lbtn_naooyc.enc}]************************************
+** Labels in starred environments **
+************************************
+
+*******************
+** Unused Labels **
+*******************
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

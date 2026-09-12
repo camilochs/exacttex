@@ -1,0 +1,28 @@
+tectonic pdf bytes=140718
+xtex exit=0 errors=[]
+texlab=[]
+tectonic exit=0 warnings=[] secs=3
+at lines 126--127
+warning: main.tex:127: Underfull \hbox (badness 10000) in paragraph at lines 126--127
+warning: main.tex:145: Underfull \hbox (badness 10000) in paragraph at lines 144--145
+warning: main.tex:229: Underfull \hbox (badness 3323) in paragraph at lines 226--229
+warning: main.tex:229: Underfull \hbox (badness 10000) in paragraph at lines 226--229
+warning: main.tex:231: Underfull \hbox (badness 10000) in paragraph at lines 231--231
+warning: main.tex:239: Underfull \hbox (badness 3199) in paragraph at lines 238--239
+warning: main.tex:239: Underfull \hbox (badness 10000) in paragraph at lines 238--239
+warning: main.tex:241: Underfull \hbox (badness 10000) in paragraph at lines 240--241
+warning: main.tex:243: Underfull \hbox (badness 1038) in paragraph at lines 242--243
+warning: main.tex:243: Underfull \hbox (badness 2762) in paragraph at lines 242--243
+warning: main.tex:243: Underfull \hbox (badness 10000) in paragraph at lines 242--243
+warning: main.tex:255: Underfull \hbox (badness 10000) in paragraph at lines 254--255
+warning: main.tex:255: Underfull \hbox (badness 10000) in paragraph at lines 254--255
+warning: main.tex:255: Underfull \hbox (badness 1043) in paragraph at lines 254--255
+warning: main.tex:255: Underfull \hbox (badness 10000) in paragraph at lines 254--255
+warning: main.tex:255: Underfull \vbox (badness 10000) has occurred while \output is active
+warning: main.tex:276: Underfull \hbox (badness 1810) in paragraph at lines 275--276
+warning: main.tex:276: Underfull \hbox (badness 1014) in paragraph at lines 275--276
+warning: main.tex:276: Underfull \hbox (badness 1436) in paragraph at lines 275--276
+warning: main.tex:276: Underfull \hbox (badness 10000) in paragraph at lines 275--276
+warning: main.tex:297: Underfull \hbox (badness 2698) in paragraph at lines 296--297
+warning: main.tex:297: Underfull \hbox (badness 10000) in paragraph at lines 296--297
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

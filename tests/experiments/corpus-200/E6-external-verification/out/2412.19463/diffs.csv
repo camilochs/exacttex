@@ -1,0 +1,19 @@
+target,kind,verdict,field,severity,document,source
+Alt05,bib-entry,partial,year,medium,2005,2006
+BLH21,bib-entry,partial,year,medium,2021,2020
+Feng23a,bib-entry,partial,authors,high,Yuan Feng and Li Zhou and Yingte Xu,Yuan Feng and Li Zhou and Yingte Xu and Xiaoquan Xu
+Feng23a,bib-entry,partial,year,medium,2023,2026
+IBM-Q,bib-entry,partial,year,medium,2022,2021
+NC00,bib-entry,partial,year,medium,2010,2012
+PyZX,bib-entry,partial,year,medium,2019,2020
+Qsharp,bib-entry,mismatch,title,medium,{Q\#: Enabling Scalable Quantum Computing and Development with a High-level DSL},Q#
+Quipper,bib-entry,mismatch,title,medium,Quipper: a scalable quantum programming language,Quipper
+RPZ17,bib-entry,partial,year,medium,2017,2018
+Sta15,bib-entry,partial,year,medium,2015,2014
+YZB24,bib-entry,partial,year,medium,2025,2026
+YingZ23,bib-entry,partial,year,medium,2023,2024
+YingZ24,bib-entry,partial,year,medium,2024,2026
+amy2018towards,bib-entry,partial,year,medium,2018,2019
+hietala2020proving,bib-entry,partial,year,medium,2021,2020
+rand2019reqwire,bib-entry,partial,year,medium,2018,2019
+shah2024vicarvisualizingcategoriesautomated,bib-entry,partial,year,medium,2024,2025

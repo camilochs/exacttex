@@ -1,0 +1,144 @@
+{
+ "paper": "1803.01598",
+ "main": "main.tex",
+ "files": [
+  {
+   "file": "main.tex",
+   "chars_before": 1958,
+   "chars_after": 2018,
+   "emitted": true,
+   "identity": "import-ext-only",
+   "lines_differing": 7
+  },
+  {
+   "file": "custom.tex",
+   "chars_before": 1370,
+   "chars_after": 1370,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "sections/abstract.tex",
+   "chars_before": 2642,
+   "chars_after": 2642,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "sections/introduction.tex",
+   "chars_before": 9174,
+   "chars_after": 9174,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "sections/related_work.tex",
+   "chars_before": 4972,
+   "chars_after": 4969,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "sections/approach.tex",
+   "chars_before": 7822,
+   "chars_after": 7813,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "sections/evaluation.tex",
+   "chars_before": 21872,
+   "chars_after": 21839,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "sections/discussion_conclusion.tex",
+   "chars_before": 6088,
+   "chars_after": 6085,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "sections/acknowledgments.tex",
+   "chars_before": 677,
+   "chars_after": 677,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 9,
+ "chars_before": 56575,
+ "chars_after": 56587,
+ "delta_pct": 0.021210782147591693,
+ "unrepaired": {
+  "chars_after": 56587,
+  "chars_before": 56575,
+  "converted_files": 9,
+  "check_exit": 0,
+  "coverage": 0.038153,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`./bibliography.bib` could not be read"
+  },
+  "errors": 0,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": 0.021210782147591693
+ },
+ "stats": {
+  "cite_cmds_live": 45,
+  "cite_keys_live": 48,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 16,
+  "labels_outside_grammar": 0,
+  "refs_live": 14,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 9,
+  "cite_cmds_annotated": 45,
+  "cite_keys_annotated": 48,
+  "ids_annotated": 16,
+  "refs_annotated": 14,
+  "inputs_root": 8,
+  "inputs_imported": 8,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 2,
+  "defects_reverted": 0,
+  "leaks_reverted": 0,
+  "revert_rounds": 0,
+  "import_leaks": 0
+ },
+ "leaks": [],
+ "defects": [],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.038153,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`./bibliography.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "sections/evaluation.xtex",
+    "offset": 1348,
+    "length": 23,
+    "line": 8,
+    "column": 64
+   },
+   "message": "citation checking unavailable: `./bibliography.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

@@ -1,0 +1,3 @@
+planted=fig:04_summary sites=[('Preprint_Bonciolini_RSOS.xtex', 94), ('Preprint_Bonciolini_RSOS.xtex', 79)]
+xtex new=[('XT1001', 'fig:04_summary', 'Preprint_Bonciolini_RSOS.xtex', 94), ('XT1004', 'fig:04_summary', 'Preprint_Bonciolini_RSOS.xtex', 104), ('XT1004', 'fig:04_summary', 'Preprint_Bonciolini_RSOS.xtex', 105)]
+texlab new=[('ERROR', 'Preprint_Bonciolini_RSOS.tex', 79, 'Duplicate label'), ('ERROR', 'Preprint_Bonciolini_RSOS.tex', 94, 'Duplicate label')]

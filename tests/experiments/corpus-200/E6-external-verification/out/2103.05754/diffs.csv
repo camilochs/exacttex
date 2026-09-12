@@ -1,0 +1,14 @@
+target,kind,verdict,field,severity,document,source
+Thomas2010,bib-entry,partial,authors,high,"Michel, Thomas and Paul, M Vanhoutte",Thomas Michel and Paul M. Vanhoutte
+chambers2020morphometry,bib-entry,mismatch,title,medium,Structural and hemodynamic properties of murine arterial networks under hypoxia-induced pulmonary hypertension,Structural and hemodynamic properties of murine pulmonary arterial networks under hypoxia-induced pulmonary hypertension
+davies2009hemodynamic,bib-entry,partial,year,medium,2009,2008
+ghio2001PH,bib-entry,partial,authors,high,"Ghio, S and Gavazzi, A and Campana, C and Inserra, C and Klersy, C and Sebastiani, R and Arbustini, E and Recusani, F amd Tavazzi, L",Stefano Ghio and Antonello Gavazzi and Carlo Campana and C. Inserra and Catherine Klersy and Roberta Sebastiani and Eloisa Arbustini and F Recusani and Luigi Tavazzi
+grinberg2011modeling,bib-entry,partial,year,medium,2011,2010
+lam2009PH,bib-entry,mismatch,title,medium,Pulmonary hypertension in heart failure with preserved ejection fraction: a community-based stud,Pulmonary Hypertension in Heart Failure With Preserved Ejection Fraction
+miller2013PHprogression,bib-entry,mismatch,title,medium,"Clinical features, hemodynamics, and outcomes of pulmonary hypertension due to chronic heart failure with reduced ejection fraction: pulmonary hypertension and heart failure","Clinical Features, Hemodynamics, and Outcomes of Pulmonary Hypertension Due to Chronic Heart Failure With Reduced Ejection Fraction"
+mozaffarian2016LHF,bib-entry,mismatch,title,medium,Heart Disease and Stroke Statistics-2016 Update: a report from the American Heart Association,Heart Disease and Stroke Statistics—2016 Update
+mozaffarian2016LHF,bib-entry,mismatch,authors,high,"Mozaffarian, D and Benjamin, EJ and Go, AS and Arnett, DK and Blaha, MJ and Cushman, M and Das, SR and de Ferranti, S and Despres, JP and Fullerton, HJ and Howard, VJ and Huffman, MD and Isasi, CR and",Dariush Mozaffarian and Emelia J. Benjamin and Alan S. Go and Donna K. Arnett and Michael J. Blaha and Mary Cushman and Sandeep R. Das and Sarah D. de Ferranti and Jean‐Pierre Després and Heather J. F
+mozaffarian2016LHF,bib-entry,mismatch,year,medium,2016,2015
+simonneau2019PHdiagnosis,bib-entry,partial,year,medium,2019,2018
+van2019transition,bib-entry,partial,year,medium,2019,2018
+vanduin2019mouseremodel,bib-entry,partial,year,medium,2019,2018

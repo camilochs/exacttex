@@ -1,0 +1,35 @@
+ng: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:469: Underfull \hbox (badness 10000) in paragraph at lines 463--469
+warning: paperQuantum.tex:544: Overfull \hbox (0.6339pt too wide) in paragraph at lines 541--544
+warning: paperQuantum.tex:588: Overfull \hbox (14.98766pt too wide) detected at line 588
+warning: paperQuantum.tex:650: Overfull \hbox (26.09552pt too wide) in paragraph at lines 649--650
+warning: paperQuantum.tex:655: Overfull \hbox (0.65369pt too wide) in paragraph at lines 653--655
+warning: paperQuantum.tex:674: Overfull \hbox (13.42482pt too wide) in paragraph at lines 672--674
+warning: paperQuantum.tex:1153: Overfull \hbox (9.8789pt too wide) in paragraph at lines 1152--1153
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:469: Underfull \hbox (badness 10000) in paragraph at lines 463--469
+warning: paperQuantum.tex:544: Overfull \hbox (0.6339pt too wide) in paragraph at lines 541--544
+warning: paperQuantum.tex:588: Overfull \hbox (14.98766pt too wide) detected at line 588
+warning: paperQuantum.tex:650: Overfull \hbox (26.09552pt too wide) in paragraph at lines 649--650
+warning: paperQuantum.tex:674: Overfull \hbox (13.42482pt too wide) in paragraph at lines 672--674
+warning: paperQuantum.tex:1153: Overfull \hbox (9.8789pt too wide) in paragraph at lines 1152--1153
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:73: Underfull \hbox (badness 4940) in paragraph at lines 73--73
+warning: paperQuantum.tex:469: Underfull \hbox (badness 10000) in paragraph at lines 463--469
+warning: paperQuantum.tex:544: Overfull \hbox (0.6339pt too wide) in paragraph at lines 541--544
+warning: paperQuantum.tex:588: Overfull \hbox (14.98766pt too wide) detected at line 588
+warning: paperQuantum.tex:650: Overfull \hbox (26.09552pt too wide) in paragraph at lines 649--650
+warning: paperQuantum.tex:674: Overfull \hbox (13.42482pt too wide) in paragraph at lines 672--674
+warning: paperQuantum.tex:1153: Overfull \hbox (9.8789pt too wide) in paragraph at lines 1152--1153
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

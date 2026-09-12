@@ -1,0 +1,3 @@
+planted=eq1 sites=[('CASE_ver2.xtex', 46), ('CASE_ver2.xtex', 32)]
+xtex new=[('XT1001', 'eq1', 'CASE_ver2.xtex', 46)]
+texlab new=[]

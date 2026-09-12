@@ -1,0 +1,3 @@
+planted=tab:models__ghost sites=[('MT_kinetochore_dynamics.xtex', 175)]
+xtex new=[('XT1003', 'tab:models__ghost', 'MT_kinetochore_dynamics.xtex', 175)]
+texlab new=[('ERROR', 'MT_kinetochore_dynamics.tex', 175, 'Undefined reference')]

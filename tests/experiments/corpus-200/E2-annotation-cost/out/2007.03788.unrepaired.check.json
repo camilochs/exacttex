@@ -1,0 +1,25 @@
+{
+ "coverage": 0.022161,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`paper-refs.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "clintraj.xtex",
+    "offset": 6601,
+    "length": 10,
+    "line": 97,
+    "column": 633
+   },
+   "message": "citation checking unavailable: `paper-refs.bib` could not be read",
+   "related": []
+  }
+ ]
+}

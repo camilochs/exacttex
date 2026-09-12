@@ -1,0 +1,636 @@
+pdf=1
+exit=0
+lines=717
+unique_findings=0
+/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdftexcmds/
+pdftexcmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ulasy.fd
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+
+Package natbib Warning: Citation `amba47' on page 1 undefined on input line 27.
+
+
+
+Package natbib Warning: Citation `bric07' on page 1 undefined on input line 27.
+
+
+
+Package natbib Warning: Citation `arms18' on page 1 undefined on input line 27.
+
+
+
+Package natbib Warning: Citation `amba49' on page 1 undefined on input line 29.
+
+
+
+Package natbib Warning: Citation `blaa64' on page 1 undefined on input line 29.
+
+
+
+Package natbib Warning: Citation `blaa52' on page 1 undefined on input line 29.
+
+
+
+Package natbib Warning: Citation `brow99' on page 1 undefined on input line 29.
+
+
+
+Package natbib Warning: Citation `lada03' on page 1 undefined on input line 29.
+
+
+
+Package natbib Warning: Citation `hill80' on page 1 undefined on input line 29.
+
+
+
+Package natbib Warning: Citation `lada03' on page 1 undefined on input line 29.
+
+
+
+Package natbib Warning: Citation `drew08' on page 1 undefined on input line 35.
+
+
+
+Package natbib Warning: Citation `wrig10a' on page 1 undefined on input line 35
+.
+
+
+Package natbib Warning: Citation `wrig15a' on page 1 undefined on input line 35
+.
+
+
+Package natbib Warning: Citation `drew08' on page 1 undefined on input line 35.
+
+
+
+Package natbib Warning: Citation `wrig10a' on page 1 undefined on input line 35
+.
+
+
+Package natbib Warning: Citation `wrig15a' on page 1 undefined on input line 35
+.
+
+
+Package natbib Warning: Citation `wrig09a' on page 1 undefined on input line 35
+.
+
+
+Package natbib Warning: Citation `wrig10a' on page 1 undefined on input line 35
+.
+
+
+Package natbib Warning: Citation `wrig15a' on page 1 undefined on input line 35
+.
+
+
+Package natbib Warning: Citation `cart04' on page 1 undefined on input line 39.
+
+
+
+Package natbib Warning: Citation `alli09' on page 1 undefined on input line 39.
+
+
+
+Package natbib Warning: Citation `masc11' on page 1 undefined on input line 39.
+
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active
+Overfull \hbox (4.73347pt too wide) in paragraph at lines 43--44
+ [][] 
+
+Package natbib Warning: Citation `wrig14b' on page 1 undefined on input line 44
+.
+
+
+Package natbib Warning: Citation `park14' on page 1 undefined on input line 44.
+
+
+
+Package natbib Warning: Citation `wrig14b' on page 1 undefined on input line 44
+.
+
+
+Package natbib Warning: Citation `park14' on page 1 undefined on input line 44.
+
+
+
+Underfull \hbox (badness 1502) in paragraph at lines 44--44
+\T1/LinuxLibertineT-TLF/m/n/10 (plus sym-bols), super-virial (di-a-monds) and l
+ow-density,
+
+Package natbib Warning: Citation `park14' on page 1 undefined on input line 48.
+
+
+
+Package natbib Warning: Citation `park16' on page 1 undefined on input line 48.
+
+
+
+LaTeX Warning: Reference `parameters' on page 1 undefined on input line 48.
+
+
+Package natbib Warning: Citation `wrig14b' on page 1 undefined on input line 48
+.
+
+
+Package natbib Warning: Citation `wrig14c' on page 1 undefined on input line 48
+.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active [1{/opt/ho
+mebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.
+map}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/lib
+ertine/lbtn_76gpa5.enc}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/
+fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/opt/homebrew/Cellar/texlive/2026030
+1/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}]
+
+Package natbib Warning: Citation `hill80' on page 2 undefined on input line 52.
+
+
+
+Package natbib Warning: Citation `lada84' on page 2 undefined on input line 52.
+
+
+
+Package natbib Warning: Citation `krui11' on page 2 undefined on input line 52.
+
+
+
+Package natbib Warning: Citation `rygl12' on page 2 undefined on input line 54.
+
+
+
+Package natbib Warning: Citation `kimi07' on page 2 undefined on input line 54.
+
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 ...trim=0 0 0 340,clip]{expansion_vectors.ps}
+                                                  
+
+Package natbib Warning: Citation `wrig16' on page 2 undefined on input line 59.
+
+
+
+Package natbib Warning: Citation `wrig16' on page 2 undefined on input line 59.
+
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.65 ...ludegraphics[width=450pt]{substructure.ps}
+                                                  
+
+Package natbib Warning: Citation `wrig16' on page 2 undefined on input line 66.
+
+
+
+Package natbib Warning: Citation `wrig16' on page 2 undefined on input line 66.
+
+
+
+LaTeX Warning: Reference `expansion' on page 2 undefined on input line 70.
+
+
+Package natbib Warning: Citation `baum07' on page 2 undefined on input line 70.
+
+
+
+LaTeX Warning: Reference `substructure' on page 2 undefined on input line 72.
+
+
+Package natbib Warning: Citation `mora50' on page 2 undefined on input line 72.
+
+
+
+Package natbib Warning: Citation `gear54' on page 2 undefined on input line 72.
+
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active [2 <./para
+meters-eps-converted-to.pdf>]
+
+Package natbib Warning: Citation `wrig16' on page 3 undefined on input line 76.
+
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 ...=450pt,angle=270]{UVW_vs_XYZ_expansion.ps}
+                                                  
+
+Package natbib Warning: Citation `wrig18' on page 3 undefined on input line 81.
+
+
+
+Package natbib Warning: Citation `wrig18' on page 3 undefined on input line 81.
+
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.87 ...udegraphics[width=500pt]{corrected_PMs.ps}
+                                                  
+
+Package natbib Warning: Citation `brow97' on page 3 undefined on input line 88.
+
+
+
+Package natbib Warning: Citation `wrig18' on page 3 undefined on input line 88.
+
+
+
+Package natbib Warning: Citation `brow97' on page 3 undefined on input line 88.
+
+
+
+Package natbib Warning: Citation `wrig18' on page 3 undefined on input line 88.
+
+
+
+Package natbib Warning: Citation `deze99' on page 3 undefined on input line 94.
+
+
+
+Package natbib Warning: Citation `peca16' on page 3 undefined on input line 94.
+
+
+
+Package natbib Warning: Citation `mama02' on page 3 undefined on input line 94.
+
+
+
+Package natbib Warning: Citation `prei08' on page 3 undefined on input line 94.
+
+
+
+Package natbib Warning: Citation `prus16' on page 3 undefined on input line 96.
+
+
+
+Package natbib Warning: Citation `brow16' on page 3 undefined on input line 96.
+
+
+
+Package natbib Warning: Citation `rizz11' on page 3 undefined on input line 96.
+
+
+
+Package natbib Warning: Citation `deze99' on page 3 undefined on input line 96.
+
+
+
+Package natbib Warning: Citation `gont06' on page 3 undefined on input line 96.
+
+
+
+Package natbib Warning: Citation `khar07' on page 3 undefined on input line 96.
+
+
+
+Package natbib Warning: Citation `chen11' on page 3 undefined on input line 96.
+
+
+
+Package natbib Warning: Citation `dahm12' on page 3 undefined on input line 96.
+
+
+
+Package natbib Warning: Citation `brow97' on page 3 undefined on input line 100
+.
+
+
+Package natbib Warning: Citation `blaa64' on page 3 undefined on input line 102
+.
+
+
+LaTeX Warning: Reference `3D' on page 3 undefined on input line 102.
+
+
+LaTeX Warning: Reference `corrected_pms' on page 3 undefined on input line 102.
+
+
+
+LaTeX Warning: Reference `3D' on page 3 undefined on input line 104.
+
+
+Package natbib Warning: Citation `mama14' on page 3 undefined on input line 104
+.
+
+
+Package natbib Warning: Citation `dobb13' on page 3 undefined on input line 104
+.
+
+
+LaTeX Warning: Reference `corrected_pms' on page 3 undefined on input line 106.
+
+
+
+Package natbib Warning: Citation `brow97' on page 3 undefined on input line 106
+.
+
+
+Package natbib Warning: Citation `wrig18' on page 3 undefined on input line 108
+.
+
+
+Package natbib Warning: Citation `pfal09' on page 3 undefined on input line 112
+.
+
+
+Package natbib Warning: Citation `wrig15a' on page 3 undefined on input line 11
+2.
+
+
+Package natbib Warning: Citation `bonn01' on page 3 undefined on input line 112
+.
+
+
+Package natbib Warning: Citation `york02' on page 3 undefined on input line 112
+.
+
+
+Package natbib Warning: Citation `zinn07' on page 3 undefined on input line 112
+.
+
+
+Package natbib Warning: Citation `weid06' on page 3 undefined on input line 112
+.
+
+
+Package natbib Warning: Citation `hill80' on page 3 undefined on input line 114
+.
+
+
+Package natbib Warning: Citation `baum07' on page 3 undefined on input line 114
+.
+
+
+Package natbib Warning: Citation `grif18' on page 3 undefined on input line 116
+.
+
+
+Package natbib Warning: Citation `wrig14b' on page 3 undefined on input line 11
+6.
+
+
+Underfull \vbox (badness 1092) has occurred while \output is active [3]
+(./wright.bbl [4])
+
+Package natbib Warning: There were undefined citations.
+
+[5] (./wright.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></o
+pt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/liberti
+ne/LinLibertineTB.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/f
+onts/type1/public/libertine/LinLibertineTI.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebre
+w/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7
+.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/texlive/20260301/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/
+texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt
+/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy7.pfb>
+Output written on wright.pdf (5 pages, 395825 bytes).
+Transcript written on wright.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/chklref/chklr
+ef.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/ncctools/afte
+rpackage.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/auxhook/auxho
+ok.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/currfile/curr
+file.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvoptions/kvo
+ptions.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/keyv
+al.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/ltxcmds/ltx
+cmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/kvsetkeys/kvs
+etkeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/filehook/file
+hook-2020.sty)))) (./wright.tex (./cs20proc.cls
+Document Class: cs20proc 2014/10/30 v0.1 Cool Stars 20 document class
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/article.
+cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/size11.c
+lo))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hicx.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/grap
+hics.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics/trig
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-cfg/
+graphics.cfg)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/graphics-def/
+pdftex.def)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/latexsym
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amss
+ymb.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/amsf
+onts.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/natbib/natbib
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/libertine/lib
+ertine.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/ifxet
+ex.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iftex
+.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/iftex/iflua
+tex.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/xkeyval/xkeyv
+al.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/xkeyval/xke
+yval.tex
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/xkeyval/xkv
+utils.tex)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/textcomp
+.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fontenc.
+sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/fontaxes/font
+axes.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/figureversion
+s/figureversions.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/libertine/Lin
+Libertine_I.tex))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/fontenc.
+sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/libertine/T1L
+inuxLibertineT-TLF.fd)))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/l3backend/l3b
+ackend-pdftex.def) (./wright.aux
+
+LaTeX Warning: Label `parameters' multiply defined.
+
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/s
+upp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/
+epstopdf-base.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/infwarerr/i
+nfwarerr.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/grfext/grfext
+.sty
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/kvdefinekey
+s/kvdefinekeys.sty))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/generic/pdftexcmds/
+pdftexcmds.sty)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/e
+pstopdf-sys.cfg))
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/ulasy.fd
+)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsa
+.fd)
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/amsfonts/umsb
+.fd)
+Overfull \hbox (4.73347pt too wide) in paragraph at lines 43--44
+ [][] 
+
+Underfull \hbox (badness 1502) in paragraph at lines 44--44
+\T1/LinuxLibertineT-TLF/m/n/10 (plus sym-bols), super-virial (di-a-monds) and l
+ow-density,
+[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc
+/dvips/libertine/lbtn_76gpa5.enc}{/opt/homebrew/Cellar/texlive/20260301/share/t
+exmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}]
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 ...trim=0 0 0 340,clip]{expansion_vectors.ps}
+                                                  
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.65 ...ludegraphics[width=450pt]{substructure.ps}
+                                                  
+
+Underfull \vbox (badness 10000) has occurred while \output is active [2 <./para
+meters-eps-converted-to.pdf>]
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 ...=450pt,angle=270]{UVW_vs_XYZ_expansion.ps}
+                                                  
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+! LaTeX Error: Unknown graphics extension: .ps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.87 ...udegraphics[width=500pt]{corrected_PMs.ps}
+                                                  
+
+Underfull \vbox (badness 1092) has occurred while \output is active [3]
+(./wright.bbl [4])  [5] (./wright.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(see the transcript file for additional information)</opt/homebrew/Cellar/texli
+ve/20260301/share/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></o
+pt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/liberti
+ne/LinLibertineTB.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/f
+onts/type1/public/libertine/LinLibertineTI.pfb></opt/homebrew/Cellar/texlive/20
+260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebre
+w/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7
+.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/texlive/20260301/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/
+texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt
+/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy7.pfb>
+Output written on wright.pdf (5 pages, 396704 bytes).
+Transcript written on wright.log.
+************************************
+** Labels in starred environments **
+************************************
+
+*******************
+** Unused Labels **
+*******************
+
+**********************************
+** Uncited Bibliography entries **
+**********************************

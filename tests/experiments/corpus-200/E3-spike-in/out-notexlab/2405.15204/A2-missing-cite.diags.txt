@@ -1,0 +1,3 @@
+planted=minchen2018general__ghost sites=[('2ndrevGR.xtex', 64)]
+xtex new=[]
+texlab new=[]

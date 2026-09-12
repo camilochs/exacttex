@@ -1,0 +1,3 @@
+planted=section2__ghost sites=[('sigma18-019.xtex', 340)]
+xtex new=[('XT1003', 'section2__ghost', 'sigma18-019.xtex', 340)]
+texlab new=[('ERROR', 'sigma18-019.tex', 340, 'Undefined reference'), ('info', 'sigma18-019.tex', 636, 'Unused label')]

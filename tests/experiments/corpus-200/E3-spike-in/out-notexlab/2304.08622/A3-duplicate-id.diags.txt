@@ -1,0 +1,3 @@
+planted=fig:brain_organoid sites=[('multiscale.xtex', 98), ('multiscale.xtex', 91)]
+xtex new=[('XT1001', 'fig:brain_organoid', 'multiscale.xtex', 98)]
+texlab new=[]

@@ -1,0 +1,4 @@
+78 claims: 77 fresh and carried over, 1 to verify
+https://rrc.cvc.uab.es/?ch=17&com=evaluation&task=1 · settled
+network: 2 requests (http 2) · 1 retries · 0 bytes down · 0 fetched, 77 carried over, 1 unanswered
+record: 78 claims → .xtexverified

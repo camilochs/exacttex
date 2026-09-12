@@ -1,0 +1,26 @@
+tectonic pdf bytes=9676020
+xtex exit=0 errors=[]
+texlab=[('ERROR', 'clintraj.tex', 97, 'Undefined reference'), ('ERROR', 'clintraj.tex', 99, 'Undefined reference'), ('ERROR', 'clintraj.tex', 104, 'Undefined reference'), ('ERROR', 'clintraj.tex', 110, 'Undefined reference'), ('ERROR', 'clintraj.tex', 120, 'Undefined reference'), ('ERROR', 'clintraj.tex', 124, 'Undefined reference'), ('ERROR', 'clintraj.tex', 126, 'Undefined reference'), ('ERROR', 'clintraj.tex', 196, 'Undefined reference'), ('ERROR', 'clintraj.tex', 197, 'Undefined reference'), ('ERROR', 'clintraj.tex', 213, 'Undefined reference'), ('ERROR', 'clintraj.tex', 226, 'Undefined reference'), ('ERROR', 'clintraj.tex', 335, 'Undefined reference'), ('ERROR', 'clintraj.tex', 346, 'Undefined reference'), ('ERROR', 'clintraj.tex', 358, 'Undefined reference'), ('ERROR', 'clintraj.tex', 360, 'Undefined reference'), ('ERROR', 'clintraj.tex', 397, 'Undefined reference'), ('ERROR', 'clintraj.tex', 403, 'Undefined reference'), ('ERROR', 'clintraj.tex', 405, 'Undefined reference'), ('ERROR', 'clintraj.tex', 411, 'Undefined reference'), ('ERROR', 'clintraj.tex', 417, 'Undefined reference'), ('ERROR', 'clintraj.tex', 423, 'Undefined reference'), ('ERROR', 'clintraj.tex', 427, 'Undefined reference'), ('ERROR', 'clintraj.tex', 431, 'Undefined reference'), ('ERROR', 'clintraj.tex', 434, 'Undefined reference'), ('ERROR', 'clintraj.tex', 450, 'Undefined reference'), ('ERROR', 'clintraj.tex', 452, 'Undefined reference'), ('ERROR', 'clintraj.tex', 454, 'Undefined reference'), ('ERROR', 'clintraj.tex', 462, 'Undefined reference'), ('ERROR', 'clintraj.tex', 472, 'Undefined reference'), ('ERROR', 'clintraj.tex', 474, 'Undefined reference'), ('ERROR', 'clintraj.tex', 480, 'Undefined reference'), ('ERROR', 'clintraj.tex', 509, 'Undefined reference'), ('ERROR', 'clintraj.tex', 513, 'Undefined reference'), ('ERROR', 'clintraj.tex', 517, 'Undefined reference'), ('ERROR', 'clintraj.tex', 547, 'Undefined reference'), ('ERROR', 'clintraj.tex', 598, 'Undefined reference'), ('ERROR', 'oup-contemporary-modified.cls', 189, 'Undefined reference'), ('info', 'clintraj.tex', 93, 'Unused label'), ('info', 'clintraj.tex', 476, 'Unused label'), ('info', 'clintraj.tex', 634, 'Unused label')]
+tectonic exit=0 warnings=[] secs=7
+) has occurred while \output is active
+warning: clintraj.tex:244: Requested font "[Merriweather-Bold.otf]/OT:script=latn;language=dflt;+pnum;+onum;mapping=tex-text;" at 6.0pt
+warning: clintraj.tex:253: Underfull \vbox (badness 1436) has occurred while \output is active
+warning: clintraj.tex:269: Underfull \vbox (badness 3407) has occurred while \output is active
+warning: clintraj.tex:332: Underfull \hbox (badness 7238) in paragraph at lines 331--332
+warning: clintraj.tex:338: Underfull \hbox (badness 1490) in paragraph at lines 337--338
+warning: clintraj.tex:339: Underfull \vbox (badness 2903) has occurred while \output is active
+warning: clintraj.tex:345: Underfull \vbox (badness 2903) has occurred while \output is active
+warning: clintraj.tex:347: Underfull \vbox (badness 2189) has occurred while \output is active
+warning: clintraj.tex:365: Underfull \vbox (badness 1983) has occurred while \output is active
+warning: clintraj.tex:394: Underfull \vbox (badness 3514) has occurred while \output is active
+warning: clintraj.tex:400: Underfull \vbox (badness 1460) has occurred while \output is active
+warning: clintraj.tex:451: Underfull \vbox (badness 1205) has occurred while \output is active
+warning: clintraj.tex:543: Underfull \hbox (badness 4608) in paragraph at lines 543--543
+warning: clintraj.tex:546: Underfull \vbox (badness 6125) has occurred while \output is active
+warning: clintraj.tex:566: Overfull \hbox (19.49002pt too wide) detected at line 566
+warning: clintraj.tex:599: Underfull \hbox (badness 10000) in paragraph at lines 598--599
+warning: clintraj.tex:599: Underfull \hbox (badness 10000) in paragraph at lines 598--599
+warning: clintraj.tex:599: Underfull \hbox (badness 5091) in paragraph at lines 598--599
+warning: clintraj.tex:599: Underfull \hbox (badness 1661) in paragraph at lines 598--599
+warning: clintraj.tex:634: Requested font "[lmmono8-regular]:" at 6.0pt
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.

@@ -1,0 +1,72 @@
+exit=2
+lines=69
+unique_findings=23
+Warning 1 in main.tex line 53: Command terminated with space.
+\interspeechcameraready   
+                       ^
+Warning 1 in main.tex line 66: Command terminated with space.
+    {\Large \bf \@title \par}%  
+                       ^
+Warning 1 in main.tex line 70: Command terminated with space.
+       \@name \\  
+             ^
+Warning 1 in main.tex line 71: Command terminated with space.
+       \@address  
+                ^
+Warning 24 in main.tex line 78: Delete this space to maintain correct pagereferences.
+      \label{fig:redo_logic}  
+     ^
+Warning 2 in main.tex line 106: Non-breaking space (`~') should have been used.
+Large-scale speech recognition models, such as OpenAI’s Whisper \cite{radford2022}, achieve high accuracy across diverse domains. However, deploying these models on long-form audio is computationally expensive. Standard Whisper processes audio sequentially, preventing batched inference. Furthermore, while Whisper includes a \texttt{condition\_on\_previous\_text} feature to maintain historical context, it is often unstable. As demonstrated in our evaluations, enabling this feature in standard Whisper can actually degrade overall Word Error Rate (WER), a known symptom of the model hallucinating or propagating errors across sequential forward passes~\cite{peng2023reproducing}. In addition, recent work~\cite{ahn2026} further highlights the risks of autoregressive context in long-form transcription, showing that an erroneous context can propagate across successive decoding steps and trigger hallucinations.   
+                                                                 ^
+Warning 8 in main.tex line 232: Wrong length of dash may have been used.
+Second, we introduce a custom corpus of medical terminology lessons: \textit{}{MedicalLessons} - a purpose-built dataset consisting of educational lecture recordings covering foundational and anatomical medical vocabulary. The corpus contains a structured series of lessons covering topics such as medical prefixes and suffixes, anatomical terminology, sourced from YouTube. Ground-truth transcripts for all six recordings were manually verified to ensure correctness. This is released as an open source dataset\footnote{\url{https://huggingface.co/datasets/litosway/MedicalLessons}}.  
+                                                                                               ^
+Warning 2 in main.tex line 243: Non-breaking space (`~') should have been used.
+\noindent\textbf{LLM Punctuation Score.} To calculate punctuation accuracy based on semantic meaning rather than rigid exact matches, we introduce the LLM Punctuation Score (LPS), similar to the LLM as judge metric shown in \cite{parulekar2025laserllmbasedasrscoring}. LPS ensures that stylistic choices, such as using a dash instead of a comma or a period instead of a clause-separating comma are not penalised. To compute the LPS, ground truth and predicted transcripts are stripped of casing and punctuation for word-level alignment using the jiwer library, the punctuation is separately tagged. These fully punctuated texts are divided into segments of exactly 120 GT words. Each paired segment is then passed to GPT-5.1 to evaluate the semantic accuracy of the predicted punctuation on a 1-to-3 scale. The prompt instructs the model to ignore word-level transcription errors and penalise only structural divergences that distort the core meaning. The final LPS for a predicted transcript is the mean of these individual segment scores. Given a transcript divided into $N$ segments, where each segment $i$ receives a score $S_i \in \{1, 2, 3\}$, the overall score is computed as $\text{LPS} = \frac{1}{N} \sum_{i=1}^{N} S_i$.\\   
+                                                                                                                                                                                                                               ^
+Warning 26 in main.tex line 245: You ought to remove spaces in front of punctuation.
+\noindent\textbf{Proper Noun Score (Pn).} For measuring adherence to proper nouns and domain-specific technical terms , we propose Proper Noun Score (Pn). Each ground-truth word is labeled as a proper noun or technical term by an LLM-based classifier. Word-level alignment between the ground-truth and  
+                                                                                                                     ^
+Warning 13 in main.tex line 255: Intersentence spacing (`\@') should perhaps be used.
+All evaluations were conducted using the  \texttt{openai/whisper-large-v2} as the base transcription model, executing on a single Nvidia T4 GPU. The default batch size of 16 was used on both WhisperX variants for the earnings data set. For the medical dataset, a batch size of 4 was used. Moving on, across both datasets compute type float16 was applied to all variants. Decoding used beam search (width 5, temperature 0.0), falling back to best-of-5 sampling across temperatures 0.2-1.0. Default settings were used for both WhisperX and Whisper from their respective repositories. Finally, to calculate WER, the \texttt{jiwer} Python package was used.\\  
+                                                                                                                                               ^
+Warning 8 in main.tex line 255: Wrong length of dash may have been used.
+All evaluations were conducted using the  \texttt{openai/whisper-large-v2} as the base transcription model, executing on a single Nvidia T4 GPU. The default batch size of 16 was used on both WhisperX variants for the earnings data set. For the medical dataset, a batch size of 4 was used. Moving on, across both datasets compute type float16 was applied to all variants. Decoding used beam search (width 5, temperature 0.0), falling back to best-of-5 sampling across temperatures 0.2-1.0. Default settings were used for both WhisperX and Whisper from their respective repositories. Finally, to calculate WER, the \texttt{jiwer} Python package was used.\\  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+Warning 24 in main.tex line 262: Delete this space to maintain correct pagereferences.
+\label{tab:earnings_results}  
+^
+Warning 1 in main.tex line 267: Command terminated with space.
+\textbf{WhisperX+IB (ours)} & \checkmark & \textbf{8.2} & \textbf{79.3} & 67.4 & \textbf{2.9} & 8.4$\times$ \\  
+                                        ^
+Warning 1 in main.tex line 270: Command terminated with space.
+\multirow{2}{*}{\texttt{openai/whisper}~\cite{radford2022}} & \checkmark & 12.0 & 72.0 & \textbf{67.9} & \textbf{2.9} & 1.0$\times$ \\  
+                                                                        ^
+Warning 39 in main.tex line 278: Double space found.
+We can observe from the Earnings-21 results that \texttt{openai/whisper} outperforms our method in punctuation quality. WhisperX sets \texttt{without\_timestamps=True} for pure transcription (and therefore so does WhisperX+IB). The Whisper decoder is trained on two target formats controlled by a single conditioning token, one with interleaved timestamp tokens, and one without ~cite{radford2022}. We hypothesise that the timestamp-conditioned mode learns a tighter association between full stops and the tagged segment boundaries. Therefore, decoding without them may worsen the full stop placement and explain Whisper's higher F1 despite trailing on WER and Pn Score.   
+                                                                                                                                                                                                                                                                                                                                                                                          ^
+Warning 24 in main.tex line 286: Delete this space to maintain correct pagereferences.
+\label{tab:medical_results}  
+^
+Warning 24 in main.tex line 302: Delete this space to maintain correct pagereferences.
+\label{tab:qualitative_example}  
+^
+Warning 11 in main.tex line 307: You should use \ldots to achieve an ellipsis.
+\textit{``For the \textbf{upholstery fabric segment}, sales for the third quarter were \$35 million down 5.7\% over the prior year, which prior year was a very strong quarter sales performance...''} \\[0.2cm]  
+                                                                                                                                                                                                ^^^
+Warning 38 in main.tex line 307: You should not use punctuation in front of quotes.
+\textit{``For the \textbf{upholstery fabric segment}, sales for the third quarter were \$35 million down 5.7\% over the prior year, which prior year was a very strong quarter sales performance...''} \\[0.2cm]  
+                                                                                                                                                                                                  ^
+Warning 11 in main.tex line 309: You should use \ldots to achieve an ellipsis.
+\textit{``Return on capital for the trailing 12-month period for the \textbf{post-2007} continues to be impressive, coming in at 54\%. The home accessory segment, which includes our e-commerce...''} \\[0.2cm]  
+                                                                                                                                                                                                ^^^
+Warning 38 in main.tex line 309: You should not use punctuation in front of quotes.
+\textit{``Return on capital for the trailing 12-month period for the \textbf{post-2007} continues to be impressive, coming in at 54\%. The home accessory segment, which includes our e-commerce...''} \\[0.2cm]  
+                                                                                                                                                                                                  ^
+Warning 11 in main.tex line 311: You should use \ldots to achieve an ellipsis.
+\textit{``Return on capital for the trailing 12-month period for the \textbf{upholstery fabric segment} continues to be impressive, coming in at 54\%. The home accessory segment, which includes our e-commerce...''}  
+                                                                                                                                                                                                                ^^^
+Warning 38 in main.tex line 311: You should not use punctuation in front of quotes.
+\textit{``Return on capital for the trailing 12-month period for the \textbf{upholstery fabric segment} continues to be impressive, coming in at 54\%. The home accessory segment, which includes our e-commerce...''}  
+                                                                                                                                                                                                                  ^

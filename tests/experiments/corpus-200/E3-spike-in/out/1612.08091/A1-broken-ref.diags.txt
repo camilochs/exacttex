@@ -1,0 +1,3 @@
+planted=fig:hlcompiler__ghost sites=[('projectq.xtex', 124)]
+xtex new=[('XT1003', 'fig:hlcompiler__ghost', 'projectq.xtex', 124)]
+texlab new=[('info', 'projectq.tex', 130, 'Unused label')]

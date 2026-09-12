@@ -1,0 +1,270 @@
+exit=2
+lines=267
+unique_findings=67
+Warning 8 in paper20160222.tex line 12: Wrong length of dash may have been used.
+\preprint{NORDITA-2015-25}  
+                      ^
+Warning 39 in paper20160222.tex line 33: Double space found.
+\submitted{\today,~ $ $Revision: 1.100 $ $}  
+                   ^
+Warning 24 in paper20160222.tex line 57: Delete this space to maintain correct pagereferences.
+\section{Introduction} \label{eq:integspec}  
+                      ^
+Warning 2 in paper20160222.tex line 62: Non-breaking space (`~') should have been used.
+as originally suggested by \cite{Par55} and \cite{SKR66}.  
+                          ^
+Warning 2 in paper20160222.tex line 62: Non-breaking space (`~') should have been used.
+as originally suggested by \cite{Par55} and \cite{SKR66}.  
+                                           ^
+Warning 2 in paper20160222.tex line 64: Non-breaking space (`~') should have been used.
+go back to \cite{Seehafer90}, who found that the  
+          ^
+Warning 2 in paper20160222.tex line 80: Non-breaking space (`~') should have been used.
+\cite{WBM11,WBM12}, but it is unclear how close to the solar surface  
+^
+Warning 2 in paper20160222.tex line 101: Non-breaking space (`~') should have been used.
+through observations goes back to \cite{MGS82}, who made the assumption of  
+                                 ^
+Warning 2 in paper20160222.tex line 109: Non-breaking space (`~') should have been used.
+In the work of \cite{Zhang2014}, again the assumption of isotropy  
+              ^
+Warning 2 in paper20160222.tex line 112: Non-breaking space (`~') should have been used.
+\cite{Zhang2014} applied this technique to the active region NOAA~11158  
+^
+Warning 2 in paper20160222.tex line 138: Non-breaking space (`~') should have been used.
+As explained in \cite{Zhang2014}, we introduce the two-point correlation  
+               ^
+Warning 3 in paper20160222.tex line 156: You should enclose the previous parenthesis with `{}'.
+respectively, hats denote unit vectors, and $k=(k_x^2+k_y^2)^{1/2}$  
+                                                           ^
+Warning 2 in paper20160222.tex line 161: Non-breaking space (`~') should have been used.
+that of \cite{Moffatt78} by a factor $2k$, because in two dimensions  
+       ^
+Warning 2 in paper20160222.tex line 165: Non-breaking space (`~') should have been used.
+As shown in \cite{Zhang2014}, $E_M(k,t)$ and $H_M(k,t)$ are obtained as  
+           ^
+Warning 2 in paper20160222.tex line 200: Non-breaking space (`~') should have been used.
+confused with the gauge-invariant magnetic helicity of \cite{Berger84},  
+                                                      ^
+Warning 6 in paper20160222.tex line 213: No italic correction (`\/') found.
+on board the {\em Solar Dynamics Observatory} ({\em SDO}). The pixel resolution  
+                                            ^
+Warning 6 in paper20160222.tex line 213: No italic correction (`\/') found.
+on board the {\em Solar Dynamics Observatory} ({\em SDO}). The pixel resolution  
+                                                       ^
+Warning 2 in paper20160222.tex line 215: Non-breaking space (`~') should have been used.
+150''$ in Figure \ref{fig:helispec1}.  
+                ^
+Warning 25 in paper20160222.tex line 223: You might wish to put this between a pair of `{}'
+Photospheric vector magnetograms (left) and maps of $J_zB_z$ (right)  
+                                                       ^^
+Warning 25 in paper20160222.tex line 227: You might wish to put this between a pair of `{}'
+left and $J_zB_z$ on the right.  
+            ^^
+Warning 2 in paper20160222.tex line 231: Non-breaking space (`~') should have been used.
+Figure \ref{fig:helispec1} shows the photospheric vector magnetograms and  
+      ^
+Warning 2 in paper20160222.tex line 242: Non-breaking space (`~') should have been used.
+from 2011 February 12 to 16; see Figure \ref{fig:helispectot1}.  
+                                       ^
+Warning 2 in paper20160222.tex line 243: Non-breaking space (`~') should have been used.
+These are comparable with that of \cite{Zhang2014} except that the  
+                                 ^
+Warning 2 in paper20160222.tex line 282: Non-breaking space (`~') should have been used.
+This is also consistent with the trends found by \cite{GZZ12} for  
+                                                ^
+Warning 2 in paper20160222.tex line 286: Non-breaking space (`~') should have been used.
+According to the theory of hydromagnetic turbulence by \cite{GS95}, the  
+                                                      ^
+Warning 2 in paper20160222.tex line 291: Non-breaking space (`~') should have been used.
+These spectral properties were confirmed by \cite{Ab05} and \cite{St12}  
+                                           ^
+Warning 2 in paper20160222.tex line 291: Non-breaking space (`~') should have been used.
+These spectral properties were confirmed by \cite{Ab05} and \cite{St12}  
+                                                           ^
+Warning 2 in paper20160222.tex line 345: Non-breaking space (`~') should have been used.
+in Figure \ref{fig:helispec5}.  
+         ^
+Warning 2 in paper20160222.tex line 348: Non-breaking space (`~') should have been used.
+These values are consistent with those quoted by \cite{Zhang2014}.  
+                                                ^
+Warning 25 in paper20160222.tex line 377: You might wish to put this between a pair of `{}'
+Photospheric vector magnetograms (left) and maps of $J_zB_z$ (right)  
+                                                       ^^
+Warning 8 in paper20160222.tex line 378: Wrong length of dash may have been used.
+for the active region NOAA~11515 on 30 June -- 4 July 2012.  
+                                            ^^
+Warning 25 in paper20160222.tex line 381: You might wish to put this between a pair of `{}'
+left and $J_zB_z$ on the right.  
+            ^^
+Warning 8 in paper20160222.tex line 392: Wrong length of dash may have been used.
+active region NOAA~11515 on 2012 June 30 -- July 6.  
+                                         ^^
+Warning 2 in paper20160222.tex line 415: Non-breaking space (`~') should have been used.
+These are comparable with the results of \cite{Zhang2014} and the average  
+                                        ^
+Warning 2 in paper20160222.tex line 416: Non-breaking space (`~') should have been used.
+spectrum of NAOO~11158 in Figure \ref{fig:helispectot1}.  
+                                ^
+Warning 2 in paper20160222.tex line 442: Non-breaking space (`~') should have been used.
+helicity spectrum was shown in Figure~2 of \cite{Zhang2014}, there is an  
+                                          ^
+Warning 2 in paper20160222.tex line 449: Non-breaking space (`~') should have been used.
+see also \cite{BB03}.  
+        ^
+Warning 2 in paper20160222.tex line 458: Non-breaking space (`~') should have been used.
+Furthermore, as shown by \cite{Xu_etal15}, the isotropic approximation  
+                        ^
+Warning 24 in paper20160222.tex line 472: Delete this space to maintain correct pagereferences.
+\label{fig:heli_phelicity_Bran_Zhq_11515}  
+^
+Warning 2 in paper20160222.tex line 546: Non-breaking space (`~') should have been used.
+on the horizontal fields as we did in \cite{Zhang2014}.  
+                                     ^
+Warning 2 in paper20160222.tex line 567: Non-breaking space (`~') should have been used.
+papers by \cite{Ai86}, \cite{Su04a,Su04b}, and \cite{Gao08}.  
+         ^
+Warning 2 in paper20160222.tex line 567: Non-breaking space (`~') should have been used.
+papers by \cite{Ai86}, \cite{Su04a,Su04b}, and \cite{Gao08}.  
+                      ^
+Warning 2 in paper20160222.tex line 567: Non-breaking space (`~') should have been used.
+papers by \cite{Ai86}, \cite{Su04a,Su04b}, and \cite{Gao08}.  
+                                              ^
+Warning 44 in paper20160222.tex line 587: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 44 in paper20160222.tex line 588: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 44 in paper20160222.tex line 590: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 11 in paper20160222.tex line 591: You should use \ldots to achieve an ellipsis.
+NOAA~11158 & 2011 February 12 to 17   & $-13^\circ$ & $\quad$ 1.1 ... 1.7 ... 2.0 $\quad$ & 0.9 ... 1.6 ... 1.7 $\quad$ &  0.05 & $6\Mm$ \\  
+                                                                  ^^^
+Warning 26 in paper20160222.tex line 591: You ought to remove spaces in front of punctuation.
+NOAA~11158 & 2011 February 12 to 17   & $-13^\circ$ & $\quad$ 1.1 ... 1.7 ... 2.0 $\quad$ & 0.9 ... 1.6 ... 1.7 $\quad$ &  0.05 & $6\Mm$ \\  
+                                                                 ^
+Warning 11 in paper20160222.tex line 591: You should use \ldots to achieve an ellipsis.
+NOAA~11158 & 2011 February 12 to 17   & $-13^\circ$ & $\quad$ 1.1 ... 1.7 ... 2.0 $\quad$ & 0.9 ... 1.6 ... 1.7 $\quad$ &  0.05 & $6\Mm$ \\  
+                                                                          ^^^
+Warning 26 in paper20160222.tex line 591: You ought to remove spaces in front of punctuation.
+NOAA~11158 & 2011 February 12 to 17   & $-13^\circ$ & $\quad$ 1.1 ... 1.7 ... 2.0 $\quad$ & 0.9 ... 1.6 ... 1.7 $\quad$ &  0.05 & $6\Mm$ \\  
+                                                                         ^
+Warning 11 in paper20160222.tex line 591: You should use \ldots to achieve an ellipsis.
+NOAA~11158 & 2011 February 12 to 17   & $-13^\circ$ & $\quad$ 1.1 ... 1.7 ... 2.0 $\quad$ & 0.9 ... 1.6 ... 1.7 $\quad$ &  0.05 & $6\Mm$ \\  
+                                                                                                ^^^
+Warning 26 in paper20160222.tex line 591: You ought to remove spaces in front of punctuation.
+NOAA~11158 & 2011 February 12 to 17   & $-13^\circ$ & $\quad$ 1.1 ... 1.7 ... 2.0 $\quad$ & 0.9 ... 1.6 ... 1.7 $\quad$ &  0.05 & $6\Mm$ \\  
+                                                                                               ^
+Warning 11 in paper20160222.tex line 591: You should use \ldots to achieve an ellipsis.
+NOAA~11158 & 2011 February 12 to 17   & $-13^\circ$ & $\quad$ 1.1 ... 1.7 ... 2.0 $\quad$ & 0.9 ... 1.6 ... 1.7 $\quad$ &  0.05 & $6\Mm$ \\  
+                                                                                                        ^^^
+Warning 26 in paper20160222.tex line 591: You ought to remove spaces in front of punctuation.
+NOAA~11158 & 2011 February 12 to 17   & $-13^\circ$ & $\quad$ 1.1 ... 1.7 ... 2.0 $\quad$ & 0.9 ... 1.6 ... 1.7 $\quad$ &  0.05 & $6\Mm$ \\  
+                                                                                                       ^
+Warning 11 in paper20160222.tex line 592: You should use \ldots to achieve an ellipsis.
+NOAA~11515 & 2012 June 30 to July 7 & $-18^\circ$ & $\quad$ 2.0 ... 2.4 ... 2.6 $\quad$ & 1.2 ... 2.0 ... 2.7 $\quad$ &$-0.26$& $8\Mm$ \\  
+                                                                ^^^
+Warning 26 in paper20160222.tex line 592: You ought to remove spaces in front of punctuation.
+NOAA~11515 & 2012 June 30 to July 7 & $-18^\circ$ & $\quad$ 2.0 ... 2.4 ... 2.6 $\quad$ & 1.2 ... 2.0 ... 2.7 $\quad$ &$-0.26$& $8\Mm$ \\  
+                                                               ^
+Warning 11 in paper20160222.tex line 592: You should use \ldots to achieve an ellipsis.
+NOAA~11515 & 2012 June 30 to July 7 & $-18^\circ$ & $\quad$ 2.0 ... 2.4 ... 2.6 $\quad$ & 1.2 ... 2.0 ... 2.7 $\quad$ &$-0.26$& $8\Mm$ \\  
+                                                                        ^^^
+Warning 26 in paper20160222.tex line 592: You ought to remove spaces in front of punctuation.
+NOAA~11515 & 2012 June 30 to July 7 & $-18^\circ$ & $\quad$ 2.0 ... 2.4 ... 2.6 $\quad$ & 1.2 ... 2.0 ... 2.7 $\quad$ &$-0.26$& $8\Mm$ \\  
+                                                                       ^
+Warning 11 in paper20160222.tex line 592: You should use \ldots to achieve an ellipsis.
+NOAA~11515 & 2012 June 30 to July 7 & $-18^\circ$ & $\quad$ 2.0 ... 2.4 ... 2.6 $\quad$ & 1.2 ... 2.0 ... 2.7 $\quad$ &$-0.26$& $8\Mm$ \\  
+                                                                                              ^^^
+Warning 26 in paper20160222.tex line 592: You ought to remove spaces in front of punctuation.
+NOAA~11515 & 2012 June 30 to July 7 & $-18^\circ$ & $\quad$ 2.0 ... 2.4 ... 2.6 $\quad$ & 1.2 ... 2.0 ... 2.7 $\quad$ &$-0.26$& $8\Mm$ \\  
+                                                                                             ^
+Warning 11 in paper20160222.tex line 592: You should use \ldots to achieve an ellipsis.
+NOAA~11515 & 2012 June 30 to July 7 & $-18^\circ$ & $\quad$ 2.0 ... 2.4 ... 2.6 $\quad$ & 1.2 ... 2.0 ... 2.7 $\quad$ &$-0.26$& $8\Mm$ \\  
+                                                                                                      ^^^
+Warning 26 in paper20160222.tex line 592: You ought to remove spaces in front of punctuation.
+NOAA~11515 & 2012 June 30 to July 7 & $-18^\circ$ & $\quad$ 2.0 ... 2.4 ... 2.6 $\quad$ & 1.2 ... 2.0 ... 2.7 $\quad$ &$-0.26$& $8\Mm$ \\  
+                                                                                                     ^
+Warning 44 in paper20160222.tex line 594: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline  
+^^^^^^
+Warning 44 in paper20160222.tex line 595: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+\hline\label{Tsummary}\end{tabular}}  
+^^^^^^
+Warning 2 in paper20160222.tex line 605: Non-breaking space (`~') should have been used.
+been studied by \cite{zetal10}.  
+               ^
+Warning 2 in paper20160222.tex line 669: Non-breaking space (`~') should have been used.
+This is consistent with the observational result by \cite{zetal10} that  
+                                                   ^
+Warning 2 in paper20160222.tex line 674: Non-breaking space (`~') should have been used.
+(after 2002); see also \cite{Guo10}.  
+                      ^
+Warning 2 in paper20160222.tex line 710: Non-breaking space (`~') should have been used.
+different data sets, \cite{Guo10} reported an unusual magnetic field  
+                    ^
+Warning 24 in paper20160222.tex line 724: Delete this space to maintain correct pagereferences.
+\label{ResolutionDep}  
+^
+Warning 2 in paper20160222.tex line 745: Non-breaking space (`~') should have been used.
+Same as Figure \ref{fig:helispectot1},  
+              ^
+Warning 2 in paper20160222.tex line 756: Non-breaking space (`~') should have been used.
+Same as Figure \ref{fig:helispec4},  
+              ^
+Warning 2 in paper20160222.tex line 763: Non-breaking space (`~') should have been used.
+by the Huairou vector magnetograms, Figure \ref{fig:helispec13} shows the  
+                                          ^
+Warning 2 in paper20160222.tex line 773: Non-breaking space (`~') should have been used.
+as in Figure \ref{fig:helispectot1}.  
+            ^
+Warning 2 in paper20160222.tex line 775: Non-breaking space (`~') should have been used.
+in Figure \ref{fig:helispec4} is now reduced.  
+         ^
+Warning 2 in paper20160222.tex line 805: Non-breaking space (`~') should have been used.
+We have applied the technique of \cite{Zhang2014} to estimate the magnetic  
+                                ^
+Warning 2 in paper20160222.tex line 828: Non-breaking space (`~') should have been used.
+Nevertheless, Figures~\ref{fig:helispec5} and \ref{fig:helispecs5}  
+                                             ^
+Warning 2 in paper20160222.tex line 835: Non-breaking space (`~') should have been used.
+variations (see Figures~\ref{fig:helispec3} and \ref{fig:ene_helicd}).  
+                                               ^
+Warning 2 in paper20160222.tex line 871: Non-breaking space (`~') should have been used.
+However, for decaying turbulence \cite{Lee2010} found that the scaling  
+                                ^
+Warning 8 in paper20160222.tex line 872: Wrong length of dash may have been used.
+depends on the field strength and takes on a shallower Iroshnikov--Kraichnan  
+                                                                 ^^
+Warning 2 in paper20160222.tex line 875: Non-breaking space (`~') should have been used.
+see \cite{BN11} for the respective phenomenologies in the three cases.  
+   ^
+Warning 1 in paper20160222.tex line 882: Command terminated with space.
+\acknowledgments  
+                ^
+Warning 6 in paper20160222.tex line 886: No italic correction (`\/') found.
+We gratefully acknowledge the {\em SDO} team for the HMI vector magnetograms  
+                                      ^
+Warning 8 in paper20160222.tex line 894: Wrong length of dash may have been used.
+Basic Research under the collaborative China-Russian projects 13-02-91158 and 15-52-53125  
+                                                                ^
+Warning 8 in paper20160222.tex line 894: Wrong length of dash may have been used.
+Basic Research under the collaborative China-Russian projects 13-02-91158 and 15-52-53125  
+                                                                   ^
+Warning 8 in paper20160222.tex line 894: Wrong length of dash may have been used.
+Basic Research under the collaborative China-Russian projects 13-02-91158 and 15-52-53125  
+                                                                                ^
+Warning 8 in paper20160222.tex line 894: Wrong length of dash may have been used.
+Basic Research under the collaborative China-Russian projects 13-02-91158 and 15-52-53125  
+                                                                                   ^
+Warning 8 in paper20160222.tex line 896: Wrong length of dash may have been used.
+2012-5797 and 621-2011-5076 (AB).  
+    ^
+Warning 8 in paper20160222.tex line 896: Wrong length of dash may have been used.
+2012-5797 and 621-2011-5076 (AB).  
+                 ^
+Warning 8 in paper20160222.tex line 896: Wrong length of dash may have been used.
+2012-5797 and 621-2011-5076 (AB).  
+                      ^

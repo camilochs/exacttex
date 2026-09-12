@@ -1,0 +1,3 @@
+planted=P_theta sites=[('preprint.xtex', 53), ('preprint.xtex', 49)]
+xtex new=[('XT1001', 'P_theta', 'preprint.xtex', 53)]
+texlab new=[]

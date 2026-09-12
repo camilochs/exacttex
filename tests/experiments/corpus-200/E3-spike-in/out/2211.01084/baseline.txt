@@ -1,0 +1,6 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[('info', 'main.tex', 87, 'Unused label'), ('info', 'main.tex', 116, 'Unused label'), ('info', 'main.tex', 121, 'Unused label'), ('info', 'main.tex', 126, 'Unused label'), ('info', 'main.tex', 145, 'Unused label'), ('info', 'main.tex', 166, 'Unused label'), ('info', 'main.tex', 191, 'Unused label'), ('info', 'main.tex', 216, 'Unused label'), ('info', 'main.tex', 237, 'Unused label'), ('info', 'main.tex', 388, 'Unused label'), ('info', 'main.tex', 394, 'Unused label'), ('info', 'main.tex', 434, 'Unused label'), ('info', 'main.tex', 443, 'Unused label'), ('info', 'main.tex', 458, 'Unused label')]
+tectonic exit=1 warnings=[] secs=1
+error: main.tex:4: ! LaTeX Error: File `iopart.cls' not found.
+error: halted on potentially-recoverable error as specified

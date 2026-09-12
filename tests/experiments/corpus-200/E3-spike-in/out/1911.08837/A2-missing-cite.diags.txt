@@ -1,0 +1,3 @@
+planted=Weismann1892__ghost sites=[('Gonium.xtex', 121)]
+xtex new=[('XT1005', 'Weismann1892__ghost', 'Gonium.xtex', 121)]
+texlab new=[('ERROR', 'Gonium.tex', 121, 'Undefined reference'), ('info', 'BiblioGp.bib', 320, 'Unused entry')]

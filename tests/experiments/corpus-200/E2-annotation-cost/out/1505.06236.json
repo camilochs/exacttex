@@ -1,0 +1,308 @@
+{
+ "paper": "1505.06236",
+ "main": "Pancreas_Segmentation_arXiv2016.tex",
+ "files": [
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "chars_before": 85754,
+   "chars_after": 85688,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 1,
+ "chars_before": 85754,
+ "chars_after": 85688,
+ "delta_pct": -0.07696433985586679,
+ "unrepaired": {
+  "chars_after": 85688,
+  "chars_before": 85754,
+  "converted_files": 1,
+  "check_exit": 1,
+  "coverage": 0.045556,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`mybibfile.bib` could not be read"
+  },
+  "errors": 1,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.07696433985586679
+ },
+ "stats": {
+  "cite_cmds_live": 143,
+  "cite_keys_live": 256,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 22,
+  "labels_outside_grammar": 0,
+  "refs_live": 63,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 16,
+  "cite_cmds_annotated": 123,
+  "cite_keys_annotated": 226,
+  "ids_annotated": 22,
+  "refs_annotated": 53,
+  "inputs_root": 0,
+  "inputs_imported": 0,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 1,
+  "leaks_reverted": 30,
+  "revert_rounds": 2,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 158,
+   "token": "@cite(Modat2010,Wang2012)",
+   "wrapper": "?",
+   "context": "In this paper, a new fully bottom-up approach using image and (deep) patch-level labeling confidences for pancreas segmentation is proposed using 80 single phas"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 158,
+   "token": "@cite(Zografos2015)",
+   "wrapper": "?",
+   "context": "In this paper, a new fully bottom-up approach using image and (deep) patch-level labeling confidences for pancreas segmentation is proposed using 80 single phas"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 303,
+   "token": "@ref(subsec:Seg)",
+   "wrapper": "?",
+   "context": "The computational expense of deep CNN patch labeling per patch (in a sliding window manner) is still higher than Sec. \\ref{subsec:patch}. In practice, dense pat"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 303,
+   "token": "@cite(Roth2015)",
+   "wrapper": "?",
+   "context": "The computational expense of deep CNN patch labeling per patch (in a sliding window manner) is still higher than Sec. \\ref{subsec:patch}. In practice, dense pat"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 303,
+   "token": "@cite(Girshick14)",
+   "wrapper": "?",
+   "context": "The computational expense of deep CNN patch labeling per patch (in a sliding window manner) is still higher than Sec. \\ref{subsec:patch}. In practice, dense pat"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 312,
+   "token": "@ref(fig:ROCPatch)",
+   "wrapper": "?",
+   "context": "\\caption{The flow chart of input channels and component classifiers to form the overall frameworks 1 (F-1) and 2 (F-2). $I^{CT}$ indicates the original CT image"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 326,
+   "token": "@ref(sec:Results2)",
+   "wrapper": "?",
+   "context": "The flow chart of frameworks 1 (F-1) and 2 (F-2) is illustrated in Fig. \\ref{fig:Classifier_Flow}. The two-level cascaded random forest classification hierarchy"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 326,
+   "token": "@cite(Roth2015)",
+   "wrapper": "?",
+   "context": "The flow chart of frameworks 1 (F-1) and 2 (F-2) is illustrated in Fig. \\ref{fig:Classifier_Flow}. The two-level cascaded random forest classification hierarchy"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 326,
+   "token": "@cite(van2015off,barchest2015)",
+   "wrapper": "?",
+   "context": "The flow chart of frameworks 1 (F-1) and 2 (F-2) is illustrated in Fig. \\ref{fig:Classifier_Flow}. The two-level cascaded random forest classification hierarchy"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 326,
+   "token": "@ref(sec:Results2)",
+   "wrapper": "?",
+   "context": "The flow chart of frameworks 1 (F-1) and 2 (F-2) is illustrated in Fig. \\ref{fig:Classifier_Flow}. The two-level cascaded random forest classification hierarchy"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 326,
+   "token": "@cite(Paisitkriangkrai2015)",
+   "wrapper": "?",
+   "context": "The flow chart of frameworks 1 (F-1) and 2 (F-2) is illustrated in Fig. \\ref{fig:Classifier_Flow}. The two-level cascaded random forest classification hierarchy"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 326,
+   "token": "@cite(Lan2015)",
+   "wrapper": "?",
+   "context": "The flow chart of frameworks 1 (F-1) and 2 (F-2) is illustrated in Fig. \\ref{fig:Classifier_Flow}. The two-level cascaded random forest classification hierarchy"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 336,
+   "token": "@ref(subsec:CNN)",
+   "wrapper": "?",
+   "context": "Fig. \\ref{fig:ROCPatch} illustrates the ROC curves for 6-fold cross-validation of the two-tiered superpixel-level classifiers $C_{SP}^1$ and $C_{SP}^2$, $C_{SP}"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 336,
+   "token": "@ref(subsec:patch)",
+   "wrapper": "?",
+   "context": "Fig. \\ref{fig:ROCPatch} illustrates the ROC curves for 6-fold cross-validation of the two-tiered superpixel-level classifiers $C_{SP}^1$ and $C_{SP}^2$, $C_{SP}"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 336,
+   "token": "@ref(fig:ROCPatch)",
+   "wrapper": "?",
+   "context": "Fig. \\ref{fig:ROCPatch} illustrates the ROC curves for 6-fold cross-validation of the two-tiered superpixel-level classifiers $C_{SP}^1$ and $C_{SP}^2$, $C_{SP}"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 336,
+   "token": "@cite(Roth2015)",
+   "wrapper": "?",
+   "context": "Fig. \\ref{fig:ROCPatch} illustrates the ROC curves for 6-fold cross-validation of the two-tiered superpixel-level classifiers $C_{SP}^1$ and $C_{SP}^2$, $C_{SP}"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 336,
+   "token": "@ref(F1Eval)",
+   "wrapper": "?",
+   "context": "Fig. \\ref{fig:ROCPatch} illustrates the ROC curves for 6-fold cross-validation of the two-tiered superpixel-level classifiers $C_{SP}^1$ and $C_{SP}^2$, $C_{SP}"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 336,
+   "token": "@cite(van2015off,barchest2015)",
+   "wrapper": "?",
+   "context": "Fig. \\ref{fig:ROCPatch} illustrates the ROC curves for 6-fold cross-validation of the two-tiered superpixel-level classifiers $C_{SP}^1$ and $C_{SP}^2$, $C_{SP}"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 394,
+   "token": "@ref(fig:ComparisonF1F2)",
+   "wrapper": "?",
+   "context": "Then, we evaluate the difference of the proposed F-1 versus F-2 on 80 patients, using the same four metrics (i.e., Dice, JI, precision and recall). Table \\ref{F"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 399,
+   "token": "@cite(Wang,Wolz,Chu,Wolz12,Shimizu,Okada)",
+   "wrapper": "?",
+   "context": "\\textcolor{LightRubineRed}{Note that our results are not directly or strictly comparable with \\cite{Wang,Wolz,Chu,Wolz12,Shimizu,Okada} since different datasets"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 399,
+   "token": "@cite(Modat2010,Wang2012)",
+   "wrapper": "?",
+   "context": "\\textcolor{LightRubineRed}{Note that our results are not directly or strictly comparable with \\cite{Wang,Wolz,Chu,Wolz12,Shimizu,Okada} since different datasets"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 460,
+   "token": "@cite(Shimizu)",
+   "wrapper": "?",
+   "context": "\\cite{Shimizu}&   20&   -&   57.9 &   -& -\\\\ \\hline"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 461,
+   "token": "@cite(Okada)",
+   "wrapper": "?",
+   "context": "\\cite{Okada} & 28 & - & 46.6 & - & - \\\\ \\hline"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 462,
+   "token": "@cite(Wolz)",
+   "wrapper": "?",
+   "context": "\\cite{Wolz}&   150&   $69.6 \\pm 16.7$ &  $55.5 \\pm 17.1$ & $67.9 \\pm 18.2$ &  $74.1 \\pm 17.1$ \\\\ \\hline"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 463,
+   "token": "@cite(Wolz)",
+   "wrapper": "?",
+   "context": "\\cite{Wolz}&   50&   $58.2 \\pm 20.0$ &  $43.5 \\pm 17.8$  &   - &   - \\\\ \\hline"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 464,
+   "token": "@cite(Wolz12)",
+   "wrapper": "?",
+   "context": "\\cite{Wolz12}&   100 &   65.5 &  49.6  &   70.7  &   62.9 \\\\ \\hline"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 465,
+   "token": "@cite(Wang)",
+   "wrapper": "?",
+   "context": "\\cite{Wang}&  100&   $65.5 \\pm 18.6$ &   -&   -&   -\\\\ \\hline"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 466,
+   "token": "@cite(Chu)",
+   "wrapper": "?",
+   "context": "\\cite{Chu}&  100&   $69.1 \\pm 15.3$ &   54.6 &   -&   -\\\\ \\hline"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 473,
+   "token": "@cite(Modat2010,Wang2012)",
+   "wrapper": "?",
+   "context": "\\caption{Comparison of F-1 and F-2 in six-fold cross validation to the recent state-of-the-art methods \\cite{Wang,Wolz,Chu,Wolz12,Shimizu,Okada} in LOO \\textcol"
+  },
+  {
+   "file": "Pancreas_Segmentation_arXiv2016.tex",
+   "line": 336,
+   "token": "@ref(fig:ROCPatch)",
+   "wrapper": "?",
+   "context": "Fig. \\ref{fig:ROCPatch} illustrates the ROC curves for 6-fold cross-validation of the two-tiered superpixel-level classifiers $C_{SP}^1$ and $C_{SP}^2$, $C_{SP}"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1020",
+   "name": "F1Eval",
+   "file": "Pancreas_Segmentation_arXiv2016.xtex",
+   "line": 394,
+   "message": "prose says `Fig.` but `F1Eval` is a table",
+   "classification": "prose-word mismatch on a real document [target classed as table]: `F1Eval:` prefix",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.045066,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`mybibfile.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "Pancreas_Segmentation_arXiv2016.xtex",
+    "offset": 9240,
+    "length": 10,
+    "line": 146,
+    "column": 991
+   },
+   "message": "citation checking unavailable: `mybibfile.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

@@ -1,0 +1,122 @@
+exit=2
+lines=207
+unique_findings=53
+ar Our measure of semantic richness $G$ is defined as a function of the number of facts that we can infer about its instances, and about their probability of being correct. These facts are represented as graph patterns. For example, the fact that persons have a birth date can be represented by the graph pattern: \texttt{\{ ?person a foaf:Person .\ ?person foaf:birthday ?date .\ \}} here represented as a SPARQL\footnote{\url{http://www.w3.org/TR/rdf-sparql-query/}} graph pattern using the FOAF\footnote{\url{http://xmlns.com/foaf/spec/}} ontology. We define the probability of an entity of type $\alpha$ from dataset $S$ matching pattern $i$ as $p(i,\alpha,S)$. The average number of patterns that we can observe in the entities of type $\alpha$ is the expected value $\mu$ of a Poisson binomial distribution of the probabilities $p$. We only need to compute this value over the finite set of patterns $I$ that have been observed among the entities of the dataset, namely when $p(i,\alpha,S) > 0$. The expected value of this distribution can then be computed as follows:  
+                                                                                                                                                                                                                                                                                                                                                                                           ^
+Warning 2 in ParetiWebSci15.tex line 106: Non-breaking space (`~') should have been used.
+Equation \ref{expected_value_of_facts} gives us a measure of how many patterns, in average, we can observe from the entities of type $\alpha$ in dataset $S$. This measure, however, does not tell us how well we can characterize a concept with a set of common features. In fact, a high value of $\mu$ could be equally a result of a large number of infrequent patterns or of a small number of frequent patterns. However, frequent patterns are more useful than infrequent ones for the purpose of characterising a concept, for example to learn schema information using Inductive Learning. Taking this into consideration, we define our measure of semantic richness with respect to a set of characteristic patterns $Y \subseteq I$ that define which patterns we can expect entities of type $\alpha$ to have.   
+        ^
+Warning 18 in ParetiWebSci15.tex line 107: Use either `` or '' as an alternative to `"'.
+\par If a pattern $i$ belongs to $Y$, then whenever we observe an entity $\epsilon$ of type $\alpha$ we can infer that it would match pattern $i$. We base our measure of semantic richness on the correctness of such inferences. If an entity $\epsilon$ really matches pattern $i$ then we count it as a correct inference, we count it as incorrect otherwise. For example, we might consider including the pattern ``has a dedicated Wikipedia page" in the set of characteristic patterns of concept \emph{foaf:Person}. Whenever we observe an entity of type \emph{foaf:Person} which has a dedicated Wikipedia page we say that inferring this pattern is correct; we say it is incorrect otherwise.   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        ^
+Warning 2 in ParetiWebSci15.tex line 117: Non-breaking space (`~') should have been used.
+\noindent From equation \ref{goal_pre} it follows that, in order to maximize the value of $G(\alpha,S)$, $Y$ should be the set of patterns which occur in the majority of the entities ($\forall i \in Y. p(i,\alpha,S) > 0.5$).  Therefore equation \ref{goal} can be rewritten as follows:  
+                       ^
+Warning 2 in ParetiWebSci15.tex line 117: Non-breaking space (`~') should have been used.
+\noindent From equation \ref{goal_pre} it follows that, in order to maximize the value of $G(\alpha,S)$, $Y$ should be the set of patterns which occur in the majority of the entities ($\forall i \in Y. p(i,\alpha,S) > 0.5$).  Therefore equation \ref{goal} can be rewritten as follows:  
+                                                                                                                                                                                                                                                    ^
+Warning 2 in ParetiWebSci15.tex line 130: Non-breaking space (`~') should have been used.
+\noindent The particular threshold of $0.5$ is a result of the fact that in this measure, which aims at being generic, correct and wrong inferences carry the same (absolute) weight. Similarly, all patterns carry equal weight. This formulation of semantic richness is not meant to be unique and variations are possible. For example, equation \ref{goal} could be modified to penalize wrong inferences more. Also, different patterns could be given different weights to represent how important or informative they are for a specific application.  
+                                                                                                                                                                                                                                                                                                                                                    ^
+Warning 24 in ParetiWebSci15.tex line 138: Delete this space to maintain correct pagereferences.
+\label{proofs}  
+^
+Warning 2 in ParetiWebSci15.tex line 139: Non-breaking space (`~') should have been used.
+\noindent Formula \ref{diminishing_semantics} can be proved according to our definition of semantic richness defined in Formula \ref{goal}. It can be observed that the semantic richness of a concept is the sum of the individual semantic richness of each pattern $G^{\prime}(\alpha,S,i) = ( 2p(i,\alpha,S) - 1 ) [p(i,\alpha,S) > 0.5]$. Therefore Formula \ref{diminishing_semantics} can be proved by proving that the inequation holds for every individual pattern:  
+                 ^
+Warning 2 in ParetiWebSci15.tex line 139: Non-breaking space (`~') should have been used.
+\noindent Formula \ref{diminishing_semantics} can be proved according to our definition of semantic richness defined in Formula \ref{goal}. It can be observed that the semantic richness of a concept is the sum of the individual semantic richness of each pattern $G^{\prime}(\alpha,S,i) = ( 2p(i,\alpha,S) - 1 ) [p(i,\alpha,S) > 0.5]$. Therefore Formula \ref{diminishing_semantics} can be proved by proving that the inequation holds for every individual pattern:  
+                                                                                                                               ^
+Warning 2 in ParetiWebSci15.tex line 139: Non-breaking space (`~') should have been used.
+\noindent Formula \ref{diminishing_semantics} can be proved according to our definition of semantic richness defined in Formula \ref{goal}. It can be observed that the semantic richness of a concept is the sum of the individual semantic richness of each pattern $G^{\prime}(\alpha,S,i) = ( 2p(i,\alpha,S) - 1 ) [p(i,\alpha,S) > 0.5]$. Therefore Formula \ref{diminishing_semantics} can be proved by proving that the inequation holds for every individual pattern:  
+                                                                                                                                                                                                                                                                                                                                                                ^
+Warning 2 in ParetiWebSci15.tex line 149: Non-breaking space (`~') should have been used.
+Formula \ref{diminishing_semantics_proof_goal} can then be written as follows:  
+       ^
+Warning 2 in ParetiWebSci15.tex line 157: Non-breaking space (`~') should have been used.
+From Formula \ref{diminishing_semantics_proof_goal_3} it follows that in case $w_{1} \leq 0.5$ and $w_{1} \leq 0.5$ then $p(i,\alpha,S_{1} \cup S_{2}) < 0.5$ and therefore Formula \ref{diminishing_semantics_proof_goal_3} is reduced to the tautology $0 \leq 0$. This matches the intuition that if a pattern was not frequent in any of the original datasets, it will not be frequent also in the union of the datasets.  
+            ^
+Warning 2 in ParetiWebSci15.tex line 157: Non-breaking space (`~') should have been used.
+From Formula \ref{diminishing_semantics_proof_goal_3} it follows that in case $w_{1} \leq 0.5$ and $w_{1} \leq 0.5$ then $p(i,\alpha,S_{1} \cup S_{2}) < 0.5$ and therefore Formula \ref{diminishing_semantics_proof_goal_3} is reduced to the tautology $0 \leq 0$. This matches the intuition that if a pattern was not frequent in any of the original datasets, it will not be frequent also in the union of the datasets.  
+                                                                                                                                                                                   ^
+Warning 2 in ParetiWebSci15.tex line 158: Non-breaking space (`~') should have been used.
+\par In case $w_{1} > 0.5$ and $w_{1} > 0.5$ then $p(i,\alpha,S_{1} \cup S_{2}) > 0.5$ and therefore equation \ref{diminishing_semantics_proof_goal_3} becomes:  
+                                                                                                             ^
+Warning 2 in ParetiWebSci15.tex line 167: Non-breaking space (`~') should have been used.
+\par We then consider the last case in which a pattern is frequent only in one of the original datasets: when $w_{1} > 0.5$ and $w_{2} \leq 0.5$. This requires us to consider two sub-cases, depending on the value of $p(i,\alpha,S_{1} \cup S_{2})$. If $p(i,\alpha,S_{1} \cup S_{2}) \leq 0.5$, then Formula \ref{diminishing_semantics_proof_goal_3} can be simplified to:  
+                                                                                                                                                                                                                                                                                                                ^
+Warning 2 in ParetiWebSci15.tex line 175: Non-breaking space (`~') should have been used.
+This formula can be further simplified to $w_{1} > 0.5$ which is true by assumption. Finally, in case  $w_{1} > 0.5$ and $w_{2} \leq 0.5$ and $p(i,\alpha,S_{1} \cup S_{2}) > 0.5$ Formula \ref{diminishing_semantics_proof_goal_3} can be simplified to:  
+                                                                                                                                                                                          ^
+Warning 2 in ParetiWebSci15.tex line 183: Non-breaking space (`~') should have been used.
+This equation can be simplified to $w_{2} \leq 0.5$ which is true by assumption. Having proved Formula \ref{diminishing_semantics_proof_goal}, and therefore Formula \ref{diminishing_semantics}, we have proved our hypothesis (Formula \ref{eq:hypothesis}) with respect to our measure of semantic richness.  
+                                                                                                      ^
+Warning 2 in ParetiWebSci15.tex line 183: Non-breaking space (`~') should have been used.
+This equation can be simplified to $w_{2} \leq 0.5$ which is true by assumption. Having proved Formula \ref{diminishing_semantics_proof_goal}, and therefore Formula \ref{diminishing_semantics}, we have proved our hypothesis (Formula \ref{eq:hypothesis}) with respect to our measure of semantic richness.  
+                                                                                                                                                                    ^
+Warning 2 in ParetiWebSci15.tex line 183: Non-breaking space (`~') should have been used.
+This equation can be simplified to $w_{2} \leq 0.5$ which is true by assumption. Having proved Formula \ref{diminishing_semantics_proof_goal}, and therefore Formula \ref{diminishing_semantics}, we have proved our hypothesis (Formula \ref{eq:hypothesis}) with respect to our measure of semantic richness.  
+                                                                                                                                                                                                                                        ^
+Warning 24 in ParetiWebSci15.tex line 187: Delete this space to maintain correct pagereferences.
+\label{experiments}  
+^
+Warning 24 in ParetiWebSci15.tex line 195: Delete this space to maintain correct pagereferences.
+        \label{fig:increase_of_G}  
+       ^
+Warning 2 in ParetiWebSci15.tex line 199: Non-breaking space (`~') should have been used.
+\noindent Our approach uses a numerical measure of the semantic richness of a concept using equation \ref{goal}. But how well does this measure actually capture the concept of semantic richness? We evaluate this measure according to the intuition that concepts are, in average, less semantically rich than their sub-concepts. A similar property is also found in the IC measure, as the IC of a concept is, by definition, always inferior or equal to the IC of its sub-concepts.  
+                                                                                                    ^
+Warning 2 in ParetiWebSci15.tex line 202: Non-breaking space (`~') should have been used.
+\par Figure \ref{fig:increase_of_G} shows the change of semantic richness between each concept and its sub-concepts. This graph shows a significant tendency of concepts to be less semantically rich than their sub-concepts. In fact, 90\% of the subclass relations resulted in an increase of semantic richness from a concept to its sub-concepts. Also, in all cases concepts resulted in a lower semantic richness than the average semantic richness of their sub-concepts, thus supporting our hypothesis. Only in 10\% of the cases a subclass relation resulted in a decrease of semantic richness from a concept to a sub-concept. This situation occurred because in the DBpedia ontology, sibling concepts are mutually exclusive. Therefore, the knowledge that an entity belongs to a certain concept affects the probability of it being a member of another, potentially more semantically rich, concept.  
+           ^
+Warning 2 in ParetiWebSci15.tex line 207: Non-breaking space (`~') should have been used.
+\noindent We have run an experiment to quantify the decrease in semantic richness as concepts are reused. In this experiment we have considered the concept \emph{foaf:Person} as it is used in ten different datasets. The list of the endpoints used to access the datasets is shown in Table \ref{tab:sources}. From each endpoint we have extracted information about 1000 randomly selected entities.  
+                                                                                                                                                                                                                                                                                               ^
+Warning 2 in ParetiWebSci15.tex line 208: Non-breaking space (`~') should have been used.
+\par For each dataset, we have calculated its semantic richness at different states. Starting from the semantic richness of the original dataset, we have recalculated this measure after adding progressively more entities from the other datasets. Figure \ref{fig:decay_of_G} shows the progressive decay of semantic richness as we add new entities of the same type from other sources. The semantic richness of each dataset quickly converges to a value which is significantly inferior to the average measure. While the average semantic richness of all the individual sources is $9.6$, the semantic richness of the merged set results is $1.3$. This experiment validates our hypothesis since the semantic richness of the union of a number of sources is inferior to their average individual semantic richness. Another fact that can be observed is that different datasets represent the same concept with significantly different levels of semantic richness. In this case, the values ranged from $0.7$ of \url{services.data.gov.uk} to $35.2$ of \url{dbpedia.org}.  
+                                                                                                                                                                                                                                                            ^
+Warning 24 in ParetiWebSci15.tex line 215: Delete this space to maintain correct pagereferences.
+        \label{fig:decay_of_G}  
+       ^
+Warning 44 in ParetiWebSci15.tex line 220: User Regex: -2:Vertical rules in tables are ugly.
+                \begin{tabular}{ | l | }  
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+Warning 44 in ParetiWebSci15.tex line 221: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                        \hline  
+                        ^^^^^^
+Warning 44 in ParetiWebSci15.tex line 222: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                        http://dbpedia.org/sparql \\ \hline  
+                                                     ^^^^^^
+Warning 44 in ParetiWebSci15.tex line 223: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                        http://data.nobelprize.org/sparql \\ \hline  
+                                                             ^^^^^^
+Warning 44 in ParetiWebSci15.tex line 224: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                        http://data.archiveshub.ac.uk/sparql \\ \hline  
+                                                                ^^^^^^
+Warning 44 in ParetiWebSci15.tex line 225: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                        http://dati.camera.it/sparql \\ \hline  
+                                                        ^^^^^^
+Warning 44 in ParetiWebSci15.tex line 226: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                        http://data.utpl.edu.ec/ecuadorresearch/lod/sparql \\ \hline  
+                                                                              ^^^^^^
+Warning 44 in ParetiWebSci15.tex line 227: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                        http://lod.sztaki.hu/sparql \\ \hline  
+                                                       ^^^^^^
+Warning 44 in ParetiWebSci15.tex line 228: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                        http://semantic.eea.europa.eu/sparql \\ \hline  
+                                                                ^^^^^^
+Warning 44 in ParetiWebSci15.tex line 229: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                        http://data.open.ac.uk/query \\ \hline  
+                                                        ^^^^^^
+Warning 44 in ParetiWebSci15.tex line 230: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                        http://semanticweb.cs.vu.nl/europeana/sparql \\ \hline  
+                                                                        ^^^^^^
+Warning 44 in ParetiWebSci15.tex line 231: User Regex: -2:Use \toprule, \midrule, or \bottomrule from booktabs.
+                        http://services.data.gov.uk/reference/sparql \\ \hline  
+                                                                        ^^^^^^
+Warning 24 in ParetiWebSci15.tex line 234: Delete this space to maintain correct pagereferences.
+        \label{tab:sources}  
+       ^
+Warning 24 in ParetiWebSci15.tex line 238: Delete this space to maintain correct pagereferences.
+\label{methodology}  
+^

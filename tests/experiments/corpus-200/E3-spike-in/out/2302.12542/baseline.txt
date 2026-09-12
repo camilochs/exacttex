@@ -1,0 +1,31 @@
+tectonic pdf bytes=0
+xtex exit=0 errors=[]
+texlab=[('info', 'main.tex', 129, 'Unused label'), ('info', 'main.tex', 161, 'Unused label'), ('info', 'main.tex', 171, 'Unused label'), ('info', 'main.tex', 174, 'Unused label'), ('info', 'main.tex', 198, 'Unused label'), ('info', 'main.tex', 215, 'Unused label'), ('info', 'main.tex', 230, 'Unused label'), ('info', 'main.tex', 305, 'Unused label'), ('info', 'main.tex', 325, 'Unused label'), ('info', 'main.tex', 365, 'Unused label'), ('info', 'main.tex', 404, 'Unused label'), ('info', 'main.tex', 422, 'Unused label'), ('info', 'main.tex', 437, 'Unused label'), ('info', 'main.tex', 440, 'Unused label'), ('info', 'main.tex', 469, 'Unused label'), ('info', 'main.tex', 478, 'Unused label'), ('info', 'main.tex', 510, 'Unused label'), ('info', 'main.tex', 525, 'Unused label'), ('info', 'main.tex', 627, 'Unused label'), ('info', 'main.tex', 637, 'Unused label'), ('info', 'main.tex', 669, 'Unused label'), ('info', 'reference.bib', 132, 'Unused entry'), ('info', 'reference.bib', 184, 'Unused entry'), ('info', 'reference.bib', 195, 'Unused entry'), ('info', 'reference.bib', 921, 'Unused entry'), ('info', 'reference.bib', 932, 'Unused entry'), ('info', 'reference.bib', 956, 'Unused entry'), ('info', 'reference.bib', 1635, 'Unused entry'), ('info', 'reference.bib', 1649, 'Unused entry'), ('info', 'reference.bib', 1664, 'Unused entry'), ('info', 'reference.bib', 1679, 'Unused entry'), ('info', 'reference.bib', 1693, 'Unused entry'), ('info', 'reference.bib', 1751, 'Unused entry'), ('info', 'reference.bib', 1765, 'Unused entry')]
+tectonic exit=1 warnings=[] secs=3
+ain.bbl:657: Overfull \hbox (253.25pt too wide) has occurred while \output is active
+warning: main.bbl:657: Overfull \vbox (1.0pt too high) has occurred while \output is active
+warning: main.bbl:740: Underfull \hbox (badness 1348) in paragraph at lines 736--740
+warning: main.bbl:747: Underfull \hbox (badness 3954) in paragraph at lines 742--747
+warning: main.bbl:758: Underfull \hbox (badness 1082) in paragraph at lines 754--758
+warning: main.bbl:764: Underfull \hbox (badness 1242) in paragraph at lines 760--764
+warning: main.tex:730: Overfull \hbox (253.25pt too wide) has occurred while \output is active
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+warning: Unknown PDF object type.
+warning: Could not find a valid object in array object.
+warning: Interpreting PS code failed!!! Output might be broken!!!
+warning: Interpreting special command ps: (ps:) failed.
+warning: >> at page="1" position="(72, 709.909)" (in PDF)
+warning: >> xxx "ps: [{ThisPage} << /CropBox [0 0 595.26013 782.33696] >> /PU..."
+warning: >> Reading special command stopped around >>[{ThisPage} << /CropBox [0 0 595.26013 782.33696] >> /PUT pd...<<
+warning: Unknown PDF object type.
+warning: Could not find a valid object in array object.
+warning: Interpreting PS code failed!!! Output might be broken!!!
+warning: Interpreting special command ps: (ps:) failed.
+warning: >> at page="2" position="(72, 709.909)" (in PDF)
+warning: >> xxx "ps: [{ThisPage} << /CropBox [0 0 595.26013 782.33696] >> /PU..."
+warning: >> Reading special command stopped around >>[{ThisPage} << /CropBox [0 0 595.26013 782.33696] >> /PUT pd...<<
+warning: Tectonic unable to generate PK font "bbm8" (dpi 565) on-the-fly
+warning: Could not locate a virtual/physical font for TFM "bbm8".
+warning: >> There are no valid font mapping entry for this font.
+warning: >> Font file name "bbm8" was assumed but failed to locate that font.
+error: Cannot proceed without .vf or "physical" font for PDF output...

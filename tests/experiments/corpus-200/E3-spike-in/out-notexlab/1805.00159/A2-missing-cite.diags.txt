@@ -1,0 +1,3 @@
+planted=2006MNRAS.370.1422A__ghost sites=[('FG_align.xtex', 210)]
+xtex new=[]
+texlab new=[]

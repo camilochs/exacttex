@@ -1,0 +1,141 @@
+{
+ "paper": "1803.00985",
+ "main": "artigo.tex",
+ "files": [
+  {
+   "file": "artigo.tex",
+   "chars_before": 6336,
+   "chars_after": 6376,
+   "emitted": true,
+   "identity": "import-ext-only",
+   "lines_differing": 5
+  },
+  {
+   "file": "Introducao.tex",
+   "chars_before": 4201,
+   "chars_after": 4201,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "background.tex",
+   "chars_before": 5500,
+   "chars_after": 5482,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "propose.tex",
+   "chars_before": 20690,
+   "chars_after": 20654,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "Results.tex",
+   "chars_before": 12930,
+   "chars_after": 12891,
+   "emitted": true,
+   "identity": "identical"
+  },
+  {
+   "file": "Conclusao.tex",
+   "chars_before": 5270,
+   "chars_after": 5270,
+   "emitted": true,
+   "identity": "identical"
+  }
+ ],
+ "converted_files": 6,
+ "chars_before": 54927,
+ "chars_after": 54874,
+ "delta_pct": -0.0964917071749777,
+ "unrepaired": {
+  "chars_after": 54874,
+  "chars_before": 54927,
+  "converted_files": 6,
+  "check_exit": 1,
+  "coverage": 0.047267,
+  "bibliography": {
+   "state": "unavailable",
+   "reason": "`referencias.bib` could not be read"
+  },
+  "errors": 1,
+  "advisories": 1,
+  "build_exit": 0,
+  "build_emitted": true,
+  "delta_pct": -0.0964917071749777
+ },
+ "stats": {
+  "cite_cmds_live": 39,
+  "cite_keys_live": 39,
+  "cite_with_optarg_or_star": 0,
+  "cite_keys_outside_grammar": 0,
+  "other_cite_cmds": 0,
+  "labels_live": 31,
+  "labels_outside_grammar": 0,
+  "refs_live": 48,
+  "refs_outside_grammar": 0,
+  "other_ref_cmds": 0,
+  "float_envs": 24,
+  "cite_cmds_annotated": 38,
+  "cite_keys_annotated": 38,
+  "ids_annotated": 31,
+  "refs_annotated": 48,
+  "inputs_root": 5,
+  "inputs_imported": 5,
+  "inputs_left": 0,
+  "inputs_nested_or_include_left": 0,
+  "defects_reverted": 1,
+  "leaks_reverted": 1,
+  "revert_rounds": 1,
+  "import_leaks": 0
+ },
+ "leaks": [
+  {
+   "file": "artigo.tex",
+   "line": 159,
+   "token": "@cite(mikolov2013efficient)",
+   "wrapper": "?",
+   "context": "Historically, the Natural Language Processing area has been given too much attention by many researchers. One of the main motivation beyond this interest is rel"
+  }
+ ],
+ "defects": [
+  {
+   "code": "XT1020",
+   "name": "Eq_bayesLamdas",
+   "file": "propose.xtex",
+   "line": 164,
+   "message": "prose says `Figure` but `Eq_bayesLamdas` is an equation",
+   "classification": "prose-word mismatch on a real document [target classed as equation]: `Eq_bayesLamdas:` prefix",
+   "reverted": true
+  }
+ ],
+ "check_exit": 0,
+ "build_exit": 0,
+ "coverage": 0.046902,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`referencias.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "Results.xtex",
+    "offset": 130,
+    "length": 18,
+    "line": 3,
+    "column": 112
+   },
+   "message": "citation checking unavailable: `referencias.bib` could not be read",
+   "related": []
+  }
+ ],
+ "check_stderr": "",
+ "build_stderr": ""
+}

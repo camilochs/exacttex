@@ -1,0 +1,3 @@
+planted=chen2020survey__ghost sites=[('sections/introduction.xtex', 13)]
+xtex new=[('XT1005', 'chen2020survey__ghost', 'sections/introduction.xtex', 13)]
+texlab new=[('ERROR', 'sections/introduction.tex', 13, 'Undefined reference')]

@@ -1,0 +1,25 @@
+{
+ "coverage": 0.018658,
+ "bibliography": {
+  "state": "unavailable",
+  "reason": "`custom.bib` could not be read"
+ },
+ "diagnostics": [
+  {
+   "code": "XT2001",
+   "severity": "advisory",
+   "blame": "unresolved",
+   "entity": "citation",
+   "name": null,
+   "span": {
+    "file": "neurips_2020.xtex",
+    "offset": 4110,
+    "length": 4,
+    "line": 80,
+    "column": 344
+   },
+   "message": "citation checking unavailable: `custom.bib` could not be read",
+   "related": []
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+target,kind,verdict,field,severity,document,source
+10.1145/2676726.2676999,bib-entry,partial,year,medium,2015,2014
+baez:smooth_spaces,bib-entry,partial,year,medium,2008,2011
+chang:disintegration,bib-entry,partial,year,medium,1993,1997
+coecke:inference,bib-entry,partial,year,medium,2012,2011
+dahlqvist:roban,bib-entry,partial,year,medium,2020,2019
+dash:pointprocess,bib-entry,partial,year,medium,2020,2021
+eaton,bib-entry,partial,authors,high,Morris L. Eaton,F. H. C. Marriott and Morris L. Eaton
+eaton,bib-entry,partial,year,medium,2007,1984
+fritz:kantorovich,bib-entry,partial,year,medium,2017,2019
+goi-bayes,bib-entry,partial,year,medium,2019,2021
+heunen-kaarsgaard,bib-entry,partial,authors,high,Chris Heunen and Robin Kaarsgaard,Chris Heunen and Miriam Backens
+hier-exch,bib-entry,partial,year,medium,2020,2021
+huotstatonqpl,bib-entry,partial,year,medium,2018,2019
+kallenberg,bib-entry,partial,authors,high,"Kallenberg, Olav",Gerry Leversha
+kallenberg,bib-entry,partial,year,medium,1997,2004
+kechris:descriptive_set_theory,bib-entry,partial,year,medium,1987,1995
+kock:commutative_monads,bib-entry,partial,year,medium,2011,2012
+lambek-scott,bib-entry,partial,authors,high,J Lambek and P J Scott,J. L. Bell and J. Lambek and P. J. Scott
+lambek-scott,bib-entry,partial,year,medium,1988,1989
+lauritzen,bib-entry,partial,year,medium,1999,2001
+layout-randomization,bib-entry,partial,year,medium,2012,2010
+lenses,bib-entry,partial,year,medium,2020,2024
+pitts:nominalsets,bib-entry,mismatch,title,medium,Nominal Sets: Names and Symmetry in Computer Science,Nominal Sets
+poly-pos-boxes,bib-entry,partial,authors,high,"{Alves Diniz}, M. and {Salasar}, L.~E. and {Bassi
+                   Stern}, R.",Marcio A. Diniz and R. B. Stern and Luis E. Salazar
+poly-pos-boxes,bib-entry,partial,year,medium,2016,2019
+problog,bib-entry,partial,authors,high,"De~Raedt, L and Kimming, A.",Luc De Raedt and Angelika Kimmig
+queueing,bib-entry,partial,authors,high,"Tijms, Henk",Henk Tijms and Koen Staats
+queueing,bib-entry,partial,year,medium,2007,2006
+representable_markov,bib-entry,partial,year,medium,2020,2023
+selinger:graphical,bib-entry,partial,year,medium,2011,2010
+shiebler-likelihood,bib-entry,partial,year,medium,2020,2021
+sicp,bib-entry,partial,authors,high,"Abelson, Harold and Sussman, Gerald Jay and {with~Julie~Sussman}",Christopher Fry and Harold Abelson and Gerald Sussman and Julie Sussman
+sicp,bib-entry,partial,year,medium,1996,1985
+staton:sheaves,bib-entry,mismatch,title,medium,"Semantics for Probabilistic Programming: Higher-Order Functions, Continuous Distributions, and Soft Constraints",Semantics for probabilistic programming
+support_hyperspace,bib-entry,partial,year,medium,2019,2021
+tao:matrix_book,bib-entry,partial,year,medium,2011,2012
+tzevelekos,bib-entry,partial,authors,high,Nikos Tzevelekos,Andrzej S. Murawski and Nikos Tzevelekos
+tzevelekos,bib-entry,partial,year,medium,2008,2016
+tzevelekos-thesis,bib-entry,partial,authors,high,Nikos Tzevelekos,Andrzej S. Murawski and Nikos Tzevelekos
+tzevelekos-thesis,bib-entry,partial,year,medium,2008,2016
+zhang_schur,bib-entry,partial,authors,high,"Z., Zhang",Fuzhen Zhang

@@ -1,0 +1,3 @@
+planted=sec:definitions sites=[('thesis.xtex', 415), ('thesis.xtex', 380)]
+xtex new=[('XT1001', 'sec:definitions', 'thesis.xtex', 415)]
+texlab new=[]

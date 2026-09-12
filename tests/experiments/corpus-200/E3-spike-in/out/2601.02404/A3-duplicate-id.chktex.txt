@@ -1,0 +1,236 @@
+exit=2
+lines=960
+unique_findings=184
+idelines to each student on how they can actually use them... if detailed guidelines were available through a platform on those laptops, it would be a huge help during class.''  ``If they could model what they're building with their hands at home before coming to the academy, if they could try to fit the pieces together and implement it in software beforehand, it would be a huge help.''   
+                                                                                                                                                                                  ^
+Warning 38 in main.tex line 1020: You should not use punctuation in front of quotes.
+    \item \textbf{Instructor G}: ``I think the guidelines given to students are too few.''  ``If we could distribute guidelines to each student on how they can actually use them... if detailed guidelines were available through a platform on those laptops, it would be a huge help during class.''  ``If they could model what they're building with their hands at home before coming to the academy, if they could try to fit the pieces together and implement it in software beforehand, it would be a huge help.''   
+                                                                                                                                                                                                                                                                                                    ^
+Warning 38 in main.tex line 1020: You should not use punctuation in front of quotes.
+    \item \textbf{Instructor G}: ``I think the guidelines given to students are too few.''  ``If we could distribute guidelines to each student on how they can actually use them... if detailed guidelines were available through a platform on those laptops, it would be a huge help during class.''  ``If they could model what they're building with their hands at home before coming to the academy, if they could try to fit the pieces together and implement it in software beforehand, it would be a huge help.''   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ^
+Warning 38 in main.tex line 1021: You should not use punctuation in front of quotes.
+    \item \textbf{Instructor H}: ``In the case of teaching aids, malfunctions are frequent, and I believe that continuously developing new teaching aids is more helpful for students' classes. Therefore, I think financial support is obviously necessary.''  ``If there was a management system or a communication tool, instructors could communicate better, and it would be convenient to have a community where we can report and inform each other about problematic teaching aids or tools.''  
+                                                                                                                                                                                                                                                           ^
+Warning 38 in main.tex line 1021: You should not use punctuation in front of quotes.
+    \item \textbf{Instructor H}: ``In the case of teaching aids, malfunctions are frequent, and I believe that continuously developing new teaching aids is more helpful for students' classes. Therefore, I think financial support is obviously necessary.''  ``If there was a management system or a communication tool, instructors could communicate better, and it would be convenient to have a community where we can report and inform each other about problematic teaching aids or tools.''  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+Warning 24 in main.tex line 1030: Delete this space to maintain correct pagereferences.
+\label{tab:full_circuit_validation}  
+^
+Warning 8 in main.tex line 1039: Wrong length of dash may have been used.
+\multirow{2}{*}{GPT-4o-mini} & Logical & 0.01 & 1.19 & 0.26 & 0.29 & - & - \\  
+                                                                     ^
+Warning 8 in main.tex line 1039: Wrong length of dash may have been used.
+\multirow{2}{*}{GPT-4o-mini} & Logical & 0.01 & 1.19 & 0.26 & 0.29 & - & - \\  
+                                                                         ^
+Warning 8 in main.tex line 1041: Wrong length of dash may have been used.
+\multirow{2}{*}{Claude 3.5 Haiku} & Logical & 0.08 & 0.06 & 0.30 & 0.07 & - & - \\  
+                                                                          ^
+Warning 8 in main.tex line 1041: Wrong length of dash may have been used.
+\multirow{2}{*}{Claude 3.5 Haiku} & Logical & 0.08 & 0.06 & 0.30 & 0.07 & - & - \\  
+                                                                              ^
+Warning 8 in main.tex line 1043: Wrong length of dash may have been used.
+\multirow{2}{*}{Gemini-2.0-Flash-Lite} & Logical & 0.16 & 0.56 & 0.03 & 0.35 & - & - \\  
+                                                                               ^
+Warning 8 in main.tex line 1043: Wrong length of dash may have been used.
+\multirow{2}{*}{Gemini-2.0-Flash-Lite} & Logical & 0.16 & 0.56 & 0.03 & 0.35 & - & - \\  
+                                                                                   ^
+Warning 8 in main.tex line 1045: Wrong length of dash may have been used.
+\multirow{2}{*}{GPT-4.1} & Logical & 0.0 & 0.03 & 0.03 & 0.03 & - & - \\  
+                                                                ^
+Warning 8 in main.tex line 1045: Wrong length of dash may have been used.
+\multirow{2}{*}{GPT-4.1} & Logical & 0.0 & 0.03 & 0.03 & 0.03 & - & - \\  
+                                                                    ^
+Warning 8 in main.tex line 1047: Wrong length of dash may have been used.
+\multirow{2}{*}{Gemini-2.0-Flash} & Logical & 0.0 & 0.12 & 0.09 & 0.09 & - & - \\  
+                                                                         ^
+Warning 8 in main.tex line 1047: Wrong length of dash may have been used.
+\multirow{2}{*}{Gemini-2.0-Flash} & Logical & 0.0 & 0.12 & 0.09 & 0.09 & - & - \\  
+                                                                             ^
+Warning 8 in main.tex line 1049: Wrong length of dash may have been used.
+\multirow{2}{*}{Claude 3.7 Sonnet} & Logical & 0.0 & 0.33 & 0.02 & 0.02 & - & - \\  
+                                                                          ^
+Warning 8 in main.tex line 1049: Wrong length of dash may have been used.
+\multirow{2}{*}{Claude 3.7 Sonnet} & Logical & 0.0 & 0.33 & 0.02 & 0.02 & - & - \\  
+                                                                              ^
+Warning 8 in main.tex line 1051: Wrong length of dash may have been used.
+\multirow{2}{*}{GPT-4o} & Logical & 0.0 & 0.08 & 0.08 & 0.03 & - & - \\  
+                                                               ^
+Warning 8 in main.tex line 1051: Wrong length of dash may have been used.
+\multirow{2}{*}{GPT-4o} & Logical & 0.0 & 0.08 & 0.08 & 0.03 & - & - \\  
+                                                                   ^
+Warning 8 in main.tex line 1053: Wrong length of dash may have been used.
+\multirow{2}{*}{o3-mini} & Logical & 0.02 & 0.39 & 0.06 & 0.02 & - & - \\  
+                                                                 ^
+Warning 8 in main.tex line 1053: Wrong length of dash may have been used.
+\multirow{2}{*}{o3-mini} & Logical & 0.02 & 0.39 & 0.06 & 0.02 & - & - \\  
+                                                                     ^
+Warning 8 in main.tex line 1055: Wrong length of dash may have been used.
+\multirow{2}{*}{Gemma 3} & Logical & 0.09 & 0.67 & 0.30 & 0.58 & - & - \\  
+                                                                 ^
+Warning 8 in main.tex line 1055: Wrong length of dash may have been used.
+\multirow{2}{*}{Gemma 3} & Logical & 0.09 & 0.67 & 0.30 & 0.58 & - & - \\  
+                                                                     ^
+Warning 8 in main.tex line 1057: Wrong length of dash may have been used.
+\multirow{2}{*}{Phi 4} & Logical & 0.0 & 0.03 & 0.03 & 0.03 & - & - \\  
+                                                              ^
+Warning 8 in main.tex line 1057: Wrong length of dash may have been used.
+\multirow{2}{*}{Phi 4} & Logical & 0.0 & 0.03 & 0.03 & 0.03 & - & - \\  
+                                                                  ^
+Warning 8 in main.tex line 1059: Wrong length of dash may have been used.
+\multirow{2}{*}{Mistral-small} & Logical & 0.45 & 0.75 & 0.13 & 0.03 & - & - \\  
+                                                                       ^
+Warning 8 in main.tex line 1059: Wrong length of dash may have been used.
+\multirow{2}{*}{Mistral-small} & Logical & 0.45 & 0.75 & 0.13 & 0.03 & - & - \\  
+                                                                           ^
+Warning 8 in main.tex line 1061: Wrong length of dash may have been used.
+\multirow{2}{*}{Deepseek-Coder-v2} & Logical & 0.05 & 0.33 & 0.60 & 0.53 & - & - \\  
+                                                                           ^
+Warning 8 in main.tex line 1061: Wrong length of dash may have been used.
+\multirow{2}{*}{Deepseek-Coder-v2} & Logical & 0.05 & 0.33 & 0.60 & 0.53 & - & - \\  
+                                                                               ^
+Warning 8 in main.tex line 1067: Wrong length of dash may have been used.
+\multirow{2}{*}{LLaMA3.1} & Logical & 0.07 & 0.42 & 0.73 & 0.45 & - & - \\  
+                                                                  ^
+Warning 8 in main.tex line 1067: Wrong length of dash may have been used.
+\multirow{2}{*}{LLaMA3.1} & Logical & 0.07 & 0.42 & 0.73 & 0.45 & - & - \\  
+                                                                      ^
+Warning 24 in main.tex line 1079: Delete this space to maintain correct pagereferences.
+\label{tab:code_performance_codebleu}  
+^
+Warning 24 in main.tex line 1106: Delete this space to maintain correct pagereferences.
+\label{appendix:post-focus group interviews}  
+^
+Warning 24 in main.tex line 1133: Delete this space to maintain correct pagereferences.
+\label{Appendix:eval_validation}  
+^
+Warning 24 in main.tex line 1169: Delete this space to maintain correct pagereferences.
+\label{Appendix:AddResults}  
+^
+Warning 24 in main.tex line 1177: Delete this space to maintain correct pagereferences.
+\label{tab:self_improve_full}  
+^
+Warning 24 in main.tex line 1192: Delete this space to maintain correct pagereferences.
+\label{tab:cot_full}  
+^
+Warning 1 in main.tex line 1230: Command terminated with space.
+\endfirsthead  
+             ^
+Warning 8 in main.tex line 1232: Wrong length of dash may have been used.
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\  
+                                    ^^
+Warning 1 in main.tex line 1236: Command terminated with space.
+\endhead  
+        ^
+Warning 1 in main.tex line 1238: Command terminated with space.
+\endfoot  
+        ^
+Warning 1 in main.tex line 1240: Command terminated with space.
+\endlastfoot  
+            ^
+Warning 38 in main.tex line 1248: You should not use punctuation in front of quotes.
+& LCD display basic & Connect an ILI9341 LCD display to Arduino and write code to show ``Hello World!'' on the display. \\  
+                                                                                                    ^
+Warning 13 in main.tex line 1267: Intersentence spacing (`\@') should perhaps be used.
+& serial LCD display & Connect an ILI9341 LCD display to Arduino and write code to read serial input and display it on the LCD. \\  
+                                                                                                                              ^
+Warning 13 in main.tex line 1277: Intersentence spacing (`\@') should perhaps be used.
+& button LCD display & Connect a push button and ILI9341 display to Arduino and write code to show the button state on the LCD. \\  
+                                                                                                                              ^
+Warning 13 in main.tex line 1282: Intersentence spacing (`\@') should perhaps be used.
+& dht22 LCD display & Connect a DHT22 sensor and an ILI9341 LCD display to Arduino and write code to show humidity and temperature values on the LCD. \\  
+                                                                                                                                                    ^
+Warning 13 in main.tex line 1293: Intersentence spacing (`\@') should perhaps be used.
+& calendar display & Connect an RTC module, an ILI9341 display, and two push buttons to Arduino and write code to show the current date on the LCD. Use the buttons to navigate between dates. \\  
+                                                                                                                                                  ^
+Warning 24 in main.tex line 1306: Delete this space to maintain correct pagereferences.
+\label{Appendix:Prompts}  
+^
+Warning 24 in main.tex line 1563: Delete this space to maintain correct pagereferences.
+\label{Appendix:AddESP32}  
+^
+Warning 24 in main.tex line 1569: Delete this space to maintain correct pagereferences.
+\label{tab:esp_experiment_result}  
+^
+Warning 2 in main.tex line 1589: Non-breaking space (`~') should have been used.
+Table \ref{tab:esp_experiment_result} represents the test results of ESP32 code and circuit generated by six open and closed source LLMs. When comparing the ESP32 scores with those of Arduino, they showed clearly similar trends and values. This experimental results indicates that PCEval is not confined to the Arduino platform but can be extended to multiple platforms.  
+     ^
+Warning 24 in main.tex line 1592: Delete this space to maintain correct pagereferences.
+\label{Appendix:system_specs}  
+^
+Warning 24 in main.tex line 1613: Delete this space to maintain correct pagereferences.
+\label{sec:More Qualitative Results}  
+^
+Warning 24 in main.tex line 1625: Delete this space to maintain correct pagereferences.
+  \label{fig:More results 1 servo}  
+ ^
+Warning 24 in main.tex line 1633: Delete this space to maintain correct pagereferences.
+  \label{fig:More results 2 potentio}  
+ ^
+Warning 24 in main.tex line 1643: Delete this space to maintain correct pagereferences.
+    \label{supp_fig:success_factor_l_vertical}  
+   ^
+Warning 24 in main.tex line 1652: Delete this space to maintain correct pagereferences.
+    \label{supp_fig:success_factor_p_vertical}  
+   ^
+Warning 24 in main.tex line 1661: Delete this space to maintain correct pagereferences.
+    \label{supp_fig:success_factor_lc_vertical}  
+   ^
+Warning 24 in main.tex line 1670: Delete this space to maintain correct pagereferences.
+    \label{supp_fig:success_factor_pc_vertical}  
+   ^
+Warning 24 in main.tex line 1674: Delete this space to maintain correct pagereferences.
+  \label{supp_fig:success_factor}  
+ ^
+Warning 2 in main.tex line 1684: Non-breaking space (`~') should have been used.
+Figures~\ref{supp_fig:success_factor_l_vertical} and \ref{supp_fig:success_factor_p_vertical} present results for Logical Circuit Generation (\hlorange{\textbf{\textit{D}, \textit{C} $\rightarrow$ \textit{L}}}) and Physical Circuit Generation (\hlpink{\textbf{\textit{D}, \textit{C} $\rightarrow$ \textit{P}}}), respectively.  
+                                                    ^
+Warning 2 in main.tex line 1690: Non-breaking space (`~') should have been used.
+For Code Generation from Logical Circuit (\hlblue{\textbf{\textit{D}, \textit{L} $\rightarrow$ \textit{C}}}) and Code Generation from Physical Circuit (\hlgreen{\textbf{\textit{D}, \textit{P} $\rightarrow$ \textit{C}}}) (Figures~\ref{supp_fig:success_factor_lc_vertical} and \ref{supp_fig:success_factor_pc_vertical}), the number of code lines correlates with a steeper decline in success rates compared to circuit complexity metrics. This pattern indicates that generating longer, more complex code poses a greater challenge to LLMs than interpreting circuit designs, regardless of whether the input specifications are logical or physical in nature.  
+                                                                                                                                                                                                                                                                                  ^
+Warning 12 in main.tex line 1703: Interword spacing (`\ ') should perhaps be used.
+    \caption{Logical Circuit Gen. (\hlorange{\textbf{\textit{D}, \textit{C} $\rightarrow$ \textit{L}}})}  
+                                 ^
+Warning 24 in main.tex line 1704: Delete this space to maintain correct pagereferences.
+    \label{supp_fig:success_level_l}  
+   ^
+Warning 12 in main.tex line 1710: Interword spacing (`\ ') should perhaps be used.
+    \caption{Physical Circuit Gen. (\hlpink{\textbf{\textit{D}, \textit{C} $\rightarrow$ \textit{P}}})}  
+                                  ^
+Warning 24 in main.tex line 1711: Delete this space to maintain correct pagereferences.
+    \label{supp_fig:success_level_p}  
+   ^
+Warning 12 in main.tex line 1719: Interword spacing (`\ ') should perhaps be used.
+    \caption{Code Gen. from Logical Circuit (\hlblue{\textbf{\textit{D}, \textit{L} $\rightarrow$ \textit{C}}})}  
+                      ^
+Warning 24 in main.tex line 1720: Delete this space to maintain correct pagereferences.
+    \label{supp_fig:success_level_lc}  
+   ^
+Warning 12 in main.tex line 1726: Interword spacing (`\ ') should perhaps be used.
+    \caption{Code Gen. from Physical Circuit (\hlgreen{\textbf{\textit{D}, \textit{P} $\rightarrow$ \textit{C}}})}  
+                      ^
+Warning 24 in main.tex line 1727: Delete this space to maintain correct pagereferences.
+    \label{supp_fig:success_level_pc}  
+   ^
+Warning 24 in main.tex line 1731: Delete this space to maintain correct pagereferences.
+  \label{supp_fig:success_level}  
+ ^
+Warning 18 in main.tex line 1784: Use either `` or '' as an alternative to `"'.
+    Reference code, logical circuit and physical circuit of ``Bar LED Basic" project.  
+                                                                           ^
+Warning 24 in main.tex line 1786: Delete this space to maintain correct pagereferences.
+  \label{supp_fig:bar_led}  
+ ^
+Warning 18 in main.tex line 1792: Use either `` or '' as an alternative to `"'.
+    Reference code, logical circuit and physical circuit of ``4 Digit 7 Segment Display" project.  
+                                                                                       ^
+Warning 24 in main.tex line 1794: Delete this space to maintain correct pagereferences.
+  \label{supp_fig:4digit_7segment}  
+ ^
+Warning 15 in main.tex line 783: No match found for `('.
+Average pin-conflict counts per sample are highest among all error types (e.g., Claude~3.7: 7.52, o3-mini: 4.20, GPT-4o: 2.07), while bypasses vary by model (e.g., Gemini-2.0-Flash: 2.73 vs.\ o3-mini: 0.01; see details in Appendix~\ref{Appendix:eval_validation}.  
+                                                                                                                                                             ^
+Warning 17 in main.tex line 1797: Number of `(' doesn't match the number of `)'!
+
+

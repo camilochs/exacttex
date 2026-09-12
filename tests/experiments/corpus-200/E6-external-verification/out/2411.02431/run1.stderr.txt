@@ -1,0 +1,40 @@
+37 claims: 0 fresh and carried over, 37 to verify
+aarnes2004use · settled
+adler2009random · settled
+azad2021hierarchical · settled
+chen2003A · settled
+chen2003mixed · settled
+chen2020generalized · settled
+choubineh2022innovative · settled
+choubineh2023deep · settled
+chung2015mixed · settled
+chung2015residual · settled
+cybenko1989approximations · settled
+efendiev2013generalized · settled
+fu2024edge · settled
+fu2024efficient · settled
+fukunaga1970application · settled
+ganis2017A · settled
+geng2024swin · settled
+gilbarg1977elliptic · settled
+hadi2008Iterative · settled
+hornik1991approximation · settled
+jenny2005Adaptive · settled
+kato2013perturbation · settled
+kovachki2021universal · settled
+kovachki2023neural · settled
+krizhevsky2012imagenet · settled
+li2020fourier · settled
+li2023fourier · settled
+liu2024learning · settled
+liu2024mitigating · settled
+shang2022lipschitz · settled
+simonyan2014very · settled
+spiridonov2025prediction · settled
+vasilyeva2024adaptive · settled
+vaswani2017attention · settled
+yang2019two · settled
+ye2024robust · settled
+ye2025highly · settled
+network: 19 requests (crossref 18, openalex 1) · 0 retries · 1122555 bytes down · 12 fetched, 0 carried over, 25 unanswered
+record: 37 claims → .xtexverified
