@@ -257,6 +257,28 @@ pub fn check_documents(
                         severity: Severity::Error,
                         blame: Blame::XtexConstruct,
                     });
+                } else if malformed
+                    && matches!(
+                        kind,
+                        EntryToken::Add | EntryToken::Del | EntryToken::Sub | EntryToken::Note
+                    )
+                {
+                    // A revision construct that closed its `(` and never
+                    // opened a body. `xtex build` already refuses this, in
+                    // the CLI, by walking the nodes itself; the checker
+                    // walked past it, so an author met it at build time and
+                    // an editor never met it at all.
+                    diagnostics.push(Diagnostic {
+                        code: "XT1021",
+                        entity: EntityClass::UnknownOpen,
+                        name: None,
+                        source,
+                        span,
+                        message: format!("`{}` has no body — expected `{{`", kind.name()),
+                        related: Vec::new(),
+                        severity: Severity::Error,
+                        blame: Blame::XtexConstruct,
+                    });
                 }
                 return;
             };

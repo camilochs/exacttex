@@ -144,6 +144,7 @@ error.
 | `XT1014` | An explicit inline construct (`@id`, a reference or citation command, `@import`) whose closing `)` is not found before line end | any |
 | `XT1018` | Under `--verified` only: a recorded verdict of `mismatch`, or a `partial` whose difference is high severity, on an entry that an `@cite(k)` demands — and only when the record was reached through an identifier the entry declares (a DOI), never through a text search | `Citation` |
 | `XT1020` | An entity-kind word immediately before a reference construct names class A, and the target's known class is B, A ≠ B | both known |
+| `XT1021` | A revision construct (`@add`, `@del`, `@sub`, `@note`) that closed its `(` and opened no body | any |
 
 Two properties hold across the whole table and are tested as properties, not as examples:
 
