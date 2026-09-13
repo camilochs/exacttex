@@ -1,0 +1,10 @@
+\documentclass{article}
+\newcommand{\figure}[1]{#1}
+\begin{document}
+A reference is written \texttt{@ref(x)} and a declaration \texttt{@id(y)}.
+A typed block opens as \texttt{\figure(z)}, and \verb|@cite(k)| is a citation.
+\begin{verbatim}
+@ref(x) \table(t) @id(y)
+\end{verbatim}
+The author's own \figure{w} keeps its braces and is ordinary LaTeX.
+\end{document}

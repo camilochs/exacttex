@@ -59,6 +59,48 @@ somebody's edited file by now. Every output is checked for absence before any is
 removes each `.tex` after its `.xtex` is written: a rename, done in the order that cannot lose the
 original.
 
+## The sequences the language reserves
+
+Renaming a `.tex` to `.xtex` changes nothing for almost every document, and the corpus measures how
+close to every: 647 files of 200 arXiv papers came out byte-identical, 18,231,655 bytes with no
+difference. The exception is a document that already writes one of the reserved sequences itself.
+
+A sequence is reserved only in **live text** — the regions [`grammar.md`](grammar.md) §8 does not
+exclude — and only in the exact shape below: the name immediately followed by its opener. Nothing else
+about `@` or those words is special. `\figure{w}` with braces is the author's macro and stays LaTeX,
+`\mybox(w)` is untouched because the name is not reserved, and `@ref` with no parenthesis is text.
+
+What each does to a document that did not opt in, measured on `Prose with X inside.`:
+
+| Reserved | `xtex check` | emitted |
+|---|---|---|
+| `@ref(`, `@cref(`, `@Cref(`, `@autoref(`, `@pageref(` | XT1003 | `\ref{x}`, `\cref{x}`, … |
+| `@import(` | XT1009 | `\input{p.tex}` |
+| `\figure(`, `\table(` | XT1008 | identical |
+| `@id(` | passes | `\label{x}` |
+| `@cite(`, `@citep(`, `@citet(`, `@textcite(`, `@parencite(` | passes | `\cite{k}`, `\citep{k}`, … |
+| `@add(`, `@del(`, `@sub(`, `@note(` | passes | the line is emitted empty |
+| `latex {` | passes | the word and the braces are dropped |
+
+The bottom four rows are the ones to know about, because they exit zero. `We set the latex {glue}
+parameter by hand.` is emitted as `We set the glue parameter by hand.`
+
+**To write a reserved sequence literally, put it in a code region.** `\texttt`, `\verb` and `verbatim`
+are exclusion regions, so the bytes inside them are transported as they stand:
+
+```latex
+A reference is written \texttt{@ref(x)} and a declaration \texttt{@id(y)}.
+The typed block opens as \verb|\figure(z)|.
+```
+
+That is how prose shows a code token anyway, and it is why `\texttt` is excluded from the commands
+`xtex adopt` looks inside: converting there would corrupt any document that documents this language.
+`tests/fixtures/exclusions/22-a-reserved-sequence-shown-in-a-code-font` holds the case.
+
+There is no shorter escape than a code region today, so a document that writes one of these in running
+prose is changed or refused. [Issue 187](https://github.com/camilochs/exacttex/issues/187) carries the
+measurements and the open question of whether the four permissive rows should refuse instead.
+
 ## The report
 
 ```
