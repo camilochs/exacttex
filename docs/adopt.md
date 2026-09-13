@@ -72,18 +72,21 @@ about `@` or those words is special. `\figure{w}` with braces is the author's ma
 
 What each does to a document that did not opt in, measured on `Prose with X inside.`:
 
-| Reserved | `xtex check` | emitted |
+| Reserved | `xtex check` | `xtex build` |
 |---|---|---|
-| `@ref(`, `@cref(`, `@Cref(`, `@autoref(`, `@pageref(` | XT1003 | `\ref{x}`, `\cref{x}`, … |
-| `@import(` | XT1009 | `\input{p.tex}` |
-| `\figure(`, `\table(` | XT1008 | identical |
-| `@id(` | passes | `\label{x}` |
-| `@cite(`, `@citep(`, `@citet(`, `@textcite(`, `@parencite(` | passes | `\cite{k}`, `\citep{k}`, … |
-| `@add(`, `@del(`, `@sub(`, `@note(` | passes | the line is emitted empty |
-| `latex {` | passes | the word and the braces are dropped |
+| `@add(`, `@del(`, `@sub(`, `@note(` with no body | passes | refuses: `@add is malformed` |
+| `@import(` | XT1009 | refuses: the path is not found |
+| `@ref(`, `@cref(`, `@Cref(`, `@autoref(`, `@pageref(` | XT1003 | emits `\ref{x}`, `\cref{x}`, … |
+| `\figure(`, `\table(` | XT1008 | emits the line unchanged |
+| `@id(` | passes | emits `\label{x}` |
+| `@cite(`, `@citep(`, `@citet(`, `@textcite(`, `@parencite(` | passes | emits `\cite{k}`, `\citep{k}`, … |
+| `latex {` | passes | emits the braced body alone |
 
-The bottom four rows are the ones to know about, because they exit zero. `We set the latex {glue}
-parameter by hand.` is emitted as `We set the glue parameter by hand.`
+The last three rows are the ones to know about, because both commands exit zero and the document is
+different: `We set the latex {glue} parameter by hand.` is emitted as `We set the glue parameter by
+hand.` Those three are well-formed constructs, and the compiler is reading them as what they are.
+
+The first row is an inconsistency of our own: `build` refuses what `check` passes. Issue 189 carries it.
 
 **To write a reserved sequence literally, put it in a code region.** `\texttt`, `\verb` and `verbatim`
 are exclusion regions, so the bytes inside them are transported as they stand:
@@ -99,7 +102,7 @@ That is how prose shows a code token anyway, and it is why `\texttt` is excluded
 
 There is no shorter escape than a code region today, so a document that writes one of these in running
 prose is changed or refused. [Issue 187](https://github.com/camilochs/exacttex/issues/187) carries the
-measurements and the open question of whether the four permissive rows should refuse instead.
+measurements.
 
 ## The report
 
