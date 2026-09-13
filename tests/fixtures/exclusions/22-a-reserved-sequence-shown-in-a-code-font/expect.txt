@@ -1,0 +1,9 @@
+transport: identical
+scanner: none
+constructs: none. A document that writes about ExactTeX shows its tokens in a code
+  font, and `\texttt`, `\verb` and `verbatim` are exclusion regions in §8, so every
+  reserved sequence here stays ordinary bytes. `\figure{w}` with braces is not a
+  typed block either: only the reserved name immediately followed by `(` opens one.
+  This fixture pins the decision recorded in `scanner/tables.rs`, that `\texttt` is
+  deliberately absent from the prose commands, so that converting it can never
+  corrupt a document that documents the language.
