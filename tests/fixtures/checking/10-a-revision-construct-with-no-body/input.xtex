@@ -1,0 +1,2 @@
+The macro @add(delta) adds a term, and @note(n) marks it.
+A well-formed one is @add(change:gain){consistent} and stays the author's.

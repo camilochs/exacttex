@@ -1,0 +1,7 @@
+transport: identical
+scanner: !add !note add
+constructs: two revision constructs that closed their `(` and never opened a
+  body, and one that did. The scanner reports the first two as malformed, and
+  the check names them: `xtex build` already refused them from the CLI, so an
+  author met a defect at build time that the editor never showed. The third is
+  well formed and is the author's, wherever it is written.
