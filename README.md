@@ -18,7 +18,7 @@ ordinary LaTeX and comes out unchanged. Rename a `.tex` file to `.xtex` and it s
 much or as little as you want. What you annotate is checked.
 
 
-The article I had in mind has many elements (figures, tables, algorithms, etc.). If you rename `fig:runtime`, all references are updated automatically. If you type `Figure~\ref` in a table, the compiler error you before the PDF prints the wrong word and no one notices. The problem was seeing the silent symbol `??` in the PDF.
+The article I had in mind has many elements (figures, tables, algorithms, etc.). If you rename `fig:runtime`, all references are updated automatically. If you type `\ref{tab:runtime}` in a table (\label{tab:runtime_1}), the compiler error you before the PDF prints the wrong word and no one notices. The problem was seeing the silent symbol `??` in the PDF.
 
 You can try it in the browser at [Vitela](https://vitela.artificialfallibility.com/), an editor built on
 the compiler's WebAssembly build. The checks run locally in the page.
