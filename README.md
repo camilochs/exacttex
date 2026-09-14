@@ -17,9 +17,8 @@ ExactTeX is LaTeX with gradual annotation. You name the objects you want checked
 ordinary LaTeX and comes out unchanged. Rename a `.tex` file to `.xtex` and it still compiles. Annotate as
 much or as little as you want. What you annotate is checked.
 
-The paper I had in mind has forty figures and three coauthors. Rename `fig:runtime` and every reference
-follows. Write `Figure~\ref` on a table and the compiler tells you, before the PDF prints the wrong word
-and nobody notices. The pain was never the types. It was the silent `??`.
+
+The article I had in mind has many elements (figures, tables, algorithms, etc.). If you rename `fig:runtime`, all references are updated automatically. If you type `Figure~\ref` in a table, the compiler error you before the PDF prints the wrong word and no one notices. The problem was seeing the silent symbol `??` in the PDF.
 
 You can try it in the browser at [Vitela](https://vitela.artificialfallibility.com/), an editor built on
 the compiler's WebAssembly build. The checks run locally in the page.
