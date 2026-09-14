@@ -18,9 +18,9 @@ ordinary LaTeX and comes out unchanged. Rename a `.tex` file to `.xtex` and it s
 much or as little as you want. What you annotate is checked.
 
 
-The article I had in mind when creating ExactTex contains many elements (figures, tables, algorithms, etc.). If you write `\ref{tab:runtime}` in a table (`\label{tab:runtime_1}`), the compiler will flag an error before the PDF prints the incorrect word and no one notices, since the reference `tab:runtime` does not exist. That’s what I expected, but LaTeX doesn’t work that way. Instead, it would display the PDF with a silent `??` symbol, along with cryptic log messages. That’s exactly what I wanted to fix.
+The article I had in mind when creating ExactTeX contains many elements (figures, tables, algorithms, etc.). If you write `\ref{tab:runtime}` in a table (`\label{tab:runtime_1}`), the compiler will flag an error before the PDF prints the incorrect word and no one notices, since the reference `tab:runtime` does not exist. That’s what I expected, but LaTeX doesn’t work that way. Instead, it would display the PDF with a silent `??` symbol, along with cryptic log messages. That’s exactly what I wanted to fix.
 
-You can try ExactTex in the browser at [Vitela](https://vitela.artificialfallibility.com/), an editor built on
+You can try ExactTeX in the browser at [Vitela](https://vitela.artificialfallibility.com/), an editor built on
 the compiler's WebAssembly build. The checks run locally in the page.
 
 <p align="center">
