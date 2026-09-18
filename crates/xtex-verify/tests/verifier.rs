@@ -474,3 +474,125 @@ fn the_run_measures_its_own_network() {
     let line = metrics.summary();
     assert!(line.contains("fetched"), "{line}");
 }
+
+/// One work as Crossref's work route answers it: the object under
+/// `message`, not a list of items.
+const CROSSREF_WORK_AGREES: &str = r#"{"status":"ok","message-type":"work","message":{
+  "DOI":"10.1/partial","title":["LaTeX"],
+  "author":[{"given":"Leslie","family":"Lamport"}],
+  "issued":{"date-parts":[[1994]]}}}"#;
+
+const CROSSREF_WORK_ALSO_DISAGREES: &str = r#"{"status":"ok","message-type":"work","message":{
+  "DOI":"10.1/partial","title":["LaTeX"],
+  "author":[{"given":"Leslie","family":"Lamport"},{"given":"X.","family":"Fabricated"}],
+  "issued":{"date-parts":[[1994]]}}}"#;
+
+#[test]
+fn an_author_list_the_aggregator_got_wrong_is_confirmed_against_the_registry() {
+    // Issue #193: OpenAlex answered DOI 10.52202/075280-2020 with one name
+    // repeated and another dropped, so an entry transcribed from Crossref
+    // was recorded partial and XT1018 refused to compile the document. The
+    // author list is the one field that hard-errors, so it is the one field
+    // worth a second question to the registry the publisher deposits into.
+    let canned = Canned {
+        answers: vec![
+            ("openalex", Ok((200, OPENALEX_TWO))),
+            (
+                "api.crossref.org/works/10.1/partial",
+                Ok((200, CROSSREF_WORK_AGREES)),
+            ),
+            ("alive", Ok((200, "ok"))),
+            ("dead", Ok((200, "ok"))),
+        ],
+        calls: RefCell::new(Vec::new()),
+    };
+    let (written, calls) = run_with(&canned, &claims_set(), None);
+    let record = parse_record(written.as_bytes()).expect("the run writes a valid record");
+    let partial = record
+        .claims
+        .iter()
+        .find(|c| c.target == "partial")
+        .expect("the entry settles");
+    assert_eq!(
+        partial.verdict,
+        Verdict::Bibliographic(BibVerdict::Verified),
+        "the registry agrees with the document, so the entry verifies: {:?}",
+        partial.diffs
+    );
+    assert_eq!(
+        partial.source, "crossref",
+        "the recorded answer is the registry's, asked by identifier"
+    );
+    // Only the disagreeing entry costs the extra request; "good" agreed and
+    // was never asked twice.
+    assert_eq!(
+        calls
+            .iter()
+            .filter(|c| c.contains("api.crossref.org/works/"))
+            .count(),
+        1,
+        "{calls:?}"
+    );
+}
+
+#[test]
+fn a_disagreement_both_sources_report_stays_a_partial() {
+    let canned = Canned {
+        answers: vec![
+            ("openalex", Ok((200, OPENALEX_TWO))),
+            (
+                "api.crossref.org/works/10.1/partial",
+                Ok((200, CROSSREF_WORK_ALSO_DISAGREES)),
+            ),
+            ("alive", Ok((200, "ok"))),
+            ("dead", Ok((200, "ok"))),
+        ],
+        calls: RefCell::new(Vec::new()),
+    };
+    let (written, _) = run_with(&canned, &claims_set(), None);
+    let record = parse_record(written.as_bytes()).expect("parses");
+    let partial = record
+        .claims
+        .iter()
+        .find(|c| c.target == "partial")
+        .expect("settles");
+    assert_eq!(
+        partial.verdict,
+        Verdict::Bibliographic(BibVerdict::Partial),
+        "confirmation does not soften a diff the registry also reports"
+    );
+    assert!(
+        partial.diffs.iter().any(|d| d.field == "authors"),
+        "{:?}",
+        partial.diffs
+    );
+}
+
+#[test]
+fn a_registry_that_cannot_confirm_leaves_the_diff_as_recorded() {
+    let canned = Canned {
+        answers: vec![
+            ("openalex", Ok((200, OPENALEX_TWO))),
+            (
+                "api.crossref.org/works/10.1/partial",
+                Ok((404, "not found")),
+            ),
+            ("alive", Ok((200, "ok"))),
+            ("dead", Ok((200, "ok"))),
+        ],
+        calls: RefCell::new(Vec::new()),
+    };
+    let (written, _) = run_with(&canned, &claims_set(), None);
+    let record = parse_record(written.as_bytes()).expect("parses");
+    let partial = record
+        .claims
+        .iter()
+        .find(|c| c.target == "partial")
+        .expect("settles");
+    assert_eq!(
+        partial.verdict,
+        Verdict::Bibliographic(BibVerdict::Partial),
+        "an unconfirmable diff stands"
+    );
+    assert_eq!(partial.source, "openalex");
+}

@@ -5,12 +5,12 @@ use std::time::Duration;
 
 use xtex_core::claims::Claim;
 use xtex_core::verification::{
-    BibVerdict, ClaimKind, Reachability, Verdict, VerificationRecord, VerifiedClaim, parse_record,
-    write_record,
+    BibVerdict, ClaimKind, DiffSeverity, Reachability, Verdict, VerificationRecord, VerifiedClaim,
+    parse_record, write_record,
 };
 
 use crate::bucket::Bucket;
-use crate::sources::{Lookup, crossref_by_query, openalex_by_doi};
+use crate::sources::{Lookup, crossref_by_doi, crossref_by_query, openalex_by_doi};
 use crate::transport::{Transport, TransportError};
 
 /// Everything one run needs, supplied by the caller.
@@ -324,8 +324,38 @@ pub fn verify(
                     answered.remove(&doi)
                 };
                 match lookup {
-                    Some(lookup) => {
-                        let (verdict, diffs) = verdict_for(claim, &lookup);
+                    Some(mut lookup) => {
+                        let (mut verdict, mut diffs) = verdict_for(claim, &lookup);
+                        // An aggregator derives its author list, and a derived
+                        // list that drops or repeats one name reads as a
+                        // fabricated entry: XT1018's hard error, on a record
+                        // the publisher never wrote that way. Before recording
+                        // that, ask the registry the publisher deposited into.
+                        // One request, and only on the high-severity diff, so
+                        // the fifty-per-request batch stays the first question.
+                        if !doi.is_empty()
+                            && diffs.iter().any(|d| d.severity == DiffSeverity::High)
+                            && let Ok(Some(confirming)) = with_budget(
+                                &mut budget,
+                                &mut crossref_bucket,
+                                &mut metrics,
+                                "crossref",
+                                || {
+                                    crossref_by_doi(
+                                        run.transport,
+                                        &run.user_agent,
+                                        run.timeout,
+                                        &doi,
+                                    )
+                                },
+                            )
+                        {
+                            metrics.bytes_down += confirming.bytes as u64;
+                            let (confirmed, confirmed_diffs) = verdict_for(claim, &confirming);
+                            verdict = confirmed;
+                            diffs = confirmed_diffs;
+                            lookup = confirming;
+                        }
                         VerifiedClaim {
                             kind: claim.kind,
                             target: claim.target.clone(),
