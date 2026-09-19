@@ -218,7 +218,15 @@ fn check_project_inner(
                 .get(source)
                 .map(|s| s.name().to_owned())
                 .unwrap_or_default();
-            loader.file_exists(&beside, name)
+            // Beside its own file first, then from the ROOT. TeX searches
+            // for an image from the main document's directory, whatever file
+            // the command sits in, so a path that resolves from the root is
+            // correct even when it does not resolve beside the file that
+            // wrote it. Checking only beside reported a missing image on a
+            // document that compiles, the moment a figure block moved into a
+            // subdirectory — and made moving one there impossible (#198).
+            // Accepting both can only accept more, never less.
+            loader.file_exists(&beside, name) || loader.file_exists(root, name)
         },
     ));
     diagnostics.extend(import_diagnostics);
@@ -592,6 +600,52 @@ mod appendix_tests {
             .iter()
             .map(|d| format!("{} {}", d.code, d.name.as_deref().unwrap_or("-")))
             .collect()
+    }
+
+    #[test]
+    fn a_figure_resolves_its_image_from_the_root_as_tex_does() {
+        // A figure in an imported file naming its image the way the root
+        // does. TeX searches from the main document's directory, whatever
+        // file the command sits in, so this compiles — and the check used to
+        // report the image missing, because it only looked beside the file
+        // that wrote it. That made moving a figure block into a
+        // subdirectory impossible (#198).
+        let found = codes(&[
+            (
+                "main.xtex",
+                "\\documentclass{article}\n\\begin{document}\n@import(\"sections/body.xtex\")\n\\end{document}\n",
+            ),
+            (
+                "sections/body.xtex",
+                "\\figure(fig:x) {\n  src = \"figures/x.pdf\"\n  caption = {A}\n}\n",
+            ),
+            ("figures/x.pdf", ""),
+        ]);
+        assert!(
+            !found.iter().any(|code| code.starts_with("XT1006")),
+            "the image resolves from the root: {found:?}"
+        );
+    }
+
+    #[test]
+    fn a_figure_whose_image_is_nowhere_still_reports_it() {
+        // The fix accepts more, never everything: a name that resolves from
+        // neither place is still the missing file it always was.
+        let found = codes(&[
+            (
+                "main.xtex",
+                "\\documentclass{article}\n\\begin{document}\n@import(\"sections/body.xtex\")\n\\end{document}\n",
+            ),
+            (
+                "sections/body.xtex",
+                "\\figure(fig:x) {\n  src = \"figures/ghost.pdf\"\n  caption = {A}\n}\n",
+            ),
+            ("figures/x.pdf", ""),
+        ]);
+        assert!(
+            found.iter().any(|code| code.starts_with("XT1006")),
+            "a genuinely missing image is still reported: {found:?}"
+        );
     }
 
     #[test]
