@@ -418,7 +418,28 @@ fn emit_revision(
     } else {
         (&bytes[open + 1..end], &[][..])
     };
-    // Nothing before \begin{document} wears a colour: a wrapped \usepackage
+    // A titling command is the exception to the preamble rule below: its
+    // argument is not typeset where it stands, it is typeset later by
+    // \maketitle. So the marking goes INSIDE the argument, where it reaches
+    // the page as body material, and the preamble's own text flow is never
+    // wrapped — which is what #180 forbade. Both halves must be the same
+    // command and nothing else; anything less regular takes the rule (#195).
+    if view == RevisionView::Marked
+        && preamble
+        && kind == EntryToken::Sub
+        && let Some((name, was)) = sole_titling_command(left)
+        && let Some((other, now)) = sole_titling_command(right)
+        && name == other
+    {
+        out.extend_from_slice(name);
+        out.push(b'{');
+        emit_deleted(was, base, out);
+        out.push(b' ');
+        emit_added(now, base, out);
+        out.push(b'}');
+        return;
+    }
+    // Nothing else before \begin{document} wears a colour: a wrapped \usepackage
     // made LaTeX insert \begin{document} in the preamble and typeset the
     // rest of it as text (#180). A preamble revision shows in the marked
     // view as its final text; the editor's margin is where it is read.
@@ -458,6 +479,39 @@ fn emit_added(bytes: &[u8], base: &[u8], out: &mut Vec<u8>) {
         emit_content(bytes, base, RevisionView::Marked, false, out);
         out.push(b'}');
     }
+}
+
+/// The preamble commands whose argument `\maketitle` typesets later, and so
+/// the only ones whose revision can be shown on the page (#195).
+const TYPESET_BY_MAKETITLE: [&[u8]; 3] = [b"\\title", b"\\author", b"\\date"];
+
+/// One titling command and nothing else: its name and its argument. `None`
+/// when the half carries anything besides that single command, so an
+/// irregular preamble revision keeps the plain no-colour treatment.
+fn sole_titling_command(bytes: &[u8]) -> Option<(&'static [u8], &[u8])> {
+    let half = trim_start(trim_end(bytes));
+    let name = TYPESET_BY_MAKETITLE
+        .into_iter()
+        .find(|name| half.starts_with(name))?;
+    let rest = &half[name.len()..];
+    if !rest.starts_with(b"{") || !rest.ends_with(b"}") || rest.len() < 2 {
+        return None;
+    }
+    let argument = &rest[1..rest.len() - 1];
+    let mut depth = 0i32;
+    for byte in argument {
+        match byte {
+            b'{' => depth += 1,
+            b'}' => {
+                depth -= 1;
+                if depth < 0 {
+                    return None; // the group closes early: not one argument
+                }
+            }
+            _ => {}
+        }
+    }
+    (depth == 0).then_some((name, argument))
 }
 
 /// A deleted half in the marked view: red, struck through when it can be.
@@ -941,7 +995,7 @@ mod tests {
         let mut sources = source::Sources::new();
         let id = sources.add(
             "paper.xtex",
-            b"\\documentclass{article}\n\\usepackage{booktabs}\n@add(c) {\\usepackage{longtable}}\n@sub(d) {\\title{Old} -> \\title{New}}\n\\begin{document}\nx @add(e) {y}\n\\end{document}\n".to_vec(),
+            b"\\documentclass{article}\n\\usepackage{booktabs}\n@add(c) {\\usepackage{longtable}}\n\\begin{document}\nx @add(e) {y}\n\\end{document}\n".to_vec(),
         );
         let document = parse(&sources, id);
         let mut out = Vec::new();
@@ -954,11 +1008,62 @@ mod tests {
             "{preamble}"
         );
         assert!(preamble.contains("\\usepackage{longtable}"), "{preamble}");
+        assert!(text[body..].contains("\\textcolor{blue}{y}"), "{text}");
+    }
+
+    /// A titling command is the exception: \maketitle typesets its argument
+    /// later, so the marking goes inside the argument and reaches the page
+    /// without the preamble's own text flow ever being wrapped (#195). The
+    /// old title was dropped silently, and a reviewer could not see that the
+    /// title had changed at all.
+    #[test]
+    fn a_title_revision_is_marked_inside_its_argument() {
+        let mut sources = source::Sources::new();
+        let id = sources.add(
+            "paper.xtex",
+            b"\\documentclass{article}\n@sub(d) {\\title{Old} -> \\title{New}}\n\\begin{document}\n\\maketitle\n\\end{document}\n".to_vec(),
+        );
+        let document = parse(&sources, id);
+        let mut out = Vec::new();
+        emit_view(&sources, &document, RevisionView::Marked, &mut out).unwrap();
+        let text = String::from_utf8(out).unwrap();
+        let body = text.find("\\begin{document}").unwrap();
+        let preamble = &text[..body];
+        // Both halves reach the page, and the wrapping stays inside the braces:
+        // nothing in the preamble's own flow is coloured.
+        assert!(
+            preamble.contains("Old") && preamble.contains("New"),
+            "{preamble}"
+        );
+        assert!(
+            preamble.contains("\\title{\\textcolor{red}{"),
+            "the marking must open inside the argument: {preamble}"
+        );
+        assert!(
+            preamble.contains("\\textcolor{blue}{New}}"),
+            "the added half closes the argument: {preamble}"
+        );
+    }
+
+    /// A preamble revision that is not one titling command and nothing else
+    /// keeps the plain treatment: final text, no colour.
+    #[test]
+    fn an_irregular_preamble_revision_keeps_the_plain_treatment() {
+        let mut sources = source::Sources::new();
+        let id = sources.add(
+            "paper.xtex",
+            b"\\documentclass{article}\n@sub(d) {\\title{Old}\\date{x} -> \\title{New}\\date{y}}\n\\begin{document}\n\\end{document}\n".to_vec(),
+        );
+        let document = parse(&sources, id);
+        let mut out = Vec::new();
+        emit_view(&sources, &document, RevisionView::Marked, &mut out).unwrap();
+        let text = String::from_utf8(out).unwrap();
+        let preamble = &text[..text.find("\\begin{document}").unwrap()];
+        assert!(!preamble.contains("textcolor"), "{preamble}");
         assert!(
             preamble.contains("\\title{New}") && !preamble.contains("Old"),
             "{preamble}"
         );
-        assert!(text[body..].contains("\\textcolor{blue}{y}"), "{text}");
     }
 
     /// A deleted half with structure cannot go through \sout (restricted
