@@ -1165,9 +1165,9 @@ mod tests {
 
     #[test]
     fn a_prose_word_matching_the_target_is_silent() {
-        assert!(
-            prose_mismatch_names("\\table(tab:main) { caption = {T} } Table~@ref(tab:main)")
-                .is_empty()
+        assert_eq!(
+            prose_mismatch_names("\\table(tab:main) { caption = {T} } Table~@ref(tab:main)"),
+            [] as [String; 0]
         );
     }
 
@@ -1186,11 +1186,11 @@ mod tests {
             prose_mismatch_names(&format!("{decl} Figs.~@Cref(tab:a,tab:b)")),
             ["tab:a", "tab:b"]
         );
-        assert!(
+        assert_eq!(
             prose_mismatch_names(&format!(
                 "{decl} Tab.~@ref(tab:a) Tables~@cref(tab:a, tab:b)"
-            ))
-            .is_empty()
+            )),
+            [] as [String; 0]
         );
     }
 
@@ -1208,7 +1208,10 @@ mod tests {
             "the control must be a declared, unknown-open target"
         );
         assert_eq!(t.prose_mismatches().count(), 0);
-        assert!(prose_mismatch_names("\\label{tab:x} Figure~@ref(tab:x)").is_empty());
+        assert_eq!(
+            prose_mismatch_names("\\label{tab:x} Figure~@ref(tab:x)"),
+            [] as [String; 0]
+        );
     }
 
     #[test]

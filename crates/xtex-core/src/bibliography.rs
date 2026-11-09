@@ -839,7 +839,7 @@ mod tests {
         // exclusion rule is what keeps those files silent.
         let d = declared("Always use \\verb+\\bibitem+ and \\verb|\\bibliography{x}| here.");
         assert!(d.inline_keys.is_empty());
-        assert!(d.resources.is_empty());
+        assert_eq!(d.resources, [] as [crate::bibliography::Resource; 0]);
     }
 
     #[test]
@@ -1132,6 +1132,6 @@ mod tests {
             "\\bibliography{refs} \\cite{invented2026}",
             &[("refs.bib", "@book{knuth1984}")],
         );
-        assert!(missing.is_empty());
+        assert_eq!(missing, [] as [String; 0]);
     }
 }

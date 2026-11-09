@@ -413,7 +413,7 @@ mod tests {
     #[test]
     fn a_log_line_that_is_not_a_supported_failure_yields_no_record() {
         let log = "This is the LaTeX engine, version whatever\nUnderfull \\hbox somewhere\n";
-        assert!(parse_log(log, "p.tex").is_empty());
+        assert_eq!(parse_log(log, "p.tex"), [] as [crate::texlog::Record; 0]);
     }
 
     #[test]

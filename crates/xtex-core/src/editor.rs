@@ -624,7 +624,10 @@ mod tests {
         // Offering every identifier in the document while someone writes a
         // sentence is worse than offering nothing.
         let (sources, document, table) = document();
-        assert!(completions(&sources, &document, &table, at("See ")).is_empty());
+        assert_eq!(
+            completions(&sources, &document, &table, at("See ")),
+            [] as [crate::editor::Completion; 0]
+        );
     }
 
     #[test]
