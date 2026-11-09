@@ -6,11 +6,11 @@
 
 use std::collections::BTreeSet;
 use std::fs;
-use std::path::{Path, PathBuf};
+use std::path::{Component, Path, PathBuf};
 use std::process::{Command, ExitCode};
 
 use xtex_core::bibliography::Bibliography;
-use xtex_core::check::{Diagnostic, Severity, to_json};
+use xtex_core::check::{Diagnostic, Severity, check_documents, to_json};
 use xtex_core::diagnostics::map_emitted_diagnostic;
 use xtex_core::document::Node;
 use xtex_core::io::{IoError, OutputSink, SourceLoader};
@@ -1453,6 +1453,10 @@ fn compile_command(args: &[String]) -> ExitCode {
         eprintln!("error: {}: {error}", emitted.display());
         return ExitCode::from(2);
     }
+    if let Err(error) = copy_figures(&sources, &document, &table, input, &emitted) {
+        eprintln!("error: {error}");
+        return ExitCode::from(2);
+    }
 
     // The engine is named by the project rather than assumed. `AGENTS.md` §4
     // forbids proposing a dependency from memory, and an engine is one.
@@ -1491,6 +1495,82 @@ fn compile_command(args: &[String]) -> ExitCode {
     } else {
         ExitCode::FAILURE
     }
+}
+
+/// Copies each figure a `\figure` block names to where the engine will look
+/// for it (#200).
+///
+/// `xtex check` resolves a figure's `src` beside its own file or from the root
+/// document's directory, as TeX does. The engine, though, runs beside the
+/// emitted file in `build/`, and looks for the image there. So the paths are
+/// taken from the check itself, the same ones XT1006 asks about, and each one
+/// found is copied to the same relative path beside the emitted file: check
+/// and compile then agree on what a figure is and where it lives.
+///
+/// A path whose copy would leave `build/` is not copied: one that is absolute
+/// or climbs with `..`, and one whose destination passes through a symbolic
+/// link already inside `build/`, which `fs::copy` would follow. `build/`
+/// itself is where the emitted file was just written, so it is not
+/// re-examined here.
+fn copy_figures(
+    sources: &Sources,
+    document: &xtex_core::document::Document,
+    table: &SymbolTable,
+    input: &str,
+    emitted: &Path,
+) -> Result<(), String> {
+    let mut named = Vec::new();
+    check_documents(
+        sources,
+        std::slice::from_ref(document),
+        table,
+        |source, name| {
+            named.push((source, name.to_owned()));
+            true
+        },
+    );
+    let root = Path::new(input).parent().unwrap_or(Path::new(""));
+    let engine_dir = emitted.parent().unwrap_or(Path::new("."));
+    for (source, name) in named {
+        let relative = Path::new(&name);
+        if !relative
+            .components()
+            .all(|part| matches!(part, Component::Normal(_) | Component::CurDir))
+        {
+            continue;
+        }
+        let beside = sources
+            .get(source)
+            .and_then(|s| Path::new(s.name()).parent().map(Path::to_path_buf))
+            .unwrap_or_default();
+        let Some(found) = [beside.join(relative), root.join(relative)]
+            .into_iter()
+            .find(|candidate| candidate.is_file())
+        else {
+            continue;
+        };
+        if passes_through_link(engine_dir, relative) {
+            continue;
+        }
+        let target = engine_dir.join(relative);
+        if let Some(dir) = target.parent() {
+            fs::create_dir_all(dir).map_err(|error| format!("{}: {error}", dir.display()))?;
+        }
+        fs::copy(&found, &target).map_err(|error| format!("{}: {error}", target.display()))?;
+    }
+    Ok(())
+}
+
+/// Whether any existing step below `dir` on the way to `dir/relative` is a
+/// symbolic link. Checked just before the copy, so a link already inside
+/// `build/` does not redirect it; one created in between by another process
+/// is not covered.
+fn passes_through_link(dir: &Path, relative: &Path) -> bool {
+    let mut path = dir.to_path_buf();
+    relative.components().any(|part| {
+        path.push(part);
+        fs::symlink_metadata(&path).is_ok_and(|meta| meta.file_type().is_symlink())
+    })
 }
 
 /// The engine this project uses.
