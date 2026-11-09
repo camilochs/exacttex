@@ -368,9 +368,9 @@ fn closed_environments_are_the_ones_the_scanner_read_both_ends_of() {
     );
     // A `\\begin` inside a verbatim body opens nothing, and one in a comment
     // (above) closes nothing.
-    assert!(
-        closed_environments(b"\\begin{verbatim}\n\\begin{figure}\n\\end{verbatim}\n\\end{figure}")
-            .is_empty()
+    assert_eq!(
+        closed_environments(b"\\begin{verbatim}\n\\begin{figure}\n\\end{verbatim}\n\\end{figure}"),
+        [] as [(crate::source::Span, crate::source::Span); 0]
     );
 }
 
