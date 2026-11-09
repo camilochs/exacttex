@@ -433,7 +433,7 @@ fn emit_revision(
     {
         out.extend_from_slice(name);
         out.push(b'{');
-        emit_deleted(was, base, out);
+        emit_deleted(was, base, false, out);
         out.push(b' ');
         emit_added(now, base, out);
         out.push(b'}');
@@ -455,9 +455,9 @@ fn emit_revision(
         }
         (EntryToken::Sub, RevisionView::Final) => emit_content(right, base, view, preamble, out),
         (EntryToken::Add, RevisionView::Marked) => emit_added(left, base, out),
-        (EntryToken::Del, RevisionView::Marked) => emit_deleted(left, base, out),
+        (EntryToken::Del, RevisionView::Marked) => emit_deleted(left, base, true, out),
         (EntryToken::Sub, RevisionView::Marked) => {
-            emit_deleted(left, base, out);
+            emit_deleted(left, base, false, out);
             emit_added(right, base, out);
         }
         _ => {}
@@ -514,22 +514,30 @@ fn sole_titling_command(bytes: &[u8]) -> Option<(&'static [u8], &[u8])> {
     (depth == 0).then_some((name, argument))
 }
 
-/// A deleted half in the marked view: red, struck through when it can be.
-/// `\sout` lives in restricted horizontal mode, so material with structure
-/// takes the block route instead: a red group, sectioning commands starred
-/// and labels dropped, so the deleted copy neither numbers nor defines
-/// what the kept text defines (#181).
-fn emit_deleted(bytes: &[u8], base: &[u8], out: &mut Vec<u8>) {
+/// A deleted half in the marked view: red, and struck through when `struck`
+/// and it can be. A deletion is struck: the text goes, and the strike says
+/// so. The old half of a substitution is not: the blue half beside it
+/// already says "replaced by", and `\sout` sets its argument in one
+/// unbreakable box, which breaks the line where the reader compares the
+/// two (#196). `\sout` lives in restricted horizontal mode, so material
+/// with structure takes the block route instead: a red group, sectioning
+/// commands starred and labels dropped, so the deleted copy neither
+/// numbers nor defines what the kept text defines (#181).
+fn emit_deleted(bytes: &[u8], base: &[u8], struck: bool, out: &mut Vec<u8>) {
     if structural(bytes) {
         let quiet = quiet_deleted(bytes);
         let (open, close) = colour_block(bytes, b"red");
         out.extend_from_slice(&open);
         emit_content(&quiet, base, RevisionView::Marked, false, out);
         out.extend_from_slice(&close);
-    } else {
+    } else if struck {
         out.extend_from_slice(b"\\textcolor{red}{\\sout{");
         emit_content(bytes, base, RevisionView::Marked, false, out);
         out.extend_from_slice(b"}}");
+    } else {
+        out.extend_from_slice(b"\\textcolor{red}{");
+        emit_content(bytes, base, RevisionView::Marked, false, out);
+        out.extend_from_slice(b"}");
     }
 }
 
@@ -1036,8 +1044,8 @@ mod tests {
             "{preamble}"
         );
         assert!(
-            preamble.contains("\\title{\\textcolor{red}{"),
-            "the marking must open inside the argument: {preamble}"
+            preamble.contains("\\title{\\textcolor{red}{Old} "),
+            "the marking must open inside the argument, red without a strike: {preamble}"
         );
         assert!(
             preamble.contains("\\textcolor{blue}{New}}"),
@@ -1153,6 +1161,30 @@ mod tests {
         assert!(text.contains("\\begingroup\\color{red}\\new{"), "{text}");
         assert!(
             text.contains("\\textcolor{red}{\\sout{\\emph{short}}}"),
+            "{text}"
+        );
+    }
+
+    /// A deletion is struck; the old half of a substitution is red without
+    /// the strike, since the blue half beside it already says it was
+    /// replaced (#196).
+    #[test]
+    fn a_substitution_old_half_is_red_without_the_strike() {
+        let mut sources = source::Sources::new();
+        let id = sources.add(
+            "paper.xtex",
+            b"\\documentclass{article}\n\\begin{document}\nRemoved: @del(a) {this goes away}. Replaced: @sub(b) {old wording -> new wording}.\n\\end{document}\n".to_vec(),
+        );
+        let document = parse(&sources, id);
+        let mut out = Vec::new();
+        emit_view(&sources, &document, RevisionView::Marked, &mut out).unwrap();
+        let text = String::from_utf8(out).unwrap();
+        assert!(
+            text.contains("Removed: \\textcolor{red}{\\sout{this goes away}}."),
+            "{text}"
+        );
+        assert!(
+            text.contains("Replaced: \\textcolor{red}{old wording}\\textcolor{blue}{new wording}."),
             "{text}"
         );
     }
