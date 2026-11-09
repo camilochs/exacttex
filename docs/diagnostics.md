@@ -70,6 +70,26 @@ and which something is yours to pin.
 
 ---
 
+## Where the engine runs, and how it finds your figures
+
+The engine runs beside the emitted file, in `build/`, and looks for a relative path from there. A figure's
+`src` is written from your document's directory, so before the engine starts, `xtex compile` copies each
+image a `\figure` block names to the same path inside `build/`. They are the same images `xtex check`
+resolves for XT1006, so the check and the build agree on what a figure is and where it is:
+
+```
+$ xtex compile paper.xtex
+build/paper.tex: compiled with nothing to report
+$ ls build/results
+bands.png
+```
+
+An image named with `..` or an absolute path is not copied, since its copy would land outside `build/`, and
+neither is one whose destination passes through a symbolic link already inside `build/`. Files read in
+plain LaTeX (an `\includegraphics`, an `\input` of a `.tex` file, a `.bib`) are not copied either.
+
+---
+
 ## Typesetting failures, said about your entity
 
 When a supported failure lands inside something you declared, the compiler names it:
