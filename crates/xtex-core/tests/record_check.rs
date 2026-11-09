@@ -78,7 +78,10 @@ fn a_fresh_verified_claim_is_silent() {
             FRESH,
         )],
     };
-    assert!(run(&claims, &record, &table).is_empty());
+    assert_eq!(
+        run(&claims, &record, &table),
+        [] as [xtex_core::check::Diagnostic; 0]
+    );
 }
 
 #[test]

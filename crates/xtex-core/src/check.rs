@@ -672,22 +672,29 @@ mod label_tests {
         // Annotating a document one figure at a time is the on-ramp, and it
         // does not work if referencing an unannotated figure is a hard error
         // on a document LaTeX resolves without complaint.
-        assert!(diagnose("\\label{fig:old}\nSee @ref(fig:old).").is_empty());
+        assert_eq!(
+            diagnose("\\label{fig:old}\nSee @ref(fig:old)."),
+            [] as [String; 0]
+        );
     }
 
     #[test]
     fn a_reference_to_a_label_inside_a_display_body_resolves() {
-        assert!(
-            diagnose("\\begin{align} y &= 2 \\label{eq:b} \\end{align}\nSee @ref(eq:b).")
-                .is_empty()
+        assert_eq!(
+            diagnose("\\begin{align} y &= 2 \\label{eq:b} \\end{align}\nSee @ref(eq:b)."),
+            [] as [String; 0]
         );
-        assert!(diagnose("\\[ w \\label{eq:d} \\] See @ref(eq:d).").is_empty());
+        assert_eq!(
+            diagnose("\\[ w \\label{eq:d} \\] See @ref(eq:d)."),
+            [] as [String; 0]
+        );
     }
 
     #[test]
     fn an_id_inside_a_display_body_declares_an_equation_for_its_references() {
-        assert!(
-            diagnose("\\begin{align} y &= 2 @id(eq:b) \\end{align}\nSee @ref(eq:b).").is_empty()
+        assert_eq!(
+            diagnose("\\begin{align} y &= 2 @id(eq:b) \\end{align}\nSee @ref(eq:b)."),
+            [] as [String; 0]
         );
         // And the class is known: a figure prefix on it is XT1004.
         assert_eq!(
@@ -838,7 +845,7 @@ mod tests {
             "See \\ref{missing} and \\cite{invented}.",
             &Bibliography::Complete(BTreeSet::default()),
         );
-        assert!(found.is_empty());
+        assert_eq!(found, [] as [crate::check::Diagnostic; 0]);
     }
 
     #[test]
@@ -849,7 +856,7 @@ mod tests {
                 name: "missing.bib".to_owned(),
             }),
         );
-        assert!(found.is_empty());
+        assert_eq!(found, [] as [crate::check::Diagnostic; 0]);
     }
 
     #[test]
@@ -1000,7 +1007,7 @@ mod tests {
         );
         assert_eq!(found.len(), 1, "{found:?}");
         assert!(!found[0].message.contains("did you mean"));
-        assert!(found[0].related.is_empty());
+        assert_eq!(found[0].related, [] as [crate::check::Related; 0]);
     }
 
     #[test]
