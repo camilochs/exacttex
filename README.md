@@ -59,11 +59,11 @@ ExactTeX puts the change model in the file format. A proposed change is text in 
 The gain is @sub(change:gain) {dramatic -> consistent} across both corpora.
 ```
 
-The file still builds. `xtex build paper.xtex --marked` prints the change for reading, old text struck
-through and new text in colour:
+The file still builds. `xtex build paper.xtex --marked` prints the change for reading, old text in red
+and new text in blue:
 
 ```latex
-The gain is \textcolor{red}{\sout{dramatic}}\textcolor{blue}{consistent} across both corpora.
+The gain is \textcolor{red}{dramatic}\textcolor{blue}{consistent} across both corpora.
 ```
 
 `--original` and `--final` build the document without the change and with it. Accepting is a rewrite of the

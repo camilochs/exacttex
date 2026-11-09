@@ -65,7 +65,7 @@ checked like any other prose. That follows the 33 measured revisions in the corp
 - **`--original`** — the document as it stood before any revision. Every `@add` and `@note` contributes
   nothing, every `@del` contributes its text, every `@sub` contributes its left side.
 - **`--final`** — the document with every revision applied. The mirror of the above.
-- **`--marked`** — one document showing every change, coloured and struck through, for reading rather than
+- **`--marked`** — one document showing every change in colour, deletions struck through, for reading rather than
   submitting.
 
 **Each view is one document.** There is no status, flag, or configuration that makes `--final` render two
@@ -207,7 +207,9 @@ How the view colours a change, learned on a manuscript under review (#180, #181)
   text; a wrapped `\usepackage` made LaTeX insert `\begin{document}` in the preamble.
 - **`\sout` and `\textcolor` only for inline halves**: short, without a paragraph break, a sectioning
   command, an item, an environment, or a long brace group (`\sout{\new{…}}` sets the argument in one
-  unbreakable box). Anything else takes a block route: `\begingroup\color{red} … \endgroup` for a
+  unbreakable box). Only a deletion is struck; the old half of a substitution is red without the strike,
+  because the blue half beside it already says it was replaced, and a struck box breaks the line where
+  the reader compares the two (#196). Anything else takes a block route: `\begingroup\color{red} … \endgroup` for a
   deleted half, with sectioning commands starred and `\label`/`@id` dropped so the deleted copy neither
   numbers nor defines; `\begingroup\color{blue} … \endgroup` for an added half.
 - **A half whose environments do not balance** (a substitution inside a table that opens `\begin{table}`
