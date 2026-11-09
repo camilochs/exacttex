@@ -320,6 +320,11 @@ impl SymbolTable {
         let floats = sources
             .get(document.source())
             .map_or_else(Vec::new, |source| float_bodies(source.bytes()));
+        let readable = sources
+            .get(document.source())
+            .map_or_else(Vec::new, |source| {
+                crate::scanner::readable_content(source.bytes())
+            });
         document.walk(|node| {
             let (kind, construct) = match node {
                 Node::Construct { kind, span, .. } => (*kind, *span),
@@ -382,6 +387,7 @@ impl SymbolTable {
                             construct,
                             switch.is_some_and(|at| at < construct.start()),
                             &floats,
+                            &readable,
                         ),
                         _ => EntityClass::UnknownOpen,
                     };
@@ -602,23 +608,40 @@ pub fn appendix_switch_at(bytes: &[u8]) -> Option<usize> {
 /// Whether `at` sits inside a display-math body that opened before it and
 /// has not closed: a `\begin{align}` with no `\end{align}` between, or a
 /// `\[` with no `\]` between.
-fn inside_display_math(bytes: &[u8], at: usize) -> bool {
+///
+/// An opener or closer counts only inside `readable`, the content the
+/// scanner reads as prose, arguments or display bodies. The same bytes in a
+/// verbatim run or a comment are text: `\verb|\[|` classed every later
+/// declaration in the file as an equation (eight false records on one
+/// corpus paper, issue #172).
+fn inside_display_math(bytes: &[u8], readable: &[Span], at: usize) -> bool {
     let before = &bytes[..at];
-    let last_open = before
+    // The spans come from one left-to-right scan, so they are sorted and
+    // the span that could hold `hit` is the last one starting at or before it.
+    let is_readable = |hit: usize| {
+        let i = readable.partition_point(|span| span.start() <= hit);
+        i > 0 && hit < readable[i - 1].end()
+    };
+    let mut from = before.len();
+    while let Some(open) = before[..from]
         .windows(b"\\begin{".len())
-        .rposition(|window| window == b"\\begin{");
-    if let Some(open) = last_open {
-        let rest = &before[open + b"\\begin{".len()..];
-        if let Some(close) = rest.iter().position(|byte| *byte == b'}') {
-            let name = &rest[..close];
-            let mut end = b"\\end{".to_vec();
-            end.extend_from_slice(name);
-            end.push(b'}');
-            let closed = rest.windows(end.len()).any(|window| window == end);
-            if !closed && crate::scanner::is_display_math_region(&before[open..]) {
-                return true;
+        .rposition(|window| window == b"\\begin{")
+    {
+        if is_readable(open) {
+            let rest = &before[open + b"\\begin{".len()..];
+            if let Some(close) = rest.iter().position(|byte| *byte == b'}') {
+                let name = &rest[..close];
+                let mut end = b"\\end{".to_vec();
+                end.extend_from_slice(name);
+                end.push(b'}');
+                let closed = rest.windows(end.len()).any(|window| window == end);
+                if !closed && crate::scanner::is_display_math_region(&before[open..]) {
+                    return true;
+                }
             }
+            break;
         }
+        from = open;
     }
     // `\[` opens a display only when its backslash is not itself escaped:
     // `\\[2pt]` is a tabular line break with spacing, and reading it as an
@@ -629,7 +652,9 @@ fn inside_display_math(bytes: &[u8], at: usize) -> bool {
         .windows(2)
         .rposition(|window| window == b"\\[")
     {
-        if !crate::scanner::is_escaped(before, open) {
+        if is_readable(open) && !crate::scanner::is_escaped(before, open) {
+            // The closer is read raw: the piece of a display body after an
+            // `@id` inside it is not a readable span, and the `\]` sits there.
             let closed = before[open..].windows(2).enumerate().any(|(at, window)| {
                 window == b"\\]" && !crate::scanner::is_escaped(before, open + at)
             });
@@ -707,11 +732,12 @@ fn attached_class(
     construct: Span,
     in_appendix: bool,
     floats: &[(EntityClass, Span)],
+    readable: &[Span],
 ) -> EntityClass {
     let Some(bytes) = sources.get(source).map(crate::source::Source::bytes) else {
         return EntityClass::UnknownOpen;
     };
-    if inside_display_math(bytes, construct.start()) {
+    if inside_display_math(bytes, readable, construct.start()) {
         return EntityClass::Equation;
     }
     header_class(bytes, construct.start(), in_appendix)
@@ -1604,6 +1630,75 @@ mod tests {
         assert_eq!(t.declaration("sec:n").unwrap().class, EntityClass::Section);
         assert_eq!(t.inconsistent_references().count(), 0);
         assert_eq!(t.prose_mismatches().count(), 0);
+    }
+
+    #[test]
+    fn a_bracket_inside_a_verbatim_run_opens_no_display() {
+        // `\verb|\[|` is text the scanner never reads as a command; the
+        // declarations after it keep their own classes, a real display
+        // after it still opens and closes, and the same holds for `\verb*`,
+        // another delimiter and `\lstinline` (issue #172).
+        for verb in [
+            "\\verb|\\[|",
+            "\\verb*|\\[|",
+            "\\verb+\\[+",
+            "\\lstinline|\\[|",
+        ] {
+            let text = format!(
+                "Literal {verb} shown.\n\
+                 \\section{{M}}@id(sec:m) Section~@ref(sec:m)\n\
+                 \\begin{{figure}}\\caption{{F}}@id(fig:f)\\end{{figure}} Figure~@ref(fig:f)\n\
+                 \\[ x = 1 @id(eq:x) \\] Eq.~@ref(eq:x)\n\
+                 \\section{{N}}@id(sec:n) Section~@ref(sec:n)"
+            );
+            let (_, t) = table(&[("a.xtex", text.as_str())]);
+            assert_eq!(
+                t.declaration("sec:m").unwrap().class,
+                EntityClass::Section,
+                "{verb}"
+            );
+            assert_eq!(
+                t.declaration("fig:f").unwrap().class,
+                EntityClass::Figure,
+                "{verb}"
+            );
+            assert_eq!(
+                t.declaration("eq:x").unwrap().class,
+                EntityClass::Equation,
+                "{verb}"
+            );
+            assert_eq!(
+                t.declaration("sec:n").unwrap().class,
+                EntityClass::Section,
+                "{verb}"
+            );
+            assert_eq!(t.inconsistent_references().count(), 0, "{verb}");
+            assert_eq!(t.prose_mismatches().count(), 0, "{verb}");
+        }
+    }
+
+    #[test]
+    fn an_unclosed_display_still_runs_to_the_end() {
+        // A genuine `\[` with no `\]` keeps classing what follows as an
+        // equation; only the verbatim case changed.
+        let text = "\\[ x = 1\n\\section{M}@id(sec:m)";
+        let (_, t) = table(&[("a.xtex", text)]);
+        assert_eq!(
+            t.declaration("sec:m").map(|d| d.class),
+            Some(EntityClass::Equation)
+        );
+    }
+
+    #[test]
+    fn an_unclosed_environment_display_is_found_past_a_verbatim_begin() {
+        // The last raw `\begin{` before the `@id` is inside `\verb`; the
+        // search must step past it to the real `align` opener.
+        let text = "\\begin{align}\n x = 1 \\verb|\\begin{x}| @id(eq:a)";
+        let (_, t) = table(&[("a.xtex", text)]);
+        assert_eq!(
+            t.declaration("eq:a").map(|d| d.class),
+            Some(EntityClass::Equation)
+        );
     }
 
     #[test]
