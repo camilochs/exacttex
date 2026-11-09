@@ -267,14 +267,38 @@ pub fn check_documents(
                     // opened a body. `xtex build` already refuses this, in
                     // the CLI, by walking the nodes itself; the checker
                     // walked past it, so an author met it at build time and
-                    // an editor never met it at all.
+                    // an editor never met it at all. A substitution with a
+                    // body is malformed for one other reason: the number of
+                    // `->` at the top level of the body is not one, and
+                    // "has no body" sent its author looking for a missing
+                    // brace (issue #173).
+                    let arrows = (kind == EntryToken::Sub)
+                        .then(|| sources.get(source).map(crate::source::Source::bytes))
+                        .flatten()
+                        .and_then(|bytes| {
+                            let body = &bytes[span.start()..span.end()];
+                            let open = span.start() + body.iter().position(|byte| *byte == b'{')?;
+                            // A body that never closes runs to the end of
+                            // the file; only one the scanner closed is
+                            // malformed for its arrows.
+                            (crate::scanner::balanced_end(bytes, open) == Some(span.end())).then(|| {
+                                crate::scanner::substitution_arrows(bytes, open + 1, span.end() - 1)
+                            })
+                        });
+                    let message = match arrows {
+                        Some(0) => "`@sub` has no `->` between its halves — write `{old -> new}`".to_owned(),
+                        Some(n) => format!(
+                            "`@sub` carries {n} `->` at the top level of its body, and exactly one separates the halves; an arrow inside braces, a command's argument or math is content"
+                        ),
+                        None => format!("`{}` has no body — expected `{{`", kind.name()),
+                    };
                     diagnostics.push(Diagnostic {
                         code: "XT1021",
                         entity: EntityClass::UnknownOpen,
                         name: None,
                         source,
                         span,
-                        message: format!("`{}` has no body — expected `{{`", kind.name()),
+                        message,
                         related: Vec::new(),
                         severity: Severity::Error,
                         blame: Blame::XtexConstruct,
@@ -857,6 +881,46 @@ mod tests {
             }),
         );
         assert_eq!(found, [] as [crate::check::Diagnostic; 0]);
+    }
+
+    /// A substitution whose body has no `->`, or more than one at the top
+    /// level, says so; "has no body" sent its author after a brace that was
+    /// there. An arrow inside a command's argument is content (#173).
+    #[test]
+    fn a_substitution_names_its_arrow_count() {
+        let found = document_diagnostics("A @sub(c1) {no separator at all} B");
+        assert_eq!(found.len(), 1, "{found:?}");
+        assert_eq!(found[0].code, "XT1021");
+        assert!(
+            found[0].message.starts_with("`@sub` has no `->`"),
+            "{}",
+            found[0].message
+        );
+        let found = document_diagnostics("A @sub(c2) {one -> two -> three} B");
+        assert_eq!(found.len(), 1, "{found:?}");
+        assert_eq!(found[0].code, "XT1021");
+        assert!(
+            found[0].message.starts_with("`@sub` carries 2 `->`"),
+            "{}",
+            found[0].message
+        );
+        // The arrow in `\draw[->]` is content: no diagnostic, and the
+        // substitution is a construct the final view resolves.
+        let text = "A @sub(c3) {\\draw[->] x -> y} B";
+        assert_eq!(document_diagnostics(text), [] as [Diagnostic; 0]);
+        let mut sources = Sources::new();
+        let id = sources.add("main.xtex", text.as_bytes().to_vec());
+        let document = parse(&sources, id);
+        let mut out = Vec::new();
+        crate::emit_view(&sources, &document, crate::RevisionView::Final, &mut out).unwrap();
+        assert_eq!(String::from_utf8(out).unwrap(), "A y B");
+        let found = document_diagnostics("A @sub(c4) B");
+        assert_eq!(found.len(), 1, "{found:?}");
+        assert_eq!(found[0].message, "`@sub` has no body — expected `{`");
+        // A body that never closes is not an arrow problem.
+        let found = document_diagnostics("A @sub(c5) {one -> two");
+        assert_eq!(found.len(), 1, "{found:?}");
+        assert!(!found[0].message.contains("`->`"), "{}", found[0].message);
     }
 
     #[test]

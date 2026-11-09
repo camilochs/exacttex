@@ -36,7 +36,7 @@ pub use tables::{
 };
 
 use boundaries::{close_import, close_paren, ident_end, span, span_at};
-use queries::substitution_arrows;
+pub(crate) use queries::substitution_arrows;
 use regions::{
     Extent, Region, command_extent, display_math_environment_opening, entry_token_at,
     environment_end, region_opening_at, text_argument_interior,
