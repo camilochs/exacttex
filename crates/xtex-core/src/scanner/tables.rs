@@ -183,9 +183,14 @@ pub(crate) const ARGUMENT_OPENERS: &[u8] = b"[<(*";
 /// recognition and emission disagreed because this list was the only thing
 /// deciding, and they were not on it.
 ///
+/// `abstract` joined on 2026-11-20 (issue #207): Springer's sn-jnl class
+/// takes the abstract as `\\abstract{...}`, and a proposal inside it was
+/// invisible, so Accept answered XT1002 on a real paper.
+///
 /// `item` is not here because its prose lives in its *optional* argument;
 /// see [`TEXT_OPTIONAL_COMMANDS`].
 pub(crate) const TEXT_MANDATORY_COMMANDS: &[&[u8]] = &[
+    b"abstract",
     b"author",
     b"caption",
     b"chapter",

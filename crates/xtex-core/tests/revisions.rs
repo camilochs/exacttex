@@ -145,7 +145,7 @@ fn recognition_and_emission_agree_about_where_a_document_carries_text() {
     // disagreed, a proposed deletion of an author name could be accepted in
     // the margin AND printed into the PDF as `@del(change:…)` — the author
     // saw both on 2026-08-31.
-    let prose: [(&str, &[u8], &[u8]); 5] = [
+    let prose: [(&str, &[u8], &[u8]); 6] = [
         (
             "prosa suelta",
             b"Texto @del(a:one) {fuera} normal.\n",
@@ -165,6 +165,11 @@ fn recognition_and_emission_agree_about_where_a_document_carries_text() {
             "un pie de figura",
             b"\\caption{Pie @del(a:four) {con sobra} claro}\n",
             b"\\caption{Pie  claro}\n",
+        ),
+        (
+            "el resumen",
+            b"\\abstract{Uno. @sub(a:six) {Dos -> Tres} cuatro.}\n",
+            b"\\abstract{Uno. Tres cuatro.}\n",
         ),
         (
             "anidado",

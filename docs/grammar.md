@@ -952,8 +952,8 @@ diagnostic — the TACL template does this in its preamble (corpus E2, arXiv 230
 \fi` is a conditional region like any other.
 
 **Text-bearing arguments are prose.** A caption is a sentence, so the final mandatory argument of
-`\caption`, `\footnote`, `\footnotetext`, `\emph`, `\textbf`, `\textit`, `\underline`, `\mbox` and the
-sectioning family, and `\item`'s optional argument, is scanned exactly as the prose around the call —
+`\caption`, `\footnote`, `\footnotetext`, `\emph`, `\textbf`, `\textit`, `\underline`, `\mbox`, `\abstract`,
+the title-page commands (`\title`, `\author`, `\date`, `\thanks`) and the sectioning family, and `\item`'s optional argument, is scanned exactly as the prose around the call —
 constructs are constructs, and every inner exclusion region still excludes (a `\verb`, math or a comment
 inside a caption still hides its bytes). Everything else about the call — the command, its data arguments,
 the delimiters — remains an exclusion region. `\texttt` deliberately bears data, not text: it is the code
