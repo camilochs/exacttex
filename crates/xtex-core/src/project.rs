@@ -457,6 +457,7 @@ fn merge_declared(target: &mut Declared, found: Declared) {
     target.resources.extend(found.resources);
     target.inline_keys.extend(found.inline_keys);
     target.computed = target.computed.or(found.computed);
+    target.embedded.extend(found.embedded);
 }
 
 pub(crate) fn bibliography_advisory(
