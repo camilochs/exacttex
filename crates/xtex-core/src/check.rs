@@ -883,6 +883,24 @@ mod tests {
         assert_eq!(found, [] as [crate::check::Diagnostic; 0]);
     }
 
+    /// A `}` that ends a text piece, glued to the next command, closes its
+    /// group: the arrow after `\cmidrule(lr){3-4}\cmidrule(lr){5-6}` is the
+    /// separator, and the substitution resolves (#209).
+    #[test]
+    fn an_arrow_after_glued_commands_with_parentheses_separates_the_halves() {
+        for text in [
+            "A @sub(c4) {\\cmidrule(lr){3-4}\\cmidrule(lr){5-6} b -> z} B",
+            "A @sub(c5) {\\foo(lr){3}\\bar(lr){4} b -> z} B",
+        ] {
+            assert_eq!(document_diagnostics(text), [] as [Diagnostic; 0], "{text}");
+            let id = if text.contains("c4") { "c4" } else { "c5" };
+            let (accepted, _) =
+                crate::review::resolve(text.as_bytes(), id, crate::review::Resolution::Accept)
+                    .expect("resolves");
+            assert_eq!(String::from_utf8_lossy(&accepted), "A z B", "{text}");
+        }
+    }
+
     /// A substitution whose body has no `->`, or more than one at the top
     /// level, says so; "has no body" sent its author after a brace that was
     /// there. An arrow inside a command's argument is content (#173).
