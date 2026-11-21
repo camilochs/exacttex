@@ -323,14 +323,21 @@ fn shapes_in_text(bytes: &[u8], start: usize, end: usize, found: &mut Vec<Span>)
     }
 }
 
-pub(crate) fn substitution_arrows(bytes: &[u8], start: usize, end: usize) -> usize {
+/// The offsets of the `->` at the top level of a substitution body.
+///
+/// One walk serves both callers below. Each text piece is read to its last
+/// byte: stopping one short, to have a byte to peek at, skipped a `}` that
+/// ends a piece — `(lr){3-4}` glued to the next command — and every arrow
+/// after it read as nested, so a well-formed substitution was refused with
+/// XT1021 (issue #209).
+fn top_level_arrows(bytes: &[u8], start: usize, end: usize) -> Vec<usize> {
     let mut depth = 1u32;
-    let mut count = 0usize;
+    let mut found = Vec::new();
     for piece in scan(&bytes[start..end]) {
         let Piece::Text(text) = piece else { continue };
         let mut at = start + text.start();
         let text_end = start + text.end();
-        while at + 1 < text_end {
+        while at < text_end {
             if bytes[at] == b'\\'
                 && let Extent::Through(next) = command_extent(bytes, at)
                 && next <= text_end
@@ -342,8 +349,8 @@ pub(crate) fn substitution_arrows(bytes: &[u8], start: usize, end: usize) -> usi
                 match bytes[at] {
                     b'{' => depth += 1,
                     b'}' => depth = depth.saturating_sub(1),
-                    b'-' if depth == 1 && bytes[at + 1] == b'>' => {
-                        count += 1;
+                    b'-' if depth == 1 && at + 1 < text_end && bytes[at + 1] == b'>' => {
+                        found.push(at);
                         at += 2;
                         continue;
                     }
@@ -353,37 +360,17 @@ pub(crate) fn substitution_arrows(bytes: &[u8], start: usize, end: usize) -> usi
             at += 1;
         }
     }
-    count
+    found
+}
+
+pub(crate) fn substitution_arrows(bytes: &[u8], start: usize, end: usize) -> usize {
+    top_level_arrows(bytes, start, end).len()
 }
 
 /// The depth-one separator in a valid substitution.
 #[must_use]
 pub fn substitution_separator(bytes: &[u8], start: usize, end: usize) -> Option<usize> {
-    let mut depth = 1u32;
-    for piece in scan(&bytes[start..end]) {
-        let Piece::Text(text) = piece else { continue };
-        let mut at = start + text.start();
-        let text_end = start + text.end();
-        while at + 1 < text_end {
-            if bytes[at] == b'\\'
-                && let Extent::Through(next) = command_extent(bytes, at)
-                && next <= text_end
-            {
-                at = next;
-                continue;
-            }
-            if !is_escaped(bytes, at) {
-                match bytes[at] {
-                    b'{' => depth += 1,
-                    b'}' => depth = depth.saturating_sub(1),
-                    b'-' if depth == 1 && bytes[at + 1] == b'>' => return Some(at),
-                    _ => {}
-                }
-            }
-            at += 1;
-        }
-    }
-    None
+    top_level_arrows(bytes, start, end).first().copied()
 }
 
 /// The `label` values declared in listing-environment header options.
