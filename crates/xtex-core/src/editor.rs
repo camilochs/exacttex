@@ -337,14 +337,24 @@ pub fn citation_definition_site(
     };
     let declared = crate::bibliography::declared_in(sources, id);
     for resource in &declared.resources {
-        let Ok(bib) = loader.load(&resource.name, Some(id), sources) else {
-            continue;
+        // The entry may sit in a `filecontents` block of the document itself.
+        let found = declared.resource(resource, |name| {
+            let bib = loader.load(name, Some(id), sources).ok()?;
+            Some((bib, sources.get(bib)?.bytes().to_vec()))
+        });
+        let (bib, offset, bytes) = match found {
+            Some(crate::bibliography::Found::File((bib, bytes))) => (bib, 0usize, bytes),
+            Some(crate::bibliography::Found::Block(block)) => {
+                (block.source, block.body.start(), block.bytes.clone())
+            }
+            None => continue,
         };
-        let Some(bytes) = sources.get(bib).map(crate::source::Source::bytes) else {
-            continue;
-        };
-        if let Some(span) = crate::bibliography::entry_span_in_bib(bytes, &key) {
-            return Some((bib, span));
+        if let Some(span) = crate::bibliography::entry_span_in_bib(&bytes, &key) {
+            let shifted = Span::new(
+                u32::try_from(span.start() + offset).unwrap_or(u32::MAX),
+                u32::try_from(span.end() + offset).unwrap_or(u32::MAX),
+            );
+            return Some((bib, shifted));
         }
     }
     None

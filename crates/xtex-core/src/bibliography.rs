@@ -115,6 +115,26 @@ pub struct Resource {
     pub span: Span,
 }
 
+/// A file the document writes itself, with `\begin{filecontents}{name}`.
+///
+/// Springer's and Elsevier's templates are often shipped this way: the
+/// `.bib` lives inside the document and TeX writes it at compile time, so no
+/// such file exists in the project. Read only as a project file, the
+/// bibliography was "unreadable" and no citation was checked or verified
+/// (vitela, 2026-11-21).
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct Embedded {
+    /// The document that holds the block.
+    pub source: SourceId,
+    /// The body, in that document: from the line after `\begin` to `\end`.
+    pub body: Span,
+    /// The body's bytes.
+    pub bytes: Vec<u8>,
+    /// `[overwrite]` or `[force]`: TeX writes the body even over an existing
+    /// file, so the body is what BibTeX reads. Without it an existing file wins.
+    pub overwrite: bool,
+}
+
 /// What a document declares about its bibliography.
 #[derive(Debug, Clone, Default, PartialEq, Eq)]
 pub struct Declared {
@@ -124,6 +144,36 @@ pub struct Declared {
     pub inline_keys: BTreeSet<String>,
     /// A declaration whose path could not be read literally.
     pub computed: Option<Span>,
+    /// Files the document writes with `filecontents`, by name.
+    pub embedded: BTreeMap<String, Embedded>,
+}
+
+/// Where a declared resource's bytes come from.
+#[derive(Debug)]
+pub enum Found<'a, T> {
+    /// A file the host loaded.
+    File(T),
+    /// A `filecontents` block of a document.
+    Block(&'a Embedded),
+}
+
+impl Declared {
+    /// Where `resource` is read from: a file the host loads (`load`), or a
+    /// `filecontents` block that writes it. TeX's rule decides between the
+    /// two: the block replaces an existing file only with `[overwrite]`.
+    pub fn resource<'a, T>(
+        &'a self,
+        resource: &Resource,
+        load: impl FnOnce(&str) -> Option<T>,
+    ) -> Option<Found<'a, T>> {
+        let block = self.embedded.get(&resource.name);
+        if let Some(block) = block.filter(|b| b.overwrite) {
+            return Some(Found::Block(block));
+        }
+        load(&resource.name)
+            .map(Found::File)
+            .or(block.map(Found::Block))
+    }
 }
 
 /// Reads what `source` declares about its bibliography.
@@ -156,8 +206,71 @@ pub fn declared_in(sources: &Sources, id: SourceId) -> Declared {
         collect_resources(region, base, b"\\bibliography{", &mut found, true);
         collect_resources(region, base, b"\\addbibresource{", &mut found, false);
         collect_bibitems(region, &mut found);
+        collect_filecontents(bytes, base, region, id, &mut found);
     }
     found
+}
+
+/// Finds `\begin{filecontents}[options]{name}` (or `filecontents*`) in one
+/// region and records its body, up to `\end{filecontents`.
+fn collect_filecontents(
+    bytes: &[u8],
+    base: usize,
+    region: &[u8],
+    id: SourceId,
+    found: &mut Declared,
+) {
+    const OPEN: &[u8] = b"\\begin{filecontents";
+    let mut at = 0usize;
+    while let Some(hit) = find(region, at, OPEN) {
+        at = hit + 1;
+        let mut i = base + hit + OPEN.len();
+        if bytes.get(i) == Some(&b'*') {
+            i += 1;
+        }
+        if bytes.get(i) != Some(&b'}') {
+            continue;
+        }
+        i += 1;
+        let mut overwrite = false;
+        if bytes.get(i) == Some(&b'[') {
+            let Some(close) = bytes[i..].iter().position(|b| *b == b']') else {
+                continue;
+            };
+            overwrite = bytes[i + 1..i + close]
+                .split(|b| *b == b',')
+                .any(|option| matches!(trim(option), b"overwrite" | b"force"));
+            i += close + 1;
+        }
+        if bytes.get(i) != Some(&b'{') {
+            continue;
+        }
+        let Some(close) = bytes[i..].iter().position(|b| *b == b'}').map(|n| i + n) else {
+            continue;
+        };
+        let Ok(name) = std::str::from_utf8(trim(&bytes[i + 1..close])) else {
+            continue;
+        };
+        let start = bytes[close..]
+            .iter()
+            .position(|b| *b == b'\n')
+            .map_or(bytes.len(), |n| close + n + 1);
+        let Some(end) = find(bytes, start, b"\\end{filecontents") else {
+            continue;
+        };
+        found.embedded.insert(
+            name.to_owned(),
+            Embedded {
+                source: id,
+                body: Span::new(
+                    u32::try_from(start).unwrap_or(u32::MAX),
+                    u32::try_from(end).unwrap_or(u32::MAX),
+                ),
+                bytes: bytes[start..end].to_vec(),
+                overwrite,
+            },
+        );
+    }
 }
 
 /// Finds `\bibliography{a,b}` or `\addbibresource{a.bib}` in one region.
@@ -284,10 +397,14 @@ pub fn assemble(
 
     let mut keys = declared.inline_keys.clone();
     for resource in &declared.resources {
-        let Some(bytes) = read(&resource.name) else {
-            return Bibliography::Unavailable(Unavailable::Unreadable {
-                name: resource.name.clone(),
-            });
+        let bytes = match declared.resource(resource, &mut read) {
+            Some(Found::File(bytes)) => bytes,
+            Some(Found::Block(block)) => block.bytes.clone(),
+            None => {
+                return Bibliography::Unavailable(Unavailable::Unreadable {
+                    name: resource.name.clone(),
+                });
+            }
         };
         match scan_bib(&crate::review::view_bytes(
             &bytes,
@@ -773,6 +890,55 @@ mod tests {
         let mut sources = Sources::new();
         let id = sources.add("main.xtex", text.as_bytes().to_vec());
         declared_in(&sources, id)
+    }
+
+    /// A bibliography the document writes itself with `filecontents`, as
+    /// Springer's templates ship it, is read and checked.
+    #[test]
+    fn a_bibliography_written_by_filecontents_is_read() {
+        let text = "\\begin{filecontents}[overwrite]{refs.bib}\n@article{alpha,\n  title = {A}\n}\n\\end{filecontents}\n\\documentclass{article}\n\\begin{document}\n\\bibliography{refs}\n\\end{document}\n";
+        let d = declared(text);
+        let block = d.embedded.get("refs.bib").expect("the block is recorded");
+        assert!(block.overwrite);
+        assert_eq!(
+            &text[block.body.start()..block.body.end()],
+            "@article{alpha,\n  title = {A}\n}\n"
+        );
+        let bib = assemble(&d, |_| None);
+        assert_eq!(
+            bib.keys().map(|k| k.iter().cloned().collect::<Vec<_>>()),
+            Some(vec!["alpha".to_owned()])
+        );
+        assert!(bib.is_missing("beta"));
+        // [overwrite]: the block is what BibTeX reads, even over a file.
+        let over = assemble(&d, |_| Some(b"@article{stale,}".to_vec()));
+        assert!(!over.is_missing("alpha") && over.is_missing("stale"));
+    }
+
+    /// Without `[overwrite]`, TeX leaves an existing file alone, so the file
+    /// is what BibTeX reads; with no file, the block writes it.
+    #[test]
+    fn without_overwrite_an_existing_file_wins_over_the_block() {
+        let text = "\\begin{filecontents*}{refs.bib}\n@article{block,}\n\\end{filecontents*}\n\\bibliography{refs}\n";
+        let d = declared(text);
+        assert!(!d.embedded["refs.bib"].overwrite);
+        let with_file = assemble(&d, |_| Some(b"@article{file,}".to_vec()));
+        assert!(!with_file.is_missing("file") && with_file.is_missing("block"));
+        let without = assemble(&d, |_| None);
+        assert!(!without.is_missing("block"));
+    }
+
+    /// A `filecontents` inside a comment writes nothing.
+    #[test]
+    fn a_commented_filecontents_is_not_a_bibliography() {
+        let d = declared(
+            "% \\begin{filecontents}{refs.bib}\n% @article{x,}\n% \\end{filecontents}\n\\bibliography{refs}\n",
+        );
+        assert!(d.embedded.is_empty());
+        assert!(matches!(
+            assemble(&d, |_| None),
+            Bibliography::Unavailable(Unavailable::Unreadable { .. })
+        ));
     }
 
     #[test]

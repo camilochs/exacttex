@@ -108,11 +108,18 @@ pub fn collect(
     // The declared bibliographies: one claim per entry, fields attached.
     let declared = crate::bibliography::declared_in(sources, root);
     for resource in &declared.resources {
-        let Ok(bib) = loader.load(&resource.name, Some(root), sources) else {
-            continue;
-        };
-        let Some(bytes) = sources.get(bib).map(|s| s.bytes().to_vec()) else {
-            continue;
+        // A file the project has, or the `filecontents` block that writes it;
+        // a block's entries are claims at their place in the document.
+        let found = declared.resource(resource, |name| {
+            let bib = loader.load(name, Some(root), sources).ok()?;
+            Some((bib, sources.get(bib)?.bytes().to_vec()))
+        });
+        let (bib, offset, bytes) = match found {
+            Some(crate::bibliography::Found::File((bib, bytes))) => (bib, 0usize, bytes),
+            Some(crate::bibliography::Found::Block(block)) => {
+                (block.source, block.body.start(), block.bytes.clone())
+            }
+            None => continue,
         };
         let Some(keys) = crate::bibliography::keys_in_bib(&bytes) else {
             continue;
@@ -121,6 +128,10 @@ pub fn collect(
             let Some(span) = crate::bibliography::entry_span_in_bib(&bytes, &key) else {
                 continue;
             };
+            let span = Span::new(
+                u32::try_from(span.start() + offset).unwrap_or(u32::MAX),
+                u32::try_from(span.end() + offset).unwrap_or(u32::MAX),
+            );
             let fields = crate::bibliography::entry_fields(&bytes, &key).unwrap_or_default();
             claims.push(Claim {
                 kind: ClaimKind::BibEntry,
